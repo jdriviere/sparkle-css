@@ -4,7 +4,7 @@
 #container {
 	position: relative;
 	width: 100%;
-	max-width: 960px;
+	max-width: 1170px; /* Maximum grid system will be at 1170px */
 	margin: 0 auto;
 	padding: 0 20px;
 	box-sizing: border-box;
@@ -19,6 +19,22 @@
     display: table;
     clear: both;
 }
+
+/* ===================================================*/
+/* COLUMNS
+/* ===================================================*/
+.col-1	{ width: 8.33%; }
+.col-2	{ width: 16.66%; }
+.col-3	{ width: 25%; }
+.col-4	{ width: 33.33%; }
+.col-5	{ width: 41.66%; }
+.col-6	{ width: 50%; }
+.col-7	{ width: 58.33%; }
+.col-8	{ width: 66.66%; }
+.col-9	{ width: 75%; }
+.col-10	{ width: 83.33%; }
+.col-11	{ width: 91.66%; }
+.col-12	{ width: 100%; }
 [class*="col-"] {
 	float: left;
 	min-height: 1px;
@@ -26,42 +42,55 @@
 	box-sizing: border-box;
 }
 [class*="col-"]:last-of-type { padding-right: 15px; float: right; }
+
+/* ===================================================*/
+/* OFFSETS
+/* ===================================================*/
+.offset-1	{ margin-left: 8.33%; }
+.offset-2	{ margin-left: 16.66%; }
+.offset-3	{ margin-left: 25%; }
+.offset-4	{ margin-left: 33.33%; }
+.offset-5	{ margin-left: 41.66%; }
+.offset-6	{ margin-left: 50%; }
+.offset-7	{ margin-left: 58.33%; }
+.offset-8	{ margin-left: 66.66%; }
+.offset-9	{ margin-left: 75%; }
+.offset-10	{ margin-left: 83.33%; }
+.offset-11	{ margin-left: 91.66%; }
+.offset-12	{ margin-left: 100%; }
+
 /* ===================================================*/
 /* MEDIA QUERIES
 /* ===================================================*/
-/* Screen sizes for smaller devices, up to 767px */
-@media screen and (max-width: 719px) {
-	#container { width: 90%; text-align: center; }
-	.col-sm {
-		width: 100%;
-		margin: 10px auto;
-		padding: 0;
-	}
+/* Screen sizes for smaller devices, from 480px up to 767px */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+	#container	{ width: 90%; text-align: center; }
+	.col-sm		{ width: 100%; margin: 10px auto; padding: 0; }
 }
 
-/* Screen sizes for tablets and medium-sized devices, from 768px and up */
-@media screen and (min-width: 720px) {
-	#container { width: 90%; }
-	.col-3-md { width: 25%; }
-	.col-4-md { width: 33.33%; }
-	.col-6-md { width: 50%; margin: 10px 0; }
-	.col-8-md { width: 66.66%; }
-	.col-9-md { width: 75%; }
-	.col-12-md { width: 100%; margin: 10px 0; }
+/* Screen sizes for tablets and medium-sized devices, from 768px and up 959px */
+@media screen and (min-width: 768px) and (max-width: 959px) {
+	#container	{ width: 90%; }
+	.col-3-md	{ width: 25%; }
+	.col-4-md	{ width: 33.33%; }
+	.col-6-md	{ width: 50%; margin: 10px 0; }
+	.col-8-md	{ width: 66.66%; }
+	.col-9-md	{ width: 75%; }
+	.col-12-md	{ width: 100%; margin: 10px 0; }
 }
 
-/* Screen sizes for desktops and larger devices, from 840px and up */
-@media screen and (min-width: 840px) {
-	.col-1-lg { width: 8.33%; }
-	.col-2-lg { width: 16.66%; }
-	.col-3-lg { width: 25%; }
-	.col-4-lg { width: 33.33%; }
-	.col-5-lg { width: 41.66%; }
-	.col-6-lg { width: 50%; }
-	.col-7-lg { width: 58.33%; }
-	.col-8-lg { width: 66.66%; }
-	.col-9-lg { width: 75%; }
-	.col-10-lg { width: 83.33%; }
-	.col-11-lg { width: 91.66%; }
-	.col-12-lg { width: 100%; }
+/* Screen sizes for desktops and larger devices, from 960px and up */
+@media screen and (min-width: 960px) {
+	.col-1-lg	{ width: 8.33%; }
+	.col-2-lg	{ width: 16.66%; }
+	.col-3-lg	{ width: 25%; }
+	.col-4-lg	{ width: 33.33%; }
+	.col-5-lg	{ width: 41.66%; }
+	.col-6-lg	{ width: 50%; }
+	.col-7-lg	{ width: 58.33%; }
+	.col-8-lg	{ width: 66.66%; }
+	.col-9-lg	{ width: 75%; }
+	.col-10-lg	{ width: 83.33%; }
+	.col-11-lg	{ width: 91.66%; }
+	.col-12-lg	{ width: 100%; }
 }
