@@ -1,0 +1,95 @@
+/* ===================================================*/
+/* GENERAL RULES - BUTTONS
+/* ===================================================*/
+.btn, button, input[type=button],
+input[type=submit], input[type=reset] {
+	cursor: pointer;
+	border: none;
+	outline: none;
+	text-align: center;
+}
+
+/* ===================================================*/
+/* STYLES - COLORS
+/* ===================================================*/
+.btn-blue {
+	background-color: transparent;
+	color: #11274C;
+	border: 2px solid #11274C;
+	font-weight: 700;
+}
+.btn-blue:hover { background-color: #11274C; color: #FFF; }
+
+.btn-yellow { background-color: #F4A433; color: #FFF; }
+.btn-yellow:hover {
+	background-color: transparent;
+	color: #F4A433;
+	border: 2px solid #F4A433;
+}
+.btn-default { background-color: #ECF0F1; color: #95A5A6;}
+.btn-default:hover { background-color: #95A5A6; color: #ECF0F1; }
+.btn-primary { background-color: #3498DB; color: #FFF; }
+.btn-primary:hover { background-color: #2980B9; color: #FFF; }
+.btn-dark { background-color: #333; color: #FFF; }
+.btn-dark:hover { background-color: #222; color: #FFF; }
+.btn-light { background-color: #E1E1E1; color: #333; }
+.btn-light:hover { background-color: #CCC; color: #333; }
+.btn-outline {
+	background-color: transparent;
+	color: #333;
+	border: 2px solid #333;
+}
+.btn-outline:hover { background-color: #333; color: #FFF; }
+.btn-accept { background-color: #2ECC71; color: #FFF; }
+.btn-accept:hover { background-color: #27AE60; color: #FFF; }
+.btn-warning { background-color: #F1C40F; color: #FFF; }
+.btn-warning:hover { background-color: #F1B30B; color: #FFF; }
+.btn-danger { background-color: #E74C3C; color: #FFF; }
+.btn-danger:hover { background-color: #C0392B; color: #FFF; }
+
+
+/* ===================================================*/
+/* STYLES - SIZES
+/* ===================================================*/
+.btn-sml {
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 0.8em;
+}
+.btn-med {
+	width: 120px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 1em;
+}
+.btn-lrg {
+	width: 150px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 1.2em;
+}
+.btn-xlg {
+	width: 200px;
+	height: 70px;
+	line-height: 70px;
+	font-size: 1.3em;
+}
+.btn-jmb {
+	width: 250px;
+	height: 75px;
+	line-height: 75px;
+	font-size: 1.3em;
+}
+.btn-full {
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	font-size: 1.5em;
+}
+
+/* ===================================================*/
+/* STYLES - ROUNDNESS
+/* ===================================================*/
+.btn-rnd { border-radius: 5px; }
+.btn-frd { border-radius: 35px; }
