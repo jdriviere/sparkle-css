@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<title>JD CSS Library Try-Out</title>
+	
+	<!-- LOADING STYLING FILES -->
+	<!--
+	<link rel="stylesheet" type="text/css" href="jdlib-base.css">
+	<link rel="stylesheet" type="text/css" href="jdlib-buttons.css">
+	<link rel="stylesheet" type="text/css" href="jdlib-responsive-grid.css">
+	<link rel="stylesheet" type="text/css" href="jdlib-forms.css">
+	<link rel="stylesheet" type="text/css" href="jdlib-nav.css">
+	<link rel="stylesheet" type="text/css" href="jdlib-tables.css">
+	<link rel="stylesheet" type="text/css" href="jdlib-typography.css">
+	-->
+	
+	<!-- LOADING JAVASCRIPT FILES -->
+	
+	<!-- LOADING META CODES -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- INTERNAL STYLING -->
+	<style type="text/css">
+		@import url("jdlib-base.css");
+		@import url("jdlib-buttons.css");
+		@import url("jdlib-forms.css");
+		@import url("jdlib-nav.css");
+		@import url("jdlib-responsive-grid.css");
+		@import url("jdlib-tables.css");
+		@import url("jdlib-typography.css");
+		
+		[class*='col-'] {
+			margin: 15px 0;
+			background-color: #EEE;
+			border-radius: 15px;
+			border: 1px solid #CCC;
+			text-align: center;
+		}
+	</style>
+	
+	<!-- INTERNAL SCRIPTS -->
+</head>
+
+<body>
+	<nav class="nav-default">
+		<h1 class="nav-brand">Hello</h1>
+		<ul>
+			<li><a href="#">List Item 1</a></li>
+			<li><a href="#">List Item 2</a></li>
+			<li><a href="#">List Item 3</a></li>
+		</ul>
+		<span class="pull-right">
+			<ul>
+				<li><a href="#">List Item 4</a></li>
+				<li><a href="#">List Item 5</a></li>
+			</ul>
+		</span>
+	</nav>
+	<div class="container">
+		<div class="pull-center">
+			<h1>Welcome to the <span class="x-thick">JD CSS Library</span></h1>
+			<h2 class="thin">Simple Grid System</h2>
+		</div>
+		<div class="row">
+			<div class="col-1">Col-1</div>
+			<div class="col-1">Col-1</div>
+			<div class="col-1">Col-1</div>
+			<div class="col-1">Col-1</div>
+			<div class="col-1">Col-1</div>
+			<div class="col-1">Col-1</div>
+			<div class="col-1">Col-1</div>
+			<div class="col-1">Col-1</div>
+			<div class="col-1">Col-1</div>
+			<div class="col-1">Col-1</div>
+			<div class="col-1">Col-1</div>
+			<div class="col-1">Col-1</div>
+		</div>
+		<div class="row">
+			<div class="col-2">Col-2</div>
+			<div class="col-2">Col-2</div>
+			<div class="col-2">Col-2</div>
+			<div class="col-2">Col-2</div>
+			<div class="col-2">Col-2</div>
+			<div class="col-2">Col-2</div>
+		</div>
+		<div class="row">
+			<div class="col-3">Col-3</div>
+			<div class="col-3">Col-3</div>
+			<div class="col-3">Col-3</div>
+			<div class="col-3">Col-3</div>
+		</div>
+		<div class="row">
+			<div class="col-4">Col-4</div>
+			<div class="col-4">Col-4</div>
+			<div class="col-4">Col-4</div>
+		</div>
+		<div class="row">
+			<div class="col-5">Col-5</div>
+			<div class="col-7">Col-7</div>
+		</div>
+		<div class="row">
+			<div class="col-6">Col-6</div>
+			<div class="col-6">Col-6</div>
+		</div>
+		<div class="row">
+			<div class="col-7">Col-7</div>
+			<div class="col-5">Col-5</div>
+		</div>
+		<div class="row">
+			<div class="col-8">Col-8</div>
+			<div class="col-4">Col-4</div>
+		</div>
+		<div class="row">
+			<div class="col-9">Col-9</div>
+			<div class="col-3">Col-3</div>
+		</div>
+		<div class="row">
+			<div class="col-10">Col-10</div>
+			<div class="col-2">Col-2</div>
+		</div>
+		<div class="row">
+			<div class="col-11">Col-11</div>
+			<div class="col-1">Col-1</div>
+		</div>
+		<div class="row">
+			<div class="col-12">Col-12</div>
+		</div>
+		
+		<hr>
+
+		<h2 class="pull-center thin">Buttons</h2>
+		<div class="row">
+			<h3>Default</h3><br>
+			<button class="btn btn-default btn-sml">Default</button>
+			<button class="btn btn-primary btn-sml">Primary</button>
+			<button class="btn btn-dark btn-sml">Dark</button>
+			<button class="btn btn-light btn-sml">Light</button>
+			<button class="btn btn-accept btn-sml">Accept</button>
+			<button class="btn btn-warning btn-sml">Warning</button>
+			<button class="btn btn-danger btn-sml">Danger</button>
+		</div>
+		<div class="row">
+			<h3>Outlined</h3><br>
+			<button class="btn btn-outline-default btn-sml">Default</button>
+			<button class="btn btn-outline-primary btn-sml">Primary</button>
+			<button class="btn btn-outline-dark btn-sml">Dark</button>
+			<button class="btn btn-outline-light btn-sml">Light</button>
+			<button class="btn btn-outline-accept btn-sml">Accept</button>
+			<button class="btn btn-outline-warning btn-sml">Warning</button>
+			<button class="btn btn-outline-danger btn-sml">Danger</button>
+		</div>
+		<div class="row">
+			<h3>Sizes</h3>
+			<button class="btn btn-primary btn-sml">Small</button>
+			<button class="btn btn-primary btn-med">Medium</button>
+			<button class="btn btn-primary btn-lrg">Large</button>
+			<button class="btn btn-primary btn-xlg">X-Large</button>
+			<button class="btn btn-primary btn-jmb">Jumbo</button>
+		</div>
+		<div class="row">
+			<h3>Roundness</h3>
+			<button class="btn btn-primary btn-med btn-rnd">Round</button>
+			<button class="btn btn-primary btn-med btn-frd">Full-Round</button>
+		</div>
+	</div>
+</body>
+</html>
