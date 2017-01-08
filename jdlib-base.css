@@ -1,19 +1,39 @@
-/* ====================
-GENERAL
-======================*/
+/* ===================================================*/
+/* GENERAL RULES - HTML/BODY
+/* ===================================================*/
 *, *:before, *:after {
 	padding: 0;
 	margin: 0;
+	font-family: Helvetica Neue, Helvetica, Open Sans, Arial, sans-serif;
 	-webkit-box-sizing: border-box;
   	-moz-box-sizing: border-box;
   	-o-box-sizing: border-box;
 	box-sizing: border-box;
 }
-body {
-	height: 100%;
-	font-family: Open Sans, Arial, Helvetica, sans-serif;
-}
+body { height: 100%; color: #333; }
+hr { height: 0; margin: 10px 0; border: none; border-bottom: 1px solid #DDD; }
 
+/* ===================================================*/
+/* CONTAINER
+/* ===================================================*/
+.container {
+	position: relative;
+	width: 100%;
+	max-width: 1170px; /* Maximum grid system will be at 1170px */
+	margin-left: auto;
+	margin-right: auto;
+	/*padding: 0 20px;
+	-webkit-box-sizing: border-box;
+  	-moz-box-sizing: border-box;
+  	-o-box-sizing: border-box;
+	box-sizing: border-box;*/
+}
+.container:before, .container:after{ display: table; line-height: 0; content: ""; }
+.container:after { clear:both; }
+
+/* ===================================================*/
+/* CLEAR
+/* ===================================================*/
 .clear { display: inline-block; }
 .clear:after {
 	visibility: hidden;
@@ -24,9 +44,9 @@ body {
 	height: 0;
 }
 
-/* ====================
-PLACEMENTS
-======================*/
+/* ===================================================*/
+/* PLACEMENTS
+/* ===================================================*/
 .pull-left { float: left; }
 .pull-right { float: right; }
 .pull-center {

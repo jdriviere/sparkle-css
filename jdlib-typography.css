@@ -1,0 +1,17 @@
+/* ===================================================*/
+/* TYPOGRAPHY - GENERAL
+/* ===================================================*/
+body { font-size: 16px; }
+
+/* ===================================================*/
+/* TYPOGRAPHY - WEIGHT
+/* ===================================================*/
+h1.thin, h2.thin, h3.thin, h4.thin, h5.thin, h6.thin, p.thin { font-weight: 300; }
+h1.thick, h2.thick, h3.thick, h4.thick, h5.thick, h6.thick , p.thick{ font-weight: 700; }
+
+/* ===================================================*/
+/* TYPOGRAPHY - SIZES
+/* ===================================================*/
+p.small		{ font-size: 0.85em; }
+p.normal	{ font-size: 1em; }
+p.big 		{ font-size: 1.15em; }
