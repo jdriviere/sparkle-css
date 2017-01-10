@@ -1,8 +1,6 @@
-<!DOCTYPE html>
-
-<html lang="en">
+<html>
 <head>
-	<title>Home | JDLib-CSS</title>
+	<title>Buttons | JDLib-CSS</title>
 	
 	<!-- LOADING STYLING FILES -->
 	<!--
@@ -44,9 +42,7 @@
 			border: 1px solid #CCC;
 			text-align: center;
 		}
-		h1.welcome	{ margin: 20vh 0 10px; }
-		p { line-height: 1.5em; }
-		button { margin: 30px 0; }
+		h2.welcome	{ margin: 10vh 0 50px; }
 	</style>
 	
 	<!-- INTERNAL SCRIPTS -->
@@ -67,13 +63,44 @@
 			</ul>
 		</span>
 	</nav>
+	
 	<div class="container">
-		<div class="pull-center">
-			<h1 class="welcome">Welcome to the JDLib-CSS Library</h1>
-			<p>This is a small preview of my own personalized CSS framework called the JDLib-CSS. Of course, the final name is still pending.</p>
-			<p>Please, leave a comment in my Github if bugs are found, or you would like to make a suggestion(s). Also, please do not alter</p>
-			<p>anything in the codes; and if you use it, please take the time to leave a positive (constructive) comment and credit. Thank you!</p>
-			<button type="button" class="btn btn-accept btn-lrg btn-rnd" onclick="location.href='grid.html';">Go to Grid</button>
+		<h2 class="pull-center welcome">Buttons</h2>
+		<div class="row">
+			<h3>Default</h3><br>
+			<button class="btn btn-default btn-sml">Default</button>
+			<button class="btn btn-primary btn-sml">Primary</button>
+			<button class="btn btn-dark btn-sml">Dark</button>
+			<button class="btn btn-light btn-sml">Light</button>
+			<button class="btn btn-accept btn-sml">Accept</button>
+			<button class="btn btn-warning btn-sml">Warning</button>
+			<button class="btn btn-danger btn-sml">Danger</button>
+		</div>
+		<div class="row">
+			<h3>Outlined</h3><br>
+			<button class="btn btn-outline-default btn-sml">Default</button>
+			<button class="btn btn-outline-primary btn-sml">Primary</button>
+			<button class="btn btn-outline-dark btn-sml">Dark</button>
+			<button class="btn btn-outline-light btn-sml">Light</button>
+			<button class="btn btn-outline-accept btn-sml">Accept</button>
+			<button class="btn btn-outline-warning btn-sml">Warning</button>
+			<button class="btn btn-outline-danger btn-sml">Danger</button>
+		</div>
+		<div class="row">
+			<h3>Sizes</h3>
+			<button class="btn btn-primary btn-sml">Small</button>
+			<button class="btn btn-primary btn-med">Medium</button>
+			<button class="btn btn-primary btn-lrg">Large</button>
+			<button class="btn btn-primary btn-xlg">X-Large</button>
+			<button class="btn btn-primary btn-jmb">Jumbo</button>
+		</div>
+		<div class="row">
+			<button class="btn btn-primary btn-full">Full-Width</button>
+		</div>
+		<div class="row">
+			<h3>Roundness</h3>
+			<button class="btn btn-primary btn-med btn-rnd">Round</button>
+			<button class="btn btn-primary btn-med btn-frd">Full-Round</button>
 		</div>
 	</div>
 </body>
