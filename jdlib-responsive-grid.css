@@ -1,27 +1,9 @@
 /* ===================================================*/
 /* GENERAL RULES - GRID
 /* ===================================================*/
-.row { margin: 20px 0; }
-.row:before, .row:after { display:table; line-height:0; content:""; }
+.row  { margin: 10px 0; zoom: 1; } /* For IE 6/7 */
+.row:before, .row:after { display: table; line-height: 0; content: ""; }
 .row:after { clear:both; }
-
-/* ===================================================*/
-/* COLUMNS - GENERAL
-/* ===================================================*/
-.col-1	{ width: 8.33333%; }
-.col-2	{ width: 16.66666%; }
-.col-3	{ width: 25%; }
-.col-4	{ width: 33.33333%; }
-.col-5	{ width: 41.66666%; }
-.col-6	{ width: 50%; }
-.col-7	{ width: 58.33333%; }
-.col-8	{ width: 66.66666%; }
-.col-9	{ width: 75%; }
-.col-10	{ width: 83.33333%; }
-.col-11	{ width: 91.66666%; }
-.col-12	{ width: 100%; }
-[class*="col-"] { float: left; min-height: 1px; padding: 15px; box-sizing: border-box; }
-[class*="col-"]:last-of-type { padding-right: 15px; float: right; }
 
 /* ===================================================*/
 /* OFFSETS
@@ -40,36 +22,71 @@
 .offset-12	{ margin-left: 100%; }
 
 /* ===================================================*/
-/* MEDIA QUERIES
+/* COLUMNS - GENERAL
 /* ===================================================*/
-/*
-@media screen and (min-width: 480px) and (max-width: 767px) {
-	.container	{ width: 90%; text-align: center; }
-	.col-sm		{ width: 100%; margin: 10px auto; padding: 0; }
+
+.col-1, .col-1-lg	{ width: 8.33333%; }
+.col-2, .col-2-lg	{ width: 16.66666%; }
+.col-3, .col-3-lg	{ width: 25%; }
+.col-4, .col-4-lg	{ width: 33.33333%; }
+.col-5, .col-5-lg	{ width: 41.66666%; }
+.col-6, .col-6-lg	{ width: 50%; }
+.col-7, .col-7-lg	{ width: 58.33333%; }
+.col-8, .col-8-lg	{ width: 66.66666%; }
+.col-9, .col-9-lg	{ width: 75%; }
+.col-10, .col-10-lg	{ width: 83.33333%; }
+.col-11, .col-11-lg	{ width: 91.66666%; }
+.col-12, .col-12-lg	{ width: 100%; }
+[class*="col-"] { float: left; display: block; min-height: 1px; padding: 15px; box-sizing: border-box; }
+[class*="col-"]:last-of-type { padding-right: 15px; float: right; }
+
+/* ===================================================*/
+/* MEDIA QUERIES - MOBILE
+/* ===================================================*/
+@media screen and (max-width: 480px) {
+	.container					{ width: 90%; text-align: center; }
+	.col-xs, [class*="col-"]	{ float: none; width: 100%; margin: 10px auto; }
 }
 
-@media screen and (min-width: 768px) and (max-width: 959px) {
-	.container	{ width: 90%; }
-	.col-3-md	{ width: 25%; }
-	.col-4-md	{ width: 33.33%; }
-	.col-6-md	{ width: 50%; margin: 10px 0; }
-	.col-8-md	{ width: 66.66%; }
-	.col-9-md	{ width: 75%; }
-	.col-12-md	{ width: 100%; margin: 10px 0; }
+/* ===================================================*/
+/* MEDIA QUERIES - TABLET
+/* ===================================================*/
+@media screen and (max-width: 600px) {
+	.col-1-sm	{ width: 25%; }
+	.col-2-sm	{ width: 50%; }
+	.col-3-sm	{ width: 75%; }
+	.col-4-sm	{ width: 100%; }
 }
 
-@media screen and (min-width: 960px) {
-	.col-1-lg	{ width: 8.33%; }
-	.col-2-lg	{ width: 16.66%; }
+@media screen and (min-width: 601px) {
+	.col-1-md	{ width: 12.5%; }
+	.col-2-md	{ width: 25%; }
+	.col-3-md	{ width: 37.5%; }
+	.col-4-md	{ width: 50%; }
+	.col-5-md	{ width: 62.5%; }
+	.col-6-md	{ width: 75%; }
+	.col-7-md	{ width: 87.5%; }
+	.col-8-md	{ width: 100%; }
+}
+
+/* ===================================================*/
+/* MEDIA QUERIES - DESKTOP
+/* ===================================================*/
+@media screen and (min-width: 768px) {
+	.col-1-lg	{ width: 8.33333%; }
+	.col-2-lg	{ width: 16.66666%; }
 	.col-3-lg	{ width: 25%; }
-	.col-4-lg	{ width: 33.33%; }
-	.col-5-lg	{ width: 41.66%; }
+	.col-4-lg	{ width: 33.33333%; }
+	.col-5-lg	{ width: 41.66666%; }
 	.col-6-lg	{ width: 50%; }
-	.col-7-lg	{ width: 58.33%; }
-	.col-8-lg	{ width: 66.66%; }
+	.col-7-lg	{ width: 58.33333%; }
+	.col-8-lg	{ width: 66.66666%; }
 	.col-9-lg	{ width: 75%; }
-	.col-10-lg	{ width: 83.33%; }
-	.col-11-lg	{ width: 91.66%; }
+	.col-10-lg	{ width: 83.33333%; }
+	.col-11-lg	{ width: 91.66666%; }
 	.col-12-lg	{ width: 100%; }
 }
+
+/*
+@media screen and (min-width: 961px) {}
 */

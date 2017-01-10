@@ -1,10 +1,16 @@
 /* ===================================================*/
 /* GENERAL RULES - BUTTONS
 /* ===================================================*/
-.btn, button, input[type=button], input[type=submit], input[type=reset] { cursor: pointer; border: none; outline: none; text-align: center; }
+.btn, .btn a, button, input[type=button], input[type=button], input[type=submit], input[type=reset] {
+	cursor: pointer;
+	border: none;
+	outline: none;
+	text-align: center;
+	text-decoration: none;
+}
 
 /* ===================================================*/
-/* STYLES - COLORS
+/* STYLES - COLORS (SOLID)
 /* ===================================================*/
 .btn-default { background-color: #ECF0F1; color: #95A5A6;}
 .btn-default:hover { background-color: #95A5A6; color: #ECF0F1; }
@@ -23,6 +29,9 @@
 .btn-danger { background-color: #E74C3C; color: #FFF; }
 .btn-danger:hover { background-color: #C0392B; color: #FFF; }
 
+/* ===================================================*/
+/* STYLES - COLORS (OUTLINE)
+/* ===================================================*/
 .btn-outline-default { background-color:  transparent; color: #95A5A6; border: 1px solid #ECF0F1; }
 .btn-outline-default:hover { background-color: #95A5A6; color: #ECF0F1; }
 .btn-outline-primary { background-color: transparent; color: #3498DB; border: 1px solid #3498DB; }
