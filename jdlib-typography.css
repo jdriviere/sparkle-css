@@ -1,13 +1,20 @@
 /* ===================================================*/
 /* TYPOGRAPHY - GENERAL
 /* ===================================================*/
-body { font-size: 16px; }
+body	{ font-size: 16px; }
+h1		{ font-size: 2.5rem; }
+h2		{ font-size: 2.3rem; }
+h3		{ font-size: 1.5rem; }
+h4		{ font-size: 1.375rem; }
+h5		{ font-size: 1.25rem; }
+h6		{ font-size: 1rem; }
+p		{ font-size: 1.15rem; line-height: 1.8; font-weight: 200; }
 
 /* ===================================================*/
 /* TYPOGRAPHY - WEIGHT
 /* ===================================================*/
-h1.thin, h2.thin, h3.thin, h4.thin, h5.thin, h6.thin, p.thin { font-weight: 300; }
-h1.thick, h2.thick, h3.thick, h4.thick, h5.thick, h6.thick , p.thick{ font-weight: 700; }
+h1.thin, h2.thin, h3.thin, h4.thin, h5.thin, h6.thin, p.thin, p>span.thin { font-weight: 300; }
+h1.thick, h2.thick, h3.thick, h4.thick, h5.thick, h6.thick , p.thick, p>span.thick { font-weight: 700; }
 
 /* ===================================================*/
 /* TYPOGRAPHY - SIZES
