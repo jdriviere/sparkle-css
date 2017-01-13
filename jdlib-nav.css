@@ -3,19 +3,74 @@
 /* ===================================================*/
 .nav, nav { width: 100%; height: 60px; margin: 0 auto; padding: 0 20px; line-height: 60px; }
 .nav li, nav li { display: inline; float: left; list-style: none; }
-.nav li a, nav li a { display: block; text-decoration: none; }
+.nav a, nav a { display: block; text-decoration: none; }
 
 /* ===================================================*/
 /* NAVIGATION - COLORS
 /* ===================================================*/
-.nav-default, nav.default-default { background-color: #F5F7FA; color: #AAB2BD; border-bottom: 1px solid #E6E9ED; }
-.nav-default a, nav.default-default a { padding: 0 20px; color: #AAB2BD; }
-.nav-default a:hover, nav.nav-default a:hover { color: #F5F7FA; background-color: #AAB2BD; }
+.nav-default, nav.nav-default { background-color: #F5F7FA; color: #AAB2BD; border-bottom: 1px solid #E6E9ED; }
+.nav-default li a, nav.nav-default li a { padding: 0 20px; color: #AAB2BD; }
+.nav-default li a:hover, nav.nav-default li a:hover { color: #F5F7FA; background-color: #AAB2BD; }
 .nav-dark, nav.nav-dark { background-color: #434A5A; color: #F5F7FA; border-bottom: 1px solid #445; }
-.nav-dark a, nav.nav-dark a { padding: 0 20px; color: #F5F7FA; }
-.nav-dark a:hover, nav.nav-dark a :hover{ background-color: #656D78; }
+.nav-dark li a, nav.nav-dark li a { padding: 0 20px; color: #F5F7FA; }
+.nav-dark li a:hover, nav.nav-dark li a:hover{ background-color: #656D78; }
 
 /* ===================================================*/
 /* NAVIGATION - BRANDS/LOGO
 /* ===================================================*/
 .nav-brand { float: left; margin-right: 20px; }
+
+/* ===================================================*/
+/* NAVIGATION - DROPDOWN
+/* ===================================================*/
+.nav-dropdown { position: relative; }
+.nav-dropmenu {
+	position: absolute;
+	right: 0;
+	display: none;
+	min-width: 160px;
+	background-color: #F9F9F9;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 5;
+}
+.nav-dropmenu a {
+	padding: 5px;
+	text-decoration: none;
+	color: #777 !important;
+	text-align: center;
+	display: block;
+}
+.nav-dropmenu a:hover { background-color: #F1F1F1 !important; }
+.nav-dropdown:hover .nav-dropmenu { display: block; }
+
+/* ===================================================*/
+/* NAVIGATION - TOGGLE ICON
+/* ===================================================*/
+.nav-toggle {
+	padding: 0 15px;
+	font-size: 20px;
+	display: block;
+	cursor: pointer;
+}
+.nav-default .nav-toggle:hover { background-color: #AAB2BD; color: #F5F7FA; }
+.nav-dark .nav-toggle:hover { background-color: #656D78; }
+
+/* ===================================================*/
+/* NAVIGATION - MEDIA QUERIES
+/* ===================================================*/
+@media screen and (max-width: 767px) {
+	.nav-brand { width: 70%; font-size: 2em; transition: all 0.3s ease-in-out; }
+	.nav li, nav li { display: none; }
+	.nav-toggle { display: inline-block; }
+}
+@media screen and (min-width: 768px) {
+	.nav-brand { transition: all 0.5s ease-in-out; }
+	.nav li, nav li { display: inline; }
+	.nav-toggle { display: none; }
+}
+@media screen and (max-width: 959px) {
+    .nav li, nav li { float: left; font-size: 80%; transition: all 0.3s ease-in-out; }
+}
+@media screen and (min-width: 960px) {
+	.nav li, nav li { font-size: 100%; transition: all 0.3s ease-in-out; }
+}

@@ -44,6 +44,9 @@
 	.col-11-sm	{ width: 91.66667%; }
 	.col-12-sm	{ width: 100%; }
 }
+@media screen and (max-width: 639px) {
+	.container	{ width: 80%; transition: all 0.3s ease-in-out; }
+}
 
 /* ===================================================*/
 /* MEDIA QUERIES - TABLET
@@ -61,6 +64,9 @@
 	.col-10-md	{ width: 83.33333%; }
 	.col-11-md	{ width: 91.66667%; }
 	.col-12-md	{ width: 100%; }
+}
+@media screen and (max-width: 959px) {
+	.container	{ width: 90%; transition: all 0.3s ease-in-out; }
 }
 
 /* ===================================================*/
@@ -80,11 +86,14 @@
 	.col-11-lg	{ width: 91.66667%; }
 	.col-12-lg	{ width: 100%; }
 }
+@media screen and (min-width: 960px) {
+	.container	{ width: 100%; transition: all 0.3s ease-in-out; }
+}
 
 /* ===================================================*/
 /* OFFSETS
 /* ===================================================*/
-/*
+/* Do not touch or alter for now!
 .offset-1	{ margin-left: 8.33333%; }
 .offset-2	{ margin-left: 16.66666%; }
 .offset-3	{ margin-left: 25%; }
@@ -102,6 +111,6 @@
 /* ===================================================*/
 /* MEDIA QUERIES - UNUSED
 /* ===================================================*/
-/*
+/* Unused rule - Do NOT alter!
 @media screen and (min-width: 720px) {}
 */

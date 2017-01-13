@@ -50,7 +50,7 @@
 
 <body>
 	<nav class="nav-dark">
-		<h1 class="nav-brand">JDLib-CSS</h1>
+		<h2 class="nav-brand">JDLib-CSS</h2>
 		<ul>
 			<li><a href="index.html">Home</a></li>
 			<li><a href="grid.html">Grid UI</a></li>
@@ -59,8 +59,15 @@
 		<span class="pull-right">
 			<ul>
 				<li><a href="#">List Item 4</a></li>
-				<li><a href="#">List Item 5</a></li>
+				<li class="nav-dropdown"><a href="#">List Item 5</a>
+					<div class="nav-dropmenu">
+						<a href="#">List Subitem 1</a>
+						<a href="#">List Subitem 2</a>
+						<a href="#">List Subitem 3</a>
+					</div>
+				</li>
 			</ul>
+			<div id="open-nav" class="nav-toggle">&#9776;</div>
 		</span>
 	</nav>
 	
