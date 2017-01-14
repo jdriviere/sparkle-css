@@ -21,6 +21,11 @@
 .nav-brand { float: left; margin-right: 20px; }
 
 /* ===================================================*/
+/* NAVIGATION - POSITIONS
+/* ===================================================*/
+.nav-pull-right { float: right; }
+
+/* ===================================================*/
 /* NAVIGATION - DROPDOWN
 /* ===================================================*/
 .nav-dropdown { position: relative; }
@@ -58,19 +63,13 @@
 /* ===================================================*/
 /* NAVIGATION - MEDIA QUERIES
 /* ===================================================*/
-@media screen and (max-width: 767px) {
-	.nav-brand { width: 70%; font-size: 2em; transition: all 0.3s ease-in-out; }
-	.nav li, nav li { display: none; }
-	.nav-toggle { display: inline-block; }
-}
-@media screen and (min-width: 768px) {
-	.nav-brand { transition: all 0.5s ease-in-out; }
-	.nav li, nav li { display: inline; }
-	.nav-toggle { display: none; }
-}
 @media screen and (max-width: 959px) {
-    .nav li, nav li { float: left; font-size: 80%; transition: all 0.3s ease-in-out; }
+	.nav-brand		{ width: 70%; font-size: 2em; transition: all 0.3s ease-in-out; }
+	.nav li, nav li	{ display: none; }
+	.nav-toggle		{ display: inline-block; }
 }
 @media screen and (min-width: 960px) {
-	.nav li, nav li { font-size: 100%; transition: all 0.3s ease-in-out; }
+	.nav-brand		{ transition: all 0.5s ease-in-out; }
+	.nav li, nav li	{ display: inline; }
+	.nav-toggle		{ display: none; }
 }

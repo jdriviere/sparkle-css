@@ -13,6 +13,7 @@
 }
 body { height: 100%; color: #333; }
 hr { height: 0; margin: 10px 0; border: none; border-bottom: 1px solid #DDD; }
+footer { clear: both; width: 100%; padding: 15px; }
 
 /* ===================================================*/
 /* CLEAR
