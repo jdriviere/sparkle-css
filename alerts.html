@@ -4,33 +4,26 @@
 <head>
 	<title>Alerts | JDLib-CSS</title>
 	
-	<!-- LOADING STYLING FILES -->
-	<!-- Not in use. It was created incase the @import function didn't work
-	<link rel="stylesheet" type="text/css" href="jdlib-base.css">
-	<link rel="stylesheet" type="text/css" href="jdlib-buttons.css">
-	<link rel="stylesheet" type="text/css" href="jdlib-responsive-grid.css">
-	<link rel="stylesheet" type="text/css" href="jdlib-forms.css">
-	<link rel="stylesheet" type="text/css" href="jdlib-nav.css">
-	<link rel="stylesheet" type="text/css" href="jdlib-tables.css">
-	<link rel="stylesheet" type="text/css" href="jdlib-typography.css">
-	-->
+	<!-- LOADING META CODES -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	
+	<!-- INTERNAL SCRIPTS -->
 	
 	<!-- LOADING JAVASCRIPT FILES -->
 	
-	<!-- LOADING META CODES -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
 	<!-- INTERNAL STYLING -->
 	<style type="text/css">
-		@import url("jdlib-alerts.css");
-		@import url("jdlib-base.css");
-		@import url("jdlib-buttons.css");
-        @import url("jdlib-flexbox-grid.css");
-		@import url("jdlib-forms.css");
-		@import url("jdlib-nav.css");
-		@import url("jdlib-responsive-grid.css");
-		@import url("jdlib-tables.css");
-		@import url("jdlib-typography.css");
+		@import url("fonts/font-awesome-4.7.0/css/font-awesome.min.css");
+		@import url("css/jdlib-alerts.css");
+		@import url("css/jdlib-base.css");
+		@import url("css/jdlib-buttons.css");
+        @import url("css/jdlib-flexbox-grid.css");
+		@import url("css/jdlib-forms.css");
+		@import url("css/jdlib-nav.css");
+		@import url("css/jdlib-responsive-grid.css");
+		@import url("css/jdlib-tables.css");
+		@import url("css/jdlib-typography.css");
 		
 		[class*='col-'] {
 			margin: 15px 0;
@@ -46,12 +39,12 @@
 			border: 1px solid #CCC;
 			text-align: center;
 		}
-		h2.welcome	{ margin: 10vh 0 10px; }
+		h2.welcome	{ margin: 20vh 0 10px; }
 		p { line-height: 1.5em; }
 		button { margin: 30px 0; }
+		span.more-option { display: inline-block; }
+		span.more-option:after { content: '\f0d7'; font-family: FontAwesome; padding-left: 10px; }
 	</style>
-	
-	<!-- INTERNAL SCRIPTS -->
 </head>
 
 <body>
@@ -67,7 +60,8 @@
 			<span class="nav-pull-right">
 				<ul>
 					<li><a href="alerts.html">Alerts</a></li>
-					<li class="nav-dropdown"><a href="#">List Item 5</a>
+					<li class="nav-dropdown">
+						<a href="#">More Options<span class="more-option"></span></a>
 						<div class="nav-dropmenu">
 							<a href="#">List Subitem 1</a>
 							<a href="#">List Subitem 2</a>

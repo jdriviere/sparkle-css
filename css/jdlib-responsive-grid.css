@@ -8,7 +8,7 @@
 /* ===================================================*/
 /* GENERAL RULES - ROW
 /* ===================================================*/
-.row  { width: 100%; margin: 10px 0; } /* For IE 6/7 */
+.row  { width: 100%; margin: 5px 0; }
 .row:before, .row:after { content: " "; display: table; }
 .row:after { clear:both; }
 
@@ -20,8 +20,8 @@
 	float: left;
 	width: 100%;
 	min-height: 1px;
-	margin: .6em;
-	padding: 1em;
+	padding: .6em;
+	margin: 8px 0;
 }
 /* Unused rule - Do NOT alter!
 [class*="col-"]:last-of-type { padding-right: 15px; float: right; }
@@ -86,7 +86,7 @@
 	.col-11-lg	{ width: 91.66667%; }
 	.col-12-lg	{ width: 100%; }
 }
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 959px) {
 	.container	{ width: 100%; transition: all 0.3s ease-in-out; }
 }
 
