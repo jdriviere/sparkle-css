@@ -2,7 +2,7 @@
 
 <html lang="en">
 <head>
-	<title>Home | JDLib-CSS</title>
+	<title>Home | S3CSS</title>
 	
 	<!-- LOADING META CODES -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,6 +25,7 @@
 		@import url("css/jdlib-tables.css");
 		@import url("css/jdlib-typography.css");
 		
+        .row { margin: 0; }
 		[class*="col-"] { text-align: center;  }
 		.img_bg {
 			width: 100%;
@@ -32,17 +33,29 @@
 			background-position: center center;
 			background-repeat: no-repeat;
 			background-size: cover;
-			padding: 15% 10%;
+			padding: 7% 10% 20%;
 		}
 		.img_bg p { line-height: 1.5em; }
+        .logo { margin-bottom: 20px; }
+        h1 { margin-bottom: 30px; }
 		button { margin: 30px 0; }
-		.dark_bg { padding: 50px 0 20px; background-color: #333739; color: #FFF; }
-		span.more-option { display: inline-block; }
-		span.more-option:after { content: '\f0d7'; font-family: FontAwesome; padding-left: 10px; }
+		.dark_bg { padding: 40px 0 30px; background-color: #313439; color: #FFF; }
+        .dark_bg h2 { color: #FBB040; }
+        .feature { padding: 20px; }
+        .bg_img {
+            display: block;
+            height: 300px;
+			background-image: url('images/img_bg.jpg');
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+        }
+        @media screen and (max-width: 640px) { .bg_img { display: none; } }
 	</style>
 </head>
 
 <body>
+    <!--
 	<header>
 		<nav class="nav-dark">
 			<h2 class="nav-brand">S3CSS</h2>
@@ -68,9 +81,11 @@
 			</span>
 		</nav>
 	</header>
+	-->
 
 	<div class="img_bg">
 		<div class="pull-center">
+		    <img class="logo" src="images/S3CSS_Logo_Col.png" width="150">
 			<h1>Welcome to the S3CSS Library</h1>
 			<p>
 				This is a small preview of my own personalized CSS framework called the S3CSS (Simple Stylesheet). Please, leave a comment in my Github if bugs are found, or you would like to make a suggestion(s). Also, please do not alter anything in the codes; and if you use it, please take the time to leave a positive (constructive) comment and credit. Thank you!
@@ -98,6 +113,38 @@
 			</div>
 		</div>
 	</div>
+    
+    <div class="container">
+    <div class="row">
+        <div class="bg_img col-6-md"></div>
+        <div class="feature col-6-md">
+            <h3>Feature 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum quo ducimus iure error id commodi fugit doloremque repellendus ad. Soluta quo deserunt voluptates, dolorem atque, facere asperiores reprehenderit animi tempora?</p>
+            
+            <button class="btn btn-primary btn-med btn-frd">Click here to see</button>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="feature col-6-md">
+            <h3>Feature 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum quo ducimus iure error id commodi fugit doloremque repellendus ad. Soluta quo deserunt voluptates, dolorem atque, facere asperiores reprehenderit animi tempora?</p>
+            
+            <button class="btn btn-primary btn-med btn-frd">Click here to see</button>
+        </div>
+        <div class="bg_img col-6-md"></div>
+    </div>
+    
+    <div class="row">
+        <div class="bg_img col-6-md"></div>
+        <div class="feature col-6-md">
+            <h3>Feature 3</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum quo ducimus iure error id commodi fugit doloremque repellendus ad. Soluta quo deserunt voluptates, dolorem atque, facere asperiores reprehenderit animi tempora?</p>
+            
+            <button class="btn btn-primary btn-med btn-frd">Click here to see</button>
+        </div>
+    </div>
+    </div>
 			
 	<footer>
 		<h6 class="pull-center">J. D. Riviere &copy; 2017</h6>
