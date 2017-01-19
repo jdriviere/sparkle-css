@@ -26,7 +26,7 @@
 		@import url("css/jdlib-typography.css");
 		
         .row { margin: 0; }
-		[class*="col-"] { text-align: center;  }
+		[class*="col-"] { margin: 0; text-align: center;  }
 		.img_bg {
 			width: 100%;
 			background-image: url('images/img_bg.jpg');
@@ -38,7 +38,7 @@
 		.img_bg p { line-height: 1.5em; }
         .logo { margin-bottom: 20px; }
         h1 { margin-bottom: 30px; }
-		button { margin: 30px 0; }
+        button.banner { margin-top: 40px; }
 		.dark_bg { padding: 40px 0 30px; background-color: #313439; color: #FFF; }
         .dark_bg h2 { color: #FBB040; }
         .feature { padding: 20px; }
@@ -90,7 +90,7 @@
 			<p>
 				This is a small preview of my own personalized CSS framework called the S3CSS (Simple Stylesheet). Please, leave a comment in my Github if bugs are found, or you would like to make a suggestion(s). Also, please do not alter anything in the codes; and if you use it, please take the time to leave a positive (constructive) comment and credit. Thank you!
 			</p>
-			<button type="button" class="btn-i-open btn-primary btn-lrg btn-frd" onclick="location.href='responsivegrid.html';">Explore S3CSS</button>
+			<button type="button" class="banner btn-i-open btn-primary btn-lrg btn-frd" onclick="location.href='responsivegrid.html';">Explore S3CSS</button>
 		</div>
 	</div>
 		
@@ -115,35 +115,36 @@
 	</div>
     
     <div class="container">
-    <div class="row">
-        <div class="bg_img col-6-md"></div>
-        <div class="feature col-6-md">
-            <h3>Feature 1</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum quo ducimus iure error id commodi fugit doloremque repellendus ad. Soluta quo deserunt voluptates, dolorem atque, facere asperiores reprehenderit animi tempora?</p>
-            
-            <button class="btn btn-primary btn-med btn-frd">Click here to see</button>
+       <h2 class="pull-center" style="color: #FBB040; padding: 40px 0 30px;">Our Wonderful Features</h2>
+        <div class="row">
+            <div class="bg_img col-6-md"></div>
+            <div class="feature col-6-md">
+                <h3>Feature 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum quo ducimus iure error id commodi fugit doloremque repellendus ad. Soluta quo deserunt voluptates, dolorem atque, facere asperiores reprehenderit animi tempora?</p>
+
+                <button class="btn btn-primary btn-med btn-frd">Click here to see</button>
+            </div>
         </div>
-    </div>
-    
-    <div class="row">
-        <div class="feature col-6-md">
-            <h3>Feature 2</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum quo ducimus iure error id commodi fugit doloremque repellendus ad. Soluta quo deserunt voluptates, dolorem atque, facere asperiores reprehenderit animi tempora?</p>
-            
-            <button class="btn btn-primary btn-med btn-frd">Click here to see</button>
+
+        <div class="row">
+            <div class="feature col-6-md">
+                <h3>Feature 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum quo ducimus iure error id commodi fugit doloremque repellendus ad. Soluta quo deserunt voluptates, dolorem atque, facere asperiores reprehenderit animi tempora?</p>
+
+                <button class="btn btn-primary btn-med btn-frd">Click here to see</button>
+            </div>
+            <div class="bg_img col-6-md"></div>
         </div>
-        <div class="bg_img col-6-md"></div>
-    </div>
-    
-    <div class="row">
-        <div class="bg_img col-6-md"></div>
-        <div class="feature col-6-md">
-            <h3>Feature 3</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum quo ducimus iure error id commodi fugit doloremque repellendus ad. Soluta quo deserunt voluptates, dolorem atque, facere asperiores reprehenderit animi tempora?</p>
-            
-            <button class="btn btn-primary btn-med btn-frd">Click here to see</button>
+
+        <div class="row">
+            <div class="bg_img col-6-md"></div>
+            <div class="feature col-6-md">
+                <h3>Feature 3</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum quo ducimus iure error id commodi fugit doloremque repellendus ad. Soluta quo deserunt voluptates, dolorem atque, facere asperiores reprehenderit animi tempora?</p>
+
+                <button class="btn btn-primary btn-med btn-frd">Click here to see</button>
+            </div>
         </div>
-    </div>
     </div>
 			
 	<footer>
