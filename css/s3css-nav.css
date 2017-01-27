@@ -18,7 +18,7 @@
 /* ===================================================*/
 /* NAVIGATION - BRANDS/LOGO
 /* ===================================================*/
-.nav-brand { float: left; margin-right: 20px; }
+.nav-brand { float: left; margin-right: 20px; padding-top: 5px; }
 
 /* ===================================================*/
 /* NAVIGATION - POSITIONS
