@@ -6,7 +6,12 @@
 	width: 80%;
 	margin: 10px auto;
 	padding: 15px;
+    -webkit-box-shadow: 5 5 7 rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 5 5 7 rgba(0, 0, 0, 0.7);
+    -o-box-shadow: 5 5 7 rgba(0, 0, 0, 0.7);
+    box-shadow: 5 5 7 rgba(0, 0, 0, 0.7);
 	border-radius: 0 5px 5px 0;
+    z-index: 10;
 }
 .alert-title { font-weight: 700; }
 .alert-description { font-size: 90%; }
@@ -15,7 +20,7 @@
 /* ===================================================*/
 /* ALERTS - TYPES
 /* ===================================================*/
-.alert-default	{ color: #7F8C8D; background-color: #EEE; border: 1px solid #7F8C8D; border-left: 5px solid #7F8C8D; }
+.alert-default	{ color: #7F8C8D; background-color: #EFEFEF; border: 1px solid #7F8C8D; border-left: 5px solid #7F8C8D; }
 .alert-success	{ color: #27AE60; background-color: #C8F7C5; border: 1px solid #27AE60; border-left: 5px solid #27AE60; }
 .alert-warning	{ color: #F39C12; background-color: #FDFD96; border: 1px solid #F39C12; border-left: 5px solid #F39C12; }
 .alert-danger	{ color: #C0392B; background-color: #F1A9A0; border: 1px solid #C0392B; border-left: 5px solid #C0392B; }
