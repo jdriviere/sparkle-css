@@ -27,3 +27,4 @@ FUTURE IMPLEMENTATIONS (v2.0.0):
         + Dark-grey;
         + Light-grey;
         + White;
+    - Implement Light theme and Dark theme <-- ?
