@@ -11,6 +11,7 @@
 .nav-default, nav.nav-default { background-color: #F5F7FA; color: #AAB2BD; border-bottom: 1px solid #E6E9ED; }
 .nav-default li a, nav.nav-default li a { padding: 0 20px; color: #AAB2BD; }
 .nav-default li a:hover, nav.nav-default li a:hover { color: #F5F7FA; background-color: #AAB2BD; }
+
 .nav-dark, nav.nav-dark { background-color: #434A5A; color: #F5F7FA; border-bottom: 1px solid #445; }
 .nav-dark li a, nav.nav-dark li a { padding: 0 20px; color: #F5F7FA; }
 .nav-dark li a:hover, nav.nav-dark li a:hover{ background-color: #656D78; }
@@ -51,12 +52,7 @@
 /* ===================================================*/
 /* NAVIGATION - TOGGLE ICON
 /* ===================================================*/
-.nav-toggle {
-	padding: 0 15px;
-	font-size: 20px;
-	display: block;
-	cursor: pointer;
-}
+.nav-toggle { padding: 0 15px; font-size: 20px; display: block; cursor: pointer; }
 .nav-default .nav-toggle:hover { background-color: #AAB2BD; color: #F5F7FA; }
 .nav-dark .nav-toggle:hover { background-color: #656D78; }
 
@@ -64,7 +60,7 @@
 /* NAVIGATION - MEDIA QUERIES
 /* ===================================================*/
 @media screen and (max-width: 959px) {
-	.nav-brand		{ width: 70%; font-size: 2em; transition: all 0.3s ease-in-out; }
+	.nav-brand		{ font-size: 2em; transition: all 0.3s ease-in-out; }
 	.nav li, nav li	{ display: none; }
 	.nav-toggle		{ display: inline-block; }
 }

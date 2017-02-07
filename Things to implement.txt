@@ -1,0 +1,16 @@
+Things to implement in S3CSS Framework:
+
+FEATURES:
+- S3CSS-Modals;
+- S3CSS-Thumbnails;
+- S3CSS-Inputs;
+- [add more UI];
+
+IMPLEMENTATIONS:
+- JS/jQuery implementation (for CSS code fixes if needed); <--
+- SASS/SCSS implementation (for CSS clean-up); <-- ?
+- GulpJS implementation (for *.min.css | *.min.js); <-- ?
+
+SUGGESTIONS:
+- Find coders for help? <-- ?
+- [add more here]
