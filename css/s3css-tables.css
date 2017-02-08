@@ -1,0 +1,40 @@
+/*==========================================
+TABLE - GENERAL
+==========================================*/
+table {
+    max-width: 90%;
+    margin: 15px auto;
+    vertical-align: middle;
+    border-collapse: collapse;
+    white-space: nowrap;
+    color: #777;
+    overflow-x: auto;
+    background-color: #FFF;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+th, td    { padding: 15px; border: 1px solid #DDD; text-align: left; }
+th        { font-weight: 800; color: #333; }
+
+/*==========================================
+TABLE - STYLES
+==========================================*/
+table.tbl-no-border th,
+table.tbl-no-border td { border: none; }
+
+table.tbl-bordered th { border: none; border-bottom: 2px solid #DDD; }
+table.tbl-bordered td { border: none; border-bottom: 1px solid #DDD; }
+
+table.tbl-striped tr:nth-child(even) { background-color: #EEE; }
+
+table.tbl-hover tr:hover { background-color: #EEE; }
+
+/*==========================================
+TABLE - COLORE THEMES
+==========================================*/
+table.tbl-default th { background-color: #F5F7FA; border: none; color: #AAB2BD; }
+/*table.tbl-default tr,
+table.tbl-default td { border: 1px solid #AAB2BD; }*/
+
+table.tbl-dark th { background-color: #434A5A; border: none; color: #F5F7FA; }
+/*table.tbl-dark tr,
+table.tbl-dark td { border: 1px solid #434A5A; }*/
