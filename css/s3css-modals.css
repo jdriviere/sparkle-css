@@ -1,0 +1,41 @@
+/* ===================================================*/
+/* MODALS - GENERAL RULES
+/* ===================================================*/
+.modal {
+    position: relative;
+    min-width: 300px;
+    max-width: 80%;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    border: 1px solid #DDD;
+    box-shadow: 1px 5px 7px rgba(0, 0, 0, .7);
+}
+.modal img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.modal h1,
+.modal h2,
+.modal h3 {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.modal p {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.5em;
+    color: #777;
+}
+.modal-close:after {
+    content: '&f00d;';
+    position: absolute;
+    display: block;
+    top: 10px;
+    right: 10px;
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid #DDD;
+}
