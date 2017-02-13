@@ -12,17 +12,26 @@
 	<script></script>
 
 	<!-- LOADING LINKS -->
+   <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
     <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
     <link rel="manifest" href="images/icons/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="images/icons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    
+    <script src="https://use.fontawesome.com/a833db4ecd.js"></script>
 
 	<!-- INTERNAL STYLING -->
 	<style type="text/css">
 		@import url('css/s3css-main.css');
         
-        h3 { text-align: center; }
+        body {
+            width: 100%;
+            height: 100%;
+            background: url(images/img_bg.jpg) center center no-repeat;
+            background-size: cover;
+        }
 	</style>
 </head>
 
@@ -32,11 +41,35 @@
 		as many functionalities as possible work.
 	-->
 	<div class="container">
-        <div class="modal">
-            <img src="images/img_bg_banner.jpg" alt="modal-img">
-            <h1>Hello World</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates placeat saepe minus vel adipisci, ab modi vitae ex minima, repudiandae nemo delectus aliquid, esse eveniet deleniti atque at cum architecto!</p>
-        </div>
-	</div>
+        <div id="modal-box" class="modal">
+            <div class="modal-body">
+                <span class="modal-close" onclick="document.getElementById('modal-box').style.display='none'">&times;</span>
+                <h1 class="modal-title">Hello World</h1>
+                <p class="modal-content">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates placeat saepe minus vel adipisci, ab modi vitae ex minima, repudiandae nemo delectus aliquid, esse eveniet deleniti atque at cum architecto!
+                </p>
+            </div> <!-- END OF MODAL-BODY -->
+        </div> <!-- END OF MODAL -->
+	</div> <!-- END OF CONTAINER -->
+	
+	<script>
+        // Get the modal
+        var modal = document.getElementById('modal-box');
+
+        // Get the <span> element that closes the modal
+        var close-btn = document.getElementsByClassName("modal-close");
+
+        // When the user clicks on <span> (x), close the modal
+        close-btn.onclick = function() {
+            modal.style.display = "none";
+        };
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
