@@ -6,12 +6,13 @@ $(document).ready (function() {
 	// serve to fix problems that occur within the CSS-only framework. This function
 	// will load all the S3CSS framework functions.
 	navDrop();
+	navToggleAction();
 });
 
 // -----------------------------
 // FUNCTIONS
 // -----------------------------
-// This function setups up the dropdown menu functionality.
+// This function sets up the dropdown menu functionality.
 function navDrop() {
 	$('nav ul li > a:not(:only-child)').click (function (e) {
 		$(this).siblings('.nav-dropdown').toggle();
@@ -25,6 +26,13 @@ function navDrop() {
 		$('.nav-dropdown').hide();
 	});
 } // End of NavDrop
+
+// This function sets up the nav-toggle functionality.
+function navToggleAction() {
+	$('#nav-toggle').on('click', function() {
+		$(this).toggleClass('active');
+	});
+} // End of NavToggleAction
 
 // This function fixes navigation by forcing the mobile navigation to disappear
 // when the navigation bar reaches Desktop size, when it is already opened.
