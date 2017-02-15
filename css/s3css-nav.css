@@ -6,6 +6,10 @@
 .nav a, nav a { display: block; text-decoration: none; }
 .nav a:not(:only-child):after,
 nav a:not(:only-child):after { padding-left: 5px; content: '\f0d7'; font-family: FontAwesome; }
+.nav ul li ul li,
+nav ul li ul li { min-width: 190px; }
+.nav ul li ul li a,
+nav ul li ul li a { padding: 15px; z-index: 1; }
 
 /* ===================================================*/
 /* NAVIGATION - COLORS
@@ -20,7 +24,7 @@ nav a:not(:only-child):after { padding-left: 5px; content: '\f0d7'; font-family:
 /* ===================================================*/
 /* NAVIGATION - BRANDS/LOGO
 /* ===================================================*/
-.nav-brand { float: left; margin-right: 20px; padding-top: 5px; }
+.nav-brand { float: left; margin-right: 20px; }
 
 /* ===================================================*/
 /* NAVIGATION - POSITIONS
@@ -32,26 +36,52 @@ nav a:not(:only-child):after { padding-left: 5px; content: '\f0d7'; font-family:
 /* ===================================================*/
 .nav-dropdown {
 	position: absolute;
-	right: 0;
 	display: none;
-	min-width: 160px;
-	background-color: #F9F9F9;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	z-index: 5;
 }
-.nav-dropmenu a {
-	padding: 5px;
-	text-decoration: none;
-	color: #777 !important;
-	text-align: center;
-	display: block;
+.nav-dropdown a { color: #BBB !important; }
+.nav-mobile {
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: transparent;
+	height: 60px;
+	width: 60px;
+	border: 1px solid #BBB;
 }
-.nav-dropmenu a:hover { background-color: #F1F1F1 !important; }
-.nav-dropdown:hover .nav-dropmenu { display: block; }
+#nav-toggle {
+	position: absolute;
+	left: 18px;
+	top: 22px;
+	cursor: pointer;
+	padding: 10px 35px 16px 0px;
+}
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+	height: 2px;
+	width: 35px;
+	position: absolute;
+	display: block;
+	border-radius: 1px;
+	content: '';
+	transition: all 300ms ease-in-out;
+	cursor: pointer;
+}
+#nav-toggle span:before	{ top: -10px; }
+#nav-toggle span:after	{ bottom: -10px; }
+#nav-toggle.active span { background-color: transparent; }
+#nav-toggle.active span:before,
+#nav-toggle.active span:after { top: 0; }
+#nav-toggle.active span:before { transform: rotate(45deg); }
+#nav-toggle.active span:after { transform: rotate(-45deg); }
 
 /* ===================================================*/
 /* NAVIGATION - TOGGLE ICON
 /* ===================================================*/
+/*
 .nav-toggle {
 	padding: 0 15px;
 	font-size: 20px;
@@ -60,17 +90,22 @@ nav a:not(:only-child):after { padding-left: 5px; content: '\f0d7'; font-family:
 }
 .nav-default .nav-toggle:hover { background-color: #AAB2BD; color: #F5F7FA; }
 .nav-dark .nav-toggle:hover { background-color: #656D78; }
+*/
 
 /* ===================================================*/
 /* NAVIGATION - MEDIA QUERIES
 /* ===================================================*/
-@media screen and (max-width: 959px) {
-	.nav-brand		{ width: 70%; font-size: 2em; transition: all 0.3s ease-in-out; }
-	.nav li, nav li	{ display: none; }
-	.nav-toggle		{ display: inline-block; }
+@media screen and (max-width: 800px) {
+	.nav-mobile 		{ display: block; }
+	.nav, nav		{ width: 100%; }
+	.nav ul, nav ul 	{ display: none; }
+	.nav li, nav li	{ float: none; }
+	.nav ul li a,
+ 	nav ul li a 		{ padding: 15px; line-height: 20px; }
+	.nav ul li ul li a,
+	nav ul li ul li a 	{ padding-left: 30px; }
+	.nav-dropdown 	{ position: static; }
 }
 @media screen and (min-width: 960px) {
-	.nav-brand		{ transition: all 0.5s ease-in-out; }
-	.nav li, nav li	{ display: inline; }
-	.nav-toggle		{ display: none; }
+	.nav-mobile		{ display: none; }
 }
