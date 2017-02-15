@@ -13,7 +13,6 @@
 }
 body { height: 100%; color: #333; }
 hr { height: 0; margin: 10px 0; border: none; border-bottom: 1px solid #DDD; }
-footer { clear: both; width: 100%; padding: 15px; }
 
 /* ===================================================*/
 /* CLEAR
@@ -31,10 +30,6 @@ footer { clear: both; width: 100%; padding: 15px; }
 /* ===================================================*/
 /* PLACEMENTS
 /* ===================================================*/
-.pull-left { float: left; }
-.pull-right { float: right; }
-.pull-center {
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-}
+.pull-left      { float: left; }
+.pull-right     { float: right; }
+.pull-center    { margin-left: auto; margin-right: auto; text-align: center; }

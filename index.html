@@ -2,29 +2,24 @@
 
 <html lang="en">
 <head>
+	<!-- LOADING META CODES -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="images/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
 	<title>Test Page | S3CSS</title>
 
-	<!-- LOADING META CODES -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="utf-8">
-
-	<!-- INTERNAL SCRIPTS -->
-
+    <!-- LOADING SCRIPTS -->
+    <script src="https://use.fontawesome.com/a833db4ecd.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	
 	<!-- LOADING LINKS -->
 	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
     <link rel="manifest" href="images/icons/manifest.json">
-
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="images/icons/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    
-    <script src="https://use.fontawesome.com/a833db4ecd.js"></script>
-	<script
-		src="https://code.jquery.com/jquery-3.1.1.js"
-		integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
-		crossorigin="anonymous"></script>
-	<script src="js/s3css.js"></script>
+    <link rel="stylesheet" href="js/s3css.js"> 
 	
 	<!-- INTERNAL STYLING -->
 	<style type="text/css">
@@ -38,7 +33,9 @@
 		as many functionalities as possible work.
 	-->
 	<nav class="nav-dark">
-		<div class="nav-brand">SiteName</div>
+		<div class="nav-brand">
+		    <a href="#!"><img src="images/S3CSS_Logo_v02_Frame.png" alt=""></a>
+		</div>
 
 		<div class="nav-mobile">
 			<a id="nav-toggle" href="#!">
@@ -47,59 +44,27 @@
 		</div>
 
 		<ul>
-			<li><a href="#!">Home</a></li>
-			<li><a href="#!">About</a></li>
-			<li><a href="#!">Services</a>
+			<li><a href="#!">Link 1</a></li>
+			<li><a href="#!">Link 2</a></li>
+			<li><a href="#!">Link 3</a>
 				<ul class="nav-dropdown">
-					<li><a href="#!">Web Design</a></li>
-					<li><a href="#!">Web Development</a></li>
-					<li><a href="#!">Graphic Design</a></li>
+					<li><a href="#!">Sublink 1</a></li>
+					<li><a href="#!">Sublink 2</a></li>
+					<li><a href="#!">Sublink 3</a></li>
 				</ul>
 			</li>
-			<li><a href="#!">Pricing</a></li>
-			<li><a href="#!">Contact</a></li>
+			<li><a href="#!">Link 4</a></li>
+			<li><a href="#!">Link 5</a></li>
 		</ul>
 	</nav>
 	
-	<!--
 	<section class="container">
-        <div id="modal-box" class="modal">
-            <div class="modal-body">
-                <span class="modal-close" onclick="document.getElementById('modal-box').style.display='none'">&times;</span>
-                <h1 class="modal-title">Hello World</h1>
-                <p class="modal-content">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates placeat saepe minus vel adipisci, ab modi vitae ex minima, repudiandae nemo delectus aliquid, esse eveniet deleniti atque at cum architecto!
-                </p>
-            </div>
-        </div>
+        <h1>Title</h1>
+        <h3>Subtitle</h3>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum officiis reprehenderit voluptas nisi laboriosam quas veritatis qui iste unde accusantium obcaecati suscipit voluptate assumenda, quis architecto quaerat culpa hic non?
+        </p>
+        <script src="js/s3css.js"></script>
 	</section>
-	-->
-	
-	<!--
-	<script>
-        // Get the modal
-        var modal = document.getElementById('modal-box');
-
-        // Get the <span> element that closes the modal
-        var close-btn = document.getElementsByClassName("modal-close");
-
-        // When the user clicks on <span> (x), close the modal
-        close-btn.onclick = function() {
-            modal.style.display = "none";
-        };
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
-	-->
-	<script>
-		$('#nav-toggle').on('click', function() {
-			$(this).toggleClass('active');
-		});
-	</script>
 </body>
 </html>
