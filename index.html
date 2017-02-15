@@ -12,7 +12,7 @@
 	<script></script>
 
 	<!-- LOADING LINKS -->
-   <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
     <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
     <link rel="manifest" href="images/icons/manifest.json">
@@ -21,17 +21,14 @@
     <meta name="theme-color" content="#ffffff">
     
     <script src="https://use.fontawesome.com/a833db4ecd.js"></script>
+	<script
+		src="https://code.jquery.com/jquery-3.1.1.js"
+		integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+		crossorigin="anonymous"></script>
 
 	<!-- INTERNAL STYLING -->
 	<style type="text/css">
 		@import url('css/s3css-main.css');
-        
-        body {
-            width: 100%;
-            height: 100%;
-            background: url(images/img_bg.jpg) center center no-repeat;
-            background-size: cover;
-        }
 	</style>
 </head>
 
@@ -40,18 +37,23 @@
 		This HTML file will be used to test various S3CSS features to make
 		as many functionalities as possible work.
 	-->
-	<nav class="nav-default">
+	<nav class="nav-dark">
+		<div class="nav-brand">SiteName</div>
+
 		<div class="nav-mobile">
-			<a id="nav-toggle" href="#!"><span></span></a>
+			<a id="nav-toggle" href="#!">
+				<span></span>
+			</a>
 		</div>
-		<ul class="nav-list">
+
+		<ul>
 			<li><a href="#!">Home</a></li>
 			<li><a href="#!">About</a></li>
 			<li><a href="#!">Services</a>
 				<ul class="nav-dropdown">
-				<li><a href="#!">Web Design</a></li>
-				<li><a href="#!">Web Development</a></li>
-				<li><a href="#!">Graphic Design</a></li>
+					<li><a href="#!">Web Design</a></li>
+					<li><a href="#!">Web Development</a></li>
+					<li><a href="#!">Graphic Design</a></li>
 				</ul>
 			</li>
 			<li><a href="#!">Pricing</a></li>
@@ -73,6 +75,7 @@
 	</section>
 	-->
 	
+	<!--
 	<script>
         // Get the modal
         var modal = document.getElementById('modal-box');
@@ -92,5 +95,11 @@
             }
         }
     </script>
+	-->
+	<script>
+		$('#nav-toggle').on('click', function() {
+			$(this).toggleClass('active');
+		});
+	</script>
 </body>
 </html>
