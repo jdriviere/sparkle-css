@@ -40,7 +40,27 @@
 		This HTML file will be used to test various S3CSS features to make
 		as many functionalities as possible work.
 	-->
-	<div class="container">
+	<nav class="nav-default">
+		<div class="nav-mobile">
+			<a id="nav-toggle" href="#!"><span></span></a>
+		</div>
+		<ul class="nav-list">
+			<li><a href="#!">Home</a></li>
+			<li><a href="#!">About</a></li>
+			<li><a href="#!">Services</a>
+				<ul class="nav-dropdown">
+				<li><a href="#!">Web Design</a></li>
+				<li><a href="#!">Web Development</a></li>
+				<li><a href="#!">Graphic Design</a></li>
+				</ul>
+			</li>
+			<li><a href="#!">Pricing</a></li>
+			<li><a href="#!">Contact</a></li>
+		</ul>
+	</nav>
+	
+	<!--
+	<section class="container">
         <div id="modal-box" class="modal">
             <div class="modal-body">
                 <span class="modal-close" onclick="document.getElementById('modal-box').style.display='none'">&times;</span>
@@ -48,9 +68,10 @@
                 <p class="modal-content">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates placeat saepe minus vel adipisci, ab modi vitae ex minima, repudiandae nemo delectus aliquid, esse eveniet deleniti atque at cum architecto!
                 </p>
-            </div> <!-- END OF MODAL-BODY -->
-        </div> <!-- END OF MODAL -->
-	</div> <!-- END OF CONTAINER -->
+            </div>
+        </div>
+	</section>
+	-->
 	
 	<script>
         // Get the modal
