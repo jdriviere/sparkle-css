@@ -40,7 +40,7 @@ function navToggleAction() {
 	});
 
 	$('#nav-toggle').click(function() {
-		$('nav ul').slideToggle();
+		$('nav ul').toggle();
 	});
 } // End of NavToggleAction
 
