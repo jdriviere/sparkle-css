@@ -80,7 +80,7 @@ nav.nav-default > .nav-brand a { color: #999 !important; }
 	display: none;
     background-color: #EFEFEF;
 	z-index: 5;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.7);
 }
 .nav-dropdown a { color: #BBB !important; }
 

@@ -32,15 +32,7 @@ function navDrop() {
 // This function sets up the nav-toggle functionality.
 function navToggleAction() {
 	$('#nav-toggle').click(function() {
-		$(this).toggleClass('active');
-	});
-	
-	document.querySelector('#nav-toggle').addEventListener('click', function() {
-		$(this).toggleClass('active');
-	});
-
-	$('#nav-toggle').click(function() {
-		$('nav ul').toggle();
+		$('nav ul').slideToggle();
 	});
 } // End of NavToggleAction
 
