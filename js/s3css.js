@@ -15,12 +15,16 @@ $(document).ready(function() {
 // -----------------------------
 // This function sets up the dropdown menu functionality.
 function navDrop() {
-	$('nav ul li > a:not(:only-child)').click(function(e) {
-		$(this).siblings('.nav-dropdown').toggle();
+    var navdrop = $('nav ul li > a:not(:only-child)');
+    
+	navdrop.click(function(event) {
+		$(this).siblings('.nav-dropdown').slideToggle();
 		
         // Prevents multiple dropdowns to remain open at the same time.
 		$('.nav-dropdown').not($(this).siblings()).hide();
-		e.stopPropagation();
+		event.stopPropagation();
+        
+        //console.log('Hello');
 	});
 	
 	// Hides dropdown when user clicks anywhere within the HTML page.
@@ -31,9 +35,12 @@ function navDrop() {
 
 // This function sets up the nav-toggle functionality.
 function navToggleAction() {
-	$('#nav-toggle').click(function() {
-		$('nav ul').slideToggle();
-	});
+    var navTog = $('#nav-toggle span:before');
+    var navUl = $('nav ul');
+    
+    navTog.click(function() {
+        console.log('Hello');
+    });
 } // End of NavToggleAction
 
 // This function fixes navigation by forcing the mobile navigation to disappear
@@ -41,18 +48,17 @@ function navToggleAction() {
 // function navResizeFix () {} // End of NavResizeFix
 
 // This function controls the S3CSS modal functionality.
-/*
 function modalAction() {
     // Get the modal
-    var modal = document.getElementById('modal-box');
+    var modal = $('#modal-box');
 
     // Get the <span> element that closes the modal
-    var close-btn = document.getElementsByClassName("modal-close");
+    var closeBtn = $('.modal-close');
 
     // When the user clicks on <span> (x), close the modal
-    close-btn.onclick = function() {
+    closeBtn.click(function() {
         modal.style.display = "none";
-    };
+    });
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
@@ -60,5 +66,4 @@ function modalAction() {
             modal.style.display = "none";
         }
     }
-}
-*/
+} // End of ModalAction
