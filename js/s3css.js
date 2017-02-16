@@ -23,8 +23,6 @@ function navDrop() {
         // Prevents multiple dropdowns to remain open at the same time.
 		$('.nav-dropdown').not($(this).siblings()).hide();
 		event.stopPropagation();
-        
-        //console.log('Hello');
 	});
 	
 	// Hides dropdown when user clicks anywhere within the HTML page.
@@ -35,11 +33,11 @@ function navDrop() {
 
 // This function sets up the nav-toggle functionality.
 function navToggleAction() {
-    var navTog = $('#nav-toggle span:before');
+    var navTog = $('#nav-toggle');
     var navUl = $('nav ul');
     
     navTog.click(function() {
-        console.log('Hello');
+        navUl.toggle();
     });
 } // End of NavToggleAction
 
