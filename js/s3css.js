@@ -15,7 +15,7 @@ $(document).ready(function() {
 // -----------------------------
 // This function sets up the dropdown menu functionality.
 function navDrop() {
-	$('nav ul li > a:not(:only-child)').click(function (e) {
+	$('nav ul li > a:not(:only-child)').click(function(e) {
 		$(this).siblings('.nav-dropdown').toggle();
 		
         // Prevents multiple dropdowns to remain open at the same time.
@@ -31,7 +31,7 @@ function navDrop() {
 
 // This function sets up the nav-toggle functionality.
 function navToggleAction() {
-	$('#nav-toggle').on('click', function() {
+	$('#nav-toggle').click(function() {
 		$(this).toggleClass('active');
 	});
 	
@@ -46,9 +46,10 @@ function navToggleAction() {
 
 // This function fixes navigation by forcing the mobile navigation to disappear
 // when the navigation bar reaches Desktop size, when it is already opened.
-function navResizeFix () {} // End of NavResizeFix
+// function navResizeFix () {} // End of NavResizeFix
 
 // This function controls the S3CSS modal functionality.
+/*
 function modalAction() {
     // Get the modal
     var modal = document.getElementById('modal-box');
@@ -68,3 +69,4 @@ function modalAction() {
         }
     }
 }
+*/
