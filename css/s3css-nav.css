@@ -9,27 +9,25 @@
     z-index: 5;
 }
 .nav ul, nav ul { float: right; line-height: 60px; list-style: none; }
-.nav ul li, nav ul li {
+.nav li, nav li {
     position: relative;
     float: left;
-    display: inline-block;
+    display: inline;
 }
-.nav ul li a, nav ul li a {
+.nav li a, nav li a {
     display: block;
     padding: 0 20px;
     text-decoration: none;
 }
-.nav ul li a:not(:only-child):after,
-nav ul li a:not(:only-child):after {
+.nav li a:not(:only-child):after,
+nav li a:not(:only-child):after {
     padding-left: 5px;
     content: '\f0d7';
     font-family: FontAwesome;
 }
 
-.nav ul li ul li,
-nav ul li ul li { min-width: 200px; }
-.nav ul li ul li a,
-nav ul li ul li a { padding: 15px; z-index: 1; }
+.nav li li, nav li li { min-width: 200px; }
+.nav li li a, nav li li a { z-index: 1; }
 
 /* ===================================================*/
 /* NAVIGATION - COLORS
@@ -40,7 +38,8 @@ nav ul li ul li a { padding: 15px; z-index: 1; }
     border-bottom: 1px solid #E6E9ED;
 }
 .nav-default li a, nav.nav-default li a { color: #AAB2BD; }
-.nav-default li a:hover, nav.nav-default li a:hover { color: #999; background-color: #AAB2BD; }
+.nav-default li a:hover, nav.nav-default li a:hover { color: #F5F7FA; background-color: #AAB2BD; }
+.nav-default li li a:hover, nav.nav-default li li a:hover { color: #F5F7FA !important; background-color: #AAB2BD; }
 
 .nav-dark, nav.nav-dark {
     background-color: #333;
@@ -48,7 +47,8 @@ nav ul li ul li a { padding: 15px; z-index: 1; }
     border-bottom: 1px solid #222;
 }
 .nav-dark li a, nav.nav-dark li a { color: #999; }
-/*.nav-dark li a:hover, nav.nav-dark li a:hover{ color: #FFF; }*/
+.nav-dark li a:hover, nav.nav-dark li a:hover{ color: #FFF; }
+.nav-dark li li a:hover, nav.nav-dark li li a:hover { color: #333; background-color: #DDD; }
 
 /* ===================================================*/
 /* NAVIGATION - BRANDS/LOGO
@@ -60,7 +60,7 @@ nav ul li ul li a { padding: 15px; z-index: 1; }
     line-height: 60px;
 }
 .nav-brand img { height: 50px; margin-top: 5px; }
-.nav-brand a { text-decoration: none; }
+.nav-brand a { text-decoration: none=; }
 
 /* ===================================================*/
 /* NAVIGATION - DROPDOWN
@@ -68,12 +68,13 @@ nav ul li ul li a { padding: 15px; z-index: 1; }
 .nav-dropdown {
 	display: none;
     position: absolute;
+    top: 60;
+    left: 0;
     background-color: #F1F1F1;
 	z-index: 5;
 	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.7);
 }
 .nav-dropdown a { color: #BBB; text-align: left; }
-.nav-dropdown a:hover { color: #999 !important; }
 
 /* ===================================================*/
 /* NAVIGATION - TOGGLE ICON
@@ -96,9 +97,6 @@ nav ul li ul li a { padding: 15px; z-index: 1; }
     #nav-toggle span:before { display: block; }
     .nav, nav { width: 100%; }
     .nav ul, nav ul { display: none; float: none; }
-    .nav ul li, nav ul li {
-        display: block;
-        width: 100%;
-        background-color: #EFEFEF;
-    }
+    .nav li, nav li { display: block; width: 100%; background-color: #EFEFEF; }
+    .nav li a:hover, nav li a:hover { color: #333 !important; background-color: #DDD !important; }
 }

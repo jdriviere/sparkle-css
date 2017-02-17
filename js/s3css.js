@@ -15,7 +15,7 @@ $(document).ready(function() {
 // -----------------------------
 // This function sets up the dropdown menu functionality.
 function navDrop() {
-    var navdrop = $('nav ul li > a:not(:only-child)');
+    var navdrop = $('nav li > a:not(:only-child)');
     
 	navdrop.click(function(event) {
 		$(this).siblings('.nav-dropdown').slideToggle();
