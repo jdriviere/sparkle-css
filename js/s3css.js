@@ -7,6 +7,7 @@ $(document).ready(function() {
 	// will load all the S3CSS framework functions.
 	navDrop();
 	navToggleAction();
+    navResizeFix();
     modalAction();
 });
 
@@ -40,6 +41,17 @@ function navToggleAction() {
         navUl.toggle();
     });
 } // End of NavToggleAction
+
+// This function fixes the disappearing navbar menu when resized to desktop.
+function navResizeFix () {
+    var winResize = $(window);
+    
+    winResize.resize(function() {
+        if (winResize.width() > 640) {
+            $('nav ul').removeAttr('style');
+        }
+    });
+} // End of NavResizeFix
 
 // This function fixes navigation by forcing the mobile navigation to disappear
 // when the navigation bar reaches Desktop size, when it is already opened.

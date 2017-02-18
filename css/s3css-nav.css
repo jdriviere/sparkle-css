@@ -60,7 +60,7 @@ nav li a:not(:only-child):after {
     line-height: 60px;
 }
 .nav-brand img { height: 50px; margin-top: 5px; }
-.nav-brand a { text-decoration: none=; }
+.nav-brand a { text-decoration: none; }
 
 /* ===================================================*/
 /* NAVIGATION - DROPDOWN
