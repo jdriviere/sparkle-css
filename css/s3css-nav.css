@@ -6,7 +6,6 @@
     height: 60px;
     text-align: center;
     font-size: 14px;
-    z-index: 5;
 }
 .nav ul, nav ul { float: right; line-height: 60px; list-style: none; }
 .nav li, nav li {

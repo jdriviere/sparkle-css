@@ -44,9 +44,7 @@ function navToggleAction() {
 
 // This function fixes the disappearing navbar menu when resized to desktop.
 function navResizeFix () {
-    var winResize = $(window);
-    
-    winResize.resize(function() {
+    $(window).resize(function() {
         if (winResize.width() > 640) {
             $('nav ul').removeAttr('style');
         }
