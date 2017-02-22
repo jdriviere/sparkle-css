@@ -15,5 +15,7 @@
 @import "s3css-tables.css";
 @import "s3css-thumbnails.css";
 @import "s3css-typography.css";
-@import "s3css-nav.css";
+@import "s3css-nav-hamburger.css";
+@import "s3css-nav-horizontal.css";
+@import "s3css-nav-vertical.css";
 @import "s3css-modals.css";

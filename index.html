@@ -13,11 +13,11 @@
     <script src="js/s3css.js"></script>
 
 	<title>Test Page | S3CSS</title>
-	
+
 	<!-- LOADING LINKS -->
 	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
-	
+
 	<!-- INTERNAL STYLING -->
 	<style type="text/css">
 		@import url('css/s3css-main.css');
@@ -35,12 +35,13 @@
 		This HTML file will be used to test various S3CSS features to make
 		as many functionalities as possible work.
 	-->
+	<!--
 	<header>
         <div class="nav-brand">
             <a href="#!">TestSite</a>
         </div>
 
-        <nav class="nav-dark">
+        <nav class="nav-default">
             <div class="nav-mobile">
                 <a id="nav-toggle" href="#!">
                     <span></span>
@@ -59,10 +60,45 @@
                 </li>
                 <li><a href="#!">Link 4</a></li>
                 <li><a href="#!">Link 5</a></li>
+
+				<div class="menu-icon">
+					<span></span>
+				</div>
             </ul>
         </nav>
 	</header>
-	
+	-->
+	<header>
+		<nav class="nav-dark">
+			<div class="s3css-menu-icon">
+				<span></span>
+			</div>
+
+			<div class="nav-brand">
+				<h3>My TestSite</h3>
+			</div>
+
+			<div class="vert-menu">
+				<ul>
+					<li><a href="#">Menu 1</a></li>
+					<li><a href="#">Menu 2</a></li>
+					<li>
+						<a href="#">Menu 3</a>
+						<ul>
+							<li><a href="#">Submenu 1</a></li>
+							<li><a href="#">Submenu 2</a></li>
+							<li><a href="#">Submenu 3</a></li>
+							<li><a href="#">Submenu 4</a></li>
+							<li><a href="#">Submenu 5</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Menu 4</a></li>
+					<li><a href="#">Menu 5</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
 	<section class="container">
         <h1>Title</h1>
         <h3>Subtitle</h3>
