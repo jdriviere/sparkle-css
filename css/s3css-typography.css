@@ -2,19 +2,19 @@
 /* TYPOGRAPHY - GENERAL
 /* ===================================================*/
 body {
-    font-size: 16px;
+    font-size: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
     -o-font-smoothing: antialiased;
     font-smoothing: antialiased;
 }
-h1		{ font-size: 2.5rem; }
-h2		{ font-size: 2.3rem; }
-h3		{ font-size: 1.5rem; }
-h4		{ font-size: 1.375rem; }
-h5		{ font-size: 1.25rem; }
-h6		{ font-size: 1rem; }
-p		{ font-size: 1.15rem; line-height: 1.8; font-weight: 200; }
+h1		{ font-size: 2.6rem; }
+h2		{ font-size: 2.2rem; }
+h3		{ font-size: 1.8rem; }
+h4		{ font-size: 1.4rem; }
+h5		{ font-size: 1.2rem; }
+h6		{ font-size: 0.8rem; }
+p		{ font-size: 1rem; line-height: 1.8em; font-weight: 300; }
 
 /* ===================================================*/
 /* TYPOGRAPHY - WEIGHT
