@@ -2,13 +2,18 @@
 /* NAVIGATION - GENERAL
 /* ===================================================*/
 .nav, nav {
+    margin: 0;
+    padding: 0;
     width: 100%;
     height: 60px;
     text-align: center;
     font-size: 14px;
 }
-/*
-.nav ul, nav ul { float: right; line-height: 60px; list-style: none; }
+.nav ul, nav ul {
+    float: right;
+    line-height: 60px;
+    list-style: none;
+}
 .nav li, nav li {
     position: relative;
     float: left;
@@ -28,27 +33,30 @@ nav li a:not(:only-child):after {
 
 .nav li li, nav li li { min-width: 200px; }
 .nav li li a, nav li li a { z-index: 1; }
-*/
+
 /* ===================================================*/
 /* NAVIGATION - COLORS
 /* ===================================================*/
 .nav-default, nav.nav-default {
     background-color: #F5F7FA;
-    color: #AAB2BD;
     border-bottom: 1px solid #E6E9ED;
 }
-.nav-default li a, nav.nav-default li a { color: #AAB2BD; }
-.nav-default li a:hover, nav.nav-default li a:hover { color: #F5F7FA; background-color: #AAB2BD; }
-.nav-default li li a:hover, nav.nav-default li li a:hover { color: #F5F7FA !important; background-color: #AAB2BD; }
+.nav-default a, nav.nav-default a { color: #AAB2BD; }
+.nav-default a:hover,
+nav.nav-default a:hover { color: #F5F7FA; background-color: #AAB2BD; }
+.nav-default li li a:hover,
+nav.nav-default li li a:hover { color: #F5F7FA !important; background-color: #AAB2BD; }
 
 .nav-dark, nav.nav-dark {
     background-color: #333;
-    color: #999;
     border-bottom: 1px solid #222;
 }
-.nav-dark li a, nav.nav-dark li a { color: #999; }
-.nav-dark li a:hover, nav.nav-dark li a:hover{ color: #FFF; }
-.nav-dark li li a:hover, nav.nav-dark li li a:hover { color: #333; background-color: #DDD; }
+.nav-dark li a,
+nav.nav-dark li a { color: #999; }
+.nav-dark li a:hover,
+nav.nav-dark li a:hover { color: #FFF; }
+.nav-dark li li a:hover,
+nav.nav-dark li li a:hover { color: #333; background-color: #DDD; }
 
 /* ===================================================*/
 /* NAVIGATION - BRANDS/LOGO
@@ -58,9 +66,14 @@ nav li a:not(:only-child):after {
     display: block;
     padding: 0 20px;
     line-height: 60px;
+    cursor: pointer;
 }
 .nav-brand img { height: 50px; margin-top: 5px; }
-.nav-brand a { text-decoration: none; }
+.nav-brand a {
+    display: block;
+    padding: 0 20px;
+    text-decoration: none;
+}
 
 /* ===================================================*/
 /* NAVIGATION - DROPDOWN
