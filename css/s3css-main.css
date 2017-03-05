@@ -9,9 +9,9 @@
 @import "s3css-alerts.css";
 @import "s3css-base.css";
 @import "s3css-buttons.css";
-@import "s3css-flexbox-grid.css";
 @import "s3css-forms.css";
-@import "s3css-responsive-grid.css";
+@import "s3css-grid-flexbox.css";
+@import "s3css-grid-responsive.css";
 @import "s3css-tables.css";
 @import "s3css-thumbnails.css";
 @import "s3css-typography.css";

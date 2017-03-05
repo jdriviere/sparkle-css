@@ -130,9 +130,8 @@ function navClass() {
 	if (nav.hasClass('nav-default')) {
 		brand.css('color', '#AAB2BD !important');
 		links.css('color', '#AAB2BD');
-	}
-	else if (nav.hasClass('nav-dark')) {
+	} else if (nav.hasClass('nav-dark')) {
 		brand.css('color','#999 !important');
 		links.css('color', '#999');
-	}
+	} // End of IF-ELSE
 } // End of NavClass
