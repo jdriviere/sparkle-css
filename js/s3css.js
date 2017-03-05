@@ -7,6 +7,7 @@ $(document).ready(function() {
 	// will load all the S3CSS framework functions.
 	"use strict"; // Do not touch!!
 
+	navClass();
 	navDrop();
 	navToggleAction();
     // navResizeFix();
@@ -117,3 +118,21 @@ function vertMenu () {
 		$(vert_submenu).hide();
 	});
 } // End of VertMenu
+
+This function checks whether or not the nav class has the 'default' or
+'dark' class, and fixes the links' color
+function navClass() {
+	var nav = $('.nav, nav');
+	var brand = $('nav-brand a');
+	var links = $('nav ul li a, nav.nav ul li a');
+
+	// Check if nav has the proper class
+	if (nav.hasClass('nav-default')) {
+		brand.css('color', '#AAB2BD !important');
+		links.css('color', '#AAB2BD');
+	}
+	else if (nav.hasClass('nav-dark')) {
+		brand.css('color','#999 !important');
+		links.css('color', '#999');
+	}
+} // End of NavClass
