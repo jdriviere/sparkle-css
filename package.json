@@ -1,0 +1,19 @@
+{
+  "name": "s3css",
+  "version": "1.0.0",
+  "description": "A lightweight CSS/JS framework (coded in SCSS and jQuery) to help you create simple, responsive website templates",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdriviere/S3CSS.git"
+  },
+  "author": "J. Djimitry Riviere",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jdriviere/S3CSS/issues"
+  },
+  "homepage": "https://github.com/jdriviere/S3CSS#readme"
+}
