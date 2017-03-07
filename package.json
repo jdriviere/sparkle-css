@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/jdriviere/S3CSS/issues"
   },
-  "homepage": "https://github.com/jdriviere/S3CSS#readme"
+  "homepage": "https://github.com/jdriviere/S3CSS#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
 }
