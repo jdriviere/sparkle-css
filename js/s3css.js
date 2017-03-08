@@ -21,19 +21,20 @@ $(document).ready(function() {
 // -----------------------------
 // This function sets up the dropdown menu functionality.
 function navDrop() {
-    var navdrop = $('nav li > a:not(:only-child)');
+    var navdrop = $('.nav-h li > a:not(:only-child)');
+	var navdown = $('.nav-h ul ul');
 
 	navdrop.click(function(event) {
-		$(this).siblings('.nav-dropdown').slideToggle();
+		$(this).siblings(navdown).slideToggle();
 
         // Prevents multiple dropdowns to remain open at the same time.
-		$('.nav-dropdown').not($(this).siblings()).hide();
+		$(navdown).not($(this).siblings()).hide();
 		event.stopPropagation();
 	});
 
 	// Hides dropdown when user clicks anywhere within the HTML page.
 	$('html').click(function() {
-		$('.nav-dropdown').hide();
+		$(navdown).hide();
 	});
 } // End of NavDrop
 
@@ -43,7 +44,7 @@ function navToggleAction() {
     var navUl = $('nav ul');
 
     navTog.click(function() {
-        navUl.toggle();
+        navUl.slideToggle();
     });
 } // End of NavToggleAction
 
@@ -119,19 +120,22 @@ function vertMenu () {
 	});
 } // End of VertMenu
 
-This function checks whether or not the nav class has the 'default' or
-'dark' class, and fixes the links' color
+// This function checks whether or not the nav class has the 'default' or
+// 'dark' class, and fixes the links' color
 function navClass() {
-	var nav = $('.nav, nav');
-	var brand = $('nav-brand a');
-	var links = $('nav ul li a, nav.nav ul li a');
+	var nav = $('.nav-h');
+	var brand = $('.nav-brand a');
+	var links = $('.nav-h ul li a');
 
 	// Check if nav has the proper class
 	if (nav.hasClass('nav-default')) {
-		brand.css('color', '#AAB2BD !important');
-		links.css('color', '#AAB2BD');
+		brand.css('color', '#AAB2BD'); // Change to Light-Theme color
+		links.css('color', '#AAB2BD'); // Change to Light-Theme color
 	} else if (nav.hasClass('nav-dark')) {
-		brand.css('color','#999 !important');
-		links.css('color', '#999');
-	} // End of IF-ELSE
+		brand.css('color','#999'); // Change to Dark-Theme color
+		links.css('color', '#999'); // Change to Dark-Theme color
+	} else {
+		brand.css('color', '#333'); // Change to default color
+		links.css('color', '#333'); // Change to default color
+	} // End of ELSE-IF
 } // End of NavClass
