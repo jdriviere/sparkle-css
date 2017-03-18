@@ -32,9 +32,9 @@ TABLE - STYLES
 /*==========================================
 TABLE - COLORE THEMES
 ==========================================*/
-.tbl-light th   { background-color: #F5F7FA; border: none; color: #AAB2BD; }
+.tbl-light th { background-color: #F5F7FA; border: none; color: #AAB2BD; }
+.tbl-dark th { background-color: #434A5A; border: none; color: #F5F7FA; }
 
-.tbl-dark th    { background-color: #434A5A; border: none; color: #F5F7FA; }
 /*==========================================
 TABLE - RESPONSIVE
 ==========================================*/
