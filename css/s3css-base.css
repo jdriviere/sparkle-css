@@ -12,7 +12,12 @@
 	box-sizing: border-box;
 }
 body { height: 100%; color: #333; }
-hr { height: 0; margin: 10px 0; border: none; border-bottom: 1px solid #DDD; }
+hr {
+    height: 0;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 1px solid #DDD;
+}
 
 /* ===================================================*/
 /* CLEAR
@@ -30,6 +35,22 @@ hr { height: 0; margin: 10px 0; border: none; border-bottom: 1px solid #DDD; }
 /* ===================================================*/
 /* PLACEMENTS
 /* ===================================================*/
-.pull-left      { float: left; }
-.pull-right     { float: right; }
-.pull-center    { margin-left: auto; margin-right: auto; text-align: center; }
+.pull-left { float: left; }
+.pull-right { float: right; }
+.pull-center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.centralize {
+    display: table;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+.centralize-content {
+    display: table-cell;
+    vertical-align: middle;
+}
