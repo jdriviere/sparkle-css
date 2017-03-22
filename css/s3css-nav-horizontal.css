@@ -50,8 +50,9 @@
 #nav-toggle span:before {
 	display: none;
     float: right;
-    padding: 0 20px;
+    padding: 0 10px;
     font-size: 24px;
+    line-height: 60px;
     color: #999;
 	content: '\f0c9';
     font-family: FontAwesome;
@@ -82,7 +83,7 @@
 .nav-brand {
     float: left;
     display: block;
-    padding: 0 20px;
+    padding: 0 10px;
     line-height: 60px;
     cursor: pointer;
 }
@@ -96,3 +97,26 @@
 /* ===================================================*/
 /* NAVIGATION - MEDIA QUERIES
 /* ===================================================*/
+@media screen and (max-width: 639px) {
+    /* NAVIGATION */
+    .nav-h ul { float: none; display: none; }
+    .nav-h ul li {
+        display: block;
+        width: 100%;
+        text-align: center;
+        background-color: #FFF;
+        border-bottom: 1px solid #E6E9ED;
+    }
+    .nav-h ul li a { padding: 0; }
+    .nav-h ul ul { width: 100%; }
+
+    /* NAVIGATION THEMES */
+    .nav-default ul li, .nav-default ul ul li { background-color: #F5F7FA; border-bottom: 1px solid #E6E9ED; }
+    .nav-default ul ul li a:hover { color: #353B42; }
+    .nav-dark ul li, .nav-dark ul ul li { background-color: #333; border-bottom: 1px solid #222; }
+    .nav-dark ul ul li a:hover { color: #FFF; }
+
+    /* NAVIGATION TOGGLE */
+    #nav-toggle span:before { display: block; padding-right: 10px; }
+}
+@media screen and (max-width: 767px) {}

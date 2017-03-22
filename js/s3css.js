@@ -10,7 +10,7 @@ $(document).ready(function() {
 	// navClass();
 	navDrop();
 	navToggleAction();
-    // navResizeFix();
+    navResizeFix();
     modalAction();
 	menuToggle();
 	vertMenu();
@@ -25,7 +25,7 @@ function navDrop() {
 	var navdown = $('.nav-h ul ul');
 
 	navdrop.click(function(event) {
-		$(this).siblings(navdown).slideToggle();
+		$(this).siblings(navdown).toggle();
 
         // Prevents multiple dropdowns to remain open at the same time.
 		$(navdown).not($(this).siblings()).hide();
@@ -41,21 +41,27 @@ function navDrop() {
 // This function sets up the nav-toggle functionality.
 function navToggleAction() {
     var navTog = $('#nav-toggle');
-    var navUl = $('nav ul');
+    var navUl = $('.nav-h ul');
 
     navTog.click(function() {
-        navUl.slideToggle();
+        navUl.toggle();
     });
 } // End of NavToggleAction
 
 // This function fixes the disappearing navbar menu when resized to desktop.
-// function navResizeFix () {
-//     $(window).resize(function() {
-//         if ($(window).width() > 640) {
-//             $('nav ul').removeAttr('style');
-//         }
-//     });
-// } // End of NavResizeFix
+function navResizeFix () {
+    $(window).resize(function() {
+		var navUl = $('.nav-h ul');
+		var dropdown = $('.nav-h ul ul');
+
+        if ($(window).width() > 639) {
+            navUl.css('display', 'block');
+			dropdown.css('display', 'none');
+        } else {
+			navUl.css('display', 'none');
+		} // End of ELSE-IF
+    });
+} // End of NavResizeFix
 
 // This function controls the S3CSS modal functionality.
 function modalAction () {
