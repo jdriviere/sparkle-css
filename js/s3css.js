@@ -7,7 +7,7 @@ $(document).ready(function() {
 	// will load all the S3CSS framework functions.
 	"use strict"; // Do not touch!!
 
-	navClass();
+	// navClass();
 	navDrop();
 	navToggleAction();
     // navResizeFix();
@@ -122,20 +122,22 @@ function vertMenu () {
 
 // This function checks whether or not the nav class has the 'default' or
 // 'dark' class, and fixes the links' color
-function navClass() {
-	var nav = $('.nav-h');
-	var brand = $('.nav-brand a');
-	var links = $('.nav-h ul li a');
+// function navClass() {
+// 	var nav = $('.nav-h');
+// 	var brand = $('.nav-brand a');
+// 	var links = $('.nav-h ul li a');
+// 	var linksHover = $('.nav-h ul li a:hover');
 
-	// Check if nav has the proper class
-	if (nav.hasClass('nav-default')) {
-		brand.css('color', '#AAB2BD'); // Change to Light-Theme color
-		links.css('color', '#AAB2BD'); // Change to Light-Theme color
-	} else if (nav.hasClass('nav-dark')) {
-		brand.css('color','#999'); // Change to Dark-Theme color
-		links.css('color', '#999'); // Change to Dark-Theme color
-	} else {
-		brand.css('color', '#333'); // Change to default color
-		links.css('color', '#333'); // Change to default color
-	} // End of ELSE-IF
-} // End of NavClass
+// 	// Check if nav has the proper class
+// 	if (nav.hasClass('nav-default')) {
+// 		brand.css('color', '#AAB2BD'); // Change to Light-Theme color
+// 		links.css('color', '#AAB2BD'); // Change to Light-Theme color
+// 	} else if (nav.hasClass('nav-dark')) {
+// 		brand.css('color','#999'); // Change to Dark-Theme color
+// 		links.css('color', '#999'); // Change to Dark-Theme color
+// 		linksHover.css('color', '#FFF');
+// 	} else {
+// 		brand.css('color', '#333'); // Change to default color
+// 		links.css('color', '#333'); // Change to default color
+// 	} // End of ELSE-IF
+// } // End of NavClass

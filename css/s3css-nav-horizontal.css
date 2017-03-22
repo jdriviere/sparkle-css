@@ -62,12 +62,19 @@
 /* NAVIGATION - COLORS
 /* ===================================================*/
 .nav-default { background-color: #F5F7FA; border-bottom: 1px solid #E6E9ED; }
-.nav-default a { color: #AAB2BD; }
-.nav-default a:hover { color: #353B42; }
+.nav-default ul li a,
+.nav-default .nav-brand a { color: #AAB2BD; }
+.nav-default ul li a:hover,
+.nav-default .nav-brand a:hover { color: #353B42; }
 
 .nav-dark { background-color: #333; border-bottom: 1px solid #222; }
-.nav-dark a { color: #999; }
-.nav-dark a:hover { color: #FFF; }
+.nav-dark ul li a,
+.nav-dark .nav-brand a { color: #999; }
+.nav-dark ul li a:hover,
+.nav-dark .nav-brand a:hover { color: #FFF; }
+
+.nav-default ul ul li a:hover,
+.nav-dark ul ul li a:hover { color: #333; }
 
 /* ===================================================*/
 /* NAVIGATION - BRANDS/LOGO
