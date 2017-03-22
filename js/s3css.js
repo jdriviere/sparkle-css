@@ -74,7 +74,7 @@ function modalAction () {
     window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
-        }
+        } // End of IF
     }
 } // End of ModalAction
 
