@@ -13,9 +13,9 @@ table {
     overflow-x: auto;
     background-color: #FFF;
 }
-th, td    { padding: 8px; border: none; text-align: left; }
-th        { font-size: 1em; font-weight: 800; color: #333; }
-td        { font-size: .9em; font-weight: 300; color: #555; }
+th, td { padding: 8px; border: none; text-align: left; }
+th { font-size: 1em; font-weight: 800; color: #333; }
+td { font-size: .9em; font-weight: 300; color: #555; }
 
 /*==========================================
 TABLE - STYLES
