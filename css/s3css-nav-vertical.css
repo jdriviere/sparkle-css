@@ -1,4 +1,4 @@
-.vert-menu {
+.nav-v {
     position: fixed;
     display: block;
     width: 180px;
@@ -10,35 +10,35 @@
     z-index: 9999;
     transition: all 0.3s ease-in-out;
 }
-.vert-menu ul {
+.nav-v ul {
     padding: 0;
     text-align: left;
     list-style: none;
 }
-.vert-menu li {
+.nav-v li {
     position: relative;
     border-bottom: 1px solid #777;
 }
-.vert-menu li:last-child {
+.nav-v li:last-child {
     border-bottom: none;
 }
-.vert-menu a {
+.nav-v a {
     display: block;
     padding: 22px;
     color: #EEE;
     text-decoration: none;
 }
-.vert-menu a:not(:only-child):after {
+.nav-v a:not(:only-child):after {
     padding-left: 20px;
     content: '\f0da';
     font-family: FontAwesome;
 }
-.vert-menu a:hover {
+.nav-v a:hover {
     background-color: #222;
     border-left: 5px solid #B03;
     transition: all 0.3s ease-in;
 }
-.vert-menu ul ul {
+.nav-v ul ul {
     position: absolute;
     display: none;
     width: 130px;

@@ -94,7 +94,7 @@ function menuToggle () {
 } // End of MenuToggle
 
 function toggleHandler (toggle) {
-	var vert_menu = $('.vert-menu');
+	var vert_menu = $('.nav-v');
 	var menu_icon = $('s3css-menu-icon');
 
 	toggle.addEventListener("click", function(e) {
@@ -109,8 +109,8 @@ function toggleHandler (toggle) {
 // more precisely when a list item that has children is clicked: it controls
 // the behavior of the submenu.
 function vertMenu () {
-	var vert_menu = $('.vert-menu li a:not(:only-child)');
-	var vert_submenu = $('.vert-menu ul ul');
+	var vert_menu = $('.nav-v li a:not(:only-child)');
+	var vert_submenu = $('.nav-v ul ul');
 
 	vert_menu.click(function(event) {
 		$(this).siblings(vert_submenu).toggle();
@@ -125,25 +125,3 @@ function vertMenu () {
 		$(vert_submenu).hide();
 	});
 } // End of VertMenu
-
-// This function checks whether or not the nav class has the 'default' or
-// 'dark' class, and fixes the links' color
-// function navClass() {
-// 	var nav = $('.nav-h');
-// 	var brand = $('.nav-brand a');
-// 	var links = $('.nav-h ul li a');
-// 	var linksHover = $('.nav-h ul li a:hover');
-
-// 	// Check if nav has the proper class
-// 	if (nav.hasClass('nav-default')) {
-// 		brand.css('color', '#AAB2BD'); // Change to Light-Theme color
-// 		links.css('color', '#AAB2BD'); // Change to Light-Theme color
-// 	} else if (nav.hasClass('nav-dark')) {
-// 		brand.css('color','#999'); // Change to Dark-Theme color
-// 		links.css('color', '#999'); // Change to Dark-Theme color
-// 		linksHover.css('color', '#FFF');
-// 	} else {
-// 		brand.css('color', '#333'); // Change to default color
-// 		links.css('color', '#333'); // Change to default color
-// 	} // End of ELSE-IF
-// } // End of NavClass
