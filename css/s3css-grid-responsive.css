@@ -1,14 +1,23 @@
 /* ===================================================*/
 /* GENERAL RULES - GENERAL
 /* ===================================================*/
-.container { width: 100%; max-width: 960px; margin: 0 auto; overflow: hidden; }
-.container:before, .row:before, .container:after, .row:after { content: " "; display: table; }
-.container:after , .row:after { clear:both; }
+.container {
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.container:before,
+.row:before,
+.container:after,
+.row:after { content: " "; display: table; }
+.container:after ,
+.row:after { clear:both; }
 
 /* ===================================================*/
 /* GENERAL RULES - GRID
 /* ===================================================*/
-[class*="col-"] { float: left; width: 100%; min-height: 1px; margin: 8px 0; padding: .6em; }
+[class*="col-"] { float: left; width: 100%; min-height: 1px; margin: 5px 0; padding: .6em; }
 
 /* ===================================================*/
 /* MEDIA QUERIES - MOBILE
@@ -27,7 +36,7 @@
 	.col-11-sm	{ width: 91.66667%; }
 	.col-12-sm	{ width: 100%; }
 }
-@media screen and (max-width: 639px) { .container	{ width: 80%; transition: all 0.3s ease-in-out; } }
+@media screen and (max-width: 639px) { .container { width: 80%; } }
 
 /* ===================================================*/
 /* MEDIA QUERIES - TABLET
@@ -46,13 +55,13 @@
 	.col-11-md	{ width: 91.66667%; }
 	.col-12-md	{ width: 100%; }
 }
-@media screen and (max-width: 959px) { .container	{ width: 90%; transition: all 0.3s ease-in-out; } }
+@media screen and (max-width: 959px) { .container { width: 90%; } }
 
 /* ===================================================*/
 /* MEDIA QUERIES - DESKTOP
 /* ===================================================*/
 @media screen and (min-width: 960px) {
-	.container	{ width: 100%; transition: all 0.3s ease-in-out; }
+	.container	{ width: 100%; }
 	.col-1-lg	{ width: 8.33333%; }
 	.col-2-lg	{ width: 16.66667%; }
 	.col-3-lg	{ width: 25%; }
@@ -66,7 +75,7 @@
 	.col-11-lg	{ width: 91.66667%; }
 	.col-12-lg	{ width: 100%; }
 }
-@media screen and (min-width: 960px) { .container	{ width: 100%; transition: all 0.3s ease-in-out; } }
+@media screen and (min-width: 960px) { .container { width: 100%; } }
 
 /* ===================================================*/
 /* OFFSETS

@@ -8,13 +8,13 @@ body {
     -o-font-smoothing: antialiased;
     font-smoothing: antialiased;
 }
-h1		{ font-size: 2.6rem; }
-h2		{ font-size: 2.2rem; }
-h3		{ font-size: 1.8rem; }
-h4		{ font-size: 1.4rem; }
-h5		{ font-size: 1.2rem; }
-h6		{ font-size: 0.8rem; }
-p		{ font-size: 1rem; line-height: 1.8em; font-weight: 300; }
+h1 { font-size: 2.6rem; line-height: 1.2em; }
+h2 { font-size: 2.2rem; line-height: 1.3em; }
+h3 { font-size: 1.8rem; line-height: 1.35em; }
+h4 { font-size: 1.4rem; line-height: 1.4em; }
+h5 { font-size: 1.2rem; line-height: 1.5em; }
+h6 { font-size: 0.8rem; line-height: 1.6em; }
+p { font-size: 1rem; line-height: 1.8em; font-weight: 300; }
 
 /* ===================================================*/
 /* TYPOGRAPHY - WEIGHT
@@ -25,6 +25,6 @@ h1.thick, h2.thick, h3.thick, h4.thick, h5.thick, h6.thick , p.thick, p>span.thi
 /* ===================================================*/
 /* TYPOGRAPHY - SIZES
 /* ===================================================*/
-p.small		{ font-size: 0.85em; }
-p.normal	{ font-size: 1em; }
-p.big 		{ font-size: 1.2em; }
+p.small { font-size: 0.85em; }
+p.normal { font-size: 1em; }
+p.big { font-size: 1.2em; }
