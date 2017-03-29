@@ -28,3 +28,11 @@ h1.thick, h2.thick, h3.thick, h4.thick, h5.thick, h6.thick , p.thick, p>span.thi
 p.small { font-size: 0.85em; }
 p.normal { font-size: 1em; }
 p.big { font-size: 1.2em; }
+
+/* ===================================================*/
+/* TYPOGRAPHY - PLACEMENTS
+/* ===================================================*/
+p.text-left { text-align: left; }
+p.text-right { text-align: right; }
+p.text-center { text-align: center; }
+p.text-align { text-align: justify; }
