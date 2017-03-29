@@ -14,7 +14,7 @@ select {
     outline: 0; /* Removes default outline */
     width: 100%;
     max-width: 100%;
-    padding: 0.6em 1.2em;
+    padding: 0.5em 1.2em;
     border: 1px solid #DDD;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
@@ -26,7 +26,7 @@ textarea { min-height: 7.2em; resize: none; }
 /* ===================================================*/
 /* UI - GENERAL (PLACEHOLDERS)
 /* ===================================================*/
-::-webkit-input-placeholder { color: #777; } /* WebKit, Blink, Edge */
-:-moz-placeholder { color: #777; opacity: 1; } /* Mozilla Firefox 4 to 18 */
-::-moz-placeholder { color: #777; opacity: 1; } /* Mozilla Firefox 19+ */
-:-ms-textarea-placeholder { color: #777; } /* Internet Explorer 10-11 */
+::-webkit-input-placeholder { color: #CCC; } /* WebKit, Blink, Edge */
+::-moz-placeholder { color: #CCC; opacity: 1; } /* Mozilla Firefox 19+ */
+:-moz-placeholder { color: #CCC; opacity: 1; } /* Mozilla Firefox 4 to 18 */
+:-ms-textarea-placeholder { color: #CCC; } /* Internet Explorer 10-11 */
