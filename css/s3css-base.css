@@ -4,7 +4,6 @@
 *, *:before, *:after {
 	padding: 0;
 	margin: 0;
-	font-family: 'Lato', sans-serif;
 	font-size: 100%;
 	text-rendering: optimizeLegibility;
 	-webkit-box-sizing: border-box;
