@@ -25,15 +25,27 @@
     box-shadow: 1px 5px 7px rgba(0, 0, 0, .7);
 }
 .modal-close {
+    position: absolute;
     display: block;
-    float: right;
+    top: 15px;
+    right: 15px;
     color: #DDD;
-    font-family: FontAwesome;
-    font-size: 32px;
+/*    font-family: FontAwesome;*/
+    font-size: 20px;
     cursor: pointer;
 }
 .modal-close:hover,
-.modal-close:focus { color: #777; }
+.modal-close:focus {
+    color: #777;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-transition: scale .3sec linear;
+    -moz-transition: scale .3sec linear;
+    -ms-transition: scale .3sec linear;
+    transition: scale .3sec linear;
+}
 .modal img {
     display: block;
     max-width: 100%;
@@ -44,11 +56,11 @@
 .modal h3,
 .modal-title {
     font-weight: 700;
-    margin: 10px 0;
+    margin: 0 0 10px;
 }
 .modal-content {
     font-weight: 300;
     font-size: 14px;
-    line-height: 1.5em;
+    line-height: 1.7em;
     color: #777;
 }
