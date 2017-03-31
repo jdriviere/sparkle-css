@@ -1,10 +1,15 @@
 // ==========================================================
 // S3CSS.js FRAMEWORK
 // ==========================================================
+// This is where all the S3CSS functions are implemented. Most of them will
+// serve to fix problems that occur within the CSS-only framework. This function
+// will load all the S3CSS framework functions. The S3CSS.js file is REQUIRED
+// for the S3CSS Framework to function properly!
+
+// -----------------------------
+// MAIN
+// -----------------------------
 $(document).ready(function() {
-	// This is where all the S3CSS functions are implemented. Most of them will
-	// serve to fix problems that occur within the CSS-only framework. This function
-	// will load all the S3CSS framework functions.
 	"use strict"; // Do not touch!!
 
 	// navClass();
@@ -48,7 +53,7 @@ function navToggleAction() {
     });
 } // End of NavToggleAction
 
-// This function fixes the disappearing navbar menu when resized to desktop.
+// This function fixes the disappearing navbar menu when resized to desktop screen size.
 function navResizeFix () {
     $(window).resize(function() {
 		var navUl = $('.nav-h ul');
@@ -68,20 +73,18 @@ function modalAction () {
     // Get the modal
     var modal = $('#modal-box');
 
-    // Get the <span> element that closes the modal
+    // Get the element that closes the modal
     var closeBtn = $('.modal-close');
 
     // When the user clicks on <span> (x), close the modal
     closeBtn.click(function() {
-        modal.style.display = "none";
+        modal.css('display', 'none');
     });
 
     // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        } // End of IF
-    }
+    $(window).click(function() {
+        modal.css('display', 'none');
+    });
 } // End of ModalAction
 
 function menuToggle () {
