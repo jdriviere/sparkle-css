@@ -53,7 +53,7 @@ function navToggleAction() {
     });
 } // End of NavToggleAction
 
-// This function fixes the disappearing navbar menu when resized to desktop screen size.
+// This function fixes the disappearing horizontal navbar menu when resized to desktop screen size.
 function navResizeFix () {
     $(window).resize(function() {
 		var navUl = $('.nav-h ul');
