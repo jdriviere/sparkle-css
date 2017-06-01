@@ -23,6 +23,9 @@ and floats. Considers mobile-first application.*/
     font-family: FontAwesome;
 }
 
+/* ===================================================*/
+/* NAVIGATION BRAND/LOGO
+/* ===================================================*/
 .nav-brand {
     display: flex;
     align-items: center;
@@ -30,6 +33,9 @@ and floats. Considers mobile-first application.*/
 }
 .nav-brand img { max-height: 3.25em; margin: .8em 0; }
 
+/* ===================================================*/
+/* NAVIGATION MEDIA QUERIES
+/* ===================================================*/
 @media only screen and (min-width: 40em) { /* About 640px */
     .nav-h {
         height: 3.75em;
@@ -52,6 +58,7 @@ and floats. Considers mobile-first application.*/
     }
 
     .nav-brand { margin: 0; padding: 0; }
+    .nav-brand a { font-size: 1.5em; text-decoration: none; }
     .nav-brand img { display: block; }
 }
 
