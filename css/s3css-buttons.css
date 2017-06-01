@@ -20,7 +20,7 @@ input[type=reset] {
 /* ===================================================*/
 .btn-default { background-color: #ECF0F1; color: #95A5A6;}
 .btn-default:hover { background-color: #95A5A6; color: #ECF0F1; }
-.btn-primary { background-color: #3498DB; color: #FFF; }
+.btn-primary { background-color: #3498DB; color: #FFF !important; }
 .btn-primary:hover { background-color: #2980B9; color: #FFF; }
 .btn-dark { background-color: #333; color: #FFF; }
 .btn-dark:hover { background-color: #222; color: #FFF; }
