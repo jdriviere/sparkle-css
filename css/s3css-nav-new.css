@@ -1,0 +1,69 @@
+/* ===================================================*/
+/* NAVIGATION GENERAL
+/* ===================================================*/
+/* This navigation system uses flexbox instead of pixels
+and floats. Considers mobile-first application.*/
+.nav-h ul { list-style: none; }
+.nav-h ul li {
+    position: relative;
+    display: flex;
+    flex: 0 1 auto;
+    justify-content: center;
+}
+.nav-h ul li a {
+    display: block;
+    padding: 0.8em 1.25em;
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.8em;
+}
+.nav-h ul li a:not(:only-child):after {
+    padding-left: 10px;
+    content: '\f0d7';
+    font-family: FontAwesome;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-brand img { max-height: 3.25em; margin: .8em 0; }
+
+@media only screen and (min-width: 40em) { /* About 640px */
+    .nav-h {
+        height: 3.75em;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding: 0 .8em;
+    }
+
+    .nav-h ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .nav-brand { margin: 0; padding: 0; }
+    .nav-brand img { display: block; }
+}
+
+/* ===================================================*/
+/* NAVIGATION THEMES
+/* ===================================================*/
+.nav-default { background-color: #F5F7FA; border-bottom: 1px solid #E6E9ED; }
+.nav-default .nav-brand a, .nav-default ul li a { color: #AAB2BD; }
+.nav-default .nav-brand a:hover { color: #353B42; }
+.nav-default ul li a:hover { color: #353B42; }
+
+.nav-dark { background-color: #333; border-bottom: 1px solid #222; }
+.nav-dark .nav-brand a, .nav-dark ul li a { color: #999; }
+.nav-dark .nav-brand a:hover { color: #FFF; }
+.nav-dark ul li a:hover { color: #FFF; }
