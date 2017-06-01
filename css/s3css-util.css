@@ -40,3 +40,19 @@
     text-align: center;
 }
 .centralize-content { display: table-cell; vertical-align: middle; }
+
+/* ===================================================*/
+/* HERO
+/* ===================================================*/
+.hero {
+    display: flex;
+    width: 100%;
+    max-width: 960px;
+    height: 640px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+.hero-items { text-align: center; }
+.hero h1 { font-size: 4em; font-weight: 700; }
+.hero h2 { font-size: 2.25em; font-weight: 400; }
