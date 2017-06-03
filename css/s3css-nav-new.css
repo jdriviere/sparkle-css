@@ -31,7 +31,7 @@ and floats. Considers mobile-first application.*/
     align-items: center;
     justify-content: center;
 }
-.nav-brand img { max-height: 3.25em; margin: .8em 0; }
+.nav-brand img { max-height: 3em; margin: .8em 0; }
 
 /* ===================================================*/
 /* NAVIGATION MEDIA QUERIES
@@ -58,7 +58,7 @@ and floats. Considers mobile-first application.*/
     }
 
     .nav-brand { margin: 0; padding: 0; }
-    .nav-brand a { font-size: 1.5em; text-decoration: none; }
+    .nav-brand h1 a { font-size: 1.5em; text-decoration: none; }
     .nav-brand img { display: block; }
 }
 
