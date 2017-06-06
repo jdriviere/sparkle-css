@@ -15,7 +15,7 @@ $(document).ready(function() {
 	// navClass();
 	navDrop();
 	navToggleAction();
-    navResizeFix();
+    // navResizeFix();
     modalAction();
 	menuToggle();
 	vertMenu();
