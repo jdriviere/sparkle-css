@@ -17,7 +17,13 @@
 /* ===================================================*/
 /* GENERAL RULES - GRID
 /* ===================================================*/
-[class*="col-"] { float: left; width: 100%; min-height: 1px; margin: 5px 0; padding: .6em; }
+[class*="col-"] {
+	float: left;
+	width: 100%;
+	min-height: 1px;
+	margin: 5px 0;
+	padding: .6em;
+}
 
 /* ===================================================*/
 /* MEDIA QUERIES - MOBILE
