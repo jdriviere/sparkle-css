@@ -28,6 +28,7 @@ and floats. Considers mobile-first application.*/
 [class*="col-"], .col {
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
+
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
@@ -36,8 +37,6 @@ and floats. Considers mobile-first application.*/
     min-height: 1px;
     margin: 0.5em;
     padding: 0.875em;
-    border: 1px solid #C4C4C4;
-    color: #777;
 }
 
 @media only screen and (min-width: 40em) { /* This is about 640px */
@@ -122,3 +121,7 @@ and floats. Considers mobile-first application.*/
 /* ===================================================*/
 /* COLUMNS STYLES
 /* ===================================================*/
+[class*="col-"], .col {
+    border: 1px solid #C4C4C4;
+    color: #777;
+}
