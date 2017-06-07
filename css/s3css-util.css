@@ -14,13 +14,39 @@
 /* ===================================================*/
 /* PLACEMENTS
 /* ===================================================*/
-.pull-left { float: left; }
-.pull-right { float: right; }
+.pull-left {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+
+    -ms-align-items: flex-start;
+    align-items: flex-start;
+}
+.pull-right {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+
+    -ms-align-items: flex-end;
+    align-items: flex-end;
+}
 .pull-center {
-    margin-left: auto;
-    margin-right: auto;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+
+    -ms-align-items: center;
+    align-items: center;
+
     text-align: center;
 }
+/*
 .pull-center-full {
 	position: absolute;
 	max-width: 90%;
@@ -40,17 +66,26 @@
     text-align: center;
 }
 .centralize-content { display: table-cell; vertical-align: middle; }
+*/
 
 /* ===================================================*/
 /* HERO
 /* ===================================================*/
 .hero {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
     display: flex;
+
     width: 100%;
-    max-width: 960px;
-    height: 640px;
+    max-width: 60em;
+    height: 100vh;
     margin: 0 auto;
+
     justify-content: center;
+
+    -ms-align-items: center;
     align-items: center;
 }
 .hero-items { text-align: center; }
