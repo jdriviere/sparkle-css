@@ -10,8 +10,10 @@ and floats. Considers mobile-first application.*/
 	overflow: hidden;
 }
 .row {
-    display: -webkit-box;
-    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
     display: flex;
 
     width: 100%;
@@ -34,7 +36,7 @@ and floats. Considers mobile-first application.*/
     flex: 1;
 
     max-width: 100%;
-    min-height: 1px;
+    min-height: 0.0625em;
     margin: 0.5em;
     padding: 0.875em;
 }
@@ -113,6 +115,7 @@ and floats. Considers mobile-first application.*/
         max-width: 100%;
     }
 }
+
 /* ===================================================*/
 /* ROW STYLES
 /* ===================================================*/
@@ -121,7 +124,3 @@ and floats. Considers mobile-first application.*/
 /* ===================================================*/
 /* COLUMNS STYLES
 /* ===================================================*/
-[class*="col-"], .col {
-    border: 1px solid #C4C4C4;
-    color: #777;
-}
