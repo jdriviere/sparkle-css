@@ -20,18 +20,26 @@ WARNING:    Do NOT touch, alter, or remove any files or folders!
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
 @import "../fonts/font-awesome-4.7.0/css/font-awesome.css";
 @import "../fonts/font-awesome-4.7.0/css/font-awesome.min.css";
-@import "s3css-alerts.css";
+
 @import "s3css-base.css";
+@import "s3css-typography.css";
+@import "s3css-util.css";
+
+@import "s3css-navigation.css";
+@import "s3css-grid.css";
+
+@import "s3css-alerts.css";
 @import "s3css-buttons.css";
 @import "s3css-forms.css";
-/*@import "s3css-grid-responsive.css";*/
-@import "s3css-grid.css";
 @import "s3css-modals.css";
-@import "s3css-nav-hamburger.css";
-/*@import "s3css-nav-vertical.css";*/
-@import "s3css-navigation.css";
 @import "s3css-tables.css";
 @import "s3css-thumbnails.css";
-@import "s3css-typography.css";
 @import "s3css-ui.css";
-@import "s3css-util.css";
+
+/*@import "s3css-grid-responsive.css";*/
+/*@import "s3css-nav-hamburger.css";*/
+/*@import "s3css-nav-vertical.css";*/
+
+
+
+
