@@ -1,7 +1,8 @@
-/images/old/*
-/images/new/*
-/images/raw/*
-/node_modules/*
+images/old/*
+images/new/*
+images/raw/*
+node_modules/*
+src/*
 Framework_Names.txt
 package.json
 gulpfile.js
