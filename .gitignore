@@ -4,4 +4,4 @@
 /node_modules/*
 Framework_Names.txt
 package.json
-node_modules/*
+gulpfile.js
