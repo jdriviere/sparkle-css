@@ -795,6 +795,10 @@ and floats. Considers mobile-first application.*/
   justify-content: center;
 }
 
+.nav-brand a {
+  text-decoration: none;
+}
+
 .nav-brand img {
   max-height: 3em;
   margin: .8em 0;
