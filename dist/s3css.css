@@ -533,13 +533,6 @@ body {
   color: #333;
 }
 
-hr {
-  height: 0;
-  margin: 10px 0;
-  border: none;
-  border-bottom: 1px solid #DDD;
-}
-
 /* ===================================================*/
 
 /* TYPOGRAPHY - GENERAL
@@ -560,6 +553,7 @@ h3,
 h4,
 h5,
 h6 {
+  margin: 0.5em 0 !important;
   font-weight: 600;
 }
 
@@ -660,7 +654,7 @@ p.text-center {
   text-align: center;
 }
 
-p.text-align {
+p.text-justify {
   text-align: justify;
 }
 
@@ -766,10 +760,10 @@ and floats. Considers mobile-first application.*/
 
 .nav-h ul li a {
   display: block;
-  padding: 0.8em 1.25em;
+  padding: 1.25em;
   text-decoration: none;
   text-align: center;
-  font-size: 0.8em;
+  font-size: 1em;
 }
 
 .nav-h ul li a:not(:only-child):after {
@@ -793,9 +787,12 @@ and floats. Considers mobile-first application.*/
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  border-bottom: 1px solid #222;
 }
 
 .nav-brand a {
+  padding: 1em -0px;
+  font-size: 1.25em;
   text-decoration: none;
 }
 
@@ -813,8 +810,6 @@ and floats. Considers mobile-first application.*/
   /* About 640px */
 
   .nav-h {
-    height: 3.75em;
-    /* About 60px */
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -824,7 +819,6 @@ and floats. Considers mobile-first application.*/
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 0 0.8em;
   }
 
   .nav-h ul {
@@ -838,14 +832,17 @@ and floats. Considers mobile-first application.*/
     align-items: center;
   }
 
-  .nav-brand {
-    margin: 0;
-    padding: 0;
+  .nav-h ul li a {
+    font-size: 0.8em;
   }
 
-  .nav-brand h1 a {
-    font-size: 1.5em;
-    text-decoration: none;
+  .nav-brand {
+    margin: 0;
+    border: none;
+  }
+
+  .nav-brand a {
+    padding: 0 0.8em;
   }
 
   .nav-brand img {
