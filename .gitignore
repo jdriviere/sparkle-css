@@ -4,5 +4,6 @@ images/raw/*
 node_modules/*
 src/*
 Framework_Names.txt
+package-lock.json
 package.json
 gulpfile.js
