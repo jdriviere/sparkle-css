@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
 /*
 @author: J. Djimitry Riviere
 @version: 0.1.0
@@ -16,12 +17,6 @@ Thank you for using S3CSS! Happy Designing!
 WARNING:    Do NOT touch, alter, or remove any files or folders!
             They contains all the variables from which the S3CSS
             framework functions.
-*/
-
-/*
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
-@import "../vendors/font-awesome-4.7.0/css/font-awesome.css";
-@import "../vendors/font-awesome-4.7.0/css/font-awesome.min.css";
 */
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -1787,9 +1782,3 @@ TABLE - RESPONSIVE
   border-radius: 50%;
   overflow: hidden;
 }
-
-/*@import "s3css-grid-responsive.css";*/
-
-/*@import "s3css-nav-hamburger.css";*/
-
-/*@import "s3css-nav-vertical.css";*/
