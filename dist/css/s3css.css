@@ -593,25 +593,25 @@ p {
 /* TYPOGRAPHY - WEIGHT
 /* ===================================================*/
 
-h1.thin,
-h2.thin,
-h3.thin,
-h4.thin,
-h5.thin,
-h6.thin,
-p.thin,
-p>span.thin {
+h1.text--thin,
+h2.text--thin,
+h3.text--thin,
+h4.text--thin,
+h5.text--thin,
+h6.text--thin,
+p.text--thin,
+p>span.text--thin {
   font-weight: 300;
 }
 
-h1.thick,
-h2.thick,
-h3.thick,
-h4.thick,
-h5.thick,
-h6.thick,
-p.thick,
-p>span.thick {
+h1.text--thick,
+h2.text--thick,
+h3.text--thick,
+h4.text--thick,
+h5.text--thick,
+h6.text--thick,
+p.text--thick,
+p>span.text--thick {
   font-weight: 700;
 }
 
@@ -620,15 +620,15 @@ p>span.thick {
 /* TYPOGRAPHY - SIZES
 /* ===================================================*/
 
-p.small {
+p.text--small {
   font-size: 0.85em;
 }
 
-p.normal {
+p.text--normal {
   font-size: 1em;
 }
 
-p.big {
+p.text--big {
   font-size: 1.2em;
 }
 
@@ -637,19 +637,19 @@ p.big {
 /* TYPOGRAPHY - PLACEMENTS
 /* ===================================================*/
 
-p.text-left {
+p.text--left {
   text-align: left;
 }
 
-p.text-right {
+p.text--right {
   text-align: right;
 }
 
-p.text-center {
+p.text--center {
   text-align: center;
 }
 
-p.text-justify {
+p.text--justify {
   text-align: justify;
 }
 
@@ -676,7 +676,7 @@ p.text-justify {
 /* PLACEMENTS
 /* ===================================================*/
 
-.pull-left {
+.pull--left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -693,7 +693,7 @@ p.text-justify {
   align-items: flex-start;
 }
 
-.pull-right {
+.pull--right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -710,7 +710,7 @@ p.text-justify {
   align-items: flex-end;
 }
 
-.pull-center {
+.pull--center {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -772,7 +772,7 @@ and floats. Considers mobile-first application.*/
 /* NAVIGATION BRAND/LOGO
 /* ===================================================*/
 
-.nav-brand {
+.nav__brand {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -785,13 +785,13 @@ and floats. Considers mobile-first application.*/
   border-bottom: 1px solid #222;
 }
 
-.nav-brand a {
+.nav__brand a {
   padding: 1em -0px;
   font-size: 1.25em;
   text-decoration: none;
 }
 
-.nav-brand img {
+.nav__brand img {
   max-height: 3em;
   margin: .8em 0;
 }
@@ -831,16 +831,16 @@ and floats. Considers mobile-first application.*/
     font-size: 0.8em;
   }
 
-  .nav-brand {
+  .nav__brand {
     margin: 0;
     border: none;
   }
 
-  .nav-brand a {
+  .nav__brand a {
     padding: 0 0.8em;
   }
 
-  .nav-brand img {
+  .nav__brand img {
     display: block;
   }
 }
@@ -850,39 +850,39 @@ and floats. Considers mobile-first application.*/
 /* NAVIGATION THEMES
 /* ===================================================*/
 
-.nav-default {
+.nav--default {
   background-color: #F5F7FA;
   border-bottom: 1px solid #E6E9ED;
 }
 
-.nav-default .nav-brand a,
-.nav-default ul li a {
+.nav--default .nav__brand a,
+.nav--default ul li a {
   color: #AAB2BD;
 }
 
-.nav-default .nav-brand a:hover {
+.nav--default .nav__brand a:hover {
   color: #353B42;
 }
 
-.nav-default ul li a:hover {
+.nav--default ul li a:hover {
   color: #353B42;
 }
 
-.nav-dark {
+.nav--dark {
   background-color: #333;
   border-bottom: 1px solid #222;
 }
 
-.nav-dark .nav-brand a,
-.nav-dark ul li a {
+.nav--dark .nav__brand a,
+.nav--dark ul li a {
   color: #999;
 }
 
-.nav-dark .nav-brand a:hover {
+.nav--dark .nav__brand a:hover {
   color: #FFF;
 }
 
-.nav-dark ul li a:hover {
+.nav--dark ul li a:hover {
   color: #FFF;
 }
 
@@ -968,94 +968,84 @@ and floats. Considers mobile-first application.*/
     margin: 0.5em 0;
   }
 
-  .col-1of12 {
+  .col-1-of-12 {
     -ms-flex-preferred-size: calc(1 / 12 * 100%);
     flex-basis: calc(1 / 12 * 100%);
     max-width: calc(1 / 12 * 100%);
   }
 
-  .col-2of12 {
+  .col-2-of-12 {
     -ms-flex-preferred-size: calc(2 / 12 * 100%);
     flex-basis: calc(2 / 12 * 100%);
     max-width: calc(2 / 12 * 100%);
   }
 
-  .col-3of12,
-  .col-quarter {
+  .col-3-of-12,
+  .col-1-of-4 {
     -ms-flex-preferred-size: 25%;
     flex-basis: 25%;
     max-width: 25%;
   }
 
-  .col-4of12,
-  .col-third {
+  .col-4-of-12,
+  .col-1-of-3 {
     -ms-flex-preferred-size: calc(4 / 12 * 100%);
     flex-basis: calc(4 / 12 * 100%);
     max-width: calc(4 / 12 * 100%);
   }
 
-  .col-5of12 {
+  .col-5-of-12 {
     -ms-flex-preferred-size: calc(5 / 12 * 100%);
     flex-basis: calc(5 / 12 * 100%);
     max-width: calc(5 / 12 * 100%);
   }
 
-  .col-6of12,
-  .col-half {
+  .col-6-of-12,
+  .col-1-of-2 {
     -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
     max-width: 50%;
   }
 
-  .col-7of12 {
+  .col-7-of-12 {
     -ms-flex-preferred-size: calc(7 / 12 * 100%);
     flex-basis: calc(7 / 12 * 100%);
     max-width: calc(7 / 12 * 100%);
   }
 
-  .col-8of12,
-  .col-twothird {
+  .col-8-of-12,
+  .col-2-of-3 {
     -ms-flex-preferred-size: calc(8 / 12 * 100%);
     flex-basis: calc(8 / 12 * 100%);
     max-width: calc(8 / 12 * 100%);
   }
 
-  .col-9of12,
-  .col-thirdquarter {
+  .col-9-of-12,
+  .col-3-of-4 {
     -ms-flex-preferred-size: 75%;
     flex-basis: 75%;
     max-width: 75%;
   }
 
-  .col-10of12 {
+  .col-10-of-12 {
     -ms-flex-preferred-size: calc(10 / 12 * 100%);
     flex-basis: calc(10 / 12 * 100%);
     max-width: calc(10 / 12 * 100%);
   }
 
-  .col-11of12 {
+  .col-11-of-12 {
     -ms-flex-preferred-size: calc(11 / 12 * 100%);
     flex-basis: calc(11 / 12 * 100%);
     max-width: calc(11 / 12 * 100%);
   }
 
-  .col-12of12,
-  .col-full {
+  .col-12-of-12,
+  .col-1-of-1 {
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
   }
 }
-
-/* ===================================================*/
-
-/* ROW STYLES
-/* ===================================================*/
-
-/* ===================================================*/
-
-/* COLUMNS STYLES
-/* ===================================================*/
 
 /* ===================================================*/
 
@@ -1076,15 +1066,20 @@ and floats. Considers mobile-first application.*/
   z-index: 10;
 }
 
-.alert-title {
+/* ===================================================*/
+
+/* ALERTS - COMPONENTS
+/* ===================================================*/
+
+.alert__title {
   font-weight: 700;
 }
 
-.alert-description {
+.alert__desc {
   font-size: 90%;
 }
 
-.alert li {
+.alert__list {
   margin-left: 15px;
 }
 
@@ -1093,28 +1088,28 @@ and floats. Considers mobile-first application.*/
 /* ALERTS - TYPES
 /* ===================================================*/
 
-.alert-default {
+.alert--default {
   color: #7F8C8D;
   background-color: #EFEFEF;
   border: 1px solid #7F8C8D;
   border-left: 5px solid #7F8C8D;
 }
 
-.alert-success {
+.alert--success {
   color: #27AE60;
   background-color: #C8F7C5;
   border: 1px solid #27AE60;
   border-left: 5px solid #27AE60;
 }
 
-.alert-warning {
+.alert--warning {
   color: #F39C12;
   background-color: #FDFD96;
   border: 1px solid #F39C12;
   border-left: 5px solid #F39C12;
 }
 
-.alert-danger {
+.alert--danger {
   color: #C0392B;
   background-color: #F1A9A0;
   border: 1px solid #C0392B;
@@ -1145,85 +1140,85 @@ input[type=reset] {
 /* BUTTON - COLORS (SOLID)
 /* ===================================================*/
 
-.btn-default {
+.btn--default {
   background-color: #ECF0F1;
   color: #95A5A6;
 }
 
-.btn-default:hover {
+.btn--default:hover {
   background-color: #95A5A6;
   color: #ECF0F1;
 }
 
-.btn-primary {
+.btn--primary {
   background-color: #3498DB;
   color: #FFF !important;
 }
 
-.btn-primary:hover {
+.btn--primary:hover {
   background-color: #2980B9;
   color: #FFF;
 }
 
-.btn-dark {
+.btn--dark {
   background-color: #333;
   color: #FFF;
 }
 
-.btn-dark:hover {
+.btn--dark:hover {
   background-color: #222;
   color: #FFF;
 }
 
-.btn-light {
+.btn--light {
   background-color: #E1E1E1;
   color: #333;
 }
 
-.btn-light:hover {
+.btn--light:hover {
   background-color: #CCC;
   color: #333;
 }
 
-.btn-outline {
-  background-color: transparent;
-  color: #333;
-  border: 1px solid #333;
-}
-
-.btn-outline:hover {
-  background-color: #333;
-  color: #FFF;
-}
-
-.btn-success {
+.btn--success {
   background-color: #2ECC71;
   color: #FFF;
 }
 
-.btn-success:hover {
+.btn--success:hover {
   background-color: #27AE60;
   color: #FFF;
 }
 
-.btn-warning {
+.btn--warning {
   background-color: #FFCE54;
   color: #FFF;
 }
 
-.btn-warning:hover {
+.btn--warning:hover {
   background-color: #F1B30B;
   color: #FFF;
 }
 
-.btn-danger {
+.btn--danger {
   background-color: #E74C3C;
   color: #FFF;
 }
 
-.btn-danger:hover {
+.btn--danger:hover {
   background-color: #C0392B;
   color: #FFF;
+}
+
+.btn--ghost {
+  background-color: transparent;
+  color: #E1E1E1;
+  border: 1px solid #E1E1E1;
+}
+
+.btn--ghost:hover {
+  background-color: #E1E1E1;
+  color: #999;
 }
 
 /* ===================================================*/
@@ -1231,86 +1226,86 @@ input[type=reset] {
 /* BUTTON - COLORS (OUTLINE)
 /* ===================================================*/
 
-.btn-outline-default {
+.btn--outline-default {
   background-color: transparent;
   color: #95A5A6;
   border: 2px solid #ECF0F1;
   font-weight: 700;
 }
 
-.btn-outline-default:hover {
+.btn--outline-default:hover {
   background-color: #95A5A6;
   color: #ECF0F1;
 }
 
-.btn-outline-primary {
+.btn--outline-primary {
   background-color: transparent;
   color: #3498DB;
   border: 2px solid #3498DB;
   font-weight: 700;
 }
 
-.btn-outline-primary:hover {
+.btn--outline-primary:hover {
   background-color: #2980B9;
   color: #FFF;
 }
 
-.btn-outline-dark {
+.btn--outline-dark {
   background-color: transparent;
   color: #333;
   border: 2px solid #333;
   font-weight: 700;
 }
 
-.btn-outline-dark:hover {
+.btn--outline-dark:hover {
   background-color: #222;
   color: #FFF;
 }
 
-.btn-outline-light {
+.btn--outline-light {
   background-color: transparent;
   color: #E1E1E1;
   border: 2px solid #E1E1E1;
   font-weight: 700;
 }
 
-.btn-outline-light:hover {
+.btn--outline-light:hover {
   background-color: #CCC;
   color: #333;
 }
 
-.btn-outline-success {
+.btn--outline-success {
   background-color: transparent;
   color: #2ECC71;
   border: 2px solid #2ECC71;
   font-weight: 700;
 }
 
-.btn-outline-success:hover {
+.btn--outline-success:hover {
   background-color: #27AE60;
   color: #FFF;
 }
 
-.btn-outline-warning {
+.btn--outline-warning {
   background-color: transparent;
   color: #FFCE54;
   border: 2px solid #FFCE54;
   font-weight: 700;
 }
 
-.btn-outline-warning:hover {
+.btn--outline-warning:hover {
   background-color: #FFCE54;
   color: #FFF;
 }
 
-.btn-outline-danger {
+.btn--outline-danger {
   background-color: transparent;
   color: #E74C3C;
   border: 2px solid #E74C3C;
   font-weight: 700;
 }
 
-.btn-outline-danger:hover {
+.btn--outline-danger:hover {
   background-color: #C0392B;
   color: #FFF;
 }
@@ -1320,40 +1315,40 @@ input[type=reset] {
 /* BUTTON - SIZES
 /* ===================================================*/
 
-.btn-sml {
+.btn--sml {
   padding: .1em 1em;
   line-height: 1.625em;
   font-size: .8em;
 }
 
-.btn-med {
+.btn--med {
   padding: .15em 1.5em;
   line-height: 1.75em;
   font-size: 1em;
 }
 
-.btn-lrg {
+.btn--lrg {
   padding: .175em 1.7em;
   line-height: 2em;
   font-size: 1.2em;
   font-weight: 700;
 }
 
-.btn-xlg {
+.btn--xlg {
   padding: .2em 2em;
   line-height: 2.125em;
   font-size: 1.3em;
   font-weight: 700;
 }
 
-.btn-jmb {
+.btn--jmb {
   padding: .25em 2.5em;
   line-height: 2.25em;
   font-size: 1.5em;
   font-weight: 700;
 }
 
-.btn-fll {
+.btn--fll {
   width: 100%;
   height: 2.125em;
   line-height: 2.125em;
@@ -1366,43 +1361,12 @@ input[type=reset] {
 /* BUTTON - ROUNDNESS
 /* ===================================================*/
 
-.btn-rnd {
+.btn--h-round {
   border-radius: 5px;
 }
 
-.btn-frd {
+.btn--f-round {
   border-radius: 35px;
-}
-
-/* ===================================================*/
-
-/* BUTTON - ICONS
-/* ===================================================*/
-
-.btn-i,
-a.btn-i,
-button.btn-i,
-input[type=button].btn-i,
-input[type=submit].btn-i,
-input[type=reset].btn-i {
-  cursor: pointer;
-  border: none;
-  outline: none;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.btn-i:after,
-a.btn-i:after,
-button.btn-i:after,
-input[type=button].btn-i:after,
-input[type=submit].btn-i:after,
-input[type=reset].btn-i:after {
-  content: '\f019';
-  /* Icon code will vary */
-  font-family: FontAwesome;
-  padding-left: 10px;
 }
 
 /* ===================================================*/
@@ -1562,11 +1526,10 @@ select:required:focus {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.modal-body {
+.modal__body {
   position: relative;
   display: block;
   max-width: 700px;
@@ -1578,7 +1541,25 @@ select:required:focus {
   box-shadow: 1px 5px 7px rgba(0, 0, 0, .7);
 }
 
-.modal-close {
+.modal__img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.modal__title {
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+
+.modal__content {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.7em;
+  color: #777;
+}
+
+.modal__close {
   position: absolute;
   display: block;
   top: 15px;
@@ -1589,8 +1570,8 @@ select:required:focus {
   cursor: pointer;
 }
 
-.modal-close:hover,
-.modal-close:focus {
+.modal__close:hover,
+.modal__close:focus {
   color: #777;
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
@@ -1600,27 +1581,6 @@ select:required:focus {
   -moz-transition: scale .3sec linear;
   -ms-transition: scale .3sec linear;
   transition: scale .3sec linear;
-}
-
-.modal img {
-  display: block;
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-.modal h1,
-.modal h2,
-.modal h3,
-.modal-title {
-  font-weight: 700;
-  margin: 0 0 10px;
-}
-
-.modal-content {
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 1.7em;
-  color: #777;
 }
 
 /*==========================================
@@ -1662,28 +1622,28 @@ td {
 TABLE - STYLES
 ==========================================*/
 
-.tbl-default th {
+.tbl--default th {
   border: none;
   border-bottom: 2px solid #DDD;
 }
 
-.tbl-default td {
+.tbl--default td {
   border: none;
 }
 
-.tbl-default tr {
+.tbl--default tr {
   border-bottom: 1px solid #DDD;
 }
 
-.tbl-default tr:last-child {
+.tbl--default tr:last-child {
   border: none;
 }
 
-.tbl-striped tr:nth-child(even) {
+.tbl--striped tr:nth-child(even) {
   background-color: #EEE;
 }
 
-.tbl-hover tr:hover {
+.tbl--hover tr:hover {
   background-color: #EEE;
 }
 
@@ -1691,13 +1651,13 @@ TABLE - STYLES
 TABLE - COLORE THEMES
 ==========================================*/
 
-.tbl-light th {
+.tbl--light th {
   background-color: #F5F7FA;
   border: none;
   color: #AAB2BD;
 }
 
-.tbl-dark th {
+.tbl--dark th {
   background-color: #434A5A;
   border: none;
   color: #F5F7FA;
@@ -1708,7 +1668,7 @@ TABLE - RESPONSIVE
 ==========================================*/
 
 @media screen and (max-width: 767px) {
-  .tbl-responsive {
+  .tbl--responsive {
     display: block;
     width: 100%;
     max-width: 100%;
@@ -1732,8 +1692,14 @@ TABLE - RESPONSIVE
   overflow: hidden;
 }
 
-.thumbnail img {
+.thumbnail__img {
   width: 100%;
+}
+
+.thumbnail__caption {
+  padding: 0.5em;
+  font-size: 0.9em;
+  color: #777;
 }
 
 /* ===================================================*/
@@ -1741,17 +1707,11 @@ TABLE - RESPONSIVE
 /* THUMBNAIL - STYLING (BOX)
 /* ===================================================*/
 
-.thumbnail-shadow {
+.thumbnail--has-shadow {
   -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
   -ms-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
-}
-
-.thumbnail-caption {
-  padding: 7px;
-  font-size: 0.9em;
-  color: #777;
 }
 
 /* ===================================================*/
@@ -1759,7 +1719,7 @@ TABLE - RESPONSIVE
 /* THUMBNAIL - STYLING (IMAGES)
 /* ===================================================*/
 
-.img-square {
+.img--is-square {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
@@ -1767,7 +1727,7 @@ TABLE - RESPONSIVE
   overflow: hidden;
 }
 
-.img-rounded {
+.img--is-rounded {
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   -ms-border-radius: 15px;
@@ -1775,7 +1735,7 @@ TABLE - RESPONSIVE
   overflow: hidden;
 }
 
-.img-circle {
+.img--is-circle {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
