@@ -506,7 +506,7 @@ template {
 
 /* ===================================================*/
 
-/* GENERAL RULES - HTML/BODY
+/* BASE - GENERAL
 /* ===================================================*/
 
 *,
@@ -730,124 +730,119 @@ p.text--justify {
 
 /* ===================================================*/
 
-/* NAVIGATION GENERAL
+/* NAVIGATION - GENERAL
 /* ===================================================*/
 
-/* This navigation system uses flexbox instead of pixels
-and floats. Considers mobile-first application.*/
-
-.nav-h ul {
-  list-style: none;
-}
-
-.nav-h ul li {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
+.nav {
   display: flex;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  flex-flow: column nowrap;
 }
 
-.nav-h ul li a {
-  display: block;
-  padding: 1.25em;
-  text-decoration: none;
+.nav__brand {
+  font-size: 1.5em;
   text-align: center;
-  font-size: 1em;
 }
 
-.nav-h ul li a:not(:only-child):after {
-  padding-left: 10px;
-  content: '\f0d7';
+.nav__menu__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.nav__menu__icon:before {
+  content: "\f0c9";
+  display: block;
+  margin-right: 0.3125em;
   font-family: FontAwesome;
 }
 
-/* ===================================================*/
-
-/* NAVIGATION BRAND/LOGO
-/* ===================================================*/
-
-.nav__brand {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  border-bottom: 1px solid #222;
+.nav__menu {
+  display: none;
+  text-align: center;
+  list-style: none;
 }
 
-.nav__brand a {
-  padding: 1em -0px;
+.nav__menu__item {
+  position: relative;
+  flex: 1;
   font-size: 1.25em;
+}
+
+.nav__menu__item:last-child {
+  border: none;
+}
+
+.nav__dropdown {
+  display: none;
+  flex-flow: column nowrap;
+  flex: 1;
+  list-style: none;
+}
+
+.nav__dropdown__item:last-child {
+  border: none;
+}
+
+.nav__brand a,
+.nav__menu__item a,
+.nav__dropdown__item a {
+  display: block;
+  padding: 0.5em;
   text-decoration: none;
 }
 
-.nav__brand img {
-  max-height: 3em;
-  margin: .8em 0;
+.nav__menu__item a:not(:last-child):after {
+  content: "\f0d7";
+  padding-left: 1em;
+  font-family: FontAwesome;
 }
 
-/* ===================================================*/
-
-/* NAVIGATION MEDIA QUERIES
-/* ===================================================*/
-
 @media only screen and (min-width: 40em) {
-  /* About 640px */
-
-  .nav-h {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
+  .nav {
+    flex-flow: row nowrap;
     justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-  }
-
-  .nav-h ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-
-  .nav-h ul li a {
-    font-size: 0.8em;
   }
 
   .nav__brand {
-    margin: 0;
-    border: none;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1.125em;
   }
 
-  .nav__brand a {
-    padding: 0 0.8em;
+  .nav__menu__icon {
+    display: none;
   }
 
-  .nav__brand img {
-    display: block;
+  .nav__menu {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 0.675em;
+  }
+
+  .nav__menu__item {
+    display: flex;
+    flex-direction: row;
+    flex: 1 0 auto;
+    text-align: center;
+  }
+
+  .nav__dropdown {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    border-radius: 0.5em !important;
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+    z-index: 100;
   }
 }
 
 /* ===================================================*/
 
-/* NAVIGATION THEMES
+/* NAVIGATION - THEMES
 /* ===================================================*/
 
 .nav--default {
@@ -855,17 +850,29 @@ and floats. Considers mobile-first application.*/
   border-bottom: 1px solid #E6E9ED;
 }
 
+.nav--default .nav__menu__item,
+.nav--default .nav__dropdown__item {
+  border-bottom: 1px solid #E6E9ED;
+}
+
 .nav--default .nav__brand a,
-.nav--default ul li a {
+.nav--default .nav__menu__icon,
+.nav--default .nav__menu__item a {
   color: #AAB2BD;
 }
 
-.nav--default .nav__brand a:hover {
+.nav--default .nav__brand a:hover,
+.nav--default .nav__menu__icon:hover,
+.nav--default .nav__menu__item a:hover {
   color: #353B42;
 }
 
-.nav--default ul li a:hover {
-  color: #353B42;
+.nav--default .nav__dropdown__item {
+  background-color: #F1F3FF;
+}
+
+.nav--default .nav__dropdown__item:hover {
+  background-color: #E6E9ED;
 }
 
 .nav--dark {
@@ -873,26 +880,44 @@ and floats. Considers mobile-first application.*/
   border-bottom: 1px solid #222;
 }
 
+.nav--dark .nav__menu__item,
+.nav--dark .nav__dropdown__item {
+  border-bottom: 1px solid #111;
+}
+
 .nav--dark .nav__brand a,
-.nav--dark ul li a {
+.nav--dark .nav__menu__icon,
+.nav--dark .nav__menu__item a {
   color: #999;
 }
 
-.nav--dark .nav__brand a:hover {
+.nav--dark .nav__brand a:hover,
+.nav--dark .nav__menu__icon:hover,
+.nav--dark .nav__menu__item a:hover {
   color: #FFF;
 }
 
-.nav--dark ul li a:hover {
-  color: #FFF;
+.nav--dark .nav__dropdown__item {
+  background-color: #222;
+}
+
+.nav--dark .nav__dropdown__item:hover {
+  background-color: #111;
+}
+
+@media only screen and (min-width: 40em) {
+  .nav--default .nav__menu__item,
+  .nav--default .nav__dropdown__item,
+  .nav--dark .nav__menu__item,
+  .nav--dark .nav__dropdown__item {
+    border: none !important;
+  }
 }
 
 /* ===================================================*/
 
 /* GRID GENERAL
 /* ===================================================*/
-
-/* This grid system uses flexbox instead of pixels
-and floats. Considers mobile-first application.*/
 
 .container {
   width: 100%;

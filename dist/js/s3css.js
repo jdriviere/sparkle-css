@@ -15,10 +15,10 @@ $(document).ready(function() {
 	// navClass();
 	navDrop();
 	navToggleAction();
-    // navResizeFix();
+    navResizeFix();
     modalAction();
-	menuToggle();
-	vertMenu();
+	// menuToggle();
+	// vertMenu();
 });
 
 // -----------------------------
@@ -26,11 +26,11 @@ $(document).ready(function() {
 // -----------------------------
 // This function sets up the dropdown menu functionality.
 function navDrop() {
-    var navdrop = $('.nav-h li > a:not(:only-child)');
-	var navdown = $('.nav-h ul ul');
+    var navdrop = $('li.nav__menu__item > a:not(:only-child)');
+	var navdown = $('ul.nav__dropdown');
 
 	navdrop.click(function(event) {
-		$(this).siblings(navdown).toggle();
+		$(this).siblings(navdown).slideToggle();
 
         // Prevents multiple dropdowns to remain open at the same time.
 		$(navdown).not($(this).siblings()).hide();
@@ -45,22 +45,26 @@ function navDrop() {
 
 // This function sets up the nav-toggle functionality.
 function navToggleAction() {
-    var navTog = $('#nav-toggle');
-    var navUl = $('.nav-h ul');
+    var navTog = $('#nav__mobile');
+    var navUl = $('.nav__menu');
 
     navTog.click(function() {
-        navUl.toggle();
+        navUl.slideToggle();
     });
+
+	// $('html').click(function() {
+	// 	$(navUl).hide();
+	// });
 } // End of NavToggleAction
 
 // This function fixes the disappearing horizontal navbar menu when resized to desktop screen size.
 function navResizeFix () {
     $(window).resize(function() {
-		var navUl = $('.nav-h ul');
-		var dropdown = $('.nav-h ul ul');
+		var navUl = $('.nav__menu');
+		var dropdown = $('.nav__dropdown');
 
         if ($(window).width() > 639) {
-            navUl.css('display', 'block');
+            navUl.css('display', 'flex');
 			dropdown.css('display', 'none');
         } else {
 			navUl.css('display', 'none');
