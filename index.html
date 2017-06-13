@@ -16,12 +16,12 @@
     <!-- LOADING SCRIPTS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://use.fontawesome.com/a833db4ecd.js"></script>
-    <script src="dist/js/s3css.min.js"></script>
+    <script src="src/js/s3css.js"></script>
 
 	<!-- LOADING LINKS -->
 	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon.ico">
-	<link rel="stylesheet" type="text/css" href="dist/css/s3css.min.css">
+	<link rel="stylesheet" type="text/css" href="src/css/s3css.css">
 
 	<!-- INTERNAL STYLING -->
 	<style></style>
@@ -33,42 +33,64 @@
 		as many functionalities as possible work.
 	-->
 	<header>
-		<nav class="nav-h nav--dark">
+		<nav class="nav nav--dark">
 			<div class="nav__brand">
-				<a href="#">
-					Test Site
-				</a>
+				<a href="#">Test Site</a>
 			</div>
-			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Documentation</a></li>
-				<li><a href="#">About</a>
-					<!--<ul>
-						<li><a href="#">Submenu 1</a></li>
-						<li><a href="#">Submenu 2</a></li>
-						<li><a href="#">Submenu 3</a></li>
-					</ul>-->
+			<div id="nav__mobile" class="nav__menu__icon">Menu</div>
+			
+			<ul class="nav__menu">
+				<li class="nav__menu__item"><a href="#">Home</a></li>
+				<li class="nav__menu__item"><a href="#">Documentation</a>
+					<ul class="nav__dropdown">
+						<li class="nav__dropdown__item"><a href="#">Submenu 1</a></li>
+						<li class="nav__dropdown__item"><a href="#">Submenu 2</a></li>
+						<li class="nav__dropdown__item"><a href="#">Submenu 3</a></li>
+					</ul>
 				</li>
-				<li><a href="#">Contact</a></li>
+				<li class="nav__menu__item"><a href="#">About</a></li>
+				<li class="nav__menu__item"><a href="#">Contact</a></li>
 			</ul>
 		</nav>
 	</header>
 
 	<section class="container">
-        <h1>S3CSS</h1>
-        <h4>Simplest CSS Framework You'll Ever Find</h4>
+        <h1>RUM.CSS</h1>
+        <h3>Simplest CSS Framework You'll Ever Find</h3>
 
         <p class="text--justify">
-            Welcome and thank you for using S3CSS (pronounced 'streaks'), a lightweight CSS/JS
-            open source framework (coded in SCSS and jQuery) to help you create simple, responsive website templates.
-            It was developed by J. Djimitry Riviere in late 2016, and continues to be improved upon by its
-            developer. The major key to this framework lies within its ease of us to deliver superb results
-            when creating a website. Not only that, it is and will always remain FREE to use; though in
-            exchange, providing feedback and help find ways to improve the framework further would be
-            appreciated.<p><br>
+            Welcome and thank you for using <span class="text--thick">Rum</span>, a lightweight CSS
+            open source framework to help you create simple, responsive website templates.
+            It was developed by <span class="text--thick">J. Djimitry Riviere</span> in late 2016,
+			and continues to be improved upon by its developer. The major key to this framework
+			lies within its ease of us to deliver superb results when creating a website. Not only that,
+			it is and will always remain FREE to use; though in exchange, providing feedback and help
+			find ways to improve the framework further would be appreciated.<p><br>
             You can replace this paragraph at any time, when you are developing
             your page with the wonderful S3CSS Framework.
         </p>
     </section>
+
+	<section class="container">
+		<div class="row">
+			<div class="col">
+				<h4>Feature</h4>
+				<p class="text--small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid magni nemo ipsum aliquam distinctio nostrum, saepe dolore possimus alias, quidem ducimus quisquam necessitatibus at delectus consequatur praesentium exercitationem adipisci.</p>
+				<button type="button" class="btn btn--primary btn--med">Read More...</button>
+			</div>
+
+			<div class="col">
+				<h4>Feature</h4>
+				<p class="text--small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid magni nemo ipsum aliquam distinctio nostrum, saepe dolore possimus alias, quidem ducimus quisquam necessitatibus at delectus consequatur praesentium exercitationem adipisci.</p>
+				<button type="button" class="btn btn--primary btn--med">Read More...</button>
+			</div>
+
+			<div class="col">
+				<h4>Feature</h4>
+				<p class="text--small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid magni nemo ipsum aliquam distinctio nostrum, saepe dolore possimus alias, quidem ducimus quisquam necessitatibus at delectus consequatur praesentium exercitationem adipisci.</p>
+				<button type="button" class="btn btn--primary btn--med">Read More...</button>
+			</div>
+		</div>
+	</section>
 </body>
 </html>
