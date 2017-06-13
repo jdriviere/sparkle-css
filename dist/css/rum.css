@@ -1,22 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
 /*
 @author: J. Djimitry Riviere
-@version: 0.1.0
+@version: 0.1.1
 @release: 06/09/2017
 
-Welcome and thank you for using S3CSS (pronounced as 'streaks'), a lightweight CSS/JS
-open source framework (coded in CSS and jQuery) to help you create simple, responsive website templates.
-It was developed by J. Djimitry Riviere in late 2016, and continues to be improved upon by its
-developer. The major key to this framework lies within its ease of us to deliver superb results
-when creating a website. Not only that, it is and will always remain FREE to use; though in
-exchange, providing feedback and help find ways to improve the framework further would be
-appreciated.
+Welcome and thank you for using Rum, a lightweight CSS open source framework (coded in CSS and jQuery)
+to help you create simple, responsive website templates. It was developed by J. Djimitry Riviere
+in late 2016, and continues to be improved upon by its developer. The major key to this framework
+lies within its ease of us to deliver superb results when creating a website. Not only that, it is
+and will always remain FREE to use; though in exchange, providing feedback and helping find ways to
+improve the framework further would be appreciated.
 
-Thank you for using S3CSS! Happy Designing!
-
-WARNING:    Do NOT touch, alter, or remove any files or folders!
-            They contains all the variables from which the S3CSS
-            framework functions.
+Thank you for using Rum! Happy Designing!
 */
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -503,6 +498,8 @@ template {
 [hidden] {
   display: none;
 }
+
+/*! Rum Framework starts here */
 
 /* ===================================================*/
 

@@ -1,10 +1,10 @@
 // ==========================================================
-// S3CSS.js FRAMEWORK
+// Rum.js FRAMEWORK
 // ==========================================================
-// This is where all the S3CSS functions are implemented. Most of them will
+// This is where all the Rum functions are implemented. Most of them will
 // serve to fix problems that occur within the CSS-only framework. This function
-// will load all the S3CSS framework functions. The S3CSS.js file is REQUIRED
-// for the S3CSS Framework to function properly!
+// will load all the Rum framework functions. The Rum.js file is REQUIRED
+// for the Rum Framework to function properly!
 
 // -----------------------------
 // MAIN
