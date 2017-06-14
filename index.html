@@ -21,10 +21,38 @@
 	<!-- LOADING LINKS -->
 	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.ico">
-	<link rel="stylesheet" type="text/css" href="dist/css/rum.min.css">
+	<link rel="stylesheet" type="text/css" href="src/css/rum.css">
 
 	<!-- INTERNAL STYLING -->
-	<style></style>
+	<style>
+        .banner {
+            display: flex;
+            width: 100%;
+            height: 80vh;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            background-color: #FC3;
+            text-align: center;
+        }
+        .banner .btn { margin: 10px; }
+        .container { padding: 2em 0; }
+        .feature { background-color: #333; color: #EEE; }
+        .feature__title { color: #FC3; }
+        .feature__desc { margin-bottom: 10px; }
+        .btn--theme { background-color: #FC3; }
+        .btn--theme:hover { background-color: #EB2; }
+        footer { background-color: #FC3; }
+        footer ul { margin-left: 1.25em; list-style: none; }
+        .credit { text-align: center; }
+        @media only screen and (min-width: 40em) {
+            .banner { height: 100vh; }
+            .banner .btn {
+            }
+            .container { padding: 3.75em 0; }
+        }
+    </style>
 </head>
 
 <body>
@@ -35,7 +63,9 @@
 	<header>
 		<nav class="nav nav--dark">
 			<div class="nav__brand">
-				<a href="#">Test Site</a>
+				<a href="index.html">
+				    <img src="img/RumCSS_v01.png" alt="rum_logo" class="nav__brand__image">
+				</a>
 			</div>
 			<div id="nav__mobile" class="nav__menu__icon">Menu</div>
 
@@ -43,9 +73,7 @@
 				<li class="nav__menu__item"><a href="#">Home</a></li>
 				<li class="nav__menu__item"><a href="#">Documentation</a>
 					<ul class="nav__dropdown">
-						<li class="nav__dropdown__item"><a href="#">Submenu 1</a></li>
-						<li class="nav__dropdown__item"><a href="#">Submenu 2</a></li>
-						<li class="nav__dropdown__item"><a href="#">Submenu 3</a></li>
+						<li class="nav__dropdown__item"><a href="#">Coming soon...</a></li>
 					</ul>
 				</li>
 				<li class="nav__menu__item"><a href="#">About</a></li>
@@ -54,10 +82,14 @@
 		</nav>
 	</header>
 
-	<section class="container">
+	<section class="banner">
         <h1>RUM.CSS</h1>
         <h3>Simplest CSS Framework You'll Ever Find</h3>
+        <button type="button" name="button" class="btn btn--dark btn--lrg btn--f-round">Download</button>
+        <button type="button" name="button" class="btn btn--outline--dark btn--lrg btn--f-round">Github</button>
+    </section>
 
+    <section class="container">
         <p class="text--justify">
             Welcome and thank you for using <span class="text--thick">Rum</span>, a lightweight CSS
             open source framework to help you create simple, responsive website templates.
@@ -71,26 +103,61 @@
         </p>
     </section>
 
-	<section class="container">
-		<div class="row">
-			<div class="col">
-				<h4>Feature</h4>
-				<p class="text--small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid magni nemo ipsum aliquam distinctio nostrum, saepe dolore possimus alias, quidem ducimus quisquam necessitatibus at delectus consequatur praesentium exercitationem adipisci.</p>
-				<button type="button" class="btn btn--primary btn--med">Read More...</button>
-			</div>
+	<section class="feature">
+        <section class="container">
+            <div class="row">
+    			<div class="col">
+    				<h4 class="feature__title">Semantics</h4>
+    				<p class="feature__desc text--small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid magni nemo ipsum aliquam distinctio nostrum, saepe dolore possimus alias, quidem ducimus quisquam necessitatibus at delectus consequatur praesentium exercitationem adipisci.</p>
+    			</div>
 
-			<div class="col">
-				<h4>Feature</h4>
-				<p class="text--small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid magni nemo ipsum aliquam distinctio nostrum, saepe dolore possimus alias, quidem ducimus quisquam necessitatibus at delectus consequatur praesentium exercitationem adipisci.</p>
-				<button type="button" class="btn btn--primary btn--med">Read More...</button>
-			</div>
+    			<div class="col">
+    				<h4 class="feature__title">User-Friendly</h4>
+    				<p class="feature__desc text--small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid magni nemo ipsum aliquam distinctio nostrum, saepe dolore possimus alias, quidem ducimus quisquam necessitatibus at delectus consequatur praesentium exercitationem adipisci.</p>
+    			</div>
 
-			<div class="col">
-				<h4>Feature</h4>
-				<p class="text--small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid magni nemo ipsum aliquam distinctio nostrum, saepe dolore possimus alias, quidem ducimus quisquam necessitatibus at delectus consequatur praesentium exercitationem adipisci.</p>
-				<button type="button" class="btn btn--primary btn--med">Read More...</button>
-			</div>
-		</div>
+    			<div class="col">
+    				<h4 class="feature__title">Responsive</h4>
+    				<p class="feature__desc text--small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid magni nemo ipsum aliquam distinctio nostrum, saepe dolore possimus alias, quidem ducimus quisquam necessitatibus at delectus consequatur praesentium exercitationem adipisci.</p>
+    			</div>
+    		</div>
+        </section>
 	</section>
+
+    <section class="container">
+        <h1>Coming Soon...</h1>
+    </section>
+
+    <footer>
+        <section class="container">
+            <div class="row">
+                <div class="col">
+                    <h4>Sitemap</h4>
+                    <ul>
+                        <li>Home</li>
+                        <li>Documentation</li>
+                        <li>About</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+
+                <div class="col">
+                    <h4>About</h4>
+                    Coming soon...
+                </div>
+
+                <div class="col">
+                    <h4>Stay Connected</h4>
+                    Coming soon...
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="credit col-1-of-1">
+                    Designed with <span><i class="fa fa-heart"></i></span> by J. D. Riviere
+                </div>
+            </div>
+        </section>
+    </footer>
 </body>
 </html>
