@@ -28,7 +28,7 @@
         .banner {
             display: flex;
             width: 100%;
-            height: 80vh;
+            height: 70vh;
             flex-direction: column;
             justify-content: center;
             align-content: center;
@@ -43,8 +43,11 @@
         .feature__desc { margin-bottom: 10px; }
         .btn--theme { background-color: #FC3; }
         .btn--theme:hover { background-color: #EB2; }
-        footer { background-color: #FC3; }
-        footer ul { margin-left: 1.25em; list-style: none; }
+        .pre-footer { background-color: #FC3; }
+        .pre-footer ul { list-style: none; }
+        footer { background-color: #333; color: #FFF; }
+        footer span { color: #C03; }
+        footer a { text-decoration: none; color: #FC3; }
         .credit { text-align: center; }
         @media only screen and (min-width: 40em) {
             .banner { height: 100vh; }
@@ -77,7 +80,6 @@
 					</ul>
 				</li>
 				<li class="nav__menu__item"><a href="#">About</a></li>
-				<li class="nav__menu__item"><a href="#">Contact</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -90,46 +92,49 @@
     </section>
 
     <section class="container">
-        <p class="text--justify">
+        <p class="text--center">
             Welcome and thank you for using <span class="text--thick">Rum</span>, a lightweight CSS
             open source framework to help you create simple, responsive website templates.
             It was developed by <span class="text--thick">J. Djimitry Riviere</span> in late 2016,
 			and continues to be improved upon by its developer. The major key to this framework
 			lies within its ease of us to deliver superb results when creating a website. Not only that,
 			it is and will always remain FREE to use; though in exchange, providing feedback and help
-			find ways to improve the framework further would be appreciated.<p><br>
-            You can replace this paragraph at any time, when you are developing
-            your page with the wonderful Rum Framework.
+			find ways to improve the framework further would be appreciated.
         </p>
     </section>
 
 	<section class="feature">
-        <section class="container">
+        <div class="container">
             <div class="row">
     			<div class="col">
     				<h4 class="feature__title">Semantics</h4>
-    				<p class="feature__desc text--small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid magni nemo ipsum aliquam distinctio nostrum, saepe dolore possimus alias, quidem ducimus quisquam necessitatibus at delectus consequatur praesentium exercitationem adipisci.</p>
+    				<p class="feature__desc text--small">Rum uses BEM to keep the framework structured and simple for all to understand and use.</p>
     			</div>
 
     			<div class="col">
     				<h4 class="feature__title">User-Friendly</h4>
-    				<p class="feature__desc text--small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid magni nemo ipsum aliquam distinctio nostrum, saepe dolore possimus alias, quidem ducimus quisquam necessitatibus at delectus consequatur praesentium exercitationem adipisci.</p>
+    				<p class="feature__desc text--small">Rum does most of the hard work for you. Simply style your elements.</p>
     			</div>
 
     			<div class="col">
-    				<h4 class="feature__title">Responsive</h4>
-    				<p class="feature__desc text--small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid magni nemo ipsum aliquam distinctio nostrum, saepe dolore possimus alias, quidem ducimus quisquam necessitatibus at delectus consequatur praesentium exercitationem adipisci.</p>
+    				<h4 class="feature__title">Mobile-First</h4>
+    				<p class="feature__desc text--small">Rum was created to be responsive throughout all devices.</p>
+    			</div>
+
+                <div class="col">
+    				<h4 class="feature__title">Lightweight</h4>
+    				<p class="feature__desc text--small">Rum is smaller than 20kb, which means it won't slow down your website loading.</p>
     			</div>
     		</div>
-        </section>
+        </div>
 	</section>
 
     <section class="container">
-        <h1>Coming Soon...</h1>
+        <h1 class="text--center">Coming Soon...</h1>
     </section>
 
-    <footer>
-        <section class="container">
+    <section class="pre-footer">
+        <div class="container">
             <div class="row">
                 <div class="col">
                     <h4>Sitemap</h4>
@@ -137,27 +142,23 @@
                         <li>Home</li>
                         <li>Documentation</li>
                         <li>About</li>
-                        <li>Contact</li>
                     </ul>
                 </div>
 
                 <div class="col">
-                    <h4>About</h4>
-                    Coming soon...
-                </div>
-
-                <div class="col">
-                    <h4>Stay Connected</h4>
-                    Coming soon...
+                    <h4>We Accept Contributors</h4>
+                    <i class="fa fa-github fa-2x"></i>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="row">
-                <div class="credit col-1-of-1">
-                    Designed with <span><i class="fa fa-heart"></i></span> by J. D. Riviere
-                </div>
+    <footer>
+        <div class="row">
+            <div class="credit col-1-of-1">
+                Designed with <span><i class="fa fa-heart"></i></span> by <a href="https://jdriviere.github.io">J. D. Riviere</a>
             </div>
-        </section>
+        </div>
     </footer>
 </body>
 </html>
