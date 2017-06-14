@@ -738,11 +738,16 @@ p.text--justify {
   -webkit-box-direction: normal;
   -ms-flex-flow: column nowrap;
   flex-flow: column nowrap;
+  z-index: 5;
 }
 
 .nav__brand {
   font-size: 1.5em;
   text-align: center;
+}
+
+.nav__brand__image {
+  max-height: 2em;
 }
 
 .nav__menu__icon {
@@ -795,6 +800,7 @@ p.text--justify {
   -ms-flex: 1;
   flex: 1;
   list-style: none;
+  z-index: 10;
 }
 
 .nav__dropdown__item:last-child {
@@ -958,8 +964,7 @@ p.text--justify {
 /* ===================================================*/
 
 .container {
-  width: 100%;
-  max-width: 60em;
+  width: 90%;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -991,6 +996,13 @@ p.text--justify {
   clear: both;
 }
 
+@media only screen and (min-width: 60em) {
+  .container {
+    width: 100%;
+    max-width: 60em;
+  }
+}
+
 [class*="col-"],
 .col {
   -ms-flex-preferred-size: 100%;
@@ -1005,10 +1017,6 @@ p.text--justify {
 }
 
 @media only screen and (min-width: 40em) {
-  .container {
-    width: 90%;
-  }
-
   .row {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1291,86 +1299,86 @@ input[type=reset] {
 /* BUTTON - COLORS (OUTLINE)
 /* ===================================================*/
 
-.btn--outline-default {
+.btn--outline--default {
   background-color: transparent;
   color: #95A5A6;
   border: 2px solid #ECF0F1;
   font-weight: 700;
 }
 
-.btn--outline-default:hover {
+.btn--outline--default:hover {
   background-color: #95A5A6;
   color: #ECF0F1;
 }
 
-.btn--outline-primary {
+.btn--outline--primary {
   background-color: transparent;
   color: #3498DB;
   border: 2px solid #3498DB;
   font-weight: 700;
 }
 
-.btn--outline-primary:hover {
+.btn--outline--primary:hover {
   background-color: #2980B9;
   color: #FFF;
 }
 
-.btn--outline-dark {
+.btn--outline--dark {
   background-color: transparent;
   color: #333;
   border: 2px solid #333;
   font-weight: 700;
 }
 
-.btn--outline-dark:hover {
+.btn--outline--dark:hover {
   background-color: #222;
   color: #FFF;
 }
 
-.btn--outline-light {
+.btn--outline--light {
   background-color: transparent;
   color: #E1E1E1;
   border: 2px solid #E1E1E1;
   font-weight: 700;
 }
 
-.btn--outline-light:hover {
+.btn--outline--light:hover {
   background-color: #CCC;
   color: #333;
 }
 
-.btn--outline-success {
+.btn--outline--success {
   background-color: transparent;
   color: #2ECC71;
   border: 2px solid #2ECC71;
   font-weight: 700;
 }
 
-.btn--outline-success:hover {
+.btn--outline--success:hover {
   background-color: #27AE60;
   color: #FFF;
 }
 
-.btn--outline-warning {
+.btn--outline--warning {
   background-color: transparent;
   color: #FFCE54;
   border: 2px solid #FFCE54;
   font-weight: 700;
 }
 
-.btn--outline-warning:hover {
+.btn--outline--warning:hover {
   background-color: #FFCE54;
   color: #FFF;
 }
 
-.btn--outline-danger {
+.btn--outline--danger {
   background-color: transparent;
   color: #E74C3C;
   border: 2px solid #E74C3C;
   font-weight: 700;
 }
 
-.btn--outline-danger:hover {
+.btn--outline--danger:hover {
   background-color: #C0392B;
   color: #FFF;
 }
