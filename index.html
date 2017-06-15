@@ -8,8 +8,8 @@
 	<!-- LOADING META CODES -->
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="author" content="RumCSS">
-	<meta name="description" content="Sample page displaying the most basic appearance of a website using the Rum Framework.">
+	<meta name="author" content="J. Djimitry Riviere">
+	<meta name="description" content="Rum.CSS: a lightweight, responsive, mobile-first CSS framework for easy website designs.">
 	<meta name="keywords" content="HTML, HTML5, CSS, CSS3, CSS Framework, JavaScript, JS, rum, RumCSS, rumcss">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -59,11 +59,11 @@
 </head>
 
 <body>
-	<!--
-		This HTML file will be used to test various Rum features to make
-		as many functionalities as possible work.
-	-->
 	<header>
+        <!--
+           This section provides a reference as to how the navigation features should
+           be laid out for full functionality.
+        -->
 		<nav class="nav nav--dark">
 			<div class="nav__brand">
 				<a href="index.html">
@@ -73,13 +73,19 @@
 			<div id="nav__mobile" class="nav__menu__icon">Menu</div>
 
 			<ul class="nav__menu">
-				<li class="nav__menu__item"><a href="#">Home</a></li>
+				<li class="nav__menu__item"><a href="index.html">Home</a></li>
 				<li class="nav__menu__item"><a href="#">Documentation</a>
 					<ul class="nav__dropdown">
 						<li class="nav__dropdown__item"><a href="#">Coming soon...</a></li>
 					</ul>
 				</li>
 				<li class="nav__menu__item"><a href="#">About</a></li>
+                <li class="nav__menu__item"><a href="#">Download</a>
+                    <ul class="nav__dropdown">
+                        <li class="nav__dropdown__item"><a href="https://github.com/jdriviere/rumcss.git">Fork from Github</a></li>
+                        <li class="nav__dropdown__item"><a href="#">Download</a></li>
+                    </ul>
+                </li>
 			</ul>
 		</nav>
 	</header>
@@ -87,8 +93,14 @@
 	<section class="banner">
         <h1>RUM.CSS</h1>
         <h3>Simplest CSS Framework You'll Ever Find</h3>
-        <button type="button" name="button" class="btn btn--dark btn--lrg btn--f-round">Download</button>
-        <button type="button" name="button" class="btn btn--outline--dark btn--lrg btn--f-round">Github</button>
+
+        <button type="button" name="button" class="btn btn--dark btn--lrg btn--f-round">
+            <i class="fa fa-download"></i> Download v0.1.1
+        </button>
+
+        <button type="button" name="button" class="btn btn--outline--dark btn--lrg btn--f-round">
+            <i class="fa fa-github"></i> Github
+        </button>
     </section>
 
     <section class="container">
@@ -142,6 +154,7 @@
                         <li>Home</li>
                         <li>Documentation</li>
                         <li>About</li>
+                        <li>Download</li>
                     </ul>
                 </div>
 
