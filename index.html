@@ -25,35 +25,27 @@
 
 	<!-- INTERNAL STYLING -->
 	<style>
-        .banner {
-            display: flex;
-            width: 100%;
-            height: 70vh;
-            flex-direction: column;
-            justify-content: center;
-            align-content: center;
-            align-items: center;
-            background-color: #39D;
-            text-align: center;
-        }
-        .banner .btn { margin: 10px; }
         .container { padding: 2em 0; }
+
+        .banner { background-color: #F1F1F1; }
+        
         .feature { background-color: #333; color: #EEE; }
         .feature__title { color: #39D; }
         .feature__desc { margin-bottom: 10px; }
+        
         .btn--theme { background-color: #39D; }
         .btn--theme:hover { background-color: #17B; }
-        .documentation h1 { font-weight: 300; color: #DDD; }
+        
+        .banner h1, .documentation h1 { font-weight: 300; color: #DDD; }
+        
         .pre-footer { background-color: #39D; color: #FFF; }
         .pre-footer ul { list-style: none; }
+        
         footer { background-color: #333; color: #FFF; }
-        footer span { color: #C03; }
+        footer i { color: #C03; }
         footer a { text-decoration: none; color: #39D; }
         .credit { text-align: center; }
         @media only screen and (min-width: 40em) {
-            .banner { height: 100vh; }
-            .banner .btn {
-            }
             .container { padding: 3.75em 0; }
         }
     </style>
@@ -93,20 +85,13 @@
 	</header>
 
 	<section class="banner">
-        <h1>Sparkle.CSS</h1>
-        <h3>Simplest CSS Framework You'll Ever Find</h3>
-
-        <button type="button" name="button" class="btn btn--dark btn--lrg btn--f-round">
-            <i class="fa fa-download"></i> Download v0.1.1
-        </button>
-
-        <button type="button" name="button" class="btn btn--outline--dark btn--lrg btn--f-round">
-            <i class="fa fa-github"></i> Github
-        </button>
+        <div class="container">
+            <h1 class="text--center">Coming Soon...</h1>
+        </div>
     </section>
 
     <section class="container">
-        <div class="alert alert--danger">
+        <div class="alert alert--info">
             <p class="alert__title">INFO:</p>
             <p class="alert__desc">Sparkle.CSS is a wonderful Framework!</p>
         </div>
@@ -165,7 +150,11 @@
                 </div>
 
                 <div class="col">
-                    <h4>We Accept Contributors</h4>
+                    <h4>Want to Contribute?</h4>
+                    <p>
+                        Contributors are welcome, but be sure to read the guidelines before
+                        forking and pulling requests.
+                    </p>
                     <i class="fa fa-github fa-2x"></i>
                 </div>
             </div>
