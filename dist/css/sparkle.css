@@ -1460,6 +1460,7 @@ p.text--big {
 /* FORMS - GENERAL
 /* ===================================================*/
 
+input[type='text']
 input[type='email'],
 input[type='number'],
 input[type='password'],
@@ -1475,6 +1476,7 @@ select {
   max-width: 100%;
   margin: 5px 0;
   padding: 0.5em 0;
+  background: none;
   border: none;
   border-bottom: 1px solid #DDD;
   -webkit-box-shadow: none;
@@ -1493,6 +1495,7 @@ textarea {
   font-family: 'Lato', sans-serif;
 }
 
+input[type='text']:focus,
 input[type='email']:focus,
 input[type='number']:focus,
 input[type='password']:focus,
@@ -1509,6 +1512,7 @@ select:focus {
   transition: all 0.2s ease-in;
 }
 
+input[type='text']:disabled,
 input[type='email']:disabled,
 input[type='number']:disabled,
 input[type='password']:disabled,
@@ -1524,6 +1528,8 @@ select:disabled {
   cursor: not-allowed;
 }
 
+input[type='email']:required,
+input[type='text']:invalid,
 input[type='email']:required,
 input[type='email']:invalid,
 input[type='number']:required,
@@ -1548,6 +1554,7 @@ select:required {
   transition: all 0.2s ease-in;
 }
 
+input[type='text']:required:focus,
 input[type='email']:required:focus,
 input[type='number']:required:focus,
 input[type='password']:required:focus,

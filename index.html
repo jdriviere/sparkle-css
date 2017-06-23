@@ -33,13 +33,14 @@
         .feature__title { color: #39D; }
         .feature__desc { margin-bottom: 10px; }
         
-        .btn--theme { background-color: #39D; }
-        .btn--theme:hover { background-color: #17B; }
+        .btn { margin-top: 20px; }
         
         .banner h1, .documentation h1 { font-weight: 300; color: #DDD; }
         
         .pre-footer { background-color: #39D; color: #FFF; }
         .pre-footer ul { list-style: none; }
+        .pre-footer i { color: #333; }
+        .pre-footer i:hover { color: #FFF; }
         
         footer { background-color: #333; color: #FFF; }
         footer i { color: #C03; }
@@ -57,11 +58,11 @@
            This section provides a reference as to how the navigation features should
            be laid out for full functionality.
         -->
-		<nav class="nav nav--dark">
+		<nav class="nav nav--default">
 			<div class="nav__brand">
 				<a href="index.html">
 				    <!--<img src="dist/img/Sparkle_Logo.png" alt="Sparkle_Logo" class="nav__brand__image">-->
-                    <h3 class="nav__brand">Sparkle.CSS</h3>
+                    <h3 class="nav__brand">Sparkle</h3>
 				</a>
 			</div>
 			<div id="nav__mobile" class="nav__menu__icon">Menu</div>
@@ -91,16 +92,12 @@
     </section>
 
     <section class="container">
-        <div class="alert alert--info">
-            <p class="alert__title">INFO:</p>
-            <p class="alert__desc">Sparkle.CSS is a wonderful Framework!</p>
-        </div>
         <p class="text--center">
             Welcome and thank you for using <span class="text--thick">Sparkle</span>, a lightweight CSS
             open source framework to help you create simple, responsive website templates.
             It was developed by <span class="text--thick">J. Djimitry Riviere</span> in late 2016,
 			and continues to be improved upon by its developer. The major key to this framework
-			lies within its ease of us to deliver superb results when creating a website. Not only that,
+			lies within its ease of us to deliver superb results when designing apps and websites. Not only that,
 			it is and will always remain FREE to use; though in exchange, providing feedback and help
 			find ways to improve the framework further would be appreciated.
         </p>
@@ -108,6 +105,7 @@
 
 	<section class="feature">
         <div class="container">
+            <h2>Sparkle is...</h2>
             <div class="row">
     			<div class="col">
     				<h4 class="feature__title">Semantics</h4>
@@ -140,13 +138,10 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h4>Sitemap</h4>
-                    <ul>
-                        <li>Home</li>
-                        <li>Documentation</li>
-                        <li>About</li>
-                        <li>Download</li>
-                    </ul>
+                    <h4>Want to Get to Know Me?</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti ratione ad magnam obcaecati, numquam distinctio similique quam, illum. Sequi iure ipsam voluptas enim commodi quis voluptatum, tempore fuga! Alias, inventore.
+                    </p>
                 </div>
 
                 <div class="col">
@@ -155,7 +150,18 @@
                         Contributors are welcome, but be sure to read the guidelines before
                         forking and pulling requests.
                     </p>
-                    <i class="fa fa-github fa-2x"></i>
+                </div>
+
+                <div class="col">
+                    <h4>Want to Hear from Us?</h4>
+                    <form>
+                        <label for="name">name</label>
+                        <input type="text" name="name" id="name">
+
+                        <label for="email">email</label>
+                        <input type="text" name="email" id="email">
+                        <button type="button" class="btn btn--ghost btn--med btn--f-round pull-right">Apply</button>
+                    </form>
                 </div>
             </div>
         </div>
