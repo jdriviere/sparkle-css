@@ -533,7 +533,7 @@ body {
   font-family: 'Lato', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
-  -o-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
   font-smoothing: antialiased;
 }
 
@@ -588,25 +588,11 @@ p {
 /* TYPOGRAPHY - WEIGHT
 /* ===================================================*/
 
-h1.text--thin,
-h2.text--thin,
-h3.text--thin,
-h4.text--thin,
-h5.text--thin,
-h6.text--thin,
-p.text--thin,
-p>span.text--thin {
+.text--thin {
   font-weight: 300;
 }
 
-h1.text--thick,
-h2.text--thick,
-h3.text--thick,
-h4.text--thick,
-h5.text--thick,
-h6.text--thick,
-p.text--thick,
-p>span.text--thick {
+.text--thick {
   font-weight: 700;
 }
 
@@ -632,43 +618,19 @@ p.text--big {
 /* TYPOGRAPHY - PLACEMENTS
 /* ===================================================*/
 
-h1.text--left,
-h2.text--left,
-h3.text--left,
-h4.text--left,
-h5.text--left,
-h6.text--left,
-p.text--left {
+.text--left {
   text-align: left;
 }
 
-h1.text--right,
-h2.text--right,
-h3.text--right,
-h4.text--right,
-h5.text--right,
-h6.text--right,
-p.text--right {
+.text--right {
   text-align: right;
 }
 
-h1.text--center,
-h2.text--center,
-h3.text--center,
-h4.text--center,
-h5.text--center,
-h6.text--center,
-p.text--center {
+.text--center {
   text-align: center;
 }
 
-h1.text--justify,
-h2.text--justify,
-h3.text--justify,
-h4.text--justify,
-h5.text--justify,
-h6.text--justify,
-p.text--justify {
+.text--justify {
   text-align: justify;
 }
 
@@ -706,10 +668,6 @@ p.text--justify {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  -ms-align-items: flex-start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
 }
 
 .pull--right {
@@ -723,10 +681,6 @@ p.text--justify {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  -ms-align-items: flex-end;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: flex-end;
 }
 
 .pull--center {
@@ -740,10 +694,6 @@ p.text--justify {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -ms-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   text-align: center;
 }
 
@@ -1149,13 +1099,13 @@ p.text--justify {
 
 .alert {
   display: block;
-  width: 80%;
-  margin: 10px auto;
+  width: 100%;
+  margin: 0.625em 0;
   padding: 0.75em;
-  -webkit-box-shadow: 5 5 7 rgba(0, 0, 0, 0.7);
-  -moz-box-shadow: 5 5 7 rgba(0, 0, 0, 0.7);
-  -o-box-shadow: 5 5 7 rgba(0, 0, 0, 0.7);
-  box-shadow: 5 5 7 rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 5 5 7 rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 5 5 7 rgba(0, 0, 0, 0.5);
+  -ms-box-shadow: 5 5 7 rgba(0, 0, 0, 0.5);
+  box-shadow: 5 5 7 rgba(0, 0, 0, 0.5);
   border-radius: 0 5px 5px 0;
   z-index: 10;
 }
@@ -1174,7 +1124,7 @@ p.text--justify {
 }
 
 .alert__list {
-  margin-left: 15px;
+  margin-left: 0.9375em;
 }
 
 /* ===================================================*/
@@ -1222,12 +1172,7 @@ p.text--justify {
 /* BUTTON - GENERAL
 /* ===================================================*/
 
-.btn,
-a.btn,
-button,
-input[type=button],
-input[type=submit],
-input[type=reset] {
+.btn {
   cursor: pointer;
   border: none;
   outline: none;
@@ -1240,17 +1185,12 @@ input[type=reset] {
   transition: all 0.3s ease-in;
 }
 
-.btn:hover,
-a.btn:hover,
-button:hover,
-input[type=button]:hover,
-input[type=submit]:hover,
-input[type=reset]:hover {
+.btn:hover {
   -webkit-transform: scale(1.025);
   -moz-transform: scale(1.025);
   -ms-transform: scale(1.025);
   transform: scale(1.025);
-  box-shadow: 0 5px 7px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 7px rgba(0, 0, 0, 0.5);
   -webkit-transition: all 0.3s ease-in;
   -moz-transition: all 0.3s ease-in;
   -ms-tranition: all 0.3s ease-in;
@@ -1707,7 +1647,6 @@ select:required:focus {
   top: 15px;
   right: 15px;
   color: #DDD;
-  /*    font-family: FontAwesome;*/
   font-size: 20px;
   cursor: pointer;
 }
