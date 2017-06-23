@@ -1173,12 +1173,14 @@ p.text--big {
 /* ===================================================*/
 
 .btn {
+  display: inline-block;
+  width: auto;
   cursor: pointer;
   border: none;
   outline: none;
+  vertical-align: center;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   -webkit-transition: all 0.3s ease-in;
   -moz-transition: all 0.3s ease-in;
   -ms-tranition: all 0.3s ease-in;
