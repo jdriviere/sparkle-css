@@ -848,9 +848,12 @@ p.text--big {
   .nav__dropdown {
     position: absolute;
     top: 100%;
-    width: 100%;
+    right: 0;
+    width: 150px;
     border-radius: 0.5em !important;
     -webkit-box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+    -ms-box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
     box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
     z-index: 100;
   }
