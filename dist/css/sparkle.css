@@ -1762,7 +1762,7 @@ table {
 
 th,
 td {
-  padding: 8px;
+  padding: 0.5em;
   border: none;
   text-align: left;
 }
