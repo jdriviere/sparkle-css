@@ -3,7 +3,7 @@ images/new/*
 images/raw/*
 node_modules/*
 src/*
-Framework_Names.txt
+Plans.txt
 package-lock.json
 package.json
 gulpfile.js
