@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
 /*
 @author: J. Djimitry Riviere
-@version: 0.2.x
-@release: 06/16/2017
+@version: 0.2.5
+@release: 06/28/2017
 
 Welcome and thank you for using Sparkle, a lightweight CSS open source framework (coded in CSS and jQuery)
 to help you create simple, responsive website templates. It was developed by J. Djimitry Riviere
@@ -1561,7 +1561,7 @@ select {
 }
 
 textarea {
-  min-height: 7.2em;
+  min-height: 7.5em;
   resize: none;
   font-family: 'Lato', sans-serif;
 }
