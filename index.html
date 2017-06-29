@@ -21,13 +21,20 @@
 	<!-- LOADING LINKS -->
 	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="16x16" href="dist/img/favicon.ico">
-	<link rel="stylesheet" type="text/css" href="dist/css/sparkle.min.css">
+	<link rel="stylesheet" type="text/css" href="dist/css/sparkle-scss.min.css">
 
 	<!-- INTERNAL STYLING -->
 	<style>
         .container { padding: 2em 0; }
 
-        .banner { background-color: #F1F1F1; }
+        .banner {
+            width: 100%;
+            height: 100vh;
+            background-image: url('src/img/space_img.jpg');
+            background-position: center center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
 
         .feature { background-color: #333; color: #EEE; }
         .feature__title { color: #39D; }
@@ -58,7 +65,7 @@
            This section provides a reference as to how the navigation features should
            be laid out for full functionality.
         -->
-		<nav class="nav nav--default">
+		<nav class="nav nav--dark">
 			<div class="nav__brand">
 				<a href="index.html">
 				    <!--<img src="dist/img/Sparkle_Logo.png" alt="Sparkle_Logo" class="nav__brand__image">-->
@@ -87,7 +94,7 @@
 
 	<section class="banner">
         <div class="container">
-            <h1 class="text--center">Coming Soon...</h1>
+            <h1 class="text--center">SPARKLE</h1>
         </div>
     </section>
 
@@ -105,7 +112,7 @@
 
 	<section class="feature">
         <div class="container">
-            <h2>Sparkle is...</h2>
+            <h2 class="text--center">Sparkle is...</h2>
             <div class="row">
     			<div class="col">
     				<h4 class="feature__title">Semantics</h4>
@@ -118,8 +125,8 @@
     			</div>
 
     			<div class="col">
-    				<h4 class="feature__title">Mobile-First</h4>
-    				<p class="feature__desc text--small">Sparkle was created to be responsive throughout all devices.</p>
+    				<h4 class="feature__title">Responsive</h4>
+    				<p class="feature__desc text--small">Sparkle was created to be responsive throughout all devices, using a mobile-first approach.</p>
     			</div>
 
                 <div class="col">
@@ -160,7 +167,7 @@
 
                         <label for="email">email</label>
                         <input type="text" name="email" id="email">
-                        <button type="button" class="btn btn--ghost btn--med btn--f-round pull-right">Apply</button>
+                        <button type="button" class="btn btn--light btn--med btn--f-round pull-right">Apply</button>
                     </form>
                 </div>
             </div>
@@ -171,7 +178,7 @@
         <div class="row">
             <div class="credit col-1-of-1">
                 Designed with <span><i class="fa fa-heart"></i></span> by <a href="https://jdriviere.github.io">J. D. Riviere</a>
-                using Sparkle &copy; 2017
+                using <a href="https://github.com/jdriviere/sparkle-css">Sparkle</a> &copy; 2017
             </div>
         </div>
     </footer>
