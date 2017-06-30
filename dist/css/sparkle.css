@@ -627,7 +627,7 @@ p.text--big {
 
 .btn--default--outline:hover {
   background-color: #ECF0F1;
-  color: #95A5A6;
+  color: #95A5A6 !important;
 }
 
 .btn--primary {
@@ -648,7 +648,7 @@ p.text--big {
 
 .btn--primary--outline:hover {
   background-color: #3498DB;
-  color: #FFF;
+  color: #FFF !important;
 }
 
 .btn--success {
@@ -669,7 +669,7 @@ p.text--big {
 
 .btn--success--outline:hover {
   background-color: #2ECC71;
-  color: #FFF;
+  color: #FFF !important;
 }
 
 .btn--warning {
@@ -690,7 +690,7 @@ p.text--big {
 
 .btn--warning--outline:hover {
   background-color: #FFCE54;
-  color: #FFF;
+  color: #FFF !important;
 }
 
 .btn--danger {
@@ -711,7 +711,7 @@ p.text--big {
 
 .btn--danger--outline:hover {
   background-color: #E74C3C;
-  color: #FFF;
+  color: #FFF !important;
 }
 
 .btn--light {
@@ -732,7 +732,7 @@ p.text--big {
 
 .btn--light--outline:hover {
   background-color: #E1E1E1;
-  color: #333;
+  color: #333 !important;
 }
 
 .btn--dark {
@@ -753,7 +753,7 @@ p.text--big {
 
 .btn--dark--outline:hover {
   background-color: #333;
-  color: #FFF;
+  color: #FFF !important;
 }
 
 .btn--sml {
