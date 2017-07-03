@@ -269,7 +269,7 @@ input[type="checkbox"], input[type="radio"] {
 body {
   height: 100%;
   font-weight: 300;
-  color: #333;
+  color: #333333;
 }
 
 /* ===================================================*/
@@ -277,7 +277,7 @@ body {
 /* ===================================================*/
 body {
   font-size: 100%;
-  font-family: Lato, sans-serif;
+  font-family: "Lato", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
   -ms-font-smoothing: antialiased;
@@ -736,7 +736,7 @@ p.text--big {
 }
 
 .btn--dark {
-  background-color: #333;
+  background-color: #333333;
   color: #FFF !important;
 }
 
@@ -746,13 +746,13 @@ p.text--big {
 
 .btn--dark--outline {
   background-color: transparent;
-  color: #333 !important;
-  border: 2px solid #333;
+  color: #333333 !important;
+  border: 2px solid #333333;
   font-weight: 700;
 }
 
 .btn--dark--outline:hover {
-  background-color: #333;
+  background-color: #333333;
   color: #FFF !important;
 }
 
@@ -829,7 +829,7 @@ select {
   outline: 0;
   background: none;
   border: none;
-  border-bottom: 1px solid #DDD;
+  border-bottom: 1px solid #FCFCFC;
   -webkit-box-shadow: 0 0 0 transparent;
   -moz-box-shadow: 0 0 0 transparent;
   -ms-box-shadow: 0 0 0 transparent;
@@ -859,7 +859,7 @@ textarea:focus,
 textarea.input--active,
 select:focus,
 select.input--active {
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #333333;
   -webkit-transition: all 0.2s ease-in;
   -moz-transition: all 0.2s ease-in;
   -ms-tranition: all 0.2s ease-in;
@@ -941,8 +941,8 @@ textarea:required:focus,
 textarea:invalid:focus,
 select:required:focus,
 select:invalid:focus {
-  border-bottom: 1px solid #333;
-  color: #333;
+  border-bottom: 1px solid #333333;
+  color: #333333;
   -webkit-transition: all 0.2s ease-in;
   -moz-transition: all 0.2s ease-in;
   -ms-tranition: all 0.2s ease-in;
@@ -952,25 +952,25 @@ select:invalid:focus {
 textarea {
   min-height: 7.5em;
   resize: none;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 ::-webkit-input-placeholder {
-  color: #CCC;
+  color: #C0C0C0;
 }
 
 ::-moz-placeholder {
-  color: #CCC;
+  color: #C0C0C0;
   opacity: 1;
 }
 
 :-moz-placeholder {
-  color: #CCC;
+  color: #C0C0C0;
   opacity: 1;
 }
 
 :-ms-textarea-placeholder {
-  color: #CCC;
+  color: #C0C0C0;
 }
 
 /* ===================================================*/
@@ -1131,9 +1131,9 @@ textarea {
   max-width: 43.75em;
   margin: 1.25em auto;
   padding: 0.75em;
-  background-color: #FFF;
+  background-color: #F9FAFC;
   border-radius: 5px;
-  border: 1px solid #DDD;
+  border: 1px solid #C0C0C0;
   -webkit-box-shadow: 1 5 7 rgba(0, 0, 0, 0.7);
   -moz-box-shadow: 1 5 7 rgba(0, 0, 0, 0.7);
   -ms-box-shadow: 1 5 7 rgba(0, 0, 0, 0.7);
@@ -1150,7 +1150,7 @@ textarea {
   font-weight: 300;
   font-size: 0.875em;
   line-height: 1.5em;
-  color: #777;
+  color: #7F7F7F;
 }
 
 .modal__close {
@@ -1158,13 +1158,13 @@ textarea {
   display: block;
   top: 15px;
   right: 15px;
-  color: #DDD;
+  color: #C0C0C0;
   font-size: 1.25em;
   cursor: pointer;
 }
 
 .modal__close:hover, .modal__close:focus {
-  color: #777;
+  color: #7F7F7F;
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
   -ms-transform: scale(1.1);
@@ -1300,7 +1300,7 @@ textarea {
 }
 
 .nav--dark {
-  background-color: #333;
+  background-color: #333333;
   border-bottom: 1px solid #222;
 }
 
@@ -1318,7 +1318,7 @@ textarea {
 .nav--dark .nav__brand a:hover,
 .nav--dark .nav__menu__icon:hover,
 .nav--dark .nav__menu__item a:hover {
-  color: #FFF;
+  color: #F9FAFC;
 }
 
 .nav--dark .nav__dropdown__item {
@@ -1411,7 +1411,7 @@ table {
   white-space: nowrap;
   color: #777;
   overflow-x: auto;
-  background-color: #FFF;
+  background-color: #F9FAFC;
 }
 
 th, td {
@@ -1423,7 +1423,7 @@ th, td {
 th {
   font-size: 1em;
   font-weight: 800;
-  color: #333;
+  color: #333333;
 }
 
 td {
@@ -1484,7 +1484,7 @@ td {
 .thumbnail {
   width: 100%;
   padding: 5px;
-  border: 1px solid #DDD;
+  border: 1px solid #C0C0C0;
   border-radius: 5px;
   overflow: hidden;
 }
@@ -1518,7 +1518,7 @@ td {
 .thumbnail__caption {
   padding: 0.5em;
   font-size: 0.9375em;
-  color: #777;
+  color: #7F7F7F;
 }
 
 /* ========== SPARKLE.CSS ENDS HERE ========== */
