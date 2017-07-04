@@ -4,5 +4,6 @@ node_js:
   - "7"
   - "6"
 before_script:
+  - npm install -g gulp-cli
   - npm install gulp
 script: gulp
