@@ -2,9 +2,8 @@ images/old/*
 images/new/*
 images/raw/*
 node_modules/*
-src/*
+src/css/*
 Plans.txt
 package-lock.json
 package.json
-gulpfile.js
 oldcode.txt

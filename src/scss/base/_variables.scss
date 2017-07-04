@@ -1,0 +1,137 @@
+// ================================
+// GENERAL - UI COLORS
+// ================================
+$color-default:				#ECF0F1 !default; // Yields an off-grey color
+$color-success:				#2ECC71 !default; // Yields a emerald-green color
+$color-warning:				#FFCE54 !default; // Yields a yellowish-gold color
+$color-danger:				#E74C3C !default; // Yields a darkish-red color
+$color-primary:				#3498DB !default; // Yields a skyish-blue color
+$color-light:				#E1E1E1 !default; // Yields an off-white color
+$color-dark:				#333333 !default; // Yields an off-black color
+$color-white:				#F9FAFC !default; // Yields a white color
+$color-black:				#121314 !default; // Yields a black color
+$color-none:				transparent !default; // Yields a transparent color
+
+// ================================
+// GENERAL - GRAY TONES
+// ================================
+$color-grey-25:				#404040; // Yields a grey (25%)
+$color-grey-50:				#7F7F7F; // Yields a grey (50%)
+$color-grey-75:				#C0C0C0; // Yields a grey (75%)
+$color-grey-100:			#FCFCFC; // Yields a grey (100%)
+
+// =================================
+// GENERAL - DARKEN/LIGHTEN
+// =================================
+$lighten:					5% !default;
+$darken:					5% !default;
+
+// =================================
+// GENERAL - UI COLORS (On-Hover)
+// =================================
+$color-success-hover:		darken($color-success, $darken);
+$color-warning-hover:		darken($color-warning, $darken);
+$color-danger-hover:		darken($color-danger, $darken);
+$color-primary-hover:		darken($color-primary, $darken);
+$color-default-hover:		darken($color-default, $darken);
+$color-light-hover:			darken($color-light, $darken);
+$color-dark-hover:			darken($color-dark, $darken);
+
+// ================================
+// GENERAL - UI COLORS (Unavailable/Clicked)
+// =================================
+$color-success-invalid:		lighten($color-success, $lighten);
+$color-warning-invalid:		lighten($color-warning, $lighten);
+$color-danger-invalid:		lighten($color-danger, $lighten);
+$color-primary-invalid:		lighten($color-primary, $lighten);
+$color-default-invalid:		lighten($color-default, $lighten);
+$color-light-invalid:		lighten($color-light, $lighten);
+$color-dark-invalid:		lighten($color-dark, $lighten);
+
+// =================================
+// GENERAL - SCREEN BREAKPOINTS
+// =================================
+$bp-xsm:					20em;
+$bp-sml:					30em;
+$bp-med:					40em;
+$bp-lrg:					48em;
+$bp-xlg:					75em;
+
+// =================================
+// GENERAL - PRIORITIES
+// =================================
+$index-lowest:				-9999;
+$index-lower: 				-10;
+$index-low: 				-5;
+$index-below: 				-1;
+$index-neutral:				0;
+$index-normal:				1;
+$index-high:				5;
+$index-higher:				10;
+$index-highest:				9999;
+
+// =================================
+// GENERAL - FONTS
+// =================================
+$font-family-default:		"Lato", sans-serif;
+$font-family-secondary:		"Helvetica Neue", Helvetica, "Open Sans", Arial, sans-serif;
+$font-special:				"FontAwesome";
+$font-size:					1em !default;
+$font-weight-light:			300;
+$font-weight-normal:		400;
+$font-weight-heavy:			700;
+$font-weight-black:			800;
+
+// =================================
+// GRID VARIABLES
+// =================================
+$grid-name:					"col" !default; // Default name of grid columns.
+$grid-columns:				12 !default; // Default columns is 12. Can be changed to 16, if desired.
+$grid-gutter:				0.75em !default; // Default gutter is 12px. Can be changed to 20, if desired.
+
+// =================================
+// BUTTON VARIABLES
+// =================================
+$btn-color-maps: (
+    default:				($color-default, #95A5A6),
+    primary:				($color-primary, #FFF),
+    success:				($color-success, #FFF),
+    warning:				($color-warning, #FFF),
+    danger:					($color-danger, #FFF),
+    light:					($color-light, #333),
+    dark:					($color-dark, #FFF)
+);
+
+// =================================
+// ALERTS VARIABLES
+// =================================
+$alert-bg-default:			#EFEFEF;
+$alert-bg-success:			#C8F7C5;
+$alert-bg-warning:			#FDFD96;
+$alert-bg-danger:			#F1A9A0;
+$alert-bg-info:				#CCDBEC;
+$alert-border-default:		#7F8C8D;
+$alert-border-success:		#27AE60;
+$alert-border-warning:		#F39C12;
+$alert-border-danger:		#C0392B;
+$alert-border-info:			#2980B9;
+$alert-font-default:		#7F8C8D;
+$alert-font-success:		#27AE60;
+$alert-font-warning:		#F39C12;
+$alert-font-danger:			#C0392B;
+$alert-font-info:			#2980B9;
+$alert-font-size:			0.875em;
+
+// =================================
+// INPUT VARIABLES
+// =================================
+$inputs:					"input[type='text'],
+							input[type='email'],
+							input[type='number'],
+							input[type='password'],
+							input[type='search'],
+							input[type='tel'],
+							input[type='text'],
+							input[type='url'],
+							textarea,
+							select";

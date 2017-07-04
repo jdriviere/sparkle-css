@@ -1,0 +1,39 @@
+/* ===================================================*/
+/* THUMBNAILS
+/* ===================================================*/
+@import "../base/_variables";
+@import "../base/_mixins";
+
+.thumbnail {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid $color-grey-75;
+    @include border-radius;
+    overflow: hidden;
+
+    .has-shadow {
+        @include box-shadow(0, 3, 15, 0.5);
+    }
+
+    &__img {
+        width: 100%;
+
+        .is-square {
+            @include border-radius;
+            overflow: hidden;
+        }
+        .is-rounded {
+            @include border-radius(15px);
+            overflow: hidden;
+        }
+        .is-circle {
+            @include border-radius(50%);
+            overflow: hidden;
+        }
+    }
+    &__caption {
+        padding: 0.5em;
+        font-size: 0.9375em;
+        color: $color-grey-50;
+    }
+}

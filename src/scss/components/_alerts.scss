@@ -1,0 +1,31 @@
+/* ===================================================*/
+/* ALERTS
+/* ===================================================*/
+@import "../base/_variables";
+@import "../base/_mixins";
+
+@mixin alert($bg: $alert-bg-default, $font: $alert-font-default, $border: $alert-border-default) {
+    background-color: $bg;
+    color: $font;
+    border: 1px solid $border;
+    border-left: 5px solid $border;
+} // End of Alert
+
+.alert {
+    display: block;
+    width: 100%;
+    padding: 0.75em;
+    @include box-shadow(5, 5, 7, 0.7);
+    @include border-radius-cust(0, 5, 5, 0);
+    z-index: $index-high;
+
+    &__title { font-weight: $font-weight-heavy; }
+    &__desc { font-size: $alert-font-size; }
+    &__list { margin-left: 0.9375em; }
+
+    &--default { @include alert; }
+    &--info { @include alert($alert-bg-info, $alert-font-info, $alert-border-info); }
+    &--success { @include alert($alert-bg-success, $alert-font-success, $alert-border-success); }
+    &--warning { @include alert($alert-bg-warning, $alert-font-warning, $alert-border-warning); }
+    &--danger { @include alert($alert-bg-danger, $alert-font-danger, $alert-border-danger); }
+}

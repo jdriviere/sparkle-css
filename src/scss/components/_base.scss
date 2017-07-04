@@ -1,0 +1,23 @@
+/* ===================================================*/
+/* BASE (CORE)
+/* ===================================================*/
+@import "../base/_variables";
+@import "../base/_mixins";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    text-rendering: optimizeLegibility;
+    @include box-sizing;
+    
+    &:before,
+    &:after {
+        @extend *;
+    }
+}
+body {
+	height: 100%;
+	font-weight: $font-weight-light;
+	color: $color-dark;
+}
