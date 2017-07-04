@@ -3,6 +3,7 @@ images/new/*
 images/raw/*
 node_modules/*
 src/css/*
+src/img/*
 Plans.txt
 package-lock.json
 package.json
