@@ -1,0 +1,17 @@
+@mixin reset {
+    margin: 0;
+    padding: 0;
+} // End of Reset
+
+@mixin clear {
+    display: inline-block;
+
+    &:after {
+        visibility: hidden;
+    	display: block;
+    	font-size: 0;
+    	content: "";
+    	clear: both;
+    	height: 0;
+    }
+} // End of Clear

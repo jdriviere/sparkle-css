@@ -1,0 +1,81 @@
+/* ===================================================*/
+/* TABLES
+/* ===================================================*/
+@import "../base/_variables";
+@import "../base/_mixins";
+
+// MIXINS
+@mixin createTable {
+	width: 100%;
+    max-width: 100%;
+    margin: 15px 0;
+    vertical-align: middle;
+    border-collapse: collapse;
+    white-space: nowrap;
+    color: #777;
+    overflow-x: auto;
+    background-color: $color-white;
+}
+
+// TABLES
+table {
+	@include createTable;
+}
+th, td {
+	padding: 0.5em;
+	border: none;
+	text-align: left;
+}
+th {
+	font-size: 1em;
+	font-weight: $font-weight-black;
+	color: $color-dark;
+}
+td {
+	font-size: .875em;
+	font-weight: $font-weight-light;
+	color: #555;
+}
+
+// STYLES
+.tbl {
+	&--default {
+		th { border: none; border-bottom: 2px solid #DDD; }
+		td { border: none; }
+		tr {
+			border-bottom: 1px solid #DDD;
+			
+			&:last-child { border: none; }
+		}
+	}
+	
+	&--striped {
+		tr:nth-child(even) { background-color: #EEE; }
+	}
+	
+	&--hover {
+		tr:hover { background-color: #EEE; }
+	}
+	
+	// THEMES
+	&--light th {
+		background-color: #F5F7FA;
+		border: none;
+		color: #AAB2BD;
+	}
+	&--dark th {
+		background-color: #434A5A;
+		border: none;
+		color: #F5F7FA;
+	}
+	
+	// RESPONSIVE
+	@media only screen and (max-width: 48em) {
+		&--responsive {
+			display: block;
+			width: 100%;
+			max-width: 100%;
+			overflow-x: auto;
+		}
+	}
+}

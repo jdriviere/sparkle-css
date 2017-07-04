@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <!-- TITLE -->
+    <title>Test Page | Sparkle</title>
+
+	<!-- LOADING META CODES -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="J. Djimitry Riviere">
+	<meta name="description" content="Sparkle.CSS: a lightweight, responsive, mobile-first CSS framework for easy website designs.">
+	<meta name="keywords" content="HTML, HTML5, CSS, CSS3, CSS Framework, JavaScript, JS, sparkle, Sparkle, sparkle-css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- LOADING SCRIPTS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/a833db4ecd.js"></script>
+    <script src="dist/js/sparkle.min.js"></script>
+
+	<!-- LOADING LINKS -->
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="dist/img/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="dist/css/sparkle.min.css">
+
+	<!-- INTERNAL STYLING -->
+	<style>
+        .container { padding: 2em 0; }
+
+        .banner {
+            width: 100%;
+            height: 100vh;
+            background-image: url('dist/img/space_img.jpg');
+            background-position: center center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .feature { background-color: #333; color: #EEE; }
+        .feature__title { color: #39D; }
+        .feature__desc { margin-bottom: 10px; }
+
+        .btn { margin: 20px 10px; }
+
+        .banner h1, .documentation h1 { font-weight: 300; color: #DDD; }
+
+        .pre-footer { background-color: #39D; color: #FFF; }
+        .pre-footer ul { list-style: none; }
+        .pre-footer i { color: #333; }
+        .pre-footer i:hover { color: #FFF; }
+
+        footer { background-color: #333; color: #FFF; }
+        footer i { color: #C03; }
+        footer a { text-decoration: none; color: #39D; }
+        .credit { text-align: center; }
+        @media only screen and (min-width: 40em) {
+            .container { padding: 3.75em 0; }
+        }
+    </style>
+</head>
+
+<body>
+	<header>
+        <!--
+           This section provides a reference as to how the navigation features should
+           be laid out for full functionality.
+        -->
+		<nav class="nav nav--dark">
+			<div class="nav__brand">
+				<a href="index.html">
+				    <!--<img src="dist/img/Sparkle_Logo.png" alt="Sparkle_Logo" class="nav__brand__image">-->
+                    <h3 class="nav__brand">Sparkle</h3>
+				</a>
+			</div>
+			<div id="nav__mobile" class="nav__menu__icon">Menu</div>
+
+			<ul class="nav__menu">
+				<li class="nav__menu__item"><a href="index.html">Home</a></li>
+				<li class="nav__menu__item"><a href="#">Documentation</a>
+					<ul class="nav__dropdown">
+						<li class="nav__dropdown__item"><a href="#">Coming soon...</a></li>
+					</ul>
+				</li>
+				<li class="nav__menu__item"><a href="#">About</a></li>
+                <li class="nav__menu__item"><a href="#">Download</a>
+                    <ul class="nav__dropdown">
+                        <li class="nav__dropdown__item"><a href="https://github.com/jdriviere/sparkle-css.git">Fork from Github</a></li>
+                        <li class="nav__dropdown__item">
+                            <a href="https://github.com/jdriviere/sparkle-css/archive/v1.0.0.zip">Download</a>
+                        </li>
+                    </ul>
+                </li>
+			</ul>
+		</nav>
+	</header>
+
+	<section class="banner">
+        <div class="container centralize-alt">
+            <h1 class="text--center">SPARKLE</h1>
+            <div class="pull--center-alt">
+                <a href="https://github.com/jdriviere/sparkle-css/archive/v1.0.0.zip" class="btn btn--light--outline btn--lrg btn--f-round">
+                    <i class="fa fa-download"></i> Download v1.0.0
+                </a>
+                <a href="https://github.com/jdriviere/sparkle-css.git" class="btn btn--primary btn--lrg btn--f-round">
+                    <i class="fa fa-github"></i> Github
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <p class="text--center">
+            Welcome and thank you for using <span class="text--thick">Sparkle</span>, a lightweight CSS
+            open source framework to help you create simple, responsive website templates.
+            It was developed by <span class="text--thick">J. Djimitry Riviere</span> in late 2016,
+			and continues to be improved upon by its developer. The major key to this framework
+			lies within its ease of us to deliver superb results when designing apps and websites. Not only that,
+			it is and will always remain FREE to use; though in exchange, providing feedback and help
+			find ways to improve the framework further would be appreciated.
+        </p>
+    </section>
+
+	<section class="feature">
+        <div class="container">
+            <h2 class="text--center">Sparkle is...</h2>
+            <div class="row">
+    			<div class="col">
+    				<h4 class="feature__title">Semantic</h4>
+    				<p class="feature__desc text--small">Sparkle uses BEM to keep the framework structured and simple for all to understand and use.</p>
+    			</div>
+
+    			<div class="col">
+    				<h4 class="feature__title">User-Friendly</h4>
+    				<p class="feature__desc text--small">Sparkle does most of the hard work for you. Simply style your elements.</p>
+    			</div>
+
+    			<div class="col">
+    				<h4 class="feature__title">Responsive</h4>
+    				<p class="feature__desc text--small">Sparkle was created to be responsive throughout all devices, using a mobile-first approach.</p>
+    			</div>
+
+                <div class="col">
+    				<h4 class="feature__title">Lightweight</h4>
+    				<p class="feature__desc text--small">Sparkle is smaller than 20kb, which means it won't slow down your website loading.</p>
+    			</div>
+    		</div>
+        </div>
+	</section>
+
+    <section class="container documentation">
+        <h1 class="text--center">Coming Soon...</h1>
+    </section>
+
+    <section class="pre-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h4>Want to Get to Know Us?</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque quibusdam dolorum quidem, assumenda impedit nostrum dolor. Voluptas delectus, error optio?
+                    </p>
+                </div>
+
+                <div class="col">
+                    <h4>Want to Contribute?</h4>
+                    <p>
+                        Contributors are welcome, but be sure to read the guidelines before
+                        forking and pulling requests.
+                    </p>
+                </div>
+
+                <div class="col">
+                    <h4>Want to Hear from Us?</h4>
+                    <form>
+                        <label for="name">name</label>
+                        <input type="text" name="name" id="name">
+
+                        <label for="email">email</label>
+                        <input type="text" name="email" id="email">
+                        <button type="button" class="btn btn--light btn--med btn--f-round pull-right">Apply</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="row">
+            <div class="credit col-1-of-1">
+                Designed with <span><i class="fa fa-heart"></i></span> by <a href="https://jdriviere.github.io">J. D. Riviere</a>
+                using <a href="https://github.com/jdriviere/sparkle-css">Sparkle</a> &copy; 2017
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
