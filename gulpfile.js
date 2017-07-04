@@ -61,4 +61,5 @@ gulp.task('minimg', function() {
         .pipe(gulp.dest('dist/img/'));
 });
 
-gulp.task('default', ['build', 'minify', 'sassify', 'uglify', 'minimg']);
+// gulp.task('default', ['build', 'minify', 'sassify', 'uglify', 'minimg']);
+gulp.task('default', ['sassify', 'uglify', 'minimg']);
