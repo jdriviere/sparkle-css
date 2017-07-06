@@ -1,4 +1,4 @@
-# [![Sparkle](dist/img/Logo_inColor.png)](https://jdriviere.github.io/sparkle-css)
+# [![Sparkle](dist/img/Logo_inColor_side.png)](https://jdriviere.github.io/sparkle-css)
 A lightweight, responsive, mobile-first CSS framework for easy website designs.
 
 ## Quick install
