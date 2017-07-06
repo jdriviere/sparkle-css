@@ -11,6 +11,7 @@ var pump = require('pump');
 var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
 var imageminPng = require('imagemin-optipng');
+var imageminJPG = require('imagemin-jpegtran');
 var sass = require('gulp-sass');
 
 /* ==================================== */
@@ -56,6 +57,7 @@ gulp.task('uglify', function(cb) {
 gulp.task('minimg', function() {
     return gulp.src('src/img/*.*')
         .pipe(imagemin(
+            imagemin.jpegtran({ progressive: true }),
             imagemin.optipng({ optimizationLevel: 5 })
         ))
         .pipe(gulp.dest('dist/img/'));
