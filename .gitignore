@@ -4,6 +4,7 @@ images/raw/*
 node_modules/*
 src/css/*
 src/img/*
+sparkle-animation.html
 Plans.txt
 package-lock.json
 package.json
