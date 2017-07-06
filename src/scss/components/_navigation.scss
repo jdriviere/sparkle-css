@@ -42,6 +42,7 @@ $nav-color-dark-darker: #222;
 .nav {
 	@include displayFlex;
     @include navCollapse;
+	padding: 0 0.75em;
     z-index: $index-high;
 	
 	&__brand {
@@ -75,6 +76,7 @@ $nav-color-dark-darker: #222;
 		&__item {
 			position: relative;
 			@include flexSize(1);
+			padding: 0.5em;
 			font-size: 1.25em;
 			
 			&:last-child { border: none; }
