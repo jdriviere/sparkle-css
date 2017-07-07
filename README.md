@@ -1,4 +1,4 @@
-# [![Sparkle](dist/img/Logo_InColor_side.png)](https://jdriviere.github.io/sparkle-css)
+[![Logo](dist/img/Logo_InColor_side.png)](https://jdriviere.github.io/sparkle-css)
 A lightweight, responsive, mobile-first CSS framework for easy website designs.
 
 [![license](https://img.shields.io/badge/license-MIT-yellow.svg)](https://github.com/jdriviere/sparkle-css/blob/master/LICENSE)
@@ -8,7 +8,10 @@ A lightweight, responsive, mobile-first CSS framework for easy website designs.
 ## Getting Started
 You can fork Sparkle on your machine, or you can download the .ZIP file.
 
-Or you can click [here](http://gitcdn.link/repo/jdriviere/sparkle-css/master/dist/css/sparkle.min.css) to always download the latest release of Sparkle.
+Or you can link the latest release of Sparkle directly on your html file, in the <head> section:
+```html
+<link rel="stylesheet" href="http://gitcdn.link/repo/jdriviere/sparkle-css/master/dist/css/sparkle.min.css" />
+```
 
 ## Documentation
 Coming soon...
