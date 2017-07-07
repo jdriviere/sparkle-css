@@ -10,12 +10,16 @@ A lightweight, responsive, mobile-first CSS framework for easy website designs.
 Welcome and thank you for using Sparkle, a lightweight, responsive, open-source CSS framework created to help Web Designers and Developers create simple, responsive websites. It was developed by J. Djimitry Riviere in late 2016, and continues to be improved upon by its developer. The major key to this framework lies within its ease of use to deliver superb results when designing apps and websites.
 
 ## Getting Started
-There are 3 ways to get started with the Sparkle framework:
+There are 4 ways to get started with the Sparkle framework:
 1. Fork your own copy. (P.S.: If you wish to contribute to this project, be sure to read description below);
 2. Download the .ZIP file directly into your machine;
 3. Being hosted in an Open-Source CDN, you can link the latest release directly into your HTML file, in the "head" section: 
 ```html
 <link rel="stylesheet" href="https://gitcdn.link/repo/jdriviere/sparkle-css/master/dist/css/sparkle.min.css" />
+```
+4. You can use the following command to install it in your local machine:
+```
+npm install sparkle.css
 ```
 
 ## Documentation
