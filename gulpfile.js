@@ -10,7 +10,7 @@ var rename = require('gulp-rename');
 var pump = require('pump');
 var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
-var imageminPng = require('imagemin-optipng');
+var imageminPNG = require('imagemin-optipng');
 var imageminJPG = require('imagemin-jpegtran');
 var sass = require('gulp-sass');
 
