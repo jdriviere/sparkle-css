@@ -3,7 +3,7 @@ A lightweight, responsive, mobile-first CSS framework for easy website designs.
 
 [![license](https://img.shields.io/badge/license-MIT-yellow.svg)](https://github.com/jdriviere/sparkle-css/blob/master/LICENSE)
 [![website](https://img.shields.io/badge/website-online-green.svg)](https://jdriviere.github.io/sparkle-css/)
-[![GitHub tag](https://img.shields.io/github/tag/expressjs/express.svg)](https://github.com/jdriviere/sparkle-css/releases/tag/v1.1.1)
+[![GitHub tag](https://img.shields.io/badge/version-v1.1.1-blue.svg)](https://github.com/jdriviere/sparkle-css/releases/tag/v1.1.1)
 
 ## Quick install
 You can download Sparkle by forking it on your machine, or you can download the .ZIP file.
