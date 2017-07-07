@@ -1,0 +1,10 @@
+node_modules/*
+src/css/*
+src/img/*
+dist/img/*
+index.html
+sparkle-animation.html
+Plans.txt
+package-lock.json
+oldcode.txt
+npm-debug.log
