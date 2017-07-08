@@ -44,7 +44,14 @@
         -moz-transform: scale($value);
             -ms-transform: scale($value);
 	            transform: scale($value);
-} // End of Transform
+} // End of Scale-Uniform
+
+@mixin rotate-uniform($value) {
+    -webkit-transform: rotate($value);
+        -moz-transform: rotate($value);
+            -ms-transform: rotate($value);
+	            transform: rotate($value);
+} // End of Rotate-Uniform
 
 @mixin disable-select {
     -webkit-user-select: none;
