@@ -1,0 +1,22 @@
+/* ===================================================*/
+/* ANIMATIONS
+/* ===================================================*/
+@import "../base/_variables";
+@import "../base/_mixins";
+
+// ANIMATIONS
+.animate--pulse { animation: pulse 1s ease-in infinite; }
+.animate--load { animation: load 1s linear infinite; }
+
+// KEYFRAMES
+@keyframes pulse {
+    0% { @include scale-uniform(1.0); }
+    20% { @include scale-uniform(0.9); }
+    60% { @include scale-uniform(1.1); }
+    100% { @include scale-uniform(1.0); }
+}
+
+@keyframes load {
+    0% { @include rotate-uniform(0deg); }
+    100% { @include rotate-uniform(359deg); }
+}
