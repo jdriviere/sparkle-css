@@ -3,8 +3,8 @@ A lightweight, responsive, mobile-first CSS framework for easy website designs.
 
 [![license](https://img.shields.io/badge/license-MIT-yellow.svg)](https://github.com/jdriviere/sparkle-css/blob/master/LICENSE)
 [![website](https://img.shields.io/badge/website-online-green.svg)](https://jdriviere.github.io/sparkle-css/)
-[![GitHub tag](https://img.shields.io/badge/version-1.1.6-blue.svg)](https://github.com/jdriviere/sparkle-css/releases/tag/v1.1.6)
-[![npm](https://img.shields.io/badge/npm-v1.1.6-red.svg)](https://www.npmjs.com/package/sparkle.css)
+[![GitHub tag](https://img.shields.io/badge/version-1.1.7-blue.svg)](https://github.com/jdriviere/sparkle-css/releases/tag/v1.1.7)
+[![npm](https://img.shields.io/badge/npm-v1.1.7-red.svg)](https://www.npmjs.com/package/sparkle.css)
 
 ## Introduction
 Welcome and thank you for using Sparkle, a lightweight, responsive, open-source CSS framework created to help Web Designers and Developers create simple, responsive websites. It was developed by J. Djimitry Riviere in late 2016, and continues to be improved upon by its developer. The major key to this framework lies within its ease of use to deliver superb results when designing apps and websites.

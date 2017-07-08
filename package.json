@@ -8,13 +8,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jdriviere/S3CSS.git"
+    "url": "git+https://github.com/jdriviere/sparkle-css.git"
   },
   "author": "J. Djimitry Riviere",
   "email": "tilithar@gmail.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jdriviere/S3CSS/issues"
+    "url": "https://github.com/jdriviere/sparkle-css/issues"
   },
   "homepage": "https://jdriviere.github.io/sparkle-css",
   "devDependencies": {
