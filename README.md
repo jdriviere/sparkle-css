@@ -15,7 +15,7 @@ There are 4 ways to get started with the Sparkle framework:
 2. Download the .ZIP file;
 3. Link the latest release directly into your HTML file, in the "head" section: 
 ```html
-<link rel="stylesheet" href="https://gitcdn.link/repo/jdriviere/sparkle-css/master/dist/css/sparkle.min.css" />
+<link rel="stylesheet" href="https://gitcdn.link/repo/jdriviere/sparkle-css/master/dist/css/sparkle.min.css">
 ```
 4. Download the Node Package Manager (NPM) into your folder:
 ```
