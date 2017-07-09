@@ -1,7 +1,6 @@
 .git/*
 node_modules/*
-src/css/*
-src/img/*
+src/*
 dist/img/*
 index.html
 sparkle-animation.html
