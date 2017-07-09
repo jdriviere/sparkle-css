@@ -53,7 +53,7 @@ $nav-color-dark-darker: #222;
 			max-height: 2em;
 
 			// In case the logo is SVG, add this class
-			&.logo_is-SVG { max-height: 2em; }
+			&.logo--is-SVG { max-height: 2em; }
 		}
 	}
 	
