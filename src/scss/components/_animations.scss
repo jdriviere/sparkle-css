@@ -7,6 +7,8 @@
 // ANIMATIONS
 .animate--pulse { animation: pulse 1s ease-in infinite; }
 .animate--load { animation: load 1s linear infinite; }
+.animate--fade-in { animation: fade-in 1s ease-in; }
+.animate--fade-out { animation: fade-out 1s ease-out; }
 
 // KEYFRAMES
 @keyframes pulse {
@@ -19,4 +21,22 @@
 @keyframes load {
     0% { @include rotate-uniform(0deg); }
     100% { @include rotate-uniform(359deg); }
+}
+
+@keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes slide-in {
+    0% { opacity: 0; top: -9999; }
+    100% { opacity: 1; top: 0; }
+}
+@keyframes appear {
+    0% { opacity: 0; @include scale-uniform(0.0); }
+    100% { opacity: 1; @include scale-uniform(1.0); }
+}
+
+@keyframes fade-out {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
 }
