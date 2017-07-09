@@ -49,7 +49,12 @@ $nav-color-dark-darker: #222;
 		font-size: 1.5em;
 		text-align: center;
 		
-		&__image { max-height: 2em; }
+		&__image {
+			max-height: 2em;
+
+			// In case the logo is SVG, add this class
+			&.logo_is-SVG { max-height: 2em; }
+		}
 	}
 	
 	&__menu__icon {

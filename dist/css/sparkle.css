@@ -1200,6 +1200,10 @@ textarea {
   max-height: 2em;
 }
 
+.nav__brand__image.logo_is-SVG {
+  max-height: 2em;
+}
+
 .nav__menu__icon {
   display: -webkit-box;
   display: -ms-flexbox;

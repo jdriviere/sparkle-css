@@ -12,6 +12,7 @@ var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
 var imageminPNG = require('imagemin-optipng');
 var imageminJPG = require('imagemin-jpegtran');
+var imageminSVG = require('imagemin-svgo');
 var sass = require('gulp-sass');
 
 /* ==================================== */
@@ -55,10 +56,11 @@ gulp.task('uglify', function(cb) {
 });
 
 gulp.task('minimg', function() {
-    return gulp.src('src/img/*.*')
+    return gulp.src(['src/img/*.jpg', 'src/img/*.png', 'src/img/*.svg'])
         .pipe(imagemin(
             imagemin.jpegtran({ progressive: true }),
-            imagemin.optipng({ optimizationLevel: 5 })
+            imagemin.optipng({ optimizationLevel: 5 }),
+            imagemin.svgo({ plugins: [{removeViewBox: true}] })
         ))
         .pipe(gulp.dest('dist/img/'));
 });
