@@ -1,8 +1,6 @@
 node_modules/*
 src/css/*
 src/img/*
-sparkle-animation.html
-Plans.txt
+*.txt
 package-lock.json
-oldcode.txt
 npm-debug.log

@@ -2,9 +2,7 @@
 node_modules/*
 src/*
 dist/img/*
-index.html
-sparkle-animation.html
-Plans.txt
+*.html
+*.txt
 package-lock.json
-oldcode.txt
 npm-debug.log
