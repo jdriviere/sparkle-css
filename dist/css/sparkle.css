@@ -1200,11 +1200,6 @@ textarea {
   max-height: 2em;
 }
 
-.nav__brand__image.logo--is-SVG {
-  background-image: url("dist/img/Logo_InCol.svg");
-  max-height: 2em;
-}
-
 .nav__menu__icon {
   display: -webkit-box;
   display: -ms-flexbox;
