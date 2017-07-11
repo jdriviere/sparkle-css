@@ -14,6 +14,7 @@ var imageminPNG = require('imagemin-optipng');
 var imageminJPG = require('imagemin-jpegtran');
 var imageminSVG = require('imagemin-svgo');
 var sass = require('gulp-sass');
+var browserSync = require('browser-sync').create();
 
 /* ==================================== */
 /* TASKS
@@ -41,7 +42,8 @@ gulp.task('sassify', function() {
 		.pipe(gulp.dest('dist/css/'))
 		.pipe(cleanCSS())
 		.pipe(rename('sparkle.min.css'))
-        .pipe(gulp.dest('dist/css/'));
+        .pipe(gulp.dest('dist/css/'))
+        .pipe(browserSync.reload({ stream: true }));
 });
 
 gulp.task('uglify', function(cb) {
@@ -65,5 +67,14 @@ gulp.task('minimg', function() {
         .pipe(gulp.dest('dist/img/'));
 });
 
+gulp.task('serve', ['sassify'], function() {
+    browserSync.init({
+        server: "./"
+    });
+
+    gulp.watch('src/scss/**.scss');
+    gulp.watch('*.html').on('change', browserSync.reload);
+});
+
 // gulp.task('default', ['build', 'minify', 'sassify', 'uglify', 'minimg']);
-gulp.task('default', ['sassify', 'uglify', 'minimg']);
+gulp.task('default', ['serve', 'sassify', 'uglify', 'minimg']);

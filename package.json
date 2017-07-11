@@ -18,6 +18,7 @@
   },
   "homepage": "https://jdriviere.github.io/sparkle-css",
   "devDependencies": {
+    "browser-sync": "^2.18.12",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.4.1",
     "gulp-concat-css": "^2.3.0",
