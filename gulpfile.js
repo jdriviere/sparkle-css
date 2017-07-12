@@ -77,4 +77,4 @@ gulp.task('serve', ['sassify'], function() {
 });
 
 // gulp.task('default', ['build', 'minify', 'sassify', 'uglify', 'minimg']);
-gulp.task('default', ['serve', 'sassify', 'uglify', 'minimg']);
+gulp.task('default', ['sassify', 'uglify', 'minimg']);
