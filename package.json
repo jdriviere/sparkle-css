@@ -4,14 +4,13 @@
   "description": "Simple CSS framework coded in CSS and jQuery",
   "main": "sparkle.min.css",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "gulp sassify && gulp minify"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jdriviere/sparkle-css.git"
   },
-  "author": "J. Djimitry Riviere",
-  "email": "tilithar@gmail.com",
+  "author": "J. Djimitry Riviere <tilithar@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jdriviere/sparkle-css/issues"
