@@ -9,6 +9,7 @@
 .animate--load { animation: load 1s linear infinite; }
 .animate--fade-in { animation: fade-in 1s ease-in; }
 .animate--fade-out { animation: fade-out 1s ease-out; }
+.animate--bounce { animation: bounce 1s ease-in-out; }
 
 // KEYFRAMES
 @keyframes pulse {
@@ -39,4 +40,42 @@
 @keyframes fade-out {
     0% { opacity: 1; }
     100% { opacity: 0; }
+}
+
+@keyframes bounce {
+    0% {
+        transform: scaleX(1.0);
+        transform: scaleY(1.0);
+        transform: translateY(0.0);
+    }
+    12% {
+        transform: scaleX(1.2);
+        transform: scaleY(0.8);
+        transform: translateY(0.0);
+    }
+    36% {
+        transform: scaleX(0.5);
+        transform: scaleY(1.5);
+        transform: translateY(-3.0);
+    }
+    50% {
+        transform: scaleX(1.0);
+        transform: scaleY(1.0);
+        transform: translateY(3.0);
+    }
+    74% {
+        transform: scaleX(0.5);
+        transform: scaleY(1.5);
+        transform: translateY(0.0);
+    }
+    86% {
+        transform: scaleX(1.2);
+        transform: scaleY(0.8);
+        transform: translateY(0.0);
+    }
+    100% {
+        transform: scaleX(1.0);
+        transform: scaleY(1.0);
+        transform: translateY(0.0);
+    }
 }

@@ -1542,6 +1542,10 @@ td {
   animation: fade-out 1s ease-out;
 }
 
+.animate--bounce {
+  animation: bounce 1s ease-in-out;
+}
+
 @keyframes pulse {
   0% {
     -webkit-transform: scale(1);
@@ -1627,6 +1631,44 @@ td {
   }
   100% {
     opacity: 0;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: scaleX(1);
+    transform: scaleY(1);
+    transform: translateY(0);
+  }
+  12% {
+    transform: scaleX(1.2);
+    transform: scaleY(0.8);
+    transform: translateY(0);
+  }
+  36% {
+    transform: scaleX(0.5);
+    transform: scaleY(1.5);
+    transform: translateY(-3);
+  }
+  50% {
+    transform: scaleX(1);
+    transform: scaleY(1);
+    transform: translateY(3);
+  }
+  74% {
+    transform: scaleX(0.5);
+    transform: scaleY(1.5);
+    transform: translateY(0);
+  }
+  86% {
+    transform: scaleX(1.2);
+    transform: scaleY(0.8);
+    transform: translateY(0);
+  }
+  100% {
+    transform: scaleX(1);
+    transform: scaleY(1);
+    transform: translateY(0);
   }
 }
 
