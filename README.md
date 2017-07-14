@@ -23,6 +23,7 @@ as well as this, at the end of the "body" section:
 <script src="https://gitcdn.xyz/repo/jdriviere/sparkle-css/blob/master/dist/js/sparkle.min.css"></script>
 ```
 (You will need both links to ensure Sparkle works efficiently, as it uses the jQuery.)
+
 4. Download the Node Package Manager (NPM) into your folder:
 ```
 npm install sparkle.css
