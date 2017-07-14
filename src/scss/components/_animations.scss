@@ -9,13 +9,13 @@
 .animate--load { animation: load 1s linear infinite; }
 .animate--fade-in { animation: fade-in 1s ease-in; }
 .animate--fade-out { animation: fade-out 1s ease-out; }
+.animate--bounce { animation: bounce 1s infinite; }
 
 // KEYFRAMES
 @keyframes pulse {
-    0% { @include scale-uniform(1.0); }
+    0%, 100% { @include scale-uniform(1.0); }
     20% { @include scale-uniform(0.9); }
     60% { @include scale-uniform(1.1); }
-    100% { @include scale-uniform(1.0); }
 }
 
 @keyframes load {
@@ -39,4 +39,10 @@
 @keyframes fade-out {
     0% { opacity: 1; }
     100% { opacity: 0; }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); } 
+    40% {transform: translateY(-8px);} 
+    60% {transform: translateY(-4px);}
 }

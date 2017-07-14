@@ -1542,8 +1542,12 @@ td {
   animation: fade-out 1s ease-out;
 }
 
+.animate--bounce {
+  animation: bounce 1s infinite;
+}
+
 @keyframes pulse {
-  0% {
+  0%, 100% {
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     -ms-transform: scale(1);
@@ -1560,12 +1564,6 @@ td {
     -moz-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1);
-  }
-  100% {
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
   }
 }
 
@@ -1627,6 +1625,18 @@ td {
   }
   100% {
     opacity: 0;
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-8px);
+  }
+  60% {
+    transform: translateY(-4px);
   }
 }
 
