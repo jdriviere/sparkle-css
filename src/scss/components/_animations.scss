@@ -46,36 +46,36 @@
     0% {
         transform: scaleX(1.0);
         transform: scaleY(1.0);
-        transform: translateY(0.0);
+        transform: translateY(0);
     }
     12% {
         transform: scaleX(1.2);
         transform: scaleY(0.8);
-        transform: translateY(0.0);
+        transform: translateY(0);
     }
     36% {
         transform: scaleX(0.5);
         transform: scaleY(1.5);
-        transform: translateY(-3.0);
+        transform: translateY(-3px);
     }
     50% {
         transform: scaleX(1.0);
         transform: scaleY(1.0);
-        transform: translateY(3.0);
+        transform: translateY(-3px);
     }
     74% {
         transform: scaleX(0.5);
         transform: scaleY(1.5);
-        transform: translateY(0.0);
+        transform: translateY(0);
     }
     86% {
         transform: scaleX(1.2);
         transform: scaleY(0.8);
-        transform: translateY(0.0);
+        transform: translateY(0);
     }
     100% {
         transform: scaleX(1.0);
         transform: scaleY(1.0);
-        transform: translateY(0.0);
+        transform: translateY(0);
     }
 }
