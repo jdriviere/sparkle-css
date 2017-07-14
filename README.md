@@ -14,14 +14,14 @@ Welcome and thank you for using Sparkle, a lightweight, responsive, open-source 
 There are 4 ways to get started with the Sparkle framework:
 1. Clone your own copy (P.S.: If you wish to contribute to this project, be sure to read description below);
 2. Download the .ZIP file;
-3. Link the latest release directly into your HTML file, in the "head" section: 
+3. Link the latest release directly into your HTML file by inserting the following lines to your HTML file: 
 ```html
 <head>
-    ...
+    <!-- Your links, sources, title, and meta tags here -->
     <link rel="stylesheet" href="https://gitcdn.link/repo/jdriviere/sparkle-css/master/dist/css/sparkle.min.css">
 </head>
 <body>
-    ...
+    <!-- Your body scripts here -->
     <script src="https://gitcdn.xyz/repo/jdriviere/sparkle-css/blob/master/dist/js/sparkle.min.css"></script>
 </body>
 ```
