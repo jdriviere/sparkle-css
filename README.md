@@ -16,11 +16,14 @@ There are 4 ways to get started with the Sparkle framework:
 2. Download the .ZIP file;
 3. Link the latest release directly into your HTML file, in the "head" section: 
 ```html
-<link rel="stylesheet" href="https://gitcdn.link/repo/jdriviere/sparkle-css/master/dist/css/sparkle.min.css">
-```
-as well as this, at the end of the "body" section:
-```html
-<script src="https://gitcdn.xyz/repo/jdriviere/sparkle-css/blob/master/dist/js/sparkle.min.css"></script>
+<head>
+    ...
+    <link rel="stylesheet" href="https://gitcdn.link/repo/jdriviere/sparkle-css/master/dist/css/sparkle.min.css">
+</head>
+<body>
+    ...
+    <script src="https://gitcdn.xyz/repo/jdriviere/sparkle-css/blob/master/dist/js/sparkle.min.css"></script>
+</body>
 ```
 (You will need both links to ensure Sparkle works efficiently, as it uses the jQuery.)
 
