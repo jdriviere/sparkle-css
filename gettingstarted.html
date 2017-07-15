@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <!-- TITLE -->
-    <title>Getting Started | Sparkle</title>
+    <title>Sparkle | Getting Started</title>
 
 	<!-- LOADING META CODES -->
 	<meta charset="utf-8">
@@ -17,6 +17,22 @@
 	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="16x16" href="dist/img/favicon.ico">
     <link rel="stylesheet" href="https://gitcdn.link/repo/jdriviere/sparkle-css/master/dist/css/sparkle.min.css">
+
+    <!-- INTERNAL STYLING -->
+    <style>
+        section { padding: 2em 0; }
+
+        footer {
+            clear: both;
+            display: block;
+            width: 100%;
+            padding: 1em;
+            color: #333;
+            border-top: 1px solid #EEE;
+        }
+        footer i { color: #C03; }
+        footer a { text-decoration: none; color: #3498DB; }
+    </style>
 </head>
 <body>
     <header>
@@ -30,16 +46,27 @@
             <div id="nav__mobile" class="nav__menu__icon">Menu</div>
 
             <ul class="nav__menu">
+                <li class="nav__menu__item"><a href="index.html">Home</a></li>
                 <li class="nav__menu__item"><a href="gettingstarted.html">Getting Started</a></li>
                 <li class="nav__menu__item"><a href="#">Documentation</a></li>
-                <li class="nav__menu__item"><a href="#">Contribute</a></li>
+                <li class="nav__menu__item"><a href="https://github.com/jdriviere/sparkle-css">Contribute</a></li>
             </ul>
         </nav>
     </header>
 
     <section>
         <div class="container">
-            <h2 class="text--center">Sparkle is...</h2>
+            <h1>What is Sparkle?</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate commodi, enim mollitia sunt, saepe atque. Porro nam eligendi exercitationem in fuga, pariatur magni dolor eum quas ut. Molestias, odit cumque.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h1>Why Choose Sparkle?</h1>
+            <h2>Because Sparkle is...</h2>
             <div class="row">
     			<div class="col">
     				<h4 class="feature__title">Semantic</h4>
@@ -62,22 +89,27 @@
     			</div>
     		</div>
         </div>
-	</section>
-
-    <section class="pre-footer">
+    </section>
+    
+    <section>
         <div class="container">
-            <div class="row">
-                <div class="col text--center">
-                    <h4>Want to Contribute?</h4>
-                    <p>
-                        Contributors are welcome, but be sure to read the guidelines before
-                        forking and pulling requests.
-                    </p>
-                    <button type="button" class="btn btn--dark--outline btn--med btn--f-round">Count me in!</button>
-                </div>
+            <h1>Let's Get Started</h1>
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda facere distinctio, nihil sed totam veritatis pariatur libero nulla accusantium blanditiis reiciendis possimus quisquam, nisi dolor ex, eligendi. Voluptate, sint amet.
+                Iure, repellat, magnam tempore porro atque enim. Quis a quasi debitis, eaque nam itaque fugit. Natus, sunt assumenda unde consectetur iusto asperiores recusandae nobis voluptatum, porro, voluptatem, eius ad distinctio.
+                Voluptatibus illo id incidunt rerum, obcaecati ex omnis. Corrupti, ex nisi harum repellat repudiandae accusamus cum voluptates consequuntur, nam perferendis ducimus tempore in consequatur, sit explicabo dolores dignissimos modi quis.
             </div>
+
+            <a href="documentation.html">Read Documentation</a>
         </div>
     </section>
+
+    <!-- FOOTER -->
+    <footer class="text--center">
+        <p>
+            Designed with <span><i class="fa fa-heart animate--pulse"></i></span> by <a href="https://jdriviere.github.io">J. D. Riviere</a> using <a href="https://github.com/jdriviere/sparkle-css">Sparkle</a> &copy; 2017
+        </p>
+    </footer>
 
     <!-- LOADING SCRIPTS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
