@@ -22,7 +22,7 @@ There are 4 ways to get started with the Sparkle framework:
 </head>
 <body>
     <!-- Your body scripts here -->
-    <script src="https://gitcdn.xyz/repo/jdriviere/sparkle-css/blob/master/dist/js/sparkle.min.css"></script>
+    <script src="https://gitcdn.link/repo/jdriviere/sparkle-css/master/dist/js/sparkle.min.js"></script>
 </body>
 ```
 (You will need both links to ensure Sparkle works efficiently, as it uses the jQuery.)
