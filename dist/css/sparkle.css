@@ -767,6 +767,48 @@ code {
   color: #FFF !important;
 }
 
+.btn--theme1 {
+  background-color: #ADD8E6;
+  color: #FFF !important;
+}
+
+.btn--theme1:hover {
+  background-color: #99cfe0;
+}
+
+.btn--theme1--outline {
+  background-color: transparent;
+  color: #ADD8E6 !important;
+  border: 2px solid #ADD8E6;
+  font-weight: 700;
+}
+
+.btn--theme1--outline:hover {
+  background-color: #ADD8E6;
+  color: #FFF !important;
+}
+
+.btn--theme2 {
+  background-color: #9BC2E6;
+  color: #FFF !important;
+}
+
+.btn--theme2:hover {
+  background-color: #87b6e1;
+}
+
+.btn--theme2--outline {
+  background-color: transparent;
+  color: #9BC2E6 !important;
+  border: 2px solid #9BC2E6;
+  font-weight: 700;
+}
+
+.btn--theme2--outline:hover {
+  background-color: #9BC2E6;
+  color: #FFF !important;
+}
+
 .btn--sml {
   padding: .125em 1em;
   line-height: 1.625em;
