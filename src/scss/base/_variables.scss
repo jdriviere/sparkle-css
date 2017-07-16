@@ -11,6 +11,8 @@ $color-dark:				#333333 !default; // Yields an off-black color
 $color-white:				#F9FAFC !default; // Yields a white color
 $color-black:				#121314 !default; // Yields a black color
 $color-none:				transparent !default; // Yields a transparent color
+$color-theme1:				#ADD8E6 !default; // Yields lighter light-teal blue of logo 
+$color-theme2:				#9BC2E6 !default; // Yields darker light-teal blue of logo
 
 // ================================
 // GENERAL - GRAY TONES
@@ -99,7 +101,9 @@ $btn-color-maps: (
     warning:				($color-warning, #FFF),
     danger:					($color-danger, #FFF),
     light:					($color-light, #333),
-    dark:					($color-dark, #FFF)
+	dark:					($color-dark, #FFF),
+	theme1:					($color-theme1, #FFF),
+	theme2:					($color-theme2, #FFF)
 );
 
 // =================================
