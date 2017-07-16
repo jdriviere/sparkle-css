@@ -14,6 +14,7 @@
 .alert {
     display: block;
     width: 100%;
+    margin: 1em 0;
     padding: 0.75em;
     @include box-shadow(5, 5, 7, 0.7);
     @include border-radius-cust(0, 5, 5, 0);

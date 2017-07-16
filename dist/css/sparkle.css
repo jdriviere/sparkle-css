@@ -494,12 +494,23 @@ p.text--big {
   transform: translate(-50%, -50%);
 }
 
+pre {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+code {
+  font-family: monospace;
+}
+
 /* ===================================================*/
 /* ALERTS
 /* ===================================================*/
 .alert {
   display: block;
   width: 100%;
+  margin: 1em 0;
   padding: 0.75em;
   -webkit-box-shadow: 5 5 7 rgba(0, 0, 0, 0.7);
   -moz-box-shadow: 5 5 7 rgba(0, 0, 0, 0.7);
