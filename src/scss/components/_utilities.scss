@@ -29,49 +29,38 @@
 	}
 }
 
-// PLACEMENTS
+// SPACES
+.no-padding { padding: 0 !important; }
+.no-margin { margin: 0 !important; }
+
+// HORIZONTAL ALIGNMENT
 .pull {
-	&--left {
-		@include displayFlex;
-		@include justifyContentAtStart;
-	}
-	&--center {
-		@include displayFlex;
-		@include justifyContentCenter;
-	}
-	&--right {
-		@include displayFlex;
-		@include justifyContentAtEnd;
-	}
+	&--left { float: left; }
+	&--right { float: right; }
+	&--center { float: none; margin: 0 auto; text-align: center; }
 
-	&--left-alt { float: left; }
-	&--right-alt { float: right; }
-	&--center-alt { float: none; margin: 0 auto; text-align: center; }
+	&--flex-left { @include displayFlex; @include justifyContentAtStart; }
+	&--flex-center { @include displayFlex; @include justifyContentCenter; }
+	&--flex-right { @include displayFlex; @include justifyContentAtEnd; }
 }
 
+// VERTICAL ALIGNMENT
 .align {
-	&--top {
-		@include displayFlex;
-		@include alignItemsTop;
-	}
-	&--center {
-		@include displayFlex;
-		@include alignItemsCenter;
-	}
-	&--bottom {
-		@include displayFlex;
-		@include alignItemsBottom;
-	}
-	&--baseline {
-		@include displayFlex;
-		@include alignItemsBaseline;
-	}
-	&--stretch {
-		@include displayFlex;
-		@include alignItemsStretch;
-	}
+	&--top { @include displayFlex; @include alignItemsTop; }
+	&--center { @include displayFlex; @include alignItemsCenter; }
+	&--bottom { @include displayFlex; @include alignItemsBottom; }
+	&--baseline { @include displayFlex; @include alignItemsBaseline; }
+	&--stretch { @include displayFlex; @include alignItemsStretch; }
+} // End of Align
+
+// SELF-ALIGN
+.self-align {
+	&--start { @include displayFlex; @include alignSelfStart; }
+	&--center { @include displayFlex; @include alignSelfCenter; }
+	&--end { @include displayFlex; @include alignSelfEnd; }
 }
 
+// CENTRALIZE
 .centralize {
 	@include displayFlex;
 	@include justifyContentCenter;
@@ -81,7 +70,3 @@
 		@include manualFullCenter;
 	}
 }
-
-// SPECIAL
-pre { display: block; margin: 0; padding: 0; }
-code { font-family: monospace; }

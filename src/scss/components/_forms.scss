@@ -4,16 +4,22 @@
 @import "../base/_variables";
 @import "../base/_mixins";
 
+label {
+	display: block;
+	letter-spacing: 0.125em;
+	color: $color-grey-75;
+}
+
 #{$inputs} {
     width: 100%;
     max-width: 100%;
-    margin: 5px 0;
-    padding: 0.5em 0;
+    margin-bottom: 0.625em;
+    padding: 0.3125em 0;
 	@include remove-appearance;
     outline: 0;
     background: none;
     border: none;
-    border-bottom: 1px solid $color-grey-100;
+    border-bottom: 1px solid $color-grey-75;
 	
 	@include box-shadow(0, 0, 0, 0);
 	@include transition(all, 0.2s, ease-in);

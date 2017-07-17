@@ -137,3 +137,19 @@
         -ms-flex-align: stretch;
             align-items: stretch;
 } // End of AlignCenterFlex
+
+@mixin alignSelfStart {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+} // End of AlignSelfStart
+
+@mixin alignSelfCenter {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+            align-self: center;
+} // End of AlignSelfCenter
+
+@mixin alignSelfEnd {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+} // End of AlignSelfEnd

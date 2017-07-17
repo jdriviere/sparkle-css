@@ -9,6 +9,8 @@ body {
     font-family: $font-family-default;
     @include font-smoothing;
 }
+
+// HEADER FORMATTING
 h1, h2, h3, h4, h5, h6 { margin: 0 !important; font-weight: 600; }
 h1 { font-size: 2.6rem; line-height: 1.2em; }
 h2 { font-size: 2.2rem; line-height: 1.3em; }
@@ -37,3 +39,7 @@ p {
 	&--center { text-align: center; }
 	&--justify { text-align: justify; }
 }
+
+// CODE FORMATTING
+pre { display: block; margin: 0; padding: 0; }
+code { font-family: monospace; }
