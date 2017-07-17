@@ -36,9 +36,10 @@
 
 // BUTTON
 .btn {
+    // Create the button
     @include button;
     
-
+    // Stylize all buttons according to proper color-map
     @each $type, $color in $btn-color-maps {
         $bgcolor: nth($color, 1);
         $fontcolor: nth($color, 2);
@@ -62,6 +63,7 @@
 		}
     } // End of LOOP
 
+    // SIZES
     &--sml {
         padding: .125em 1em;
         line-height: 1.625em;
@@ -90,11 +92,11 @@
         font-size: 1.5em;
         font-weight: $font-weight-heavy;
     }
-    &--fill {
+    &--responsive {
         width: 100%;
-        height: 2.125em;
-        line-height: 2.125em;
-        font-size: 1.5em;
+        padding: 0 1.5em;
+        line-height: 1.5em;
+        font-size: 1.25em;
         font-weight: $font-weight-heavy;
     }
 
