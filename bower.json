@@ -1,5 +1,6 @@
 {
   "name": "sparkle.css",
+  "version": "1.5.1",
   "description": "Simple CSS framework coded in CSS and jQuery",
   "main": [
     "dist/css/sparkle.css",
