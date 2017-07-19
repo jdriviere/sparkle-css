@@ -35,5 +35,8 @@
     "*.txt",
     "package-lock.json",
     "npm-debug.log"
-  ]
+  ],
+  "dependencies": {
+    "jquery": ">=1.9.1"
+  }
 }
