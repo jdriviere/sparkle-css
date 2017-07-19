@@ -30,14 +30,11 @@
     "test",
     "tests",
     ".git/",
-    "src/*",
-    "dist/img/*",
+    "src",
+    "dist/img",
     "*.html",
     "*.txt",
     "package-lock.json",
     "npm-debug.log"
-  ],
-  "dependencies": {
-    "jquery": ">=1.9.1"
-  }
+  ]
 }
