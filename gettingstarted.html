@@ -22,12 +22,17 @@
     <!-- INTERNAL STYLING -->
     <style>
         section { padding: 5em 0; }
+        
+        [class*='__title'] { color: #9BC2E6; }
+        .welcome__text,
+        .start__text { line-height: 2em; color: #777; }
 
-        .feature {
+        .feature, .end {
             background-color: #E6EEFD;
             color: #333;
         }
-        .feature__title { color: #3498DB; }
+        .feature__title,
+        .contribute__title { color: #3498DB; } 
 
         footer {
             clear: both;
@@ -62,9 +67,9 @@
     </header>
 
     <section>
-        <div class="container">
-            <h1>What is Sparkle?</h1>
-            <p>
+        <div class="container welcome">
+            <h2 class="welcome__title text--center">What is Sparkle?</h2>
+            <p class="welcome__text">
                 Sparkle is a lightweight, responsive, open-source CSS framework created to help
                 Web Designers and Developers create simple, responsive websites and web applications.
                 It was developed by J. Djimitry Riviere in late 2016, and continues to be improved
@@ -76,27 +81,39 @@
 
     <section class="feature">
         <div class="container">
-            <h1>Why Choose Sparkle?</h1>
-            <h3>Because Sparkle is...</h3>
+            <h2 class="text--center">Why Choose Sparkle?</h2>
+            <h3 class="text--center">Because Sparkle is...</h3>
             <div class="row">
     			<div class="col">
-    				<h4 class="feature__title">Semantic</h4>
-    				<p class="feature__desc text--small">Sparkle uses BEM to keep the framework structured and simple for all to understand and use.</p>
+                    <div class="pull--center">
+                        <img src="src/img/Icon_Feather.png" alt="feather">
+                        <h4 class="feature__title">Semantic</h4>
+                        <p class="feature__desc">Sparkle uses BEM to keep the framework structured and simple for all to understand and use.</p>
+                    </div>
     			</div>
 
     			<div class="col">
-    				<h4 class="feature__title">User-Friendly</h4>
-    				<p class="feature__desc text--small">Sparkle does most of the hard work for you. Simply style your elements.</p>
+    				<div class="pull--center">
+                        <img src="src/img/Icon_User.png" alt="feather">
+                        <h4 class="feature__title">User-Friendly</h4>
+                        <p class="feature__desc">Sparkle does most of the hard work for you. Simply style your elements.</p>
+                    </div>
     			</div>
 
     			<div class="col">
-    				<h4 class="feature__title">Responsive</h4>
-    				<p class="feature__desc text--small">Sparkle was created to be responsive throughout all devices, using a mobile-first approach.</p>
+                    <div class="pull--center">
+                        <img src="src/img/Icon_Responsive.png" alt="responsive">
+                        <h4 class="feature__title">Responsive</h4>
+                        <p class="feature__desc">Sparkle was created to be responsive throughout all devices, using a mobile-first approach.</p>
+                    </div>
     			</div>
 
                 <div class="col">
-    				<h4 class="feature__title">Lightweight</h4>
-    				<p class="feature__desc text--small">Sparkle is smaller than 20kb, which means it won't slow down your website loading.</p>
+                    <div class="pull--center">
+                        <img src="src/img/Icon_Feather.png" alt="feather">
+                        <h4 class="feature__title">Lightweight</h4>
+    				    <p class="feature__desc">Sparkle is smaller than 20kb, which means it won't slow down your website loading.</p>
+                    </div>
     			</div>
     		</div>
         </div>
@@ -104,38 +121,48 @@
     
     <section>
         <div class="container">
-            <h1>Let's Get Started</h1>
+            <h2 class="start__title text--center">Let's Get Started</h2>
 
-            There are 4 ways to get started with the Sparkle framework:<br><br>
-            1. Clone your own copy by using the following command in your command line:
-            <div class="alert alert--info">
-                <code>git clone https://github.com/jdriviere/sparkle-css.git</code>
-                <br><br>(Note: If you wish to contribute to this project, be sure to read description below);
-            </div>
-            2. Download the .ZIP file;<br>
-            3. Link the latest release directly into your HTML file by inserting the following lines to your HTML file:<br>
-            <div class="alert alert--info">
-                <code>
-                    &lt;!-- Place this in your &lt;head&gt; section --&gt;<br>
-                    &lt;link rel="stylesheet" href="https://gitcdn.link/repo/jdriviere/sparkle-css/master/dist/css/sparkle.min.css" &gt;
-                    <br>...<br>
-                    &lt;!-- Place this at the end of your &lt;body&gt; section --&gt;<br>
-                    &lt;script src="https://gitcdn.xyz/repo/jdriviere/sparkle-css/master/dist/js/sparkle.min.css"&gt;&lt;/script&gt;
-                </code>
-                <br><br>(Note: You will need both links to ensure Sparkle works efficiently, as it uses the jQuery.)
-            </div>
-            4. Use the NPM command to download the package into your node_modules folder:
-            <div class="alert alert--info">
-                <code>npm install sparkle.css</code>
-                <br><br>(Note: Node.js and NPM must be installed in your machine first.)
-            </div>
+            <p class="start__text">
+                There are 4 ways to get started with the Sparkle framework:<br>
+                1. Clone your own copy by using the following command in your command line:
+                <div class="alert alert--info">
+                    <code>git clone https://github.com/jdriviere/sparkle-css.git</code>
+                    <br><br>(Note: If you wish to contribute to this project, be sure to read description below);
+                </div>
+                <p class="start__text">2. Download the .ZIP file;
+                <p class="start__text">3. Link the latest release directly into your HTML file by inserting the following lines to your HTML file:
+                <div class="alert alert--info">
+                    <code>
+                        &lt;!-- Place this in your &lt;head&gt; section --&gt;<br>
+                        &lt;link rel="stylesheet" href="https://gitcdn.link/repo/jdriviere/sparkle-css/master/dist/css/sparkle.min.css" &gt;
+                        <br>...<br>
+                        &lt;!-- Place this at the end of your &lt;body&gt; section --&gt;<br>
+                        &lt;script src="https://gitcdn.xyz/repo/jdriviere/sparkle-css/master/dist/js/sparkle.min.css"&gt;&lt;/script&gt;
+                    </code>
+                    <br><br>(Note: You will need both links to ensure Sparkle works efficiently, as it uses the jQuery.)
+                </div>
+                <p class="start__text">4. Use the NPM/Bower command to download the package into your node_modules folder:
+                <div class="alert alert--info">
+                    <code>npm install sparkle.css</code>
+                    <br><br>(Note: Node.js and NPM must be installed in your machine first.)
+                </div>
+                <div class="alert alert--info">
+                    <code>bower install sparkle-css</code>
+                    <br><br>(Note: Node.js and Bower must be installed in your machine first.)
+                </div>
+            </p>
         </div>
     </section>
 
-    <section>
-        <div class="container">
-            <h1>Contributing</h1>
-            <h3>Coming Soon...</h3>
+    <section class="end">
+        <div class="container contribute">
+            <h2 class="contribute__title text--center">Contributing</h2>
+            <p class="contribute__text">
+                You are encouraged to contribute to this project. Simply clone the repository,
+                and come up with new features, bug fixes, etc. and modify the files. Make sure
+                to follow the guidelines for the styling before posting.
+            </p>
         </div>
     </section>
 
