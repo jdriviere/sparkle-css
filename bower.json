@@ -24,6 +24,7 @@
   ],
   "homepage": "https://jdriviere.github.io/sparkle-css",
   "ignore": [
+    "**/.*",
     "node_modules",
     "bower_components",
     "test",
