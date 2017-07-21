@@ -955,6 +955,7 @@ code {
 .form__input.has-value + label {
   top: -2.5em;
   font-size: 0.75em;
+  font-weight: 700;
   letter-spacing: 0;
   color: #333333;
 }
