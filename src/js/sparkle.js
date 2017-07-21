@@ -16,6 +16,15 @@ $(document).ready(function() {
 	navToggleAction();
     navResizeFix();
     modalAction();
+
+    // Controls for inputs
+    $('.form__input').each(function() {
+        checkInput($(this));
+    });
+
+    $('.form__input').blur(function() {
+        checkInput($(this));
+    });
 });
 
 // -----------------------------
@@ -65,7 +74,7 @@ function navResizeFix () {
     });
 } // End of NavResizeFix
 
-// This function controls the S3CSS modal functionality.
+// This function controls the modal functionality.
 function modalAction () {
     // Get the modal
     var modal = $('#modal');
@@ -83,3 +92,13 @@ function modalAction () {
         modal.css('display', 'none');
     });
 } // End of ModalAction
+
+// This function controls the flow of the form field
+function checkInput ($input) {
+    // Checking to see if any input have any value
+    if ($input.val() != '') {
+        $input.addClass('has-value');
+    } else {
+        $input.removeClass('has-value');
+    } // End of IF-ELSE
+} // End of FormAction

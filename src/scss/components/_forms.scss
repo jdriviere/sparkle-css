@@ -4,58 +4,63 @@
 @import "../base/_variables";
 @import "../base/_mixins";
 
-label {
-	display: block;
-	letter-spacing: 0.125em;
-	color: $color-grey-75;
-}
+.form {
+	&__box {
+		position: relative;
+		margin: 2em 0;
+	}
 
-#{$inputs} {
-    width: 100%;
-    max-width: 100%;
-    margin-bottom: 0.625em;
-    padding: 0.3125em 0;
-	@include remove-appearance;
-    outline: 0;
-    background: none;
-    border: none;
-    border-bottom: 1px solid $color-grey-75;
-	
-	@include box-shadow(0, 0, 0, 0);
-	@include transition(all, 0.2s, ease-in);
-	
-	&:focus,
-	&.input--active {
-		border-bottom: 1px solid $color-dark;
-		@include transition(all, 0.2s, ease-in);
-	}
-	
-	&:disabled,
-	&.input--disabled {
-		border-bottom: 1px solid $color-danger;
-		color: $color-danger;
+	&__input {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 2em;
+		padding: 0.5em 0;
+		@include remove-appearance;
+		outline: none;
 		background-color: $color-none;
-		@include disable-select;
-	}
-	
-	&:required,
-	&:invalid {
-		border-bottom: 1px solid $alert-border-warning;
-		background-color: $color-none;
+		border: none;
+		border-bottom: 1px solid $color-grey-75;
+		font-size: 1em;
+		@include box-shadow(0, 0, 0, 0);
 		@include transition(all, 0.2s, ease-in);
-		
-		&:focus {
-			border-bottom: 1px solid $color-dark;
-			color: $color-dark;
+
+		& + label {
+			position: absolute;
+			top: -0.75em;
+			left: 0;
+			display: block;
+			font-size: 1em;
+			letter-spacing: 0.125em;
+			text-transform: uppercase;
+			color: $color-grey-75;
+			transform: translateY(1em);
 			@include transition(all, 0.2s, ease-in);
 		}
-	}
-}
 
-textarea {
-    min-height: 7.5em;
-    resize: none;
-    font-family: $font-family-default;
+		&:focus {
+			border-bottom: 2px solid $color-dark;
+			@include transition(all, 0.2s, ease-in);
+		}
+
+		&:focus + label,
+		&.has-value + label {
+			top: -2.5em;
+			font-size: 0.75em;
+			letter-spacing: 0;
+			color: $color-dark;
+		}
+
+		&.has-value:not(:focus) + label {
+			color: $color-grey-75;
+		}
+	}
+
+	textarea {
+		min-height: 5em;
+		resize: none;
+		font-family: $font-family-default;
+	}
 }
 
 ::-webkit-input-placeholder { color: $color-grey-75; } // WebKit, Blink, Edge

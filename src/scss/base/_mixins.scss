@@ -68,6 +68,21 @@
                 appearance: none;
 } // End of Remove-Appearance
 
+@mixin inputs {
+    input[type='text'],
+    input[type='email'],
+    input[type='number'],
+    input[type='password'],
+    input[type='search'],
+    input[type='tel'],
+    input[type='text'],
+    input[type='url'],
+    textarea,
+    select {
+        @content;
+    }
+} // End of Inputs
+
 // =======================================
 // FLEXBOX MIXINS
 // =======================================
