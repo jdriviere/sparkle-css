@@ -47,6 +47,7 @@
     </style>
 </head>
 <body>
+    <!-- HEADER -->
     <header>
         <nav class="nav nav--default">
             <div class="nav__brand">
@@ -60,12 +61,13 @@
             <ul class="nav__menu">
                 <li class="nav__menu__item"><a href="index.html">Home</a></li>
                 <li class="nav__menu__item"><a href="gettingstarted.html">Getting Started</a></li>
-                <li class="nav__menu__item"><a href="#">Documentation</a></li>
+                <li class="nav__menu__item"><a href="test.html">Documentation</a></li>
                 <li class="nav__menu__item"><a href="https://github.com/jdriviere/sparkle-css">Contribute</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- WELCOME -->
     <section>
         <div class="container welcome">
             <h2 class="welcome__title text--center">What is Sparkle?</h2>
@@ -79,6 +81,7 @@
         </div>
     </section>
 
+    <!-- FEATURE -->
     <section class="feature">
         <div class="container">
             <h2 class="text--center">Why Choose Sparkle?</h2>
@@ -86,7 +89,7 @@
             <div class="row">
     			<div class="col">
                     <div class="pull--center">
-                        <img src="dist/img/Icon_Feather.png" alt="feather">
+                        <img src="dist/img/Icon_Book.png" alt="feather">
                         <h4 class="feature__title">Semantic</h4>
                         <p class="feature__desc">Sparkle uses BEM to keep the framework structured and simple for all to understand and use.</p>
                     </div>
@@ -119,6 +122,7 @@
         </div>
     </section>
     
+    <!-- GETTING STARTED -->
     <section>
         <div class="container">
             <h2 class="start__title text--center">Let's Get Started</h2>
@@ -126,13 +130,13 @@
             <p class="start__text">
                 There are 4 ways to get started with the Sparkle framework:<br>
                 1. Clone your own copy by using the following command in your command line:
-                <div class="alert alert--info">
+                <div class="alert alert--default">
                     <code>git clone https://github.com/jdriviere/sparkle-css.git</code>
                     <br><br>(Note: If you wish to contribute to this project, be sure to read description below);
                 </div>
                 <p class="start__text">2. Download the .ZIP file;
                 <p class="start__text">3. Link the latest release directly into your HTML file by inserting the following lines to your HTML file:
-                <div class="alert alert--info">
+                <div class="alert alert--default">
                     <code>
                         &lt;!-- Place this in your &lt;head&gt; section --&gt;<br>
                         &lt;link rel="stylesheet" href="https://gitcdn.link/repo/jdriviere/sparkle-css/master/dist/css/sparkle.min.css" &gt;
@@ -143,11 +147,11 @@
                     <br><br>(Note: You will need both links to ensure Sparkle works efficiently, as it uses the jQuery.)
                 </div>
                 <p class="start__text">4. Use the NPM/Bower command to download the package into your node_modules folder:
-                <div class="alert alert--info">
+                <div class="alert alert--default">
                     <code>npm install sparkle.css</code>
                     <br><br>(Note: Node.js and NPM must be installed in your machine first.)
                 </div>
-                <div class="alert alert--info">
+                <div class="alert alert--default">
                     <code>bower install sparkle-css</code>
                     <br><br>(Note: Node.js and Bower must be installed in your machine first.)
                 </div>
@@ -155,6 +159,7 @@
         </div>
     </section>
 
+    <!-- PRE-FOOTER -->
     <section class="end">
         <div class="container contribute">
             <h2 class="contribute__title text--center">Contributing</h2>

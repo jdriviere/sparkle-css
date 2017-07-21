@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <!-- TITLE -->
+    <title>Sparkle | Tests</title>
+
+	<!-- LOADING META CODES -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="J. Djimitry Riviere">
+	<meta name="description" content="Sparkle.CSS: a lightweight, responsive, mobile-first CSS framework for easy website designs.">
+	<meta name="keywords" content="HTML, HTML5, CSS, CSS3, CSS Framework, JavaScript, JS, sparkle, Sparkle, sparkle-css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- LOADING LINKS -->
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="dist/img/favicon.ico">
+    <!-- <link rel="stylesheet" href="https://gitcdn.link/repo/jdriviere/sparkle-css/master/dist/css/sparkle.min.css"> -->
+	<link rel="stylesheet" type="text/css" href="dist/css/sparkle.min.css">
+
+	<!-- INTERNAL STYLING -->
+    <style>
+        h2 { color: #9BC2E6; text-align: center; }
+        .snippet { padding: 0.125em; background-color: #DDD; }
+        
+        .btnSection button { margin-bottom: 0.25em; }
+        .btnSection__block { margin-bottom: 1.25em; }
+        .btnSection__title { text-transform: uppercase; letter-spacing: 0.125em; color: #CCC; }
+        .btnSection__desc { margin-bottom: 1.25em; }
+
+
+        footer {
+            clear: both;
+            display: block;
+            width: 100%;
+            padding: 1em;
+            color: #333;
+            background-color: #EEE;
+        }
+        footer i { color: #C03; }
+        footer a { text-decoration: none; color: #3498DB; }
+    </style>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <nav class="nav nav--default">
+            <div class="nav__brand">
+                <a href="index.html">
+                    <img src="dist/img/Logo_InColor_side.png" alt="Sparkle_Logo" class="nav__brand__image">
+                </a>
+            </div>
+
+            <div id="nav__mobile" class="nav__menu__icon">Menu</div>
+
+            <ul class="nav__menu">
+                <li class="nav__menu__item"><a href="gettingstarted.html">Getting Started</a></li>
+                <li class="nav__menu__item"><a href="test.html">Documentation</a></li>
+                <li class="nav__menu__item"><a href="#">Contribute</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- NAV TEST -->
+    <section id="#navigation">
+        <div class="container">
+            <h2>Navigation</h2>
+        </div>
+    </section>
+
+    <!-- TYPO TEST -->
+    <section id="#typo">
+        <div class="container">
+            <h2>Typography</h2>
+        </div>
+    </section>
+
+    <!-- BUTTONS TEST -->
+    <section id="#buttons">
+        <div class="container btnSection">
+            <h2>Buttons</h2>
+
+            <!-- BUTTON COLORS -->
+             <div class="row">
+                <div class="col-1-of-3">
+                    <div class="btnSection__block">
+                        <h4 class="btnSection__title">Solid</h4>
+                        <p class="btnSection__desc">
+                            Sparkle offers a variety of button colors, to go with
+                            your design needs.
+                        </p>
+                        <button class="btn btn--default btn--small">test</button>
+                        <button class="btn btn--primary btn--small">test</button>
+                        <button class="btn btn--success btn--small">test</button>
+                        <button class="btn btn--warning btn--small">test</button>
+                        <button class="btn btn--danger btn--small">test</button>
+                        <button class="btn btn--light btn--small">test</button>
+                        <button class="btn btn--dark btn--small">test</button>
+                        <button class="btn btn--theme1 btn--small">test</button>
+                        <button class="btn btn--theme2 btn--small">test</button>
+                    </div>
+                    
+                    <div class="btnSection__block">
+                        <h4 class="btnSection__title">Outline</h4>
+                        <p class="btnSection__desc">
+                            If solid-colored buttons are not enough, Sparkle also offers
+                            the option of outlining the buttons. Simply add
+                            <span><code class="snippet">--outline</code></span> at the end of the
+                            button type class, as in <span><code class="snippet">btn--primary--outline</code></span>.
+                        </p>
+                        <button class="btn btn--default--outline btn--small">test</button>
+                        <button class="btn btn--primary--outline btn--small">test</button>
+                        <button class="btn btn--success--outline btn--small">test</button>
+                        <button class="btn btn--warning--outline btn--small">test</button>
+                        <button class="btn btn--danger--outline btn--small">test</button>
+                        <button class="btn btn--light--outline btn--small">test</button>
+                        <button class="btn btn--dark--outline btn--small">test</button>
+                        <button class="btn btn--theme1--outline btn--small">test</button>
+                        <button class="btn btn--theme2--outline btn--small">test</button>
+                    </div>
+
+                    <div class="btnSection__block">
+                        <h4 class="btnSection__title">Disabled</h4>
+                        <p class="btnSection__desc">
+                            You want to insert a button but not want it to be accessible yet?
+                            No problem! simply add <span><code class="snippet">btn--disabled</code></span>
+                            to your list of classes, and use a code to remove that class
+                            whenever you need.
+                        </p>
+                        <button class="btn btn--default btn--small btn--disabled">test</button>
+                        <button class="btn btn--primary btn--small btn--disabled">test</button>
+                        <button class="btn btn--success btn--small btn--disabled">test</button>
+                        <button class="btn btn--warning btn--small btn--disabled">test</button>
+                        <button class="btn btn--danger btn--small btn--disabled">test</button>
+                        <button class="btn btn--light btn--small btn--disabled">test</button>
+                        <button class="btn btn--dark btn--small btn--disabled">test</button>
+                        <button class="btn btn--theme1 btn--small btn--disabled">test</button>
+                        <button class="btn btn--theme2 btn--small btn--disabled">test</button>
+                    </div>
+                </div>
+
+                <!-- CODES -->
+                <div class="col-2-of-3">
+                    <div class="alert alert--default">
+                        <code>
+                            &lt;!-- Button colors (solid) --&gt;<br>
+                            &lt;button class="btn btn--default btn--small"&gt;test&lt;/button&gt;<br>
+                            &lt;button class="btn btn--primary btn--small"&gt;test&lt;/button&gt;<br>
+                            &lt;button class="btn btn--success btn--small"&gt;test&lt;/button&gt;<br>
+                            &lt;button class="btn btn--warning btn--small"&gt;test&lt;/button&gt;<br>
+                            &lt;button class="btn btn--danger btn--small"&gt;test&lt;/button&gt;<br>
+                            &lt;button class="btn btn--light btn--small"&gt;test&lt;/button&gt;<br>
+                            &lt;button class="btn btn--dark btn--small"&gt;test&lt;/button&gt;<br>
+                            &lt;button class="btn btn--theme1 btn--small"&gt;test&lt;/button&gt;<br>
+                            &lt;button class="btn btn--theme2 btn--small"&gt;test&lt;/button&gt;<br>
+                            <br>
+
+                            &lt;!-- Button colors (outline) --&gt;<br>
+                            &lt;button class="btn btn--default btn--small"&gt;test&lt;/button&gt;<br>
+                            &lt;button class="btn btn--primary btn--small"&gt;test&lt;/button&gt;<br>
+                            &lt;button class="btn btn--success btn--small"&gt;test&lt;/button&gt;<br>
+                            &lt;button class="btn btn--warning btn--small"&gt;test&lt;/button&gt;<br>
+                            &lt;button class="btn btn--danger btn--small"&gt;test&lt;/button&gt;<br>
+                            &lt;button class="btn btn--light btn--small"&gt;test&lt;/button&gt;<br>
+                            &lt;button class="btn btn--dark btn--small"&gt;test&lt;/button&gt;<br>
+                            &lt;button class="btn btn--theme1 btn--small"&gt;test&lt;/button&gt;<br>
+                            &lt;button class="btn btn--theme2 btn--small"&gt;test&lt;/button&gt;<br>
+                            <br>
+
+                            &lt;!-- Button colors (disabled) --&gt;<br>
+                            &lt;button class="btn btn--default btn--small btn--disabled"&gt;test&lt;/button&gt;<br>
+                            &lt;button class="btn btn--primary btn--small btn--disabled"&gt;test&lt;/button&gt;<br>
+                            &lt;button class="btn btn--success btn--small btn--disabled"&gt;test&lt;/button&gt;<br>
+                            &lt;button class="btn btn--warning btn--small btn--disabled"&gt;test&lt;/button&gt;<br>
+                            &lt;button class="btn btn--danger btn--small btn--disabled"&gt;test&lt;/button&gt;<br>
+                            &lt;button class="btn btn--light btn--small btn--disabled"&gt;test&lt;/button&gt;<br>
+                            &lt;button class="btn btn--dark btn--small btn--disabled"&gt;test&lt;/button&gt;<br>
+                            &lt;button class="btn btn--theme1 btn--small btn--disabled"&gt;test&lt;/button&gt;<br>
+                            &lt;button class="btn btn--theme2 btn--small btn--disabled"&gt;test&lt;/button&gt;<br>
+                        </code>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BUTTON SIZES -->
+            <div class="row">
+                <div class="col-1-of-3">
+                    <div class="btnSection__block">
+                        <h4 class="btnSection__title">Sizes</h4>
+                        <p class="btnSection__desc">
+                            Buttons come in different sizes for different purposes. You can
+                            alter a button size by adding <span><code class="snippet">btn--sizeName</code></span>
+                            to the class list, where the <span><code class="snippet">sizeName</code></span>
+                            is either one of the following:
+                            <span><code class="snippet">small</code></span>,
+                            <span><code class="snippet">medium</code></span>,
+                            <span><code class="snippet">large</code></span>, or
+                            <span><code class="snippet">xlarge</code></span>.
+                        </p>
+                        <button class="btn btn--theme1 btn--small">Button</button><br>
+                        <button class="btn btn--theme1 btn--medium">Button</button><br>
+                        <button class="btn btn--theme1 btn--large">Button</button><br>
+                        <button class="btn btn--theme1 btn--xlarge">Button</button><br>
+                    </div>
+                </div>
+                
+                <!-- CODES -->
+                <div class="col-2-of-3">
+                    <div class="alert alert--default">
+                        <code>
+                            &lt;!-- Button sizes --&gt;<br>
+                            &lt;button class="btn btn--theme1 btn--small"&gt;test&lt;/button&gt;<br>
+                            &lt;button class="btn btn--theme1 btn--medium"&gt;tes&lt;/button&gt;<br>
+                            &lt;button class="btn btn--theme1 btn--large"&gt;test&lt;/button&gt;<br>
+                            &lt;button class="btn btn--theme1 btn--xlarge"&gt;test&lt;/button&gt;<br>
+                        </code>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- BUTTON ROUNDNESS -->
+            <div class="row">
+                <div class="col-1-of-3">
+                    <div class="btnSection__block">
+                        <h4 class="btnSection__title">Roundness</h4>
+                        <p class="btnSection__desc">
+                            Sparkle offers the chance to even vary the roundness of its button design.
+                            Simply add <span><code class="snippet">btn--roundType</code></span> in your class
+                            list, where <span><code class="snippet">roundType</code></span> is one of the following:
+                            <span><code class="snippet">h-round</code></span> (for 'half-round'), or
+                            <span><code class="snippet">f-round</code></span> (for 'fully-round').
+                        </p>
+                        <button class="btn btn--theme1 btn--medium btn--h-round">test</button>
+                        <button class="btn btn--theme1 btn--medium btn--f-round">test</button>
+                    </div>
+                </div>
+
+                <!-- CODES -->
+                <div class="col-2-of-3">
+                    <div class="alert alert--default">
+                        <code>
+                            &lt;!-- Button roundness --&gt;<br>
+                            &lt;button class="btn btn--theme1 btn--medium btn--h-round"&gt;test&lt;/button&gt;<br>
+                            &lt;button class="btn btn--theme1 btn--medium btn--f-round"&gt;test&lt;/button&gt;<br>
+                        </code>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BUTTON BLOCK -->
+            <div class="row">
+                <div class="col-1-of-3">
+                    <div class="btnSection__block">
+                        <h4 class="btnSection__title">Block</h4>
+                        <p class="btnSection__desc">
+                            You can also have your button take the entire span of the block too by adding
+                            <span><code class="snippet">btn--block</code></span> to your class list. You can
+                            even mix it with the button roundness classes.
+                        </p>
+                        <button class="btn btn--theme1 btn--block">test</button>
+                        <button class="btn btn--theme1 btn--block btn--h-round">test</button>
+                        <button class="btn btn--theme1 btn--block btn--f-round">test</button>
+                    </div>
+                </div>
+
+                <!-- CODES -->
+                <div class="col-2-of-3">
+                    <div class="alert alert--default">
+                        <code>
+                            &lt;!-- Button block --&gt;<br>
+                            &lt;button class="btn btn--theme1 btn--block"&gt;test&lt;/test&gt;<br>
+                            &lt;button class="btn btn--theme1 btn--block btn--h-round"&gt;test&lt;/test&gt;<br>
+                            &lt;button class="btn btn--theme1 btn--block btn--f-round"&gt;test&lt;/test&gt;<br>
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ALERTS TEST -->
+    <section id="#alerts">
+        <div class="container">
+            <h2>Alerts</h2>
+
+            <div class="col-1-of-3"></div>
+            <div class="col-2-of-3"></div>
+        </div>
+    </section>
+
+    <!-- GRID TEST -->
+    <section id="#grids">
+        <div class="container">
+            <h2>Grid</h2>
+        </div>
+    </section>
+
+    <!-- FORM TEST -->
+    <section id="#forms">
+        <div class="container">
+            <h2>Form Test</h2>
+            <form class="form">
+                <div class="form__box">
+                    <input class="form__input" type="text" id="name" name="name">
+                    <label for="name">Name</label>
+                </div>
+
+                <div class="form__box">
+                    <input class="form__input" type="email" id="email" name="email">
+                    <label for="email">Email</label>
+                </div>
+
+                <div class="form__box">
+                    <input class="form__input" type="password" id="pass" name="pass">
+                    <label for="pass">Password</label>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- TABLES TEST -->
+    <section id="#table">
+        <div class="container">
+            <h2>Tables</h2>
+        </div>
+    </section>
+
+    <!-- THUMBNAILS TEST -->
+    <section id="#thumbnails">
+        <div class="container">
+            <h2>Thumbnails</h2>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="text--center">
+        <p>
+            Designed with <span><i class="fa fa-heart animate--pulse"></i></span> by <a href="https://jdriviere.github.io">J. D. Riviere</a> using <a href="https://github.com/jdriviere/sparkle-css">Sparkle</a> &copy; 2017
+        </p>
+    </footer>
+
+    <!-- LOADING SCRIPTS - Note: At the bottom of <body> makes scripts load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/a833db4ecd.js"></script>
+    <!-- <script src="https://gitcdn.link/repo/jdriviere/sparkle-css/master/dist/js/sparkle.min.js"></script> -->
+     <script src="dist/js/sparkle.min.js"></script> 
+</body>
+</html>

@@ -7,14 +7,15 @@
 // MIXINS
 @mixin button {
     display: inline-block;
-    width: auto;
-    vertical-align: center;
-    cursor: pointer;
+    padding: 0.25em;
     border: none;
     outline: none;
+    vertical-align: center;    
     text-align: center;
     text-decoration: none;
-
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    cursor: pointer;
     @include transition(all, 0.3s, ease-in);
 
     &:hover {
@@ -64,43 +65,21 @@
     } // End of LOOP
 
     // SIZES
-    &--sml {
-        padding: 0.125em 1em;
-        line-height: 1.625em;
-        font-size: .75em;
-    }
-    &--med {
-        padding: 0.1875em 1.5em;
-        line-height: 1.75em;
-        font-size: 1em;
-    }
-    &--lrg {
-        padding: 0.25em 1.875em;
-        line-height: 2em;
-		font-size: 1.25em;
-        font-weight: $font-weight-heavy;
-    }
-    &--xlg {
-        padding: 0.3125em 2em;
-        line-height: 2.125em;
-        font-size: 1.5em;
-        font-weight: $font-weight-heavy;
-    }
-    &--jmb {
-        padding: 0.375em 2.5em;
-        line-height: 2.25em;
-        font-size: 1.5em;
-        font-weight: $font-weight-heavy;
-    }
-    &--responsive {
+    &--small { padding: 0.5em 1em; font-size: 0.75em; }
+    &--medium { padding: 0.75em 1.5em; font-size: 1em; }
+    &--large { padding: 1.25em 2em; font-size: 1em; font-weight: $font-weight-heavy; }
+    &--xlarge { padding: 1.75em 2.5em; font-size: 1em; font-weight: $font-weight-heavy; }
+    &--block {
         width: 100%;
-        padding: 0.5em 0;
-        line-height: 1.25em;
+        padding: 0.75em 0;
         font-size: 1.25em;
+        letter-spacing: 0.25em;
         font-weight: $font-weight-heavy;
+
+        &:hover { @include scale-uniform(1.0); }
     }
 
-    &--h-round { @include border-radius; }
+    // STYLES
+    &--h-round { @include border-radius(10px); }
     &--f-round { @include border-radius(35px); }
-
 }
