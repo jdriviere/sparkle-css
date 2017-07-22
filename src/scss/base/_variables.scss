@@ -8,11 +8,11 @@ $color-danger:				#E74C3C !default; // Yields a darkish-red color
 $color-primary:				#3498DB !default; // Yields a skyish-blue color
 $color-light:				#E1E1E1 !default; // Yields an off-white color
 $color-dark:				#333333 !default; // Yields an off-black color
-$color-white:				#F9FAFC !default; // Yields a white color
+$color-white:				#F8F8FF !default; // Yields a ghost-white color
 $color-black:				#121314 !default; // Yields a black color
-$color-none:				transparent !default; // Yields a transparent color
-$color-theme1:				#ADD8E6 !default; // Yields lighter light-teal blue of logo 
+$color-theme1:				#ADD8E6 !default; // Yields lighter light-blue of logo 
 $color-theme2:				#9BC2E6 !default; // Yields darker light-teal blue of logo
+$color-none:				transparent !default; // Yields a transparent color
 
 // ================================
 // GENERAL - GRAY TONES
@@ -25,8 +25,8 @@ $color-grey-100:			#FCFCFC; // Yields a grey (100%)
 // =================================
 // GENERAL - DARKEN/LIGHTEN
 // =================================
-$lighten:					5% !default;
-$darken:					5% !default;
+$lighten:					7.5% !default;
+$darken:					7.5% !default;
 
 // =================================
 // GENERAL - UI COLORS (On-Hover)
@@ -96,32 +96,32 @@ $grid-gutter:				0.75em !default; // Default gutter is 12px. Can be changed to 2
 // =================================
 $btn-color-maps: (
     default:				($color-default, #95A5A6),
-    primary:				($color-primary, #FFF),
-    success:				($color-success, #FFF),
-    warning:				($color-warning, #FFF),
-    danger:					($color-danger, #FFF),
-    light:					($color-light, #333),
-	dark:					($color-dark, #FFF),
-	theme1:					($color-theme1, #FFF),
-	theme2:					($color-theme2, #FFF)
-);
+    primary:				($color-primary, $color-white),
+    success:				($color-success, $color-white),
+    warning:				($color-warning, $color-white),
+    danger:					($color-danger, $color-white),
+    light:					($color-light, $color-dark),
+	dark:					($color-dark, $color-white),
+	theme1:					($color-theme1, $color-white),
+	theme2:					($color-theme2, $color-white)
+) !default;
 
 // =================================
 // ALERTS VARIABLES
 // =================================
-$alert-bg-default:			#EFEFEF;
-$alert-bg-success:			#C8F7C5;
-$alert-bg-warning:			#FDFD96;
-$alert-bg-danger:			#F1A9A0;
-$alert-bg-info:				#CCDBEC;
-$alert-border-default:		#7F8C8D;
-$alert-border-success:		#27AE60;
-$alert-border-warning:		#F39C12;
-$alert-border-danger:		#C0392B;
-$alert-border-info:			#2980B9;
-$alert-font-default:		#7F8C8D;
-$alert-font-success:		#27AE60;
-$alert-font-warning:		#F39C12;
-$alert-font-danger:			#C0392B;
-$alert-font-info:			#2980B9;
-$alert-font-size:			0.875em;				
+$alert-bg-default:			#EFEFEF !default;
+$alert-bg-success:			#C8F7C5 !default;
+$alert-bg-warning:			#FDFD96 !default;
+$alert-bg-danger:			#F1A9A0 !default;
+$alert-bg-info:				#CCDBEC !default;
+$alert-border-default:		#7F8C8D !default;
+$alert-border-success:		#27AE60 !default;
+$alert-border-warning:		#F39C12 !default;
+$alert-border-danger:		#C0392B !default;
+$alert-border-info:			#2980B9 !default;
+$alert-font-default:		$alert-border-default !default;
+$alert-font-success:		$alert-border-success !default;
+$alert-font-warning:		$alert-border-warning !default;
+$alert-font-danger:			$alert-border-danger !default;
+$alert-font-info:			$alert-border-info !default;
+$alert-font-size:			0.875em !default;
