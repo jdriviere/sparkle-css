@@ -25,9 +25,12 @@
         .snippet { padding: 0.125em; background-color: #DDD; }
         
         .btnSection button { margin-bottom: 0.25em; }
-        .btnSection__block { margin-bottom: 1.25em; }
-        .btnSection__title { text-transform: uppercase; letter-spacing: 0.125em; color: #CCC; }
-        .btnSection__desc { margin-bottom: 1.25em; }
+        .btnSection__block,
+        .formSection__block { margin-bottom: 1.25em; }
+        .btnSection__title,
+        .formSection__title { text-transform: uppercase; letter-spacing: 0.125em; color: #CCC; }
+        .btnSection__desc,
+        .formSection__desc { margin-bottom: 1.25em; }
 
 
         footer {
@@ -306,22 +309,79 @@
     <section id="#forms">
         <div class="container">
             <h2>Form Test</h2>
-            <form class="form">
-                <div class="form__box">
-                    <input class="form__input" type="text" id="name" name="name">
-                    <label for="name">Name</label>
+
+            <div class="row">
+                <div class="col-1-of-3">
+                    <div class="formSection__block">
+                        <h4 class="formSection__title">Regular forms</h4>
+                        <p class="formSection__desc">
+                            Sparkle offers the possibility to customize forms. It was heavily
+                            influenced by Google Material UI. In order to use the forms feature,
+                            you must add the <span><code class="snippet">.form</code></span>
+                            class to the the &lt;form&gt; element.<br>
+                            In order to optimize the use of &lt;label&gt; with its accompanying
+                            &lt;input&gt; tags, you must envelop them both in a &lt;div&gt; with a
+                            <span><code class="snippet">form__box</code></span> class. And to stylize
+                            the inputs, simply add <span><code class="snippet">form__input</code></span>
+                            to its class list (you do not need to add any classes to the &lt;label&gt; tag).
+                        </p>
+                    </div>
+
+                    <form class="form">
+                        <div class="form__box">
+                            <input class="form__input" type="text" id="name" name="name">
+                            <label for="name">Name</label>
+                        </div>
+
+                        <div class="form__box">
+                            <input class="form__input" type="email" id="email" name="email">
+                            <label for="email">Email</label>
+                        </div>
+
+                        <div class="form__box">
+                            <input class="form__input" type="password" id="pass" name="pass">
+                            <label for="pass">Password</label>
+                        </div>
+
+                        <button class="btn btn--success btn--medium">Send</button>
+                    </form>
                 </div>
 
-                <div class="form__box">
-                    <input class="form__input" type="email" id="email" name="email">
-                    <label for="email">Email</label>
+                <!-- CODES -->
+                <div class="col-2-of-3">
+                    <div class="alert alert--default">
+                        <code>
+                            &lt;form class="form"&gt;<br>
+                                &lt;div class="form__box"&gt;<br>
+                                    &lt;input class="form__input" type="text" id="name"&gt;<br>
+                                    &lt;label for="input"&gt;Name&lt;/label&gt;<br>
+                                &lt;/div&gt;<br>
+                                <br>
+                                &lt;div class="form__box"&gt;<br>
+                                    &lt;input class="form__input" type="email" id="email"&gt;<br>
+                                    &lt;label for="input"&gt;Email&lt;/label&gt;<br>
+                                &lt;/div&gt;<br>
+                                <br>
+                                &lt;div class="form__box"&gt;<br>
+                                    &lt;input class="form__input" type="password" id="pass"&gt;<br>
+                                    &lt;label for="input"&gt;Password&lt;/label&gt;<br>
+                                &lt;/div&gt;<br>
+                            &lt;/form&gt;
+                        </code>
+                    </div>
                 </div>
+            </div>
 
-                <div class="form__box">
-                    <input class="form__input" type="password" id="pass" name="pass">
-                    <label for="pass">Password</label>
+            <div class="row">
+                <div class="col-1-of-3">
+                    <div class="formSection__block">
+                        <h4 class="formSection__title">Other features</h4>
+                        <p class="formSection__desc">
+                            Coming soon...
+                        </p>
+                    </div>
                 </div>
-            </form>
+            </div>
         </div>
     </section>
 
