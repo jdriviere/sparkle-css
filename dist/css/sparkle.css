@@ -1178,8 +1178,8 @@ code {
 .modal__close {
   position: absolute;
   display: block;
-  top: 15px;
-  right: 15px;
+  top: 1em;
+  right: 1em;
   color: #C0C0C0;
   font-size: 1.25em;
   cursor: pointer;

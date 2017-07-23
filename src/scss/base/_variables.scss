@@ -11,8 +11,8 @@ $color-dark:				#333333 !default; // Yields an off-black color
 $color-white:				#F8F8FF !default; // Yields a ghost-white color
 $color-grey:                #95A5A6 !default; // Yields a stale-grey color
 $color-black:				#121314 !default; // Yields a black color
-$color-theme1:				#ADD8E6 !default; // Yields lighter light-blue of logo 
-$color-theme2:				#9BC2E6 !default; // Yields darker light-teal blue of logo
+$color-theme1:				#ADD8E6 !default; // Yields light-blue of logo 
+$color-theme2:				#9BC2E6 !default; // Yields darker light-blue of logo
 $color-none:				transparent !default; // Yields a transparent color
 
 // ================================
@@ -28,28 +28,6 @@ $color-grey-100:			#FCFCFC; // Yields a grey (100%)
 // =================================
 $lighten:					7.5% !default;
 $darken:					7.5% !default;
-
-// =================================
-// GENERAL - UI COLORS (On-Hover)
-// =================================
-$color-success-hover:		darken($color-success, $darken);
-$color-warning-hover:		darken($color-warning, $darken);
-$color-danger-hover:		darken($color-danger, $darken);
-$color-primary-hover:		darken($color-primary, $darken);
-$color-default-hover:		darken($color-default, $darken);
-$color-light-hover:			darken($color-light, $darken);
-$color-dark-hover:			darken($color-dark, $darken);
-
-// ================================
-// GENERAL - UI COLORS (Unavailable/Clicked)
-// =================================
-$color-success-invalid:		lighten($color-success, $lighten);
-$color-warning-invalid:		lighten($color-warning, $lighten);
-$color-danger-invalid:		lighten($color-danger, $lighten);
-$color-primary-invalid:		lighten($color-primary, $lighten);
-$color-default-invalid:		lighten($color-default, $lighten);
-$color-light-invalid:		lighten($color-light, $lighten);
-$color-dark-invalid:		lighten($color-dark, $lighten);
 
 // =================================
 // GENERAL - SCREEN BREAKPOINTS
