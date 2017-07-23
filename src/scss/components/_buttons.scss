@@ -47,6 +47,7 @@
 		$bordercolor: $bgcolor;
 		$fontoutline: $bordercolor;
 
+        // STYLES
         &--#{$type} {
             background-color: $bgcolor;
             color: $fontcolor !important;
@@ -62,7 +63,7 @@
 			
 			&:hover { background-color: $bgcolor; color: $fontcolor !important; }
 		}
-    } // End of LOOP
+    } // End of EACH-LOOP
 
     // SIZES
     &--small { padding: 0.5em 1em; font-size: 0.75em; }

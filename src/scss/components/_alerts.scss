@@ -4,14 +4,7 @@
 @import "../base/_variables";
 @import "../base/_mixins";
 
-@mixin alert($bg: $alert-bg-default, $font: $alert-font-default, $border: $alert-border-default) {
-    background-color: $bg;
-    color: $font;
-    border: 1px solid $border;
-    border-left: 5px solid $border;
-} // End of Alert
-
-.alert {
+@mixin alert {
     display: block;
     width: 100%;
     margin: 1em 0;
@@ -19,14 +12,29 @@
     @include box-shadow(5, 5, 7, 0.7);
     @include border-radius-cust(0, 5, 5, 0);
     z-index: $index-high;
+} // End of Alert
 
+.alert {
+    // Create alert block
+    @include alert;
+
+    // Loop through each alert color-map and fetch info
+    @each $type, $color in $alert-color-maps {
+        $bgcolor: nth($color, 1);
+        $fontcolor: nth($color, 2);
+        $bordercolor: $fontcolor;
+        
+        // STYLES
+        &--#{$type} {
+            background-color: $bgcolor;
+            color: $fontcolor !important;
+            border: 1px solid $bordercolor;
+            border-left: 5px solid $bordercolor;
+        }
+    } // End of EACH-LOOP
+
+    // COMPONENTS
     &__title { font-weight: $font-weight-heavy; }
     &__desc { font-size: $alert-font-size; }
     &__list { margin-left: 0.9375em; }
-
-    &--default { @include alert; }
-    &--info { @include alert($alert-bg-info, $alert-font-info, $alert-border-info); }
-    &--success { @include alert($alert-bg-success, $alert-font-success, $alert-border-success); }
-    &--warning { @include alert($alert-bg-warning, $alert-font-warning, $alert-border-warning); }
-    &--danger { @include alert($alert-bg-danger, $alert-font-danger, $alert-border-danger); }
 }

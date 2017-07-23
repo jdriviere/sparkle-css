@@ -9,13 +9,14 @@ $color-primary:				#3498DB !default; // Yields a skyish-blue color
 $color-light:				#E1E1E1 !default; // Yields an off-white color
 $color-dark:				#333333 !default; // Yields an off-black color
 $color-white:				#F8F8FF !default; // Yields a ghost-white color
+$color-grey:                #95A5A6 !default; // Yields a stale-grey color
 $color-black:				#121314 !default; // Yields a black color
 $color-theme1:				#ADD8E6 !default; // Yields lighter light-blue of logo 
 $color-theme2:				#9BC2E6 !default; // Yields darker light-teal blue of logo
 $color-none:				transparent !default; // Yields a transparent color
 
 // ================================
-// GENERAL - GRAY TONES
+// GENERAL - GREY TONES
 // ================================
 $color-grey-25:				#404040; // Yields a grey (25%)
 $color-grey-50:				#7F7F7F; // Yields a grey (50%)
@@ -95,7 +96,7 @@ $grid-gutter:				0.75em !default; // Default gutter is 12px. Can be changed to 2
 // BUTTON VARIABLES
 // =================================
 $btn-color-maps: (
-    default:				($color-default, #95A5A6),
+    default:				($color-default, $color-grey),
     primary:				($color-primary, $color-white),
     success:				($color-success, $color-white),
     warning:				($color-warning, $color-white),
@@ -109,19 +110,11 @@ $btn-color-maps: (
 // =================================
 // ALERTS VARIABLES
 // =================================
-$alert-bg-default:			#EFEFEF !default;
-$alert-bg-success:			#C8F7C5 !default;
-$alert-bg-warning:			#FDFD96 !default;
-$alert-bg-danger:			#F1A9A0 !default;
-$alert-bg-info:				#CCDBEC !default;
-$alert-border-default:		#7F8C8D !default;
-$alert-border-success:		#27AE60 !default;
-$alert-border-warning:		#F39C12 !default;
-$alert-border-danger:		#C0392B !default;
-$alert-border-info:			#2980B9 !default;
-$alert-font-default:		$alert-border-default !default;
-$alert-font-success:		$alert-border-success !default;
-$alert-font-warning:		$alert-border-warning !default;
-$alert-font-danger:			$alert-border-danger !default;
-$alert-font-info:			$alert-border-info !default;
+$alert-color-maps: (
+    default:                (#EFEFEE, #7F8C8D),
+    success:                (#C8F7C5, #27AE60),
+    warning:                (#FDFD96, #F39C12),
+    danger:                 (#F1A9A0, #C0392B),
+    info:                   (#CCDBEC, #2980B9)
+) !default;
 $alert-font-size:			0.875em !default;
