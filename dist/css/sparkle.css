@@ -677,6 +677,7 @@ code {
 .btn--default--outline:hover {
   background-color: #ECF0F1;
   color: #95A5A6 !important;
+  border: transparent;
 }
 
 .btn--primary {
@@ -698,6 +699,7 @@ code {
 .btn--primary--outline:hover {
   background-color: #3498DB;
   color: #F8F8FF !important;
+  border: transparent;
 }
 
 .btn--success {
@@ -719,6 +721,7 @@ code {
 .btn--success--outline:hover {
   background-color: #2ECC71;
   color: #F8F8FF !important;
+  border: transparent;
 }
 
 .btn--warning {
@@ -740,6 +743,7 @@ code {
 .btn--warning--outline:hover {
   background-color: #FFCE54;
   color: #F8F8FF !important;
+  border: transparent;
 }
 
 .btn--danger {
@@ -761,6 +765,7 @@ code {
 .btn--danger--outline:hover {
   background-color: #E74C3C;
   color: #F8F8FF !important;
+  border: transparent;
 }
 
 .btn--light {
@@ -782,6 +787,7 @@ code {
 .btn--light--outline:hover {
   background-color: #E1E1E1;
   color: #333333 !important;
+  border: transparent;
 }
 
 .btn--dark {
@@ -803,6 +809,7 @@ code {
 .btn--dark--outline:hover {
   background-color: #333333;
   color: #F8F8FF !important;
+  border: transparent;
 }
 
 .btn--theme1 {
@@ -824,6 +831,7 @@ code {
 .btn--theme1--outline:hover {
   background-color: #ADD8E6;
   color: #F8F8FF !important;
+  border: transparent;
 }
 
 .btn--theme2 {
@@ -845,6 +853,7 @@ code {
 .btn--theme2--outline:hover {
   background-color: #9BC2E6;
   color: #F8F8FF !important;
+  border: transparent;
 }
 
 .btn--small {

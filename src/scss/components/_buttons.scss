@@ -44,8 +44,6 @@
     @each $type, $color in $btn-color-maps {
         $bgcolor: nth($color, 1);
         $fontcolor: nth($color, 2);
-		$bordercolor: $bgcolor;
-		$fontoutline: $bordercolor;
 
         // STYLES
         &--#{$type} {
@@ -57,11 +55,15 @@
 		
 		&--#{$type}--outline {
 			background-color: $color-none;
-			color: $fontoutline !important;
-			border: 2px solid $bordercolor;
+			color: $bgcolor !important;
+			border: 2px solid $bgcolor;
 			font-weight: $font-weight-heavy;
 			
-			&:hover { background-color: $bgcolor; color: $fontcolor !important; }
+			&:hover {
+                background-color: $bgcolor;
+                color: $fontcolor !important;
+                border: transparent;
+            }
 		}
     } // End of EACH-LOOP
 
