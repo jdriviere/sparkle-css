@@ -17,8 +17,8 @@
         width: 100%;
 
         .is-square { @include border-radius; overflow: hidden; }
-        .is-rounded { @extend &__img.is-square; @include border-radius(15px); }
-        .is-circle { @extend &__img.is-square; @include border-radius(50%); }
+        .is-rounded { @include border-radius(15px); overflow: hidden; }
+        .is-circle { @include border-radius(50%); overflow: hidden; }
     }
     &__caption {
         padding: 0.5em;

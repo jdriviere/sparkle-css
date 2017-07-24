@@ -10,20 +10,20 @@
     &--load { animation: load 1s linear infinite; }
     &--bounce { animation: bounce 1s infinite; }
 
-    &--appear { animation: appear 1s ease-in; }
-    &--disappear { animation: disappear 1s ease-out; }
+    &--appear { animation: appear 1s ease-in forwards; }
+    &--disappear { animation: disappear 1s ease-out forwards; }
     
-    &--fade-in { animation: fade-in 1s ease-in; }
-    &--fade-in--top { animation: fade-in-top 1s ease-in; }
-    &--fade-in--bottom { animation: fade-in-bottom 1s ease-in; }
-    &--fade-in--left { animation: fade-in-left 1s ease-in; }
-    &--fade-in--right { animation: fade-in-right 1s ease-in; }
+    &--fade-in { animation: fade-in 1s ease-in forwards; }
+    &--fade-in--top { animation: fade-in-top 1s ease-in forwards; }
+    &--fade-in--bottom { animation: fade-in-bottom 1s ease-in forwards; }
+    &--fade-in--left { animation: fade-in-left 1s ease-in forwards; }
+    &--fade-in--right { animation: fade-in-right 1s ease-in forwards; }
 
-    &--fade-out { animation: fade-out 1s ease-out; }
-    &--fade-out--top { animation: fade-out-top 1s ease-in; }
-    &--fade-out--bottom { animation: fade-out-bottom 1s ease-in; }
-    &--fade-out--left { animation: fade-out-left 1s ease-in; }
-    &--fade-out--right { animation: fade-out-right 1s ease-in; }
+    &--fade-out { animation: fade-out 1s ease-out forwards; }
+    &--fade-out--top { animation: fade-out-top 1s ease-in forwards; }
+    &--fade-out--bottom { animation: fade-out-bottom 1s ease-in forwards; }
+    &--fade-out--left { animation: fade-out-left 1s ease-in forwards; }
+    &--fade-out--right { animation: fade-out-right 1s ease-in forwards; }
 }
 
 // LOOPABLE
