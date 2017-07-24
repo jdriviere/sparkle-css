@@ -5,17 +5,32 @@
 @import "../base/_mixins";
 
 // ANIMATIONS
-.animate--pulse { animation: pulse 1s ease-in infinite; }
-.animate--load { animation: load 1s linear infinite; }
-.animate--fade-in { animation: fade-in 1s ease-in; }
-.animate--fade-out { animation: fade-out 1s ease-out; }
-.animate--bounce { animation: bounce 1s infinite; }
+.animate {
+    &--pulse { animation: pulse 1s ease-in infinite; }
+    &--load { animation: load 1s linear infinite; }
+    &--bounce { animation: bounce 1s infinite; }
 
-// KEYFRAMES
+    &--appear { animation: appear 1s ease-in; }
+    &--disappear { animation: disappear 1s ease-out; }
+    
+    &--fade-in { animation: fade-in 1s ease-in; }
+    &--fade-in--top { animation: fade-in-top 1s ease-in; }
+    &--fade-in--bottom { animation: fade-in-bottom 1s ease-in; }
+    &--fade-in--left { animation: fade-in-left 1s ease-in; }
+    &--fade-in--right { animation: fade-in-right 1s ease-in; }
+
+    &--fade-out { animation: fade-out 1s ease-out; }
+    &--fade-out--top { animation: fade-out-top 1s ease-in; }
+    &--fade-out--bottom { animation: fade-out-bottom 1s ease-in; }
+    &--fade-out--left { animation: fade-out-left 1s ease-in; }
+    &--fade-out--right { animation: fade-out-right 1s ease-in; }
+}
+
+// LOOPABLE
 @keyframes pulse {
     0%, 100% { @include scale-uniform(1.0); }
-    20% { @include scale-uniform(0.9); }
-    60% { @include scale-uniform(1.1); }
+    10% { @include scale-uniform(0.9); }
+    70% { @include scale-uniform(1.1); }
 }
 
 @keyframes load {
@@ -23,26 +38,71 @@
     100% { @include rotate-uniform(359deg); }
 }
 
-@keyframes fade-in {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-@keyframes slide-in {
-    0% { opacity: 0; top: -9999; }
-    100% { opacity: 1; top: 0; }
-}
+// APPEAR | DISAPPEAR
 @keyframes appear {
     0% { opacity: 0; @include scale-uniform(0.0); }
     100% { opacity: 1; @include scale-uniform(1.0); }
 }
 
-@keyframes fade-out {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
+@keyframes disappear {
+    0% { opacity: 1; @include scale-uniform(1.0); }
+    100% { opacity: 0; @include scale-uniform(0.0); }
 }
 
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% { transform: translateY(0); } 
     40% {transform: translateY(-8px);} 
     60% {transform: translateY(-4px);}
+}
+
+// FLOAT-IN
+@keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes float-in-top {
+    0% { top: -9999; opacity: 0; }
+    100% { top: 0; opacity: 1; }
+}
+
+@keyframes float-in-bottom {
+    0% { bottom: -9999; opacity: 0; }
+    100% { bottom: 0; opacity: 1; }
+}
+
+@keyframes float-in-left {
+    0% { left: -9999; opacity: 0; }
+    100% { left: 0; opacity: 1; }
+}
+
+@keyframes float-in-right {
+    0% { right: -9999; opacity: 0; }
+    100% { right: 0; opacity: 1; }
+}
+
+// FLOAT-OUT
+@keyframes fade-out {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes float-out-top {
+    0% { top: 0; opacity: 1; }
+    100% { top: -9999; opacity: 0; }
+}
+
+@keyframes float-out-bottom {
+    0% { bottom: 0; opacity: 1; }
+    100% { bottom: -9999; opacity: 0; }
+}
+
+@keyframes float-out-left {
+    0% { left: 0; opacity: 1; }
+    100% { left: -9999; opacity: 0; }
+}
+
+@keyframes float-out-right {
+    0% { right: 0; opacity: 1; }
+    100% { right: -9999; opacity: 0; }
 }

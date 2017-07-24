@@ -11,25 +11,14 @@
     @include border-radius;
     overflow: hidden;
 
-    .has-shadow {
-        @include box-shadow(0, 3, 15, 0.5);
-    }
+    .has-shadow { @include box-shadow(0, 3, 15, 0.5); }
 
     &__img {
         width: 100%;
 
-        .is-square {
-            @include border-radius;
-            overflow: hidden;
-        }
-        .is-rounded {
-            @include border-radius(15px);
-            overflow: hidden;
-        }
-        .is-circle {
-            @include border-radius(50%);
-            overflow: hidden;
-        }
+        .is-square { @include border-radius; overflow: hidden; }
+        .is-rounded { @extend &__img.is-square; @include border-radius(15px); }
+        .is-circle { @extend &__img.is-square; @include border-radius(50%); }
     }
     &__caption {
         padding: 0.5em;

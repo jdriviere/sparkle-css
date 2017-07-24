@@ -5,10 +5,7 @@
 @import "../base/_mixins";
 
 .form {
-	&__box {
-		position: relative;
-		margin: 2em 0;
-	}
+	&__box { position: relative; margin: 2em 0; }
 
 	&__input {
 		position: relative;
@@ -52,9 +49,7 @@
 			color: $color-dark;
 		}
 
-		&.has-value:not(:focus) + label {
-			color: $color-grey-75;
-		}
+		&.has-value:not(:focus) + label { color: $color-grey-75; }
 	}
 
 	textarea {
@@ -64,6 +59,7 @@
 	}
 }
 
+// PLACEHOLDERS
 ::-webkit-input-placeholder { color: $color-grey-75; } // WebKit, Blink, Edge
 ::-moz-placeholder { color: $color-grey-75; opacity: 1; } // Mozilla Firefox 19+
 :-moz-placeholder { color: $color-grey-75; opacity: 1; } // Mozilla Firefox 4 to 18

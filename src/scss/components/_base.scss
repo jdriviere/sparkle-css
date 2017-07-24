@@ -5,16 +5,12 @@
 @import "../base/_mixins";
 
 * {
-    margin: 0;
-    padding: 0;
+    @include reset;
     font-size: 100%;
     text-rendering: optimizeLegibility;
     @include box-sizing;
     
-    &:before,
-    &:after {
-        @extend *;
-    }
+    &:before, &:after { @extend *; }
 }
 body {
 	height: 100%;

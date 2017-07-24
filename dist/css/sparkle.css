@@ -1136,20 +1136,20 @@ code {
 /* MODALS
 /* ===================================================*/
 .modal {
-  display: block;
+  visibility: hidden;
   position: fixed;
-  z-index: 1;
+  z-index: 9999;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
+  overflow: auto;
 }
 
 .modal__body {
   position: relative;
-  display: block;
+  top: 40%;
   max-width: 43.75em;
   margin: 1.25em auto;
   padding: 0.75em;
@@ -1181,7 +1181,8 @@ code {
   top: 1em;
   right: 1em;
   color: #C0C0C0;
-  font-size: 1.25em;
+  font-size: 1.5em;
+  font-weight: 700;
   cursor: pointer;
 }
 
@@ -1195,6 +1196,10 @@ code {
   -moz-transition: scale 0.3s linear;
   -ms-tranition: scale 0.3s linear;
   transition: scale 0.3s linear;
+}
+
+.modal--show {
+  visibility: visible;
 }
 
 /* ===================================================*/

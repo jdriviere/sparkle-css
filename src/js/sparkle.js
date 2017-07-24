@@ -76,21 +76,21 @@ function navResizeFix () {
 
 // This function controls the modal functionality.
 function modalAction () {
-    // Get the modal
-    var modal = $('#modal');
-
-    // Get the element that closes the modal
-    var closeBtn = $('.modal__close');
+    // When user clicks on element to open modal
+    $('#modalOpen').click(function() {
+        $('.modal').toggleClass('modal--show');
+        console.log('Modal open');
+    });
 
     // When the user clicks on <span> (x), close the modal
-    closeBtn.click(function() {
-        modal.css('display', 'none');
+    $('.modal__close').click(function() {
+        $('.modal').removeClass('modal--show');
     });
 
     // When the user clicks anywhere outside of the modal, close it
-    $(window).click(function() {
-        modal.css('display', 'none');
-    });
+    // $('html').click(function() {
+    //     $('.modal').removeClass('modal--show');
+    // });
 } // End of ModalAction
 
 // This function controls the flow of the form field
