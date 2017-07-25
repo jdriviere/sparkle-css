@@ -64,6 +64,19 @@
                 color: $fontcolor !important;
                 border: transparent;
             }
+        }
+        
+        &--#{$type}--ghost {
+			background-color: $color-white;
+			color: $bgcolor !important;
+			border: 1px solid $color-light;
+			font-weight: $font-weight-heavy;
+			
+			&:hover {
+                background-color: $bgcolor;
+                color: $fontcolor !important;
+                border: transparent;
+            }
 		}
     } // End of EACH-LOOP
 
