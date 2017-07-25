@@ -677,7 +677,7 @@ pre > code {
 .btn--default--outline:hover {
   background-color: #ECF0F1;
   color: #95A5A6 !important;
-  border: transparent;
+  border-color: transparent;
 }
 
 .btn--default--ghost {
@@ -690,7 +690,7 @@ pre > code {
 .btn--default--ghost:hover {
   background-color: #ECF0F1;
   color: #95A5A6 !important;
-  border: transparent;
+  border-color: transparent;
 }
 
 .btn--primary {
@@ -712,7 +712,7 @@ pre > code {
 .btn--primary--outline:hover {
   background-color: #3498DB;
   color: #F8F8FF !important;
-  border: transparent;
+  border-color: transparent;
 }
 
 .btn--primary--ghost {
@@ -725,7 +725,7 @@ pre > code {
 .btn--primary--ghost:hover {
   background-color: #3498DB;
   color: #F8F8FF !important;
-  border: transparent;
+  border-color: transparent;
 }
 
 .btn--success {
@@ -747,7 +747,7 @@ pre > code {
 .btn--success--outline:hover {
   background-color: #2ECC71;
   color: #F8F8FF !important;
-  border: transparent;
+  border-color: transparent;
 }
 
 .btn--success--ghost {
@@ -760,7 +760,7 @@ pre > code {
 .btn--success--ghost:hover {
   background-color: #2ECC71;
   color: #F8F8FF !important;
-  border: transparent;
+  border-color: transparent;
 }
 
 .btn--warning {
@@ -782,7 +782,7 @@ pre > code {
 .btn--warning--outline:hover {
   background-color: #FFCE54;
   color: #F8F8FF !important;
-  border: transparent;
+  border-color: transparent;
 }
 
 .btn--warning--ghost {
@@ -795,7 +795,7 @@ pre > code {
 .btn--warning--ghost:hover {
   background-color: #FFCE54;
   color: #F8F8FF !important;
-  border: transparent;
+  border-color: transparent;
 }
 
 .btn--danger {
@@ -817,7 +817,7 @@ pre > code {
 .btn--danger--outline:hover {
   background-color: #E74C3C;
   color: #F8F8FF !important;
-  border: transparent;
+  border-color: transparent;
 }
 
 .btn--danger--ghost {
@@ -830,7 +830,7 @@ pre > code {
 .btn--danger--ghost:hover {
   background-color: #E74C3C;
   color: #F8F8FF !important;
-  border: transparent;
+  border-color: transparent;
 }
 
 .btn--light {
@@ -852,7 +852,7 @@ pre > code {
 .btn--light--outline:hover {
   background-color: #E1E1E1;
   color: #333333 !important;
-  border: transparent;
+  border-color: transparent;
 }
 
 .btn--light--ghost {
@@ -865,7 +865,7 @@ pre > code {
 .btn--light--ghost:hover {
   background-color: #E1E1E1;
   color: #333333 !important;
-  border: transparent;
+  border-color: transparent;
 }
 
 .btn--dark {
@@ -887,7 +887,7 @@ pre > code {
 .btn--dark--outline:hover {
   background-color: #333333;
   color: #F8F8FF !important;
-  border: transparent;
+  border-color: transparent;
 }
 
 .btn--dark--ghost {
@@ -900,7 +900,7 @@ pre > code {
 .btn--dark--ghost:hover {
   background-color: #333333;
   color: #F8F8FF !important;
-  border: transparent;
+  border-color: transparent;
 }
 
 .btn--theme1 {
@@ -922,7 +922,7 @@ pre > code {
 .btn--theme1--outline:hover {
   background-color: #ADD8E6;
   color: #F8F8FF !important;
-  border: transparent;
+  border-color: transparent;
 }
 
 .btn--theme1--ghost {
@@ -935,7 +935,7 @@ pre > code {
 .btn--theme1--ghost:hover {
   background-color: #ADD8E6;
   color: #F8F8FF !important;
-  border: transparent;
+  border-color: transparent;
 }
 
 .btn--theme2 {
@@ -957,7 +957,7 @@ pre > code {
 .btn--theme2--outline:hover {
   background-color: #9BC2E6;
   color: #F8F8FF !important;
-  border: transparent;
+  border-color: transparent;
 }
 
 .btn--theme2--ghost {
@@ -970,7 +970,7 @@ pre > code {
 .btn--theme2--ghost:hover {
   background-color: #9BC2E6;
   color: #F8F8FF !important;
-  border: transparent;
+  border-color: transparent;
 }
 
 .btn--small {

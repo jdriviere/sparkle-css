@@ -62,7 +62,7 @@
 			&:hover {
                 background-color: $bgcolor;
                 color: $fontcolor !important;
-                border: transparent;
+                border-color: transparent;
             }
         }
         
@@ -75,7 +75,7 @@
 			&:hover {
                 background-color: $bgcolor;
                 color: $fontcolor !important;
-                border: transparent;
+                border-color: transparent;
             }
 		}
     } // End of EACH-LOOP
