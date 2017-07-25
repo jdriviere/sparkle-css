@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <!-- TITLE -->
+    <title>Sparkle | Getting Started</title>
+
+	<!-- LOADING META CODES -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="J. Djimitry Riviere">
+	<meta name="description" content="Sparkle.CSS: a lightweight, responsive, mobile-first CSS framework for easy website designs.">
+	<meta name="keywords" content="HTML, HTML5, CSS, CSS3, CSS Framework, JavaScript, JS, sparkle, Sparkle, sparkle-css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- LOADING LINKS -->
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="dist/img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="dist/css/sparkle.min.css">
+    <!-- <link rel="stylesheet" href="https://gitcdn.link/repo/jdriviere/sparkle-css/master/dist/css/sparkle.min.css"> -->
+
+    <!-- INTERNAL STYLING -->
+    <style>
+        section { padding: 5em 0; }
+        
+        [class*='__title'] { color: #9BC2E6; }
+        .welcome__text,
+        .start__text { line-height: 2em; color: #777; }
+
+        .feature, .end {
+            background-color: #E6EEFD;
+            color: #333;
+        }
+        .feature__title,
+        .contribute__title { color: #3498DB; } 
+
+        footer {
+            clear: both;
+            display: block;
+            width: 100%;
+            padding: 1em;
+            color: #333;
+            border-top: 1px solid #EEE;
+        }
+        footer i { color: #C03; }
+        footer a { text-decoration: none; color: #3498DB; }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <nav class="nav nav--default">
+            <div class="nav__brand">
+                <a href="index.html">
+                    <img src="dist/img/Logo_InColor_side.png" alt="Sparkle_Logo" class="nav__brand__image">
+                </a>
+            </div>
+
+            <div id="nav__mobile" class="nav__menu__icon">Menu</div>
+
+            <ul class="nav__menu">
+                <li class="nav__menu__item"><a href="index.html">Home</a></li>
+                <li class="nav__menu__item"><a href="start.html">Getting Started</a></li>
+                <li class="nav__menu__item"><a href="docs.html">Documentation</a></li>
+                <li class="nav__menu__item"><a href="https://github.com/jdriviere/sparkle-css">Contribute</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- WELCOME -->
+    <section>
+        <div class="container welcome">
+            <h2 class="welcome__title text--center">What is Sparkle?</h2>
+            <p class="welcome__text">
+                Sparkle is a lightweight, responsive, open-source CSS framework created to help
+                Web Designers and Developers create simple, responsive websites and web applications.
+                It was developed by J. Djimitry Riviere in late 2016, and continues to be improved
+                upon by its developer. The major key to this framework lies within its ease of use
+                to deliver superb results when designing apps and websites.
+            </p>
+        </div>
+    </section>
+
+    <!-- FEATURE -->
+    <section class="feature">
+        <div class="container">
+            <h2 class="text--center">Why Choose Sparkle?</h2>
+            <h3 class="text--center">Because Sparkle is...</h3>
+            <div class="row">
+    			<div class="col">
+                    <div class="pull--center">
+                        <img src="dist/img/Icon_Book.png" alt="feather">
+                        <h4 class="feature__title">Semantic</h4>
+                        <p class="feature__desc">Sparkle uses BEM to keep the framework structured and simple for all to understand and use.</p>
+                    </div>
+    			</div>
+
+    			<div class="col">
+    				<div class="pull--center">
+                        <img src="dist/img/Icon_User.png" alt="feather">
+                        <h4 class="feature__title">User-Friendly</h4>
+                        <p class="feature__desc">Sparkle does most of the hard work for you. Simply style your elements.</p>
+                    </div>
+    			</div>
+
+    			<div class="col">
+                    <div class="pull--center">
+                        <img src="dist/img/Icon_Responsive.png" alt="responsive">
+                        <h4 class="feature__title">Responsive</h4>
+                        <p class="feature__desc">Sparkle was created to be responsive throughout all devices, using a mobile-first approach.</p>
+                    </div>
+    			</div>
+
+                <div class="col">
+                    <div class="pull--center">
+                        <img src="dist/img/Icon_Feather.png" alt="feather">
+                        <h4 class="feature__title">Lightweight</h4>
+    				    <p class="feature__desc">Sparkle is smaller than 20kb, which means it won't slow down your website loading.</p>
+                    </div>
+    			</div>
+    		</div>
+        </div>
+    </section>
+    
+    <!-- GETTING STARTED -->
+    <section>
+        <div class="container">
+            <h2 class="start__title text--center">Let's Get Started</h2>
+
+            <p class="start__text">
+                There are 4 ways to get started with the Sparkle framework:<br>
+                1. Clone your own copy by using the following command in your command line:
+                <div class="alert alert--default">
+                    <code>git clone https://github.com/jdriviere/sparkle-css.git</code>
+                    <br><br>(Note: If you wish to contribute to this project, be sure to read description below);
+                </div>
+                <p class="start__text">2. Download the .ZIP file;
+                <p class="start__text">3. Link the latest release directly into your HTML file by inserting the following lines to your HTML file:
+                <div class="alert alert--default">
+                    <code>
+                        &lt;!-- Place this in your &lt;head&gt; section --&gt;<br>
+                        &lt;link rel="stylesheet" href="https://gitcdn.link/repo/jdriviere/sparkle-css/master/dist/css/sparkle.min.css" &gt;
+                        <br>...<br>
+                        &lt;!-- Place this at the end of your &lt;body&gt; section --&gt;<br>
+                        &lt;script src="https://gitcdn.xyz/repo/jdriviere/sparkle-css/master/dist/js/sparkle.min.css"&gt;&lt;/script&gt;
+                    </code>
+                    <br><br>(Note: You will need both links to ensure Sparkle works efficiently, as it uses the jQuery.)
+                </div>
+                <p class="start__text">4. Use the NPM/Bower command to download the package into your node_modules folder:
+                <div class="alert alert--default">
+                    <code>npm install sparkle.css</code>
+                    <br><br>(Note: Node.js and NPM must be installed in your machine first.)
+                </div>
+                <div class="alert alert--default">
+                    <code>bower install sparkle-css</code>
+                    <br><br>(Note: Node.js and Bower must be installed in your machine first.)
+                </div>
+            </p>
+        </div>
+    </section>
+
+    <!-- PRE-FOOTER -->
+    <section class="end">
+        <div class="container contribute">
+            <h2 class="contribute__title text--center">Contributing</h2>
+            <p class="contribute__text">
+                You are encouraged to contribute to this project. Simply clone the repository,
+                and come up with new features, bug fixes, etc. and modify the files. Make sure
+                to follow the guidelines for the styling before posting.
+            </p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="text--center">
+        <p>
+            Designed with <span><i class="fa fa-heart animate--pulse"></i></span> by <a href="https://jdriviere.github.io">J. D. Riviere</a> using <a href="https://github.com/jdriviere/sparkle-css">Sparkle</a> &copy; 2017
+        </p>
+    </footer>
+
+    <!-- LOADING SCRIPTS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/a833db4ecd.js"></script>
+    <script src="dist/js/sparkle.min.js"></script>
+</body>
+</html>
