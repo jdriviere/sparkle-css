@@ -540,6 +540,14 @@ pre > code {
   transform: translate(-50%, -50%);
 }
 
+.visible, .show {
+  visibility: visible;
+}
+
+.invisible, .hide {
+  visibility: hidden;
+}
+
 /* ===================================================*/
 /* ALERTS
 /* ===================================================*/
@@ -1255,20 +1263,19 @@ pre > code {
 .modal {
   visibility: hidden;
   position: fixed;
-  z-index: 9999;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
-  overflow: auto;
+  overflow-y: auto;
+  z-index: 9999;
 }
 
 .modal__body {
   position: relative;
-  top: 40%;
   max-width: 43.75em;
-  margin: 1.25em auto;
+  margin: auto;
   padding: 0.75em;
   background-color: #F8F8FF;
   border-radius: 5px;
@@ -1295,8 +1302,8 @@ pre > code {
 .modal__close {
   position: absolute;
   display: block;
-  top: 1em;
-  right: 1em;
+  top: 0.5em;
+  right: 0.5em;
   color: #C0C0C0;
   font-size: 1.5em;
   font-weight: 700;
@@ -1317,6 +1324,10 @@ pre > code {
 
 .modal--show {
   visibility: visible;
+}
+
+.modal--show .modal__body {
+  animation: fade-in-top 1s ease-in 1;
 }
 
 /* ===================================================*/

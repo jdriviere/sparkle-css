@@ -68,3 +68,7 @@
 				
 	&-alt { @include manualFullCenter; }
 }
+
+// VISIBILITY
+.visible, .show { visibility: visible; }
+.invisible, .hide { visibility: hidden; }

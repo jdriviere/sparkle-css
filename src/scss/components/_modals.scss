@@ -8,13 +8,13 @@
 @mixin coverAll {
     visibility: hidden;
     position: fixed;
-    z-index: $index-highest;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
-    overflow: auto;
+    overflow-y: auto;
+    z-index: $index-highest;
 } // End of CoverAll
 
 // MODALS
@@ -23,9 +23,8 @@
 
     &__body {
         position: relative;
-        top: 40%; //<-- Not sure I want to keep this line
         max-width: 43.75em;
-        margin: 1.25em auto;
+        margin: auto;
         padding: 0.75em;
         background-color: $color-white;
         @include border-radius;
@@ -42,8 +41,8 @@
     &__close {
         position: absolute;
         display: block;
-        top: 1em;
-        right: 1em;
+        top: 0.5em;
+        right: 0.5em;
         color: $color-grey-75;
         font-size: 1.5em;
         font-weight: $font-weight-heavy;
@@ -59,5 +58,7 @@
 
     &--show {
         visibility: visible;
+
+        & .modal__body { animation: fade-in-top 1s ease-in 1; }
     }
 }
