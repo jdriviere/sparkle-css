@@ -68,6 +68,13 @@
                 appearance: none;
 } // End of Remove-Appearance
 
+@mixin back-visible($visibility) {
+    -webkit-backface-visibility: $visibility;
+        -moz-backface-visibility: $visibility;
+            -ms-backface-visibility: $visibility;
+                backface-visibility: $visibility;
+} // End of Back-Visible
+
 @mixin inputs {
     input[type='text'],
     input[type='email'],
