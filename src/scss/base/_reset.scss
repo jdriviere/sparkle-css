@@ -6,7 +6,7 @@
     padding: 0;
 } // End of Reset
 
-@mixin clear {
+@mixin clearfix {
     display: inline-block;
 
     &:after {

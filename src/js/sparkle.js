@@ -1,5 +1,5 @@
 // ==========================================================
-// Sparkle.js FRAMEWORK
+// Sparkle.js
 // ==========================================================
 // This is where all the Sparkle functions are implemented. Most of them will
 // serve to fix problems that occur within the CSS-only framework. This function
@@ -32,44 +32,37 @@ $(document).ready(function() {
 // -----------------------------
 // This function sets up the dropdown menu functionality.
 function navDrop() {
-    var navdrop = $('li.nav__menu__item > a:not(:only-child)');
-	var navdown = $('ul.nav__dropdown');
-
-	navdrop.click(function(event) {
-		$(this).siblings(navdown).slideToggle();
+    $('li.nav__menu__item > a:not(:only-child)').click(function(event) {
+		$(this).siblings($('ul.nav__dropdown')).slideToggle();
 
         // Prevents multiple dropdowns to remain open at the same time.
-		$(navdown).not($(this).siblings()).hide();
+		$('ul.nav__dropdown').not($(this).siblings()).hide();
 		event.stopPropagation();
 	});
 
 	// Hides dropdown when user clicks anywhere within the HTML page.
 	$('html').click(function() {
-		$(navdown).hide();
+		$('ul.nav__dropdown').hide();
 	});
 } // End of NavDrop
 
 // This function sets up the nav-toggle functionality.
 function navToggleAction() {
-    var navTog = $('#nav__mobile');
-    var navUl = $('.nav__menu');
-
-    navTog.click(function() {
-        navUl.slideToggle();
+    $('#nav__mobile').click(function() {
+        $('.nav__menu').slideToggle();
     });
 } // End of NavToggleAction
 
 // This function fixes the disappearing horizontal navbar menu when resized to desktop screen size.
 function navResizeFix () {
     $(window).resize(function() {
-		var navUl = $('.nav__menu');
-		var dropdown = $('.nav__dropdown');
-
-        if ($(window).width() > 639) {
-            navUl.css('display', 'flex');
-			dropdown.css('display', 'none');
+        // Forces to change display of navigation if screen is bigger than
+        // 767px of width. Also forces dropdown to close if open.
+        if ($(window).width() > 767) {
+            $('.nav__menu').css('display', 'flex');
+			$('.nav__dropdown').css('display', 'none');
         } else {
-			navUl.css('display', 'none');
+			$('.nav__menu').css('display', 'none');
 		} // End of ELSE-IF
     });
 } // End of NavResizeFix
@@ -78,19 +71,13 @@ function navResizeFix () {
 function modalAction () {
     // When user clicks on element to open modal
     $('#modalOpen').click(function() {
-        $('.modal').toggleClass('modal--show');
-        console.log('Modal open');
+        $('.modal').addClass('modal--show');
     });
 
     // When the user clicks on <span> (x), close the modal
     $('.modal__close').click(function() {
         $('.modal').removeClass('modal--show');
     });
-
-    // When the user clicks anywhere outside of the modal, close it
-    // $('html').click(function() {
-    //     $('.modal').removeClass('modal--show');
-    // });
 } // End of ModalAction
 
 // This function controls the flow of the form field

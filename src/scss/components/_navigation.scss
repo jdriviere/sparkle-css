@@ -7,7 +7,7 @@
 // VALUES
 $nav-color-default: #F5F7FA;
 $nav-color-default-dark: #E6E9ED;
-$nav-color-dark: $color-dark;
+$nav-color-dark: #333;
 $nav-color-dark-darker: #222;
 
 // MIXINS
@@ -142,7 +142,7 @@ $nav-color-dark-darker: #222;
 		.nav__menu__item a {
 			color: #999;
 			
-			&:hover { color: $color-white; }
+			&:hover { color: $white_base; }
 		}
 		.nav__dropdown__item {
 			background-color: #222;
@@ -151,7 +151,8 @@ $nav-color-dark-darker: #222;
 		}
 	}
 	
-	@media only screen and (min-width: 40em) {
+	// MEDIA QUERIES
+	@media only screen and (min-width: $bp-large) {
 		@include navStretch;
         @include justifyContentSpaceBetween;
 		@include alignItemsCenter;

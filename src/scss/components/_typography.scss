@@ -23,9 +23,9 @@ p {
 	line-height: 1.5em;
 	font-weight: $font-weight-light;
 	
-	&.text--small { font-size: 0.875em; }
+	&.text--small { font-size: 0.875rem; }
 	&.text--normal { font-size: $font-size; }
-	&.text--big { font-size: 1.25em; }
+	&.text--big { font-size: 1.25rem; }
 }
 
 .text {

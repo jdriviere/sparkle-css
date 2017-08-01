@@ -14,7 +14,7 @@
     white-space: nowrap;
     color: #777;
     overflow-x: auto;
-    background-color: $color-white;
+    background-color: $white_base;
 }
 
 // TABLES
@@ -29,7 +29,7 @@ th, td {
 th {
 	font-size: 1em;
 	font-weight: $font-weight-black;
-	color: $color-dark;
+	color: $black_base;
 }
 td {
 	font-size: .875em;

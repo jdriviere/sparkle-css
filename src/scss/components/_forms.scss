@@ -36,7 +36,7 @@
 		}
 
 		&:focus {
-			border-bottom: 2px solid $color-dark;
+			border-bottom: 2px solid $black_base;
 			@include transition(all, 0.2s, ease-in);
 		}
 
@@ -46,7 +46,7 @@
 			font-size: 0.75em;
 			font-weight: $font-weight-heavy;
 			letter-spacing: 0;
-			color: $color-dark;
+			color: $black_base;
 		}
 
 		&.has-value:not(:focus) + label { color: $color-grey-75; }

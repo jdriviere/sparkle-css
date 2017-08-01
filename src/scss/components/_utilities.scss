@@ -16,18 +16,7 @@
 } // End of ManualFullCenter
 
 // CLEAR
-.clear {
-	display: inline-block;
-		
-	&:after {
-		visibility: hidden;
-		display: block;
-		font-size: 0;
-		content: "";
-		clear: both;
-		height: 0;
-	}
-}
+.clear { @include clearfix; }
 
 // SPACES
 .no-padding { padding: 0 !important; }

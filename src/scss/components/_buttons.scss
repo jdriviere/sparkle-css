@@ -7,19 +7,21 @@
 // MIXINS
 @mixin button {
     display: inline-block;
-    padding: 0.25em;
+    @include remove-appearance;
     border: none;
     outline: none;
-    vertical-align: center;    
+    background: none;
+    padding: 0.25rem;    
     text-align: center;
+    vertical-align: center;
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 0.25em;
+    font-weight: $font-weight-heavy;
+    letter-spacing: 0.125rem;
     cursor: pointer;
     @include transition(all, 0.3s, ease-in);
 
     &:hover {
-        @include scale-uniform(1.025);
         @include box-shadow(0, 5px, 7px, 0.5);
         @include transition(all, 0.3s, ease-in);
     }
@@ -28,10 +30,7 @@
     	@include disable-select;
     	opacity: 0.5;
 
-        &:hover {
-            @include scale-uniform(1.0);
-            @include box-shadow(0, 0, 0, 0);
-        }
+        &:hover { @include box-shadow(0, 0, 0, 0); }
     }
 } // End of Button
 
@@ -50,29 +49,39 @@
             background-color: $bgcolor;
             color: $fontcolor !important;
 
-            &:hover { background-color: darken($bgcolor, $darken); }
+            &:hover,
+            &:focus,
+            &:active { background-color: darken($bgcolor, $darken); }
         }
 		
 		&--#{$type}--outline {
 			background-color: $color-none;
 			color: $bgcolor !important;
 			border: 2px solid $bgcolor;
-			font-weight: $font-weight-heavy;
 			
-			&:hover {
+			&:hover,
+            &:focus,
+            &:active {
                 background-color: $bgcolor;
                 color: $fontcolor !important;
                 border-color: transparent;
             }
         }
         
-        &--#{$type}--ghost {
-			background-color: $color-white;
-			color: $bgcolor !important;
-			border: 1px solid $color-light;
-			font-weight: $font-weight-heavy;
+        &--#{$type}--ghost {            
+            @if ($type == "light") {
+                background-color: map-get($theme-maps, light);
+                color: $white_d1 !important;
+                border: 1px solid $grey-l3;
+            } @else {
+                background-color: map-get($theme-maps, light);
+                color: $bgcolor !important;
+                border: 1px solid $grey-l3;
+            } // End of IF-ELSE
 			
-			&:hover {
+			&:hover,
+            &:focus,
+            &:active {
                 background-color: $bgcolor;
                 color: $fontcolor !important;
                 border-color: transparent;
@@ -81,18 +90,16 @@
     } // End of EACH-LOOP
 
     // SIZES
-    &--small { padding: 0.5em 1em; font-size: 0.75em; }
-    &--medium { padding: 0.75em 1.5em; font-size: 1em; }
-    &--large { padding: 1.25em 2em; font-size: 1em; font-weight: $font-weight-heavy; }
-    &--xlarge { padding: 1.75em 2.5em; font-size: 1em; font-weight: $font-weight-heavy; }
+    &--small { padding: 0.5rem; font-size: 0.75rem; }
+    &--medium { padding: 0.5rem 1rem; font-size: 1rem; }
+    &--large { padding: 0.75rem 1.25rem; font-size: 1.25rem; }
+    &--xlarge { padding: 1rem 1.5rem; font-size: 1.5rem; }
     &--block {
+        display: block;
         width: 100%;
-        padding: 0.75em 0;
+        padding: 0.5rem 0;
         font-size: 1.25em;
-        letter-spacing: 0.25em;
-        font-weight: $font-weight-heavy;
-
-        &:hover { @include scale-uniform(1.0); }
+        letter-spacing: 0.25rem;
     }
 
     // STYLES

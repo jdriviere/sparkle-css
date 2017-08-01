@@ -26,11 +26,14 @@
         
         .btnSection button { margin-bottom: 0.25em; }
         .btnSection__block,
-        .formSection__block { margin-bottom: 1.25em; }
+        .formSection__block,
+        .alertSection__block { margin-bottom: 1.25em; }
         .btnSection__title,
-        .formSection__title { text-transform: uppercase; letter-spacing: 0.125em; color: #CCC; }
+        .formSection__title,
+        .alertSection__title { text-transform: uppercase; letter-spacing: 0.125em; color: #CCC; }
         .btnSection__desc,
-        .formSection__desc { margin-bottom: 1.25em; }
+        .formSection__desc,
+        .alertSectiion__desc { margin-bottom: 1.25em; }
 
 
         footer {
@@ -96,17 +99,28 @@
                         <h4 class="btnSection__title">Solid</h4>
                         <p class="btnSection__desc">
                             Sparkle offers a variety of button colors, to go with
-                            your design needs.
+                            your design needs. To specify the type of button you want,
+                            you must add <span><code class="snippet">btn--$type</code></span> to
+                            your <span><code class="snippet">btn</code></span> class, where
+                            <span><code class="snippet">$type</code></span> is either one of the
+                            following:
+                            <span><code class="snippet">default</code></span>,
+                            <span><code class="snippet">primary</code></span>,
+                            <span><code class="snippet">secondary</code></span>,
+                            <span><code class="snippet">success</code></span>,
+                            <span><code class="snippet">warning</code></span>,
+                            <span><code class="snippet">danger</code></span>,
+                            <span><code class="snippet">light</code></span>, or
+                            <span><code class="snippet">dark</code></span>.
                         </p>
                         <button class="btn btn--default btn--small">test</button>
                         <button class="btn btn--primary btn--small">test</button>
+                        <button class="btn btn--secondary btn--small">test</button>
                         <button class="btn btn--success btn--small">test</button>
                         <button class="btn btn--warning btn--small">test</button>
                         <button class="btn btn--danger btn--small">test</button>
                         <button class="btn btn--light btn--small">test</button>
                         <button class="btn btn--dark btn--small">test</button>
-                        <button class="btn btn--theme1 btn--small">test</button>
-                        <button class="btn btn--theme2 btn--small">test</button>
                     </div>
                     
                     <!-- OUTLINED -->
@@ -120,13 +134,12 @@
                         </p>
                         <button class="btn btn--default--outline btn--small">test</button>
                         <button class="btn btn--primary--outline btn--small">test</button>
+                        <button class="btn btn--secondary--outline btn--small">test</button>
                         <button class="btn btn--success--outline btn--small">test</button>
                         <button class="btn btn--warning--outline btn--small">test</button>
                         <button class="btn btn--danger--outline btn--small">test</button>
                         <button class="btn btn--light--outline btn--small">test</button>
                         <button class="btn btn--dark--outline btn--small">test</button>
-                        <button class="btn btn--theme1--outline btn--small">test</button>
-                        <button class="btn btn--theme2--outline btn--small">test</button>
                     </div>
 
                     <!-- GHOSTED -->
@@ -139,13 +152,12 @@
                         </p>
                         <button class="btn btn--default--ghost btn--small">test</button>
                         <button class="btn btn--primary--ghost btn--small">test</button>
+                        <button class="btn btn--secondary--ghost btn--small">test</button>
                         <button class="btn btn--success--ghost btn--small">test</button>
                         <button class="btn btn--warning--ghost btn--small">test</button>
                         <button class="btn btn--danger--ghost btn--small">test</button>
                         <button class="btn btn--light--ghost btn--small">test</button>
                         <button class="btn btn--dark--ghost btn--small">test</button>
-                        <button class="btn btn--theme1--ghost btn--small">test</button>
-                        <button class="btn btn--theme2--ghost btn--small">test</button>
                     </div>
 
                     <div class="btnSection__block">
@@ -158,13 +170,12 @@
                         </p>
                         <button class="btn btn--default btn--small btn--disabled">test</button>
                         <button class="btn btn--primary btn--small btn--disabled">test</button>
+                        <button class="btn btn--secondary btn--small btn--disabled">test</button>
                         <button class="btn btn--success btn--small btn--disabled">test</button>
                         <button class="btn btn--warning btn--small btn--disabled">test</button>
                         <button class="btn btn--danger btn--small btn--disabled">test</button>
                         <button class="btn btn--light btn--small btn--disabled">test</button>
                         <button class="btn btn--dark btn--small btn--disabled">test</button>
-                        <button class="btn btn--theme1 btn--small btn--disabled">test</button>
-                        <button class="btn btn--theme2 btn--small btn--disabled">test</button>
                     </div>
                 </div>
 
@@ -172,40 +183,9 @@
                 <div class="col-2-of-3">
                     <div class="alert alert--default">
                         <code>
-                            &lt;!-- Button colors (solid) --&gt;<br>
-                            &lt;button class="btn btn--default btn--small"&gt;test&lt;/button&gt;<br>
-                            &lt;button class="btn btn--primary btn--small"&gt;test&lt;/button&gt;<br>
-                            &lt;button class="btn btn--success btn--small"&gt;test&lt;/button&gt;<br>
-                            &lt;button class="btn btn--warning btn--small"&gt;test&lt;/button&gt;<br>
-                            &lt;button class="btn btn--danger btn--small"&gt;test&lt;/button&gt;<br>
-                            &lt;button class="btn btn--light btn--small"&gt;test&lt;/button&gt;<br>
-                            &lt;button class="btn btn--dark btn--small"&gt;test&lt;/button&gt;<br>
-                            &lt;button class="btn btn--theme1 btn--small"&gt;test&lt;/button&gt;<br>
-                            &lt;button class="btn btn--theme2 btn--small"&gt;test&lt;/button&gt;<br>
+                            &lt;!-- Button (BASE) --&gt;<br>
+                            &lt;button class="btn btn--$type[--$option] [btn--$size] [btn--disabled]"&gt;test&lt;/button&gt;<br>
                             <br>
-
-                            &lt;!-- Button colors (outline) --&gt;<br>
-                            &lt;button class="btn btn--default btn--small"&gt;test&lt;/button&gt;<br>
-                            &lt;button class="btn btn--primary btn--small"&gt;test&lt;/button&gt;<br>
-                            &lt;button class="btn btn--success btn--small"&gt;test&lt;/button&gt;<br>
-                            &lt;button class="btn btn--warning btn--small"&gt;test&lt;/button&gt;<br>
-                            &lt;button class="btn btn--danger btn--small"&gt;test&lt;/button&gt;<br>
-                            &lt;button class="btn btn--light btn--small"&gt;test&lt;/button&gt;<br>
-                            &lt;button class="btn btn--dark btn--small"&gt;test&lt;/button&gt;<br>
-                            &lt;button class="btn btn--theme1 btn--small"&gt;test&lt;/button&gt;<br>
-                            &lt;button class="btn btn--theme2 btn--small"&gt;test&lt;/button&gt;<br>
-                            <br>
-
-                            &lt;!-- Button colors (disabled) --&gt;<br>
-                            &lt;button class="btn btn--default btn--small btn--disabled"&gt;test&lt;/button&gt;<br>
-                            &lt;button class="btn btn--primary btn--small btn--disabled"&gt;test&lt;/button&gt;<br>
-                            &lt;button class="btn btn--success btn--small btn--disabled"&gt;test&lt;/button&gt;<br>
-                            &lt;button class="btn btn--warning btn--small btn--disabled"&gt;test&lt;/button&gt;<br>
-                            &lt;button class="btn btn--danger btn--small btn--disabled"&gt;test&lt;/button&gt;<br>
-                            &lt;button class="btn btn--light btn--small btn--disabled"&gt;test&lt;/button&gt;<br>
-                            &lt;button class="btn btn--dark btn--small btn--disabled"&gt;test&lt;/button&gt;<br>
-                            &lt;button class="btn btn--theme1 btn--small btn--disabled"&gt;test&lt;/button&gt;<br>
-                            &lt;button class="btn btn--theme2 btn--small btn--disabled"&gt;test&lt;/button&gt;<br>
                         </code>
                     </div>
                 </div>
@@ -218,18 +198,18 @@
                         <h4 class="btnSection__title">Sizes</h4>
                         <p class="btnSection__desc">
                             Buttons come in different sizes for different purposes. You can
-                            alter a button size by adding <span><code class="snippet">btn--sizeName</code></span>
-                            to the class list, where the <span><code class="snippet">sizeName</code></span>
+                            alter a button size by adding <span><code class="snippet">btn--$size</code></span>
+                            to the class list, where the <span><code class="snippet">$size</code></span>
                             is either one of the following:
                             <span><code class="snippet">small</code></span>,
                             <span><code class="snippet">medium</code></span>,
                             <span><code class="snippet">large</code></span>, or
                             <span><code class="snippet">xlarge</code></span>.
                         </p>
-                        <button class="btn btn--theme1 btn--small">Button</button><br>
-                        <button class="btn btn--theme1 btn--medium">Button</button><br>
-                        <button class="btn btn--theme1 btn--large">Button</button><br>
-                        <button class="btn btn--theme1 btn--xlarge">Button</button><br>
+                        <button class="btn btn--primary btn--small">Button</button><br>
+                        <button class="btn btn--primary btn--medium">Button</button><br>
+                        <button class="btn btn--primary btn--large">Button</button><br>
+                        <button class="btn btn--primary btn--xlarge">Button</button><br>
                     </div>
                 </div>
                 
@@ -238,10 +218,7 @@
                     <div class="alert alert--default">
                         <code>
                             &lt;!-- Button sizes --&gt;<br>
-                            &lt;button class="btn btn--theme1 btn--small"&gt;test&lt;/button&gt;<br>
-                            &lt;button class="btn btn--theme1 btn--medium"&gt;tes&lt;/button&gt;<br>
-                            &lt;button class="btn btn--theme1 btn--large"&gt;test&lt;/button&gt;<br>
-                            &lt;button class="btn btn--theme1 btn--xlarge"&gt;test&lt;/button&gt;<br>
+                            &lt;button class="btn btn--$type btn--$size"&gt;test&lt;/button&gt;<br>
                         </code>
                     </div>
                 </div>
@@ -254,13 +231,13 @@
                         <h4 class="btnSection__title">Roundness</h4>
                         <p class="btnSection__desc">
                             Sparkle offers the chance to even vary the roundness of its button design.
-                            Simply add <span><code class="snippet">btn--roundType</code></span> in your class
-                            list, where <span><code class="snippet">roundType</code></span> is one of the following:
+                            Simply add <span><code class="snippet">btn--$roundness</code></span> in your class
+                            list, where <span><code class="snippet">$roundness</code></span> is one of the following:
                             <span><code class="snippet">h-round</code></span> (for 'half-round'), or
                             <span><code class="snippet">f-round</code></span> (for 'fully-round').
                         </p>
-                        <button class="btn btn--theme1 btn--medium btn--h-round">test</button>
-                        <button class="btn btn--theme1 btn--medium btn--f-round">test</button>
+                        <button class="btn btn--primary btn--medium btn--h-round">test</button>
+                        <button class="btn btn--primary btn--medium btn--f-round">test</button>
                     </div>
                 </div>
 
@@ -269,8 +246,7 @@
                     <div class="alert alert--default">
                         <code>
                             &lt;!-- Button roundness --&gt;<br>
-                            &lt;button class="btn btn--theme1 btn--medium btn--h-round"&gt;test&lt;/button&gt;<br>
-                            &lt;button class="btn btn--theme1 btn--medium btn--f-round"&gt;test&lt;/button&gt;<br>
+                            &lt;button class="btn btn--$type btn--$size btn--$roundness"&gt;test&lt;/button&gt;<br>
                         </code>
                     </div>
                 </div>
@@ -286,9 +262,9 @@
                             <span><code class="snippet">btn--block</code></span> to your class list. You can
                             even mix it with the button roundness classes.
                         </p>
-                        <button class="btn btn--theme1 btn--block">test</button>
-                        <button class="btn btn--theme1 btn--block btn--h-round">test</button>
-                        <button class="btn btn--theme1 btn--block btn--f-round">test</button>
+                        <button class="btn btn--primary btn--block">test</button>
+                        <button class="btn btn--primary btn--block btn--h-round">test</button>
+                        <button class="btn btn--primary btn--block btn--f-round">test</button>
                     </div>
                 </div>
 
@@ -297,9 +273,7 @@
                     <div class="alert alert--default">
                         <code>
                             &lt;!-- Button block --&gt;<br>
-                            &lt;button class="btn btn--theme1 btn--block"&gt;test&lt;/test&gt;<br>
-                            &lt;button class="btn btn--theme1 btn--block btn--h-round"&gt;test&lt;/test&gt;<br>
-                            &lt;button class="btn btn--theme1 btn--block btn--f-round"&gt;test&lt;/test&gt;<br>
+                            &lt;button class="btn btn--$type btn--block [btn--$roundness]"&gt;test&lt;/test&gt;<br>
                         </code>
                     </div>
                 </div>
@@ -311,10 +285,41 @@
     <section id="#alerts">
         <div class="container">
             <h2>Alerts</h2>
-            <h4>Coming soon...</h4>
 
-            <div class="col-1-of-3"></div>
-            <div class="col-2-of-3"></div>
+            <div class="row">
+                <div class="col-1-of-3">
+                    <div class="alertSection__block">
+                        <h4 class="alertSection__title">BASIC</h4>
+                        <p class="alertSection__desc">
+                            Alerts can serve to make sure users can see important messages on
+                            their screen. Simply create a block of code and stylize it accordingly.
+                            Start off by adding an <span><code class="snippet">alert</code></span>, and
+                            then specify which type of alert you want by adding the second class,
+                            <span><code class="snippet">alert--$type</code></span>, where
+                            <span><code class="snippet">$type</code></span> is either one of the following:
+                            <span><code class="snippet">default</code></span>,
+                            <span><code class="snippet">info</code></span>,
+                            <span><code class="snippet">success</code></span>,
+                            <span><code class="snippet">warning</code></span>, or
+                            <span><code class="snippet">danger</code></span>.
+                        </p>
+                        <div class="alert alert--default">This is a default alert.</div>
+                        <div class="alert alert--info">This is an info alert.</div>
+                        <div class="alert alert--success">This is a success alert.</div>
+                        <div class="alert alert--warning">This is a warning alert.</div>
+                        <div class="alert alert--danger">This is a danger alert.</div>
+                    </div>
+                </div>
+                <div class="col-2-of-3">
+                    <div class="alert alert--default">
+                        <code>
+                            &lt;!-- Alert --&gt;<br>
+                            &lt;div class="alert alert--$type"&gt;Alert example&lt;/div&gt;<br>
+                        </code>
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </section>
 

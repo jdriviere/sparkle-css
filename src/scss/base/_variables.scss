@@ -1,30 +1,177 @@
 // ================================
-// GENERAL - UI COLORS
+// COLORS - LIBRARY
 // ================================
-$color-default:				#ECF0F1 !default; // Yields an off-grey color
-$color-success:				#2ECC71 !default; // Yields a emerald-green color
-$color-warning:				#FFCE54 !default; // Yields a yellowish-gold color
-$color-danger:				#E74C3C !default; // Yields a darkish-red color
-$color-primary:				#3498DB !default; // Yields a skyish-blue color
-$color-light:				#E1E1E1 !default; // Yields an off-white color
-$color-dark:				#333333 !default; // Yields an off-black color
-$color-white:				#F8F8FF !default; // Yields a ghost-white color
-$color-grey:                #95A5A6 !default; // Yields a stale-grey color
-$color-black:				#121314 !default; // Yields a black color
-$color-theme1:				#ADD8E6 !default; // Yields light-blue of logo 
-$color-theme2:				#9BC2E6 !default; // Yields darker light-blue of logo
-$color-none:				transparent !default; // Yields a transparent color
+// REDS
+$red_l5:                    #FFEFF0 !default;
+$red_l4:                    #FFD1D3 !default;
+$red_l3:                    #FFB3B5 !default;
+$red_l2:                    #FF9598 !default;
+$red_l1:                    #FF777B !default;
+$red_base:                  #FF595E !default; // Main
+$red_d1:                    #D1494D !default;
+$red_d2:                    #A3393C !default;
+$red_d3:                    #74292B !default;
+$red_d4:                    #46191A !default;
+$red_d5:                    #180909 !default;
+
+// ORANGES
+$orange_l5:                 #FFF3ED !default;
+$orange_l4:                 #FFDCCA !default;
+$orange_l3:                 #FFC4A7 !default;
+$orange_l2:                 #FFAD84 !default;
+$orange_l1:                 #FF9661 !default;
+$orange_base:               #FF7F3F !default; // Main
+$orange_d1:                 #D16834 !default;
+$orange_d2:                 #A35129 !default;
+$orange_d3:                 #743A1D !default;
+$orange_d4:                 #462312 !default;
+$orange_d5:                 #180C06 !default;
+
+// YELLOWS
+$yellow_l5:                 #FFFAED !default;
+$yellow_l4:                 #FFF0C9 !default;
+$yellow_l3:                 #FFE6A5 !default;
+$yellow_l2:                 #FFDD81 !default;
+$yellow_l1:                 #FFD35D !default;
+$yellow_base:               #FFCA3A !default; // Main
+$yellow_d1:                 #D1A630 !default;
+$yellow_d2:                 #A38125 !default;
+$yellow_d3:                 #745C1B !default;
+$yellow_d4:                 #463810 !default;
+$yellow_d5:                 #181306 !default;
+
+// GREENS
+$green_l5:                  #F4FAEB !default;
+$green_l4:                  #DFF0C3 !default;
+$green_l3:                  #C9E69C !default;
+$green_l2:                  #B4DC74 !default;
+$green_l1:                  #9FD24D !default;
+$green_base:                #8AC926 !default; // Main
+$green_d1:                  #71A520 !default;
+$green_d2:                  #588019 !default;
+$green_d3:                  #3F5C12 !default;
+$green_d4:                  #26370B !default;
+$green_d5:                  #0D1304 !default;
+
+// TEALS
+$teal_l5:                   #E7F3F3 !default;
+$teal_l4:                   #B9DCDC !default;
+$teal_l3:                   #8BC5C5 !default;
+$teal_l2:                   #5CAEAE !default;
+$teal_l1:                   #2E9797 !default;
+$teal_base:                 #008080 !default; // Main
+$teal_d1:                   #006969 !default;
+$teal_d2:                   #005252 !default;
+$teal_d3:                   #003B3B !default;
+$teal_d4:                   #002323 !default;
+$teal_d5:                   #000C0C !default;
+
+// BLUES
+$blue_l5:                   #EAF3F9 !default;
+$blue_l4:                   #C0DCEE !default;
+$blue_l3:                   #96C6E4 !default;
+$blue_l2:                   #6CAFD9 !default;
+$blue_l1:                   #4298CE !default;
+$blue_base:                 #1982C4 !default; // Main
+$blue_d1:                   #156BA1 !default;
+$blue_d2:                   #10537D !default;
+$blue_d3:                   #0C3C5A !default;
+$blue_d4:                   #072436 !default;
+$blue_d5:                   #030C12 !default;
+
+// LIGHT-BLUES (THEME COLOR 1)
+$lblue_l5:                  #F7FBFC !default;
+$lblue_l4:                  #E8F4F8 !default;
+$lblue_l3:                  #D9EDF3 !default;
+$lblue_l2:                  #CAE6EF !default;
+$lblue_l1:                  #BBDFEA !default;
+$lblue_base:                #ADD2E6 !default; // Main
+$lblue_d1:                  #8EB1BD !default;
+$lblue_d2:                  #6F8A93 !default;
+$lblue_d3:                  #4F6369 !default;
+$lblue_d4:                  #303B3F !default;
+$lblue_d5:                  #101415 !default;
+
+// BLUE TOPAZ (COLOR THEME 2)
+$btopaz_l5:                 #F5F9FC !default;
+$btopaz_l4:                 #E3EEF8 !default;
+$btopaz_l3:                 #D1E3F3 !default;
+$btopaz_l2:                 #BFD8EF !default;
+$btopaz_l1:                 #ADCDEA !default;
+$btopaz_base:               #9BC2E6 !default; // Main
+$btopaz_d1:                 #7F9FBD !default;
+$btopaz_d2:                 #637C93 !default;
+$btopaz_d3:                 #475969 !default;
+$btopaz_d4:                 #2B353F !default;
+$btopaz_d5:                 #0F1215 !default;
+
+// WHITES
+$white_l5:                  #FEFEFD !default;
+$white_l4:                  #FDFCFB !default;
+$white_l3:                  #FDFAF9 !default;
+$white_l2:                  #FCF8F7 !default;
+$white_l1:                  #FBF6F5 !default;
+$white_base:                #FBF5F3 !default; // Main
+$white_d1:                  #CEC9C7 !default;
+$white_d2:                  #A09C9B !default;
+$white_d3:                  #73706F !default;
+$white_d4:                  #454343 !default;
+$white_d5:                  #171717 !default;
+
+// GREYS
+$grey_l5:                   #F5F6F6 !default;
+$grey_l4:                   #E2E6E6 !default;
+$grey_l3:                   #CED6D6 !default;
+$grey_l2:                   #BBC5C6 !default;
+$grey_l1:                   #A8B5B6 !default;
+$grey_base:                 #95A5A6 !default; // Main
+$grey_d1:                   #7A8888 !default;
+$grey_d2:                   #5F6A6A !default;
+$grey_d3:                   #444B4C !default;
+$grey_d4:                   #292D2E !default;
+$grey_d5:                   #0E0F10 !default;
+
+
+// BLACKS
+$black_l5:                  #E9E9EA !default;
+$black_l4:                  #BEBFC1 !default;
+$black_l3:                  #929497 !default;
+$black_l2:                  #676A6E !default;
+$black_l1:                  #3C3F45 !default;
+$black_base:                #111516 !default; // Main
+$black_d1:                  #0E1217 !default;
+$black_d2:                  #0B0E12 !default;
+$black_d3:                  #080A0D !default;
+$black_d4:                  #050608 !default;
+$black_d5:                  #020203 !default;
+
+// TRANSPARENT
+$color-none:                transparent !default;
 
 // ================================
-// GENERAL - GREY TONES
+// COLORS - THEMES
 // ================================
-$color-grey-25:				#404040; // Yields a grey (25%)
-$color-grey-50:				#7F7F7F; // Yields a grey (50%)
-$color-grey-75:				#C0C0C0; // Yields a grey (75%)
-$color-grey-100:			#FCFCFC; // Yields a grey (100%)
+$theme-maps: (
+    default:                $grey_l4,
+    primary:				$lblue_base,
+    secondary:				$btopaz_base,
+    success:				$green_base,
+    warning:				$yellow_base,
+    danger:                 $red_base,
+    light:                  $white_base,
+    dark:                   $black_l1
+) !default;
+
+// ================================
+// COLORS - GREY TONES
+// ================================
+$color-grey-25:				#404040;
+$color-grey-50:				#7F7F7F;
+$color-grey-75:				#C0C0C0;
+$color-grey-100:			#FCFCFC;
 
 // =================================
-// GENERAL - DARKEN/LIGHTEN
+// COLORS - DARKEN/LIGHTEN
 // =================================
 $lighten:					7.5% !default;
 $darken:					7.5% !default;
@@ -32,11 +179,11 @@ $darken:					7.5% !default;
 // =================================
 // GENERAL - SCREEN BREAKPOINTS
 // =================================
-$bp-xsm:					20em;
-$bp-sml:					30em;
-$bp-med:					40em;
-$bp-lrg:					48em;
-$bp-xlg:					75em;
+$bp-xsmall:					20em;
+$bp-small:					30em;
+$bp-medium:					40em;
+$bp-large:					48em;
+$bp-xlarge:					75em;
 
 // =================================
 // GENERAL - PRIORITIES
@@ -58,6 +205,7 @@ $font-family-default:		"Lato", sans-serif;
 $font-family-secondary:		"Helvetica Neue", Helvetica, "Open Sans", Arial, sans-serif;
 $font-special:				"FontAwesome";
 $font-size:					1em !default;
+$font-color:                $color-grey-25 !default;
 $font-weight-light:			300;
 $font-weight-normal:		400;
 $font-weight-heavy:			700;
@@ -74,25 +222,24 @@ $grid-gutter:				0.75em !default; // Default gutter is 12px. Can be changed to 2
 // BUTTON VARIABLES
 // =================================
 $btn-color-maps: (
-    default:				($color-default, $color-grey),
-    primary:				($color-primary, $color-white),
-    success:				($color-success, $color-white),
-    warning:				($color-warning, $color-white),
-    danger:					($color-danger, $color-white),
-    light:					($color-light, $color-dark),
-	dark:					($color-dark, $color-white),
-	theme1:					($color-theme1, $color-white),
-	theme2:					($color-theme2, $color-white)
+    default:				($grey_l3, $black_base),
+    primary:				($lblue_base, $white_base),
+    secondary:				($btopaz_base, $white_base),
+    success:				($green_base, $white_base),
+    warning:				($yellow_base, $white_base),
+    danger:					($red_base, $white_base),
+    light:					($white_base, $black_base),
+	dark:					($black_l1, $white_base),
 ) !default;
 
 // =================================
 // ALERTS VARIABLES
 // =================================
 $alert-color-maps: (
-    default:                (#EFEFEE, #7F8C8D),
-    success:                (#C8F7C5, #27AE60),
-    warning:                (#FDFD96, #F39C12),
-    danger:                 (#F1A9A0, #C0392B),
-    info:                   (#CCDBEC, #2980B9)
+    default:                ($grey_l4, $grey_d2),
+    success:                ($green_l4, $green_d2),
+    warning:                ($yellow_l4, $yellow_d2),
+    danger:                 ($red_l4, $red_d2),
+    info:                   ($blue_l4, $blue_d2)
 ) !default;
-$alert-font-size:			0.875em !default;
+$alert-font-size:			0.75rem !default;
