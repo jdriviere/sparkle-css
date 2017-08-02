@@ -1213,10 +1213,10 @@ pre > code {
 
 .modal__body {
   position: relative;
-  max-width: 80%;
+  max-width: 50%;
   margin: auto;
   padding: 0.75rem;
-  background-color: #FBF5F3;
+  background-color: #FEFEFD;
   border-radius: 5px;
   border: 1px solid #C0C0C0;
   overflow-y: auto;
@@ -1239,22 +1239,24 @@ pre > code {
   position: absolute;
   display: block;
   top: 0.25rem;
-  right: 0.5rem;
+  right: 0.75rem;
   color: #C0C0C0;
   font-size: 1.5rem;
   cursor: pointer;
+  opacity: 0.5;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -ms-tranition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 .modal__close:hover, .modal__close:focus {
   color: #7F7F7F;
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-  -webkit-transition: scale 0.3s linear;
-  -moz-transition: scale 0.3s linear;
-  -ms-tranition: scale 0.3s linear;
-  transition: scale 0.3s linear;
+  opacity: 1;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -ms-tranition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 .modal.modal--show {

@@ -24,10 +24,10 @@
 
     &__body {
         position: relative;
-        max-width: 80%;
+        max-width: 50%;
         margin: auto;
         padding: 0.75rem;
-        background-color: $white_base;
+        background-color: $white_l5;
         @include border-radius;
         border: 1px solid $color-grey-75;
         overflow-y: auto;
@@ -43,16 +43,18 @@
         position: absolute;
         display: block;
         top: 0.25rem;
-        right: 0.5rem;
+        right: 0.75rem;
         color: $color-grey-75;
         font-size: 1.5rem;
         cursor: pointer;
+        opacity: 0.5;
+        @include transition(all, 0.3s, ease-in);
 
         &:hover,
         &:focus {
             color: $color-grey-50;
-            @include scale-uniform(1.1);
-            @include transition(scale, 0.3s, linear);
+            opacity: 1;
+            @include transition(all, 0.3s, ease-in);
         }
     }
 
