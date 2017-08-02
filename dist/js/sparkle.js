@@ -83,7 +83,6 @@ function modalAction () {
     $(document).keydown(function(event) {
         if (event.keyCode == 27) {
             $('.modal').removeClass('modal--show');
-            window.close();
         } // End of IF
     });
 } // End of ModalAction
