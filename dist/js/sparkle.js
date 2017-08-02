@@ -78,6 +78,14 @@ function modalAction () {
     $('.modal__close').click(function() {
         $('.modal').removeClass('modal--show');
     });
+
+    // When the user presses the ESC button, close the modal
+    $(document).keydown(function(event) {
+        if (event.keyCode == 27) {
+            $('.modal').removeClass('modal--show');
+            window.close();
+        } // End of IF
+    });
 } // End of ModalAction
 
 // This function controls the flow of the form field
