@@ -48,22 +48,35 @@
 </head>
 <body>
     <!-- HEADER -->
-    <header>
-        <nav class="nav nav--default">
+     <header>
+        <nav class="nav nav--fixed">
+            <!-- NAV LOGO/BRAND -->
             <div class="nav__brand">
                 <a href="index.html">
                     <img src="dist/img/Logo_InColor_side.png" alt="Sparkle_Logo" class="nav__brand__image">
                 </a>
             </div>
 
-            <div id="nav__mobile" class="nav__menu__icon">Menu</div>
-
+            <!-- NAV MENU -->
             <ul class="nav__menu">
                 <li class="nav__menu__item"><a href="index.html">Home</a></li>
-                <li class="nav__menu__item"><a href="start.html">Getting Started</a></li>
+                <li class="nav__menu__item nav__menu__item--active"><a href="start.html">Getting Started</a></li>
                 <li class="nav__menu__item"><a href="docs.html">Documentation</a></li>
-                <li class="nav__menu__item"><a href="https://github.com/jdriviere/sparkle-css">Contribute</a></li>
+                <li class="nav__menu__item nav__menu__item--special">
+                    <a href="https://github.com/jdriviere/sparkle-css">
+                        <i class="fa fa-github fa-2x"></i> Contribute
+                    </a>
+                </li>
             </ul>
+
+            <!-- MOBILE NAV ICON -->
+            <div class="nav__mobile">
+                <div class="nav__mobile__icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
         </nav>
     </header>
 

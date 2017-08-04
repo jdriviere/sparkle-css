@@ -4,18 +4,12 @@
 @import "../base/_variables";
 @import "../base/_mixins";
 
-// VALUES
-$nav-color-default: #F5F7FA;
-$nav-color-default-dark: #E6E9ED;
-$nav-color-dark: #333;
-$nav-color-dark-darker: #222;
-
 // MIXINS
 @mixin navCollapse {
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
-			-ms-flex-flow: column nowrap;
-				flex-flow: column nowrap;
+		-ms-flex-flow: column wrap;
+			flex-flow: column wrap;
 } // End of NavCollapse
 
 @mixin navStretch {
@@ -32,6 +26,12 @@ $nav-color-dark-darker: #222;
 			flex-direction: row;
 } // End of NavMenuItemAsRow
 
+@mixin navMenuNoFlex {
+	-webkit-box-flex: 0;
+		-ms-flex: none;
+			flex: none;
+} // End of NavMenoNoFlex
+
 @mixin navMenuItemFlexStyle {
 	--webkit-box-flex: 1;
 		-ms-flex: 1 0 auto;
@@ -40,157 +40,123 @@ $nav-color-dark-darker: #222;
 
 // NAVIGATION
 .nav {
-	@include displayFlex;
+    @include displayFlex;
     @include navCollapse;
-	padding: 0 0.75em;
-    z-index: $index-high;
-	
-	&__brand {
-		font-size: 1.5em;
-		text-align: center;
-		
-		&__image { max-height: 2em; }
-	}
-	
-	&__menu__icon {
-		@include displayFlex;
-		@include justifyContentCenter;
-		@include alignItemsCenter;
-		padding: 0.5em;
-		font-size: 1.5em;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    background-color: map-get($theme-maps, light);
+    z-index: $index-higher;
+    @include box-shadow(0, 1px, 7px, 0.3);
+    
+    // COMPONENTS
+    &__brand {
+        float: left;
+        padding: 1rem;
+        color: map-get($theme-maps, secondary);
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.25rem;
 		cursor: pointer;
 		
-		&:before {
-			content: "\f0c9";
-			display: block;
-			margin-right: 0.3125em;
-			font-family: FontAwesome;
-		}
-	}
-	
-	&__menu {
-		display: none;
-		text-align: center;
-		list-style: none;
-		
-		&__item {
-			position: relative;
-			@include flexSize(1);
-			padding: 0.5em;
-			font-size: 1.25em;
-			
-			&:last-child { border: none; }
-		}
-	}
-	
-	&__dropdown {
-		display: none;
-		@include navCollapse;
-		@include flexSize(1);
-		list-style: none;
-		z-index: $index-higher;
-		
-		&__item:last-child { border: none; }
-	}
-	
-	&__brand,
-	&__menu__item,
-	&__dropdown__item {
-		a {
-			display: block;
-			padding: 0.5em;
-			text-decoration: none;
-		}
-	}
-	&__menu__item a {
-		&:not(:last-child):after {
-			content: "\f0d7";
-			padding-left: 0.5em;
-			font-family: FontAwesome;
-		}
-	}
-	
-	// THEMES
-	&--default {
-		background-color: $nav-color-default;
-		border-bottom: 1px solid darken($nav-color-default, $darken);
-		
-		.nav__menu__item,
-		.nav__dropdown__item { border-bottom: 1px solid $nav-color-default-dark; }
-		.nav__brand a,
-		.nav__menu__icon,
-		.nav__menu__item a {
-			color: #AAB2BD;
-			
-			&:hover { color: #353B42; }
-		}
-		.nav__dropdown__item {
-			background-color: #F1F3FF;
-			
-			&:hover { background-color: $nav-color-default-dark; }
-		}
-	}
-
-	&--dark {
-		background-color: $nav-color-dark;
-		border-bottom: 1px solid $nav-color-dark-darker;
-		
-		.nav__menu__item,
-		.nav__dropdown__item { border-bottom: 1px solid #111; }
-		.nav__brand a,
-		.nav__menu__icon,
-		.nav__menu__item a {
-			color: #999;
-			
-			&:hover { color: $white_base; }
-		}
-		.nav__dropdown__item {
-			background-color: #222;
-			
-			&:hover { background-color: #111; }
-		}
-	}
-	
-	// MEDIA QUERIES
-	@media only screen and (min-width: $bp-large) {
-		@include navStretch;
-        @include justifyContentSpaceBetween;
-		@include alignItemsCenter;
-		
-		&__brand {
-			@include displayFlex;
-			@include justifyContentAtStart;
-			font-size: 1.125em;
-		}
-		
-		&__menu__icon { display: none; }
-		
-		&__menu {
-			@include displayFlex;
-			@include justifyContentAtEnd;
-			font-size: 0.675em;
-			
-			&__item {
-				@include displayFlex;
-				@include navMenuItemAsRow;
-				@include navMenuItemFlexStyle;
-				text-align: center;
+		& img,
+		&__img { max-height: 2rem; }
+    }
+    
+    &__menu {
+        display: none;
+        list-style: none;
+        
+        &__item {
+			// COMPONENTS
+			a {
+				padding: 1rem;
+				color: map-get($theme-maps, dark);
+				font-size: 0.75rem;
+				font-weight: $font-weight-normal;
+				text-transform: uppercase;
+				text-decoration: none;
+				letter-spacing: 0.125rem;
 			}
-		}
-		
-		&__dropdown {
-			position: absolute;
-			top: 100%;
-			right: 0;
-			width: 150px;
-			@include border-radius;
-			@include box-shadow(0, 0, 0.5em, 0.5);
-			z-index: 100;
-		}
-		
-		&--default .nav__menu__item,
-		&--default .nav__dropdown__item,
-		&--dark .nav__menu__item,
-		&--dark .nav__dropdown__item { border: none !important; }
-	}
+
+			// STATES
+            &:hover {
+				a {
+					background-color: map-get($theme-maps, primary);
+					color: map-get($theme-maps, light);
+				}
+			}
+        }
+    }
+    
+    // Hamburger Icon
+    &__mobile {
+        position: absolute; top: 1rem; right: 1rem;
+        
+        &__icon { @include hamburger; }
+    }
+    
+    // STATES
+    &--fixed { position: fixed; }
+    
+    // MEDIA QUERIES
+    @media screen and (min-width: 48rem) {
+		@include navStretch;
+        
+        // COMPONENTS
+        &__brand {
+			@include displayFlex;
+            @include navMenuNoFlex;
+            justify-content: center;
+            align-items: center;
+            border: { right: 1px solid #DEDEDF; }
+        }
+        
+        &__menu {
+            @include displayFlex;
+            @include navMenuNoFlex;
+            order: 0;
+            
+            &__item {
+				a {
+					@include displayFlex;
+					height: 100%;
+					justify-content: center;
+					align-items: center;
+					text-align: center;
+					cursor: pointer;
+				}
+
+				// STATES
+				&:hover,
+				&--active {
+					a {
+						background-color: $color-none;
+						color: map-get($theme-maps, primary);
+					}
+				}
+				
+				// STATES
+				&--special {
+					background-color: map-get($theme-maps, primary);
+
+					a { color: map-get($theme-maps, light); }
+
+					&:hover {
+						background-color: darken($lblue_base, $darken);
+
+						a { color: map-get($theme-maps, light); }
+					}
+                }
+            }
+            
+            // STATES
+            &--left { justify-content: flex-start; float: left; }
+            &--center { justify-content: center; }
+            &--right { justify-content: flex-end; float: right; }
+        }
+        
+        &__mobile { display: none; }
+    }
 }

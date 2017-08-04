@@ -12,8 +12,9 @@
 $(document).ready(function() {
 	"use strict"; // Do not touch!!
 
+    toggleHamburger();
+    toggleMenu();
 	navDrop();
-	navToggleAction();
     navResizeFix();
     modalAction();
 
@@ -30,6 +31,20 @@ $(document).ready(function() {
 // -----------------------------
 // FUNCTIONS
 // -----------------------------
+// This function sets up the hamburger icon functionality
+function toggleHamburger() {
+    $('.nav__mobile__icon').click(function() {
+        $(this).toggleClass('nav__mobile__icon--active');
+    });
+} // End of ToggleHamburger
+
+// This function sets up the nav-toggle functionality.
+function toggleMenu() {
+    $('.nav__mobile__icon').click(function() {
+        $('.nav__menu').slideToggle();
+    });
+} // End of ToggleMenu
+
 // This function sets up the dropdown menu functionality.
 function navDrop() {
     $('li.nav__menu__item > a:not(:only-child)').click(function(event) {
@@ -46,13 +61,6 @@ function navDrop() {
 	});
 } // End of NavDrop
 
-// This function sets up the nav-toggle functionality.
-function navToggleAction() {
-    $('#nav__mobile').click(function() {
-        $('.nav__menu').slideToggle();
-    });
-} // End of NavToggleAction
-
 // This function fixes the disappearing horizontal navbar menu when resized to desktop screen size.
 function navResizeFix () {
     $(window).resize(function() {
@@ -61,8 +69,10 @@ function navResizeFix () {
         if ($(window).width() > 767) {
             $('.nav__menu').css('display', 'flex');
 			$('.nav__dropdown').css('display', 'none');
+            $('.nav__icon').removeClass('is-active');
         } else {
 			$('.nav__menu').css('display', 'none');
+            $('.nav__icon').removeClass('is-active');
 		} // End of ELSE-IF
     });
 } // End of NavResizeFix
