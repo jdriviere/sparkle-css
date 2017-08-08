@@ -371,6 +371,11 @@ pre > code {
   font-family: monospace;
 }
 
+code {
+  font-family: monospace;
+  font-size: 0.875rem;
+}
+
 /* ===================================================*/
 /* UTILITIES
 /* ===================================================*/
