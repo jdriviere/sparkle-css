@@ -14,8 +14,8 @@ $(document).ready(function() {
 
     toggleHamburger();
     toggleMenu();
-	navDrop();
     navResizeFix();
+    navDrop();
     modalAction();
 
     // Controls for inputs
@@ -45,37 +45,36 @@ function toggleMenu() {
     });
 } // End of ToggleMenu
 
-// This function sets up the dropdown menu functionality.
-function navDrop() {
-    $('li.nav__menu__item > a:not(:only-child)').click(function(event) {
-		$(this).siblings($('ul.nav__dropdown')).slideToggle();
-
-        // Prevents multiple dropdowns to remain open at the same time.
-		$('ul.nav__dropdown').not($(this).siblings()).hide();
-		event.stopPropagation();
-	});
-
-	// Hides dropdown when user clicks anywhere within the HTML page.
-	$('html').click(function() {
-		$('ul.nav__dropdown').hide();
-	});
-} // End of NavDrop
-
 // This function fixes the disappearing horizontal navbar menu when resized to desktop screen size.
 function navResizeFix () {
     $(window).resize(function() {
-        // Forces to change display of navigation if screen is bigger than
-        // 767px of width. Also forces dropdown to close if open.
+        // Fixes disappearing nav when resizing
         if ($(window).width() > 767) {
             $('.nav__menu').css('display', 'flex');
 			$('.nav__dropdown').css('display', 'none');
-            $('.nav__icon').removeClass('is-active');
+            $('.nav__mobile__icon').removeClass('nav__mobile__icon--active');
         } else {
 			$('.nav__menu').css('display', 'none');
-            $('.nav__icon').removeClass('is-active');
+            $('.nav__mobile__icon').removeClass('nav__mobile__icon--active');
 		} // End of ELSE-IF
     });
 } // End of NavResizeFix
+
+// This function sets up the dropdown menu functionality.
+// function navDrop() {
+//     $('li.nav__menu__item > a:not(:only-child)').click(function(event) {
+// 		$(this).siblings($('ul.nav__dropdown')).slideToggle();
+
+//         // Prevents multiple dropdowns to remain open at the same time.
+// 		$('ul.nav__dropdown').not($(this).siblings()).hide();
+// 		event.stopPropagation();
+// 	});
+
+// 	// Hides dropdown when user clicks anywhere within the HTML page.
+// 	$('html').click(function() {
+// 		$('ul.nav__dropdown').hide();
+// 	});
+// } // End of NavDrop
 
 // This function controls the modal functionality.
 function modalAction () {

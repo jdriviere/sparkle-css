@@ -1315,8 +1315,11 @@ pre > code {
   list-style: none;
 }
 
-.nav__menu__item a {
+.nav__menu__item {
   padding: 1rem;
+}
+
+.nav__menu__item a {
   color: #3C3F45;
   font-size: 0.75rem;
   font-weight: 400;
@@ -1325,8 +1328,11 @@ pre > code {
   letter-spacing: 0.125rem;
 }
 
-.nav__menu__item:hover a {
+.nav__menu__item:hover {
   background-color: #ADD2E6;
+}
+
+.nav__menu__item:hover a {
   color: #FBF5F3;
 }
 
@@ -1336,7 +1342,7 @@ pre > code {
   right: 1rem;
 }
 
-.nav__mobile__icon {
+.nav__mobile .nav__mobile__icon {
   position: relative;
   display: block;
   width: 2rem;
@@ -1345,7 +1351,7 @@ pre > code {
   cursor: pointer;
 }
 
-.nav__mobile__icon span {
+.nav__mobile .nav__mobile__icon span {
   position: absolute;
   display: block;
   width: 1.5rem;
@@ -1357,40 +1363,40 @@ pre > code {
   transition: all 0.3s ease-in-out;
 }
 
-.nav__mobile__icon span:nth-child(1) {
+.nav__mobile .nav__mobile__icon span:nth-child(1) {
   margin-top: -0.625em;
 }
 
-.nav__mobile__icon span:nth-child(2) {
+.nav__mobile .nav__mobile__icon span:nth-child(2) {
   margin-top: 0;
 }
 
-.nav__mobile__icon span:nth-child(3) {
+.nav__mobile .nav__mobile__icon span:nth-child(3) {
   margin-top: 0.625em;
 }
 
-.nav__mobile__icon--active span {
+.nav__mobile .nav__mobile__icon--active span {
   background-color: #ADD2E6;
 }
 
-.nav__mobile__icon--active span:nth-child(1) {
+.nav__mobile .nav__mobile__icon--active span:nth-child(1) {
   margin-top: -0.125em;
   margin-left: -0.75rem;
   transform: rotate(45deg);
 }
 
-.nav__mobile__icon--active span:nth-child(2) {
+.nav__mobile .nav__mobile__icon--active span:nth-child(2) {
   width: 0;
   opacity: 0;
 }
 
-.nav__mobile__icon--active span:nth-child(3) {
+.nav__mobile .nav__mobile__icon--active span:nth-child(3) {
   margin-top: -0.125em;
   margin-left: -0.75rem;
   transform: rotate(-45deg);
 }
 
-.nav--fixed {
+.nav.nav--fixed {
   position: fixed;
 }
 
@@ -1434,30 +1440,32 @@ pre > code {
     text-align: center;
     cursor: pointer;
   }
-  .nav__menu__item:hover a, .nav__menu__item--active a {
+  .nav__menu__item:hover, .nav__menu__item--active {
     background-color: transparent;
+  }
+  .nav__menu__item:hover a, .nav__menu__item--active a {
     color: #ADD2E6;
   }
-  .nav__menu__item--special {
+  .nav__menu__item.nav__menu__item--special {
     background-color: #ADD2E6;
   }
-  .nav__menu__item--special a {
+  .nav__menu__item.nav__menu__item--special a {
     color: #FBF5F3;
   }
-  .nav__menu__item--special:hover {
+  .nav__menu__item.nav__menu__item--special:hover {
     background-color: #90c2dd;
   }
-  .nav__menu__item--special:hover a {
+  .nav__menu__item.nav__menu__item--special:hover a {
     color: #FBF5F3;
   }
-  .nav__menu--left {
+  .nav__menu.nav__menu--left {
     justify-content: flex-start;
     float: left;
   }
-  .nav__menu--center {
+  .nav__menu.nav__menu--center {
     justify-content: center;
   }
-  .nav__menu--right {
+  .nav__menu.nav__menu--right {
     justify-content: flex-end;
     float: right;
   }

@@ -55,7 +55,7 @@
         padding: 1rem;
         color: map-get($theme-maps, secondary);
         font-size: 1.5rem;
-        font-weight: 700;
+        font-weight: $font-weight-heavy;
         text-transform: uppercase;
         letter-spacing: 0.25rem;
 		cursor: pointer;
@@ -69,9 +69,10 @@
         list-style: none;
         
         &__item {
-			// COMPONENTS
+			padding: 1rem;
+
 			a {
-				padding: 1rem;
+				
 				color: map-get($theme-maps, dark);
 				font-size: 0.75rem;
 				font-weight: $font-weight-normal;
@@ -82,10 +83,9 @@
 
 			// STATES
             &:hover {
-				a {
-					background-color: map-get($theme-maps, primary);
-					color: map-get($theme-maps, light);
-				}
+				background-color: map-get($theme-maps, primary);
+
+				a { color: map-get($theme-maps, light); }
 			}
         }
     }
@@ -94,14 +94,14 @@
     &__mobile {
         position: absolute; top: 1rem; right: 1rem;
         
-        &__icon { @include hamburger; }
+        .nav__mobile__icon { @include hamburger; }
     }
     
     // STATES
-    &--fixed { position: fixed; }
+    &.nav--fixed { position: fixed; }
     
     // MEDIA QUERIES
-    @media screen and (min-width: 48rem) {
+    @media screen and (min-width: $bp-large) {
 		@include navStretch;
         
         // COMPONENTS
@@ -131,14 +131,13 @@
 				// STATES
 				&:hover,
 				&--active {
-					a {
-						background-color: $color-none;
-						color: map-get($theme-maps, primary);
-					}
+					background-color: $color-none;
+
+					a { color: map-get($theme-maps, primary); }
 				}
 				
 				// STATES
-				&--special {
+				&.nav__menu__item--special {
 					background-color: map-get($theme-maps, primary);
 
 					a { color: map-get($theme-maps, light); }
@@ -152,9 +151,9 @@
             }
             
             // STATES
-            &--left { justify-content: flex-start; float: left; }
-            &--center { justify-content: center; }
-            &--right { justify-content: flex-end; float: right; }
+            &.nav__menu--left { justify-content: flex-start; float: left; }
+            &.nav__menu--center { justify-content: center; }
+            &.nav__menu--right { justify-content: flex-end; float: right; }
         }
         
         &__mobile { display: none; }
