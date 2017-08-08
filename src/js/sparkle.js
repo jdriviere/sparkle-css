@@ -15,7 +15,7 @@ $(document).ready(function() {
     toggleHamburger();
     toggleMenu();
     navResizeFix();
-    navDrop();
+    // navDrop();
     modalAction();
 
     // Controls for inputs
@@ -81,6 +81,7 @@ function modalAction () {
     // When user clicks on element to open modal
     $('#modalOpen').click(function() {
         $('.modal').addClass('modal--show');
+        console.log("Modal should open");
     });
 
     // When the user clicks on <span> (x), close the modal

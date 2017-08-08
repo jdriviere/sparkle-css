@@ -4,3 +4,4 @@ src/img/*
 *.txt
 package-lock.json
 npm-debug.log
+examples.html

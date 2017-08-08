@@ -24,13 +24,17 @@
 
     &__body {
         position: relative;
-        max-width: 50%;
+        width: 90%;
         margin: auto;
         padding: 0.75rem;
         background-color: $white_l5;
         @include border-radius;
         border: 1px solid $color-grey-75;
         overflow-y: auto;
+
+        @media screen and (min-width: $bp-large) {
+            max-width: 750px;
+        }
     }
     &__img { display: block; max-width: 100%; margin: 0 auto; }
     &__content {

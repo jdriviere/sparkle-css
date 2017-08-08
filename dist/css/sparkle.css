@@ -1213,13 +1213,19 @@ pre > code {
 
 .modal__body {
   position: relative;
-  max-width: 50%;
+  width: 90%;
   margin: auto;
   padding: 0.75rem;
   background-color: #FEFEFD;
   border-radius: 5px;
   border: 1px solid #C0C0C0;
   overflow-y: auto;
+}
+
+@media screen and (min-width: 48rem) {
+  .modal__body {
+    max-width: 750px;
+  }
 }
 
 .modal__img {
