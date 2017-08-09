@@ -1030,7 +1030,7 @@ code {
 }
 
 .form__input:focus + label,
-.form__input.has-value + label {
+.form__input.form__input--used + label {
   top: -2.5em;
   font-size: 0.75em;
   font-weight: 700;
@@ -1038,7 +1038,7 @@ code {
   color: #111516;
 }
 
-.form__input.has-value:not(:focus) + label {
+.form__input.form__input--used:not(:focus) + label {
   color: #C0C0C0;
 }
 

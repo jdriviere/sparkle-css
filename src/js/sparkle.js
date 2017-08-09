@@ -18,7 +18,7 @@ $(document).ready(function() {
     // navDrop();
     modalAction();
 
-    // Controls for inputs
+    // Controls for inputs: Continually checks if input has value
     $('.form__input').each(function() {
         checkInput($(this));
     });
@@ -101,8 +101,8 @@ function modalAction () {
 function checkInput ($input) {
     // Checking to see if any input have any value
     if ($input.val() != '') {
-        $input.addClass('has-value');
+        $input.addClass('form__input--used');
     } else {
-        $input.removeClass('has-value');
+        $input.removeClass('form__input--used');
     } // End of IF-ELSE
 } // End of FormAction
