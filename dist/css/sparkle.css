@@ -1225,7 +1225,7 @@ code {
   margin: auto;
   padding: 0.75rem;
   background-color: #FEFEFD;
-  border-radius: 5px;
+  border-radius: 0.3125em;
   border: 1px solid #C0C0C0;
   overflow-y: auto;
 }
@@ -1521,45 +1521,45 @@ td {
   color: #555;
 }
 
-.tbl--default th {
+.table--default th {
   border: none;
   border-bottom: 2px solid #DDD;
 }
 
-.tbl--default td {
+.table--default td {
   border: none;
 }
 
-.tbl--default tr {
+.table--default tr {
   border-bottom: 1px solid #DDD;
 }
 
-.tbl--default tr:last-child {
+.table--default tr:last-child {
   border: none;
 }
 
-.tbl--striped tr:nth-child(even) {
+.table--striped tr:nth-child(even) {
   background-color: #EEE;
 }
 
-.tbl--hover tr:hover {
+.table--hover tr:hover {
   background-color: #EEE;
 }
 
-.tbl--light th {
+.table--light th {
   background-color: #F5F7FA;
   border: none;
   color: #AAB2BD;
 }
 
-.tbl--dark th {
+.table--dark th {
   background-color: #434A5A;
   border: none;
   color: #F5F7FA;
 }
 
 @media only screen and (max-width: 48em) {
-  .tbl--responsive {
+  .table--responsive {
     display: block;
     width: 100%;
     max-width: 100%;
@@ -1572,42 +1572,43 @@ td {
 /* ===================================================*/
 .thumbnail {
   width: 100%;
-  padding: 5px;
   border: 1px solid #C0C0C0;
-  border-radius: 5px;
+  border-radius: 0.3125em;
   overflow: hidden;
 }
 
-.thumbnail .has-shadow {
-  -webkit-box-shadow: 0 3 15 rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0 3 15 rgba(0, 0, 0, 0.5);
-  -ms-box-shadow: 0 3 15 rgba(0, 0, 0, 0.5);
-  box-shadow: 0 3 15 rgba(0, 0, 0, 0.5);
+.thumbnail__header {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
-.thumbnail__img {
+.thumbnail__header__title {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.thumbnail__header__subtitle {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.thumbnail img, .thumbnail__image {
   width: 100%;
 }
 
-.thumbnail__img .is-square {
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.thumbnail__img .is-rounded {
-  border-radius: 15px;
-  overflow: hidden;
-}
-
-.thumbnail__img .is-circle {
-  border-radius: 50%;
-  overflow: hidden;
-}
-
 .thumbnail__caption {
-  padding: 0.5em;
-  font-size: 0.9375em;
+  padding: 0.5rem;
+  font-size: 1rem;
   color: #7F7F7F;
+}
+
+.thumbnail.thumbnail--shadow-box {
+  -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
+  -ms-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
 }
 
 /* ===================================================*/

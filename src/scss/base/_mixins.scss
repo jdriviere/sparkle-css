@@ -3,7 +3,7 @@
 // =======================================
 // GENERAL MIXINS
 // =======================================
-@mixin border-radius($radius: 5px) {
+@mixin border-radius($radius: 0.3125em) {
     border-radius: $radius;
 } // End of Border-Radius
 

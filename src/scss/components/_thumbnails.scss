@@ -6,23 +6,23 @@
 
 .thumbnail {
     width: 100%;
-    padding: 5px;
+    // padding: 5px;
     border: 1px solid $color-grey-75;
     @include border-radius;
     overflow: hidden;
 
-    .has-shadow { @include box-shadow(0, 3, 15, 0.5); }
+    // COMPONENTS
+    &__header {
+        padding: { top: 1rem; bottom: 1rem; left: 0.5rem; right: 0.5rem; }
 
-    &__img {
-        width: 100%;
-
-        .is-square { @include border-radius; overflow: hidden; }
-        .is-rounded { @include border-radius(15px); overflow: hidden; }
-        .is-circle { @include border-radius(50%); overflow: hidden; }
+        &__title { font: { size: 1.75rem; weight: $font-weight-heavy; } }
+        &__subtitle { font: { size: 1.25rem; weight: $font-weight-normal; } }
     }
+    & img,
+    &__image { width: 100%; }
     &__caption {
-        padding: 0.5em;
-        font-size: 0.9375em;
-        color: $color-grey-50;
-    }
+        padding: 0.5rem; font-size: 1rem; color: $color-grey-50; }
+
+    // STATES
+    &.thumbnail--shadow-box { @include box-shadow(0, 3px, 15px, 0.5); }
 }

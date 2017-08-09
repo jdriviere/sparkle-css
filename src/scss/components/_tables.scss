@@ -37,8 +37,8 @@ td {
 	color: #555;
 }
 
-// STYLES
-.tbl {
+.table {
+	// STATES
 	&--default {
 		th { border: none; border-bottom: 2px solid #DDD; }
 		td { border: none; }
@@ -48,7 +48,7 @@ td {
 			&:last-child { border: none; }
 		}
 	}
-	
+
 	&--striped {
 		tr:nth-child(even) { background-color: #EEE; }
 	}
@@ -56,7 +56,7 @@ td {
 	&--hover {
 		tr:hover { background-color: #EEE; }
 	}
-	
+
 	// THEMES
 	&--light th {
 		background-color: #F5F7FA;
