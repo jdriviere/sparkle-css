@@ -9,6 +9,7 @@
     width: 100%;
     margin: 1em 0;
     padding: 0.75em;
+    font-size: $alert-font-size;
     @include box-shadow(5, 5, 7, 0.7);
     @include border-radius-cust(0, 5, 5, 0);
     z-index: $index-high;
@@ -34,7 +35,7 @@
     } // End of EACH-LOOP
 
     // COMPONENTS
-    &__title { font-weight: $font-weight-heavy; }
-    &__desc { font-size: $alert-font-size; }
-    &__list { margin-left: 0.9375em; }
+    &__title { font: { size: 1.125rem !important; weight: $font-weight-heavy; } }
+    &__desc { margin: { top: 0.5rem; bottom: 0.5rem; } }
+    &__list { margin-left: 1rem; }
 }
