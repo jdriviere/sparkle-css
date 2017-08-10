@@ -40,6 +40,17 @@ p {
 	&--justify { text-align: justify; }
 }
 
+.title {
+	font: { size: 2.25em; weight: $font-weight-heavy; }
+	text-transform: uppercase;
+	letter-spacing: 0.25rem;
+}
+.subtitle {
+	@extend .title;
+	font: { size: 1.25rem; weight: $font-weight-normal; }
+	letter-spacing: 0.125rem;
+}
+
 // CODE FORMATTING
 pre {
 	display: block;
