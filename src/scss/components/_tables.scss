@@ -8,33 +8,26 @@
 @mixin createTable {
 	width: 100%;
     max-width: 100%;
-    margin: 15px 0;
+    margin: 1rem 0;
     vertical-align: middle;
     border-collapse: collapse;
     white-space: nowrap;
-    color: #777;
+    color: $font-color;
     overflow-x: auto;
     background-color: $white_base;
 }
 
 // TABLES
-table {
-	@include createTable;
-}
-th, td {
-	padding: 0.5em;
-	border: none;
-	text-align: left;
-}
+table { @include createTable; }
+th,
+td { padding: 0.5em; border: none; text-align: left; }
 th {
-	font-size: 1em;
-	font-weight: $font-weight-black;
+	font: { size: 1rem; weight: $font-weight-black; }
 	color: $black_base;
 }
 td {
-	font-size: .875em;
-	font-weight: $font-weight-light;
-	color: #555;
+	font: { size: 0.875rem; weight: $font-weight-light; }
+	color: $font-color;
 }
 
 .table {
@@ -49,24 +42,20 @@ td {
 		}
 	}
 
-	&--striped {
-		tr:nth-child(even) { background-color: #EEE; }
-	}
+	&--striped { tr:nth-child(even) { background-color: #EEE; } }
 	
-	&--hover {
-		tr:hover { background-color: #EEE; }
-	}
+	&--hover { tr:hover { background-color: #EEE; } }
 
 	// THEMES
 	&--light th {
-		background-color: #F5F7FA;
+		background-color: $white_l3;
 		border: none;
-		color: #AAB2BD;
+		color: $color-grey-25;
 	}
 	&--dark th {
-		background-color: #434A5A;
+		background-color: $color-grey-25;
 		border: none;
-		color: #F5F7FA;
+		color: map-get($theme-maps, light);
 	}
 	
 	// RESPONSIVE

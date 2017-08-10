@@ -361,17 +361,14 @@ p.text--big {
   text-align: justify;
 }
 
-.title, .subtitle, .card__header__subtitle, .card__header__title {
+.title, .card__header__title {
   font-size: 2.25em;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.25rem;
 }
 
 .subtitle, .card__header__subtitle {
   font-size: 1.25rem;
   font-weight: 400;
-  letter-spacing: 0.125rem;
 }
 
 pre {
@@ -1581,31 +1578,32 @@ code {
 table {
   width: 100%;
   max-width: 100%;
-  margin: 15px 0;
+  margin: 1rem 0;
   vertical-align: middle;
   border-collapse: collapse;
   white-space: nowrap;
-  color: #777;
+  color: #404040;
   overflow-x: auto;
   background-color: #FBF5F3;
 }
 
-th, td {
+th,
+td {
   padding: 0.5em;
   border: none;
   text-align: left;
 }
 
 th {
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: 800;
   color: #111516;
 }
 
 td {
-  font-size: .875em;
+  font-size: 0.875rem;
   font-weight: 300;
-  color: #555;
+  color: #404040;
 }
 
 .table--default th {
@@ -1634,15 +1632,15 @@ td {
 }
 
 .table--light th {
-  background-color: #F5F7FA;
+  background-color: #FDFAF9;
   border: none;
-  color: #AAB2BD;
+  color: #404040;
 }
 
 .table--dark th {
-  background-color: #434A5A;
+  background-color: #404040;
   border: none;
-  color: #F5F7FA;
+  color: #FBF5F3;
 }
 
 @media only screen and (max-width: 48em) {
