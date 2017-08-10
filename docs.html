@@ -23,16 +23,10 @@
         h2 { color: #9BC2E6; text-align: center; }
         .snippet { padding: 0.125em; background-color: #DDD; }
         
-        .btnSection button { margin-bottom: 0.25em; }
-        .btnSection__block,
-        .formSection__block,
-        .alertSection__block { margin-bottom: 1.25em; }
-        .btnSection__title,
-        .formSection__title,
-        .alertSection__title { text-transform: uppercase; letter-spacing: 0.125em; color: #CCC; }
-        .btnSection__desc,
-        .formSection__desc,
-        .alertSection__desc { margin-bottom: 1.25em; }
+        .section button { margin-bottom: 0.25em; }
+        .section__block { margin-bottom: 1.25em; }
+        .section__title { text-transform: uppercase; letter-spacing: 0.125em; color: #CCC; }
+        .section__desc { margin-bottom: 1.25em; }
 
 
         footer {
@@ -51,7 +45,7 @@
 <body>
     <!-- HEADER -->
      <header>
-        <nav class="nav nav--fixed">
+        <nav class="nav">
             <!-- NAV LOGO/BRAND -->
             <div class="nav__brand">
                 <a href="index.html">
@@ -82,388 +76,1022 @@
         </nav>
     </header>
 
-    <!-- NAV TEST -->
-    <section id="#navigation">
-        <div class="container">
-            <h2>Navigation</h2>
-            <h4 class="text--center">Coming soon...</h4>
-        </div>
-    </section>
+    <!-- MAIN -->
+    <main>
+        <!-- ALERTS -->
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-1-of-1">
+                        <h1>Alerts</h1>
+                    </div> <!-- END OF COLUMN -->
+                </div> <!-- END OF ROW -->
 
-    <!-- TYPO TEST -->
-    <section id="#typo">
-        <div class="container">
-            <h2>Typography</h2>
-            <h4 class="text--center">Coming soon...</h4>
-        </div>
-    </section>
+                <!-- TYPES -->
+                <div class="row">
+                    <div class="col-1-of-2 section">
+                        <div class="section__block">
+                            <h5 class="section__title">Types</h5>
+                            <p class="alertSection__desc">
+                                Alerts can serve to make sure users can see important messages on
+                                their screen. Simply create a block of code and stylize it accordingly.
+                                Start off by adding an <span><code class="snippet">alert</code></span>, and
+                                then specify which type of alert you want by adding the second class,
+                                <span><code class="snippet">alert--$type</code></span>, where
+                                <span><code class="snippet">$type</code></span> is either one of the following:
+                                <span><code class="snippet">default</code></span>,
+                                <span><code class="snippet">info</code></span>,
+                                <span><code class="snippet">success</code></span>,
+                                <span><code class="snippet">warning</code></span>, or
+                                <span><code class="snippet">danger</code></span>.
+                            </p>
 
-    <!-- BUTTONS TEST -->
-    <section id="#buttons">
-        <div class="container btnSection">
-            <h2>Buttons</h2>
-
-            <!-- BUTTON COLORS -->
-             <div class="row">
-                <div class="col-1-of-3">
-                    <!-- NORMAL -->
-                    <div class="btnSection__block">
-                        <h4 class="btnSection__title">Solid</h4>
-                        <p class="btnSection__desc">
-                            Sparkle offers a variety of button colors, to go with
-                            your design needs. To specify the type of button you want,
-                            you must add <span><code class="snippet">btn--$type</code></span> to
-                            your <span><code class="snippet">btn</code></span> class, where
-                            <span><code class="snippet">$type</code></span> is either one of the
-                            following:
-                            <span><code class="snippet">default</code></span>,
-                            <span><code class="snippet">primary</code></span>,
-                            <span><code class="snippet">secondary</code></span>,
-                            <span><code class="snippet">success</code></span>,
-                            <span><code class="snippet">warning</code></span>,
-                            <span><code class="snippet">danger</code></span>,
-                            <span><code class="snippet">light</code></span>, or
-                            <span><code class="snippet">dark</code></span>.
-                        </p>
-                        <button class="btn btn--default btn--small">test</button>
-                        <button class="btn btn--primary btn--small">test</button>
-                        <button class="btn btn--secondary btn--small">test</button>
-                        <button class="btn btn--success btn--small">test</button>
-                        <button class="btn btn--warning btn--small">test</button>
-                        <button class="btn btn--danger btn--small">test</button>
-                        <button class="btn btn--light btn--small">test</button>
-                        <button class="btn btn--dark btn--small">test</button>
-                    </div>
-                    
-                    <!-- OUTLINED -->
-                    <div class="btnSection__block">
-                        <h4 class="btnSection__title">Outline</h4>
-                        <p class="btnSection__desc">
-                            If solid-colored buttons are not enough, Sparkle also offers
-                            the option of outlining the buttons. Simply add
-                            <span><code class="snippet">--outline</code></span> at the end of the
-                            button type class, as in <span><code class="snippet">btn--primary--outline</code></span>.
-                        </p>
-                        <button class="btn btn--default--outline btn--small">test</button>
-                        <button class="btn btn--primary--outline btn--small">test</button>
-                        <button class="btn btn--secondary--outline btn--small">test</button>
-                        <button class="btn btn--success--outline btn--small">test</button>
-                        <button class="btn btn--warning--outline btn--small">test</button>
-                        <button class="btn btn--danger--outline btn--small">test</button>
-                        <button class="btn btn--light--outline btn--small">test</button>
-                        <button class="btn btn--dark--outline btn--small">test</button>
+                            <div class="alert alert--default">This is a default alert</div>
+                            <div class="alert alert--info">This is an info alert</div>
+                            <div class="alert alert--success">This is a success alert</div>
+                            <div class="alert alert--warning">This is a warning alert</div>
+                            <div class="alert alert--danger">This is a danger alert</div>
+                        </div>
                     </div>
 
-                    <!-- GHOSTED -->
-                    <div class="btnSection__block">
-                        <h4 class="btnSection__title">Ghost</h4>
-                        <p class="btnSection__desc">
-                            Sparkle also offers the "ghost" button variety too. Simply add
-                            <span><code class="snippet">--ghost</code></span> at the end of the
-                            button type class, as in <span><code class="snippet">btn--primary--ghost</code></span>.
-                        </p>
-                        <button class="btn btn--default--ghost btn--small">test</button>
-                        <button class="btn btn--primary--ghost btn--small">test</button>
-                        <button class="btn btn--secondary--ghost btn--small">test</button>
-                        <button class="btn btn--success--ghost btn--small">test</button>
-                        <button class="btn btn--warning--ghost btn--small">test</button>
-                        <button class="btn btn--danger--ghost btn--small">test</button>
-                        <button class="btn btn--light--ghost btn--small">test</button>
-                        <button class="btn btn--dark--ghost btn--small">test</button>
-                    </div>
-
-                    <div class="btnSection__block">
-                        <h4 class="btnSection__title">Disabled</h4>
-                        <p class="btnSection__desc">
-                            You want to insert a button but not want it to be accessible yet?
-                            No problem! simply add <span><code class="snippet">btn--disabled</code></span>
-                            to your list of classes, and use a code to remove that class
-                            whenever you need.
-                        </p>
-                        <button class="btn btn--default btn--small btn--disabled">test</button>
-                        <button class="btn btn--primary btn--small btn--disabled">test</button>
-                        <button class="btn btn--secondary btn--small btn--disabled">test</button>
-                        <button class="btn btn--success btn--small btn--disabled">test</button>
-                        <button class="btn btn--warning btn--small btn--disabled">test</button>
-                        <button class="btn btn--danger btn--small btn--disabled">test</button>
-                        <button class="btn btn--light btn--small btn--disabled">test</button>
-                        <button class="btn btn--dark btn--small btn--disabled">test</button>
+                    <div class="col-1-of-2">
+                        <h6>Code:</h6>
+                        <div class="alert alert--info">
+                            <code>
+                                &lt;div class="alert alert--$type"&gt;<br>
+                                    // Body goes here...<br>
+                                &lt;/div&gt;
+                            </code>
+                        </div>
                     </div>
                 </div>
 
-                <!-- CODES -->
-                <div class="col-2-of-3">
-                    <div class="alert alert--default">
-                        <code>
-                            &lt;!-- Button (BASE) --&gt;<br>
-                            &lt;button class="btn btn--$type[--$option] [btn--$size] [btn--disabled]"&gt;test&lt;/button&gt;<br>
-                            <br>
-                        </code>
+                <!-- COMPONENTS -->
+                <div class="row">
+                    <div class="col-1-of-2 section">
+                        <div class="section__block">
+                            <h5 class="section__title">Components</h5>
+                            <p class="section__desc">
+                                Alerts also contain more features, such as a title, description,
+                                and list--if you wish to make your alerts cleaner.
+                            </p>
+                            <div class="alert alert--success">
+                                <h4 class="alert__title">Alert Title</h4>
+                                <p class="alert__desc">This is an alert description.</p>
+                                <ul>
+                                    <li class="alert__list">First alert in the list</li>
+                                    <li class="alert__list">Second alert in the list</li>
+                                    <li class="alert__list">Third alert in the list</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-2">
+                        <h6>Code:</h6>
+                        <div class="alert alert--info">
+                            <code>
+                                &lt;div class="alert alert--$type"&gt;<br>
+                                    &lt;h4 class="alert__title"&gt;Alert Title&lt;/h4&gt;<br>
+                                    &lt;p class="alert__desc"&gt;Some text description here&lt;/p&gt;<br>
+                                    &lt;ul&gt;<br>
+                                        &lt;li class="alert__list"&gt;Some alert list #1&lt;/li&gt;<br>
+                                        &lt;li class="alert__list"&gt;Some alert list #2&lt;/li&gt;<br>
+                                        &lt;li class="alert__list"&gt;Some alert list #3&lt;/li&gt;<br>
+                                    &lt;/ul&gt;<br>
+                                &lt;/div&gt;
+                            </code>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- END OF CONTAINER -->
+        </section> <!-- END OF SECTION (ALERTS) -->
+
+        <!-- ANIMATIONS -->
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-1-of-1">
+                        <h1>Animations</h1>
+                        <p>Section coming soon</p>
                     </div>
                 </div>
             </div>
+        </section> <!-- END OF SECTION (ANIMATIONS) -->
 
-            <!-- BUTTON SIZES -->
-            <div class="row">
-                <div class="col-1-of-3">
-                    <div class="btnSection__block">
-                        <h4 class="btnSection__title">Sizes</h4>
-                        <p class="btnSection__desc">
-                            Buttons come in different sizes for different purposes. You can
-                            alter a button size by adding <span><code class="snippet">btn--$size</code></span>
-                            to the class list, where the <span><code class="snippet">$size</code></span>
-                            is either one of the following:
-                            <span><code class="snippet">small</code></span>,
-                            <span><code class="snippet">medium</code></span>,
-                            <span><code class="snippet">large</code></span>, or
-                            <span><code class="snippet">xlarge</code></span>.
-                        </p>
-                        <button class="btn btn--primary btn--small">Button</button><br>
-                        <button class="btn btn--primary btn--medium">Button</button><br>
-                        <button class="btn btn--primary btn--large">Button</button><br>
-                        <button class="btn btn--primary btn--xlarge">Button</button><br>
+        <!-- BUTTONS -->
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-1-of-1">
+                        <h1>Buttons</h1>
+                    </div> <!-- END OF COLUMN -->
+                </div> <!-- END OF ROW -->
+
+                <!-- TYPES -->
+                <div class="row">
+                    <div class="col-1-of-2 section">
+                        <div class="section__block">
+                            <h5 class="section__title">Types (Solid):</h5>
+                            <p class="btnSection__desc">
+                                Sparkle offers a variety of button colors, to go with
+                                your design needs. To specify the type of button you want,
+                                you must add <span><code class="snippet">btn--$type</code></span> to
+                                your <span><code class="snippet">btn</code></span> class, where
+                                <span><code class="snippet">$type</code></span> is either one of the
+                                following:
+                                <span><code class="snippet">default</code></span>,
+                                <span><code class="snippet">primary</code></span>,
+                                <span><code class="snippet">secondary</code></span>,
+                                <span><code class="snippet">success</code></span>,
+                                <span><code class="snippet">warning</code></span>,
+                                <span><code class="snippet">danger</code></span>,
+                                <span><code class="snippet">light</code></span>, or
+                                <span><code class="snippet">dark</code></span>.
+                            </p>
+
+                            <button class="btn btn--default">Default</button>
+                            <button class="btn btn--primary">Primary</button>
+                            <button class="btn btn--secondary">Secondary</button>
+                            <button class="btn btn--success">Success</button>
+                            <button class="btn btn--warning">Warning</button>
+                            <button class="btn btn--danger">Danger</button>
+                            <button class="btn btn--light">Light</button>
+                            <button class="btn btn--dark">Dark</button>
+                            </div>
+                    </div>
+
+                    <!-- CODE -->
+                    <div class="col-1-of-2">
+                        <h6>Code:</h6>
+                        <div class="alert alert--info">
+                            <code>
+                                &lt;button class="btn btn--$type"&gt;Some Text&lt;/button&gt;
+                            </code>
+                        </div>
+                    </div>
+                </div> <!-- END OF ROW -->
+
+                <!-- OUTLINE TYPE -->
+                <div class="row">
+                    <div class="col-1-of-2 section">
+                        <div class="section__block">
+                            <h5 class="section__title">Types (Outlined):</h5>
+                            <p class="btnSection__desc">
+                                If solid-colored buttons are not enough, Sparkle also offers
+                                the option of outlining the buttons. Simply add
+                                <span><code class="snippet">--outline</code></span> at the end of the
+                                button type class, as in
+                                <span><code class="snippet">btn--$type--outline</code></span>.
+                            </p>
+
+                            <button class="btn btn--default--outline">Button</button>
+                            <button class="btn btn--primary--outline">Button</button>
+                            <button class="btn btn--secondary--outline">Button</button>
+                            <button class="btn btn--success--outline">Button</button>
+                            <button class="btn btn--warning--outline">Button</button>
+                            <button class="btn btn--danger--outline">Button</button>
+                            <button class="btn btn--light--outline">Button</button>
+                            <button class="btn btn--dark--outline">Button</button>
+                        </div>
+                    </div>
+
+                    <!-- CODE -->
+                    <div class="col-1-of-2">
+                        <h6>Code:</h6>
+                        <div class="alert alert--info">
+                            <code>
+                                &lt;button class="btn btn--$type--outline"&gt;Some Text&lt;/button&gt;
+                            </code>
+                        </div>
+                    </div>                    
+                </div>
+
+                <!-- GHOSTED TYPE -->
+                <div class="row">
+                    <div class="col-1-of-2 section">
+                        <div class="section__block">
+                            <h5 class="section__title">Types (Ghosted):</h5>
+                            <p class="btnSection__desc">
+                                Sparkle also offers the "ghost" button variety too. Simply add
+                                <span><code class="snippet">--ghost</code></span> at the end of the
+                                button type class, as in
+                                <span><code class="snippet">btn--$type--ghost</code></span>.
+                            </p>
+
+                            <button class="btn btn--default--ghost">Button</button>
+                            <button class="btn btn--primary--ghost">Button</button>
+                            <button class="btn btn--secondary--ghost">Button</button>
+                            <button class="btn btn--success--ghost">Button</button>
+                            <button class="btn btn--warning--ghost">Button</button>
+                            <button class="btn btn--danger--ghost">Button</button>
+                            <button class="btn btn--light--ghost">Button</button>
+                            <button class="btn btn--dark--ghost">Button</button>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-2">
+                        <h6>Code:</h6>
+                        <div class="alert alert--info">
+                            <code>
+                                &lt;button class="btn btn--$type--ghost"&gt;Some Text&lt;/button&gt;
+                            </code>
+                        </div>
                     </div>
                 </div>
-                
-                <!-- CODES -->
-                <div class="col-2-of-3">
-                    <div class="alert alert--default">
-                        <code>
-                            &lt;!-- Button sizes --&gt;<br>
-                            &lt;button class="btn btn--$type btn--$size"&gt;test&lt;/button&gt;<br>
-                        </code>
-                    </div>
-                </div>
-            </div>
-        
-            <!-- BUTTON ROUNDNESS -->
-            <div class="row">
-                <div class="col-1-of-3">
-                    <div class="btnSection__block">
-                        <h4 class="btnSection__title">Roundness</h4>
-                        <p class="btnSection__desc">
-                            Sparkle offers the chance to even vary the roundness of its button design.
-                            Simply add <span><code class="snippet">btn--$roundness</code></span> in your class
-                            list, where <span><code class="snippet">$roundness</code></span> is one of the following:
-                            <span><code class="snippet">h-round</code></span> (for 'half-round'), or
-                            <span><code class="snippet">f-round</code></span> (for 'fully-round').
-                        </p>
-                        <button class="btn btn--primary btn--medium btn--h-round">test</button>
-                        <button class="btn btn--primary btn--medium btn--f-round">test</button>
-                    </div>
-                </div>
 
-                <!-- CODES -->
-                <div class="col-2-of-3">
-                    <div class="alert alert--default">
-                        <code>
-                            &lt;!-- Button roundness --&gt;<br>
-                            &lt;button class="btn btn--$type btn--$size btn--$roundness"&gt;test&lt;/button&gt;<br>
-                        </code>
-                    </div>
-                </div>
-            </div>
+                <!-- SIZES -->
+                <div class="row">
+                    <div class="col-1-of-2 section">
+                        <div class="section__block">
+                            <h5 class="section__title">Sizes:</h5>
+                            <p class="btnSection__desc">
+                                Buttons come in different sizes for different purposes. You can
+                                alter a button size by adding <span><code class="snippet">btn--$size</code></span>
+                                to the class list, where the <span><code class="snippet">$size</code></span>
+                                is either one of the following:
+                                <span><code class="snippet">small</code></span>,
+                                <span><code class="snippet">medium</code></span>,
+                                <span><code class="snippet">large</code></span>, or
+                                <span><code class="snippet">xlarge</code></span>.
+                            </p>
 
-            <!-- BUTTON BLOCK -->
-            <div class="row">
-                <div class="col-1-of-3">
-                    <div class="btnSection__block">
-                        <h4 class="btnSection__title">Block</h4>
-                        <p class="btnSection__desc">
-                            You can also have your button take the entire span of the block too by adding
-                            <span><code class="snippet">btn--block</code></span> to your class list. You can
-                            even mix it with the button roundness classes.
-                        </p>
-                        <button class="btn btn--primary btn--block">test</button>
-                        <button class="btn btn--primary btn--block btn--h-round">test</button>
-                        <button class="btn btn--primary btn--block btn--f-round">test</button>
-                    </div>
-                </div>
-
-                <!-- CODES -->
-                <div class="col-2-of-3">
-                    <div class="alert alert--default">
-                        <code>
-                            &lt;!-- Button block --&gt;<br>
-                            &lt;button class="btn btn--$type btn--block [btn--$roundness]"&gt;test&lt;/test&gt;<br>
-                        </code>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- ALERTS TEST -->
-    <section id="#alerts">
-        <div class="container">
-            <h2>Alerts</h2>
-
-            <div class="row">
-                <div class="col-1-of-3">
-                    <div class="alertSection__block">
-                        <h4 class="alertSection__title">BASIC</h4>
-                        <p class="alertSection__desc">
-                            Alerts can serve to make sure users can see important messages on
-                            their screen. Simply create a block of code and stylize it accordingly.
-                            Start off by adding an <span><code class="snippet">alert</code></span>, and
-                            then specify which type of alert you want by adding the second class,
-                            <span><code class="snippet">alert--$type</code></span>, where
-                            <span><code class="snippet">$type</code></span> is either one of the following:
-                            <span><code class="snippet">default</code></span>,
-                            <span><code class="snippet">info</code></span>,
-                            <span><code class="snippet">success</code></span>,
-                            <span><code class="snippet">warning</code></span>, or
-                            <span><code class="snippet">danger</code></span>.
-                        </p>
-                        <div class="alert alert--default">This is a default alert.</div>
-                        <div class="alert alert--info">This is an info alert.</div>
-                        <div class="alert alert--success">This is a success alert.</div>
-                        <div class="alert alert--warning">This is a warning alert.</div>
-                        <div class="alert alert--danger">This is a danger alert.</div>
-                    </div>
-                </div>
-                <div class="col-2-of-3">
-                    <div class="alert alert--default">
-                        <code>
-                            &lt;!-- Alert --&gt;<br>
-                            &lt;div class="alert alert--$type"&gt;Alert example&lt;/div&gt;<br>
-                        </code>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-    </section>
-
-    <!-- GRID TEST -->
-    <section id="#grids">
-        <div class="container">
-            <h2>Grid</h2>
-            <h4 class="text--center">Coming soon...</h4>
-        </div>
-    </section>
-
-    <!-- FORM TEST -->
-    <section id="#forms">
-        <div class="container">
-            <h2>Form Test</h2>
-
-            <div class="row">
-                <div class="col-1-of-3">
-                    <div class="formSection__block">
-                        <h4 class="formSection__title">Regular forms</h4>
-                        <p class="formSection__desc">
-                            Sparkle offers the possibility to customize forms. It was heavily
-                            influenced by Google Material UI. In order to use the forms feature,
-                            you must add the <span><code class="snippet">.form</code></span>
-                            class to the the &lt;form&gt; element.<br>
-                            In order to optimize the use of &lt;label&gt; with its accompanying
-                            &lt;input&gt; tags, you must envelop them both in a &lt;div&gt; with a
-                            <span><code class="snippet">form__box</code></span> class. And to stylize
-                            the inputs, simply add <span><code class="snippet">form__input</code></span>
-                            to its class list (you do not need to add any classes to the &lt;label&gt; tag).
-                        </p>
+                            <button class="btn btn--default btn--small">Button</button>
+                            <button class="btn btn--default btn--medium">Button</button>
+                            <button class="btn btn--default btn--large">Button</button>
+                            <button class="btn btn--default btn--xlarge">Button</button>
+                        </div>
                     </div>
 
-                    <form class="form" action="#">
-                        <div class="form__box">
-                            <input class="form__input" type="text" id="name" name="name">
-                            <label for="name">Name</label>
+                    <div class="col-1-of-2">
+                        <h6>Code:</h6>
+                        <div class="alert alert--info">
+                            <code>
+                                &lt;button class="btn btn--$type[--$option] btn--small"&gt;Some Text&lt;/button&gt;<br>
+                                &lt;button class="btn btn--$type[--$option] btn--medium"&gt;Some Text&lt;/button&gt;<br>
+                                &lt;button class="btn btn--$type[--$option] btn--large"&gt;Some Text&lt;/button&gt;<br>
+                                &lt;button class="btn btn--$type[--$option] btn--xlarge"&gt;Some Text&lt;/button&gt;<br>
+                            </code>
                         </div>
 
-                        <div class="form__box">
-                            <input class="form__input" type="email" id="email" name="email">
-                            <label for="email">Email</label>
+                        <div class="alert alert--warning">
+                            <h5 class="alert__title">Note:</h5>
+                            <p>
+                                Sparkle button features functions best when the button size is included
+                                in the button's class list.
+                            </p>
                         </div>
-
-                        <div class="form__box">
-                            <input class="form__input" type="password" id="pass" name="pass">
-                            <label for="pass">Password</label>
-                        </div>
-
-                        <button class="btn btn--success btn--medium">Send</button>
-                    </form>
-                </div>
-
-                <!-- CODES -->
-                <div class="col-2-of-3">
-                    <div class="alert alert--default">
-                        <code>
-                            &lt;form class="form"&gt;<br>
-                                &lt;div class="form__box"&gt;<br>
-                                    &lt;input class="form__input" type="text" id="name"&gt;<br>
-                                    &lt;label for="input"&gt;Name&lt;/label&gt;<br>
-                                &lt;/div&gt;<br>
-                                <br>
-                                &lt;div class="form__box"&gt;<br>
-                                    &lt;input class="form__input" type="email" id="email"&gt;<br>
-                                    &lt;label for="input"&gt;Email&lt;/label&gt;<br>
-                                &lt;/div&gt;<br>
-                                <br>
-                                &lt;div class="form__box"&gt;<br>
-                                    &lt;input class="form__input" type="password" id="pass"&gt;<br>
-                                    &lt;label for="input"&gt;Password&lt;/label&gt;<br>
-                                &lt;/div&gt;<br>
-                            &lt;/form&gt;
-                        </code>
                     </div>
                 </div>
-            </div>
 
-            <div class="row">
-                <div class="col-1-of-3">
-                    <div class="formSection__block">
-                        <h4 class="formSection__title">Other features</h4>
-                        <p class="formSection__desc">
-                            Coming soon...
+                <!-- BLOCK SIZE -->
+                <div class="row">
+                    <div class="col-1-of-2 section">
+                        <div class="section__block">
+                            <h5 class="section__title">Block:</h5>
+                            <p class="btnSection__desc">
+                                You can also have your button take the entire span of the block too by adding
+                                <span><code class="snippet">btn--block</code></span> to your class list. You can
+                                even mix it with the button roundness classes (see below).
+                            </p>
+
+                            <button class="btn btn--default btn--block">Button</button>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-2">
+                        <h6>Code:</h6>
+                        <div class="alert alert--info">
+                            <code>
+                                &lt;button class="btn btn--$type[--$option] btn--block"&gt;Some Text&lt;/button&gt;<br>
+                            </code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ROUNDNESS -->
+                <div class="row">
+                    <div class="col-1-of-2">
+                        <div class="section__block">
+                            <h5 class="section__title">Roundness:</h5>
+                            <p class="btnSection__desc">
+                                Sparkle offers the chance to even vary the roundness of its button design.
+                                Simply add <span><code class="snippet">btn--$roundness</code></span> in your class
+                                list, where <span><code class="snippet">$roundness</code></span> is one of the following:
+                                <span><code class="snippet">h-round</code></span> (for 'half-round'), or
+                                <span><code class="snippet">f-round</code></span> (for 'fully-round').
+                            </p>
+
+                            <button class="btn btn--default btn--small btn--h-round">Button</button>
+                            <button class="btn btn--default btn--small btn--f-round">Button</button>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-2">
+                        <h6>Code:</h6>
+                        <div class="alert alert--info">
+                            <code>
+                                &lt;button class="btn btn--$type[--$option] btn--h-round&gt;Some Text&lt;/button&gt;<br>
+                                &lt;button class="btn btn--$type[--$option] btn--f-round&gt;Some Text&lt;/button&gt;
+                            </code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EXTRA -->
+                <div class="row">
+                    <div class="col-1-of-2 section">
+                        <div class="section__block">
+                            <h5 class="section__title">Disabled:</h5>
+                            <p class="btnSection__desc">
+                                You want to insert a button but not want it to be accessible yet?
+                                No problem! simply add <span><code class="snippet">btn--disabled</code></span>
+                                to your list of classes, and use a code to remove that class
+                                whenever you need.
+                            </p>
+
+                            <button class="btn btn--default btn--small btn--disabled">Button</button>
+                            <button class="btn btn--primary btn--small btn--disabled">Button</button>
+                            <button class="btn btn--secondary btn--small btn--disabled">Button</button>
+                            <button class="btn btn--success btn--small btn--disabled">Button</button>
+                            <button class="btn btn--warning btn--small btn--disabled">Button</button>
+                            <button class="btn btn--danger btn--small btn--disabled">Button</button>
+                            <button class="btn btn--light btn--small btn--disabled">Button</button>
+                            <button class="btn btn--dark btn--small btn--disabled">Button</button>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-2">
+                        <h6>Code:</h6>
+                        <div class="alert alert--info">
+                            <code>
+                                &lt;button class="btn btn--$type[--$option] btn--$size btn--disabled"&gt;Some Text&lt;/button&gt;
+                            </code>
+                        </div>
+                    </div>
+                </div> <!-- END OF ROW -->
+            </div> <!-- END OF CONTAINER -->
+        </section> <!-- END OF SECTION (BUTTONS) -->
+
+        <!-- CARDS -->
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-1-of-1">
+                        <h1>Cards</h1>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-1-of-2 section">
+                        <h5 class="section__title">Base</h5>
+                        <p class="section__desc">
+                            Description coming soon...
+                        </p>
+
+                        <div class="card">
+                            <div class="card__header">
+                                <p class="card__header__title">Title</p>
+                                <p class="card__header__subtitle">Subtitle</p>
+                            </div>
+                            <img class="card__image" src="dist/img/space_img.jpg" alt="space_thumb">
+                            <p class="card__caption">Some caption text.</p>
+                            <div class="card__footer">
+                                <div class="card__footer__item">
+                                    <a href="#"><i class="fa fa-github"></i> Github</a></p>
+                                </div>
+                                <div class="card__footer__item">
+                                    <a href="#"><i class="fa fa-facebook"></i> Facebook</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-2">
+                        <h6>Code:</h6>
+                        <div class="alert alert--info">
+                            <code>
+                                &lt;div class="card"&gt;<br>
+                                    &lt;div class="card__header"&gt;<br>
+                                        &lt;p class="card__header__title"&gt;Title&lt;/p&gt;<br>
+                                        &lt;p class="card__header__subtitle"&gt;Subtitle&lt;/p&gt;<br>
+                                    &lt;/div&gt;<br>
+                                    <br>
+                                    &lt;img class="card__image" src="path/to/image.ext" alt="#"&gt;<br>
+                                    &lt;p class="card__caption">Some caption text&lt;/p&gt;<br>
+                                    <br>
+                                    &lt;div class="card__footer"&gt;<br>
+                                        &lt;div class="card__footer__item"&gt;Some content&lt;/div&gt;<br>
+                                        &lt;div class="card__footer__item"&gt;Some content&lt;/div&gt;<br>
+                                    &lt;/div&gt;<br>
+                                &lt;/div&gt;
+                            </code>
+                        </div>
+                    </div>
+                </div> <!-- END OF CARD (BASE) -->
+
+                <!-- STYLIZED -->
+                <div class="row">
+                    <div class="col-1-of-2 section">
+                        <h5 class="section__title">Shadow-Box</h5>
+                        <p class="section__desc">
+                            Description coming soon...
+                        </p>
+
+                        <div class="card card--shadow-box">
+                            <div class="card__header">
+                                <p class="card__header__title">Title</p>
+                                <p class="card__header__subtitle">Subtitle</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-2">
+                        <h6>Code:</h6>
+                        <div class="alert alert--info">
+                            <code>
+                                &lt;div class="card card--shadow-box"&gt;<br>
+                                    // Body goes here<br>
+                                &lt;/div&gt;
+                            </code>
+                        </div>
+                    </div>
+                </div> <!-- END OF CARD (SHADOW-BOX) -->
+            </div> <!-- END OF CONTAINER -->
+        </section> <!-- END OF SECTION (CARDS) -->
+
+        <!-- FORMS -->
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-1-of-1">
+                        <h1>Forms</h1>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-1-of-2 section">
+                        <div class="section__block">
+                            <h5 class="section__title">Base</h5>
+                            <p class="formSection__desc">
+                                Sparkle offers the possibility to customize forms. It was heavily
+                                influenced by Google Material UI. In order to use the forms feature,
+                                you must add the <span><code class="snippet">.form</code></span>
+                                class to the the &lt;form&gt; element.<br>
+                                In order to optimize the use of &lt;label&gt; with its accompanying
+                                &lt;input&gt; tags, you must envelop them both in a &lt;div&gt; with a
+                                <span><code class="snippet">form__box</code></span> class. And to stylize
+                                the inputs, simply add <span><code class="snippet">form__input</code></span>
+                                to its class list (you do not need to add any classes to the &lt;label&gt; tag).
+                            </p>
+
+                            <form action="#" class="form">
+                                <div class="form__box">
+                                    <input type="text" class="form__input" id="input1">
+                                    <label for="input1">Test Name</label>
+                                </div>
+
+                                <div class="form__box">
+                                    <input type="text" class="form__input" id="input2">
+                                    <label for="input2">Test Name</label>
+                                </div>
+
+                                <div class="form__box">
+                                    <input type="password" class="form__input" id="input3">
+                                    <label for="input3">Test Pass</label>
+                                </div>
+
+                                <button type="button" class="btn btn--success btn--medium">Test</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-2">
+                        <h6>Code:</h6>
+                        <div class="alert alert--info">
+                            <code>
+                                &lt;form class="form"&gt;<br>
+                                    &lt;div class="form__box"&gt;<br>
+                                        &lt;input class="form__input" type="text" id="input1"&gt;<br>
+                                        &lt;label for="input1"&gt;Input Text&lt;/label&gt;<br>
+                                    &lt;/div&gt;<br>
+                                    <br>
+                                    &lt;div class="form__box"&gt;<br>
+                                        &lt;input class="form__input" type="text" id="input2"&gt;<br>
+                                        &lt;label for="input2"&gt;Input Text&lt;/label&gt;<br>
+                                    &lt;/div&gt;<br>
+                                    <br>
+                                    &lt;div class="form__box"&gt;<br>
+                                        &lt;input class="form__input" type="password" id="input3"&gt;<br>
+                                        &lt;label for="input3"&gt;Input Text&lt;/label&gt;<br>
+                                    &lt;/div&gt;<br>
+                                &lt;/form&gt;
+                            </code>
+                        </div>
+
+                        <div class="alert alert--warning">
+                            <h5 class="alert__title">Note:</h5>
+                            <p class="alert__desc">
+                                Make sure the &lt;label&gt; tag is placed underneath the &lt;input&gt; tag!
+                            </p>
+                        </div>
+                    </div>
+                </div> <!-- END OF ROW -->
+            </div> <!-- END OF CONTAINER -->
+        </section> <!-- END OF SECTION (FORMS) -->
+
+        <!-- GRIDS -->
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-1-of-1">
+                        <h1>Grids</h1>
+                        <p>
+                            Section coming soon
                         </p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
+            </div> <!-- END OF CONTAINER -->
+        </section> <!-- END OF SECTION (GRIDS) -->
 
-    <!-- TABLES TEST -->
-    <section id="#table">
-        <div class="container">
-            <h2>Tables</h2>
-            <h4 class="text--center">Coming soon...</h4>
-        </div>
-    </section>
+        <!-- MODALS -->
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-1-of-1">
+                        <h1>Modals</h1>
+                    </div>
+                </div>
 
-    <!-- MODALS TEST -->
-    <section id="#modal">
-        <div class="container">
-            <h2>Modals</h2>
+                <div class="row">
+                    <div class="col-1-of-2 section">
+                        <div class="section__block">
+                            <h5 class="section__title">Base</h5>
+                            <p class="section__desc">
+                                Description coming soon...
+                            </p>
+                        </div>
 
-            <div class="row">
-                <div class="col-1-of-3">
-                    <h4 class="modalSection__title">Feature coming soon</h4>
-                    <p class="modalSection__desc">Description coming soon...</p>
-                    <button id="modalOpen" class="btn btn--success btn--medium">Click me</button>
+                        <button id="modalOpen" class="btn btn--danger btn--medium">Open Modal</button>
+
+                        <div class="modal">
+                            <div class="modal__body">
+                                <div class="modal__close">&times;</div>
+                                <p class="modal__content">This is just a dummy text!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-2">
+                        <h6>Code:</h6>
+                        <div class="alert alert--info">
+                            <code>
+                                &lt;div class="modal"&gt;<br>
+                                    &lt;div class="modal__body"&gt;<br>
+                                        &lt;div class="modal__close"&gt;&times;&lt;/div&gt;<br>
+                                        &lt;p class="modal__content"&gt;<br>
+                                            // Body text goes here<br>
+                                        &lt;/p&gt;<br>
+                                    &lt;/div&gt;<br>
+                                &lt;/div&gt;
+                            </code>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section> <!-- END OF SECTION (MODALS) -->
 
-            <div class="modal">
-                <div class="modal__body">
-                    <div class="modal__close">&times;</div>
-                    <h3>Modal Test</h3>
-                    <img class="modal__img" src="dist/img/space_img.jpg" alt="modal img">
-                    <p class="modal__content">This is to try out the modal class</p>
-                    <button class="btn btn--success btn--medium">Button</button>
-                    <button class="btn btn--danger btn--medium">Button</button>
+        <!-- NAVIGATION -->
+        <section></section> <!-- END OF SECTION (NAVIGATION) -->
+
+        <!-- TABLES -->
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-1-of-1">
+                        <h1>Tables</h1>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- THUMBNAILS TEST -->
-    <section id="#thumbnails">
-        <div class="container">
-            <h2>Thumbnails</h2>
-            <h4 class="text--center">Coming soon...</h4>
-        </div>
-    </section>
+                <!-- BASIC TABLE -->
+                <div class="row">
+                    <div class="col-1-of-2 section">
+                        <h5 class="section__title">Base</h5>
+                        <p class="section__desc">
+                            Description coming soon...
+                        </p>
+
+                        <table class="table table--default">
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Age</th>
+                            </tr>
+
+                            <tr>
+                                <td>John</td>
+                                <td>Smith</td>
+                                <td>24</td>
+                            </tr>
+
+                            <tr>
+                                <td>John</td>
+                                <td>Smith</td>
+                                <td>24</td>
+                            </tr>
+
+                            <tr>
+                                <td>John</td>
+                                <td>Smith</td>
+                                <td>24</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="col-1-of-2">
+                        <h6>Code:</h6>
+                        <div class="alert alert--info">
+                            <code>
+                                &lt;table class="table table--default"&gt;<br>
+                                    &lt;tr&gt;<br>
+                                        &lt;th>First Name&lt;/th&gt;<br>
+                                        &lt;th>Last Name&lt;/th&gt;<br>
+                                        &lt;th>Age&lt;/th&gt;<br>
+                                    &lt;/tr&gt;<br>
+                                    <br>
+                                    &lt;tr&gt;<br>
+                                        &lt;td>John&lt;/td&gt;<br>
+                                        &lt;td>Smith&lt;/td&gt;<br>
+                                        &lt;td>24&lt;/td&gt;<br>
+                                    &lt;/tr&gt;<br>
+                                    <br>
+                                    &lt;tr&gt;<br>
+                                        &lt;td>John&lt;/td&gt;<br>
+                                        &lt;td>Smith&lt;/td&gt;<br>
+                                        &lt;td>24&lt;/td&gt;<br>
+                                    &lt;/tr&gt;<br>
+                                    <br>
+                                    &lt;tr&gt;<br>
+                                        &lt;td>John&lt;/td&gt;<br>
+                                        &lt;td>Smith&lt;/td&gt;<br>
+                                        &lt;td>24&lt;/td&gt;<br>
+                                    &lt;/tr&gt;<br>
+                                &lt;/table&gt;
+                            </code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STYLIZED TABLE -->
+                <div class="row">
+                    <div class="col-1-of-2 section">
+                        <h5 class="section__title">Striped</h5>
+                        <p class="section__desc">
+                            Description coming soon...
+                        </p>
+
+                        <table class="table table--striped">
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Age</th>
+                            </tr>
+
+                            <tr>
+                                <td>John</td>
+                                <td>Smith</td>
+                                <td>24</td>
+                            </tr>
+
+                            <tr>
+                                <td>John</td>
+                                <td>Smith</td>
+                                <td>24</td>
+                            </tr>
+
+                            <tr>
+                                <td>John</td>
+                                <td>Smith</td>
+                                <td>24</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="col-1-of-2">
+                        <h6>Code:</h6>
+                        <div class="alert alert--info">
+                            <code>
+                                &lt;table class="table table--striped"&gt;<br>
+                                    &lt;tr&gt;<br>
+                                        &lt;th>First Name&lt;/th&gt;<br>
+                                        &lt;th>Last Name&lt;/th&gt;<br>
+                                        &lt;th>Age&lt;/th&gt;<br>
+                                    &lt;/tr&gt;<br>
+                                    <br>
+                                    &lt;tr&gt;<br>
+                                        &lt;td>John&lt;/td&gt;<br>
+                                        &lt;td>Smith&lt;/td&gt;<br>
+                                        &lt;td>24&lt;/td&gt;<br>
+                                    &lt;/tr&gt;<br>
+                                    <br>
+                                    &lt;tr&gt;<br>
+                                        &lt;td>John&lt;/td&gt;<br>
+                                        &lt;td>Smith&lt;/td&gt;<br>
+                                        &lt;td>24&lt;/td&gt;<br>
+                                    &lt;/tr&gt;<br>
+                                    <br>
+                                    &lt;tr&gt;<br>
+                                        &lt;td>John&lt;/td&gt;<br>
+                                        &lt;td>Smith&lt;/td&gt;<br>
+                                        &lt;td>24&lt;/td&gt;<br>
+                                    &lt;/tr&gt;<br>
+                                &lt;/table&gt;
+                            </code>
+                        </div>
+                    </div>
+                </div> <!-- END OF TABLE (STRIPED) -->
+
+                <div class="row">
+                    <div class="col-1-of-2 section">
+                        <h5 class="section__title">Hoverable</h5>
+                        <p class="section__desc">
+                            Description coming soon...
+                        </p>
+
+                        <table class="table table--default table--hover">
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Age</th>
+                            </tr>
+
+                            <tr>
+                                <td>John</td>
+                                <td>Smith</td>
+                                <td>24</td>
+                            </tr>
+
+                            <tr>
+                                <td>John</td>
+                                <td>Smith</td>
+                                <td>24</td>
+                            </tr>
+
+                            <tr>
+                                <td>John</td>
+                                <td>Smith</td>
+                                <td>24</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="col-1-of-2">
+                        <h6>Code:</h6>
+                        <div class="alert alert--info">
+                            <code>
+                                &lt;table class="table table--$style table--hover"&gt;<br>
+                                    &lt;tr&gt;<br>
+                                        &lt;th>First Name&lt;/th&gt;<br>
+                                        &lt;th>Last Name&lt;/th&gt;<br>
+                                        &lt;th>Age&lt;/th&gt;<br>
+                                    &lt;/tr&gt;<br>
+                                    <br>
+                                    &lt;tr&gt;<br>
+                                        &lt;td>John&lt;/td&gt;<br>
+                                        &lt;td>Smith&lt;/td&gt;<br>
+                                        &lt;td>24&lt;/td&gt;<br>
+                                    &lt;/tr&gt;<br>
+                                    <br>
+                                    &lt;tr&gt;<br>
+                                        &lt;td>John&lt;/td&gt;<br>
+                                        &lt;td>Smith&lt;/td&gt;<br>
+                                        &lt;td>24&lt;/td&gt;<br>
+                                    &lt;/tr&gt;<br>
+                                    <br>
+                                    &lt;tr&gt;<br>
+                                        &lt;td>John&lt;/td&gt;<br>
+                                        &lt;td>Smith&lt;/td&gt;<br>
+                                        &lt;td>24&lt;/td&gt;<br>
+                                    &lt;/tr&gt;<br>
+                                &lt;/table&gt;
+                            </code>
+                        </div>
+                    </div>
+                </div> <!-- END OF TABLE (HOVERABLE) -->
+
+                <!-- THEMED TABLE -->
+                <div class="row">
+                    <div class="col-1-of-2 section">
+                        <h5 class="section__title">Theme (Light)</h5>
+                        <p class="section__desc">
+                            Description coming soon...
+                        </p>
+
+                        <table class="table table--default table--light table--hover">
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Age</th>
+                            </tr>
+
+                            <tr>
+                                <td>John</td>
+                                <td>Smith</td>
+                                <td>24</td>
+                            </tr>
+
+                            <tr>
+                                <td>John</td>
+                                <td>Smith</td>
+                                <td>24</td>
+                            </tr>
+
+                            <tr>
+                                <td>John</td>
+                                <td>Smith</td>
+                                <td>24</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="col-1-of-2">
+                        <h6>Code:</h6>
+                        <div class="alert alert--info">
+                            <code>
+                                &lt;table class="table table--$style table--light [table--hover]"&gt;<br>
+                                    &lt;tr&gt;<br>
+                                        &lt;th>First Name&lt;/th&gt;<br>
+                                        &lt;th>Last Name&lt;/th&gt;<br>
+                                        &lt;th>Age&lt;/th&gt;<br>
+                                    &lt;/tr&gt;<br>
+                                    <br>
+                                    &lt;tr&gt;<br>
+                                        &lt;td>John&lt;/td&gt;<br>
+                                        &lt;td>Smith&lt;/td&gt;<br>
+                                        &lt;td>24&lt;/td&gt;<br>
+                                    &lt;/tr&gt;<br>
+                                    <br>
+                                    &lt;tr&gt;<br>
+                                        &lt;td>John&lt;/td&gt;<br>
+                                        &lt;td>Smith&lt;/td&gt;<br>
+                                        &lt;td>24&lt;/td&gt;<br>
+                                    &lt;/tr&gt;<br>
+                                    <br>
+                                    &lt;tr&gt;<br>
+                                        &lt;td>John&lt;/td&gt;<br>
+                                        &lt;td>Smith&lt;/td&gt;<br>
+                                        &lt;td>24&lt;/td&gt;<br>
+                                    &lt;/tr&gt;<br>
+                                &lt;/table&gt;
+                            </code>
+                        </div>
+                    </div>
+                </div> <!-- END OF TABLE (THEME - LIGHT) -->
+
+                <div class="row">
+                    <div class="col-1-of-2 section">
+                        <h5 class="section__title">Theme (Dark)</h5>
+                        <p class="section__desc">
+                            Description coming soon...
+                        </p>
+
+                        <table class="table table--default table--dark table--hover">
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Age</th>
+                            </tr>
+
+                            <tr>
+                                <td>John</td>
+                                <td>Smith</td>
+                                <td>24</td>
+                            </tr>
+
+                            <tr>
+                                <td>John</td>
+                                <td>Smith</td>
+                                <td>24</td>
+                            </tr>
+
+                            <tr>
+                                <td>John</td>
+                                <td>Smith</td>
+                                <td>24</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="col-1-of-2">
+                        <h6>Code:</h6>
+                        <div class="alert alert--info">
+                            <code>
+                                &lt;table class="table table--$style table--dark [table--hover]"&gt;<br>
+                                    &lt;tr&gt;<br>
+                                        &lt;th>First Name&lt;/th&gt;<br>
+                                        &lt;th>Last Name&lt;/th&gt;<br>
+                                        &lt;th>Age&lt;/th&gt;<br>
+                                    &lt;/tr&gt;<br>
+                                    <br>
+                                    &lt;tr&gt;<br>
+                                        &lt;td>John&lt;/td&gt;<br>
+                                        &lt;td>Smith&lt;/td&gt;<br>
+                                        &lt;td>24&lt;/td&gt;<br>
+                                    &lt;/tr&gt;<br>
+                                    <br>
+                                    &lt;tr&gt;<br>
+                                        &lt;td>John&lt;/td&gt;<br>
+                                        &lt;td>Smith&lt;/td&gt;<br>
+                                        &lt;td>24&lt;/td&gt;<br>
+                                    &lt;/tr&gt;<br>
+                                    <br>
+                                    &lt;tr&gt;<br>
+                                        &lt;td>John&lt;/td&gt;<br>
+                                        &lt;td>Smith&lt;/td&gt;<br>
+                                        &lt;td>24&lt;/td&gt;<br>
+                                    &lt;/tr&gt;<br>
+                                &lt;/table&gt;
+                            </code>
+                        </div>
+                    </div>
+                </div> <!-- END OF TABLE (THEME - DARK) -->
+
+                <div class="row">
+                    <div class="col-1-of-2 section">
+                        <h5 class="section__title">Responsive</h5>
+                        <p class="section__desc">
+                            Description coming soon...
+                        </p>
+
+                        <table class="table table--default table--responsive table--dark">
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Age</th>
+                            </tr>
+
+                            <tr>
+                                <td>John</td>
+                                <td>Smith</td>
+                                <td>24</td>
+                            </tr>
+
+                            <tr>
+                                <td>John</td>
+                                <td>Smith</td>
+                                <td>24</td>
+                            </tr>
+
+                            <tr>
+                                <td>John</td>
+                                <td>Smith</td>
+                                <td>24</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="col-1-of-2">
+                        <h6>Code:</h6>
+                        <div class="alert alert--info">
+                            <code>
+                                &lt;table class="table table--$style table--responsive [table--$theme] [table--hover]"&gt;<br>
+                                    &lt;tr&gt;<br>
+                                        &lt;th>First Name&lt;/th&gt;<br>
+                                        &lt;th>Last Name&lt;/th&gt;<br>
+                                        &lt;th>Age&lt;/th&gt;<br>
+                                    &lt;/tr&gt;<br>
+                                    <br>
+                                    &lt;tr&gt;<br>
+                                        &lt;td>John&lt;/td&gt;<br>
+                                        &lt;td>Smith&lt;/td&gt;<br>
+                                        &lt;td>24&lt;/td&gt;<br>
+                                    &lt;/tr&gt;<br>
+                                    <br>
+                                    &lt;tr&gt;<br>
+                                        &lt;td>John&lt;/td&gt;<br>
+                                        &lt;td>Smith&lt;/td&gt;<br>
+                                        &lt;td>24&lt;/td&gt;<br>
+                                    &lt;/tr&gt;<br>
+                                    <br>
+                                    &lt;tr&gt;<br>
+                                        &lt;td>John&lt;/td&gt;<br>
+                                        &lt;td>Smith&lt;/td&gt;<br>
+                                        &lt;td>24&lt;/td&gt;<br>
+                                    &lt;/tr&gt;<br>
+                                &lt;/table&gt;
+                            </code>
+                        </div>
+                    </div>
+                </div> <!-- END OF TABLE (RESPONSIVE) -->
+            </div> <!-- END OF CONTAINER -->
+        </section> <!-- END OF SECTION (TABLES) -->
+
+        <!-- TYPOGRAPHY -->
+        <section></section> <!-- END OF SECTION (TYPOGRAPHY) -->
+
+        <!-- UTILITIES -->
+        <section></section> <!-- END OF SECTION (UTILITIES) -->
+    </main>
 
     <!-- FOOTER -->
     <footer class="text--center">
@@ -472,7 +1100,7 @@
         </p>
     </footer>
 
-    <!-- LOADING SCRIPTS - Note: At the bottom of <body> makes scripts load faster -->
+    <!-- LOADING SCRIPTS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://use.fontawesome.com/a833db4ecd.js"></script>
     <script src="dist/js/sparkle.min.js"></script>
