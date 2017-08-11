@@ -678,33 +678,123 @@
                     <div class="col-1-of-2 section">
                         <h5 class="section__title">Base</h5>
                         <p class="section__desc">
-                            Description coming soon...
+                            In Sparkle, the table feature already comes fully responsive. There
+                            is no need to style each of its elements. Simple add the
+                            <span class="snippet">table</span> class to the &lt;table&gt; tag.
+                        </p>
+
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Age</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-label="ID">1</td>
+                                    <td data-label="First Name">John</td>
+                                    <td data-label="Last Name">Smith</td>
+                                    <td data-label="Age">24</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="ID">2</td>
+                                    <td data-label="First Name">Sally</td>
+                                    <td data-label="Last Name">Johnson</td>
+                                    <td data-label="Age">29</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="ID">3</td>
+                                    <td data-label="First Name">Rupert</td>
+                                    <td data-label="Last Name">Flint</td>
+                                    <td data-label="Age">26</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="col-1-of-2">
+                        <h6>Code:</h6>
+                        <div class="alert alert--info">
+                            <code>
+                                &lt;table class="table"&gt;<br>
+                                    &lt;thead&gt;<br>
+                                        &lt;tr&gt;<br>
+                                            &lt;th&gt;ID&lt;/th&gt;<br>
+                                            &lt;th&gt;First Name&lt;/th&gt;<br>
+                                            &lt;th&gt;Last Name&lt;/th&gt;<br>
+                                            &lt;th&gt;Age&lt;/th&gt;<br>
+                                        &lt;/tr&gt;<br>
+                                    &lt;/thead&gt;<br>
+                                    <br>
+                                    &lt;tbody&gt;
+                                        &lt;tr&gt;<br>
+                                            &lt;td data-label="ID"&gt;1&lt;/td&gt;<br>
+                                            &lt;td data-label="First Name"&gt;John&lt;/td&gt;<br>
+                                            &lt;td data-label="Last Name"&gt;Smith&lt;/td&gt;<br>
+                                            &lt;td data-label="Age"&gt;24&lt;/td&gt;<br>
+                                        &lt;/tr&gt;<br>
+                                        <br>
+                                        &lt;tr&gt;<br>
+                                            &lt;td data-label="ID"&gt;2&lt;/td&gt;<br>
+                                            &lt;td data-label="First Name"&gt;John&lt;/td&gt;<br>
+                                            &lt;td data-label="Last Name"&gt;Smith&lt;/td&gt;<br>
+                                            &lt;td data-label="Age"&gt;24&lt;/td&gt;<br>
+                                        &lt;/tr&gt;<br>
+                                        <br>
+                                        &lt;tr&gt;<br>
+                                            &lt;td data-label="ID"&gt;3&lt;/td&gt;<br>
+                                            &lt;td data-label="First Name"&gt;John&lt;/td&gt;<br>
+                                            &lt;td data-label="Last Name"&gt;Smith&lt;/td&gt;<br>
+                                            &lt;td data-label="Age"&gt;24&lt;/td&gt;<br>
+                                        &lt;/tr&gt;<br>
+                                    &lt;/tbody&gt;<br>
+                                &lt;/table&gt;
+                            </code>
+                        </div>
+                    </div>
+                </div> <!-- BASE -->
+
+                <!-- STYLIZED TABLE -->
+                <div class="row">
+                    <div class="col-1-of-2 section">
+                        <h5 class="section__title">Default</h5>
+                        <p class="section__desc">
+                            Add the <span class="snippet">table--default</span> class to the &lt;table&gt; tag's
+                            class list, if you want to separate each  data entry with a line.
                         </p>
 
                         <table class="table table--default">
-                            <tr>
-                                <th>First Name</th>
-                                <th>Last Name</th>
-                                <th>Age</th>
-                            </tr>
-
-                            <tr>
-                                <td>John</td>
-                                <td>Smith</td>
-                                <td>24</td>
-                            </tr>
-
-                            <tr>
-                                <td>John</td>
-                                <td>Smith</td>
-                                <td>24</td>
-                            </tr>
-
-                            <tr>
-                                <td>John</td>
-                                <td>Smith</td>
-                                <td>24</td>
-                            </tr>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Age</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-label="ID">1</td>
+                                    <td data-label="First Name">John</td>
+                                    <td data-label="Last Name">Smith</td>
+                                    <td data-label="Age">24</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="ID">2</td>
+                                    <td data-label="First Name">Sally</td>
+                                    <td data-label="Last Name">Johnson</td>
+                                    <td data-label="Age">29</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="ID">3</td>
+                                    <td data-label="First Name">Rupert</td>
+                                    <td data-label="Last Name">Flint</td>
+                                    <td data-label="Age">26</td>
+                                </tr>
+                            </tbody>
                         </table>
                     </div>
 
@@ -713,67 +803,80 @@
                         <div class="alert alert--info">
                             <code>
                                 &lt;table class="table table--default"&gt;<br>
-                                    &lt;tr&gt;<br>
-                                        &lt;th>First Name&lt;/th&gt;<br>
-                                        &lt;th>Last Name&lt;/th&gt;<br>
-                                        &lt;th>Age&lt;/th&gt;<br>
-                                    &lt;/tr&gt;<br>
+                                    &lt;thead&gt;<br>
+                                        &lt;tr&gt;<br>
+                                            &lt;th&gt;ID&lt;/th&gt;<br>
+                                            &lt;th&gt;First Name&lt;/th&gt;<br>
+                                            &lt;th&gt;Last Name&lt;/th&gt;<br>
+                                            &lt;th&gt;Age&lt;/th&gt;<br>
+                                        &lt;/tr&gt;<br>
+                                    &lt;/thead&gt;<br>
                                     <br>
-                                    &lt;tr&gt;<br>
-                                        &lt;td>John&lt;/td&gt;<br>
-                                        &lt;td>Smith&lt;/td&gt;<br>
-                                        &lt;td>24&lt;/td&gt;<br>
-                                    &lt;/tr&gt;<br>
-                                    <br>
-                                    &lt;tr&gt;<br>
-                                        &lt;td>John&lt;/td&gt;<br>
-                                        &lt;td>Smith&lt;/td&gt;<br>
-                                        &lt;td>24&lt;/td&gt;<br>
-                                    &lt;/tr&gt;<br>
-                                    <br>
-                                    &lt;tr&gt;<br>
-                                        &lt;td>John&lt;/td&gt;<br>
-                                        &lt;td>Smith&lt;/td&gt;<br>
-                                        &lt;td>24&lt;/td&gt;<br>
-                                    &lt;/tr&gt;<br>
+                                    &lt;tbody&gt;
+                                        &lt;tr&gt;<br>
+                                            &lt;td data-label="ID"&gt;1&lt;/td&gt;<br>
+                                            &lt;td data-label="First Name"&gt;John&lt;/td&gt;<br>
+                                            &lt;td data-label="Last Name"&gt;Smith&lt;/td&gt;<br>
+                                            &lt;td data-label="Age"&gt;24&lt;/td&gt;<br>
+                                        &lt;/tr&gt;<br>
+                                        <br>
+                                        &lt;tr&gt;<br>
+                                            &lt;td data-label="ID"&gt;2&lt;/td&gt;<br>
+                                            &lt;td data-label="First Name"&gt;John&lt;/td&gt;<br>
+                                            &lt;td data-label="Last Name"&gt;Smith&lt;/td&gt;<br>
+                                            &lt;td data-label="Age"&gt;24&lt;/td&gt;<br>
+                                        &lt;/tr&gt;<br>
+                                        <br>
+                                        &lt;tr&gt;<br>
+                                            &lt;td data-label="ID"&gt;3&lt;/td&gt;<br>
+                                            &lt;td data-label="First Name"&gt;John&lt;/td&gt;<br>
+                                            &lt;td data-label="Last Name"&gt;Smith&lt;/td&gt;<br>
+                                            &lt;td data-label="Age"&gt;24&lt;/td&gt;<br>
+                                        &lt;/tr&gt;<br>
+                                    &lt;/tbody&gt;<br>
                                 &lt;/table&gt;
                             </code>
                         </div>
                     </div>
-                </div>
+                </div> <!-- DEFAULT -->
 
-                <!-- STYLIZED TABLE -->
                 <div class="row">
                     <div class="col-1-of-2 section">
                         <h5 class="section__title">Striped</h5>
                         <p class="section__desc">
-                            Description coming soon...
+                            Add the <span class="snippet">table--striped</span> class to the &lt;table&gt; tag's
+                            class list, if you want to alternate colors between rows.
                         </p>
 
                         <table class="table table--striped">
-                            <tr>
-                                <th>First Name</th>
-                                <th>Last Name</th>
-                                <th>Age</th>
-                            </tr>
-
-                            <tr>
-                                <td>John</td>
-                                <td>Smith</td>
-                                <td>24</td>
-                            </tr>
-
-                            <tr>
-                                <td>John</td>
-                                <td>Smith</td>
-                                <td>24</td>
-                            </tr>
-
-                            <tr>
-                                <td>John</td>
-                                <td>Smith</td>
-                                <td>24</td>
-                            </tr>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Age</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-label="ID">1</td>
+                                    <td data-label="First Name">John</td>
+                                    <td data-label="Last Name">Smith</td>
+                                    <td data-label="Age">24</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="ID">2</td>
+                                    <td data-label="First Name">Sally</td>
+                                    <td data-label="Last Name">Johnson</td>
+                                    <td data-label="Age">29</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="ID">3</td>
+                                    <td data-label="First Name">Rupert</td>
+                                    <td data-label="Last Name">Flint</td>
+                                    <td data-label="Age">26</td>
+                                </tr>
+                            </tbody>
                         </table>
                     </div>
 
@@ -782,66 +885,50 @@
                         <div class="alert alert--info">
                             <code>
                                 &lt;table class="table table--striped"&gt;<br>
-                                    &lt;tr&gt;<br>
-                                        &lt;th>First Name&lt;/th&gt;<br>
-                                        &lt;th>Last Name&lt;/th&gt;<br>
-                                        &lt;th>Age&lt;/th&gt;<br>
-                                    &lt;/tr&gt;<br>
-                                    <br>
-                                    &lt;tr&gt;<br>
-                                        &lt;td>John&lt;/td&gt;<br>
-                                        &lt;td>Smith&lt;/td&gt;<br>
-                                        &lt;td>24&lt;/td&gt;<br>
-                                    &lt;/tr&gt;<br>
-                                    <br>
-                                    &lt;tr&gt;<br>
-                                        &lt;td>John&lt;/td&gt;<br>
-                                        &lt;td>Smith&lt;/td&gt;<br>
-                                        &lt;td>24&lt;/td&gt;<br>
-                                    &lt;/tr&gt;<br>
-                                    <br>
-                                    &lt;tr&gt;<br>
-                                        &lt;td>John&lt;/td&gt;<br>
-                                        &lt;td>Smith&lt;/td&gt;<br>
-                                        &lt;td>24&lt;/td&gt;<br>
-                                    &lt;/tr&gt;<br>
+                                    // Body of table<br>  
                                 &lt;/table&gt;
                             </code>
                         </div>
                     </div>
-                </div> <!-- END OF TABLE (STRIPED) -->
+                </div> <!-- STRIPED -->
 
                 <div class="row">
                     <div class="col-1-of-2 section">
-                        <h5 class="section__title">Hoverable</h5>
+                        <h5 class="section__title">Bordered</h5>
                         <p class="section__desc">
-                            Description coming soon...
+                            Add the <span class="snippet">table--bordered</span> class to the &lt;table&gt; tag's
+                            class list, if you want to completely border each and every elements within your table.
                         </p>
 
-                        <table class="table table--default table--hover">
-                            <tr>
-                                <th>First Name</th>
-                                <th>Last Name</th>
-                                <th>Age</th>
-                            </tr>
-
-                            <tr>
-                                <td>John</td>
-                                <td>Smith</td>
-                                <td>24</td>
-                            </tr>
-
-                            <tr>
-                                <td>John</td>
-                                <td>Smith</td>
-                                <td>24</td>
-                            </tr>
-
-                            <tr>
-                                <td>John</td>
-                                <td>Smith</td>
-                                <td>24</td>
-                            </tr>
+                        <table class="table table--bordered">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Age</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-label="ID">1</td>
+                                    <td data-label="First Name">John</td>
+                                    <td data-label="Last Name">Smith</td>
+                                    <td data-label="Age">24</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="ID">2</td>
+                                    <td data-label="First Name">Sally</td>
+                                    <td data-label="Last Name">Johnson</td>
+                                    <td data-label="Age">29</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="ID">3</td>
+                                    <td data-label="First Name">Rupert</td>
+                                    <td data-label="Last Name">Flint</td>
+                                    <td data-label="Age">26</td>
+                                </tr>
+                            </tbody>
                         </table>
                     </div>
 
@@ -849,68 +936,104 @@
                         <h6>Code:</h6>
                         <div class="alert alert--info">
                             <code>
-                                &lt;table class="table table--$style table--hover"&gt;<br>
-                                    &lt;tr&gt;<br>
-                                        &lt;th>First Name&lt;/th&gt;<br>
-                                        &lt;th>Last Name&lt;/th&gt;<br>
-                                        &lt;th>Age&lt;/th&gt;<br>
-                                    &lt;/tr&gt;<br>
-                                    <br>
-                                    &lt;tr&gt;<br>
-                                        &lt;td>John&lt;/td&gt;<br>
-                                        &lt;td>Smith&lt;/td&gt;<br>
-                                        &lt;td>24&lt;/td&gt;<br>
-                                    &lt;/tr&gt;<br>
-                                    <br>
-                                    &lt;tr&gt;<br>
-                                        &lt;td>John&lt;/td&gt;<br>
-                                        &lt;td>Smith&lt;/td&gt;<br>
-                                        &lt;td>24&lt;/td&gt;<br>
-                                    &lt;/tr&gt;<br>
-                                    <br>
-                                    &lt;tr&gt;<br>
-                                        &lt;td>John&lt;/td&gt;<br>
-                                        &lt;td>Smith&lt;/td&gt;<br>
-                                        &lt;td>24&lt;/td&gt;<br>
-                                    &lt;/tr&gt;<br>
+                                &lt;table class="table table--bordered"&gt;<br>
+                                    // Body of table<br>  
                                 &lt;/table&gt;
                             </code>
                         </div>
                     </div>
-                </div> <!-- END OF TABLE (HOVERABLE) -->
+                </div> <!-- BORDERED -->
+
+                <div class="row">
+                    <div class="col-1-of-2 section">
+                        <h5 class="section__title">Hoverable</h5>
+                        <p class="section__desc">
+                            Add the <span class="snippet">table--hoverable</span> class to the &lt;table&gt; tag's
+                            class list, if you want a nice hover effect in your table.
+                        </p>
+
+                        <table class="table table--default table--hoverable">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Age</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-label="ID">1</td>
+                                    <td data-label="First Name">John</td>
+                                    <td data-label="Last Name">Smith</td>
+                                    <td data-label="Age">24</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="ID">2</td>
+                                    <td data-label="First Name">Sally</td>
+                                    <td data-label="Last Name">Johnson</td>
+                                    <td data-label="Age">29</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="ID">3</td>
+                                    <td data-label="First Name">Rupert</td>
+                                    <td data-label="Last Name">Flint</td>
+                                    <td data-label="Age">26</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="col-1-of-2">
+                        <h6>Code:</h6>
+                        <div class="alert alert--info">
+                            <code>
+                                &lt;table class="table [table--default] table--hoverable"&gt;<br>
+                                    // Body of table<br>  
+                                &lt;/table&gt;
+                            </code>
+                        </div>
+                    </div>
+                </div> <!-- HOVERABLE -->
 
                 <!-- THEMED TABLE -->
                 <div class="row">
                     <div class="col-1-of-2 section">
                         <h5 class="section__title">Theme (Light)</h5>
                         <p class="section__desc">
-                            Description coming soon...
+                            Add the <span class="snippet">table--light</span> class to the &lt;table&gt; tag's
+                            class list, if you want to decorate your table header with a nice light color.
                         </p>
 
-                        <table class="table table--default table--light table--hover">
-                            <tr>
-                                <th>First Name</th>
-                                <th>Last Name</th>
-                                <th>Age</th>
-                            </tr>
-
-                            <tr>
-                                <td>John</td>
-                                <td>Smith</td>
-                                <td>24</td>
-                            </tr>
-
-                            <tr>
-                                <td>John</td>
-                                <td>Smith</td>
-                                <td>24</td>
-                            </tr>
-
-                            <tr>
-                                <td>John</td>
-                                <td>Smith</td>
-                                <td>24</td>
-                            </tr>
+                        <table class="table table--light">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Age</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-label="ID">1</td>
+                                    <td data-label="First Name">John</td>
+                                    <td data-label="Last Name">Smith</td>
+                                    <td data-label="Age">24</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="ID">2</td>
+                                    <td data-label="First Name">Sally</td>
+                                    <td data-label="Last Name">Johnson</td>
+                                    <td data-label="Age">29</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="ID">3</td>
+                                    <td data-label="First Name">Rupert</td>
+                                    <td data-label="Last Name">Flint</td>
+                                    <td data-label="Age">26</td>
+                                </tr>
+                            </tbody>
                         </table>
                     </div>
 
@@ -918,67 +1041,51 @@
                         <h6>Code:</h6>
                         <div class="alert alert--info">
                             <code>
-                                &lt;table class="table table--$style table--light [table--hover]"&gt;<br>
-                                    &lt;tr&gt;<br>
-                                        &lt;th>First Name&lt;/th&gt;<br>
-                                        &lt;th>Last Name&lt;/th&gt;<br>
-                                        &lt;th>Age&lt;/th&gt;<br>
-                                    &lt;/tr&gt;<br>
-                                    <br>
-                                    &lt;tr&gt;<br>
-                                        &lt;td>John&lt;/td&gt;<br>
-                                        &lt;td>Smith&lt;/td&gt;<br>
-                                        &lt;td>24&lt;/td&gt;<br>
-                                    &lt;/tr&gt;<br>
-                                    <br>
-                                    &lt;tr&gt;<br>
-                                        &lt;td>John&lt;/td&gt;<br>
-                                        &lt;td>Smith&lt;/td&gt;<br>
-                                        &lt;td>24&lt;/td&gt;<br>
-                                    &lt;/tr&gt;<br>
-                                    <br>
-                                    &lt;tr&gt;<br>
-                                        &lt;td>John&lt;/td&gt;<br>
-                                        &lt;td>Smith&lt;/td&gt;<br>
-                                        &lt;td>24&lt;/td&gt;<br>
-                                    &lt;/tr&gt;<br>
+                                &lt;table class="table table--light [table--$option] [table--hoverable]"&gt;<br>
+                                    // Body of table<br>  
                                 &lt;/table&gt;
                             </code>
                         </div>
                     </div>
-                </div> <!-- END OF TABLE (THEME - LIGHT) -->
+                </div> <!-- THEME - LIGHT -->
 
                 <div class="row">
                     <div class="col-1-of-2 section">
                         <h5 class="section__title">Theme (Dark)</h5>
                         <p class="section__desc">
-                            Description coming soon...
+                            Add the <span class="snippet">table--dark</span> class to the &lt;table&gt; tag's
+                            class list, if you want to decorate your table header with a nice dark color.
                         </p>
 
-                        <table class="table table--default table--dark table--hover">
-                            <tr>
-                                <th>First Name</th>
-                                <th>Last Name</th>
-                                <th>Age</th>
-                            </tr>
-
-                            <tr>
-                                <td>John</td>
-                                <td>Smith</td>
-                                <td>24</td>
-                            </tr>
-
-                            <tr>
-                                <td>John</td>
-                                <td>Smith</td>
-                                <td>24</td>
-                            </tr>
-
-                            <tr>
-                                <td>John</td>
-                                <td>Smith</td>
-                                <td>24</td>
-                            </tr>
+                        <table class="table table--dark">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Age</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-label="ID">1</td>
+                                    <td data-label="First Name">John</td>
+                                    <td data-label="Last Name">Smith</td>
+                                    <td data-label="Age">24</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="ID">2</td>
+                                    <td data-label="First Name">Sally</td>
+                                    <td data-label="Last Name">Johnson</td>
+                                    <td data-label="Age">29</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="ID">3</td>
+                                    <td data-label="First Name">Rupert</td>
+                                    <td data-label="Last Name">Flint</td>
+                                    <td data-label="Age">26</td>
+                                </tr>
+                            </tbody>
                         </table>
                     </div>
 
@@ -986,103 +1093,13 @@
                         <h6>Code:</h6>
                         <div class="alert alert--info">
                             <code>
-                                &lt;table class="table table--$style table--dark [table--hover]"&gt;<br>
-                                    &lt;tr&gt;<br>
-                                        &lt;th>First Name&lt;/th&gt;<br>
-                                        &lt;th>Last Name&lt;/th&gt;<br>
-                                        &lt;th>Age&lt;/th&gt;<br>
-                                    &lt;/tr&gt;<br>
-                                    <br>
-                                    &lt;tr&gt;<br>
-                                        &lt;td>John&lt;/td&gt;<br>
-                                        &lt;td>Smith&lt;/td&gt;<br>
-                                        &lt;td>24&lt;/td&gt;<br>
-                                    &lt;/tr&gt;<br>
-                                    <br>
-                                    &lt;tr&gt;<br>
-                                        &lt;td>John&lt;/td&gt;<br>
-                                        &lt;td>Smith&lt;/td&gt;<br>
-                                        &lt;td>24&lt;/td&gt;<br>
-                                    &lt;/tr&gt;<br>
-                                    <br>
-                                    &lt;tr&gt;<br>
-                                        &lt;td>John&lt;/td&gt;<br>
-                                        &lt;td>Smith&lt;/td&gt;<br>
-                                        &lt;td>24&lt;/td&gt;<br>
-                                    &lt;/tr&gt;<br>
+                                &lt;table class="table table--dark [table--$option] [table--hoverable]"&gt;<br>
+                                    // Body of table<br>  
                                 &lt;/table&gt;
                             </code>
                         </div>
                     </div>
-                </div> <!-- END OF TABLE (THEME - DARK) -->
-
-                <div class="row">
-                    <div class="col-1-of-2 section">
-                        <h5 class="section__title">Responsive</h5>
-                        <p class="section__desc">
-                            Description coming soon...
-                        </p>
-
-                        <table class="table table--default table--responsive table--dark">
-                            <tr>
-                                <th>First Name</th>
-                                <th>Last Name</th>
-                                <th>Age</th>
-                            </tr>
-
-                            <tr>
-                                <td>John</td>
-                                <td>Smith</td>
-                                <td>24</td>
-                            </tr>
-
-                            <tr>
-                                <td>John</td>
-                                <td>Smith</td>
-                                <td>24</td>
-                            </tr>
-
-                            <tr>
-                                <td>John</td>
-                                <td>Smith</td>
-                                <td>24</td>
-                            </tr>
-                        </table>
-                    </div>
-
-                    <div class="col-1-of-2">
-                        <h6>Code:</h6>
-                        <div class="alert alert--info">
-                            <code>
-                                &lt;table class="table table--$style table--responsive [table--$theme] [table--hover]"&gt;<br>
-                                    &lt;tr&gt;<br>
-                                        &lt;th>First Name&lt;/th&gt;<br>
-                                        &lt;th>Last Name&lt;/th&gt;<br>
-                                        &lt;th>Age&lt;/th&gt;<br>
-                                    &lt;/tr&gt;<br>
-                                    <br>
-                                    &lt;tr&gt;<br>
-                                        &lt;td>John&lt;/td&gt;<br>
-                                        &lt;td>Smith&lt;/td&gt;<br>
-                                        &lt;td>24&lt;/td&gt;<br>
-                                    &lt;/tr&gt;<br>
-                                    <br>
-                                    &lt;tr&gt;<br>
-                                        &lt;td>John&lt;/td&gt;<br>
-                                        &lt;td>Smith&lt;/td&gt;<br>
-                                        &lt;td>24&lt;/td&gt;<br>
-                                    &lt;/tr&gt;<br>
-                                    <br>
-                                    &lt;tr&gt;<br>
-                                        &lt;td>John&lt;/td&gt;<br>
-                                        &lt;td>Smith&lt;/td&gt;<br>
-                                        &lt;td>24&lt;/td&gt;<br>
-                                    &lt;/tr&gt;<br>
-                                &lt;/table&gt;
-                            </code>
-                        </div>
-                    </div>
-                </div> <!-- END OF TABLE (RESPONSIVE) -->
+                </div> <!-- THEME - DARK -->
             </div> <!-- END OF CONTAINER -->
         </section> <!-- END OF SECTION (TABLES) -->
 

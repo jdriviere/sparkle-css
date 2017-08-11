@@ -6,65 +6,106 @@
 
 // MIXINS
 @mixin createTable {
-	width: 100%;
-    max-width: 100%;
-    margin: 1rem 0;
-    vertical-align: middle;
-    border-collapse: collapse;
-    white-space: nowrap;
-    color: $font-color;
-    overflow-x: auto;
-    background-color: $white_base;
-}
+    width: 100%;
+    margin: 0 auto;
+	border-collapse: collapse;
+    
+    // COMPONENTS
+    caption {
+        font: { size: 1.25rem; weight: 700; }
+        text-transform: uppercase;
+        letter-spacing: 0.125rem;
+    }
+    thead { display: none; }
+    
+    tbody, tr, td { display: block; }
+    
+    tr {
+        margin: { top: 0; bottom: 0.5rem; };
+		padding: 0.5rem 0;
+		background-color: map-get($theme-maps, light);
+        border: 1px solid map-get($theme-maps, default);
+		border-bottom: 3px solid map-get($theme-maps, default);
+		
+		&:last-child { margin-bottom: 0; }
+    }
+    
+    td {
+        position: relative;
+        padding: 0.5rem;
+        font-size: 0.875rem;
+        text-align: right;
+        white-space: normal;
+        border-bottom: 1px dotted map-get($theme-maps, default);
+        
+        &:first-child { margin-top: -0.5rem; }
+        &:last-child { margin-bottom: -0.5rem; border: 0; }
+        &:before {
+            position: absolute;
+            left: 0.5rem;
+            content: attr(data-label);
+            font: { size: 1rem; weight: 700; }
+            text-transform: uppercase;
+            letter-spacing: 0.125rem;
+            white-space: nowrap;
+        }
+    }
+    
+    // MEDIA QUERY
+    @media only screen and (min-width: 48rem) {
+        display: table;
+        
+        // COMPONENTS
+        thead {
+            display: table-header-group;
+            font: { size: 1rem; weight: 700; }
+            text-align: left;
+            text-transform: uppercase;
+            letter-spacing: 0.125rem;
+            border-bottom: 2px solid $color-grey-50;
+        }
+        
+        tbody { display: table-row-group; }
+        
+        tr { display: table-row; border: none; }
+        
+        th { padding: 1rem 0.5rem; }
+        
+        td {
+            display: table-cell;
+            padding: 1rem 0.5rem;
+			text-align: left;
+			border: none;
+            
+            &:before { display: none; }
+        }   
+    }
+    
+    // STATES
+    &.table--light {
+        th {
+            background-color: $white_l3;
+            color: $white_d1;
+            border-bottom: 2px solid $white_base;
+        }
+    }
+    &.table--dark {
+        th {
+            background-color: $grey_d4;
+            color: $white_base;
+            border-bottom: 2px solid $black_base;
+        }
+    }
+    &.table--default { tr:not(:last-child) { border-bottom: 1px solid #DDD; } }
+    &.table--bordered { th, td { border: 1px solid #DDD; } }
+    &.table--striped { tr:nth-child(even):not(thead) { background-color: #EEE; } }
+    &.table--hoverable {
+		tr:hover > td {
+			background-color: map-get($theme-maps, secondary);
+			color: map-get($theme-maps, light);
+		}
+	}
+} // End of CreateTable
 
 // TABLES
-table { @include createTable; }
-th,
-td { padding: 0.5em; border: none; text-align: left; }
-th {
-	font: { size: 1rem; weight: $font-weight-black; }
-	color: $black_base;
-}
-td {
-	font: { size: 0.875rem; weight: $font-weight-light; }
-	color: $font-color;
-}
-
-.table {
-	// STATES
-	&--default {
-		th { border: none; border-bottom: 2px solid #DDD; }
-		td { border: none; }
-		tr {
-			border-bottom: 1px solid #DDD;
-			
-			&:last-child { border: none; }
-		}
-	}
-
-	&--striped { tr:nth-child(even) { background-color: #EEE; } }
-	
-	&--hover { tr:hover { background-color: #EEE; } }
-
-	// THEMES
-	&--light th {
-		background-color: $white_l3;
-		border: none;
-		color: $color-grey-25;
-	}
-	&--dark th {
-		background-color: $color-grey-25;
-		border: none;
-		color: map-get($theme-maps, light);
-	}
-	
-	// RESPONSIVE
-	@media only screen and (max-width: 48em) {
-		&--responsive {
-			display: block;
-			width: 100%;
-			max-width: 100%;
-			overflow-x: auto;
-		}
-	}
-}
+.table { @include createTable; }
