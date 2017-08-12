@@ -32,6 +32,7 @@
                 font-smoothing: antialiased;
 } // End of Font-Smoothing
 
+// TRANSFORMS
 @mixin transition($type, $time, $trans) {
     -webkit-transition: $type $time $trans;
         -moz-transition: $type $time $trans;
@@ -46,12 +47,61 @@
 	            transform: scale($value);
 } // End of Scale-Uniform
 
+@mixin scale-horizontal($value) {
+    -webkit-transform: scaleX($value);
+        -moz-transform: scaleX($value);
+            -ms-transform: scaleX($value);
+	            transform: scaleX($value);
+} // End of Scale-Horizontal
+
+@mixin scale-vertical($value) {
+    -webkit-transform: scaleY($value);
+        -moz-transform: scaleY($value);
+            -ms-transform: scaleY($value);
+	            transform: scaleY($value);
+} // End of Scale-Vertical
+
 @mixin rotate-uniform($value) {
     -webkit-transform: rotate($value);
         -moz-transform: rotate($value);
             -ms-transform: rotate($value);
 	            transform: rotate($value);
 } // End of Rotate-Uniform
+
+@mixin rotate-horizontal($value) {
+    -webkit-transform: rotateX($value);
+        -moz-transform: rotateX($value);
+            -ms-transform: rotateX($value);
+	            transform: rotateX($value);
+} // End of Rotate-Horizontal
+
+@mixin rotate-vertical($value) {
+    -webkit-transform: rotateY($value);
+        -moz-transform: rotateY($value);
+            -ms-transform: rotateY($value);
+	            transform: rotateY($value);
+} // End of Rotate-Uniform
+
+@mixin translate-uniform($value) {
+    -webkit-transform: translate($value);
+        -moz-transform: translate($value);
+            -ms-transform: translate($value);
+                transform: translate($value);
+} // End of Translate-Uniform
+
+@mixin translate-horizontal($value) {
+    -webkit-transform: translateX($value);
+        -moz-transform: translateX($value);
+            -ms-transform: translateX($value);
+                transform: translateX($value);
+} // End of Translate-Horizontal
+
+@mixin translate-vertical($value) {
+    -webkit-transform: translateY($value);
+        -moz-transform: translateY($value);
+            -ms-transform: translateY($value);
+                transform: translateY($value);
+} // End of Translate-Vertical
 
 @mixin disable-select {
     -webkit-user-select: none;
@@ -75,6 +125,8 @@
                 backface-visibility: $visibility;
 } // End of Back-Visible
 
+
+// ELEMENTS MIXINS
 @mixin inputs {
     input[type='text'],
     input[type='email'],

@@ -1557,17 +1557,25 @@ code {
 .modal__body {
   position: relative;
   width: 90%;
-  margin: auto;
+  margin: 5rem auto;
   padding: 0.75rem;
   background-color: #FEFEFD;
   border-radius: 0.3125em;
   border: 1px solid #C0C0C0;
   overflow-y: auto;
+  -webkit-transform: translateY(-50px);
+  -moz-transform: translateY(-50px);
+  -ms-transform: translateY(-50px);
+  transform: translateY(-50px);
+  -webkit-transition: transform 0.3s ease-in;
+  -moz-transition: transform 0.3s ease-in;
+  -ms-tranition: transform 0.3s ease-in;
+  transition: transform 0.3s ease-in;
 }
 
-@media screen and (min-width: 48rem) {
+@media only screen and (min-width: 48rem) {
   .modal__body {
-    max-width: 750px;
+    max-width: 500px;
   }
 }
 
@@ -1618,7 +1626,14 @@ code {
 }
 
 .modal.modal--show .modal__body {
-  animation: fade-in-top 1s ease-in 1;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-transition: transform 0.3s ease-in;
+  -moz-transition: transform 0.3s ease-in;
+  -ms-tranition: transform 0.3s ease-in;
+  transition: transform 0.3s ease-in;
 }
 
 /* ===================================================*/
