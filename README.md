@@ -33,7 +33,7 @@ npm install sparkle.css
 ```
 
 ## Documentation
-Coming soon...
+The documentation can be found [!here](https://jdriviere.github.io/sparkle-css/docs.html).
 
 ## Contributing
 Coming soon...
