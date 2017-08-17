@@ -183,7 +183,8 @@ $bp-xsmall:					20rem;
 $bp-small:					30rem;
 $bp-medium:					40rem;
 $bp-large:					48rem;
-$bp-xlarge:					75rem;
+$bp-xlarge:                 60rem;
+$bp-fullhd:					75rem;
 
 // =================================
 // GENERAL - PRIORITIES
@@ -204,19 +205,22 @@ $index-highest:				9999;
 $font-family-default:		"Lato", sans-serif;
 $font-family-secondary:		"Helvetica Neue", Helvetica, "Open Sans", Arial, sans-serif;
 $font-special:				"FontAwesome";
-$font-size:					1em !default;
+$font-size:					1rem !default;
 $font-color:                $color-grey-25 !default;
-$font-weight-light:			300;
-$font-weight-normal:		400;
-$font-weight-heavy:			700;
-$font-weight-black:			800;
+$font-color-link:           map-get($theme-maps, primary);
+$font-color-link-hover:     map-get($theme-maps, secondary);
+$font-weight-light:			300 !default;
+$font-weight-normal:		400 !default;
+$font-weight-heavy:			700 !default;
+$font-weight-black:			800 !default;
 
 // =================================
 // GRID VARIABLES
 // =================================
 $grid-name:					"col" !default; // Default name of grid columns.
-$grid-columns:				12 !default; // Default columns is 12. Can be changed to 16, if desired.
-$grid-gutter:				0.75em !default; // Default gutter is 12px. Can be changed to 20, if desired.
+$grid-columns:				12 !default; // Default columns is 12.
+$grid-gutter:				0.875em !default; // Default gutter is 15px.
+$grid-padding:              0.75em !default; // Default padding is 12px.
 
 // =================================
 // BUTTON VARIABLES

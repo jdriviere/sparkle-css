@@ -19,13 +19,20 @@ h4 { font-size: 1.4rem; line-height: 1.4em; }
 h5 { font-size: 1.2rem; line-height: 1.5em; }
 h6 { font-size: 0.8rem; line-height: 1.6em; }
 p {
-	font-size: $font-size;
+	font: { size: $font-size; weight: $font-weight-light; }
 	line-height: 1.5em;
-	font-weight: $font-weight-light;
 	
 	&.text--small { font-size: 0.875rem; }
 	&.text--normal { font-size: $font-size; }
 	&.text--big { font-size: 1.25rem; }
+}
+
+a {
+	font: { size: 1rem; weight: $font-weight-normal; };
+	color: $font-color-link;
+	text-decoration: none;
+
+	&:hover { color: $font-color-link-hover; }
 }
 
 .text {
@@ -40,7 +47,7 @@ p {
 	&--justify { text-align: justify; }
 }
 
-.title { font: { size: 2.25em; weight: $font-weight-heavy; } }
+.title { font: { size: 2.25rem; weight: $font-weight-heavy; } }
 .subtitle { font: { size: 1.25rem; weight: $font-weight-normal; } }
 
 // CODE FORMATTING
