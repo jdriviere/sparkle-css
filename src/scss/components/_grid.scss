@@ -43,16 +43,21 @@
 	margin: 0 auto;
 	overflow: hidden;
 	
-	@media only screen and (min-width: 60em) {
-		& { width: 100%; max-width: 60em; }
+	@media only screen and (min-width: $bp-xlarge) {
+		& { width: 100%; max-width: $bp-xlarge; }
 	}
 }
 .row {
 	@include displayFlex;
 	width: 100%;
 	@include rowCol;
+
+	// STATES
+	&.row--no-gutter { [class*="#{$grid-name}-"], .#{$grid-name} { margin: 0 !important; } }
+	&.row--no-padding { [class*="#{$grid-name}-"], .#{$grid-name} { padding: 0 !important; } }
 	
-	@media only screen and (min-width: 40em) {
+	// MEDIA QUERIES
+	@media only screen and (min-width: $bp-medium) {
 		@include rowGrid;
 	}
 }
@@ -61,32 +66,36 @@
 .container:after,
 .row:after { @extend .container:before; clear:both; }
 
-[class*="col-"], .col {
+[class*="#{$grid-name}-"], .#{$grid-name} {
 	@include maxColWidth(100);
     min-height: 0.0625em;
-    margin: 0.5em;
+    margin: $grid-gutter;
     padding: 0.875em;
 	@include flexSize(1);
 }
 
-@media only screen and (min-width: 40em) {
-	[class*="col-"] {
-		margin-top: 0.5em;
-		margin-bottom: 0.5em;
+@media only screen and (min-width: $bp-medium) {
+	[class*="#{$grid-name}-"] {
+		margin: { top: 0.5em; bottom: 0.5em; }
 		
 		&:first-of-type { margin-left: 0; }
 		&:last-of-type { margin-right: 0; }
 	}
 	
-	.col { margin: 0.5em 0; }
+	.#{$grid-name} {
+		margin: 0.5em $grid-gutter;
+
+		&:first-of-type { margin-left: 0; }
+		&:last-of-type { margin-right: 0; }
+	}
 	
 	@include flexGrid(12);
 	
-	.col-1-of-4 { @extend .col-3-of-12; }
-	.col-1-of-3 { @extend .col-4-of-12; }
-	.col-1-of-2 { @extend .col-6-of-12; }
-	.col-2-of-3 { @extend .col-8-of-12; }
-	.col-3-of-4 { @extend .col-9-of-12; }
-	.col-1-of-1 { @extend .col-12-of-12; }
+	.#{$grid-name}-1-of-4 { @extend .#{$grid-name}-3-of-12; }
+	.#{$grid-name}-1-of-3 { @extend .#{$grid-name}-4-of-12; }
+	.#{$grid-name}-1-of-2 { @extend .#{$grid-name}-6-of-12; }
+	.#{$grid-name}-2-of-3 { @extend .#{$grid-name}-8-of-12; }
+	.#{$grid-name}-3-of-4 { @extend .#{$grid-name}-9-of-12; }
+	.#{$grid-name}-1-of-1 { @extend .#{$grid-name}-12-of-12; }
 }
 

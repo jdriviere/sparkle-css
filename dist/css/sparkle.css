@@ -1,6 +1,6 @@
 /*
 @author: J. Djimitry Riviere
-@version: 1.6.0
+@version: 1.6.1
 @release: 08/12/2017
 
 Welcome and thank you for using Sparkle, a lightweight CSS open source framework (coded in CSS and jQuery)
@@ -320,9 +320,9 @@ h6 {
 }
 
 p {
-  font-size: 1em;
-  line-height: 1.5em;
+  font-size: 1rem;
   font-weight: 300;
+  line-height: 1.5em;
 }
 
 p.text--small {
@@ -330,11 +330,22 @@ p.text--small {
 }
 
 p.text--normal {
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 p.text--big {
   font-size: 1.25rem;
+}
+
+a {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #ADD2E6;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #9BC2E6;
 }
 
 .text--thin {
@@ -362,7 +373,7 @@ p.text--big {
 }
 
 .title, .card__header__title {
-  font-size: 2.25em;
+  font-size: 2.25rem;
   font-weight: 700;
 }
 
@@ -1410,10 +1421,10 @@ code {
   overflow: hidden;
 }
 
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 60rem) {
   .container {
     width: 100%;
-    max-width: 60em;
+    max-width: 60rem;
   }
 }
 
@@ -1429,7 +1440,15 @@ code {
   flex-flow: column wrap;
 }
 
-@media only screen and (min-width: 40em) {
+.row.row--no-gutter [class*="col-"], .row.row--no-gutter .col {
+  margin: 0 !important;
+}
+
+.row.row--no-padding [class*="col-"], .row.row--no-padding .col {
+  padding: 0 !important;
+}
+
+@media only screen and (min-width: 40rem) {
   .row {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1455,14 +1474,14 @@ code {
   flex-basis: 100%;
   max-width: 100%;
   min-height: 0.0625em;
-  margin: 0.5em;
+  margin: 0.875em;
   padding: 0.875em;
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 40rem) {
   [class*="col-"] {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
@@ -1474,7 +1493,13 @@ code {
     margin-right: 0;
   }
   .col {
-    margin: 0.5em 0;
+    margin: 0.5em 0.875em;
+  }
+  .col:first-of-type {
+    margin-left: 0;
+  }
+  .col:last-of-type {
+    margin-right: 0;
   }
   .col-1-of-12 {
     -ms-flex-preferred-size: 8.33333%;
