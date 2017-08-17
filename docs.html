@@ -29,6 +29,7 @@
         .section__title { text-transform: uppercase; letter-spacing: 0.125em; color: #CCC; }
         .section__desc { margin-bottom: 1.25em; }
 
+        [class*="col"].show-grid { border: 1px solid #CCC; text-align: center; }
 
         footer {
             clear: both;
@@ -551,18 +552,6 @@
                                     <input type="text" class="form__input" id="input1">
                                     <label for="input1">Test Name</label>
                                 </div>
-
-                                <div class="form__box">
-                                    <input type="text" class="form__input" id="input2">
-                                    <label for="input2">Test Name</label>
-                                </div>
-
-                                <div class="form__box">
-                                    <input type="password" class="form__input" id="input3">
-                                    <label for="input3">Test Pass</label>
-                                </div>
-
-                                <button type="button" class="btn btn--success btn--medium">Test</button>
                             </form>
                         </div>
                     </div>
@@ -575,17 +564,7 @@
                                     &lt;div class="form__box"&gt;<br>
                                         &lt;input class="form__input" type="text" id="input1"&gt;<br>
                                         &lt;label for="input1"&gt;Input Text&lt;/label&gt;<br>
-                                    &lt;/div&gt;<br>
-                                    <br>
-                                    &lt;div class="form__box"&gt;<br>
-                                        &lt;input class="form__input" type="text" id="input2"&gt;<br>
-                                        &lt;label for="input2"&gt;Input Text&lt;/label&gt;<br>
-                                    &lt;/div&gt;<br>
-                                    <br>
-                                    &lt;div class="form__box"&gt;<br>
-                                        &lt;input class="form__input" type="password" id="input3"&gt;<br>
-                                        &lt;label for="input3"&gt;Input Text&lt;/label&gt;<br>
-                                    &lt;/div&gt;<br>
+                                    &lt;/div&gt;
                                 &lt;/form&gt;
                             </code>
                         </div>
@@ -607,11 +586,148 @@
                 <div class="row">
                     <div class="col-1-of-1">
                         <h1>Grids</h1>
-                        <p>
-                            Section coming soon
-                        </p>
                     </div>
                 </div>
+
+                <div class="row">
+                    <div class="col-1-of-2 section">
+                        <div class="section__block">
+                            <h5 class="section__title">Base</h5>
+                            <p class="section__desc">
+                                Sparkle.CSS uses Flexbox to create easy grid that self-adjusts its accordingly,
+                                for consistent column widths. Simply create div with a
+                                <span class="snippet"><code>row</code></span> class, then create a child(ren) class
+                                named <span class="snippet"><code>col</code></span>.
+                            </p>
+    
+                            <div class="row">
+                                <div class="col show-grid">col 1</div>
+                            </div>
+                            <div class="row">
+                                <div class="col show-grid">col 1</div>
+                                <div class="col show-grid">col 2</div>
+                            </div>
+                            <div class="row">
+                                <div class="col show-grid">col 1</div>
+                                <div class="col show-grid">col 2</div>
+                                <div class="col show-grid">col 3</div>
+                            </div>
+                            <div class="row">
+                                <div class="col show-grid">col 1</div>
+                                <div class="col show-grid">col 2</div>
+                                <div class="col show-grid">col 3</div>
+                                <div class="col show-grid">col 4</div>
+                            </div>
+                            <h1 class="text--center">...</h1>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-2">
+                        <h6>Code:</h6>
+                        <div class="alert alert--info">
+                            <code>
+                                &lt;div class="row"&gt;<br>
+                                    &lt;div class="col"&gt;<br>
+                                        // Body of code<br>
+                                    &lt;/div&gt;<br>
+                                &lt;/div&gt;
+                                <br>...
+                            </code>
+                        </div>
+                    </div>
+                </div> <!-- GRID (BASE) -->
+
+                <div class="row">
+                    <div class="col-1-of-2 section">
+                        <div class="section__block">
+                            <h5 class="section__title">Customized</h5>
+                            <p class="section__desc">
+                                Sparkle also allows you to customized the column width, as it also uses a
+                                12-column grid (which can also be changed within the _variable.scss file).
+                                Inside a <span class="snippet"><code>row</code></span> &lt;div&gt;, simply
+                                add your column(s) using <span class="snippet"><code>col-$x-of-12</code></span>,
+                                where <span class="snippet"><code>$x</code></span> refers to the numbers 1 to 12.
+                            </p>
+
+                            <div class="row">
+                                <div class="col-1-of-1 show-grid">12</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-11-of-12 show-grid">11</div>
+                                <div class="col-1-of-12 show-grid">1</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-10-of-12 show-grid">10</div>
+                                <div class="col-2-of-12 show-grid">2</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-9-of-12 show-grid">9</div>
+                                <div class="col-3-of-12 show-grid">3</div>
+                            </div>
+                            <h1 class="text--center">...</h1>
+                        </div>
+                    </div>
+    
+                    <div class="col-1-of-2">
+                        <h6>Code:</h6>
+                        <div class="alert alert--info">
+                            <code>
+                                &lt;div class="row"&gt;<br>
+                                    &lt;div class="col-11-of-12"&gt;<br>
+                                        // Body of code<br>
+                                    &lt;/div&gt;<br>
+                                    <br>
+                                    &lt;div class="col-1-of-12"&gt;<br>
+                                        // Body of code<br>
+                                    &lt;/div&gt;<br>
+                                &lt;/div&gt;
+                                <br>...
+                            </code>
+                        </div>
+                    </div>
+                </div> <!-- GRID (CUSTOM) -->
+
+                <div class="row">
+                    <div class="col-1-of-2 section">
+                        <div class="section__block">
+                            <h5 class="section__title">Modifiers</h5>
+                            <p class="section__desc">
+                                By adding <span class="snippet"><code>row--no-gutter</code></span>
+                                or <span class="snippet"><code>row--no-padding</code></span> in your
+                                <span class="snippet"><code>row</code></span> class list, you can
+                                remove the gutters and padding, respectively, from your columns.
+                            </p>
+
+                            <h6>No Gutter:</h6>
+                            <div class="row row--no-gutter">
+                                <div class="col show-grid">no gutter</div>
+                                <div class="col show-grid">no gutter</div>
+                            </div>
+
+                            <br>
+                            <h6>No Padding:</h6>
+                            <div class="row row--no-padding">
+                                <div class="col show-grid">no padding</div>
+                                <div class="col show-grid">no padding</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-2">
+                        <h6>Code:</h6>
+                        <div class="alert alert--info">
+                            <code>
+                                &lt;div class="row row--no-gutter"&gt;<br>
+                                    // Body of code<br>
+                                &lt;/div&gt;<br>
+                                <br>
+                                &lt;div class="row row--no-padding"&gt;<br>
+                                    // Body of code<br>
+                                &lt;/div&gt;<br>
+                            </code>
+                        </div>
+                    </div>
+                </div> <!-- GRID (MODIFIERS) -->
             </div> <!-- END OF CONTAINER -->
         </section> <!-- END OF SECTION (GRIDS) -->
 
