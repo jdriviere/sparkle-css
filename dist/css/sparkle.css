@@ -1244,6 +1244,57 @@ code {
   border-radius: 35px;
 }
 
+.btn__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  border: 1px solid red;
+}
+
+.btn__group > .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-flex: 1 0 100%;
+  -ms-flex: 1 0 100%;
+  flex: 1 0 100%;
+}
+
+@media only screen and (min-width: 40rem) {
+  .btn__group > .btn {
+    -webkit-box-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+  }
+}
+
+.btn__group .btn:hover {
+  -webkit-box-shadow: 0 0 0 transparent;
+  -moz-box-shadow: 0 0 0 transparent;
+  -ms-box-shadow: 0 0 0 transparent;
+  box-shadow: 0 0 0 transparent;
+}
+
+.btn__group.btn__group--full {
+  -webkit-box-flex: 1 0 0;
+  -ms-flex: 1 0 0;
+  flex: 1 0 0;
+}
+
 /* ===================================================*/
 /* THUMBNAILS
 /* ===================================================*/

@@ -194,11 +194,42 @@
 			display: flex;
 } // End of DisplayFlex
 
+@mixin displayInlineFlex {
+    display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+            display: inline-flex;
+} // End of DisplayFlex
+
 @mixin flexSize($size:1) {
     -webkit-box-flex: $size;
 		-ms-flex: $size;
 			flex: $size;
 } // End of FlexSize
+
+@mixin flexSizePlus($growth, $shrink, $basis) {
+    -webkit-box-flex: $growth $shrink $basis;
+        -ms-flex: $growth $shrink $basis;
+            flex: $growth $shrink $basis;
+} // End of FlexSizePlus
+
+@mixin flexWrap($value:wrap) {
+    -ms-flex-wrap: $value;
+        flex-wrap: $value;
+} // End of FlexWrap
+
+@mixin flexDirectionColumn {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+} // End of FlexDirectionColumn
+
+@mixin flexDirectionRow {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+} // End of FlexDirectionRow
 
 @mixin justifyContentCenter {
     -webkit-box-pack: center;

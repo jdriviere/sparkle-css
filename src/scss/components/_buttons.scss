@@ -106,3 +106,29 @@
     &--h-round { @include border-radius(10px); }
     &--f-round { @include border-radius(35px); }
 }
+
+.btn__group {
+    @include displayFlex;
+    @include justifyContentCenter;
+    @include flexDirectionRow;
+    @include flexWrap;
+
+    border: 1px solid red;
+
+    // COMPONENTS
+    & > .btn {
+        @include displayFlex;
+        @include justifyContentCenter;
+        @include flexSizePlus(1, 0, 100%);
+
+        // MEDIA QUERIES
+        @media only screen and (min-width: $bp-medium) {
+            @include flexSizePlus(1, 0, auto);
+        }
+    }
+
+    // STATES
+    & .btn:hover { @include box-shadow(0, 0, 0, 0); }
+
+    &.btn__group--full { @include flexSizePlus(1, 0, 0); }
+}
