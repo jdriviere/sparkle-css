@@ -372,12 +372,12 @@ a:hover {
   text-align: justify;
 }
 
-.title, .card__header__title {
+.text--title, .card__header__title {
   font-size: 2.25rem;
   font-weight: 700;
 }
 
-.subtitle, .card__header__subtitle {
+.text--subtitle, .card__header__subtitle {
   font-size: 1.25rem;
   font-weight: 400;
 }
@@ -926,40 +926,6 @@ code {
   user-select: none;
   cursor: not-allowed;
   opacity: 0.3;
-}
-
-.btn--default {
-  background-color: #CED6D6;
-  color: #111516 !important;
-  border: none;
-}
-
-.btn--default:hover, .btn--default:focus, .btn--default:active {
-  background-color: #b9c5c5;
-}
-
-.btn--default--outline {
-  background-color: transparent;
-  color: #CED6D6 !important;
-  border: 1px solid #CED6D6;
-}
-
-.btn--default--outline:hover, .btn--default--outline:focus, .btn--default--outline:active {
-  background-color: #CED6D6;
-  color: #111516 !important;
-  border-color: transparent;
-}
-
-.btn--default--ghost {
-  background-color: #FBF5F3;
-  color: #CED6D6 !important;
-  border: 1px solid #CED6D6;
-}
-
-.btn--default--ghost:hover, .btn--default--ghost:focus, .btn--default--ghost:active {
-  background-color: #CED6D6;
-  color: #111516 !important;
-  border-color: transparent;
 }
 
 .btn--primary {
@@ -2007,15 +1973,35 @@ code {
 }
 
 .table.table--light th {
-  background-color: #FDFAF9;
-  color: #CEC9C7;
+  background-color: #FDFCFB;
+  color: #111516;
   border-bottom: 2px solid #FBF5F3;
 }
 
+.table.table--light tr:nth-child(odd):not(thead) {
+  background-color: #FCF8F7;
+  color: #444B4C;
+}
+
+.table.table--light tr:nth-child(even):not(thead) {
+  background-color: #FBF6F5;
+  color: #444B4C;
+}
+
 .table.table--dark th {
-  background-color: #292D2E;
+  background-color: #111516;
   color: #FBF5F3;
-  border-bottom: 2px solid #111516;
+  border-bottom: 2px solid #080A0D;
+}
+
+.table.table--dark tr:nth-child(odd):not(thead) {
+  background-color: #0E1217;
+  color: #FBF5F3;
+}
+
+.table.table--dark tr:nth-child(even):not(thead) {
+  background-color: #0B0E12;
+  color: #FBF5F3;
 }
 
 .table.table--default tr:not(:last-child) {

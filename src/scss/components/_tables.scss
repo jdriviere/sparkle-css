@@ -84,17 +84,21 @@
     // STATES
     &.table--light {
         th {
-            background-color: $white_l3;
-            color: $white_d1;
+            background-color: $white_l4;
+            color: $black_base;
             border-bottom: 2px solid $white_base;
         }
+        tr:nth-child(odd):not(thead) { background-color: $white_l2; color: $grey_d3; }
+        tr:nth-child(even):not(thead) { background-color: $white_l1; color: $grey_d3; }
     }
     &.table--dark {
         th {
-            background-color: $grey_d4;
+            background-color: $black_base;
             color: $white_base;
-            border-bottom: 2px solid $black_base;
+            border-bottom: 2px solid $black_d3;
         }
+        tr:nth-child(odd):not(thead) { background-color: $black_d1; color: $white_base; }
+        tr:nth-child(even):not(thead) { background-color: $black_d2; color: $white_base; }
     }
     &.table--default { tr:not(:last-child) { border-bottom: 1px solid #DDD; } }
     &.table--bordered { th, td { border: 1px solid #DDD; } }

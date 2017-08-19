@@ -45,10 +45,11 @@ a {
 	&--right { text-align: right; }
 	&--center { text-align: center; }
 	&--justify { text-align: justify; }
-}
 
-.title { font: { size: 2.25rem; weight: $font-weight-heavy; } }
-.subtitle { font: { size: 1.25rem; weight: $font-weight-normal; } }
+	// SUPER
+	&--title { font: { size: 2.25rem; weight: $font-weight-heavy; } }
+	&--subtitle { font: { size: 1.25rem; weight: $font-weight-normal; } }
+}
 
 // CODE FORMATTING
 pre {

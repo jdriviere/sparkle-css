@@ -22,20 +22,21 @@
 	<!-- INTERNAL STYLING -->
 	<style>
         .hero {
-            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
             height: calc(100vh - 3em);
-            padding: 4em 0;
-            background: -moz-linear-gradient(45deg, #9EC0D6 0%, #DFE5FF 100%);
             background: -webkit-linear-gradient(45deg, #9EC0D6 0%,#DFE5FF 100%);
+            background: -moz-linear-gradient(45deg, #9EC0D6 0%, #DFE5FF 100%);
             background: linear-gradient(45deg, #9EC0D6 0%,#DFE5FF 100%);
             color: #333;
-            text-align: center;
         }
 
         .banner__title { color: #3498DB; }
         .banner__subtitle { margin-bottom: 50px; font-weight: 300; }
 
-        .btn-group { margin-top: 2em; padding: 10px 0; }
+        .btn-group {margin: 2em 0; text-align: center; }
         .btn { margin: 0 0 10px; }
         .btn:first-child { margin-left: 0; }
 
@@ -58,7 +59,8 @@
             }
             .banner__title { letter-spacing: .5em; text-transform: uppercase; }
 
-            .btn { margin: 0 10px; }
+            .btn-group { text-align: left; }
+            .btn-group > .btn { margin: 0 0.5em 0 0; }
 
             footer { padding: 0.75em; color: #333; }
             footer i { color: #C03; }
@@ -105,16 +107,18 @@
 	<section class="hero">
         <div class="container banner">
             <h1 class="banner__title">sparkle.css</h1>
-            <h3 class="banner__subtitle">It only takes a small one to make it wonderful.</h3>
+            <h3 class="banner__subtitle">A lightweight, responsive, mobile-first CSS framework for easy website designs.</h3>
 
             <div class="btn-group">
-                <a href="https://github.com/jdriviere/sparkle-css/archive/v1.6.0.zip" class="btn btn--light--outline btn--large btn--f-round">
-                    <i class="fa fa-download"></i> Download v1.6.1
+                <a href="https://github.com/jdriviere/sparkle-css/archive/v1.6.1.zip" class="btn btn--light--outline btn--large">
+                    <i class="fa fa-download"></i> Download
                 </a>
-                <a href="https://github.com/jdriviere/sparkle-css.git" class="btn btn--secondary btn--large btn--f-round">
+                <a href="https://github.com/jdriviere/sparkle-css.git" class="btn btn--secondary btn--large">
                     <i class="fa fa-github"></i> Github
                 </a>
             </div>
+
+            <p class="text--small">*Currently on version: <span class="text--thick">1.6.1</span></p>
         </div>
     </section>
 
@@ -128,6 +132,6 @@
     <!-- LOADING SCRIPTS - Note: At the bottom of <body> makes scripts load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://use.fontawesome.com/a833db4ecd.js"></script>
-     <script src="dist/js/sparkle.min.js"></script> 
+    <script src="dist/js/sparkle.min.js"></script> 
 </body>
 </html>

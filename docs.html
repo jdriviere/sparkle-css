@@ -21,7 +21,6 @@
 
 	<!-- INTERNAL STYLING -->
     <style>
-        h2 { color: #9BC2E6; text-align: center; }
         .snippet { padding: 0.125em; background-color: #DDD; }
         
         .section button { margin-bottom: 0.25em; }
@@ -190,11 +189,39 @@
                     </div> <!-- END OF COLUMN -->
                 </div> <!-- END OF ROW -->
 
+
+                <div class="row">
+                    <div class="col-1-of-2 section">
+                        <div class="section__block">
+                            <h5 class="section__title">Base</h5>
+                            <p class="btnSection__desc">
+                                One of the most essential elements in a CSS framework: buttons.
+                                Sparkle allows you to style anchor tags, div tags, and buttons by
+                                simply putting <span class="snippet">btn</span> in its class. This
+                                is also the first step to style a button accordingly (see other
+                                styling below).
+                            </p>
+
+                            <button class="btn">Button</button>
+                        </div>
+                    </div>
+
+                    <!-- CODE -->
+                    <div class="col-1-of-2">
+                        <h6>Code:</h6>
+                        <div class="alert alert--info">
+                            <code>
+                                &lt;button class="btn"&gt;Some Text&lt;/button&gt;
+                            </code>
+                        </div>
+                    </div>
+                </div> <!-- END OF ROW -->
+
                 <!-- TYPES -->
                 <div class="row">
                     <div class="col-1-of-2 section">
                         <div class="section__block">
-                            <h5 class="section__title">Types (Solid):</h5>
+                            <h5 class="section__title">Types (Solid)</h5>
                             <p class="btnSection__desc">
                                 Sparkle offers a variety of button colors, to go with
                                 your design needs. To specify the type of button you want,
@@ -202,7 +229,7 @@
                                 your <span><code class="snippet">btn</code></span> class, where
                                 <span><code class="snippet">$type</code></span> is either one of the
                                 following:
-                                <span><code class="snippet">default</code></span>,
+                                
                                 <span><code class="snippet">primary</code></span>,
                                 <span><code class="snippet">secondary</code></span>,
                                 <span><code class="snippet">success</code></span>,
@@ -212,8 +239,6 @@
                                 <span><code class="snippet">dark</code></span>.
                             </p>
 
-                            <button class="btn">Button</button>
-                            <button class="btn btn--default">Default</button>
                             <button class="btn btn--primary">Primary</button>
                             <button class="btn btn--secondary">Secondary</button>
                             <button class="btn btn--success">Success</button>
@@ -239,7 +264,7 @@
                 <div class="row">
                     <div class="col-1-of-2 section">
                         <div class="section__block">
-                            <h5 class="section__title">Types (Outlined):</h5>
+                            <h5 class="section__title">Types (Outlined)</h5>
                             <p class="btnSection__desc">
                                 If solid-colored buttons are not enough, Sparkle also offers
                                 the option of outlining the buttons. Simply add
@@ -248,7 +273,6 @@
                                 <span><code class="snippet">btn--$type--outline</code></span>.
                             </p>
 
-                            <button class="btn btn--default--outline">Default</button>
                             <button class="btn btn--primary--outline">Primary</button>
                             <button class="btn btn--secondary--outline">Secondary</button>
                             <button class="btn btn--success--outline">Success</button>
@@ -274,15 +298,14 @@
                 <div class="row">
                     <div class="col-1-of-2 section">
                         <div class="section__block">
-                            <h5 class="section__title">Types (Ghosted):</h5>
+                            <h5 class="section__title">Types (Ghosted)</h5>
                             <p class="btnSection__desc">
                                 Sparkle also offers the "ghost" button variety too. Simply add
                                 <span><code class="snippet">--ghost</code></span> at the end of the
                                 button type class, as in
                                 <span><code class="snippet">btn--$type--ghost</code></span>.
                             </p>
-
-                            <button class="btn btn--default--ghost">Default</button>
+                            
                             <button class="btn btn--primary--ghost">Primary</button>
                             <button class="btn btn--secondary--ghost">Secondary</button>
                             <button class="btn btn--success--ghost">Success</button>
@@ -307,7 +330,7 @@
                 <div class="row">
                     <div class="col-1-of-2 section">
                         <div class="section__block">
-                            <h5 class="section__title">Sizes:</h5>
+                            <h5 class="section__title">Sizes</h5>
                             <p class="btnSection__desc">
                                 Buttons come in different sizes for different purposes. You can
                                 alter a button size by adding <span><code class="snippet">btn--$size</code></span>
@@ -345,7 +368,7 @@
                 <div class="row">
                     <div class="col-1-of-2 section">
                         <div class="section__block">
-                            <h5 class="section__title">Block:</h5>
+                            <h5 class="section__title">Block</h5>
                             <p class="btnSection__desc">
                                 You can also have your button take the entire span of the block too by adding
                                 <span><code class="snippet">btn--block</code></span> to your class list. You can
@@ -370,7 +393,7 @@
                 <div class="row">
                     <div class="col-1-of-2">
                         <div class="section__block">
-                            <h5 class="section__title">Roundness:</h5>
+                            <h5 class="section__title">Roundness</h5>
                             <p class="btnSection__desc">
                                 Sparkle offers the chance to even vary the roundness of its button design.
                                 Simply add <span><code class="snippet">btn--$roundness</code></span> in your class
@@ -399,7 +422,7 @@
                 <div class="row">
                     <div class="col-1-of-2 section">
                         <div class="section__block">
-                            <h5 class="section__title">Disabled:</h5>
+                            <h5 class="section__title">Disabled</h5>
                             <p class="btnSection__desc">
                                 You want to insert a button but not want it to be accessible yet?
                                 No problem! simply add <span><code class="snippet">btn--disabled</code></span>
@@ -407,7 +430,7 @@
                                 whenever you need.
                             </p>
 
-                            <button class="btn btn--default btn--disabled">Default</button>
+                            <button class="btn btn--disabled">Button</button>
                             <button class="btn btn--primary btn--disabled">Primary</button>
                             <button class="btn btn--secondary btn--disabled">Secondary</button>
                             <button class="btn btn--success btn--disabled">Success</button>
@@ -791,7 +814,7 @@
                         <h5 class="section__title">Base</h5>
                         <p class="section__desc">
                             In Sparkle, the table feature already comes fully responsive. There
-                            is no need to style each of its elements. Simple add the
+                            is no need to style each of its elements. Simply add the
                             <span class="snippet">table</span> class to the &lt;table&gt; tag.
                         </p>
 
@@ -872,7 +895,7 @@
                 <!-- STYLIZED TABLE -->
                 <div class="row">
                     <div class="col-1-of-2 section">
-                        <h5 class="section__title">Default</h5>
+                        <h5 class="section__title">Style (Default)</h5>
                         <p class="section__desc">
                             Add the <span class="snippet">table--default</span> class to the &lt;table&gt; tag's
                             class list, if you want to separate each  data entry with a line.
@@ -915,37 +938,7 @@
                         <div class="alert alert--info">
                             <code>
                                 &lt;table class="table table--default"&gt;<br>
-                                    &lt;thead&gt;<br>
-                                        &lt;tr&gt;<br>
-                                            &lt;th&gt;ID&lt;/th&gt;<br>
-                                            &lt;th&gt;First Name&lt;/th&gt;<br>
-                                            &lt;th&gt;Last Name&lt;/th&gt;<br>
-                                            &lt;th&gt;Age&lt;/th&gt;<br>
-                                        &lt;/tr&gt;<br>
-                                    &lt;/thead&gt;<br>
-                                    <br>
-                                    &lt;tbody&gt;
-                                        &lt;tr&gt;<br>
-                                            &lt;td data-label="ID"&gt;1&lt;/td&gt;<br>
-                                            &lt;td data-label="First Name"&gt;John&lt;/td&gt;<br>
-                                            &lt;td data-label="Last Name"&gt;Smith&lt;/td&gt;<br>
-                                            &lt;td data-label="Age"&gt;24&lt;/td&gt;<br>
-                                        &lt;/tr&gt;<br>
-                                        <br>
-                                        &lt;tr&gt;<br>
-                                            &lt;td data-label="ID"&gt;2&lt;/td&gt;<br>
-                                            &lt;td data-label="First Name"&gt;John&lt;/td&gt;<br>
-                                            &lt;td data-label="Last Name"&gt;Smith&lt;/td&gt;<br>
-                                            &lt;td data-label="Age"&gt;24&lt;/td&gt;<br>
-                                        &lt;/tr&gt;<br>
-                                        <br>
-                                        &lt;tr&gt;<br>
-                                            &lt;td data-label="ID"&gt;3&lt;/td&gt;<br>
-                                            &lt;td data-label="First Name"&gt;John&lt;/td&gt;<br>
-                                            &lt;td data-label="Last Name"&gt;Smith&lt;/td&gt;<br>
-                                            &lt;td data-label="Age"&gt;24&lt;/td&gt;<br>
-                                        &lt;/tr&gt;<br>
-                                    &lt;/tbody&gt;<br>
+                                    // Body of table<br>
                                 &lt;/table&gt;
                             </code>
                         </div>
@@ -954,7 +947,7 @@
 
                 <div class="row">
                     <div class="col-1-of-2 section">
-                        <h5 class="section__title">Striped</h5>
+                        <h5 class="section__title">Style (Striped)</h5>
                         <p class="section__desc">
                             Add the <span class="snippet">table--striped</span> class to the &lt;table&gt; tag's
                             class list, if you want to alternate colors between rows.
@@ -1006,7 +999,7 @@
 
                 <div class="row">
                     <div class="col-1-of-2 section">
-                        <h5 class="section__title">Bordered</h5>
+                        <h5 class="section__title">Style (Bordered)</h5>
                         <p class="section__desc">
                             Add the <span class="snippet">table--bordered</span> class to the &lt;table&gt; tag's
                             class list, if you want to completely border each and every elements within your table.
@@ -1100,7 +1093,7 @@
                         <h6>Code:</h6>
                         <div class="alert alert--info">
                             <code>
-                                &lt;table class="table [table--default] table--hoverable"&gt;<br>
+                                &lt;table class="table [table--$style] table--hoverable"&gt;<br>
                                     // Body of table<br>  
                                 &lt;/table&gt;
                             </code>
@@ -1153,7 +1146,7 @@
                         <h6>Code:</h6>
                         <div class="alert alert--info">
                             <code>
-                                &lt;table class="table table--light [table--$option] [table--hoverable]"&gt;<br>
+                                &lt;table class="table table--light [table--$style] [table--hoverable]"&gt;<br>
                                     // Body of table<br>  
                                 &lt;/table&gt;
                             </code>
@@ -1205,7 +1198,7 @@
                         <h6>Code:</h6>
                         <div class="alert alert--info">
                             <code>
-                                &lt;table class="table table--dark [table--$option] [table--hoverable]"&gt;<br>
+                                &lt;table class="table table--dark [table--$style] [table--hoverable]"&gt;<br>
                                     // Body of table<br>  
                                 &lt;/table&gt;
                             </code>
@@ -1216,7 +1209,46 @@
         </section> <!-- END OF SECTION (TABLES) -->
 
         <!-- TYPOGRAPHY -->
-        <section></section> <!-- END OF SECTION (TYPOGRAPHY) -->
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-1-of-1">
+                        <h1>Typography</h1>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-1-of-2 section">
+                        <div class="section__block">
+                            <h5 class="section__title">Base</h5>
+                            <p class="section__desc">
+                                Description coming soon...
+                            </p>
+
+                            <h1>H1 (2.6rem)</h1>
+                            <h2>H2 (2.2rem)</h2>
+                            <h3>H3 (1.8rem)</h3>
+                            <h4>H4 (1.4rem)</h4>
+                            <h5>H5 (1.2rem)</h5>
+                            <h6>H6 (0.8rem)</h6>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-2">
+                        <h6>Code:</h6>
+                        <div class="alert alert--info">
+                            <code>
+                                &lt;h1&gt;Some text&lt;/h1&gt;<br>
+                                &lt;h2&gt;Some text&lt;/h2&gt;<br>
+                                &lt;h3&gt;Some text&lt;/h3&gt;<br>
+                                &lt;h4&gt;Some text&lt;/h4&gt;<br>
+                                &lt;h5&gt;Some text&lt;/h5&gt;<br>
+                                &lt;h6&gt;Some text&lt;/h6&gt;<br>
+                            </code>
+                        </div>
+                    </div>
+                </div>
+        </section> <!-- END OF SECTION (TYPOGRAPHY) -->
 
         <!-- UTILITIES -->
         <section></section> <!-- END OF SECTION (UTILITIES) -->

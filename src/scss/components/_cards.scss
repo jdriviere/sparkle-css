@@ -15,8 +15,8 @@
     &__header {
         padding: { top: 1rem; bottom: 1rem; left: 0.5rem; right: 0.5rem; }
 
-        &__title { @extend .title; }
-        &__subtitle { @extend .subtitle; }
+        &__title { @extend .text--title; }
+        &__subtitle { @extend .text--subtitle; }
     }
     & img,
     &__image { width: 100%; }
