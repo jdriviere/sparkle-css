@@ -8,29 +8,24 @@
 @mixin button {
     display: inline-block;
     @include remove-appearance;
-    border: none;
     outline: none;
     background: none;
-    padding: 0.25rem;    
+    padding: 0.5rem 0.75rem;    
     text-align: center;
     vertical-align: center;
     text-decoration: none;
-    text-transform: uppercase;
-    font-weight: $font-weight-heavy;
+    font: { size: 1rem; weight: $font-weight-normal; };
+    color: $black_base;
     letter-spacing: 0.125rem;
+    border-radius: 0.25rem;
+    border: 1px solid $grey_base;
     cursor: pointer;
-    @include transition(all, 0.3s, ease-in);
 
-    &:hover {
-        @include box-shadow(0, 5px, 7px, 0.5);
-        @include transition(all, 0.3s, ease-in);
-    }
+    &:hover { border-color: $black_base; }
 
     &:disabled, &.btn--disabled {
     	@include disable-select;
-    	opacity: 0.5;
-
-        &:hover { @include box-shadow(0, 0, 0, 0); }
+    	opacity: 0.3;
     }
 } // End of Button
 
@@ -48,6 +43,7 @@
         &--#{$type} {
             background-color: $bgcolor;
             color: $fontcolor !important;
+            border: none;
 
             &:hover,
             &:focus,
@@ -57,7 +53,7 @@
 		&--#{$type}--outline {
 			background-color: $color-none;
 			color: $bgcolor !important;
-			border: 2px solid $bgcolor;
+			border: 1px solid $bgcolor;
 			
 			&:hover,
             &:focus,
@@ -90,10 +86,11 @@
     } // End of EACH-LOOP
 
     // SIZES
-    &--small { padding: 0.5rem; font-size: 0.75rem; }
-    &--medium { padding: 0.5rem 1rem; font-size: 1rem; }
-    &--large { padding: 0.75rem 1.25rem; font-size: 1.25rem; }
-    &--xlarge { padding: 1rem 1.5rem; font-size: 1.5rem; }
+    &--xsmall { font-size: 0.625rem; }
+    &--small { font-size: 0.875rem; }
+    &--medium { font-size: 1rem; }
+    &--large { font-size: 1.25rem; }
+    &--xlarge { font-size: 1.5rem; }
     &--block {
         display: block;
         width: 100%;
