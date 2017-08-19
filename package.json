@@ -1,7 +1,7 @@
 {
   "name": "sparkle.css",
   "version": "1.6.1",
-  "description": "Simple CSS framework coded in CSS and jQuery",
+  "description": "A lightweight, open-source, mobile-first CSS framework for easy website designs.",
   "main": "sparkle.min.css",
   "scripts": {
     "test": "gulp sassify && gulp minify"

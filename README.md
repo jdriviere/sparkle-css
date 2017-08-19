@@ -1,5 +1,5 @@
 [![Logo](dist/img/Logo_InColor_side.png)](https://jdriviere.github.io/sparkle-css)
-A lightweight, responsive, mobile-first CSS framework for easy website designs.
+A lightweight, open-source, mobile-first CSS framework for easy website designs.
 
 [![license](https://img.shields.io/badge/license-MIT-yellow.svg)](https://github.com/jdriviere/sparkle-css/blob/master/LICENSE)
 [![website](https://img.shields.io/badge/website-online-green.svg)](https://jdriviere.github.io/sparkle-css/)
@@ -33,7 +33,7 @@ npm install sparkle.css
 ```
 
 ## Documentation
-The documentation can be found [!here](https://jdriviere.github.io/sparkle-css/docs.html).
+The documentation can be found [here!](https://jdriviere.github.io/sparkle-css/docs.html).
 
 ## Contributing
 Coming soon...
