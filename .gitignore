@@ -6,3 +6,4 @@ package-lock.json
 npm-debug.log
 examples.html
 test.html
+src/scss/base/_config.scss
