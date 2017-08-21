@@ -594,11 +594,30 @@
                                 to its class list (you do not need to add any classes to the &lt;label&gt; tag).
                             </p>
 
-                            <form action="#" class="form">
-                                <div class="form__box">
-                                    <input type="text" class="form__input" id="input1">
-                                    <label for="input1">Test Name</label>
+                            <form class="form">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form__box">
+                                            <input type="text" class="form__input" id="inputA">
+                                            <label for="inputA">First Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form__box">
+                                            <input type="text" class="form__input" id="inputB">
+                                            <label for="inputB">Last Name</label>
+                                        </div>
+                                    </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form__box">
+                                            <input type="text" class="form__input" id="inputC">
+                                            <label for="inputC">Email</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn btn--primary">Send</button>
                             </form>
                         </div>
                     </div>
@@ -611,7 +630,7 @@
                                     &lt;div class="form__box"&gt;<br>
                                         &lt;input class="form__input" type="text" id="input1"&gt;<br>
                                         &lt;label for="input1"&gt;Input Text&lt;/label&gt;<br>
-                                    &lt;/div&gt;
+                                    &lt;/div&gt;<br>
                                 &lt;/form&gt;
                             </code>
                         </div>

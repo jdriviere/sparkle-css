@@ -7,7 +7,7 @@
 .card {
     width: 100%;
     // padding: 5px;
-    border: 1px solid $color-grey-75;
+    border: 1px solid $grey_base;
     @include border-radius;
     overflow: hidden;
 
@@ -24,7 +24,7 @@
     &__footer {
         @include displayFlex;
         @include flexSize;
-        border: { top: 1px solid $color-grey-75; }
+        border: { top: 1px solid $grey_base; }
 
         &__item {
             @include displayFlex;
@@ -43,7 +43,7 @@
             }
 
             // STATES
-            &:not(:first-child) { border: { left: 1px solid $color-grey-75; } }
+            &:not(:first-child) { border: { left: 1px solid $grey_base; } }
         }
     }
 

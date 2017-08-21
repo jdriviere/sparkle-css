@@ -911,7 +911,7 @@ code {
   color: #111516;
   letter-spacing: 0.125rem;
   border-radius: 0.25rem;
-  border: 1px solid #E2E2E2;
+  border: 1px solid #676A6E;
   cursor: pointer;
 }
 
@@ -1258,7 +1258,7 @@ code {
 /* ===================================================*/
 .card {
   width: 100%;
-  border: 1px solid #C0C0C0;
+  border: 1px solid #E2E2E2;
   border-radius: 0.3125em;
   overflow: hidden;
 }
@@ -1288,7 +1288,7 @@ code {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  border-top: 1px solid #C0C0C0;
+  border-top: 1px solid #E2E2E2;
 }
 
 .card__footer__item {
@@ -1309,7 +1309,7 @@ code {
 
 .card__footer__item a {
   text-decoration: none;
-  color: #3C3F45;
+  color: #111516;
 }
 
 .card__footer__item a:hover {
@@ -1317,7 +1317,7 @@ code {
 }
 
 .card__footer__item:not(:first-child) {
-  border-left: 1px solid #C0C0C0;
+  border-left: 1px solid #E2E2E2;
 }
 
 .card.card--shadow-box {
@@ -1332,7 +1332,7 @@ code {
 /* ===================================================*/
 .form__box {
   position: relative;
-  margin: 2em 0;
+  margin: 0.5rem 0;
 }
 
 .form__input {
@@ -1717,7 +1717,7 @@ code {
 }
 
 .nav__menu__item a {
-  color: #3C3F45;
+  color: #111516;
   font-size: 0.75rem;
   font-weight: 400;
   text-transform: uppercase;
@@ -1899,7 +1899,6 @@ code {
   margin-top: 0;
   margin-bottom: 0.5rem;
   padding: 0.5rem 0;
-  background-color: #F4F4F8;
   border: 1px solid #E2E2E2;
   border-bottom: 3px solid #E2E2E2;
 }

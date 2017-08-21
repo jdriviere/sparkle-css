@@ -5,7 +5,11 @@
 @import "../base/_mixins";
 
 .form {
-	&__box { position: relative; margin: 2em 0; }
+	&__box {
+		position: relative;
+		// margin: 2em 0;
+		margin: 0.5rem 0;
+	}
 
 	&__input {
 		position: relative;
