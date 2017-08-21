@@ -106,30 +106,30 @@ $btopaz_d4:                 #2B353F !default;
 $btopaz_d5:                 #0F1215 !default;
 
 // WHITES
-$white_l5:                  #FEFEFD !default;
-$white_l4:                  #FDFCFB !default;
-$white_l3:                  #FDFAF9 !default;
-$white_l2:                  #FCF8F7 !default;
-$white_l1:                  #FBF6F5 !default;
-$white_base:                #FBF5F3 !default; // Main
-$white_d1:                  #CEC9C7 !default;
-$white_d2:                  #A09C9B !default;
-$white_d3:                  #73706F !default;
-$white_d4:                  #454343 !default;
+$white_l5:                  #FEFEFE !default;
+$white_l4:                  #FCFCFD !default;
+$white_l3:                  #FAFAFB !default;
+$white_l2:                  #F8F8FA !default;
+$white_l1:                  #F6F6F9 !default;
+$white_base:                #F4F4F8 !default; // Main
+$white_d1:                  #C8C8CB !default;
+$white_d2:                  #9C9C9E !default;
+$white_d3:                  #6F6F71 !default;
+$white_d4:                  #434344 !default;
 $white_d5:                  #171717 !default;
 
 // GREYS
-$grey_l5:                   #F5F6F6 !default;
-$grey_l4:                   #E2E6E6 !default;
-$grey_l3:                   #CED6D6 !default;
-$grey_l2:                   #BBC5C6 !default;
-$grey_l1:                   #A8B5B6 !default;
-$grey_base:                 #95A5A6 !default; // Main
-$grey_d1:                   #7A8888 !default;
-$grey_d2:                   #5F6A6A !default;
-$grey_d3:                   #444B4C !default;
-$grey_d4:                   #292D2E !default;
-$grey_d5:                   #0E0F10 !default;
+$grey_l5:                   #FCFCFC !default;
+$grey_l4:                   #F7F7F7 !default;
+$grey_l3:                   #F1F1F1 !default;
+$grey_l2:                   #ECECEC !default;
+$grey_l1:                   #E7E7E7 !default;
+$grey_base:                 #E2E2E2 !default; // Main
+$grey_d1:                   #B9B9B9 !default;
+$grey_d2:                   #909090 !default;
+$grey_d3:                   #676767 !default;
+$grey_d4:                   #3E3E3E !default;
+$grey_d5:                   #181818 !default;
 
 
 // BLACKS
@@ -152,7 +152,7 @@ $color-none:                transparent !default;
 // COLORS - THEMES
 // ================================
 $theme-maps: (
-    default:                $grey_l4,
+    default:                $grey_base,
     primary:				$lblue_base,
     secondary:				$btopaz_base,
     success:				$green_base,
@@ -229,10 +229,10 @@ $btn-color-maps: (
     primary:				($lblue_base, $white_base),
     secondary:				($btopaz_base, $white_base),
     success:				($green_base, $white_base),
-    warning:				($yellow_base, $white_base),
+    warning:				($yellow_base, $black_base),
     danger:					($red_base, $white_base),
     light:					($white_base, $black_base),
-	dark:					($black_l1, $white_base),
+	dark:					($black_base, $white_base),
 ) !default;
 
 // =================================

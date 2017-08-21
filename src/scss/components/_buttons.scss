@@ -68,11 +68,11 @@
             @if ($type == "light") {
                 background-color: map-get($theme-maps, light);
                 color: $white_d1 !important;
-                border: 1px solid $grey-l3;
+                border: 1px solid $grey_l1;
             } @else {
                 background-color: map-get($theme-maps, light);
                 color: $bgcolor !important;
-                border: 1px solid $grey-l3;
+                border: 1px solid $grey_l1;
             } // End of IF-ELSE
 			
 			&:hover,

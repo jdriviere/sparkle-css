@@ -21,7 +21,13 @@
 
 	<!-- INTERNAL STYLING -->
     <style>
-        .snippet { padding: 0.125em; background-color: #DDD; }
+        .snippet {
+            padding: 0.125rem 0.25rem;
+            vertical-align: bottom;
+            background-color: #EDEDEF;
+            color: #9BC2E6;
+            border-radius: 0.125rem;
+        }
         
         .section button { margin-bottom: 0.25em; }
         .section__block { margin-bottom: 1.25em; }
@@ -96,15 +102,15 @@
                             <p class="alertSection__desc">
                                 Alerts can serve to make sure users can see important messages on
                                 their screen. Simply create a block of code and stylize it accordingly.
-                                Start off by adding an <span><code class="snippet">alert</code></span>, and
+                                Start off by adding an <span class="snippet"><code>alert</code></span>, and
                                 then specify which type of alert you want by adding the second class,
-                                <span><code class="snippet">alert--$type</code></span>, where
-                                <span><code class="snippet">$type</code></span> is either one of the following:
-                                <span><code class="snippet">default</code></span>,
-                                <span><code class="snippet">info</code></span>,
-                                <span><code class="snippet">success</code></span>,
-                                <span><code class="snippet">warning</code></span>, or
-                                <span><code class="snippet">danger</code></span>.
+                                <span class="snippet"><code>alert--$type</code></span>, where
+                                <span class="snippet"><code>$type</code></span> is either one of the following:
+                                <span class="snippet"><code>default</code></span>,
+                                <span class="snippet"><code>info</code></span>,
+                                <span class="snippet"><code>success</code></span>,
+                                <span class="snippet"><code>warning</code></span>, or
+                                <span class="snippet"><code>danger</code></span>.
                             </p>
 
                             <div class="alert alert--default">This is a default alert</div>
@@ -197,7 +203,7 @@
                             <p class="btnSection__desc">
                                 One of the most essential elements in a CSS framework: buttons.
                                 Sparkle allows you to style anchor tags, div tags, and buttons by
-                                simply putting <span class="snippet">btn</span> in its class. This
+                                simply putting <span class="snippet"><code>btn</code></span> in its class. This
                                 is also the first step to style a button accordingly (see other
                                 styling below).
                             </p>
@@ -225,18 +231,18 @@
                             <p class="btnSection__desc">
                                 Sparkle offers a variety of button colors, to go with
                                 your design needs. To specify the type of button you want,
-                                you must add <span><code class="snippet">btn--$type</code></span> to
-                                your <span><code class="snippet">btn</code></span> class, where
-                                <span><code class="snippet">$type</code></span> is either one of the
+                                you must add <span class="snippet"><code>btn--$type</code></span> to
+                                your <span class="snippet"><code>btn</code></span> class, where
+                                <span class="snippet"><code>$type</code></span> is either one of the
                                 following:
                                 
-                                <span><code class="snippet">primary</code></span>,
-                                <span><code class="snippet">secondary</code></span>,
-                                <span><code class="snippet">success</code></span>,
-                                <span><code class="snippet">warning</code></span>,
-                                <span><code class="snippet">danger</code></span>,
-                                <span><code class="snippet">light</code></span>, or
-                                <span><code class="snippet">dark</code></span>.
+                                <span class="snippet"><code>primary</code></span>,
+                                <span class="snippet"><code>secondary</code></span>,
+                                <span class="snippet"><code>success</code></span>,
+                                <span class="snippet"><code>warning</code></span>,
+                                <span class="snippet"><code>danger</code></span>,
+                                <span class="snippet"><code>light</code></span>, or
+                                <span class="snippet"><code>dark</code></span>.
                             </p>
 
                             <button class="btn btn--primary">Primary</button>
@@ -268,9 +274,9 @@
                             <p class="btnSection__desc">
                                 If solid-colored buttons are not enough, Sparkle also offers
                                 the option of outlining the buttons. Simply add
-                                <span><code class="snippet">--outline</code></span> at the end of the
+                                <span class="snippet"><code>--outline</code></span> at the end of the
                                 button type class, as in
-                                <span><code class="snippet">btn--$type--outline</code></span>.
+                                <span class="snippet"><code>btn--$type--outline</code></span>.
                             </p>
 
                             <button class="btn btn--primary--outline">Primary</button>
@@ -301,9 +307,9 @@
                             <h5 class="section__title">Types (Ghosted)</h5>
                             <p class="btnSection__desc">
                                 Sparkle also offers the "ghost" button variety too. Simply add
-                                <span><code class="snippet">--ghost</code></span> at the end of the
+                                <span class="snippet"><code>--ghost</code></span> at the end of the
                                 button type class, as in
-                                <span><code class="snippet">btn--$type--ghost</code></span>.
+                                <span class="snippet"><code>btn--$type--ghost</code></span>.
                             </p>
                             
                             <button class="btn btn--primary--ghost">Primary</button>
@@ -333,14 +339,14 @@
                             <h5 class="section__title">Sizes</h5>
                             <p class="btnSection__desc">
                                 Buttons come in different sizes for different purposes. You can
-                                alter a button size by adding <span><code class="snippet">btn--$size</code></span>
-                                to the class list, where the <span><code class="snippet">$size</code></span>
+                                alter a button size by adding <span class="snippet"><code>btn--$size</code></span>
+                                to the class list, where the <span class="snippet"><code>$size</code></span>
                                 is either one of the following:
-                                <span><code class="snippet">xsmall</code></span>,
-                                <span><code class="snippet">small</code></span>,
-                                <span><code class="snippet">medium</code></span>,
-                                <span><code class="snippet">large</code></span>, or
-                                <span><code class="snippet">xlarge</code></span>.
+                                <span class="snippet"><code>xsmall</code></span>,
+                                <span class="snippet"><code>small</code></span>,
+                                <span class="snippet"><code>medium</code></span>,
+                                <span class="snippet"><code>large</code></span>, or
+                                <span class="snippet"><code>xlarge</code></span>.
                             </p>
 
                             <button class="btn btn--xsmall">X-Small</button>
@@ -371,7 +377,7 @@
                             <h5 class="section__title">Block</h5>
                             <p class="btnSection__desc">
                                 You can also have your button take the entire span of the block too by adding
-                                <span><code class="snippet">btn--block</code></span> to your class list. You can
+                                <span class="snippet"><code>btn--block</code></span> to your class list. You can
                                 even mix it with the button roundness classes (see below).
                             </p>
 
@@ -396,10 +402,10 @@
                             <h5 class="section__title">Roundness</h5>
                             <p class="btnSection__desc">
                                 Sparkle offers the chance to even vary the roundness of its button design.
-                                Simply add <span><code class="snippet">btn--$roundness</code></span> in your class
-                                list, where <span><code class="snippet">$roundness</code></span> is one of the following:
-                                <span><code class="snippet">h-round</code></span> (for 'half-round'), or
-                                <span><code class="snippet">f-round</code></span> (for 'fully-round').
+                                Simply add <span class="snippet"><code>btn--$roundness</code></span> in your class
+                                list, where <span class="snippet"><code>$roundness</code></span> is one of the following:
+                                <span class="snippet"><code>h-round</code></span> (for 'half-round'), or
+                                <span class="snippet"><code>f-round</code></span> (for 'fully-round').
                             </p>
 
                             <button class="btn btn--h-round">Button</button>
@@ -425,7 +431,7 @@
                             <h5 class="section__title">Disabled</h5>
                             <p class="btnSection__desc">
                                 You want to insert a button but not want it to be accessible yet?
-                                No problem! simply add <span><code class="snippet">btn--disabled</code></span>
+                                No problem! simply add <span class="snippet"><code>btn--disabled</code></span>
                                 to your list of classes, and use a code to remove that class
                                 whenever you need.
                             </p>
@@ -579,12 +585,12 @@
                             <p class="formSection__desc">
                                 Sparkle offers the possibility to customize forms. It was heavily
                                 influenced by Google Material UI. In order to use the forms feature,
-                                you must add the <span><code class="snippet">.form</code></span>
+                                you must add the <span class="snippet"><code>.form</code></span>
                                 class to the the &lt;form&gt; element.<br>
                                 In order to optimize the use of &lt;label&gt; with its accompanying
                                 &lt;input&gt; tags, you must envelop them both in a &lt;div&gt; with a
-                                <span><code class="snippet">form__box</code></span> class. And to stylize
-                                the inputs, simply add <span><code class="snippet">form__input</code></span>
+                                <span class="snippet"><code>form__box</code></span> class. And to stylize
+                                the inputs, simply add <span class="snippet"><code>form__input</code></span>
                                 to its class list (you do not need to add any classes to the &lt;label&gt; tag).
                             </p>
 
@@ -838,7 +844,7 @@
                         <p class="section__desc">
                             In Sparkle, the table feature already comes fully responsive. There
                             is no need to style each of its elements. Simply add the
-                            <span class="snippet">table</span> class to the &lt;table&gt; tag.
+                            <span class="snippet"><code>table</code></span> class to the &lt;table&gt; tag.
                         </p>
 
                         <table class="table">
@@ -920,7 +926,7 @@
                     <div class="col-1-of-2 section">
                         <h5 class="section__title">Style (Default)</h5>
                         <p class="section__desc">
-                            Add the <span class="snippet">table--default</span> class to the &lt;table&gt; tag's
+                            Add the <span class="snippet"><code>table--default</code></span> class to the &lt;table&gt; tag's
                             class list, if you want to separate each  data entry with a line.
                         </p>
 
@@ -972,7 +978,7 @@
                     <div class="col-1-of-2 section">
                         <h5 class="section__title">Style (Striped)</h5>
                         <p class="section__desc">
-                            Add the <span class="snippet">table--striped</span> class to the &lt;table&gt; tag's
+                            Add the <span class="snippet"><code>table--striped</code></span> class to the &lt;table&gt; tag's
                             class list, if you want to alternate colors between rows.
                         </p>
 
@@ -1024,7 +1030,7 @@
                     <div class="col-1-of-2 section">
                         <h5 class="section__title">Style (Bordered)</h5>
                         <p class="section__desc">
-                            Add the <span class="snippet">table--bordered</span> class to the &lt;table&gt; tag's
+                            Add the <span class="snippet"><code>table--bordered</code></span> class to the &lt;table&gt; tag's
                             class list, if you want to completely border each and every elements within your table.
                         </p>
 
@@ -1076,7 +1082,7 @@
                     <div class="col-1-of-2 section">
                         <h5 class="section__title">Hoverable</h5>
                         <p class="section__desc">
-                            Add the <span class="snippet">table--hoverable</span> class to the &lt;table&gt; tag's
+                            Add the <span class="snippet"><code>table--hoverable</code></span> class to the &lt;table&gt; tag's
                             class list, if you want a nice hover effect in your table.
                         </p>
 
@@ -1129,7 +1135,7 @@
                     <div class="col-1-of-2 section">
                         <h5 class="section__title">Theme (Light)</h5>
                         <p class="section__desc">
-                            Add the <span class="snippet">table--light</span> class to the &lt;table&gt; tag's
+                            Add the <span class="snippet"><code>table--light</code></span> class to the &lt;table&gt; tag's
                             class list, if you want to decorate your table header with a nice light color.
                         </p>
 
@@ -1181,7 +1187,7 @@
                     <div class="col-1-of-2 section">
                         <h5 class="section__title">Theme (Dark)</h5>
                         <p class="section__desc">
-                            Add the <span class="snippet">table--dark</span> class to the &lt;table&gt; tag's
+                            Add the <span class="snippet"><code>table--dark</code></span> class to the &lt;table&gt; tag's
                             class list, if you want to decorate your table header with a nice dark color.
                         </p>
 
