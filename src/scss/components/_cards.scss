@@ -48,5 +48,5 @@
     }
 
     // STATES
-    &.card--shadow-box { @include box-shadow(0, 3px, 15px, 0.5); }
+    &.card--shadow-box { @include box-shadow(0, 0.25em, 0.5em, 0.1); }
 }

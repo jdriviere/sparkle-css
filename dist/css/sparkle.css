@@ -1321,10 +1321,10 @@ code {
 }
 
 .card.card--shadow-box {
-  -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
-  -ms-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
 }
 
 /* ===================================================*/
@@ -1367,7 +1367,6 @@ code {
   display: block;
   font-size: 1em;
   letter-spacing: 0.125em;
-  text-transform: uppercase;
   color: #C0C0C0;
   transform: translateY(1em);
   -webkit-transition: all 0.2s ease-in;

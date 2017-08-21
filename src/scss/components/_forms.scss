@@ -29,7 +29,6 @@
 			display: block;
 			font-size: 1em;
 			letter-spacing: 0.125em;
-			text-transform: uppercase;
 			color: $color-grey-75;
 			transform: translateY(1em);
 			@include transition(all, 0.2s, ease-in);
