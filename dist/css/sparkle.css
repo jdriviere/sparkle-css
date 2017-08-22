@@ -1584,8 +1584,8 @@ code {
   flex-basis: 100%;
   max-width: 100%;
   min-height: 0.0625em;
-  margin: 0.875em;
-  padding: 0.875em;
+  margin: 0.25em 0.875em;
+  padding: 0.75em;
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1593,8 +1593,8 @@ code {
 
 @media only screen and (min-width: 40rem) {
   [class*="col-"] {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
   }
   [class*="col-"]:first-of-type {
     margin-left: 0;
@@ -1800,8 +1800,7 @@ code {
   color: #9BC2E6;
   font-size: 1.5rem;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.25rem;
+  letter-spacing: 0.125rem;
   cursor: pointer;
 }
 
@@ -1820,9 +1819,8 @@ code {
 
 .nav__menu__item a {
   color: #111516;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: 400;
-  text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0.125rem;
 }

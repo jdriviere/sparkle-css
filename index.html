@@ -22,47 +22,43 @@
 	<!-- INTERNAL STYLING -->
 	<style>
         .hero {
+            position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
             width: 100%;
-            height: calc(100vh - 3em);
+            height: 100vh;
             background: -webkit-linear-gradient(45deg, #9EC0D6 0%,#DFE5FF 100%);
             background: -moz-linear-gradient(45deg, #9EC0D6 0%, #DFE5FF 100%);
             background: linear-gradient(45deg, #9EC0D6 0%,#DFE5FF 100%);
             color: #333;
+            z-index: -5;
         }
 
         .banner__title { color: #3498DB; }
         .banner__subtitle { margin-bottom: 50px; font-weight: 300; }
 
         .btn-group {margin: 2em 0; text-align: left; }
-        .btn { margin: 0 0 10px; }
+        .btn { margin: 0 0.675em 0.675em; }
         .btn:first-child { margin-left: 0; }
 
         footer {
-            clear: both;
-            display: block;
-            width: 100%;
-            padding: 1em;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            bottom: 1em;
             color: #333;
-            background-color: #EEE;
         }
         footer i { color: #C03; }
         footer a { text-decoration: none; color: #3498DB; }
 
         @media only screen and (min-width: 30em) {
-            .hero {
-                height: calc(100vh - 3em);
-                min-height: calc(480px - (3.75em + 3em));
-                padding: 10em 0;
-            }
+            .hero { height: calc(100vh - 3em); }
             .banner__title { letter-spacing: .5em; text-transform: uppercase; }
-            .btn-group > .btn { margin: 0 0.5em 0 0; }
-
-            footer { padding: 0.75em; color: #333; }
-            footer i { color: #C03; }
-            footer a { text-decoration: none; color: #3498DB; }
+            .btn-group > .btn { margin: 0 0.675em 0 0; }
+            footer { bottom: 3em; }
         }
     </style>
 </head>
@@ -70,7 +66,7 @@
 <body>
     <!-- HEADER -->
     <header>
-        <nav class="nav nav--fixed">
+        <nav class="nav">
             <!-- NAV LOGO/BRAND -->
             <div class="nav__brand">
                 <a href="index.html">
@@ -118,14 +114,16 @@
 
             <p class="text--small">*Currently on version: <span class="text--thick">1.6.1</span></p>
         </div>
+
+        <!-- FOOTER -->
+        <footer class="text--center">
+            <p>
+                Designed with <span><i class="fa fa-heart animate--pulse"></i></span> by <a href="https://jdriviere.github.io">J. D. Riviere</a> using <a href="https://github.com/jdriviere/sparkle-css">Sparkle</a> &copy; 2017
+            </p>
+        </footer>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="text--center">
-        <p>
-            Designed with <span><i class="fa fa-heart animate--pulse"></i></span> by <a href="https://jdriviere.github.io">J. D. Riviere</a> using <a href="https://github.com/jdriviere/sparkle-css">Sparkle</a> &copy; 2017
-        </p>
-    </footer>
+    
 
     <!-- LOADING SCRIPTS - Note: At the bottom of <body> makes scripts load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>

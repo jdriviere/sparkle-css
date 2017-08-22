@@ -69,14 +69,14 @@
 [class*="#{$grid-name}-"], .#{$grid-name} {
 	@include maxColWidth(100);
     min-height: 0.0625em;
-    margin: $grid-gutter;
-    padding: 0.875em;
+    margin: 0.25em $grid-gutter;
+    padding: $grid-padding;
 	@include flexSize(1);
 }
 
 @media only screen and (min-width: $bp-medium) {
 	[class*="#{$grid-name}-"] {
-		margin: { top: 0.5em; bottom: 0.5em; }
+		margin: { top: 0.25em; bottom: 0.25em; }
 		
 		&:first-of-type { margin-left: 0; }
 		&:last-of-type { margin-right: 0; }

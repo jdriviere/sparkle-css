@@ -56,8 +56,8 @@
         color: map-get($theme-maps, secondary);
         font-size: 1.5rem;
         font-weight: $font-weight-heavy;
-        text-transform: uppercase;
-        letter-spacing: 0.25rem;
+        // text-transform: uppercase;
+        letter-spacing: 0.125rem;
 		cursor: pointer;
 		
 		& img,
@@ -74,9 +74,9 @@
 			a {
 				
 				color: map-get($theme-maps, dark);
-				font-size: 0.75rem;
+				font-size: 0.875rem;
 				font-weight: $font-weight-normal;
-				text-transform: uppercase;
+				// text-transform: uppercase;
 				text-decoration: none;
 				letter-spacing: 0.125rem;
 			}
