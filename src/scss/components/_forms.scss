@@ -4,66 +4,79 @@
 @import "../base/_variables";
 @import "../base/_mixins";
 
+// MIXINS
+@mixin createInput {
+	position: relative;
+    display: inline-flex;
+    flex: 1 0 100%;
+    align-items: center;
+    width: 100%;
+    height: 2.5rem;
+    padding: 0 0.5rem;
+    appearance: none;
+    outline: none;
+    font: { size: 1rem; weight: 300; }
+    color: $black_base;
+    border: 1px solid map-get($theme-maps, default);
+    border-radius: 0.25rem;
+
+    // COMPONENTS
+	&::-webkit-input-placeholder { color: $color-grey-75; } // WebKit, Blink, Edge
+	&::-moz-placeholder { color: $color-grey-75; opacity: 1; } // Mozilla Firefox 19+
+	&:-moz-placeholder { color: $color-grey-75; opacity: 1; } // Mozilla Firefox 4 to 18
+	&:-ms-textarea-placeholder { color: $color-grey-75; } // Internet Explorer 10-11
+	&::placeholder { color: $color-grey-75; }
+
+    // STATES
+    &:hover { border-color: map-get($theme-maps, primary); }
+    &:focus {
+        border-color: map-get($theme-maps, primary);
+        box-shadow: 0 0 0.625rem rgba($lblue_base, 0.5);
+    }
+    &:not(:last-child) { margin-bottom: 0.25rem; }
+} // End of CreateInput
+
+// FORMS
 .form {
-	&__box {
-		position: relative;
-		// margin: 2em 0;
-		margin: 0.5rem 0;
+	// COMPONENTS
+	&__label {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 0.5rem;
+        font: { size: 0.875rem; weight: 700; }
+        color: $black_base;
 	}
-
-	&__input {
-		position: relative;
-		display: block;
-		width: 100%;
-		height: 2em;
-		padding: 0.5em 0;
-		@include remove-appearance;
-		outline: none;
-		background-color: $color-none;
-		border: none;
-		border-bottom: 1px solid $color-grey-75;
-		font-size: 1em;
-		@include box-shadow(0, 0, 0, 0);
-		@include transition(all, 0.2s, ease-in);
-
-		& + label {
-			position: absolute;
-			top: -0.75em;
-			left: 0;
-			display: block;
-			font-size: 1em;
-			letter-spacing: 0.125em;
-			color: $color-grey-75;
-			transform: translateY(1em);
-			@include transition(all, 0.2s, ease-in);
-		}
-
-		&:focus {
-			border-bottom: 2px solid $black_base;
-			@include transition(all, 0.2s, ease-in);
-		}
-
-		&:focus + label,
-		&.form__input--used + label {
-			top: -2.5em;
-			font-size: 0.75em;
-			font-weight: $font-weight-heavy;
-			letter-spacing: 0;
-			color: $black_base;
-		}
-
-		&.form__input--used:not(:focus) + label { color: $color-grey-75; }
+	
+	&__input { @include createInput; }
+	
+	&__select {
+        @include createInput;
+        
+        // COMPONENTS
+        &::-ms-expand { display: none; }
 	}
-
-	textarea {
-		min-height: 5em;
-		resize: none;
-		font-family: $font-family-default;
+	
+	&__textarea {
+        @include createInput;
+        height: 5rem;
+        padding-top: 0.5rem;
+        resize: vertical;
 	}
+	
+	&__checkbox {
+        display: inline-flex;
+        align-items: center;
+        transform: scale(1.25);
+        
+        // STATES
+        &:not(:first-of-type) { margin-left: 1rem; }
+        
+        // COMPONENTS
+        &__group { margin: 0.5rem 0; }
+        &__label {
+            display: inline;
+            margin-left: 0.75rem;
+            font-size: 0.875rem;
+        }
+    }
 }
-
-// PLACEHOLDERS
-::-webkit-input-placeholder { color: $color-grey-75; } // WebKit, Blink, Edge
-::-moz-placeholder { color: $color-grey-75; opacity: 1; } // Mozilla Firefox 19+
-:-moz-placeholder { color: $color-grey-75; opacity: 1; } // Mozilla Firefox 4 to 18
-:-ms-textarea-placeholder { color: $color-grey-75; } // Internet Explorer 10-11

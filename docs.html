@@ -581,44 +581,37 @@
                 <div class="row">
                     <div class="col-1-of-2 section">
                         <div class="section__block">
-                            <h5 class="section__title">Base</h5>
-                            <p class="formSection__desc">
-                                Sparkle offers the possibility to customize forms. It was heavily
-                                influenced by Google Material UI. In order to use the forms feature,
-                                you must add the <span class="snippet"><code>.form</code></span>
-                                class to the the &lt;form&gt; element.<br>
-                                In order to optimize the use of &lt;label&gt; with its accompanying
-                                &lt;input&gt; tags, you must envelop them both in a &lt;div&gt; with a
-                                <span class="snippet"><code>form__box</code></span> class. And to stylize
-                                the inputs, simply add <span class="snippet"><code>form__input</code></span>
-                                to its class list (you do not need to add any classes to the &lt;label&gt; tag).
+                            <h5 class="section__title">Input</h5>
+                            <p class="section__desc">
+                                Sparkle offers the possibility to stylize forms. Just add
+                                <span class="snippet"><code>form</code></span>
+                                class to a &lt;div&gt;'s class list. To stylize the inputs, simply add
+                                <span class="snippet"><code>form__input</code></span>
+                                to an &lt;input&gt; class list, and add
+                                <span class="snippet"><code>form__label</code></span>
+                                to the &lt;label&gt; tag, if you wish to add one.
                             </p>
 
-                            <form class="form">
+                            <div class="form">
                                 <div class="row">
-                                    <div class="col">
-                                        <div class="form__box">
-                                            <input type="text" class="form__input" id="inputA">
-                                            <label for="inputA">First Name</label>
-                                        </div>
+                                    <div class="col-1-of-2">
+                                        <label for="input1" class="form__label">First:</label>
+                                        <input type="text" class="form__input" id="input1" placeholder="First">
                                     </div>
-                                    <div class="col">
-                                        <div class="form__box">
-                                            <input type="text" class="form__input" id="inputB">
-                                            <label for="inputB">Last Name</label>
-                                        </div>
+                                            
+                                    <div class="col-1-of-2">
+                                        <label for="input2" class="form__label">Second:</label>
+                                        <input type="text" class="form__input" id="input2" placeholder="Second">
                                     </div>
                                 </div>
+                                
                                 <div class="row">
                                     <div class="col">
-                                        <div class="form__box">
-                                            <input type="text" class="form__input" id="inputC">
-                                            <label for="inputC">Email</label>
-                                        </div>
+                                        <label for="input3" class="form__label">Third:</label>
+                                        <input type="text" class="form__input" id="input3" placeholder="Third">
                                     </div>
                                 </div>
-                                <button class="btn btn--primary">Send</button>
-                            </form>
+                            </div>
                         </div>
                     </div>
 
@@ -626,22 +619,100 @@
                         <h6>Code:</h6>
                         <div class="alert alert--info">
                             <code>
-                                &lt;form class="form"&gt;<br>
-                                    &lt;div class="form__box"&gt;<br>
-                                        &lt;input class="form__input" type="text" id="input1"&gt;<br>
-                                        &lt;label for="input1"&gt;Input Text&lt;/label&gt;<br>
+                                &lt;div class="form"&gt;<br>
+                                    &lt;div class="row"&gt;<br>
+                                        &lt;div class="col"&gt;<br>
+                                            &lt;label for="input" class="form__label"&gt;Input:&lt;/label&gt;<br>
+                                            &lt;input type="text" class="form__input" id="input" placeholder="Valid input"&gt;<br>
+                                            ...<br>
+                                        &lt;/div&gt;<br>
+                                        // Body of code<br>
                                     &lt;/div&gt;<br>
-                                &lt;/form&gt;
+                                &lt;/div&gt;
                             </code>
                         </div>
+                    </div>
+                </div> <!-- END OF ROW -->
 
-                        <div class="alert alert--warning">
-                            <h5 class="alert__title">Note:</h5>
-                            <p class="alert__desc">
-                                Make sure the &lt;label&gt; tag is placed underneath the &lt;input&gt; tag!
+                <div class="row">
+                    <div class="col-1-of-2 section">
+                        <div class="section__block">
+                            <h5 class="section__title">Text Area</h5>
+                            <p class="section__desc">
+                                Inside a &lt;div&gt; with a <span class="snippet"><code>form</code></span>,
+                                simply add a &lt;textarea&gt; with a class
+                                <span class="snippet"><code>form__textarea</code></span>.
                             </p>
+
+                            <div class="form">
+                                <div class="row">
+                                    <div class="col">
+                                        <textarea class="form__textarea" placeholder="Type text here"></textarea>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+                    <div class="col-1-of-2">
+                        <h6>Code:</h6>
+                        <div class="alert alert--info">
+                            <code>
+                                &lt;div class="form"&gt;<br>
+                                    &lt;div class="row"&gt;<br>
+                                        &lt;div class="col"&gt;<br>
+                                            &lt;textarea class="form__textarea" placeholder="Type text here"&gt;&lt;/textarea&gt;<br>
+                                        &lt;/div&gt;<br>
+                                    &lt;/div&gt;<br>
+                                &lt;/div&gt;
+                            </code>
+                        </div>
+                    </div>
+                </div> <!-- END OF ROW -->
+
+                <div class="row">
+                        <div class="col-1-of-2 section">
+                            <div class="section__block">
+                                <h5 class="section__title">Selection</h5>
+                                <p class="section__desc">
+                                    Inside a &lt;div&gt; with a <span class="snippet"><code>form</code></span> class,
+                                    simply add a &lt;select&gt; tag with a class
+                                    <span class="snippet"><code>form__select</code></span>.
+                                </p>
+    
+                                <div class="form">
+                                    <div class="row">
+                                        <div class="col">
+                                            <select class="form__select">
+                                                <option value="none" selected disabled>Choose an option...</option>
+                                                <option value="A">Choose A</option>
+                                                <option value="B">Choose B</option>
+                                                <option value="C">Choose C</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-1-of-2">
+                            <h6>Code:</h6>
+                            <div class="alert alert--info">
+                                <code>
+                                    &lt;div class="form"&gt;<br>
+                                        &lt;div class="row"&gt;<br>
+                                            &lt;div class="col"&gt;<br>
+                                                &lt;select class="form__select"&gt;<br>
+                                                    &lt;option value="valueA"&gt;Option 1&lt;/option&gt;<br>
+                                                    &lt;option value="valueB"&gt;Option 2&lt;/option&gt;<br>
+                                                    ...<br>
+                                                &lt;/select&gt;<br>
+                                            &lt;/div&gt;<br>
+                                        &lt;/div&gt;<br>
+                                    &lt;/div&gt;
+                                </code>
+                            </div>
+                        </div>
                 </div> <!-- END OF ROW -->
             </div> <!-- END OF CONTAINER -->
         </section> <!-- END OF SECTION (FORMS) -->
