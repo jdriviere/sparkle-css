@@ -1526,7 +1526,7 @@ code {
 /* GRID
 /* ===================================================*/
 .container {
-  width: 98%;
+  width: 96%;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -1584,7 +1584,7 @@ code {
   flex-basis: 100%;
   max-width: 100%;
   min-height: 0.0625em;
-  margin: 0.25em 0.875em;
+  margin: 0.25em 0;
   padding: 0.75em;
   -webkit-box-flex: 1;
   -ms-flex: 1;
@@ -1593,8 +1593,7 @@ code {
 
 @media only screen and (min-width: 40rem) {
   [class*="col-"] {
-    margin-top: 0.25em;
-    margin-bottom: 0.25em;
+    margin: 0.25em 0.875em;
   }
   [class*="col-"]:first-of-type {
     margin-left: 0;
@@ -1602,13 +1601,21 @@ code {
   [class*="col-"]:last-of-type {
     margin-right: 0;
   }
+  [class*="col-"]:only-child, [class*="col-"]:first-of-type:last-of-type {
+    margin-left: 0;
+    margin-right: 0;
+  }
   .col {
-    margin: 0.5em 0.875em;
+    margin: 0.25em 0.875em;
   }
   .col:first-of-type {
     margin-left: 0;
   }
   .col:last-of-type {
+    margin-right: 0;
+  }
+  .col:only-child, .col:first-of-type:last-of-type {
+    margin-left: 0;
     margin-right: 0;
   }
   .col-1-of-12 {
