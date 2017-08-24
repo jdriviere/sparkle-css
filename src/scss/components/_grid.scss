@@ -53,8 +53,14 @@
 	@include rowCol;
 
 	// STATES
-	&.row--no-gutter { [class*="#{$grid-name}-"], .#{$grid-name} { margin: 0 !important; } }
-	&.row--no-padding { [class*="#{$grid-name}-"], .#{$grid-name} { padding: 0 !important; } }
+	&.row--no-gutter {
+		[class*="#{$grid-name}-"],
+		.#{$grid-name} { margin: 0 !important; }
+	}
+	&.row--no-padding {
+		[class*="#{$grid-name}-"],
+		.#{$grid-name} { padding: 0 !important; }
+	}
 	
 	// MEDIA QUERIES
 	@media only screen and (min-width: $bp-medium) {
@@ -80,17 +86,17 @@
 		// margin: { top: 0.25em; bottom: 0.25em; }
 		margin: 0.25em $grid-gutter;
 		
-		&:first-of-type { margin-left: 0; }
-		&:last-of-type { margin-right: 0; }
-		&:only-child, &:first-of-type:last-of-type { margin: { left: 0; right: 0; }; }
+		&:first-child { margin-left: 0; }
+		&:last-child { margin-right: 0; }
+		&:only-child, &:first-child:last-child { margin: { left: 0; right: 0; }; }
 	}
 	
 	.#{$grid-name} {
 		margin: 0.25em $grid-gutter;
 
-		&:first-of-type { margin-left: 0; }
-		&:last-of-type { margin-right: 0; }
-		&:only-child, &:first-of-type:last-of-type { margin: { left: 0; right: 0; }; }
+		&:first-child { margin-left: 0; }
+		&:last-child { margin-right: 0; }
+		&:only-child, &:first-child:last-child { margin: { left: 0; right: 0; }; }
 	}
 	
 	@include flexGrid(12);

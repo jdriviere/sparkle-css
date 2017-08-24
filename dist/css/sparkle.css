@@ -1550,11 +1550,13 @@ code {
   flex-flow: column wrap;
 }
 
-.row.row--no-gutter [class*="col-"], .row.row--no-gutter .col {
+.row.row--no-gutter [class*="col-"],
+.row.row--no-gutter .col {
   margin: 0 !important;
 }
 
-.row.row--no-padding [class*="col-"], .row.row--no-padding .col {
+.row.row--no-padding [class*="col-"],
+.row.row--no-padding .col {
   padding: 0 !important;
 }
 
@@ -1595,26 +1597,26 @@ code {
   [class*="col-"] {
     margin: 0.25em 0.875em;
   }
-  [class*="col-"]:first-of-type {
+  [class*="col-"]:first-child {
     margin-left: 0;
   }
-  [class*="col-"]:last-of-type {
+  [class*="col-"]:last-child {
     margin-right: 0;
   }
-  [class*="col-"]:only-child, [class*="col-"]:first-of-type:last-of-type {
+  [class*="col-"]:only-child, [class*="col-"]:first-child:last-child {
     margin-left: 0;
     margin-right: 0;
   }
   .col {
     margin: 0.25em 0.875em;
   }
-  .col:first-of-type {
+  .col:first-child {
     margin-left: 0;
   }
-  .col:last-of-type {
+  .col:last-child {
     margin-right: 0;
   }
-  .col:only-child, .col:first-of-type:last-of-type {
+  .col:only-child, .col:first-child:last-child {
     margin-left: 0;
     margin-right: 0;
   }
