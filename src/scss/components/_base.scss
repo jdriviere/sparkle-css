@@ -1,20 +1,37 @@
 /* ===================================================*/
 /* BASE (CORE)
 /* ===================================================*/
-@import "../base/_variables";
-@import "../base/_mixins";
-@import "../base/_reset";
+@import "../config/_variables";
+@import "../config/_mixins";
+@import "../config/_reset";
 
 * {
     @include reset;
-    font-size: 100%;
-    text-rendering: optimizeLegibility;
     @include box-sizing;
     
     &:before, &:after { @extend *; }
 }
+
+html {
+    font-size: 62.5%; // Sets root 62.5% to 10px (100% = 16px)
+    font-size: calc(1em * 0.625); // This line is to ensure HTML rem is at 10px
+    text-rendering: optimizeLegibility;
+    @include font-smoothing;
+}
+
 body {
-	height: 100%;
-	font-weight: $font-weight-light;
+    height: 100%;
+    line-height: 1.5;
+	font: {
+        family: $font-family-default;
+        size: $font-size;
+        weight: $font-weight-light;
+    }
 	color: $font-color;
 }
+
+::-moz-selection {
+    background: map-get($theme-maps, primary);
+    color: map-get($theme-maps, light);
+}
+::selection { @extend ::-moz-selection; }

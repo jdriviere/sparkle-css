@@ -1,34 +1,21 @@
 /* ===================================================*/
 /* TYPOGRAPHY
 /* ===================================================*/
-@import "../base/_variables";
-@import "../base/_mixins";
-
-body {
-    font-size: 100%;
-    font-family: $font-family-default;
-    @include font-smoothing;
-}
+@import "../config/_variables";
+@import "../config/_mixins";
 
 // HEADER FORMATTING
 h1, h2, h3, h4, h5, h6 { margin: 0 !important; font-weight: $font-weight-heavy; }
-h1 { font-size: 2.6rem; line-height: 1.2em; }
-h2 { font-size: 2.2rem; line-height: 1.3em; }
-h3 { font-size: 1.8rem; line-height: 1.35em; }
-h4 { font-size: 1.4rem; line-height: 1.4em; }
-h5 { font-size: 1.2rem; line-height: 1.5em; }
-h6 { font-size: 0.8rem; line-height: 1.6em; }
-p {
-	font: { size: $font-size; weight: $font-weight-light; }
-	line-height: 1.5em;
-	
-	&.text--small { font-size: 0.875rem; }
-	&.text--normal { font-size: $font-size; }
-	&.text--big { font-size: 1.25rem; }
-}
+h1 { font-size: 4.8rem; }
+h2 { font-size: 4.2rem; }
+h3 { font-size: 3.6rem; }
+h4 { font-size: 2.8rem; }
+h5 { font-size: 2.4rem; }
+h6 { font-size: 2.0rem; }
+p { font: { size: $font-size; weight: $font-weight-light; } }
 
 a {
-	font: { size: 1rem; weight: $font-weight-normal; };
+	font: { size: $font-size; weight: $font-weight-normal; };
 	color: $font-color-link;
 	text-decoration: none;
 
@@ -38,7 +25,9 @@ a {
 .text {
 	// WEIGHT
 	&--thin { font-weight: $font-weight-light; }
-	&--thick { font-weight: $font-weight-heavy; }
+	&--normal { font-weight: $font-weight-normal; }
+	&--bold { font-weight: $font-weight-heavy; }
+	&--thick { font-weight: $font-weight-black; }
 
 	// PLACEMENTS
 	&--left { text-align: left; }
@@ -46,17 +35,12 @@ a {
 	&--center { text-align: center; }
 	&--justify { text-align: justify; }
 
-	// SUPER
-	&--title { font: { size: 2.25rem; weight: $font-weight-heavy; } }
-	&--subtitle { font: { size: 1.25rem; weight: $font-weight-normal; } }
+	// SUPER (Overwrites)
+	&--title { font: { size: 4.0rem; weight: $font-weight-heavy; } }
+	&--subtitle { font: { size: 2.5rem; weight: $font-weight-normal; } }
+	&--paragraph { font: { size: $font-size; weight: $font-weight-light; } }
+	&--subtext { font: { size: 1.2rem; weight: $font-weight-light; } }
 }
 
 // CODE FORMATTING
-pre {
-	display: block;
-	margin: 0;
-	padding: 0;
-
-	> code { font-family: monospace; }
-}
-code { font: { family: monospace; size: 0.875rem; } }
+code { font: { family: monospace; size: 1.2rem; } }

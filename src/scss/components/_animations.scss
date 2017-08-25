@@ -1,8 +1,8 @@
 /* ===================================================*/
 /* ANIMATIONS
 /* ===================================================*/
-@import "../base/_variables";
-@import "../base/_mixins";
+@import "../config/_variables";
+@import "../config/_mixins";
 
 // ANIMATIONS
 .animate {
@@ -29,8 +29,7 @@
 // LOOPABLE
 @keyframes pulse {
     0%, 100% { @include scale-uniform(1.0); }
-    10% { @include scale-uniform(0.9); }
-    70% { @include scale-uniform(1.1); }
+    50% { @include scale-uniform(1.1); }
 }
 
 @keyframes load {

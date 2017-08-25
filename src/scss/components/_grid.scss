@@ -1,8 +1,8 @@
 /* ===================================================*/
 /* GRID
 /* ===================================================*/
-@import "../base/_variables";
-@import "../base/_mixins";
+@import "../config/_variables";
+@import "../config/_mixins";
 
 // MIXINS
 @mixin rowCol {
@@ -74,26 +74,24 @@
 
 [class*="#{$grid-name}-"], .#{$grid-name} {
 	@include maxColWidth(100);
-    min-height: 0.0625em;
-	// margin: 0.25em $grid-gutter;
-	margin: 0.25em 0;
+    min-height: 0.1em;
+	margin: ($grid-gutter / 2) 0;
     padding: $grid-padding;
 	@include flexSize(1);
 }
 
 @media only screen and (min-width: $bp-medium) {
-	[class*="#{$grid-name}-"] {
-		// margin: { top: 0.25em; bottom: 0.25em; }
-		margin: 0.25em $grid-gutter;
-		
+	.#{$grid-name} {
+		margin: ($grid-gutter / 2) $grid-gutter;
+
 		&:first-child { margin-left: 0; }
 		&:last-child { margin-right: 0; }
 		&:only-child, &:first-child:last-child { margin: { left: 0; right: 0; }; }
 	}
-	
-	.#{$grid-name} {
-		margin: 0.25em $grid-gutter;
 
+	[class*="#{$grid-name}-"] {
+		margin: ($grid-gutter / 2) $grid-gutter;
+		
 		&:first-child { margin-left: 0; }
 		&:last-child { margin-right: 0; }
 		&:only-child, &:first-child:last-child { margin: { left: 0; right: 0; }; }

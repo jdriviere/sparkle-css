@@ -3,7 +3,7 @@
 // =======================================
 // GENERAL MIXINS
 // =======================================
-@mixin border-radius($radius: 0.3125em) {
+@mixin border-radius($radius: 0.5em) {
     border-radius: $radius;
 } // End of Border-Radius
 
@@ -127,20 +127,20 @@
 
 
 // ELEMENTS MIXINS
-@mixin inputs {
-    input[type='text'],
-    input[type='email'],
-    input[type='number'],
-    input[type='password'],
-    input[type='search'],
-    input[type='tel'],
-    input[type='text'],
-    input[type='url'],
-    textarea,
-    select {
-        @content;
-    }
-} // End of Inputs
+// @mixin inputs {
+//     input[type='text'],
+//     input[type='email'],
+//     input[type='number'],
+//     input[type='password'],
+//     input[type='search'],
+//     input[type='tel'],
+//     input[type='text'],
+//     input[type='url'],
+//     textarea,
+//     select {
+//         @content;
+//     }
+// } // End of Inputs
 
 @mixin hamburger($size: 2rem, $color: #DFDFDF) {
     position: relative;
@@ -173,12 +173,14 @@
             
             &:nth-child(1) {
                 margin: { top: -0.125em; left: -0.75rem; }
-                transform: rotate(45deg);
+                @include rotate-uniform(45deg);
+                // transform: rotate(45deg);
             }
             &:nth-child(2) { width: 0; opacity: 0; }
             &:nth-child(3) {
                 margin: { top: -0.125em; left: -0.75rem; }
-                transform: rotate(-45deg);
+                @include rotate-uniform(-45deg);
+                // transform: rotate(-45deg);
             }
         }
     }

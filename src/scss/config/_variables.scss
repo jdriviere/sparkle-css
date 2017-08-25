@@ -171,23 +171,37 @@ $color-grey-75:				#C0C0C0;
 $color-grey-100:			#FCFCFC;
 
 // =================================
-// COLORS - DARKEN/LIGHTEN
+// COLORS - DARKEN/LIGHTEN SETUP
 // =================================
 $lighten:					7.5% !default;
 $darken:					7.5% !default;
 
 // =================================
-// GENERAL - SCREEN BREAKPOINTS
+// SCREEN SIZE VARIABLES
 // =================================
-$bp-xsmall:					20rem;
-$bp-small:					30rem;
-$bp-medium:					40rem;
-$bp-large:					48rem;
-$bp-xlarge:                 60rem;
-$bp-fullhd:					75rem;
+$bp-xsmall:					320px; // Cellphone - 320px
+$bp-small:					480px; // Cellphone - 480px
+$bp-medium:					640px; // Tablet - 640px
+$bp-large:					768px; // Tablet - 768px
+$bp-xlarge:                 960px; // Desktop - 960px
+$bp-fullhd:					1200px; // Desktop - 1200px
 
 // =================================
-// GENERAL - PRIORITIES
+// FONTS VARIABLES
+// =================================
+$font-family-default:		"Lato", sans-serif;
+$font-family-secondary:		"Helvetica Neue", Helvetica, "Open Sans", Arial, sans-serif;
+$font-size:					1.5rem !default; // Changes base rem size to 15px
+$font-color:                $color-grey-25 !default;
+$font-color-link:           map-get($theme-maps, primary) !default;
+$font-color-link-hover:     map-get($theme-maps, secondary) !default;
+$font-weight-light:			300 !default;
+$font-weight-normal:		400 !default;
+$font-weight-heavy:			700 !default;
+$font-weight-black:			800 !default;
+
+// =================================
+// INDEX VARIABLES
 // =================================
 $index-lowest:				-9999;
 $index-lower: 				-10;
@@ -200,27 +214,26 @@ $index-higher:				10;
 $index-highest:				9999;
 
 // =================================
-// GENERAL - FONTS
-// =================================
-$font-family-default:		"Lato", sans-serif;
-$font-family-secondary:		"Helvetica Neue", Helvetica, "Open Sans", Arial, sans-serif;
-$font-special:				"FontAwesome";
-$font-size:					1rem !default;
-$font-color:                $color-grey-25 !default;
-$font-color-link:           map-get($theme-maps, primary);
-$font-color-link-hover:     map-get($theme-maps, secondary);
-$font-weight-light:			300 !default;
-$font-weight-normal:		400 !default;
-$font-weight-heavy:			700 !default;
-$font-weight-black:			800 !default;
-
-// =================================
 // GRID VARIABLES
 // =================================
-$grid-name:					"col" !default; // Default name of grid columns.
-$grid-columns:				12 !default; // Default columns is 12.
-$grid-gutter:				0.875em !default; // Default gutter is 15px.
-$grid-padding:              0.75em !default; // Default padding is 12px.
+$grid-name:					"col" !default; // Default name of grid columns
+$grid-columns:				12 !default; // Default columns is 12
+$grid-gutter:				1.5rem !default; // Default gutter is 15px
+$grid-padding:              1.5rem !default; // Default padding is 15px
+
+// =================================
+// ALERTS VARIABLES
+// =================================
+$alert-color-maps: (
+    default:                ($grey_base, $black_base),
+    success:                ($green_base, $white_base),
+    warning:                ($yellow_base, $black_base),
+    danger:                 ($red_base, $white_base),
+    info:                   ($blue_base, $white_base)
+) !default;
+$alert-font-size:			$font-size !default; // Default font size is 15px
+$alert-margin:              1.5rem !default; // Default margin is 15px
+$alert-padding:             1.5rem !default; // Default padding is 15px
 
 // =================================
 // BUTTON VARIABLES
@@ -234,15 +247,16 @@ $btn-color-maps: (
     light:					($white_base, $black_base),
 	dark:					($black_base, $white_base),
 ) !default;
+$btn-font-size:             $font-size;
+$btn-letter-space:          0.2rem !default; // Default letter-spacing is 2px
+$btn-padding-vertical:      1.0rem !default; // Default top/bottom padding is 10px
+$btn-padding-horizontal:    1.5rem !default; // Default left/right padding is 15px
+$btn-border-radius:         0.3em !default; // Default border-radius is 3px, but varies based on parent font-size
 
 // =================================
-// ALERTS VARIABLES
+// CARD VARIABLES
 // =================================
-$alert-color-maps: (
-    default:                ($grey_l4, $grey_d2),
-    success:                ($green_l4, $green_d2),
-    warning:                ($yellow_l4, $yellow_d2),
-    danger:                 ($red_l4, $red_d2),
-    info:                   ($blue_l4, $blue_d2)
-) !default;
-$alert-font-size:			0.875rem !default;
+$card-padding:              1.0rem !default;
+$card-border-color:         $grey_base !default;
+$card-font-size:            $font-size !default;
+$card-font-color:           $color-grey-50 !default;

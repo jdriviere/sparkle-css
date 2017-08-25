@@ -1,8 +1,8 @@
 /* ===================================================*/
 /* MODALS
 /* ===================================================*/
-@import "../base/_variables";
-@import "../base/_mixins";
+@import "../config/_variables";
+@import "../config/_mixins";
 
 // MIXINS
 @mixin coverAll {
@@ -13,7 +13,7 @@
     width: 100%;
     height: 100%;
     opacity: 0;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba($black_base, 0.8);
     overflow-y: auto;
     z-index: $index-highest;
 } // End of CoverAll

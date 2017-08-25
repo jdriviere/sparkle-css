@@ -1,18 +1,17 @@
 /* ===================================================*/
 /* ALERTS
 /* ===================================================*/
-@import "../base/_variables";
-@import "../base/_mixins";
+@import "../config/_variables";
+@import "../config/_mixins";
 
 @mixin alert {
     display: block;
     width: 100%;
-    margin: 1em 0;
-    padding: 0.75em;
+    margin: $alert-margin 0;
+    padding: $alert-padding;
     font-size: $alert-font-size;
     @include box-shadow(5, 5, 7, 0.7);
     @include border-radius-cust(0, 5, 5, 0);
-    z-index: $index-high;
 } // End of Alert
 
 .alert {
@@ -23,19 +22,13 @@
     @each $type, $color in $alert-color-maps {
         $bgcolor: nth($color, 1);
         $fontcolor: nth($color, 2);
-        $bordercolor: $fontcolor;
         
         // STYLES
-        &--#{$type} {
-            background-color: $bgcolor;
-            color: $fontcolor !important;
-            border: 1px solid $bordercolor;
-            border-left: 5px solid $bordercolor;
-        }
+        &--#{$type} { background-color: $bgcolor; color: $fontcolor !important; }
     } // End of EACH-LOOP
 
     // COMPONENTS
-    &__title { font: { size: 1.125rem !important; weight: $font-weight-heavy; } }
-    &__desc { margin: { top: 0.5rem; bottom: 0.5rem; } }
-    &__list { margin-left: 1rem; }
+    &__title { font: { size: 2.0rem !important; weight: $font-weight-heavy; } }
+    &__desc { margin: $alert-margin 0; font-weight: $font-weight-normal; }
+    &__list { margin-left: ($alert-margin * 2); font-weight: $font-weight-light; }
 }

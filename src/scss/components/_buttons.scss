@@ -1,8 +1,8 @@
 /* ===================================================*/
 /* BUTTONS
 /* ===================================================*/
-@import "../base/_variables";
-@import "../base/_mixins";
+@import "../config/_variables";
+@import "../config/_mixins";
 
 // MIXINS
 @mixin button {
@@ -10,14 +10,13 @@
     @include remove-appearance;
     outline: none;
     background: none;
-    padding: 0.5rem 0.75rem;    
+    padding: $btn-padding-vertical $btn-padding-horizontal;    
     text-align: center;
     vertical-align: center;
     text-decoration: none;
-    font: { size: 1rem; weight: $font-weight-normal; };
+    font: { size: $btn-font-size; weight: $font-weight-normal; };
     color: $black_base;
-    letter-spacing: 0.125rem;
-    border-radius: 0.25rem;
+    border-radius: $btn-border-radius;
     border: 1px solid $black_l2;
     cursor: pointer;
 
@@ -86,22 +85,22 @@
     } // End of EACH-LOOP
 
     // SIZES
-    &--xsmall { font-size: 0.625rem; }
-    &--small { font-size: 0.875rem; }
-    &--medium { font-size: 1rem; }
-    &--large { font-size: 1.25rem; }
-    &--xlarge { font-size: 1.5rem; }
+    &--xsmall { font-size: ($font-size * 0.66666); }
+    &--small { font-size: ($font-size * 0.8 ); }
+    &--medium { font-size: $font-size; }
+    &--large { font-size: ($font-size * 1.33333); }
+    &--xlarge { font-size: ($font-size * 1.6); }
     &--block {
         display: block;
         width: 100%;
-        padding: 0.5rem 0;
-        font-size: 1.25em;
-        letter-spacing: 0.25rem;
+        padding: 1.0rem 0;
+        font-size: 2.0rem;
+        letter-spacing: $btn-letter-space;
     }
 
     // STYLES
-    &--h-round { @include border-radius(10px); }
-    &--f-round { @include border-radius(35px); }
+    &--h-round { @include border-radius(($btn-border-radius * 2)); }
+    &--f-round { @include border-radius(3.5rem); }
 }
 
 .btn__group {
