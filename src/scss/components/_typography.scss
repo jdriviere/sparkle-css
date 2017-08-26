@@ -18,8 +18,6 @@ a {
 	font: { size: $font-size; weight: $font-weight-normal; };
 	color: $font-color-link;
 	text-decoration: none;
-
-	&:hover { color: $font-color-link-hover; }
 }
 
 .text {

@@ -96,10 +96,6 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  color: #9BC2E6;
-}
-
 .text--thin {
   font-weight: 300;
 }
