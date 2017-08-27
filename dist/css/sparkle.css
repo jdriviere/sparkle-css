@@ -642,15 +642,17 @@ code {
   appearance: none;
   outline: none;
   background: none;
-  padding: 1rem 1.5rem;
-  text-align: center;
+  margin-bottom: 1.0rem;
+  padding: 0.5rem 1.5rem;
+  line-height: 1.5;
   vertical-align: center;
+  text-align: center;
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: 400;
   color: #111516;
-  border-radius: 0.3em;
   border: 1px solid #676A6E;
+  border-radius: 0.3em;
   cursor: pointer;
 }
 
@@ -1328,7 +1330,9 @@ code {
   visibility: hidden;
   position: fixed;
   top: 0;
+  bottom: 0;
   left: 0;
+  right: 0;
   width: 100%;
   height: 100%;
   opacity: 0;
@@ -1339,7 +1343,7 @@ code {
 
 .modal__body {
   position: relative;
-  width: 90%;
+  width: 96%;
   margin: 5rem auto;
   padding: 0.75rem;
   background-color: #FEFEFE;
@@ -1369,9 +1373,9 @@ code {
 }
 
 .modal__content {
+  line-height: 1.5;
+  font-size: 1.5rem;
   font-weight: 300;
-  font-size: 0.875em;
-  line-height: 1.5rem;
   color: #7F7F7F;
 }
 
@@ -1379,9 +1383,9 @@ code {
   position: absolute;
   display: block;
   top: 0.25rem;
-  right: 0.75rem;
+  right: 1.0rem;
   color: #C0C0C0;
-  font-size: 1.5rem;
+  font-size: 2.0rem;
   cursor: pointer;
   opacity: 0.5;
   -webkit-transition: all 0.3s ease-in;
@@ -1448,12 +1452,12 @@ code {
   color: #9BC2E6;
   font-size: 1.5rem;
   font-weight: 700;
-  letter-spacing: 0.125rem;
+  letter-spacing: 0.1rem;
   cursor: pointer;
 }
 
 .nav__brand img, .nav__brand__img {
-  max-height: 2rem;
+  max-height: 3.2rem;
 }
 
 .nav__menu {
@@ -1467,10 +1471,10 @@ code {
 
 .nav__menu__item a {
   color: #111516;
-  font-size: 0.875rem;
+  font-size: 1.5rem;
   font-weight: 400;
   text-decoration: none;
-  letter-spacing: 0.125rem;
+  letter-spacing: 0.1rem;
 }
 
 .nav__menu__item:hover {
@@ -1483,15 +1487,15 @@ code {
 
 .nav__mobile {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 1.0rem;
+  right: 1.0rem;
 }
 
 .nav__mobile .nav__mobile__icon {
   position: relative;
   display: block;
-  width: 2rem;
-  height: 2rem;
+  width: 3rem;
+  height: 3rem;
   background-color: transparent;
   cursor: pointer;
 }
@@ -1499,8 +1503,8 @@ code {
 .nav__mobile .nav__mobile__icon span {
   position: absolute;
   display: block;
-  width: 1.5rem;
-  height: 0.25rem;
+  width: 2.0rem;
+  height: 0.3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -1509,7 +1513,7 @@ code {
 }
 
 .nav__mobile .nav__mobile__icon span:nth-child(1) {
-  margin-top: -0.625em;
+  margin-top: -0.5em;
 }
 
 .nav__mobile .nav__mobile__icon span:nth-child(2) {
@@ -1517,7 +1521,7 @@ code {
 }
 
 .nav__mobile .nav__mobile__icon span:nth-child(3) {
-  margin-top: 0.625em;
+  margin-top: 0.5em;
 }
 
 .nav__mobile .nav__mobile__icon--active span {
@@ -1525,8 +1529,8 @@ code {
 }
 
 .nav__mobile .nav__mobile__icon--active span:nth-child(1) {
-  margin-top: -0.125em;
-  margin-left: -0.75rem;
+  margin-top: -0.2em;
+  margin-left: -1.2rem;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -1539,8 +1543,8 @@ code {
 }
 
 .nav__mobile .nav__mobile__icon--active span:nth-child(3) {
-  margin-top: -0.125em;
-  margin-left: -0.75rem;
+  margin-top: -0.2em;
+  margin-left: -1.2rem;
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);

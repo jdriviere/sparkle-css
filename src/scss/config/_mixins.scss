@@ -142,7 +142,7 @@
 //     }
 // } // End of Inputs
 
-@mixin hamburger($size: 2rem, $color: #DFDFDF) {
+@mixin hamburger($size: 3.0rem, $color: #DFDFDF) {
     position: relative;
     display: block;
     width: $size;
@@ -153,17 +153,17 @@
     span {
         position: absolute;
         display: block;
-        width: 1.5rem;
-        height: 0.25rem; // 4px
+        width: 2.0rem;
+        height: 0.3rem;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         background-color: $color;
         transition: all 0.3s ease-in-out;
         
-        &:nth-child(1) { margin-top: -0.625em; }
+        &:nth-child(1) { margin-top: -0.5em; }
         &:nth-child(2) { margin-top: 0; }
-        &:nth-child(3) { margin-top: 0.625em; }
+        &:nth-child(3) { margin-top: 0.5em; }
     }
     
     // STATES
@@ -172,13 +172,13 @@
             background-color: map-get($theme-maps, primary);
             
             &:nth-child(1) {
-                margin: { top: -0.125em; left: -0.75rem; }
+                margin: { top: -0.2em; left: -1.2rem; }
                 @include rotate-uniform(45deg);
                 // transform: rotate(45deg);
             }
             &:nth-child(2) { width: 0; opacity: 0; }
             &:nth-child(3) {
-                margin: { top: -0.125em; left: -0.75rem; }
+                margin: { top: -0.2em; left: -1.2rem; }
                 @include rotate-uniform(-45deg);
                 // transform: rotate(-45deg);
             }

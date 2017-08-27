@@ -5,19 +5,20 @@
 @import "../config/_mixins";
 
 // MIXINS
-@mixin button {
+@mixin create-button {
     display: inline-block;
     @include remove-appearance;
     outline: none;
     background: none;
-    padding: $btn-padding-vertical $btn-padding-horizontal;    
-    text-align: center;
+    margin-bottom: 1.0rem;
+    padding: $btn-padding-vertical $btn-padding-horizontal;
+    line-height: 1.5;
     vertical-align: center;
-    text-decoration: none;
+    text: { align: center; decoration: none; }
     font: { size: $btn-font-size; weight: $font-weight-normal; };
     color: $black_base;
-    border-radius: $btn-border-radius;
     border: 1px solid $black_l2;
+    border-radius: $btn-border-radius;
     cursor: pointer;
 
     &:hover { border-color: $black_base; }
@@ -26,12 +27,12 @@
     	@include disable-select;
     	opacity: 0.3;
     }
-} // End of Button
+} // End of Create-Button
 
 // BUTTON
 .btn {
     // Create the button
-    @include button;
+    @include create-button;
     
     // Stylize all buttons according to proper color-map
     @each $type, $color in $btn-color-maps {

@@ -249,7 +249,7 @@ $btn-color-maps: (
 ) !default;
 $btn-font-size:             $font-size !default; // Default font-size is HTML default font-size
 $btn-letter-space:          0.2rem !default; // Default letter-spacing is 2px
-$btn-padding-vertical:      1.0rem !default; // Default top/bottom padding is 10px
+$btn-padding-vertical:      0.5rem !default; // Default top/bottom padding is 5px
 $btn-padding-horizontal:    1.5rem !default; // Default left/right padding is 15px
 $btn-border-radius:         0.3em !default; // Default border-radius is 3px, but varies based on parent font-size
 

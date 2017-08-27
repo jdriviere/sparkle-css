@@ -57,11 +57,11 @@
         font-size: 1.5rem;
         font-weight: $font-weight-heavy;
         // text-transform: uppercase;
-        letter-spacing: 0.125rem;
+        letter-spacing: 0.1rem;
 		cursor: pointer;
 		
 		& img,
-		&__img { max-height: 2rem; }
+		&__img { max-height: 3.2rem; }
     }
     
     &__menu {
@@ -74,11 +74,10 @@
 			a {
 				
 				color: map-get($theme-maps, dark);
-				font-size: 0.875rem;
+				font-size: $font-size;
 				font-weight: $font-weight-normal;
-				// text-transform: uppercase;
 				text-decoration: none;
-				letter-spacing: 0.125rem;
+				letter-spacing: 0.1rem;
 			}
 
 			// STATES
@@ -92,7 +91,7 @@
     
     // Hamburger Icon
     &__mobile {
-        position: absolute; top: 1rem; right: 1rem;
+        position: absolute; top: 1.0rem; right: 1.0rem;
         
         .nav__mobile__icon { @include hamburger; }
     }
