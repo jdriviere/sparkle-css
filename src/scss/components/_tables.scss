@@ -12,16 +12,16 @@
     
     // COMPONENTS
     caption {
-        font: { size: 1.25rem; weight: 700; }
+        font: { size: 2.0rem; weight: $font-weight-heavy; }
         text-transform: uppercase;
-        letter-spacing: 0.125rem;
+        letter-spacing: 0.2rem;
     }
     thead { display: none; }
     
     tbody, tr, td { display: block; }
     
     tr {
-        margin: { top: 0; bottom: 0.5rem; };
+        margin: { top: 0; bottom: 1.0rem; };
 		padding: 0.5rem 0;
 		// background-color: map-get($theme-maps, light);
         border: 1px solid map-get($theme-maps, default);
@@ -32,8 +32,8 @@
     
     td {
         position: relative;
-        padding: 0.5rem;
-        font-size: 0.875rem;
+        padding: 1.0rem;
+        font-size: $font-size;
         text-align: right;
         white-space: normal;
         border-bottom: 1px dotted map-get($theme-maps, default);
@@ -44,24 +44,24 @@
             position: absolute;
             left: 0.5rem;
             content: attr(data-label);
-            font: { size: 1rem; weight: 700; }
+            font: { size: $font-size; weight: $font-weight-heavy; }
             text-transform: uppercase;
-            letter-spacing: 0.125rem;
+            letter-spacing: 0.2rem;
             white-space: nowrap;
         }
     }
     
     // MEDIA QUERY
-    @media only screen and (min-width: 48rem) {
+    @media only screen and (min-width: $bp-medium) {
         display: table;
         
         // COMPONENTS
         thead {
             display: table-header-group;
-            font: { size: 1rem; weight: 700; }
+            font: { size: $font-size; weight: $font-weight-heavy; }
             text-align: left;
             text-transform: uppercase;
-            letter-spacing: 0.125rem;
+            letter-spacing: 0.2rem;
             border-bottom: 2px solid $color-grey-50;
         }
         
@@ -69,11 +69,11 @@
         
         tr { display: table-row; border: none; }
         
-        th { padding: 1rem 0.5rem; }
+        th { padding: 1.5rem 1.0rem; }
         
         td {
             display: table-cell;
-            padding: 1rem 0.5rem;
+            padding: 1.5rem 1.0rem;
 			text-align: left;
 			border: none;
             

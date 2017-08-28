@@ -891,10 +891,10 @@ code {
 }
 
 .table caption {
-  font-size: 1.25rem;
+  font-size: 2.0rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.125rem;
+  letter-spacing: 0.2rem;
 }
 
 .table thead {
@@ -907,7 +907,7 @@ code {
 
 .table tr {
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.0rem;
   padding: 0.5rem 0;
   border: 1px solid #E2E2E2;
   border-bottom: 3px solid #E2E2E2;
@@ -919,8 +919,8 @@ code {
 
 .table td {
   position: relative;
-  padding: 0.5rem;
-  font-size: 0.875rem;
+  padding: 1.0rem;
+  font-size: 1.5rem;
   text-align: right;
   white-space: normal;
   border-bottom: 1px dotted #E2E2E2;
@@ -939,24 +939,24 @@ code {
   position: absolute;
   left: 0.5rem;
   content: attr(data-label);
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.125rem;
+  letter-spacing: 0.2rem;
   white-space: nowrap;
 }
 
-@media only screen and (min-width: 48rem) {
+@media only screen and (min-width: 640px) {
   .table {
     display: table;
   }
   .table thead {
     display: table-header-group;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 700;
     text-align: left;
     text-transform: uppercase;
-    letter-spacing: 0.125rem;
+    letter-spacing: 0.2rem;
     border-bottom: 2px solid #7F7F7F;
   }
   .table tbody {
@@ -967,11 +967,11 @@ code {
     border: none;
   }
   .table th {
-    padding: 1rem 0.5rem;
+    padding: 1.5rem 1.0rem;
   }
   .table td {
     display: table-cell;
-    padding: 1rem 0.5rem;
+    padding: 1.5rem 1.0rem;
     text-align: left;
     border: none;
   }
