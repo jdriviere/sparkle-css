@@ -20,23 +20,23 @@ Thank you for using Sparkle! Happy Designing!
 
 /* ========== SPARKLE.CSS STARTS HERE ========== */
 // Core
-@import "components/_base";
-
-// Utilities
+@import "components/_core";
 @import "components/_typography";
-@import "components/_utilities";
-@import "components/_animations";
 
 // Components
-@import "components/_alerts";
-@import "components/_buttons";
-@import "components/_cards";
-@import "components/_forms";
+@import "components/_animations";
 @import "components/_grid";
-@import "components/_modals";
+@import "components/_inputs";
 @import "components/_navigation";
 @import "components/_tables";
 
 // Elements
+@import "components/_alerts";
+@import "components/_buttons";
+@import "components/_cards";
+@import "components/_modals";
+
+// Utilities
+@import "components/_utilities";
 
 /* ========== SPARKLE.CSS ENDS HERE ========== */

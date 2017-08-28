@@ -177,6 +177,11 @@ $lighten:					7.5% !default;
 $darken:					7.5% !default;
 
 // =================================
+// GLOBAL VARIABLES
+// =================================
+$line-height:               1.5 !default; // Default line-height
+
+// =================================
 // SCREEN SIZE VARIABLES
 // =================================
 $bp-xsmall:					320px; // Cellphone - 320px
@@ -260,3 +265,13 @@ $card-padding:              1.0rem !default;
 $card-border-color:         $grey_base !default;
 $card-font-size:            $font-size !default;
 $card-font-color:           $color-grey-50 !default;
+
+// =================================
+// INPUT VARIABLES
+// =================================
+$input-width:               100% !default;
+$input-height:              4.0rem !default; // Default height is 40px
+$input-padding:             1.0rem !default;
+$input-font-size:           $font-size !default; // Default font-size is 15px
+$input-font-color:          $font-color;
+$input-border-color:        map-get($theme-maps, default);

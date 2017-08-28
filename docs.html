@@ -575,33 +575,29 @@
                         <div class="section__block">
                             <h5 class="section__title">Input</h5>
                             <p class="section__desc">
-                                Sparkle offers the possibility to stylize forms. Just add
-                                <span class="snippet"><code>form</code></span>
-                                class to a &lt;div&gt;'s class list. To stylize the inputs, simply add
-                                <span class="snippet"><code>form__input</code></span>
-                                to an &lt;input&gt; class list, and add
-                                <span class="snippet"><code>form__label</code></span>
+                                Sparkle offers the possibility to stylize inputs. Just add
+                                <span class="snippet"><code>input</code></span> to the class list of
+                                the &lt;input&gt; you wish to stylize. You can also add
+                                <span class="snippet"><code>input__label</code></span>
                                 to the &lt;label&gt; tag, if you wish to add one.
                             </p>
 
-                            <div class="form">
-                                <div class="row">
-                                    <div class="col-1-of-2">
-                                        <label for="input1" class="form__label">First:</label>
-                                        <input type="text" class="form__input" id="input1" placeholder="First">
-                                    </div>
-                                            
-                                    <div class="col-1-of-2">
-                                        <label for="input2" class="form__label">Second:</label>
-                                        <input type="text" class="form__input" id="input2" placeholder="Second">
-                                    </div>
+                            <div class="row">
+                                <div class="col-1-of-2">
+                                    <label for="input1" class="input__label">First:</label>
+                                    <input type="text" class="input" id="input1" placeholder="First">
                                 </div>
-                                
-                                <div class="row">
-                                    <div class="col">
-                                        <label for="input3" class="form__label">Third:</label>
-                                        <input type="text" class="form__input" id="input3" placeholder="Third">
-                                    </div>
+                                        
+                                <div class="col-1-of-2">
+                                    <label for="input2" class="input__label">Second:</label>
+                                    <input type="text" class="input" id="input2" placeholder="Second">
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col">
+                                    <label for="input3" class="input__label">Third:</label>
+                                    <input type="text" class="input" id="input3" placeholder="Third">
                                 </div>
                             </div>
                         </div>
@@ -611,16 +607,8 @@
                         <h6>Code:</h6>
                         <div class="alert alert--info">
                             <code>
-                                &lt;div class="form"&gt;<br>
-                                    &lt;div class="row"&gt;<br>
-                                        &lt;div class="col"&gt;<br>
-                                            &lt;label for="input" class="form__label"&gt;Input:&lt;/label&gt;<br>
-                                            &lt;input type="text" class="form__input" id="input" placeholder="Valid input"&gt;<br>
-                                            ...<br>
-                                        &lt;/div&gt;<br>
-                                        // Body of code<br>
-                                    &lt;/div&gt;<br>
-                                &lt;/div&gt;
+                                &lt;label for="input" class="input__label"&gt;Input:&lt;/label&gt;<br>
+                                &lt;input type="text" class="input" id="input" placeholder="Valid input"&gt;
                             </code>
                         </div>
                     </div>
@@ -631,16 +619,13 @@
                         <div class="section__block">
                             <h5 class="section__title">Text Area</h5>
                             <p class="section__desc">
-                                Inside a &lt;div&gt; with a <span class="snippet"><code>form</code></span>,
-                                simply add a &lt;textarea&gt; with a class
-                                <span class="snippet"><code>form__textarea</code></span>.
+                                Add a <span class="snippet"><code>input__textarea</code></span> class to the
+                                &lt;textarea&gt; you wish to stylize.
                             </p>
 
-                            <div class="form">
-                                <div class="row">
-                                    <div class="col">
-                                        <textarea class="form__textarea" placeholder="Type text here"></textarea>
-                                    </div>
+                            <div class="row">
+                                <div class="col">
+                                    <textarea class="input__textarea" placeholder="Type text here"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -650,13 +635,7 @@
                         <h6>Code:</h6>
                         <div class="alert alert--info">
                             <code>
-                                &lt;div class="form"&gt;<br>
-                                    &lt;div class="row"&gt;<br>
-                                        &lt;div class="col"&gt;<br>
-                                            &lt;textarea class="form__textarea" placeholder="Type text here"&gt;&lt;/textarea&gt;<br>
-                                        &lt;/div&gt;<br>
-                                    &lt;/div&gt;<br>
-                                &lt;/div&gt;
+                                &lt;textarea class="input__textarea" placeholder="Type text here"&gt;&lt;/textarea&gt;
                             </code>
                         </div>
                     </div>
@@ -667,21 +646,18 @@
                             <div class="section__block">
                                 <h5 class="section__title">Selection</h5>
                                 <p class="section__desc">
-                                    Inside a &lt;div&gt; with a <span class="snippet"><code>form</code></span> class,
-                                    simply add a &lt;select&gt; tag with a class
-                                    <span class="snippet"><code>form__select</code></span>.
+                                    Add a <span class="snippet"><code>input__select</code></span> class to the
+                                    &lt;select&gt; tag you wish to stylize.
                                 </p>
-    
-                                <div class="form">
-                                    <div class="row">
-                                        <div class="col">
-                                            <select class="form__select">
-                                                <option value="none" selected disabled>Choose an option...</option>
-                                                <option value="A">Choose A</option>
-                                                <option value="B">Choose B</option>
-                                                <option value="C">Choose C</option>
-                                            </select>
-                                        </div>
+
+                                <div class="row">
+                                    <div class="col">
+                                        <select class="input__select">
+                                            <option value="" selected disabled>Choose an option...</option>
+                                            <option value="A">Choose A</option>
+                                            <option value="B">Choose B</option>
+                                            <option value="C">Choose C</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
@@ -691,17 +667,11 @@
                             <h6>Code:</h6>
                             <div class="alert alert--info">
                                 <code>
-                                    &lt;div class="form"&gt;<br>
-                                        &lt;div class="row"&gt;<br>
-                                            &lt;div class="col"&gt;<br>
-                                                &lt;select class="form__select"&gt;<br>
-                                                    &lt;option value="valueA"&gt;Option 1&lt;/option&gt;<br>
-                                                    &lt;option value="valueB"&gt;Option 2&lt;/option&gt;<br>
-                                                    ...<br>
-                                                &lt;/select&gt;<br>
-                                            &lt;/div&gt;<br>
-                                        &lt;/div&gt;<br>
-                                    &lt;/div&gt;
+                                    &lt;select class="input__select"&gt;<br>
+                                        &lt;option value="valueA"&gt;Option 1&lt;/option&gt;<br>
+                                        &lt;option value="valueB"&gt;Option 2&lt;/option&gt;<br>
+                                        ...<br>
+                                    &lt;/select&gt;
                                 </code>
                             </div>
                         </div>
