@@ -28,7 +28,7 @@
             align-items: center;
             flex-direction: column;
             width: 100%;
-            height: 100vh;
+            height: calc(100vh - 3.5em);
             background: -webkit-linear-gradient(45deg, #9EC0D6 0%,#DFE5FF 100%);
             background: -moz-linear-gradient(45deg, #9EC0D6 0%, #DFE5FF 100%);
             background: linear-gradient(45deg, #9EC0D6 0%,#DFE5FF 100%);
@@ -37,10 +37,14 @@
         }
 
         .banner__title { color: #3498DB; }
-        .banner__subtitle { margin-bottom: 50px; font-weight: 300; }
+        .banner__subtitle {
+            margin-bottom: 5.0em;
+            font-size: 2.4rem;
+            font-weight: 300;
+        }
 
-        .btn-group {margin: 2em 0; text-align: left; }
-        .btn { margin: 0 0.675em 0.675em; }
+        .btn-group {margin: 2.0em 0; text-align: left; }
+        .btn:not(:last-child) { margin: 0 1.5rem 1.5rem; }
         .btn:first-child { margin-left: 0; }
 
         footer {
@@ -57,7 +61,8 @@
         @media only screen and (min-width: 30em) {
             .hero { height: calc(100vh - 3em); }
             .banner__title { letter-spacing: .5em; text-transform: uppercase; }
-            .btn-group > .btn { margin: 0 0.675em 0 0; }
+            .banner__subtitle { font-size: 3.0rem; }
+            .btn-group > .btn { margin: 0 1.5em 0 0; }
             footer { bottom: 3em; }
         }
     </style>
@@ -104,7 +109,7 @@
             <h3 class="banner__subtitle">A lightweight, open-source, mobile-first CSS framework for easy website designs.</h3>
 
             <div class="btn-group">
-                <a href="https://github.com/jdriviere/sparkle-css/archive/v1.6.1.zip" class="btn btn--light--outline btn--large">
+                <a href="https://github.com/jdriviere/sparkle-css/archive/v1.6.1.zip" class="btn btn--large">
                     <i class="fa fa-download"></i> Download
                 </a>
                 <a href="https://github.com/jdriviere/sparkle-css.git" class="btn btn--secondary btn--large">
