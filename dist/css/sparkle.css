@@ -1126,11 +1126,12 @@ code {
 .btn--primary {
   background-color: #ADD2E6;
   color: #F4F4F8 !important;
-  border: none;
+  border: 1px solid transparent;
 }
 
 .btn--primary:hover, .btn--primary:focus, .btn--primary:active {
   background-color: #90c2dd;
+  border-color: transparent;
 }
 
 .btn--primary--outline {
@@ -1160,11 +1161,12 @@ code {
 .btn--secondary {
   background-color: #9BC2E6;
   color: #F4F4F8 !important;
-  border: none;
+  border: 1px solid transparent;
 }
 
 .btn--secondary:hover, .btn--secondary:focus, .btn--secondary:active {
   background-color: #7cafde;
+  border-color: transparent;
 }
 
 .btn--secondary--outline {
@@ -1194,11 +1196,12 @@ code {
 .btn--success {
   background-color: #8AC926;
   color: #F4F4F8 !important;
-  border: none;
+  border: 1px solid transparent;
 }
 
 .btn--success:hover, .btn--success:focus, .btn--success:active {
   background-color: #74a920;
+  border-color: transparent;
 }
 
 .btn--success--outline {
@@ -1228,11 +1231,12 @@ code {
 .btn--warning {
   background-color: #FFCA3A;
   color: #111516 !important;
-  border: none;
+  border: 1px solid transparent;
 }
 
 .btn--warning:hover, .btn--warning:focus, .btn--warning:active {
   background-color: #ffc014;
+  border-color: transparent;
 }
 
 .btn--warning--outline {
@@ -1262,11 +1266,12 @@ code {
 .btn--danger {
   background-color: #FF595E;
   color: #F4F4F8 !important;
-  border: none;
+  border: 1px solid transparent;
 }
 
 .btn--danger:hover, .btn--danger:focus, .btn--danger:active {
   background-color: #ff3339;
+  border-color: transparent;
 }
 
 .btn--danger--outline {
@@ -1296,11 +1301,12 @@ code {
 .btn--light {
   background-color: #F4F4F8;
   color: #111516 !important;
-  border: none;
+  border: 1px solid transparent;
 }
 
 .btn--light:hover, .btn--light:focus, .btn--light:active {
   background-color: #dddde9;
+  border-color: transparent;
 }
 
 .btn--light--outline {
@@ -1330,11 +1336,12 @@ code {
 .btn--dark {
   background-color: #111516;
   color: #F4F4F8 !important;
-  border: none;
+  border: 1px solid transparent;
 }
 
 .btn--dark:hover, .btn--dark:focus, .btn--dark:active {
   background-color: black;
+  border-color: transparent;
 }
 
 .btn--dark--outline {

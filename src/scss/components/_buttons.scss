@@ -43,11 +43,14 @@
         &--#{$type} {
             background-color: $bgcolor;
             color: $fontcolor !important;
-            border: none;
+            border: 1px solid $color-none;
 
             &:hover,
             &:focus,
-            &:active { background-color: darken($bgcolor, $darken); }
+            &:active {
+                background-color: darken($bgcolor, $darken);
+                border-color: $color-none;
+            }
         }
 		
 		&--#{$type}--outline {
@@ -60,7 +63,7 @@
             &:active {
                 background-color: $bgcolor;
                 color: $fontcolor !important;
-                border-color: transparent;
+                border-color: $color-none;
             }
         }
         
@@ -80,7 +83,7 @@
             &:active {
                 background-color: $bgcolor;
                 color: $fontcolor !important;
-                border-color: transparent;
+                border-color: $color-none;
             }
 		}
     } // End of EACH-LOOP
