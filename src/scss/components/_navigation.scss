@@ -108,7 +108,7 @@
             @include navMenuNoFlex;
             justify-content: center;
             align-items: center;
-            border: { right: 1px solid #DEDEDF; }
+            border: { right: 1px solid $grey_base; }
         }
         
         &__menu {
