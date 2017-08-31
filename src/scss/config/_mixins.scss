@@ -3,12 +3,12 @@
 // =======================================
 // GENERAL MIXINS
 // =======================================
-@mixin border-radius($radius: 0.5em) {
+@mixin border-radius($radius: $border-radius) {
     border-radius: $radius;
 } // End of Border-Radius
 
 @mixin border-radius-cust($top: 0, $right: 0, $bottom: 0, $left: 0) {
-    border-radius: $top, $right, $bottom, $left;
+    border-radius: $top $right $bottom $left;
 } // End of Border-Radius-Custom
 
 @mixin box-shadow($x, $y, $blur, $alpha: 0.7) {

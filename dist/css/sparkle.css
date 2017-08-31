@@ -1042,7 +1042,7 @@ code {
   -moz-box-shadow: 5 5 7 rgba(0, 0, 0, 0.7);
   -ms-box-shadow: 5 5 7 rgba(0, 0, 0, 0.7);
   box-shadow: 5 5 7 rgba(0, 0, 0, 0.7);
-  border-radius: 0, 5, 5, 0;
+  border-radius: 0 5 5 0;
 }
 
 .alert--default {
@@ -1461,7 +1461,7 @@ code {
 .card {
   width: 100%;
   border: 1px solid #E2E2E2;
-  border-radius: 0.5em;
+  border-radius: 0.3rem;
   overflow: hidden;
 }
 
@@ -1551,7 +1551,7 @@ code {
   margin: 5rem auto;
   padding: 0.75rem;
   background-color: #FEFEFE;
-  border-radius: 0.5em;
+  border-radius: 0.3rem;
   border: 1px solid #C0C0C0;
   overflow-y: auto;
   -webkit-transform: translateY(-50px);
