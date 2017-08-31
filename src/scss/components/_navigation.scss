@@ -47,7 +47,6 @@
     padding: 0;
     background-color: map-get($theme-maps, light);
     z-index: $index-higher;
-    @include box-shadow(0, 1px, 7px, 0.3);
     
     // COMPONENTS
     &__brand {
