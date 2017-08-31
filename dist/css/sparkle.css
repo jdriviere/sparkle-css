@@ -1088,7 +1088,7 @@ code {
 /* ===================================================*/
 /* BUTTONS
 /* ===================================================*/
-.btn {
+.button {
   display: inline-block;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1096,7 +1096,7 @@ code {
   appearance: none;
   outline: none;
   background: none;
-  margin-bottom: 1.0rem;
+  margin-bottom: 1rem;
   padding: 0.5rem 1.5rem;
   line-height: 1.5;
   vertical-align: center;
@@ -1110,11 +1110,11 @@ code {
   cursor: pointer;
 }
 
-.btn:hover {
+.button:hover {
   border-color: #111516;
 }
 
-.btn:disabled, .btn.btn--disabled {
+.button:disabled, .button.button--disabled {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -1123,272 +1123,272 @@ code {
   opacity: 0.3;
 }
 
-.btn--primary {
+.button--primary {
   background-color: #ADD2E6;
   color: #F4F4F8 !important;
   border: 1px solid transparent;
 }
 
-.btn--primary:hover, .btn--primary:focus, .btn--primary:active {
+.button--primary:hover, .button--primary:focus, .button--primary:active {
   background-color: #90c2dd;
   border-color: transparent;
 }
 
-.btn--primary--outline {
+.button--primary--outline {
   background-color: transparent;
   color: #ADD2E6 !important;
   border: 1px solid #ADD2E6;
 }
 
-.btn--primary--outline:hover, .btn--primary--outline:focus, .btn--primary--outline:active {
+.button--primary--outline:hover, .button--primary--outline:focus, .button--primary--outline:active {
   background-color: #ADD2E6;
   color: #F4F4F8 !important;
   border-color: transparent;
 }
 
-.btn--primary--ghost {
+.button--primary--ghost {
   background-color: #F4F4F8;
   color: #ADD2E6 !important;
   border: 1px solid #E7E7E7;
 }
 
-.btn--primary--ghost:hover, .btn--primary--ghost:focus, .btn--primary--ghost:active {
+.button--primary--ghost:hover, .button--primary--ghost:focus, .button--primary--ghost:active {
   background-color: #ADD2E6;
   color: #F4F4F8 !important;
   border-color: transparent;
 }
 
-.btn--secondary {
+.button--secondary {
   background-color: #9BC2E6;
   color: #F4F4F8 !important;
   border: 1px solid transparent;
 }
 
-.btn--secondary:hover, .btn--secondary:focus, .btn--secondary:active {
+.button--secondary:hover, .button--secondary:focus, .button--secondary:active {
   background-color: #7cafde;
   border-color: transparent;
 }
 
-.btn--secondary--outline {
+.button--secondary--outline {
   background-color: transparent;
   color: #9BC2E6 !important;
   border: 1px solid #9BC2E6;
 }
 
-.btn--secondary--outline:hover, .btn--secondary--outline:focus, .btn--secondary--outline:active {
+.button--secondary--outline:hover, .button--secondary--outline:focus, .button--secondary--outline:active {
   background-color: #9BC2E6;
   color: #F4F4F8 !important;
   border-color: transparent;
 }
 
-.btn--secondary--ghost {
+.button--secondary--ghost {
   background-color: #F4F4F8;
   color: #9BC2E6 !important;
   border: 1px solid #E7E7E7;
 }
 
-.btn--secondary--ghost:hover, .btn--secondary--ghost:focus, .btn--secondary--ghost:active {
+.button--secondary--ghost:hover, .button--secondary--ghost:focus, .button--secondary--ghost:active {
   background-color: #9BC2E6;
   color: #F4F4F8 !important;
   border-color: transparent;
 }
 
-.btn--success {
+.button--success {
   background-color: #8AC926;
   color: #F4F4F8 !important;
   border: 1px solid transparent;
 }
 
-.btn--success:hover, .btn--success:focus, .btn--success:active {
+.button--success:hover, .button--success:focus, .button--success:active {
   background-color: #74a920;
   border-color: transparent;
 }
 
-.btn--success--outline {
+.button--success--outline {
   background-color: transparent;
   color: #8AC926 !important;
   border: 1px solid #8AC926;
 }
 
-.btn--success--outline:hover, .btn--success--outline:focus, .btn--success--outline:active {
+.button--success--outline:hover, .button--success--outline:focus, .button--success--outline:active {
   background-color: #8AC926;
   color: #F4F4F8 !important;
   border-color: transparent;
 }
 
-.btn--success--ghost {
+.button--success--ghost {
   background-color: #F4F4F8;
   color: #8AC926 !important;
   border: 1px solid #E7E7E7;
 }
 
-.btn--success--ghost:hover, .btn--success--ghost:focus, .btn--success--ghost:active {
+.button--success--ghost:hover, .button--success--ghost:focus, .button--success--ghost:active {
   background-color: #8AC926;
   color: #F4F4F8 !important;
   border-color: transparent;
 }
 
-.btn--warning {
+.button--warning {
   background-color: #FFCA3A;
   color: #111516 !important;
   border: 1px solid transparent;
 }
 
-.btn--warning:hover, .btn--warning:focus, .btn--warning:active {
+.button--warning:hover, .button--warning:focus, .button--warning:active {
   background-color: #ffc014;
   border-color: transparent;
 }
 
-.btn--warning--outline {
+.button--warning--outline {
   background-color: transparent;
   color: #FFCA3A !important;
   border: 1px solid #FFCA3A;
 }
 
-.btn--warning--outline:hover, .btn--warning--outline:focus, .btn--warning--outline:active {
+.button--warning--outline:hover, .button--warning--outline:focus, .button--warning--outline:active {
   background-color: #FFCA3A;
   color: #111516 !important;
   border-color: transparent;
 }
 
-.btn--warning--ghost {
+.button--warning--ghost {
   background-color: #F4F4F8;
   color: #FFCA3A !important;
   border: 1px solid #E7E7E7;
 }
 
-.btn--warning--ghost:hover, .btn--warning--ghost:focus, .btn--warning--ghost:active {
+.button--warning--ghost:hover, .button--warning--ghost:focus, .button--warning--ghost:active {
   background-color: #FFCA3A;
   color: #111516 !important;
   border-color: transparent;
 }
 
-.btn--danger {
+.button--danger {
   background-color: #FF595E;
   color: #F4F4F8 !important;
   border: 1px solid transparent;
 }
 
-.btn--danger:hover, .btn--danger:focus, .btn--danger:active {
+.button--danger:hover, .button--danger:focus, .button--danger:active {
   background-color: #ff3339;
   border-color: transparent;
 }
 
-.btn--danger--outline {
+.button--danger--outline {
   background-color: transparent;
   color: #FF595E !important;
   border: 1px solid #FF595E;
 }
 
-.btn--danger--outline:hover, .btn--danger--outline:focus, .btn--danger--outline:active {
+.button--danger--outline:hover, .button--danger--outline:focus, .button--danger--outline:active {
   background-color: #FF595E;
   color: #F4F4F8 !important;
   border-color: transparent;
 }
 
-.btn--danger--ghost {
+.button--danger--ghost {
   background-color: #F4F4F8;
   color: #FF595E !important;
   border: 1px solid #E7E7E7;
 }
 
-.btn--danger--ghost:hover, .btn--danger--ghost:focus, .btn--danger--ghost:active {
+.button--danger--ghost:hover, .button--danger--ghost:focus, .button--danger--ghost:active {
   background-color: #FF595E;
   color: #F4F4F8 !important;
   border-color: transparent;
 }
 
-.btn--light {
+.button--light {
   background-color: #F4F4F8;
   color: #111516 !important;
   border: 1px solid transparent;
 }
 
-.btn--light:hover, .btn--light:focus, .btn--light:active {
+.button--light:hover, .button--light:focus, .button--light:active {
   background-color: #dddde9;
   border-color: transparent;
 }
 
-.btn--light--outline {
+.button--light--outline {
   background-color: transparent;
   color: #F4F4F8 !important;
   border: 1px solid #F4F4F8;
 }
 
-.btn--light--outline:hover, .btn--light--outline:focus, .btn--light--outline:active {
+.button--light--outline:hover, .button--light--outline:focus, .button--light--outline:active {
   background-color: #F4F4F8;
   color: #111516 !important;
   border-color: transparent;
 }
 
-.btn--light--ghost {
+.button--light--ghost {
   background-color: #F4F4F8;
   color: #C8C8CB !important;
   border: 1px solid #E7E7E7;
 }
 
-.btn--light--ghost:hover, .btn--light--ghost:focus, .btn--light--ghost:active {
+.button--light--ghost:hover, .button--light--ghost:focus, .button--light--ghost:active {
   background-color: #F4F4F8;
   color: #111516 !important;
   border-color: transparent;
 }
 
-.btn--dark {
+.button--dark {
   background-color: #111516;
   color: #F4F4F8 !important;
   border: 1px solid transparent;
 }
 
-.btn--dark:hover, .btn--dark:focus, .btn--dark:active {
+.button--dark:hover, .button--dark:focus, .button--dark:active {
   background-color: black;
   border-color: transparent;
 }
 
-.btn--dark--outline {
+.button--dark--outline {
   background-color: transparent;
   color: #111516 !important;
   border: 1px solid #111516;
 }
 
-.btn--dark--outline:hover, .btn--dark--outline:focus, .btn--dark--outline:active {
+.button--dark--outline:hover, .button--dark--outline:focus, .button--dark--outline:active {
   background-color: #111516;
   color: #F4F4F8 !important;
   border-color: transparent;
 }
 
-.btn--dark--ghost {
+.button--dark--ghost {
   background-color: #F4F4F8;
   color: #111516 !important;
   border: 1px solid #E7E7E7;
 }
 
-.btn--dark--ghost:hover, .btn--dark--ghost:focus, .btn--dark--ghost:active {
+.button--dark--ghost:hover, .button--dark--ghost:focus, .button--dark--ghost:active {
   background-color: #111516;
   color: #F4F4F8 !important;
   border-color: transparent;
 }
 
-.btn--xsmall {
+.button--xsmall {
   font-size: 0.99999rem;
 }
 
-.btn--small {
+.button--small {
   font-size: 1.2rem;
 }
 
-.btn--medium {
+.button--medium {
   font-size: 1.5rem;
 }
 
-.btn--large {
+.button--large {
   font-size: 1.99999rem;
 }
 
-.btn--xlarge {
+.button--xlarge {
   font-size: 2.4rem;
 }
 
-.btn--block {
+.button--block {
   display: block;
   width: 100%;
   padding: 1.0rem 0;
@@ -1396,15 +1396,15 @@ code {
   letter-spacing: 0.2rem;
 }
 
-.btn--h-round {
+.button--h-round {
   border-radius: 0.6em;
 }
 
-.btn--f-round {
+.button--f-round {
   border-radius: 3.5rem;
 }
 
-.btn__group {
+.button__group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: -ms-flex;
@@ -1421,7 +1421,7 @@ code {
   border: 1px solid red;
 }
 
-.btn__group > .btn {
+.button__group > .button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: -ms-flex;
@@ -1435,21 +1435,21 @@ code {
 }
 
 @media only screen and (min-width: 640px) {
-  .btn__group > .btn {
+  .button__group > .button {
     -webkit-box-flex: 1 0 auto;
     -ms-flex: 1 0 auto;
     flex: 1 0 auto;
   }
 }
 
-.btn__group .btn:hover {
+.button__group .button:hover {
   -webkit-box-shadow: 0 0 0 transparent;
   -moz-box-shadow: 0 0 0 transparent;
   -ms-box-shadow: 0 0 0 transparent;
   box-shadow: 0 0 0 transparent;
 }
 
-.btn__group.btn__group--full {
+.button__group.button__group--full {
   -webkit-box-flex: 1 0 0;
   -ms-flex: 1 0 0;
   flex: 1 0 0;

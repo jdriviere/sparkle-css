@@ -241,24 +241,6 @@ $alert-margin:              1.5rem !default; // Default margin is 15px
 $alert-padding:             1.5rem !default; // Default padding is 15px
 
 // =================================
-// BUTTON VARIABLES
-// =================================
-$btn-color-maps: (
-    primary:				($lblue_base, $white_base),
-    secondary:				($btopaz_base, $white_base),
-    success:				($green_base, $white_base),
-    warning:				($yellow_base, $black_base),
-    danger:					($red_base, $white_base),
-    light:					($white_base, $black_base),
-	dark:					($black_base, $white_base),
-) !default;
-$btn-font-size:             $font-size !default; // Default font-size is HTML default font-size
-$btn-letter-space:          0.2rem !default; // Default letter-spacing is 2px
-$btn-padding-vertical:      0.5rem !default; // Default top/bottom padding is 5px
-$btn-padding-horizontal:    1.5rem !default; // Default left/right padding is 15px
-$btn-border-radius:         0.3em !default; // Default border-radius is 3px, but varies based on parent font-size
-
-// =================================
 // CARD VARIABLES
 // =================================
 $card-padding:              1.0rem !default;
