@@ -185,12 +185,12 @@ $line-height:               1.5 !default; // Default line-height
 // =================================
 // SCREEN SIZE VARIABLES
 // =================================
-$bp-xsmall:					320px; // Cellphone - 320px
-$bp-small:					480px; // Cellphone - 480px
-$bp-medium:					640px; // Tablet - 640px
-$bp-large:					768px; // Tablet - 768px
-$bp-xlarge:                 960px; // Desktop - 960px
-$bp-fullhd:					1200px; // Desktop - 1200px
+$bp-xsmall:					320px; // Cellphone - 320px <-- Container is ???px
+$bp-small:					480px; // Cellphone - 480px <-- Container is 460px
+$bp-medium:					640px; // Tablet - 640px <-- Container is ???px
+$bp-large:					768px; // Tablet - 768px <-- Container is 720px
+$bp-xlarge:                 960px; // Desktop - 960px <-- Container is ???px
+$bp-fullhd:					1200px; // Desktop - 1200px <-- Containeris 1170px
 
 // =================================
 // FONTS VARIABLES

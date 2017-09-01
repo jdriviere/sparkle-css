@@ -187,18 +187,18 @@
                     <div class="col-1-of-2 section">
                         <div class="section__block">
                             <h5 class="section__title">Base</h5>
-                            <p class="btnSection__desc">
+                            <p class="section__desc">
                                 One of the most essential elements in a CSS framework: buttons.
                                 Sparkle allows you to style anchor tags, div tags, and buttons by
-                                simply putting <span class="snippet"><code>btn</code></span> in its class. This
+                                simply putting <span class="snippet"><code>button</code></span> in its class. This
                                 is also the first step to style a button accordingly (see other
                                 styling below).
                             </p>
 
-                            <button class="btn">Button</button>
-                            <input type="button" value="Button" class="btn">
-                            <a href="#" class="btn">Button</a>
-                            <div class="btn">Button</div>
+                            <button class="button">Button</button>
+                            <input type="button" value="Button" class="button">
+                            <a href="#" class="button">Button</a>
+                            <div class="button">Button</div>
                         </div>
                     </div>
 
@@ -207,10 +207,10 @@
                         <h6>Code:</h6>
                         <div class="alert alert--info">
                             <code>
-                                &lt;button class="btn"&gt;Some Text&lt;/button&gt;<br>
-                                &lt;input type="button" value="Some Text" class="btn"&gt;<br>
-                                &lt;a href="#" class="btn"&gt;Some Text&lt;/a&gt;<br>
-                                &lt;div class="btn"&gt;Some Text&lt;/div&gt;
+                                &lt;button class="button"&gt;Some Text&lt;/button&gt;<br>
+                                &lt;input type="button" value="Some Text" class="button"&gt;<br>
+                                &lt;a href="#" class="button"&gt;Some Text&lt;/a&gt;<br>
+                                &lt;div class="button"&gt;Some Text&lt;/div&gt;
                             </code>
                         </div>
                     </div>
@@ -221,11 +221,11 @@
                     <div class="col-1-of-2 section">
                         <div class="section__block">
                             <h5 class="section__title">Types (Solid)</h5>
-                            <p class="btnSection__desc">
+                            <p class="section__desc">
                                 Sparkle offers a variety of button colors, to go with
                                 your design needs. To specify the type of button you want,
-                                you must add <span class="snippet"><code>btn--$type</code></span> to
-                                your <span class="snippet"><code>btn</code></span> class, where
+                                you must add <span class="snippet"><code>button--$type</code></span> to
+                                your <span class="snippet"><code>button</code></span> class, where
                                 <span class="snippet"><code>$type</code></span> is either one of the
                                 following:
                                 
@@ -238,13 +238,13 @@
                                 <span class="snippet"><code>dark</code></span>.
                             </p>
 
-                            <button class="btn btn--primary">Primary</button>
-                            <button class="btn btn--secondary">Secondary</button>
-                            <button class="btn btn--success">Success</button>
-                            <button class="btn btn--warning">Warning</button>
-                            <button class="btn btn--danger">Danger</button>
-                            <button class="btn btn--light">Light</button>
-                            <button class="btn btn--dark">Dark</button>
+                            <button class="button button--primary">Primary</button>
+                            <button class="button button--secondary">Secondary</button>
+                            <button class="button button--success">Success</button>
+                            <button class="button button--warning">Warning</button>
+                            <button class="button button--danger">Danger</button>
+                            <button class="button button--light">Light</button>
+                            <button class="button button--dark">Dark</button>
                             </div>
                     </div>
 
@@ -253,7 +253,7 @@
                         <h6>Code:</h6>
                         <div class="alert alert--info">
                             <code>
-                                &lt;button class="btn btn--$type"&gt;Some Text&lt;/button&gt;
+                                &lt;button class="button button--$type"&gt;Some Text&lt;/button&gt;
                             </code>
                         </div>
                     </div>
@@ -264,21 +264,21 @@
                     <div class="col-1-of-2 section">
                         <div class="section__block">
                             <h5 class="section__title">Types (Outlined)</h5>
-                            <p class="btnSection__desc">
+                            <p class="section__desc">
                                 If solid-colored buttons are not enough, Sparkle also offers
                                 the option of outlining the buttons. Simply add
                                 <span class="snippet"><code>--outline</code></span> at the end of the
                                 button type class, as in
-                                <span class="snippet"><code>btn--$type--outline</code></span>.
+                                <span class="snippet"><code>button--$type--outline</code></span>.
                             </p>
 
-                            <button class="btn btn--primary--outline">Primary</button>
-                            <button class="btn btn--secondary--outline">Secondary</button>
-                            <button class="btn btn--success--outline">Success</button>
-                            <button class="btn btn--warning--outline">Warning</button>
-                            <button class="btn btn--danger--outline">Danger</button>
-                            <button class="btn btn--light--outline">Light</button>
-                            <button class="btn btn--dark--outline">Dark</button>
+                            <button class="button button--primary--outline">Primary</button>
+                            <button class="button button--secondary--outline">Secondary</button>
+                            <button class="button button--success--outline">Success</button>
+                            <button class="button button--warning--outline">Warning</button>
+                            <button class="button button--danger--outline">Danger</button>
+                            <button class="button button--light--outline">Light</button>
+                            <button class="button button--dark--outline">Dark</button>
                         </div>
                     </div>
 
@@ -287,7 +287,7 @@
                         <h6>Code:</h6>
                         <div class="alert alert--info">
                             <code>
-                                &lt;button class="btn btn--$type--outline"&gt;Some Text&lt;/button&gt;
+                                &lt;button class="button button--$type--outline"&gt;Some Text&lt;/button&gt;
                             </code>
                         </div>
                     </div>                    
@@ -298,20 +298,20 @@
                     <div class="col-1-of-2 section">
                         <div class="section__block">
                             <h5 class="section__title">Types (Ghosted)</h5>
-                            <p class="btnSection__desc">
+                            <p class="section__desc">
                                 Sparkle also offers the "ghost" button variety too. Simply add
                                 <span class="snippet"><code>--ghost</code></span> at the end of the
                                 button type class, as in
-                                <span class="snippet"><code>btn--$type--ghost</code></span>.
+                                <span class="snippet"><code>button--$type--ghost</code></span>.
                             </p>
                             
-                            <button class="btn btn--primary--ghost">Primary</button>
-                            <button class="btn btn--secondary--ghost">Secondary</button>
-                            <button class="btn btn--success--ghost">Success</button>
-                            <button class="btn btn--warning--ghost">Warning</button>
-                            <button class="btn btn--danger--ghost">Danger</button>
-                            <button class="btn btn--light--ghost">Light</button>
-                            <button class="btn btn--dark--ghost">Dark</button>
+                            <button class="button button--primary--ghost">Primary</button>
+                            <button class="button button--secondary--ghost">Secondary</button>
+                            <button class="button button--success--ghost">Success</button>
+                            <button class="button button--warning--ghost">Warning</button>
+                            <button class="button button--danger--ghost">Danger</button>
+                            <button class="button button--light--ghost">Light</button>
+                            <button class="button button--dark--ghost">Dark</button>
                         </div>
                     </div>
 
@@ -319,7 +319,7 @@
                         <h6>Code:</h6>
                         <div class="alert alert--info">
                             <code>
-                                &lt;button class="btn btn--$type--ghost"&gt;Some Text&lt;/button&gt;
+                                &lt;button class="button button--$type--ghost"&gt;Some Text&lt;/button&gt;
                             </code>
                         </div>
                     </div>
@@ -330,9 +330,9 @@
                     <div class="col-1-of-2 section">
                         <div class="section__block">
                             <h5 class="section__title">Sizes</h5>
-                            <p class="btnSection__desc">
+                            <p class="section__desc">
                                 Buttons come in different sizes for different purposes. You can
-                                alter a button size by adding <span class="snippet"><code>btn--$size</code></span>
+                                alter a button size by adding <span class="snippet"><code>button--$size</code></span>
                                 to the class list, where the <span class="snippet"><code>$size</code></span>
                                 is either one of the following:
                                 <span class="snippet"><code>xsmall</code></span>,
@@ -342,11 +342,11 @@
                                 <span class="snippet"><code>xlarge</code></span>.
                             </p>
 
-                            <button class="btn btn--xsmall">X-Small</button>
-                            <button class="btn btn--small">Small</button>
-                            <button class="btn btn--medium">Medium</button>
-                            <button class="btn btn--large">Large</button>
-                            <button class="btn btn--xlarge">X-Large</button>
+                            <button class="button button--xsmall">X-Small</button>
+                            <button class="button button--small">Small</button>
+                            <button class="button button--medium">Medium</button>
+                            <button class="button button--large">Large</button>
+                            <button class="button button--xlarge">X-Large</button>
                         </div>
                     </div>
 
@@ -354,10 +354,10 @@
                         <h6>Code:</h6>
                         <div class="alert alert--info">
                             <code>
-                                &lt;button class="btn btn--$type[--$option] btn--small"&gt;Some Text&lt;/button&gt;<br>
-                                &lt;button class="btn btn--$type[--$option] btn--medium"&gt;Some Text&lt;/button&gt;<br>
-                                &lt;button class="btn btn--$type[--$option] btn--large"&gt;Some Text&lt;/button&gt;<br>
-                                &lt;button class="btn btn--$type[--$option] btn--xlarge"&gt;Some Text&lt;/button&gt;<br>
+                                &lt;button class="button button--$type[--$option] button--small"&gt;Some Text&lt;/button&gt;<br>
+                                &lt;button class="button button--$type[--$option] button--medium"&gt;Some Text&lt;/button&gt;<br>
+                                &lt;button class="button button--$type[--$option] button--large"&gt;Some Text&lt;/button&gt;<br>
+                                &lt;button class="button button--$type[--$option] button--xlarge"&gt;Some Text&lt;/button&gt;<br>
                             </code>
                         </div>
                     </div>
@@ -368,13 +368,13 @@
                     <div class="col-1-of-2 section">
                         <div class="section__block">
                             <h5 class="section__title">Block</h5>
-                            <p class="btnSection__desc">
+                            <p class="section__desc">
                                 You can also have your button take the entire span of the block too by adding
-                                <span class="snippet"><code>btn--block</code></span> to your class list. You can
+                                <span class="snippet"><code>button--block</code></span> to your class list. You can
                                 even mix it with the button roundness classes (see below).
                             </p>
 
-                            <button class="btn btn--block">Button</button>
+                            <button class="button button--block">Button</button>
                         </div>
                     </div>
 
@@ -382,7 +382,7 @@
                         <h6>Code:</h6>
                         <div class="alert alert--info">
                             <code>
-                                &lt;button class="btn btn--$type[--$option] btn--block"&gt;Some Text&lt;/button&gt;<br>
+                                &lt;button class="button button--$type[--$option] button--block"&gt;Some Text&lt;/button&gt;<br>
                             </code>
                         </div>
                     </div>
@@ -393,16 +393,16 @@
                     <div class="col-1-of-2">
                         <div class="section__block">
                             <h5 class="section__title">Roundness</h5>
-                            <p class="btnSection__desc">
+                            <p class="section__desc">
                                 Sparkle offers the chance to even vary the roundness of its button design.
-                                Simply add <span class="snippet"><code>btn--$roundness</code></span> in your class
+                                Simply add <span class="snippet"><code>button--$roundness</code></span> in your class
                                 list, where <span class="snippet"><code>$roundness</code></span> is one of the following:
                                 <span class="snippet"><code>h-round</code></span> (for 'half-round'), or
                                 <span class="snippet"><code>f-round</code></span> (for 'fully-round').
                             </p>
 
-                            <button class="btn btn--h-round">Button</button>
-                            <button class="btn btn--f-round">Button</button>
+                            <button class="button button--h-round">Button</button>
+                            <button class="button button--f-round">Button</button>
                         </div>
                     </div>
 
@@ -410,8 +410,8 @@
                         <h6>Code:</h6>
                         <div class="alert alert--info">
                             <code>
-                                &lt;button class="btn btn--$type[--$option] btn--h-round&gt;Some Text&lt;/button&gt;<br>
-                                &lt;button class="btn btn--$type[--$option] btn--f-round&gt;Some Text&lt;/button&gt;
+                                &lt;button class="button button--$type[--$option] button--h-round&gt;Some Text&lt;/button&gt;<br>
+                                &lt;button class="button button--$type[--$option] button--f-round&gt;Some Text&lt;/button&gt;
                             </code>
                         </div>
                     </div>
@@ -422,21 +422,21 @@
                     <div class="col-1-of-2 section">
                         <div class="section__block">
                             <h5 class="section__title">Disabled</h5>
-                            <p class="btnSection__desc">
+                            <p class="section__desc">
                                 You want to insert a button but not want it to be accessible yet?
-                                No problem! simply add <span class="snippet"><code>btn--disabled</code></span>
+                                No problem! simply add <span class="snippet"><code>button--disabled</code></span>
                                 to your list of classes, and use a code to remove that class
                                 whenever you need.
                             </p>
 
-                            <button class="btn btn--disabled">Button</button>
-                            <button class="btn btn--primary btn--disabled">Primary</button>
-                            <button class="btn btn--secondary btn--disabled">Secondary</button>
-                            <button class="btn btn--success btn--disabled">Success</button>
-                            <button class="btn btn--warning btn--disabled">Warning</button>
-                            <button class="btn btn--danger btn--disabled">Danger</button>
-                            <button class="btn btn--light btn--disabled">Light</button>
-                            <button class="btn btn--dark btn--disabled">Dark</button>
+                            <button class="button button--disabled">Button</button>
+                            <button class="button button--primary button--disabled">Primary</button>
+                            <button class="button button--secondary button--disabled">Secondary</button>
+                            <button class="button button--success button--disabled">Success</button>
+                            <button class="button button--warning button--disabled">Warning</button>
+                            <button class="button button--danger button--disabled">Danger</button>
+                            <button class="button button--light button--disabled">Light</button>
+                            <button class="button button--dark button--disabled">Dark</button>
                         </div>
                     </div>
 
@@ -444,7 +444,7 @@
                         <h6>Code:</h6>
                         <div class="alert alert--info">
                             <code>
-                                &lt;button class="btn btn--$type[--$option] btn--$size btn--disabled"&gt;Some Text&lt;/button&gt;
+                                &lt;button class="button button--$type[--$option] button--$size button--disabled"&gt;Some Text&lt;/button&gt;
                             </code>
                         </div>
                     </div>
@@ -899,7 +899,7 @@
                             </p>
                         </div>
 
-                        <button id="modalOpen" class="btn btn--danger btn--medium">Open Modal</button>
+                        <button id="modalOpen" class="button button--danger button--medium">Open Modal</button>
 
                         <div class="modal">
                             <div class="modal__body">
