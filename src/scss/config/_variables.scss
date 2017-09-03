@@ -185,12 +185,22 @@ $line-height:               1.5 !default; // Default line-height
 // =================================
 // SCREEN SIZE VARIABLES
 // =================================
+$bp-maps: (
+    xsmall:                 320px, // Cellphone - 320px <-- Container is 320px
+    small:                  480px, // Cellphone - 480px <-- Container is 460px
+    medium:                 640px, // Tablet - 640px (min) <-- Container is 640px
+    large:                  768px, // Tablet - 768px (max) <-- Container is 720px
+    xlarge:                 960px, // Desktop - 960px (min) <-- Container is 960px
+    fullhd:                 1200px // Desktop - 1200px (max) <-- Container is 1170px
+) !default;
+
+// * This section will soon be removed *
 $bp-xsmall:					320px; // Cellphone - 320px <-- Container is ???px
 $bp-small:					480px; // Cellphone - 480px <-- Container is 460px
 $bp-medium:					640px; // Tablet - 640px <-- Container is ???px
 $bp-large:					768px; // Tablet - 768px <-- Container is 720px
 $bp-xlarge:                 960px; // Desktop - 960px <-- Container is ???px
-$bp-fullhd:					1200px; // Desktop - 1200px <-- Containeris 1170px
+$bp-fullhd:					1200px; // Desktop - 1200px <-- Container is 1170px
 
 // =================================
 // FONTS VARIABLES
