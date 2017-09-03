@@ -1,0 +1,95 @@
+/* ===================================================*/
+/* FORMS
+/* ===================================================*/
+@import "../config/_variables";
+@import "../config/_mixins";
+
+// MIXINS
+@mixin input-control {
+    position: relative;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 4.0rem;
+    line-height: $line-height;
+    padding: $input-padding;
+    @include remove-appearance;
+    border: 1px solid $color-none;
+    outline: none;
+    box-shadow: none;
+    
+    // STATES
+    &:focus, &:active {
+        border-color: map-get($theme-maps, primary);
+        box-shadow: 0 0 1.2rem rgba($lblue_base, 0.5);
+    }
+    &:disabled {
+        @include disable-select;
+        opacity: 0.5;
+    }
+} // End of Input-Control
+
+@mixin create-input {
+    @include input-control;
+    color: $input-font-color;
+    @include border-radius(0.3rem);
+    border-color: $input-border-color;
+
+    // COMPONENTS
+	&::-webkit-input-placeholder { color: $color-grey-75; } // WebKit, Blink, Edge
+	&::-moz-placeholder { color: $color-grey-75; opacity: 1; } // Mozilla Firefox 19+
+	&:-moz-placeholder { color: $color-grey-75; opacity: 1; } // Mozilla Firefox 4 to 18
+	&:-ms-textarea-placeholder { color: $color-grey-75; } // Internet Explorer 10-11
+	&::placeholder { color: $color-grey-75; }
+
+    // STATES
+    &:hover, &:focus, &:active { border-color: map-get($theme-maps, primary); }
+    &:not(:last-child) { margin-bottom: 1.5rem; }
+} // End of Create-Input
+
+// FORMS
+.input {
+    @include create-input;
+    position: relative;
+    width: $input-width; height: $input-height;
+    display: block;
+
+	// COMPONENTS
+	&__label {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 1.0rem;
+        font: { size: 1.2rem; weight: $font-weight-heavy; }
+        color: $input-font-color;
+	}
+	
+	&__select {
+        @extend .input;
+        background-image: url('https://png.icons8.com/expand-arrow/win8/12');
+        background-repeat: no-repeat;
+        background-position: 98%;
+        
+        // COMPONENTS
+        &::-ms-expand { display: none; }
+	}
+	
+	&__textarea {
+        @extend .input;
+        height: 12.0rem;
+        font: { family: inherit; size: $input-font-size; };
+        resize: vertical;
+	}
+	
+	&__checkbox {
+        display: inline-flex;
+        align-items: center;
+        transform: scale(1.25);
+        
+        // STATES
+        &:not(:first-of-type) { margin-left: 1.0rem; }
+        
+        // COMPONENTS
+        &__group { margin: 1.0rem 0; }
+        &__label { display: inline; margin-left: 1.5rem; font-size: 1.5rem; }
+    }
+}

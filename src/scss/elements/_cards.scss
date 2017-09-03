@@ -1,0 +1,56 @@
+/* ===================================================*/
+/* THUMBNAILS
+/* ===================================================*/
+@import "../config/_variables";
+@import "../config/_mixins";
+
+.card {
+    width: 100%;
+    border: 1px solid $card-border-color;
+    @include border-radius;
+    overflow: hidden;
+
+    // COMPONENTS
+    &__header {
+        padding: $card-padding;
+        border: { bottom: 1px solid $card-border-color; }
+
+        &__title { @extend .text--title; }
+        &__subtitle { @extend .text--subtitle; }
+    }
+    & img,
+    &__image { width: 100%; }
+    &__caption {
+        padding: $card-padding;
+        font-size: $card-font-size;
+        color: $card-font-color;
+    }
+    &__footer {
+        @include displayFlex;
+        @include flexSize;
+        border: { top: 1px solid $card-border-color; }
+
+        &__item {
+            @include displayFlex;
+            flex: 1 0 0;
+            @include justifyContentCenter;
+            @include alignItemsCenter;
+            margin: 0;
+            padding: $card-padding;
+
+            // COMPONENTS
+            a {
+                text-decoration: none;
+                color: map-get( $theme-maps, dark);
+
+                &:hover { color: map-get($theme-maps, primary); }
+            }
+
+            // STATES
+            &:not(:first-child) { border: { left: 1px solid $card-border-color; } }
+        }
+    }
+
+    // STATES
+    &.card--shadow-box { @include box-shadow(0, 0.25em, 0.5em, 0.1); }
+}

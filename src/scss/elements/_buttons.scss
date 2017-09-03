@@ -1,0 +1,158 @@
+/* ===================================================*/
+/* BUTTONS
+/* ===================================================*/
+@import "../config/_variables";
+@import "../config/_mixins";
+
+// =================================
+// BUTTON VARIABLES
+// =================================
+$button-color-maps: (
+    primary:				($lblue_base, $white_base),
+    secondary:				($btopaz_base, $white_base),
+    success:				($green_base, $white_base),
+    warning:				($yellow_base, $black_base),
+    danger:					($red_base, $white_base),
+    light:					($white_base, $black_base),
+	dark:					($black_base, $white_base),
+) !default;
+$button-margin:                1.0rem !default; // Default bottom margin is 10px
+$button-line-height:           $line-height !default; // Default line-height is 1.5 times
+$button-font-size:             $font-size !default; // Default font-size is HTML default font-size
+$button-letter-space:          0.2rem !default; // Default letter-spacing is 2px
+$button-padding-vertical:      0.5rem !default; // Default top/bottom padding is 5px
+$button-padding-horizontal:    1.5rem !default; // Default left/right padding is 15px
+$button-border-radius:         0.3em !default; // Default border-radius is 3px, but varies based on parent font-size
+
+// =================================
+// BUTTON MIXINS
+// =================================
+@mixin create-button {
+    display: inline-block;
+    @include remove-appearance;
+    outline: none;
+    background: none;
+    margin-bottom: $button-margin;
+    padding: $button-padding-vertical $button-padding-horizontal;
+    line-height: $button-line-height;
+    vertical-align: center;
+    text: { align: center; decoration: none; }
+    font: { size: $button-font-size; weight: $font-weight-normal; };
+    color: $black_base;
+    border: 1px solid $black_l2;
+    border-radius: $button-border-radius;
+    cursor: pointer;
+
+    // STATES
+    &:hover { border-color: $black_base; }
+    &:disabled, &.button--disabled {
+    	@include disable-select;
+    	opacity: 0.3;
+    }
+} // End of Create-Button
+
+// =================================
+// BUTTONS
+// =================================
+.button {
+    // Create the button
+    @include create-button;
+    
+    // Stylize all buttons according to proper color-map
+    @each $type, $color in $button-color-maps {
+        $bgcolor: nth($color, 1);
+        $fontcolor: nth($color, 2);
+
+        // STYLES
+        &--#{$type} {
+            background-color: $bgcolor;
+            color: $fontcolor !important;
+            border: 1px solid $color-none;
+
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: darken($bgcolor, $darken);
+                border-color: $color-none;
+            }
+        }
+		
+		&--#{$type}--outline {
+			background-color: $color-none;
+			color: $bgcolor !important;
+			border: 1px solid $bgcolor;
+			
+			&:hover,
+            &:focus,
+            &:active {
+                background-color: $bgcolor;
+                color: $fontcolor !important;
+                border-color: $color-none;
+            }
+        }
+        
+        &--#{$type}--ghost {            
+            @if ($type == "light") {
+                background-color: map-get($theme-maps, light);
+                color: $white_d1 !important;
+                border: 1px solid $grey_l1;
+            } @else {
+                background-color: map-get($theme-maps, light);
+                color: $bgcolor !important;
+                border: 1px solid $grey_l1;
+            } // End of IF-ELSE
+			
+			&:hover,
+            &:focus,
+            &:active {
+                background-color: $bgcolor;
+                color: $fontcolor !important;
+                border-color: $color-none;
+            }
+		}
+    } // End of EACH-LOOP
+
+    // SIZES
+    &--xsmall { font-size: ($font-size * 0.66666); }
+    &--small { font-size: ($font-size * 0.8 ); }
+    &--medium { font-size: $font-size; }
+    &--large { font-size: ($font-size * 1.33333); }
+    &--xlarge { font-size: ($font-size * 1.6); }
+    &--block {
+        display: block;
+        width: 100%;
+        padding: 1.0rem 0;
+        font-size: 2.0rem;
+        letter-spacing: $button-letter-space;
+    }
+
+    // STYLES
+    &--h-round { @include border-radius(($button-border-radius * 2)); }
+    &--f-round { @include border-radius(3.5rem); }
+}
+
+.button__group {
+    @include displayFlex;
+    @include justifyContentCenter;
+    @include flexDirectionRow;
+    @include flexWrap;
+
+    border: 1px solid red;
+
+    // COMPONENTS
+    & > .button {
+        @include displayFlex;
+        @include justifyContentCenter;
+        @include flexSizePlus(1, 0, 100%);
+
+        // MEDIA QUERIES
+        @media only screen and (min-width: $bp-medium) {
+            @include flexSizePlus(1, 0, auto);
+        }
+    }
+
+    // STATES
+    & .button:hover { @include box-shadow(0, 0, 0, 0); }
+
+    &.button__group--full { @include flexSizePlus(1, 0, 0); }
+}
