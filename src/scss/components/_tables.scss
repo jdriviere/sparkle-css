@@ -23,9 +23,8 @@
     tr {
         margin: { top: 0; bottom: 1.0rem; };
 		padding: 0.5rem 0;
-		// background-color: map-get($theme-maps, light);
         border: 1px solid map-get($theme-maps, default);
-		border-bottom: 3px solid map-get($theme-maps, default);
+		// border-bottom: 3px solid map-get($theme-maps, default);
 		
 		&:last-child { margin-bottom: 0; }
     }
@@ -88,8 +87,8 @@
             color: $black_base;
             border-bottom: 2px solid $white_base;
         }
-        tr:nth-child(odd):not(thead) { background-color: $white_l2; color: $grey_d3; }
-        tr:nth-child(even):not(thead) { background-color: $white_l1; color: $grey_d3; }
+        tbody tr:nth-child(odd) { background-color: $white_l2; color: $grey_d3; }
+        tbody tr:nth-child(even) { background-color: $white_l3; color: $grey_d3; }
     }
     &.table--dark {
         th {
@@ -97,14 +96,14 @@
             color: $white_base;
             border-bottom: 2px solid $black_d3;
         }
-        tr:nth-child(odd):not(thead) { background-color: $black_d1; color: $white_base; }
-        tr:nth-child(even):not(thead) { background-color: $black_d2; color: $white_base; }
+        tbody tr:nth-child(odd) { background-color: $black_d2; color: $white_base; }
+        tbody tr:nth-child(even) { background-color: $black_d1; color: $white_base; }
     }
     &.table--default { tr:not(:last-child) { border-bottom: 1px solid #DDD; } }
     &.table--bordered { th, td { border: 1px solid #DDD; } }
-    &.table--striped { tr:nth-child(even):not(thead) { background-color: #EEE; } }
+    &.table--striped { tbody tr:nth-child(odd) { background-color: #EEE; } }
     &.table--hoverable {
-		tr:hover > td {
+		tbody tr:hover > td {
 			background-color: map-get($theme-maps, secondary);
 			color: map-get($theme-maps, light);
 		}

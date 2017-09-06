@@ -789,7 +789,6 @@ code {
   margin-bottom: 1.0rem;
   padding: 0.5rem 0;
   border: 1px solid #E2E2E2;
-  border-bottom: 3px solid #E2E2E2;
 }
 
 .table tr:last-child {
@@ -865,13 +864,13 @@ code {
   border-bottom: 2px solid #F4F4F8;
 }
 
-.table.table--light tr:nth-child(odd):not(thead) {
+.table.table--light tbody tr:nth-child(odd) {
   background-color: #F8F8FA;
   color: #676767;
 }
 
-.table.table--light tr:nth-child(even):not(thead) {
-  background-color: #F6F6F9;
+.table.table--light tbody tr:nth-child(even) {
+  background-color: #FAFAFB;
   color: #676767;
 }
 
@@ -881,13 +880,13 @@ code {
   border-bottom: 2px solid #080A0D;
 }
 
-.table.table--dark tr:nth-child(odd):not(thead) {
-  background-color: #0E1217;
+.table.table--dark tbody tr:nth-child(odd) {
+  background-color: #0B0E12;
   color: #F4F4F8;
 }
 
-.table.table--dark tr:nth-child(even):not(thead) {
-  background-color: #0B0E12;
+.table.table--dark tbody tr:nth-child(even) {
+  background-color: #0E1217;
   color: #F4F4F8;
 }
 
@@ -899,11 +898,11 @@ code {
   border: 1px solid #DDD;
 }
 
-.table.table--striped tr:nth-child(even):not(thead) {
+.table.table--striped tbody tr:nth-child(odd) {
   background-color: #EEE;
 }
 
-.table.table--hoverable tr:hover > td {
+.table.table--hoverable tbody tr:hover > td {
   background-color: #9BC2E6;
   color: #F4F4F8;
 }
