@@ -87,8 +87,8 @@
             color: $black_base;
             border-bottom: 2px solid $white_base;
         }
-        tbody tr:nth-child(odd) { background-color: $white_l2; color: $grey_d3; }
-        tbody tr:nth-child(even) { background-color: $white_l3; color: $grey_d3; }
+        tbody tr:nth-child(odd) { background-color: $white_l1; color: $grey_d3; }
+        tbody tr:nth-child(even) { background-color: $white_l2; color: $grey_d3; }
     }
     &.table--dark {
         th {

@@ -865,12 +865,12 @@ code {
 }
 
 .table.table--light tbody tr:nth-child(odd) {
-  background-color: #F8F8FA;
+  background-color: #F6F6F9;
   color: #676767;
 }
 
 .table.table--light tbody tr:nth-child(even) {
-  background-color: #FAFAFB;
+  background-color: #F8F8FA;
   color: #676767;
 }
 
