@@ -7,11 +7,15 @@
 @mixin alert {
     display: block;
     width: 100%;
-    margin: $alert-margin 0;
+    margin: 0;
     padding: $alert-padding;
     font-size: $alert-font-size;
     @include box-shadow(5, 5, 7, 0.7);
     @include border-radius-cust(0, 5, 5, 0);
+
+    &:not(:first-child) {
+        margin-top: $alert-margin;
+    }
 } // End of Alert
 
 .alert {

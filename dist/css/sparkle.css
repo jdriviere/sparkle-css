@@ -913,7 +913,7 @@ code {
 .alert {
   display: block;
   width: 100%;
-  margin: 1.5rem 0;
+  margin: 0;
   padding: 1.5rem;
   font-size: 1.5rem;
   -webkit-box-shadow: 5 5 7 rgba(0, 0, 0, 0.7);
@@ -921,6 +921,10 @@ code {
   -ms-box-shadow: 5 5 7 rgba(0, 0, 0, 0.7);
   box-shadow: 5 5 7 rgba(0, 0, 0, 0.7);
   border-radius: 0 5 5 0;
+}
+
+.alert:not(:first-child) {
+  margin-top: 1.5rem;
 }
 
 .alert--default {
