@@ -22,14 +22,27 @@
 	<!-- INTERNAL STYLING -->
     <style>
         section:first-child { padding-top: 8.0rem; }
-        .snippet {
-            padding: 0.125rem 0.25rem;
+        span.snippet > code {
+            padding: 0.2rem;
             vertical-align: bottom;
             background-color: #EDEDEF;
             color: #9BC2E6;
-            border-radius: 0.125rem;
+            border-radius: 0.3rem;
+        }
+        div.snippet {
+            margin-bottom: 40px;
+            padding: 1.0rem;
+            vertical-align: center;
+            background-color: #EDEDEF;
+            color: #9BC2E6;
+            font-weight: 700;
+            border-radius: 0.3rem;
         }
         
+        .section {
+            margin-top: 30px;
+            border-bottom: 1px solid #DDD;
+        }
         .section__block { margin-bottom: 1.25em; }
         .section__title { text-transform: uppercase; letter-spacing: 0.125em; color: #CCC; }
         .section__desc { margin-bottom: 1.25em; }
@@ -89,88 +102,77 @@
         <section>
             <div class="container">
                 <h1>Alerts</h1>
+                
+                <div class="section">
+                    <div class="section__block">
+                        <h5 class="section__title">Types</h5>
+                        <p class="alertSection__desc">
+                            Alerts can serve to make sure users can see important messages on
+                            their screen. Simply create a block of code and stylize it accordingly.
+                            Start off by adding an <span class="snippet"><code>alert</code></span>, and
+                            then specify which type of alert you want by adding the second class,
+                            <span class="snippet"><code>alert--$type</code></span>, where
+                            <span class="snippet"><code>$type</code></span> is either one of the following:
+                            <span class="snippet"><code>default</code></span>,
+                            <span class="snippet"><code>info</code></span>,
+                            <span class="snippet"><code>success</code></span>,
+                            <span class="snippet"><code>warning</code></span>, or
+                            <span class="snippet"><code>danger</code></span>.
+                        </p>
 
-                <div class="row">
-                    <div class="col-1-of-1 section">
-                        <div class="section__block">
-                            <h5 class="section__title">Types</h5>
-                            <p class="alertSection__desc">
-                                Alerts can serve to make sure users can see important messages on
-                                their screen. Simply create a block of code and stylize it accordingly.
-                                Start off by adding an <span class="snippet"><code>alert</code></span>, and
-                                then specify which type of alert you want by adding the second class,
-                                <span class="snippet"><code>alert--$type</code></span>, where
-                                <span class="snippet"><code>$type</code></span> is either one of the following:
-                                <span class="snippet"><code>default</code></span>,
-                                <span class="snippet"><code>info</code></span>,
-                                <span class="snippet"><code>success</code></span>,
-                                <span class="snippet"><code>warning</code></span>, or
-                                <span class="snippet"><code>danger</code></span>.
-                            </p>
+                        <div class="alert alert--default">This is a default alert</div>
+                        <div class="alert alert--info">This is an info alert</div>
+                        <div class="alert alert--success">This is a success alert</div>
+                        <div class="alert alert--warning">This is a warning alert</div>
+                        <div class="alert alert--danger">This is a danger alert</div>
+                    </div>
 
-                            <div class="alert alert--default">This is a default alert</div>
-                            <div class="alert alert--info">This is an info alert</div>
-                            <div class="alert alert--success">This is a success alert</div>
-                            <div class="alert alert--warning">This is a warning alert</div>
-                            <div class="alert alert--danger">This is a danger alert</div>
-                        </div>
+                    <!-- CODE -->
+                    <h6>Code:</h6>
+                    <div class="snippet">
+                        <code>
+                            &lt;div class="alert alert--$type"&gt;<br>
+                                // Body goes here...<br>
+                            &lt;/div&gt;
+                        </code>
                     </div>
                 </div>
-
-                <!-- CODE -->
-                <div class="row">
-                    <div class="col-1-of-1">
-                        <h6>Code:</h6>
-                        <div class="alert alert--info">
-                            <code>
-                                &lt;div class="alert alert--$type"&gt;<br>
-                                    // Body goes here...<br>
-                                &lt;/div&gt;
-                            </code>
-                        </div>
-                    </div>
-                </div> <!-- END OF ROW -->
 
                 <!-- COMPONENTS -->
-                <div class="row">
-                    <div class="col-1-of-1 section">
-                        <div class="section__block">
-                            <h5 class="section__title">Components</h5>
-                            <p class="section__desc">
-                                Alerts also contain more features, such as a title, description,
-                                and list--if you wish to make your alerts cleaner.
-                            </p>
-                            <div class="alert alert--success">
-                                <h4 class="alert__title">Alert Title</h4>
-                                <p class="alert__desc">This is an alert description.</p>
-                                <ul>
-                                    <li class="alert__list">First alert in the list</li>
-                                    <li class="alert__list">Second alert in the list</li>
-                                    <li class="alert__list">Third alert in the list</li>
-                                </ul>
-                            </div>
+                <div class="section">
+                    <div class="section__block">
+                        <h5 class="section__title">Components</h5>
+                        <p class="section__desc">
+                            Alerts also contain more features, such as a title, description,
+                            and list--if you wish to make your alerts cleaner.
+                        </p>
+                        <div class="alert alert--success">
+                            <h4 class="alert__title">Alert Title</h4>
+                            <p class="alert__desc">This is an alert description.</p>
+                            <ul>
+                                <li class="alert__list">First alert in the list</li>
+                                <li class="alert__list">Second alert in the list</li>
+                                <li class="alert__list">Third alert in the list</li>
+                            </ul>
                         </div>
+                    </div>
+
+                    <!-- CODE -->
+                    <h6>Code:</h6>
+                    <div class="snippet">
+                        <code>
+                            &lt;div class="alert alert--$type"&gt;<br>
+                                &lt;h4 class="alert__title"&gt;Alert Title&lt;/h4&gt;<br>
+                                &lt;p class="alert__desc"&gt;Some text description here&lt;/p&gt;<br>
+                                &lt;ul&gt;<br>
+                                    &lt;li class="alert__list"&gt;Some alert list #1&lt;/li&gt;<br>
+                                    &lt;li class="alert__list"&gt;Some alert list #2&lt;/li&gt;<br>
+                                    &lt;li class="alert__list"&gt;Some alert list #3&lt;/li&gt;<br>
+                                &lt;/ul&gt;<br>
+                            &lt;/div&gt;
+                        </code>
                     </div>
                 </div>
-
-                <div class="row">
-                    <div class="col-1-of-1">
-                        <h6>Code:</h6>
-                        <div class="alert alert--info">
-                            <code>
-                                &lt;div class="alert alert--$type"&gt;<br>
-                                    &lt;h4 class="alert__title"&gt;Alert Title&lt;/h4&gt;<br>
-                                    &lt;p class="alert__desc"&gt;Some text description here&lt;/p&gt;<br>
-                                    &lt;ul&gt;<br>
-                                        &lt;li class="alert__list"&gt;Some alert list #1&lt;/li&gt;<br>
-                                        &lt;li class="alert__list"&gt;Some alert list #2&lt;/li&gt;<br>
-                                        &lt;li class="alert__list"&gt;Some alert list #3&lt;/li&gt;<br>
-                                    &lt;/ul&gt;<br>
-                                &lt;/div&gt;
-                            </code>
-                        </div>
-                    </div>
-                </div> <!-- END OF ROW -->
             </div> <!-- END OF CONTAINER -->
         </section> <!-- END OF SECTION (ALERTS) -->
 
@@ -203,17 +205,17 @@
                         <a href="#" class="button">Button</a>
                         <div class="button">Button</div>
                     </div>
-                </div>
 
-                <!-- CODE -->
-                <h6>Code:</h6>
-                <div class="alert alert--info">
-                    <code>
-                        &lt;button class="button"&gt;Some Text&lt;/button&gt;<br>
-                        &lt;input type="button" value="Some Text" class="button"&gt;<br>
-                        &lt;a href="#" class="button"&gt;Some Text&lt;/a&gt;<br>
-                        &lt;div class="button"&gt;Some Text&lt;/div&gt;
-                    </code>
+                    <!-- CODE -->
+                    <h6>Code:</h6>
+                    <div class="snippet">
+                        <code>
+                            &lt;button class="button"&gt;Some Text&lt;/button&gt;<br>
+                            &lt;input type="button" value="Some Text" class="button"&gt;<br>
+                            &lt;a href="#" class="button"&gt;Some Text&lt;/a&gt;<br>
+                            &lt;div class="button"&gt;Some Text&lt;/div&gt;
+                        </code>
+                    </div>
                 </div>
 
                 <!-- TYPES -->
@@ -248,7 +250,7 @@
 
                     <!-- CODE -->
                     <h6>Code:</h6>
-                    <div class="alert alert--info">
+                    <div class="snippet">
                         <code>
                             &lt;button class="button button--$type"&gt;Some Text&lt;/button&gt;
                         </code>
@@ -278,7 +280,7 @@
 
                     <!-- CODE -->
                     <h6>Code:</h6>
-                    <div class="alert alert--info">
+                    <div class="snippet">
                         <code>
                             &lt;button class="button button--$type--outline"&gt;Some Text&lt;/button&gt;
                         </code>
@@ -307,7 +309,7 @@
 
                     <!-- CODE -->
                     <h6>Code:</h6>
-                    <div class="alert alert--info">
+                    <div class="snippet">
                         <code>
                             &lt;button class="button button--$type--ghost"&gt;Some Text&lt;/button&gt;
                         </code>
@@ -339,7 +341,7 @@
 
                     <!-- CODE -->
                     <h6>Code:</h6>
-                    <div class="alert alert--info">
+                    <div class="snippet">
                         <code>
                             &lt;button class="button button--$type[--$option] button--small"&gt;Some Text&lt;/button&gt;<br>
                             &lt;button class="button button--$type[--$option] button--medium"&gt;Some Text&lt;/button&gt;<br>
@@ -364,7 +366,7 @@
 
                     <!-- CODE -->
                     <h6>Code:</h6>
-                    <div class="alert alert--info">
+                    <div class="snippet">
                         <code>
                             &lt;button class="button button--$type[--$option] button--block"&gt;Some Text&lt;/button&gt;<br>
                         </code>
@@ -389,7 +391,7 @@
 
                     <!-- CODE -->
                     <h6>Code:</h6>
-                    <div class="alert alert--info">
+                    <div class="snippet">
                         <code>
                             &lt;button class="button button--$type[--$option] button--h-round&gt;Some Text&lt;/button&gt;<br>
                             &lt;button class="button button--$type[--$option] button--f-round&gt;Some Text&lt;/button&gt;
@@ -420,7 +422,7 @@
 
                     <!-- CODE -->
                     <h6>Code:</h6>
-                    <div class="alert alert--info">
+                    <div class="snippet">
                         <code>
                             &lt;button class="button button--$type[--$option] button--$size button--disabled"&gt;Some Text&lt;/button&gt;
                         </code>
@@ -435,36 +437,38 @@
                 <h1>Cards</h1>
 
                 <div class="section">
-                    <h5 class="section__title">Base</h5>
-                    <p class="section__desc">
-                        Description coming soon...
-                    </p>
+                    <div class="section__block">
+                        <h5 class="section__title">Base</h5>
+                        <p class="section__desc">
+                            Description coming soon...
+                        </p>
 
-                    <div class="card">
-                        <div class="card__header">
-                            <p class="card__header__title">Title</p>
-                            <p class="card__header__subtitle">Subtitle</p>
-                        </div>
-
-                        <img src="http://via.placeholder.com/500x400">
-
-                        <p class="card__caption">Some caption text.</p>
-                        <div class="card__footer">
-                            <div class="card__footer__item">
-                                <a href="#"><i class="fa fa-github"></i> Github</a></p>
+                        <div class="card">
+                            <div class="card__header">
+                                <p class="card__header__title">Title</p>
+                                <p class="card__header__subtitle">Subtitle</p>
                             </div>
-                            <div class="card__footer__item">
-                                <a href="#"><i class="fa fa-facebook"></i> Facebook</a></p>
-                            </div>
-                            <div class="card__footer__item">
-                                <a href="#"><i class="fa fa-google"></i> Google</a></p>
+
+                            <img src="http://via.placeholder.com/500x400">
+
+                            <p class="card__caption">Some caption text.</p>
+                            <div class="card__footer">
+                                <div class="card__footer__item">
+                                    <a href="#"><i class="fa fa-github"></i> Github</a></p>
+                                </div>
+                                <div class="card__footer__item">
+                                    <a href="#"><i class="fa fa-facebook"></i> Facebook</a></p>
+                                </div>
+                                <div class="card__footer__item">
+                                    <a href="#"><i class="fa fa-google"></i> Google</a></p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- CODE -->
                     <h6>Code:</h6>
-                    <div class="alert alert--info">
+                    <div class="snippet">
                         <code>
                             &lt;div class="card"&gt;<br>
                                 &lt;div class="card__header"&gt;<br>
@@ -486,39 +490,41 @@
 
                 <!-- STYLIZED -->
                 <div class="section">
-                    <h5 class="section__title">Shadow-Box</h5>
-                    <p class="section__desc">
-                        You can also stylize the cards too, by adding
-                        <span class="snippet"><code>card--shadow-box</code></span>
-                        to the card's class list.
-                    </p>
+                    <div class="section__block">
+                        <h5 class="section__title">Shadow-Box</h5>
+                        <p class="section__desc">
+                            You can also stylize the cards too, by adding
+                            <span class="snippet"><code>card--shadow-box</code></span>
+                            to the card's class list.
+                        </p>
 
-                    <div class="card card--shadow-box">
-                        <div class="card__header">
-                            <p class="card__header__title">Title</p>
-                            <p class="card__header__subtitle">Subtitle</p>
-                        </div>
-
-                        <img src="http://via.placeholder.com/500x400">
-                        
-                        <p class="card__caption">Some caption text.</p>
-
-                        <div class="card__footer">
-                            <div class="card__footer__item">
-                                <a href="#"><i class="fa fa-github"></i> Github</a></p>
+                        <div class="card card--shadow-box">
+                            <div class="card__header">
+                                <p class="card__header__title">Title</p>
+                                <p class="card__header__subtitle">Subtitle</p>
                             </div>
-                            <div class="card__footer__item">
-                                <a href="#"><i class="fa fa-facebook"></i> Facebook</a></p>
-                            </div>
-                            <div class="card__footer__item">
-                                <a href="#"><i class="fa fa-google"></i> Google</a></p>
+
+                            <img src="http://via.placeholder.com/500x400">
+                            
+                            <p class="card__caption">Some caption text.</p>
+
+                            <div class="card__footer">
+                                <div class="card__footer__item">
+                                    <a href="#"><i class="fa fa-github"></i> Github</a></p>
+                                </div>
+                                <div class="card__footer__item">
+                                    <a href="#"><i class="fa fa-facebook"></i> Facebook</a></p>
+                                </div>
+                                <div class="card__footer__item">
+                                    <a href="#"><i class="fa fa-google"></i> Google</a></p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- CODE -->
                     <h6>Code:</h6>
-                    <div class="alert alert--info">
+                    <div class="snippet">
                         <code>
                             &lt;div class="card card--shadow-box"&gt;<br>
                                 // Body goes here<br>
@@ -568,7 +574,7 @@
 
                     <!-- CODE -->
                     <h6>Code:</h6>
-                    <div class="alert alert--info">
+                    <div class="snippet">
                         <code>
                             &lt;label for="input" class="input__label"&gt;Input:&lt;/label&gt;<br>
                             &lt;input type="text" class="input" id="input" placeholder="Valid input"&gt;
@@ -595,7 +601,7 @@
 
                     <!-- CODE -->
                     <h6>Code:</h6>
-                    <div class="alert alert--info">
+                    <div class="snippet">
                         <code>
                             &lt;textarea class="input__textarea" placeholder="Type text here"&gt;&lt;/textarea&gt;
                         </code>
@@ -626,7 +632,7 @@
 
                     <!-- CODE -->
                     <h6>Code:</h6>
-                    <div class="alert alert--info">
+                    <div class="snippet">
                         <code>
                             &lt;select class="input__select"&gt;<br>
                                 &lt;option value="valueA"&gt;Option 1&lt;/option&gt;<br>
@@ -678,7 +684,7 @@
 
                     <!-- CODE -->
                     <h6>Code:</h6>
-                    <div class="alert alert--info">
+                    <div class="snippet">
                         <code>
                             &lt;div class="row"&gt;<br>
                                 &lt;div class="col"&gt;<br>
@@ -722,7 +728,7 @@
 
                     <!-- CODE -->
                     <h6>Code:</h6>
-                    <div class="alert alert--info">
+                    <div class="snippet">
                         <code>
                             &lt;div class="row"&gt;<br>
                                 &lt;div class="col-11-of-12"&gt;<br>
@@ -775,7 +781,7 @@
 
                     <!-- CODE -->
                     <h6>Code:</h6>
-                    <div class="alert alert--info">
+                    <div class="snippet">
                         <code>
                             &lt;div class="row"&gt;<br>
                                 &lt;div class="col-1-of-1"&gt;<br>
@@ -829,7 +835,7 @@
 
                     <!-- CODE -->
                     <h6>Code:</h6>
-                    <div class="alert alert--info">
+                    <div class="snippet">
                         <code>
                             &lt;div class="row row--no-gutter"&gt;<br>
                                 // Body of code<br>
@@ -855,20 +861,20 @@
                         <p class="section__desc">
                             Description coming soon...
                         </p>
-                    </div>
 
-                    <button id="modalOpen" class="button button--danger button--medium">Open Modal</button>
+                        <button id="modalOpen" class="button button--danger button--medium">Open Modal</button>
 
-                    <div class="modal">
-                        <div class="modal__body">
-                            <div class="modal__close">&times;</div>
-                            <p class="modal__content">This is just a dummy text!</p>
+                        <div class="modal">
+                            <div class="modal__body">
+                                <div class="modal__close">&times;</div>
+                                <p class="modal__content">This is just a dummy text!</p>
+                            </div>
                         </div>
                     </div>
                     
                     <!-- CODE -->
                     <h6>Code:</h6>
-                    <div class="alert alert--info">
+                    <div class="snippet">
                         <code>
                             &lt;div class="modal"&gt;<br>
                                 &lt;div class="modal__body"&gt;<br>
@@ -901,42 +907,42 @@
                             is no need to style each of its elements. Simply add the
                             <span class="snippet"><code>table</code></span> class to the &lt;table&gt; tag.
                         </p>
-                    </div>
 
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>First Name</th>
-                                <th>Last Name</th>
-                                <th>Age</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td data-label="ID">1</td>
-                                <td data-label="First Name">John</td>
-                                <td data-label="Last Name">Smith</td>
-                                <td data-label="Age">24</td>
-                            </tr>
-                            <tr>
-                                <td data-label="ID">2</td>
-                                <td data-label="First Name">Sally</td>
-                                <td data-label="Last Name">Johnson</td>
-                                <td data-label="Age">29</td>
-                            </tr>
-                            <tr>
-                                <td data-label="ID">3</td>
-                                <td data-label="First Name">Rupert</td>
-                                <td data-label="Last Name">Flint</td>
-                                <td data-label="Age">26</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Age</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-label="ID">1</td>
+                                    <td data-label="First Name">John</td>
+                                    <td data-label="Last Name">Smith</td>
+                                    <td data-label="Age">24</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="ID">2</td>
+                                    <td data-label="First Name">Sally</td>
+                                    <td data-label="Last Name">Johnson</td>
+                                    <td data-label="Age">29</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="ID">3</td>
+                                    <td data-label="First Name">Rupert</td>
+                                    <td data-label="Last Name">Flint</td>
+                                    <td data-label="Age">26</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 
                     <!-- CODE -->
                     <h6>Code:</h6>
-                    <div class="alert alert--info">
+                    <div class="snippet">
                         <code>
                             &lt;table class="table"&gt;<br>
                                 &lt;thead&gt;<br>
@@ -976,8 +982,8 @@
                 </div>
 
                 <!-- STYLIZED TABLE -->
-                <div class="row">
-                    <div class="col-1-of-2 section">
+                <div class="section">
+                    <div class="section_block">
                         <h5 class="section__title">Style (Default)</h5>
                         <p class="section__desc">
                             Add the <span class="snippet"><code>table--default</code></span> class to the &lt;table&gt; tag's
@@ -1016,20 +1022,19 @@
                         </table>
                     </div>
 
-                    <div class="col-1-of-2">
-                        <h6>Code:</h6>
-                        <div class="alert alert--info">
-                            <code>
-                                &lt;table class="table table--default"&gt;<br>
-                                    // Body of table<br>
-                                &lt;/table&gt;
-                            </code>
-                        </div>
+                    <!-- CODE -->
+                    <h6>Code:</h6>
+                    <div class="snippet">
+                        <code>
+                            &lt;table class="table table--default"&gt;<br>
+                                // Body of table<br>
+                            &lt;/table&gt;
+                        </code>
                     </div>
-                </div> <!-- DEFAULT -->
+                </div>
 
-                <div class="row">
-                    <div class="col-1-of-2 section">
+                <div class="section">
+                    <div class="section__block">
                         <h5 class="section__title">Style (Striped)</h5>
                         <p class="section__desc">
                             Add the <span class="snippet"><code>table--striped</code></span> class to the &lt;table&gt; tag's
@@ -1068,20 +1073,19 @@
                         </table>
                     </div>
 
-                    <div class="col-1-of-2">
-                        <h6>Code:</h6>
-                        <div class="alert alert--info">
-                            <code>
-                                &lt;table class="table table--striped"&gt;<br>
-                                    // Body of table<br>  
-                                &lt;/table&gt;
-                            </code>
-                        </div>
+                    <!-- CODE -->
+                    <h6>Code:</h6>
+                    <div class="snippet">
+                        <code>
+                            &lt;table class="table table--striped"&gt;<br>
+                                // Body of table<br>  
+                            &lt;/table&gt;
+                        </code>
                     </div>
-                </div> <!-- STRIPED -->
+                </div>
 
-                <div class="row">
-                    <div class="col-1-of-2 section">
+                <div class="section">
+                    <div class="section__block">
                         <h5 class="section__title">Style (Bordered)</h5>
                         <p class="section__desc">
                             Add the <span class="snippet"><code>table--bordered</code></span> class to the &lt;table&gt; tag's
@@ -1120,17 +1124,16 @@
                         </table>
                     </div>
 
-                    <div class="col-1-of-2">
-                        <h6>Code:</h6>
-                        <div class="alert alert--info">
-                            <code>
-                                &lt;table class="table table--bordered"&gt;<br>
-                                    // Body of table<br>  
-                                &lt;/table&gt;
-                            </code>
-                        </div>
+                    <!-- CODE -->
+                    <h6>Code:</h6>
+                    <div class="snippet">
+                        <code>
+                            &lt;table class="table table--bordered"&gt;<br>
+                                // Body of table<br>  
+                            &lt;/table&gt;
+                        </code>
                     </div>
-                </div> <!-- BORDERED -->
+                </div>
 
                 <!-- HOVERABLE -->
                 <div class="section">
@@ -1175,7 +1178,7 @@
                     
                     <!-- CODE -->
                     <h6>Code:</h6>
-                    <div class="alert alert--info">
+                    <div class="snippet">
                         <code>
                             &lt;table class="table [table--$style] table--hoverable"&gt;<br>
                                 // Body of table<br>  
@@ -1227,7 +1230,7 @@
 
                     <!-- CODE -->
                     <h6>Code:</h6>
-                    <div class="alert alert--info">
+                    <div class="snippet">
                         <code>
                             &lt;table class="table table--light [table--$style] [table--hoverable]"&gt;<br>
                                 // Body of table<br>  
@@ -1279,7 +1282,7 @@
 
                     <!-- CODE -->
                     <h6>Code:</h6>
-                    <div class="alert alert--info">
+                    <div class="snippet">
                         <code>
                             &lt;table class="table table--dark [table--$style] [table--hoverable]"&gt;<br>
                                 // Body of table<br>  
@@ -1299,7 +1302,11 @@
                     <div class="section__block">
                         <h5 class="section__title">Base</h5>
                         <p class="section__desc">
-                            Description coming soon...
+                            The default font used in Sparkle is Google Font's Lato, with Helvetica Neue as its backup.
+                            The html font-size was reduced to 62.5% of its original size, so that the root EM units can
+                            be in multiples of 10. For example, <span class="snippet"><code></code>1.2rem</span>
+                            would be 12px, approximately. The root EM was set, by default, to
+                            <span class="snippet"><code>1.5rem</code></span>, which is about 15px.
                         </p>
 
                         <h1>H1 (4.8rem)</h1>
@@ -1312,7 +1319,7 @@
 
                     <!-- CODE -->
                     <h6>Code:</h6>
-                    <div class="alert alert--info">
+                    <div class="snippet">
                         <code>
                             &lt;h1&gt;Some text&lt;/h1&gt;<br>
                             &lt;h2&gt;Some text&lt;/h2&gt;<br>
