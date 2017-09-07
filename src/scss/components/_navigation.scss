@@ -68,13 +68,11 @@
         list-style: none;
         
         &__item {
-			padding: 1rem;
-
 			a {
-				
+				display: block;
+				padding: 1rem;
 				color: map-get($theme-maps, dark);
-				font-size: $font-size;
-				font-weight: $font-weight-normal;
+				font: { size: $font-size; weight: $font-weight-normal; };
 				text-decoration: none;
 				letter-spacing: 0.1rem;
 			}

@@ -596,11 +596,9 @@ code {
   list-style: none;
 }
 
-.nav__menu__item {
-  padding: 1rem;
-}
-
 .nav__menu__item a {
+  display: block;
+  padding: 1rem;
   color: #111516;
   font-size: 1.5rem;
   font-weight: 400;
