@@ -3,7 +3,7 @@
 // ==========================================================
 // This is where all the Sparkle functions are implemented. Most of them will
 // serve to fix problems that occur within the CSS-only framework. This function
-// will load all the Rum framework functions. The Sparkle.js file is REQUIRED
+// will load all the Sparkle framework functions. The Sparkle.js file is REQUIRED
 // for the Sparkle Framework to function properly!
 
 // -----------------------------
@@ -17,15 +17,6 @@ $(document).ready(function() {
     navResizeFix();
     // navDrop();
     modalAction();
-
-    // Controls for inputs: Continually checks if input has value
-    $('.form__input').each(function() {
-        checkInput($(this));
-    });
-
-    $('.form__input').blur(function() {
-        checkInput($(this));
-    });
 });
 
 // -----------------------------
@@ -80,29 +71,18 @@ function navResizeFix () {
 function modalAction () {
     // When user clicks on element to open modal
     $('#modalOpen').click(function() {
-        $('.modal').addClass('modal--show');
-        console.log("Modal should open");
+        $('.modal').addClass('modal--active');
     });
 
     // When the user clicks on <span> (x), close the modal
     $('.modal__close').click(function() {
-        $('.modal').removeClass('modal--show');
+        $('.modal').removeClass('modal--active');
     });
 
     // When the user presses the ESC button, close the modal
     $(document).keydown(function(event) {
         if (event.keyCode == 27) {
-            $('.modal').removeClass('modal--show');
+            $('.modal').removeClass('modal--active');
         } // End of IF
     });
 } // End of ModalAction
-
-// This function controls the flow of the form field
-function checkInput ($input) {
-    // Checking to see if any input have any value
-    if ($input.val() != '') {
-        $input.addClass('form__input--used');
-    } else {
-        $input.removeClass('form__input--used');
-    } // End of IF-ELSE
-} // End of FormAction

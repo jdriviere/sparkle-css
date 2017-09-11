@@ -22,6 +22,10 @@
 	<!-- INTERNAL STYLING -->
     <style>
         section:first-child { padding-top: 8.0rem; }
+        section > .container {
+            padding: 5.0rem;
+            border-bottom: 1px solid #DDD;
+        }
         span.snippet > code {
             padding: 0.2rem;
             vertical-align: bottom;
@@ -41,7 +45,7 @@
         
         .section {
             margin-top: 30px;
-            border-bottom: 1px solid #DDD;
+            
         }
         .section__block { margin-bottom: 1.25em; }
         .section__title { text-transform: uppercase; letter-spacing: 0.125em; color: #CCC; }
@@ -862,7 +866,9 @@
                             Description coming soon...
                         </p>
 
-                        <button id="modalOpen" class="button button--danger button--medium">Open Modal</button>
+                        <button id="modalOpen" class="button button--danger button--medium">
+                            <span><i class="fa fa-plus"></i></span> Open Modal
+                        </button>
 
                         <div class="modal">
                             <div class="modal__body">
@@ -1304,7 +1310,7 @@
                         <p class="section__desc">
                             The default font used in Sparkle is Google Font's Lato, with Helvetica Neue as its backup.
                             The html font-size was reduced to 62.5% of its original size, so that the root EM units can
-                            be in multiples of 10. For example, <span class="snippet"><code></code>1.2rem</span>
+                            be in multiples of 10. For example, a value of <span class="snippet"><code>1.2rem</code></span>
                             would be 12px, approximately. The root EM was set, by default, to
                             <span class="snippet"><code>1.5rem</code></span>, which is about 15px.
                         </p>
