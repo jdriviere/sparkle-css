@@ -17,6 +17,7 @@ $(document).ready(function() {
     navResizeFix();
     // navDrop();
     modalAction();
+    closeMedia();
 });
 
 // -----------------------------
@@ -86,3 +87,10 @@ function modalAction () {
         } // End of IF
     });
 } // End of ModalAction
+
+// This function closes the media, if close--button is found
+function closeMedia () {
+    $('.button--close').click(function() {
+       $(this).parent().hide().css('display', 'none');
+    });
+} // End of CloseMedia
