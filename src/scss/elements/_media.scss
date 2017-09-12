@@ -1,0 +1,152 @@
+/* ===================================================*/
+/* MEDIA
+/* ===================================================*/
+@import "../config/_variables";
+@import "../config/_mixins";
+
+// VARIABLES
+$media-margin: 1.0rem;
+$media-padding: 1.5rem;
+$media-border-radius: 0.5rem;
+$media-profile-small: 6.4rem;
+$media-profile-large: 10.0rem;
+$media-font-title: 3.0rem;
+$media-font-title-mobile: 2.0rem;
+$media-font-subtitle: 2.0rem;
+$media-font-subtitle-mobile: 1.5rem;
+$media-font-timestamp: 1.2rem;
+$media-font-text: $font-size;
+
+// MEDIA
+.media {
+    position: relative;
+    @include displayFlex;
+    @include flexSize;
+    @include justifyContentCenter;
+    @include alignItemsCenter;
+    @include flexDirectionColumn;
+    width: 100%;
+    padding: $media-padding;
+    background: $color-grey-100;
+    border: 1px solid $grey_base;
+    @include border-radius($media-border-radius);
+    
+    @media only screen and (min-width: $bp-small) {
+        @include flexDirectionRow;
+        @include alignItemsTop;
+    }
+    
+    // COMPONENTS
+    &__profile {
+        // STATES
+        &--left {
+            @include displayFlex;
+            @include flexSizePlus(0, 0, auto);
+            width: $media-profile-large; height: $media-profile-large;
+            margin-bottom: $media-margin;
+
+            // COMPONENTS
+            img { width: 100%; }
+        }
+        &--right, &--center, &--bottom { @extend .media__profile--left; }
+        
+        // MEDIA QUERIES
+        @media only screen and (min-width: $bp-small) {
+            // STATES
+            &--left {
+                order: -1;
+                width: $media-profile-small; height: $media-profile-small;
+                margin: { bottom: 0; right: $media-margin; };
+            }
+            &--right {
+                order: 1;
+                width: $media-profile-small; height: $media-profile-small;
+                margin: { bottom: 0; left: $media-margin; };
+            }
+            &--center { @include alignSelfCenter; }
+            &--bottom { @include alignSelfEnd; }
+        }
+    }
+    &__content {
+        @include displayFlex;
+        @include flexDirectionColumn;
+        @include flexSize;
+        order: 0;
+        width: 100%;
+        text-align: center;
+        
+        // COMPONENTS
+        &__header {
+            margin-bottom: $media-margin;
+
+            // COMPONENTS
+            &__title {
+                margin-bottom: ($media-margin / 2);
+                color: $font-color;
+                font: { size: $media-font-title; weight: $font-weight-heavy; };
+            }
+            &__subtitle {
+                margin-bottom: ($media-margin / 2);
+                color: rgba($font-color, 0.3);
+                font: { size: $media-font-subtitle; weight: $font-weight-normal; style: italic; };
+            }
+            &__timestamp {
+                color: rgba($font-color, 0.5);
+                font: { size: $media-font-timestamp; weight: $font-weight-light; };
+            }
+        }
+        
+        &__text {
+            line-height: $line-height;
+            color: $font-color;
+            font-size: $media-font-text;
+        }
+        
+        &__footer {
+            margin-top: $media-margin;
+
+            // COMPONENTS
+            .media__share {
+                vertical-align: top;
+                color: $font-color;
+                font: { size: 1.2rem; weight: $font-weight-heavy; };
+            }
+            i {
+                color: map-get($theme-maps, primary);
+                font-size: 2.0rem;
+
+                // STATES
+                &:not(:first-child) { margin-left: $media-margin; }
+                &:hover { color: $font-color; }
+            }
+        }
+        
+        // MEDIA QUERIES
+        @media only screen and (min-width: 480px) {
+            text-align: left;
+            
+            // COMPONENTS
+            &__header {
+                // COMPONENTS
+                &__title { font-size: $media-font-title-mobile; }
+                &__subtitle { font-size: $media-font-subtitle-mobile; }
+            }
+            
+            &__text { font-size: $font-size; }
+        }
+    }
+    
+    .button--close {
+        position: absolute;
+        top: 0; right: 1.0rem;
+        font-size: 2.5rem;
+        color: $font-color;
+        cursor: pointer;
+
+        // STATES
+        &:hover { color: darken($font-color, $darken); }
+    }
+    
+    // STATES
+    &:not(:last-child) { margin-bottom: $media-margin; }
+}
