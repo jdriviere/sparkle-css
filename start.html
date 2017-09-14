@@ -21,8 +21,9 @@
 
     <!-- INTERNAL STYLING -->
     <style>
-        section { padding: calc(5em + 3rem) 0; }
-        
+        section { padding: 5.0em 0; }
+        section:first-child { padding: calc(5.0em + 3.0em) 0; }
+
         [class*='__title'] { color: #9BC2E6; }
         .welcome__text,
         .start__text { line-height: 2em; color: #777; }
@@ -83,7 +84,7 @@
     <!-- WELCOME -->
     <section>
         <div class="container welcome">
-            <h2 class="welcome__title text--center">What is Sparkle?</h2>
+            <h2 class="welcome__title text--centered">What is Sparkle?</h2>
             <p class="welcome__text">
                 Sparkle is a lightweight, responsive, open-source CSS framework created to help
                 Web Designers and Developers create simple, responsive websites and web applications.
@@ -97,8 +98,8 @@
     <!-- FEATURE -->
     <section class="feature">
         <div class="container">
-            <h2 class="text--center">Why Choose Sparkle?</h2>
-            <h3 class="text--center">Because Sparkle is...</h3>
+            <h2 class="text--centered">Why Choose Sparkle?</h2>
+
             <div class="row">
     			<div class="col">
                     <div class="pull--center">
@@ -138,7 +139,7 @@
     <!-- GETTING STARTED -->
     <section>
         <div class="container">
-            <h2 class="start__title text--center">Let's Get Started</h2>
+            <h2 class="start__title text--centered">Let's Get Started</h2>
 
             <p class="start__text">
                 There are 4 ways to get started with the Sparkle framework:<br>
@@ -175,7 +176,7 @@
     <!-- PRE-FOOTER -->
     <section class="end">
         <div class="container contribute">
-            <h2 class="contribute__title text--center">Contributing</h2>
+            <h2 class="contribute__title text--centered">Contributing</h2>
             <p class="contribute__text">
                 You are encouraged to contribute to this project. Simply clone the repository,
                 and come up with new features, bug fixes, etc. and modify the files. Make sure
