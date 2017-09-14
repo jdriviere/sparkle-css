@@ -27,11 +27,10 @@ a {
 	&--bold { font-weight: $font-weight-heavy; }
 	&--thick { font-weight: $font-weight-black; }
 
-	// PLACEMENTS
-	&--left { text-align: left; }
-	&--right { text-align: right; }
-	&--center { text-align: center; }
-	&--justify { text-align: justify; }
+	// ALIGNMENTS
+	@each $type, $alignment in $text-alignment {
+		&--#{$type} { text-align: $alignment; }
+	} // End of LOOP
 
 	// SUPER (Overwrites)
 	&--title { font: { size: 4.0rem; weight: $font-weight-heavy; } }
