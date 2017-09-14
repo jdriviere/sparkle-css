@@ -26,6 +26,8 @@
             padding: 5.0rem;
             border-bottom: 1px solid #DDD;
         }
+        section:last-child > .container { border-bottom: none; }
+
         span.snippet > code {
             padding: 0.2rem;
             vertical-align: bottom;
@@ -757,27 +759,16 @@
                         </p>
 
                         <div class="row">
-                            <div class="col-1-of-1 show-grid">
-                                <h5>Parent</h5>
-
+                            <div class="col show-grid">
                                 <div class="row">
                                     <div class="col-2-of-3 show-grid">
-                                        <h6>1st Child</h6>
-
                                         <div class="row">
-                                            <div class="col show-grid">
-                                                <p class="text--thick">1st GC</p>
-                                            </div>
-
-                                            <div class="col show-grid">
-                                                <p class="text--thick">2nd GC</p>
-                                            </div>
+                                            <div class="col show-grid"></div>
+                                            <div class="col show-grid"></div>
                                         </div>
                                     </div>
 
-                                    <div class="col-1-of-3 show-grid">
-                                        <h6>2nd Child</h6>
-                                    </div>
+                                    <div class="col show-grid"></div>
                                 </div>
                             </div>
                         </div>
@@ -854,50 +845,8 @@
             </div> <!-- END OF CONTAINER -->
         </section> <!-- END OF SECTION (GRIDS) -->
 
-        <!-- MODALS -->
-        <section>
-            <div class="container">
-                <h1>Modals</h1>
-                
-                <div class="section">
-                    <div class="section__block">
-                        <h5 class="section__title">Base</h5>
-                        <p class="section__desc">
-                            Description coming soon...
-                        </p>
-
-                        <button id="modalOpen" class="button button--danger button--medium">
-                            <span><i class="fa fa-plus"></i></span> Open Modal
-                        </button>
-
-                        <div class="modal">
-                            <div class="modal__body">
-                                <div class="modal__close">&times;</div>
-                                <p class="modal__content">This is just a dummy text!</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- CODE -->
-                    <h6>Code:</h6>
-                    <div class="snippet">
-                        <code>
-                            &lt;div class="modal"&gt;<br>
-                                &lt;div class="modal__body"&gt;<br>
-                                    &lt;div class="modal__close"&gt;&times;&lt;/div&gt;<br>
-                                    &lt;p class="modal__content"&gt;<br>
-                                        // Body text goes here<br>
-                                    &lt;/p&gt;<br>
-                                &lt;/div&gt;<br>
-                            &lt;/div&gt;
-                        </code>
-                    </div>
-                </div>
-            </div> <!-- END OF CONTAINER -->
-        </section> <!-- END OF SECTION (MODALS) -->
-
-        <!-- MEDIA -->
-        <section>
+         <!-- MEDIA -->
+         <section>
             <div class="container">
                 <h1>Media</h1>
 
@@ -969,6 +918,48 @@
                 </div>
             </div> <!-- END OF CONTAINER -->
         </section> <!-- END OF SECTION (MEDIA) -->
+
+        <!-- MODALS -->
+        <section>
+            <div class="container">
+                <h1>Modals</h1>
+                
+                <div class="section">
+                    <div class="section__block">
+                        <h5 class="section__title">Base</h5>
+                        <p class="section__desc">
+                            Description coming soon...
+                        </p>
+
+                        <button id="modalOpen" class="button button--danger button--medium">
+                            <span><i class="fa fa-plus"></i></span> Open Modal
+                        </button>
+
+                        <div class="modal">
+                            <div class="modal__body">
+                                <div class="modal__close">&times;</div>
+                                <p class="modal__content">This is just a dummy text!</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- CODE -->
+                    <h6>Code:</h6>
+                    <div class="snippet">
+                        <code>
+                            &lt;div class="modal"&gt;<br>
+                                &lt;div class="modal__body"&gt;<br>
+                                    &lt;div class="modal__close"&gt;&times;&lt;/div&gt;<br>
+                                    &lt;p class="modal__content"&gt;<br>
+                                        // Body text goes here<br>
+                                    &lt;/p&gt;<br>
+                                &lt;/div&gt;<br>
+                            &lt;/div&gt;
+                        </code>
+                    </div>
+                </div>
+            </div> <!-- END OF CONTAINER -->
+        </section> <!-- END OF SECTION (MODALS) -->
 
         <!-- NAVIGATION -->
         <section></section> <!-- END OF SECTION (NAVIGATION) -->
@@ -1414,7 +1405,7 @@
         </section> <!-- END OF SECTION (TYPOGRAPHY) -->
 
         <!-- UTILITIES -->
-        <section></section> <!-- END OF SECTION (UTILITIES) -->
+        <!-- <section></section> END OF SECTION (UTILITIES) -->
     </main>
 
     <!-- FOOTER -->
