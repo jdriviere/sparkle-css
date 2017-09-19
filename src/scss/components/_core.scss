@@ -29,6 +29,7 @@ body {
         size: $font-size;
         weight: $font-weight-light;
     }
+    
     &::-moz-selection {
         background: map-get($theme-maps, primary);
         color: map-get($theme-maps, light);
