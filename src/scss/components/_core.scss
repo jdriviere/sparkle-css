@@ -22,16 +22,19 @@ html {
 body {
     height: 100%;
     line-height: 1.5;
+    background-color: $background-color;
+    color: $font-color;
 	font: {
         family: $font-family-default;
         size: $font-size;
         weight: $font-weight-light;
     }
-	color: $font-color;
+    &::-moz-selection {
+        background: map-get($theme-maps, primary);
+        color: map-get($theme-maps, light);
+    }
+    &::selection {
+        background: map-get($theme-maps, primary);
+        color: map-get($theme-maps, light);
+    }
 }
-
-::-moz-selection {
-    background: map-get($theme-maps, primary);
-    color: map-get($theme-maps, light);
-}
-::selection { @extend ::-moz-selection; }
