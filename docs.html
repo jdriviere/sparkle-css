@@ -135,7 +135,7 @@
                     <div class="snippet">
                         <code>
                             &lt;div class="alert alert--$type"&gt;<br>
-                                // Body goes here...<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;// Body goes here...<br>
                             &lt;/div&gt;
                         </code>
                     </div>
@@ -165,13 +165,12 @@
                     <div class="snippet">
                         <code>
                             &lt;div class="alert alert--$type"&gt;<br>
-                                &lt;h4 class="alert__title"&gt;Alert Title&lt;/h4&gt;<br>
-                                &lt;p class="alert__desc"&gt;Some text description here&lt;/p&gt;<br>
-                                &lt;ul&gt;<br>
-                                    &lt;li class="alert__list"&gt;Some alert list #1&lt;/li&gt;<br>
-                                    &lt;li class="alert__list"&gt;Some alert list #2&lt;/li&gt;<br>
-                                    &lt;li class="alert__list"&gt;Some alert list #3&lt;/li&gt;<br>
-                                &lt;/ul&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;h4 class="alert__title"&gt;Alert Title&lt;/h4&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="alert__desc"&gt;Some text description here&lt;/p&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li class="alert__list"&gt;Alert list item&lt;/li&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>
                             &lt;/div&gt;
                         </code>
                     </div>
@@ -180,12 +179,7 @@
         </section> <!-- END OF SECTION (ALERTS) -->
 
         <!-- ANIMATIONS -->
-        <section>
-            <div class="container">
-                <h1>Animations</h1>
-                <p>Section coming soon</p>
-            </div>
-        </section> <!-- END OF SECTION (ANIMATIONS) -->
+        <section></section> <!-- END OF SECTION (ANIMATIONS) -->
 
         <!-- BUTTONS -->
         <section>
@@ -443,27 +437,73 @@
                     <div class="section__block">
                         <h5 class="section__title">Base</h5>
                         <p class="section__desc">
-                            Description coming soon...
+                            Sparkle offers the possibility to include many elements into one component
+                            called <span class="snippet"><code>card</code></span>. In it, the user can
+                            include titles, subtitles, captions, images, and even links and buttons--all
+                            presented in the most elegant and minimalist way.
                         </p>
 
-                        <div class="card">
-                            <div class="card__header">
-                                <p class="card__header__title">Title</p>
-                                <p class="card__header__subtitle">Subtitle</p>
+                        <div class="row">
+                            <div class="col-1-of-3">
+                                <div class="card">
+                                    <div class="card__header">
+                                        <p class="card__header__title">Title</p>
+                                        <p class="card__header__subtitle">Subtitle</p>
+                                    </div>
+        
+                                    <img src="http://via.placeholder.com/500x400">
+        
+                                    <p class="card__caption">Some caption text.</p>
+                                    <div class="card__footer">
+                                        <div class="card__footer__item">
+                                            <a href="#">Option 1</a></p>
+                                        </div>
+                                        <div class="card__footer__item">
+                                            <a href="#">Option 2</a></p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
-                            <img src="http://via.placeholder.com/500x400">
+                            <div class="col-1-of-3">
+                                <div class="card">
+                                    <div class="card__header">
+                                        <p class="card__header__title">Title</p>
+                                        <p class="card__header__subtitle">Subtitle</p>
+                                    </div>
+        
+                                    <img src="http://via.placeholder.com/500x400">
+        
+                                    <p class="card__caption">Some caption text.</p>
+                                    <div class="card__footer">
+                                        <div class="card__footer__item">
+                                            <a href="#">Option 1</a></p>
+                                        </div>
+                                        <div class="card__footer__item">
+                                            <a href="#">Option 2</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-                            <p class="card__caption">Some caption text.</p>
-                            <div class="card__footer">
-                                <div class="card__footer__item">
-                                    <a href="#"><i class="fa fa-github"></i> Github</a></p>
-                                </div>
-                                <div class="card__footer__item">
-                                    <a href="#"><i class="fa fa-facebook"></i> Facebook</a></p>
-                                </div>
-                                <div class="card__footer__item">
-                                    <a href="#"><i class="fa fa-google"></i> Google</a></p>
+                            <div class="col-1-of-3">
+                                <div class="card">
+                                    <div class="card__header">
+                                        <p class="card__header__title">Title</p>
+                                        <p class="card__header__subtitle">Subtitle</p>
+                                    </div>
+        
+                                    <img src="http://via.placeholder.com/500x400">
+        
+                                    <p class="card__caption">Some caption text.</p>
+                                    <div class="card__footer">
+                                        <div class="card__footer__item">
+                                            <a href="#">Option 1</a></p>
+                                        </div>
+                                        <div class="card__footer__item">
+                                            <a href="#">Option 2</a></p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -474,63 +514,18 @@
                     <div class="snippet">
                         <code>
                             &lt;div class="card"&gt;<br>
-                                &lt;div class="card__header"&gt;<br>
-                                    &lt;p class="card__header__title"&gt;Title&lt;/p&gt;<br>
-                                    &lt;p class="card__header__subtitle"&gt;Subtitle&lt;/p&gt;<br>
-                                &lt;/div&gt;<br>
-                                <br>
-                                &lt;img class="card__image" src="path/to/image.ext" alt="#"&gt;<br>
-                                &lt;p class="card__caption">Some caption text&lt;/p&gt;<br>
-                                <br>
-                                &lt;div class="card__footer"&gt;<br>
-                                    &lt;div class="card__footer__item"&gt;Some content&lt;/div&gt;<br>
-                                    &lt;div class="card__footer__item"&gt;Some content&lt;/div&gt;<br>
-                                &lt;/div&gt;<br>
-                            &lt;/div&gt;
-                        </code>
-                    </div>
-                </div>
-
-                <!-- STYLIZED -->
-                <div class="section">
-                    <div class="section__block">
-                        <h5 class="section__title">Shadow-Box</h5>
-                        <p class="section__desc">
-                            You can also stylize the cards too, by adding
-                            <span class="snippet"><code>card--shadow-box</code></span>
-                            to the card's class list.
-                        </p>
-
-                        <div class="card card--shadow-box">
-                            <div class="card__header">
-                                <p class="card__header__title">Title</p>
-                                <p class="card__header__subtitle">Subtitle</p>
-                            </div>
-
-                            <img src="http://via.placeholder.com/500x400">
-                            
-                            <p class="card__caption">Some caption text.</p>
-
-                            <div class="card__footer">
-                                <div class="card__footer__item">
-                                    <a href="#"><i class="fa fa-github"></i> Github</a></p>
-                                </div>
-                                <div class="card__footer__item">
-                                    <a href="#"><i class="fa fa-facebook"></i> Facebook</a></p>
-                                </div>
-                                <div class="card__footer__item">
-                                    <a href="#"><i class="fa fa-google"></i> Google</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- CODE -->
-                    <h6>Code:</h6>
-                    <div class="snippet">
-                        <code>
-                            &lt;div class="card card--shadow-box"&gt;<br>
-                                // Body goes here<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="card__header"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="card__header__title"&gt;Title&lt;/p&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="card__header__subtitle"&gt;Subtitle&lt;/p&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                            <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;img class="card__image" src="path/to/image.ext" alt="#"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="card__caption">Some caption text&lt;/p&gt;<br>
+                            <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="card__footer"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="card__footer__item"&gt;Some content&lt;/div&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="card__footer__item"&gt;Some content&lt;/div&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
                             &lt;/div&gt;
                         </code>
                     </div>
@@ -638,9 +633,9 @@
                     <div class="snippet">
                         <code>
                             &lt;select class="input__select"&gt;<br>
-                                &lt;option value="valueA"&gt;Option 1&lt;/option&gt;<br>
-                                &lt;option value="valueB"&gt;Option 2&lt;/option&gt;<br>
-                                ...<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="valueA"&gt;Option 1&lt;/option&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="valueB"&gt;Option 2&lt;/option&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;...<br>
                             &lt;/select&gt;
                         </code>
                     </div>
@@ -682,7 +677,7 @@
                             <div class="col show-grid">col 3</div>
                             <div class="col show-grid">col 4</div>
                         </div>
-                        <h1 class="text--center">...</h1>
+                        <h1 class="text--centered">...</h1>
                     </div>
 
                     <!-- CODE -->
@@ -690,9 +685,9 @@
                     <div class="snippet">
                         <code>
                             &lt;div class="row"&gt;<br>
-                                &lt;div class="col"&gt;<br>
-                                    // Body of code<br>
-                                &lt;/div&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Body of code<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
                             &lt;/div&gt;
                             <br>...
                         </code>
@@ -734,13 +729,13 @@
                     <div class="snippet">
                         <code>
                             &lt;div class="row"&gt;<br>
-                                &lt;div class="col-11-of-12"&gt;<br>
-                                    // Body of code<br>
-                                &lt;/div&gt;<br>
-                                <br>
-                                &lt;div class="col-1-of-12"&gt;<br>
-                                    // Body of code<br>
-                                &lt;/div&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-11-of-12"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Body of code<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                            <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-1-of-12"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Body of code<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
                             &lt;/div&gt;
                             <br>...
                         </code>
@@ -776,25 +771,25 @@
                     <div class="snippet">
                         <code>
                             &lt;div class="row"&gt;<br>
-                                &lt;div class="col-1-of-1"&gt;<br>
-                                    &lt;div class="row"&gt;<br>
-                                        &lt;div class="col-2-of-3"&gt;<br>
-                                            &lt;div class="row"&gt;<br>
-                                                &lt;div class="col"&gt;<br>
-                                                    // Body of code<br>
-                                                &lt;/div&gt;<br>
-                                                
-                                                &lt;div class="col"&gt;<br>
-                                                    // Body of code<br>
-                                                &lt;/div&gt;<br>
-                                            &lt;/div&gt;<br>
-                                        &lt;/div&gt;<br>
-    
-                                        &lt;div class="col-1-of-3 show-grid"&gt;<br>
-                                            // Body of code<br>
-                                        &lt;/div&gt;<br>
-                                    &lt;/div&gt;<br>
-                                &lt;/div&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-1-of-1"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="row"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-2-of-3"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="row"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Body of code<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                            <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Body of code<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                            <br>    
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-1-of-3 show-grid"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Body of code<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
                             &lt;/div&gt;<br>
                         </code>
                     </div>
@@ -830,11 +825,11 @@
                     <div class="snippet">
                         <code>
                             &lt;div class="row row--no-gutter"&gt;<br>
-                                // Body of code<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;// Body of code<br>
                             &lt;/div&gt;<br>
                             <br>
                             &lt;div class="row row--no-padding"&gt;<br>
-                                // Body of code<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;// Body of code<br>
                             &lt;/div&gt;<br>
                         </code>
                     </div>
@@ -888,27 +883,30 @@
                     <div class="snippet">
                         <code>
                             &lt;div class="media"&gt;<br>
-                                &lt;div class="media__profile--left"&gt;<br>
-                                    &lt;img src="#" alt="#"&gt;<br>
-                                &lt;/div&gt;<br>
-                                &lt;div class="media__content"&gt;<br>
-                                    &lt;div class="media__content__header"&gt;<br>
-                                        &lt;p class="media__content__header__title">John Smith&lt;/p&gt;<br>
-                                        &lt;p class="media__content__header__subtitle">Graphic Designer&lt;/p&gt;<br>
-                                        &lt;p class="media__content__header__timestamp">05 Sept 2017 at 07:30pm&lt;/p&gt;<br>
-                                    &lt;/div&gt;<br>
-                                    &lt;p class="media__content__text"&gt;<br>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        Totam asperiores ut earum dolore similique deserunt iusto
-                                        temporibus quaerat officiis illum perspiciatis eum optio,
-                                        iste magni rem adipisci quasi sit delectus?<br>
-                                    &lt;/p&gt;<br>
-                                    &lt;div class="media__content__footer"&gt;<br>
-                                        &lt;i class="fa fa-reply">&lt;/i&gt;<br>
-                                        &lt;i class="fa fa-retweet">&lt;/i&gt;<br>
-                                        &lt;i class="fa fa-heart">&lt;/i&gt;<br>
-                                    &lt;/div&gt;<br>
-                                &lt;/div&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="media__profile--left"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="#" alt="#"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                            <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="media__content"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="media__content__header"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="media__content__header__title">John Smith&lt;/p&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="media__content__header__subtitle">Graphic Designer&lt;/p&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="media__content__header__timestamp">05 Sept 2017 at 07:30pm&lt;/p&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                            <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="media__content__text"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                                                                    Totam asperiores ut earum dolore similique deserunt iusto
+                                                                                                    temporibus quaerat officiis illum perspiciatis eum optio,
+                                                                                                    iste magni rem adipisci quasi sit delectus?<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;<br>
+                            <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="media__content__footer"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i class="fa fa-reply">&lt;/i&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i class="fa fa-retweet">&lt;/i&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i class="fa fa-heart">&lt;/i&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
                             &lt;/div&gt;<br>
                         </code>
                     </div>
@@ -945,12 +943,12 @@
                     <div class="snippet">
                         <code>
                             &lt;div class="modal"&gt;<br>
-                                &lt;div class="modal__body"&gt;<br>
-                                    &lt;div class="modal__close"&gt;&times;&lt;/div&gt;<br>
-                                    &lt;p class="modal__content"&gt;<br>
-                                        // Body text goes here<br>
-                                    &lt;/p&gt;<br>
-                                &lt;/div&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="modal__body"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="modal__close"&gt;&times;&lt;/div&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="modal__content"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Body text goes here<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
                             &lt;/div&gt;
                         </code>
                     </div>
@@ -1013,37 +1011,37 @@
                     <div class="snippet">
                         <code>
                             &lt;table class="table"&gt;<br>
-                                &lt;thead&gt;<br>
-                                    &lt;tr&gt;<br>
-                                        &lt;th&gt;ID&lt;/th&gt;<br>
-                                        &lt;th&gt;First Name&lt;/th&gt;<br>
-                                        &lt;th&gt;Last Name&lt;/th&gt;<br>
-                                        &lt;th&gt;Age&lt;/th&gt;<br>
-                                    &lt;/tr&gt;<br>
-                                &lt;/thead&gt;<br>
-                                <br>
-                                &lt;tbody&gt;
-                                    &lt;tr&gt;<br>
-                                        &lt;td data-label="ID"&gt;1&lt;/td&gt;<br>
-                                        &lt;td data-label="First Name"&gt;John&lt;/td&gt;<br>
-                                        &lt;td data-label="Last Name"&gt;Smith&lt;/td&gt;<br>
-                                        &lt;td data-label="Age"&gt;24&lt;/td&gt;<br>
-                                    &lt;/tr&gt;<br>
-                                    <br>
-                                    &lt;tr&gt;<br>
-                                        &lt;td data-label="ID"&gt;2&lt;/td&gt;<br>
-                                        &lt;td data-label="First Name"&gt;John&lt;/td&gt;<br>
-                                        &lt;td data-label="Last Name"&gt;Smith&lt;/td&gt;<br>
-                                        &lt;td data-label="Age"&gt;24&lt;/td&gt;<br>
-                                    &lt;/tr&gt;<br>
-                                    <br>
-                                    &lt;tr&gt;<br>
-                                        &lt;td data-label="ID"&gt;3&lt;/td&gt;<br>
-                                        &lt;td data-label="First Name"&gt;John&lt;/td&gt;<br>
-                                        &lt;td data-label="Last Name"&gt;Smith&lt;/td&gt;<br>
-                                        &lt;td data-label="Age"&gt;24&lt;/td&gt;<br>
-                                    &lt;/tr&gt;<br>
-                                &lt;/tbody&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;thead&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;ID&lt;/th&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;First Name&lt;/th&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Last Name&lt;/th&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Age&lt;/th&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/thead&gt;<br>
+                            <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tbody&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td data-label="ID"&gt;1&lt;/td&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td data-label="First Name"&gt;John&lt;/td&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td data-label="Last Name"&gt;Smith&lt;/td&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td data-label="Age"&gt;24&lt;/td&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                            <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td data-label="ID"&gt;2&lt;/td&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td data-label="First Name"&gt;John&lt;/td&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td data-label="Last Name"&gt;Smith&lt;/td&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td data-label="Age"&gt;24&lt;/td&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                            <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td data-label="ID"&gt;3&lt;/td&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td data-label="First Name"&gt;John&lt;/td&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td data-label="Last Name"&gt;Smith&lt;/td&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td data-label="Age"&gt;24&lt;/td&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tbody&gt;<br>
                             &lt;/table&gt;
                         </code>
                     </div>
@@ -1104,7 +1102,7 @@
                     <div class="snippet">
                         <code>
                             &lt;table class="table table--default"&gt;<br>
-                                // Body of table<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;// Body of table<br>
                             &lt;/table&gt;
                         </code>
                     </div>
@@ -1155,7 +1153,7 @@
                     <div class="snippet">
                         <code>
                             &lt;table class="table table--striped"&gt;<br>
-                                // Body of table<br>  
+                            &nbsp;&nbsp;&nbsp;&nbsp;// Body of table<br>  
                             &lt;/table&gt;
                         </code>
                     </div>
@@ -1206,7 +1204,7 @@
                     <div class="snippet">
                         <code>
                             &lt;table class="table table--bordered"&gt;<br>
-                                // Body of table<br>  
+                            &nbsp;&nbsp;&nbsp;&nbsp;// Body of table<br>  
                             &lt;/table&gt;
                         </code>
                     </div>
@@ -1258,7 +1256,7 @@
                     <div class="snippet">
                         <code>
                             &lt;table class="table [table--$style] table--hoverable"&gt;<br>
-                                // Body of table<br>  
+                            &nbsp;&nbsp;&nbsp;&nbsp;// Body of table<br>  
                             &lt;/table&gt;
                         </code>
                     </div>
