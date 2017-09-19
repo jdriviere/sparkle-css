@@ -47,13 +47,13 @@ body {
   font-weight: 300;
 }
 
-body::-moz-selection {
-  background: #ADD2E6;
+::-moz-selection {
+  background: #9BC2E6;
   color: #F4F4F8;
 }
 
-body::selection {
-  background: #ADD2E6;
+::selection {
+  background: #9BC2E6;
   color: #F4F4F8;
 }
 
