@@ -179,7 +179,7 @@
         </section> <!-- END OF SECTION (ALERTS) -->
 
         <!-- ANIMATIONS -->
-        <section></section> <!-- END OF SECTION (ANIMATIONS) -->
+        <!-- <section></section> END OF SECTION (ANIMATIONS) -->
 
         <!-- BUTTONS -->
         <section>
@@ -533,116 +533,6 @@
             </div> <!-- END OF CONTAINER -->
         </section> <!-- END OF SECTION (CARDS) -->
 
-        <!-- FORMS -->
-        <section>
-            <div class="container">
-                <h1>Inputs</h1>
-                
-                <!-- TEXT -->
-                <div class="section">
-                    <div class="section__block">
-                        <h5 class="section__title">Input</h5>
-                        <p class="section__desc">
-                            Sparkle offers the possibility to stylize inputs. Just add
-                            <span class="snippet"><code>input</code></span> to the class list of
-                            the &lt;input&gt; you wish to stylize. You can also add
-                            <span class="snippet"><code>input__label</code></span>
-                            to the &lt;label&gt; tag, if you wish to add one.
-                        </p>
-
-                        <div class="row">
-                            <div class="col">
-                                <label for="input1" class="input__label">First:</label>
-                                <input type="text" class="input" id="input1" placeholder="First">
-                            </div>
-                                    
-                            <div class="col">
-                                <label for="input2" class="input__label">Second:</label>
-                                <input type="text" class="input" id="input2" placeholder="Second">
-                            </div>
-                        </div>
-                        
-                        <div class="row">
-                            <div class="col">
-                                <label for="input3" class="input__label">Third:</label>
-                                <input type="text" class="input" id="input3" placeholder="Third">
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- CODE -->
-                    <h6>Code:</h6>
-                    <div class="snippet">
-                        <code>
-                            &lt;label for="input" class="input__label"&gt;Input:&lt;/label&gt;<br>
-                            &lt;input type="text" class="input" id="input" placeholder="Valid input"&gt;
-                        </code>
-                    </div>
-                </div>
-
-                <!-- TEXTAREA -->
-                <div class="section">
-                    <div class="section__block">
-                        <h5 class="section__title">Text Area</h5>
-                        <p class="section__desc">
-                            Add a <span class="snippet"><code>input__textarea</code></span> class to the
-                            &lt;textarea&gt; you wish to stylize.
-                        </p>
-
-                        <div class="row">
-                            <div class="col">
-                                <label for="textarea" class="input__label">Message:</label>
-                                <textarea class="input__textarea" id="textarea" placeholder="Type text here"></textarea>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- CODE -->
-                    <h6>Code:</h6>
-                    <div class="snippet">
-                        <code>
-                            &lt;textarea class="input__textarea" placeholder="Type text here"&gt;&lt;/textarea&gt;
-                        </code>
-                    </div>
-                </div>
-
-                <!-- SELECTION -->
-                <div class="section">
-                    <div class="section__block">
-                        <h5 class="section__title">Selection</h5>
-                        <p class="section__desc">
-                            Add a <span class="snippet"><code>input__select</code></span> class to the
-                            &lt;select&gt; tag you wish to stylize.
-                        </p>
-
-                        <div class="row">
-                            <div class="col">
-                                <label for="select" class="input__label">Select:</label>
-                                <select class="input__select" id="select">
-                                    <option value="" selected disabled>Choose an option...</option>
-                                    <option value="A">Choose A</option>
-                                    <option value="B">Choose B</option>
-                                    <option value="C">Choose C</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- CODE -->
-                    <h6>Code:</h6>
-                    <div class="snippet">
-                        <code>
-                            &lt;select class="input__select"&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="valueA"&gt;Option 1&lt;/option&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="valueB"&gt;Option 2&lt;/option&gt;<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;...<br>
-                            &lt;/select&gt;
-                        </code>
-                    </div>
-                </div>
-            </div> <!-- END OF CONTAINER -->
-        </section> <!-- END OF SECTION (INPUTS) -->
-
         <!-- GRIDS -->
         <section>
             <div class="container">
@@ -721,7 +611,7 @@
                             <div class="col-9-of-12 show-grid">9</div>
                             <div class="col-3-of-12 show-grid">3</div>
                         </div>
-                        <h1 class="text--center">...</h1>
+                        <h1 class="text--centered">...</h1>
                     </div>
 
                     <!-- CODE -->
@@ -836,6 +726,116 @@
                 </div>
             </div> <!-- END OF CONTAINER -->
         </section> <!-- END OF SECTION (GRIDS) -->
+
+        <!-- INPUTS -->
+        <section>
+            <div class="container">
+                <h1>Inputs</h1>
+                
+                <!-- TEXT -->
+                <div class="section">
+                    <div class="section__block">
+                        <h5 class="section__title">Input</h5>
+                        <p class="section__desc">
+                            Sparkle offers the possibility to stylize inputs. Just add
+                            <span class="snippet"><code>input</code></span> to the class list of
+                            the &lt;input&gt; you wish to stylize. You can also add
+                            <span class="snippet"><code>input__label</code></span>
+                            to the &lt;label&gt; tag, if you wish to add one.
+                        </p>
+
+                        <div class="row">
+                            <div class="col">
+                                <label for="input1" class="input__label">First:</label>
+                                <input type="text" class="input" id="input1" placeholder="First">
+                            </div>
+                                    
+                            <div class="col">
+                                <label for="input2" class="input__label">Second:</label>
+                                <input type="text" class="input" id="input2" placeholder="Second">
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col">
+                                <label for="input3" class="input__label">Third:</label>
+                                <input type="text" class="input" id="input3" placeholder="Third">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CODE -->
+                    <h6>Code:</h6>
+                    <div class="snippet">
+                        <code>
+                            &lt;label for="input" class="input__label"&gt;Input:&lt;/label&gt;<br>
+                            &lt;input type="text" class="input" id="input" placeholder="Valid input"&gt;
+                        </code>
+                    </div>
+                </div>
+
+                <!-- TEXTAREA -->
+                <div class="section">
+                    <div class="section__block">
+                        <h5 class="section__title">Text Area</h5>
+                        <p class="section__desc">
+                            Add a <span class="snippet"><code>input__textarea</code></span> class to the
+                            &lt;textarea&gt; you wish to stylize.
+                        </p>
+
+                        <div class="row">
+                            <div class="col">
+                                <label for="textarea" class="input__label">Message:</label>
+                                <textarea class="input__textarea" id="textarea" placeholder="Type text here"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CODE -->
+                    <h6>Code:</h6>
+                    <div class="snippet">
+                        <code>
+                            &lt;textarea class="input__textarea" placeholder="Type text here"&gt;&lt;/textarea&gt;
+                        </code>
+                    </div>
+                </div>
+
+                <!-- SELECTION -->
+                <div class="section">
+                    <div class="section__block">
+                        <h5 class="section__title">Selection</h5>
+                        <p class="section__desc">
+                            Add a <span class="snippet"><code>input__select</code></span> class to the
+                            &lt;select&gt; tag you wish to stylize.
+                        </p>
+
+                        <div class="row">
+                            <div class="col">
+                                <label for="select" class="input__label">Select:</label>
+                                <select class="input__select" id="select">
+                                    <option value="" selected disabled>Choose an option...</option>
+                                    <option value="A">Choose A</option>
+                                    <option value="B">Choose B</option>
+                                    <option value="C">Choose C</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CODE -->
+                    <h6>Code:</h6>
+                    <div class="snippet">
+                        <code>
+                            &lt;select class="input__select"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="valueA"&gt;Option 1&lt;/option&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="valueB"&gt;Option 2&lt;/option&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;...<br>
+                            &lt;/select&gt;
+                        </code>
+                    </div>
+                </div>
+            </div> <!-- END OF CONTAINER -->
+        </section> <!-- END OF SECTION (INPUTS) -->      
 
          <!-- MEDIA -->
          <section>
@@ -1309,7 +1309,7 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="text--center">
+    <footer class="text--centered">
         <p>
             Designed with <span><i class="fa fa-heart animate--pulse"></i></span> by <a href="https://jdriviere.github.io">J. D. Riviere</a> using <a href="https://github.com/jdriviere/sparkle-css">Sparkle</a> &copy; 2017
         </p>
