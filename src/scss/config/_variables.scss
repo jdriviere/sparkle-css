@@ -209,12 +209,10 @@ $bp-fullhd:					1200px; // Desktop - 1200px
 // =================================
 // FONTS VARIABLES
 // =================================
-$font-family-default:		"Lato", sans-serif;
-$font-family-secondary:		"Helvetica Neue", Helvetica, "Open Sans", Arial, sans-serif;
+$font-family:       		"Lato", "Helvetica Neue", Helvetica, "Open Sans", Arial, sans-serif;
 $font-size:					1.5rem !default; // Changes base rem size to 15px
 $font-color:                $color-grey-25 !default;
 $font-color-link:           map-get($theme-maps, primary) !default;
-$font-color-link-hover:     map-get($theme-maps, secondary) !default;
 $font-weight-light:			300 !default;
 $font-weight-normal:		400 !default;
 $font-weight-heavy:			700 !default;
@@ -232,53 +230,3 @@ $index-normal:				1;
 $index-high:				5;
 $index-higher:				10;
 $index-highest:				9999;
-
-// =================================
-// GRID VARIABLES
-// =================================
-$grid-name:					"col" !default; // Default name of grid columns
-$grid-columns:				12 !default; // Default columns is 12
-$grid-gutter:				1.5rem !default; // Default gutter is 15px
-$grid-padding:              1.5rem !default; // Default padding is 15px
-
-// =================================
-// ALERTS VARIABLES
-// =================================
-$alert-color-maps: (
-    default:                ($grey_base, $black_base),
-    success:                ($green_base, $white_base),
-    warning:                ($yellow_base, $black_base),
-    danger:                 ($red_base, $white_base),
-    info:                   ($blue_base, $white_base)
-) !default;
-$alert-font-size:			$font-size !default; // Default font size is 15px
-$alert-margin:              1.5rem !default; // Default margin is 15px
-$alert-padding:             1.5rem !default; // Default padding is 15px
-
-// =================================
-// CARD VARIABLES
-// =================================
-$card-padding:              1.0rem !default;
-$card-border-color:         $grey_base !default;
-$card-font-size:            $font-size !default;
-$card-font-color:           $color-grey-50 !default;
-
-// =================================
-// INPUT VARIABLES
-// =================================
-$input-width:               100% !default;
-$input-height:              4.0rem !default; // Default height is 40px
-$input-padding:             1.0rem !default;
-$input-font-size:           $font-size !default; // Default font-size is 15px
-$input-font-color:          $font-color;
-$input-border-color:        map-get($theme-maps, default);
-
-// ================================
-// TEXT VARIABLES
-// ================================
-$text-alignment: (
-	left:                   left,
-	right:                  right,
-	centered:               center,
-	justified:              justify
-) !default;

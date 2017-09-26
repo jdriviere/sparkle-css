@@ -4,6 +4,13 @@
 @import "../config/_variables";
 @import "../config/_mixins";
 
+// VARIABLES
+$card-padding:              1.0rem !default;
+$card-border-color:         $grey_base !default;
+$card-font-size:            $font-size !default;
+$card-font-color:           $color-grey-50 !default;
+
+// CARDS
 .card {
     width: 100%;
     border: 1px solid $card-border-color;

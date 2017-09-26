@@ -1,8 +1,16 @@
 /* ===================================================*/
-/* FORMS
+/* INPUTS
 /* ===================================================*/
 @import "../config/_variables";
 @import "../config/_mixins";
+
+// VARIABLES
+$input-width:               100% !default;
+$input-height:              4.0rem !default; // Default height is 40px
+$input-padding:             1.0rem !default;
+$input-font-size:           $font-size !default; // Default font-size is 15px
+$input-font-color:          $font-color;
+$input-border-color:        map-get($theme-maps, default);
 
 // MIXINS
 @mixin input-control {
@@ -47,7 +55,7 @@
     &:not(:last-child) { margin-bottom: 1.5rem; }
 } // End of Create-Input
 
-// FORMS
+// INPUTS
 .input {
     @include create-input;
     position: relative;

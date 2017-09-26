@@ -4,6 +4,12 @@
 @import "../config/_variables";
 @import "../config/_mixins";
 
+// VARIABLES
+$grid-name:					"col" !default; // Default name of grid columns
+$grid-columns:				12 !default; // Default columns is 12
+$grid-gutter:				1.5rem !default; // Default gutter is 15px
+$grid-padding:              1.5rem !default; // Default padding is 15px
+
 // MIXINS
 @mixin rowCol {
     -webkit-box-orient: vertical;
