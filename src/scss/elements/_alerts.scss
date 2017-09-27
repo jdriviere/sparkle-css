@@ -7,17 +7,17 @@
 // VARIABLES
 $alert-color-maps: (
     default:                ($grey_base, $black_base),
+    info:                   ($blue_base, $white_base),
     success:                ($green_base, $white_base),
     warning:                ($yellow_base, $black_base),
-    danger:                 ($red_base, $white_base),
-    info:                   ($blue_base, $white_base)
+    danger:                 ($red_base, $white_base)
 ) !default;
 $alert-font-size:			$font-size !default; // Default font size is 15px
 $alert-margin:              1.5rem !default; // Default margin is 15px
 $alert-padding:             1.5rem !default; // Default padding is 15px
 
 // MIXINS
-@mixin alert {
+@mixin create-alert {
     display: block;
     width: 100%;
     margin: 0;
@@ -26,22 +26,20 @@ $alert-padding:             1.5rem !default; // Default padding is 15px
     @include box-shadow(5, 5, 7);
     @include border-radius-cust(0, 5, 5, 0);
 
-    &:not(:first-child) {
-        margin-top: $alert-margin;
-    }
+    &:not(:first-child) { margin-top: $alert-margin; }
 } // End of Alert
 
 // ALERTS
 .alert {
     // Create alert block
-    @include alert;
+    @include create-alert;
 
     // Loop through each alert color-map and fetch info
     @each $type, $color in $alert-color-maps {
         $bgcolor: nth($color, 1);
         $fontcolor: nth($color, 2);
         
-        // STYLES
+        // STATES
         &--#{$type} { background-color: $bgcolor; color: $fontcolor !important; }
     } // End of EACH-LOOP
 

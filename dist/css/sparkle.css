@@ -935,6 +935,11 @@ code {
   color: #111516 !important;
 }
 
+.alert--info {
+  background-color: #1982C4;
+  color: #F4F4F8 !important;
+}
+
 .alert--success {
   background-color: #8AC926;
   color: #F4F4F8 !important;
@@ -947,11 +952,6 @@ code {
 
 .alert--danger {
   background-color: #FF595E;
-  color: #F4F4F8 !important;
-}
-
-.alert--info {
-  background-color: #1982C4;
   color: #F4F4F8 !important;
 }
 
@@ -1764,6 +1764,69 @@ code {
   -moz-transition: transform 0.3s ease-in;
   -ms-tranition: transform 0.3s ease-in;
   transition: transform 0.3s ease-in;
+}
+
+/* ===================================================*/
+/* TAGS
+/* ===================================================*/
+.tag {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-flex: auto;
+  -ms-flex: auto;
+  flex: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #E2E2E2;
+  color: #111516;
+  font-size: 12px;
+  border-radius: 0.3rem;
+}
+
+.tag--primary {
+  background-color: #ADD2E6;
+  color: #F4F4F8 !important;
+}
+
+.tag--secondary {
+  background-color: #9BC2E6;
+  color: #F4F4F8 !important;
+}
+
+.tag--info {
+  background-color: #1982C4;
+  color: #F4F4F8 !important;
+}
+
+.tag--success {
+  background-color: #8AC926;
+  color: #F4F4F8 !important;
+}
+
+.tag--warning {
+  background-color: #FFCA3A;
+  color: #111516 !important;
+}
+
+.tag--danger {
+  background-color: #FF595E;
+  color: #F4F4F8 !important;
+}
+
+.tag--light {
+  background-color: #F4F4F8;
+  color: #111516 !important;
+}
+
+.tag--dark {
+  background-color: #111516;
+  color: #F4F4F8 !important;
 }
 
 /* ===================================================*/
