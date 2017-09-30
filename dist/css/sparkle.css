@@ -1078,6 +1078,41 @@ code {
   border-color: transparent;
 }
 
+.button--info {
+  background-color: #1982C4;
+  color: #F4F4F8 !important;
+  border: 1px solid transparent;
+}
+
+.button--info:hover, .button--info:focus, .button--info:active {
+  background-color: #156ca2;
+  border-color: transparent;
+}
+
+.button--info--outline {
+  background-color: transparent;
+  color: #1982C4 !important;
+  border: 1px solid #1982C4;
+}
+
+.button--info--outline:hover, .button--info--outline:focus, .button--info--outline:active {
+  background-color: #1982C4;
+  color: #F4F4F8 !important;
+  border-color: transparent;
+}
+
+.button--info--ghost {
+  background-color: #F4F4F8;
+  color: #1982C4 !important;
+  border: 1px solid #E7E7E7;
+}
+
+.button--info--ghost:hover, .button--info--ghost:focus, .button--info--ghost:active {
+  background-color: #1982C4;
+  color: #F4F4F8 !important;
+  border-color: transparent;
+}
+
 .button--success {
   background-color: #8AC926;
   color: #F4F4F8 !important;
