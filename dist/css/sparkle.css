@@ -990,13 +990,13 @@ code {
   font-size: 1.5rem;
   font-weight: 400;
   color: #111516;
-  border: 1px solid #676A6E;
+  border: 1px solid rgba(17, 21, 22, 0.3);
   border-radius: 0.3em;
   cursor: pointer;
 }
 
 .button:hover {
-  border-color: #111516;
+  border-color: rgba(17, 21, 22, 0.7);
 }
 
 .button:disabled, .button.button--disabled {

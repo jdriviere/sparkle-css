@@ -21,8 +21,7 @@ $button-margin:                1.0rem !default; // Default bottom margin is 10px
 $button-line-height:           $line-height !default; // Default line-height is 1.5 times
 $button-font-size:             $font-size !default; // Default font-size is HTML default font-size
 $button-letter-space:          0.2rem !default; // Default letter-spacing is 2px
-$button-padding-vertical:      0.5rem !default; // Default top/bottom padding is 5px
-$button-padding-horizontal:    1.5rem !default; // Default left/right padding is 15px
+$button-padding:               0.5rem 1.5rem !default; // Default top/bottom padding is 5px and left/right is 15px
 $button-border-radius:         0.3em !default; // Default border-radius is 3px, but varies based on parent font-size
 
 // =================================
@@ -34,18 +33,18 @@ $button-border-radius:         0.3em !default; // Default border-radius is 3px, 
     outline: none;
     background: none;
     margin-bottom: $button-margin;
-    padding: $button-padding-vertical $button-padding-horizontal;
+    padding: $button-padding;
     line-height: $button-line-height;
     vertical-align: center;
     text: { align: center; decoration: none; }
     font: { size: $button-font-size; weight: $font-weight-normal; };
     color: $black_base;
-    border: 1px solid $black_l2;
+    border: 1px solid rgba($black_base, 0.3);
     border-radius: $button-border-radius;
     cursor: pointer;
 
     // STATES
-    &:hover { border-color: $black_base; }
+    &:hover { border-color: rgba($black_base, 0.7); }
     &:disabled, &.button--disabled {
     	@include disable-select;
     	opacity: 0.3;
