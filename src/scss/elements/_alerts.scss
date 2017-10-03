@@ -27,7 +27,7 @@ $alert-padding:             1.5rem !default; // Default padding is 15px
     @include border-radius-cust(0, 5, 5, 0);
 
     &:not(:first-child) { margin-top: $alert-margin; }
-} // End of Alert
+} // End of Create-Alert
 
 // ALERTS
 .alert {

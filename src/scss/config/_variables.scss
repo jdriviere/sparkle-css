@@ -210,7 +210,8 @@ $bp-fullhd:					1200px; // Desktop - 1200px
 // =================================
 // FONTS VARIABLES
 // =================================
-$font-family:       		"Lato", "Helvetica Neue", Helvetica, "Open Sans", Arial, sans-serif;
+$font-family:       		"Lato", "Helvetica Neue", Helvetica, "Open Sans", Arial, sans-serif !default;
+$font-special:              "FontAwesome" !default;
 $font-size:					1.5rem !default; // Changes base rem size to 15px
 $font-color:                $color-grey-25 !default;
 $font-color-link:           map-get($theme-maps, primary) !default;
