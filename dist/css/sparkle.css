@@ -1751,6 +1751,32 @@ code {
 }
 
 /* ===================================================*/
+/* MENU
+/* ===================================================*/
+.menu {
+  padding: 0 !important;
+  margin: 0 !important;
+  background: #F4F4F8;
+  list-style: none;
+}
+
+.menu__tag {
+  display: block;
+  margin-bottom: 1.0rem;
+  color: #E2E2E2;
+}
+
+.menu__item {
+  display: block;
+  padding: 1.0rem;
+  color: #404040;
+}
+
+.menu__item:hover {
+  background-color: #F4F4F8;
+}
+
+/* ===================================================*/
 /* MODALS
 /* ===================================================*/
 .modal {
