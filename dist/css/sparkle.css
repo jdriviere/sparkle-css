@@ -409,7 +409,7 @@ code {
 .blockquote {
   position: relative;
   display: block;
-  width: 96%;
+  width: 100%;
   margin: 2rem auto;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -1754,26 +1754,43 @@ code {
 /* MENU
 /* ===================================================*/
 .menu {
-  padding: 0 !important;
-  margin: 0 !important;
-  background: #F4F4F8;
-  list-style: none;
+  padding: 1.0rem;
+  margin: 0;
 }
 
 .menu__tag {
   display: block;
-  margin-bottom: 1.0rem;
+  font-size: 1.8rem;
+  font-weight: 400;
   color: #E2E2E2;
 }
 
-.menu__item {
+.menu__tag:not(:first-of-type) {
+  margin-top: 1.0rem;
+}
+
+.menu__list {
+  list-style: none;
+}
+
+.menu__list__item {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.menu__list__item a {
   display: block;
-  padding: 1.0rem;
+  padding: 0.5rem 1.0rem;
   color: #404040;
 }
 
-.menu__item:hover {
+.menu__list__item a:hover {
   background-color: #F4F4F8;
+}
+
+.menu__list__item .menu__list {
+  margin: 0.5rem 1.0rem;
+  border-left: 2px solid #E2E2E2;
 }
 
 /* ===================================================*/

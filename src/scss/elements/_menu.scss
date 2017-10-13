@@ -6,7 +6,9 @@
 
 // VARIABLES
 $menu-background:           $white_base !default;
-$menu-background-item:      $grey_base !default;
+$menu-background-hover:     map-get($theme-maps, primary) !default;
+$menu-font-hover:           map-get($theme-maps, light) !default;
+$menu-border-color:         $grey_base !default;
 $menu-font-size-tag:        1.8rem !default;
 $menu-font-weight-tag:      $font-weight-normal !default;
 $menu-font-color-tag:       $grey_base !default;
@@ -16,10 +18,8 @@ $menu-font-color-item:      $font-color !default;
 
 // MIXINS
 @mixin create-menu {
-    padding: 0 !important;
-    margin: 0 !important;
-    background: $menu-background;
-    list-style: none;
+    padding: 1.0rem;
+    margin: 0;
 } // End of Create-Menu
 
 // MENU
@@ -29,16 +29,44 @@ $menu-font-color-item:      $font-color !default;
     // COMPONENTS
     &__tag {
         display: block;
-        margin-bottom: 1.0rem;
+        font: { size: $menu-font-size-tag; weight: $menu-font-weight-tag; };
         color: $menu-font-color-tag;
-    }
-    &__item {
-        display: block;
-        padding: 1.0rem;
-        color: $menu-font-color-item;
 
-        // STATES
-        &:hover { background-color: $menu-background; }
-        &--active {}
+        &:not(:first-of-type) { margin-top: 1.0rem; }
+    }
+    &__list {
+        list-style: none;
+
+        // COMPONENTS
+        &__item {
+            font: { size: $menu-font-size-item; weight: $menu-font-weight-item; };
+
+            // COMPONENTS
+            a {
+                display: block;
+                padding: 0.5rem 1.0rem;
+                color: $menu-font-color-item;
+
+                &:hover { background-color: $white_base; }
+            }
+
+            & .menu__list {
+                margin: 0.5rem 1.0rem;
+                border-left: 2px solid $menu-border-color;
+
+                // COMPONENTS
+                &__item {
+                    // a { margin: 1.5rem; padding-left: 2.0rem; }
+                }
+            }
+
+            // STATES
+            // &:hover {
+            //     background-color: $menu-background-hover;
+
+            //     a { color: $menu-font-hover; }
+            // }
+            // &--active {}
+        }
     }
 }
