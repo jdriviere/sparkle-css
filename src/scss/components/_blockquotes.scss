@@ -23,7 +23,7 @@ $blockquote-padding:        2.0rem !default; // Default padding is 20px
 @mixin create-blockquote {
     position: relative;
     display: block;
-    width: 96%;
+    width: 100%;
     margin: $blockquote-margin auto;
     padding: { top: 0.5rem; bottom: 0.5rem; left: $blockquote-padding; right: 0.5rem; };
     font: { size: $blockquote-font-size; weight: $font-weight-light; };
