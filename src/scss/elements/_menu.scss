@@ -53,19 +53,9 @@ $menu-font-color-item:      $font-color !default;
             & .menu__list {
                 margin: 0.5rem 1.0rem;
                 border-left: 2px solid $menu-border-color;
-
-                // COMPONENTS
-                &__item {
-                    // a { margin: 1.5rem; padding-left: 2.0rem; }
-                }
             }
 
             // STATES
-            // &:hover {
-            //     background-color: $menu-background-hover;
-
-            //     a { color: $menu-font-hover; }
-            // }
             // &--active {}
         }
     }
