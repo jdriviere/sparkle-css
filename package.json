@@ -17,17 +17,17 @@
   },
   "homepage": "https://jdriviere.github.io/sparkle-css",
   "devDependencies": {
-    "browser-sync": "^2.18.12",
+    "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
-    "gulp-clean-css": "^3.7.0",
+    "gulp-clean-css": "^3.9.0",
     "gulp-concat-css": "^2.3.0",
-    "gulp-imagemin": "^3.3.0",
+    "gulp-imagemin": "^3.4.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^3.0.0",
     "imagemin-jpegtran": "^5.0.2",
     "imagemin-optipng": "^5.2.1",
-    "imagemin-svgo": "^5.2.2",
+    "imagemin-svgo": "^5.2.4",
     "pump": "^1.0.2"
   }
 }
