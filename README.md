@@ -11,25 +11,29 @@ A lightweight, open-source, mobile-first CSS framework for easy website designs.
 Welcome and thank you for using Sparkle, a lightweight, responsive, open-source CSS framework created to help Web Designers and Developers create simple, responsive websites. It was developed by J. Djimitry Riviere in late 2016, and continues to be improved upon by its developer. The major key to this framework lies within its ease of use to deliver superb results when designing apps and websites.
 
 ## Getting Started
-There are 4 ways to get started with the Sparkle framework:
-1. Clone your own copy (P.S.: If you wish to contribute to this project, be sure to read description below);
-2. Download the .ZIP file;
-3. Link the latest release directly into your HTML file by inserting the following lines to your HTML file: 
+There are 3 ways to get started with the Sparkle framework:
+1. Clone your own copy via Git;
+```
+https://github.com/jdriviere/sparkle-css.git
+```
+2. Link the latest release directly into your HTML file by inserting the following lines to your HTML file: 
 ```html
 <head>
     <!-- Your links, sources, title, and meta tags here -->
-    <link rel="stylesheet" href="https://gitcdn.link/repo/jdriviere/sparkle-css/master/dist/css/sparkle.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jdriviere/sparkle-css@VERSION/dist/css/sparkle.min.css">
 </head>
 <body>
     <!-- Your body scripts here -->
-    <script src="https://gitcdn.link/repo/jdriviere/sparkle-css/master/dist/js/sparkle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/jdriviere/sparkle-css@VERSION/dist/js/sparkle.min.js"></script>
 </body>
 ```
-(You will need both links to ensure Sparkle works efficiently, as it uses the jQuery.)
+(You will need all links to ensure Sparkle works efficiently, as it uses both FontAwesome and jQuery. Also, make sure you replace @VERSION with the latest version to ensure the best and most stable features.)
 
-4. Download the Node Package Manager (NPM) into your folder:
+3. Download using Bower:
 ```
-npm install sparkle.css
+bower install sparkle-css
 ```
 
 ## Documentation
