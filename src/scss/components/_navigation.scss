@@ -40,6 +40,7 @@
 
 // NAVIGATION
 .nav {
+	position: relative;
     @include displayFlex;
     @include navCollapse;
     width: 100%;
@@ -51,12 +52,11 @@
     
     // COMPONENTS
     &__brand {
-        float: left;
+		// float: left;
+		flex: 0 0 auto;
         padding: 1rem;
         color: map-get($theme-maps, secondary);
-        font-size: 1.5rem;
-        font-weight: $font-weight-heavy;
-        // text-transform: uppercase;
+        font: { size: 1.5rem; weight: $font-weight-heavy; };
         letter-spacing: 0.1rem;
 		cursor: pointer;
 		
@@ -100,34 +100,35 @@
     // MEDIA QUERIES
     @media screen and (min-width: $bp-large) {
 		@include navStretch;
+		@include alignItemsStretch;
         
         // COMPONENTS
         &__brand {
 			@include displayFlex;
-            @include navMenuNoFlex;
-            justify-content: center;
-            align-items: center;
+			flex: 0 0 auto;
+			@include justifyContentCenter;
+			@include alignItemsCenter;
             border: { right: 1px solid $grey_base; };
         }
         
         &__menu {
-            @include displayFlex;
-            @include navMenuNoFlex;
-            order: 0;
-            
+			@include displayFlex;
+			flex: 0 0 auto;
+
+			// Components
             &__item {
-				a {
-					@include displayFlex;
-					height: 100%;
-					justify-content: center;
-					align-items: center;
-					text-align: center;
-					cursor: pointer;
-				}
+				@include displayInlineFlex;
+				flex: { grow: 0; shrink: 0; };
+				@include justifyContentCenter;
+				@include alignItemsCenter;
+				height: 100%;
+				
+				// COMPONENTS
+				a { cursor: pointer; }
 
 				// STATES
 				&:hover,
-				&--active {
+				&.nav__menu__item--active {
 					background-color: $color-none;
 
 					a { color: map-get($theme-maps, primary); }
@@ -148,9 +149,9 @@
             }
             
             // STATES
-            &.nav__menu--left { justify-content: flex-start; float: left; }
-            &.nav__menu--center { justify-content: center; }
-            &.nav__menu--right { justify-content: flex-end; float: right; }
+            &.nav__menu--left { margin-right: auto; }
+            &.nav__menu--center { margin: { left: auto; right: auto; } };
+            &.nav__menu--right { margin-left: auto; }
         }
         
         &__mobile { display: none; }
