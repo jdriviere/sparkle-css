@@ -1,7 +1,7 @@
 /*
 @author: J. Djimitry Riviere
-@version: 1.7.1
-@release: 09/14/2017
+@version: 1.8.0
+@release: 11/17/2017
 
 Welcome and thank you for using Sparkle, a lightweight, open-source CSS framework
 to help you create simple, responsive website templates. It was developed by J. Djimitry Riviere
@@ -616,6 +616,7 @@ code {
 /* NAVIGATION
 /* ===================================================*/
 .nav {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: -ms-flex;
@@ -633,7 +634,7 @@ code {
 }
 
 .nav__brand {
-  float: left;
+  flex: 0 0 auto;
   padding: 1rem;
   color: #9BC2E6;
   font-size: 1.5rem;
@@ -745,16 +746,21 @@ code {
     -webkit-box-direction: normal;
     -ms-flex-flow: row nowrap;
     flex-flow: row nowrap;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
   }
   .nav__brand {
     display: -webkit-box;
     display: -ms-flexbox;
     display: -ms-flex;
     display: flex;
-    -webkit-box-flex: 0;
-    -ms-flex: none;
-    flex: none;
+    flex: 0 0 auto;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     border-right: 1px solid #E2E2E2;
   }
@@ -763,26 +769,29 @@ code {
     display: -ms-flexbox;
     display: -ms-flex;
     display: flex;
-    -webkit-box-flex: 0;
-    -ms-flex: none;
-    flex: none;
-    order: 0;
+    flex: 0 0 auto;
+  }
+  .nav__menu__item {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100%;
   }
   .nav__menu__item a {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -ms-flex;
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     cursor: pointer;
   }
-  .nav__menu__item:hover, .nav__menu__item--active {
+  .nav__menu__item:hover, .nav__menu__item.nav__menu__item--active {
     background-color: transparent;
   }
-  .nav__menu__item:hover a, .nav__menu__item--active a {
+  .nav__menu__item:hover a, .nav__menu__item.nav__menu__item--active a {
     color: #ADD2E6;
   }
   .nav__menu__item.nav__menu__item--special {
@@ -798,15 +807,14 @@ code {
     color: #F4F4F8;
   }
   .nav__menu.nav__menu--left {
-    justify-content: flex-start;
-    float: left;
+    margin-right: auto;
   }
   .nav__menu.nav__menu--center {
-    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
   }
   .nav__menu.nav__menu--right {
-    justify-content: flex-end;
-    float: right;
+    margin-left: auto;
   }
   .nav__mobile {
     display: none;
