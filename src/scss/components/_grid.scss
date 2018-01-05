@@ -5,7 +5,7 @@
 @import "../config/_mixins";
 
 // VARIABLES
-$grid-name:					"col" !default; // Default name of grid columns
+$grid-name:					"column" !default; // Default name of grid columns
 $grid-columns:				12 !default; // Default columns is 12
 $grid-gutter:				1.5rem !default; // Default gutter is 15px
 $grid-padding:              1.5rem !default; // Default padding is 15px
@@ -80,10 +80,11 @@ $grid-padding:              1.5rem !default; // Default padding is 15px
 
 [class*="#{$grid-name}-"], .#{$grid-name} {
 	@include maxColWidth(100);
-    min-height: 0.1em;
+	@include flexSize;
+	min-height: 0.1em;
 	margin: ($grid-gutter / 2) 0;
     padding: $grid-padding;
-	@include flexSize(1);
+	
 }
 
 @media only screen and (min-width: $bp-medium) {
@@ -112,4 +113,3 @@ $grid-padding:              1.5rem !default; // Default padding is 15px
 	.#{$grid-name}-3-of-4 { @extend .#{$grid-name}-9-of-12; }
 	.#{$grid-name}-1-of-1 { @extend .#{$grid-name}-12-of-12; }
 }
-

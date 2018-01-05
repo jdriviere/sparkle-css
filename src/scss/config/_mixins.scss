@@ -214,6 +214,12 @@
             flex: $growth $shrink $basis;
 } // End of FlexSizePlus
 
+@mixin flexSizeNone {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+} // End of FlexSizeNone
+
 @mixin flexWrap($value:wrap) {
     -ms-flex-wrap: $value;
         flex-wrap: $value;
@@ -244,6 +250,12 @@
 		-ms-flex-pack: justify;
 			justify-content: space-between;
 } // End of JustifyContentSpaceBetween
+
+@mixin justifyContentSpaceAround {
+    -webkit-box-pack: distribute;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+}
 
 @mixin justifyContentAtStart {
 	-webkit-box-pack: start;
