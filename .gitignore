@@ -2,7 +2,7 @@
 node_modules/*
 src/css/*
 src/img/*
-*.txt
+unused/*
 package-lock.json
 npm-debug.log
 examples.html
