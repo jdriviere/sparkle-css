@@ -33,7 +33,7 @@
 } // End of NavMenoNoFlex
 
 @mixin navMenuItemFlexStyle {
-	--webkit-box-flex: 1;
+	-webkit-box-flex: 1;
 		-ms-flex: 1 0 auto;
 			flex: 1 0 auto;
 } // NavMenuItemFlexStyle
@@ -150,7 +150,7 @@
             
             // STATES
             &.nav__menu--left { margin-right: auto; }
-            &.nav__menu--center { margin: { left: auto; right: auto; } };
+            &.nav__menu--center { margin: { left: auto; right: auto; }; };
             &.nav__menu--right { margin-left: auto; }
         }
         

@@ -88,7 +88,7 @@ $media-font-text: $font-size;
             &__subtitle {
                 margin-bottom: ($media-margin / 2);
                 color: rgba($font-color, 0.3);
-                font: { size: $media-font-subtitle; weight: $font-weight-normal; style: italic; };
+                font: { size: $media-font-subtitle; weight: $font-weight-normal; };
             }
             &__timestamp {
                 color: rgba($font-color, 0.5);

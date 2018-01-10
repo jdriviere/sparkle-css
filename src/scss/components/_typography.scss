@@ -42,7 +42,7 @@ a {
 	} // End of LOOP
 
 	// SUPER (Overwrites)
-	&--title { font: { size: 4.0rem; weight: $font-weight-heavy; } }
+	&--title { font: { size: 4.0rem; weight: $font-weight-normal; } }
 	&--subtitle { font: { size: 2.5rem; weight: $font-weight-normal; } }
 	&--paragraph { font: { size: $font-size; weight: $font-weight-light; } }
 	&--subtext { font: { size: 1.2rem; weight: $font-weight-light; } }
