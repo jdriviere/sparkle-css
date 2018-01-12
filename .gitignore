@@ -1,10 +1,9 @@
 .vscode/
-node_modules/*
-src/css/*
-src/img/*
-unused/*
-package-lock.json
+dev/
+node_modules/
+src/css/
+src/img/
+unused/
 npm-debug.log
 examples.html
 test.html
-src/scss/base/_config.scss
