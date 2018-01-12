@@ -9,6 +9,7 @@ src/img/
 unused/
 .gitignore
 .travis.yml
+bower.json
 *.html
 *.txt
 npm-debug.log
