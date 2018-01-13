@@ -91,7 +91,7 @@
     &__mobile {
         position: absolute; top: 1.0rem; right: 1.0rem;
         
-        .nav__mobile__icon { @include hamburger; }
+        & > .nav__mobile__icon { @include hamburger; }
     }
     
     // STATES
