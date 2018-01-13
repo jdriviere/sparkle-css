@@ -202,6 +202,9 @@
             display: inline-flex;
 } // End of DisplayFlex
 
+// ===========================================
+// FLEX, FLEX-GROW, FLEX-SHRINK, FLEX-BASIS
+// ===========================================
 @mixin flexSize($size:1) {
     -webkit-box-flex: $size;
 		-ms-flex: $size;
@@ -220,11 +223,33 @@
             flex: none;
 } // End of FlexSizeNone
 
+@mixin flexGrow($size:1) {
+    -webkit-box-flex: $size;
+        -ms-flex-positive: $size;
+            flex-grow: $size;
+}
+
+@mixin flexShrink($size:1) {
+    -ms-flex-negative: $size;
+        flex-shrink: $size;
+}
+
+@mixin flexBasis($size:auto) {
+    -ms-flex-preferred-size: $size;
+        flex-basis: $size;
+}
+
+// ===========================================
+// FLEX-WRAP
+// ===========================================
 @mixin flexWrap($value:wrap) {
     -ms-flex-wrap: $value;
         flex-wrap: $value;
 } // End of FlexWrap
 
+// ===========================================
+// FLEX-DIRECTION
+// ===========================================
 @mixin flexDirectionColumn {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -239,6 +264,9 @@
             flex-direction: row;
 } // End of FlexDirectionRow
 
+// ===========================================
+// JUSTIFY-CONTENT
+// ===========================================
 @mixin justifyContentCenter {
     -webkit-box-pack: center;
 		-ms-flex-pack: center;
@@ -269,6 +297,9 @@
 			justify-content: flex-end;
 }
 
+// ===========================================
+// ALIGN-ITEMS
+// ===========================================
 @mixin alignItemsTop {
     -webkit-box-align: start;
         -ms-flex-align: start;
@@ -299,6 +330,9 @@
             align-items: stretch;
 } // End of AlignCenterFlex
 
+// ===========================================
+// ALIGN-SELF
+// ===========================================
 @mixin alignSelfStart {
     -ms-flex-item-align: start;
         align-self: flex-start;

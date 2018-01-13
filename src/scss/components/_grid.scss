@@ -4,112 +4,139 @@
 @import "../config/_variables";
 @import "../config/_mixins";
 
+// ====================================
 // VARIABLES
-$grid-name:					"column" !default; // Default name of grid columns
-$grid-columns:				12 !default; // Default columns is 12
-$grid-gutter:				1.5rem !default; // Default gutter is 15px
-$grid-padding:              1.5rem !default; // Default padding is 15px
+// ====================================
+// Wrapper Variables
+$wrapper-name: "wrapper" !default;
+$wrapper-spacing: 2.5% !default;
 
-// MIXINS
-@mixin rowCol {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-		-ms-flex-flow: column wrap;
-			flex-flow: column wrap;
-} // End of RowCol
+// Grid Variable
+$grid-name: "grid" !default;
+$grid-margin: 1.5rem !default;
+$grid-gutter: 1.5rem !default;
 
-@mixin rowGrid {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-		-ms-flex-flow: row nowrap;
-			flex-flow: row nowrap;
-} // End of RowGrid
+// Column Variables
+$column-name: "column" !default;
+$column-max: 12 !default;
 
-@mixin maxColWidth($width) {
-	$percent: $width + "%";
-	-ms-flex-preferred-size: unquote($percent);
-        flex-basis: unquote($percent);
-    max-width: unquote($percent);
-} // End of MaxColWidth
+// Offset Variables
+$offset-name: "column__offset" !default;
 
-@mixin flexGrid($grid-columns) {
-    @for $i from 1 through $grid-columns {
-        .#{$grid-name}-#{$i}-of-#{$grid-columns} {
-            -ms-flex-preferred-size: $i / $grid-columns * 100%;
-            flex-basis: $i / $grid-columns * 100%;
-            max-width: $i / $grid-columns * 100%;
-        }
-    } // End of LOOP
-} // End of Grid
+// ====================================
+// CONTAINER
+// ====================================
+.#{$wrapper-name} {
+    position: relative;
+    width: 96%;
+    margin: 0 auto;
 
+    // Pseudo
+    &:before {
+        content: " ";
+		display: table;
+	}
+    &:after {
+        @extend .#{$wrapper-name}:before;
+		clear: both;
+	}
 
+    // Media Queries
+    @media screen and (min-width: 640px) {
+		max-width: 1200px;
+	}
+}
+
+// ====================================
 // GRID
-.container {
-	width: 96%;
-	margin: 0 auto;
-	overflow: hidden;
-	
-	@media only screen and (min-width: $bp-xlarge) {
-		& { width: 100%; max-width: $bp-xlarge; }
-	}
-}
-.row {
+// ====================================
+// --- ROW ---
+.#{$grid-name} {
 	@include displayFlex;
-	width: 100%;
-	@include rowCol;
-
-	// STATES
-	&.row--no-gutter {
-		[class*="#{$grid-name}-"],
-		.#{$grid-name} { margin: 0 !important; }
-	}
-	&.row--no-padding {
-		[class*="#{$grid-name}-"],
-		.#{$grid-name} { padding: 0 !important; }
-	}
-	
-	// MEDIA QUERIES
-	@media only screen and (min-width: $bp-medium) {
-		@include rowGrid;
-	}
-}
-.container:before,
-.row:before { content: " "; display: table;	}
-.container:after,
-.row:after { @extend .container:before; clear:both; }
-
-[class*="#{$grid-name}-"], .#{$grid-name} {
-	@include maxColWidth(100);
 	@include flexSize;
-	min-height: 0.1em;
-	margin: ($grid-gutter / 2) 0;
-    padding: $grid-padding;
-	
-}
+	@include flexWrap;
+    @include flexDirectionColumn;
+    margin-bottom: $grid-margin;
 
-@media only screen and (min-width: $bp-medium) {
-	.#{$grid-name} {
-		margin: ($grid-gutter / 2) $grid-gutter;
+	// Pseudo
+	&:last-child { margin-bottom: 0; }
+	&:before {
+        content: " ";
+		display: table;
+	}
+    &:after {
+        @extend .#{$grid-name}:before;
+		clear: both;
+	}
+    
+    // States
+    &.#{$grid-name}--gutter {
+        margin: {
+            left: ($grid-gutter / -2);
+			right: ($grid-gutter / -2);
+		};
 
-		&:first-child { margin-left: 0; }
-		&:last-child { margin-right: 0; }
-		&:only-child, &:first-child:last-child { margin: { left: 0; right: 0; }; }
+        & > .#{$column-name} {
+            padding: {
+                left: ($grid-gutter / 2);
+				right:( $grid-gutter / 2);
+			};
+		}
 	}
 
-	[class*="#{$grid-name}-"] {
-		margin: ($grid-gutter / 2) $grid-gutter;
+    // Media Queries
+    @media screen and (min-width: 640px) {
+		@include flexDirectionRow;
 		
-		&:first-child { margin-left: 0; }
-		&:last-child { margin-right: 0; }
-		&:only-child, &:first-child:last-child { margin: { left: 0; right: 0; }; }
+		// Components
+        & > [class*="column--"] { @include flexGrow; }
 	}
-	
-	@include flexGrid(12);
-	
-	.#{$grid-name}-1-of-4 { @extend .#{$grid-name}-3-of-12; }
-	.#{$grid-name}-1-of-3 { @extend .#{$grid-name}-4-of-12; }
-	.#{$grid-name}-1-of-2 { @extend .#{$grid-name}-6-of-12; }
-	.#{$grid-name}-2-of-3 { @extend .#{$grid-name}-8-of-12; }
-	.#{$grid-name}-3-of-4 { @extend .#{$grid-name}-9-of-12; }
-	.#{$grid-name}-1-of-1 { @extend .#{$grid-name}-12-of-12; }
+
+    // Components
+    // --- COLUMNS ---
+	& > .#{$column-name} {
+		@include flexSize;
+
+        // Media Queries
+        @media screen and (min-width: 640px) {
+            @for $i from 1 through $column-max {
+                &.#{$column-name}--#{$i}-of-#{$column-max} {
+					@include flexBasis (((100% * $i) / $column-max));
+					width: ((100% * $i) / $column-max);
+				}
+			} // End of LOOP
+
+            // Special Cases
+			&.#{$column-name}--1-of-4 { @extend .#{$column-name}--3-of-12; }
+			&.#{$column-name}--1-of-3 { @extend .#{$column-name}--4-of-12; }
+			&.#{$column-name}--1-of-2,
+			&.#{$column-name}--half { @extend .#{$column-name}--6-of-12; }
+            &.#{$column-name}--2-of-3 { @extend .#{$column-name}--8-of-12; }
+            &.#{$column-name}--3-of-4 { @extend .#{$column-name}--9-of-12; }
+			&.#{$column-name}--1-of-1,
+			&.#{$column-name}--full { @extend .#{$column-name}--12-of-12; }
+		}
+	}
+    
+    // --- OFFSETS ---
+    & > .#{$column-name}[class*="#{$offset-name}"] { margin-left: 0; }
+
+    // Media Queries
+    @media screen and (min-width: 640px) {
+        @for $i from 1 through $column-max {
+            & > .#{$column-name}.#{$offset-name}--#{$i}-of-#{$column-max} {
+				margin-left: ((100% / $column-max) * $i);
+			}
+		} // End of LOOP
+
+        // Special Cases
+        & > .#{$offset-name}--1-of-4 { @extend .#{$offset-name}--3-of-12; }
+        & > .#{$column-name}--1-of-3 { @extend .#{$offset-name}--4-of-12; }
+		& > .#{$offset-name}--1-of-2,
+		& > .#{$offset-name}--half { @extend .#{$offset-name}--6-of-12; }
+        & > .#{$column-name}--2-of-3 { @extend .#{$offset-name}--8-of-12; }
+        & > .#{$offset-name}--3-of-4 { @extend .#{$offset-name}--9-of-12; }
+		& > .#{$offset-name}--1-of-1,
+		& > .#{$offset-name}--full { @extend .#{$offset-name}--12-of-12; }
+	}
 }

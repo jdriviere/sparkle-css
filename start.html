@@ -21,7 +21,7 @@
 
     <!-- INTERNAL STYLING -->
     <style>
-        section {
+        main.wrapper {
             display: flex;
             flex-flow: column nowrap;
             flex-grow: 1; flex-shrink: 0;
@@ -30,22 +30,11 @@
             width: 100%; height: 100vh;
             /* padding: 5.0rem 0 3.0rem; */
         }
-
-        footer {
-            clear: both;
-            display: block;
-            width: 100%;
-            padding: 1em;
-            color: #333;
-            border-top: 1px solid #EEE;
-        }
-        footer i { color: #C03; }
-        footer a { text-decoration: none; color: #3498DB; }
     </style>
 </head>
 <body>
     <!-- HEADER -->
-     <header>
+    <header>
         <nav class="nav nav--fixed">
             <!-- NAV LOGO/BRAND -->
             <div class="nav__brand">
@@ -58,10 +47,15 @@
             <ul class="nav__menu">
                 <li class="nav__menu__item"><a href="index.html">Home</a></li>
                 <li class="nav__menu__item nav__menu__item--active"><a href="start.html">Getting Started</a></li>
-                <li class="nav__menu__item"><a href="docs.html">Documentation</a></li>
+                <li class="nav__menu__item">
+                    <a href="docs.html">Documentation</a>
+                </li>
+            </ul>
+            <ul class="nav__menu nav__menu--right">
+                <li class="nav__menu__item"><a href="https://github.com/jdriviere/sparkle-css/archive/v1.9.0.zip">Download</a></li>
                 <li class="nav__menu__item nav__menu__item--special">
                     <a href="https://github.com/jdriviere/sparkle-css">
-                        <i class="fa fa-github fa-2x"></i> Contribute
+                        <i class="fa fa-github fa-2x"></i>
                     </a>
                 </li>
             </ul>
@@ -78,7 +72,7 @@
     </header>
 
     <!-- WELCOME -->
-    <section class="container">
+    <main class="wrapper">
         <div>
             <p class="text--title">Uh oh...</p>
             <p class="text--subtitle">
@@ -88,14 +82,7 @@
                 Thank you for your patience.
             </p>
         </div>
-    </section>
-
-    <!-- FOOTER -->
-    <!-- <footer class="text--center">
-        <p>
-            Designed with <span><i class="fa fa-heart"></i></span> by <a href="https://jdriviere.github.io">J. D. Riviere</a> using <a href="https://github.com/jdriviere/sparkle-css">Sparkle</a> &copy; 2017
-        </p>
-    </footer> -->
+    </main>
 
     <!-- LOADING SCRIPTS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
