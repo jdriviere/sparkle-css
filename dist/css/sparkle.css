@@ -1,7 +1,7 @@
 /*
 @author: J. Djimitry Riviere
 @version: 1.9.0
-@release: 01/11/2018
+@release: 01/12/2018
 
 Welcome and thank you for using Sparkle, a lightweight, open-source CSS framework
 to help you create simple, responsive website templates. It was developed by J. Djimitry Riviere
@@ -706,7 +706,7 @@ code {
   right: 1.0rem;
 }
 
-.nav__mobile .nav__mobile__icon {
+.nav__mobile > .nav__mobile__icon {
   position: relative;
   display: block;
   width: 3rem;
@@ -715,7 +715,7 @@ code {
   cursor: pointer;
 }
 
-.nav__mobile .nav__mobile__icon span {
+.nav__mobile > .nav__mobile__icon span {
   position: absolute;
   display: block;
   width: 2.0rem;
@@ -727,23 +727,23 @@ code {
   transition: all 0.3s ease-in-out;
 }
 
-.nav__mobile .nav__mobile__icon span:nth-child(1) {
+.nav__mobile > .nav__mobile__icon span:nth-child(1) {
   margin-top: -0.5em;
 }
 
-.nav__mobile .nav__mobile__icon span:nth-child(2) {
+.nav__mobile > .nav__mobile__icon span:nth-child(2) {
   margin-top: 0;
 }
 
-.nav__mobile .nav__mobile__icon span:nth-child(3) {
+.nav__mobile > .nav__mobile__icon span:nth-child(3) {
   margin-top: 0.5em;
 }
 
-.nav__mobile .nav__mobile__icon--active span {
+.nav__mobile > .nav__mobile__icon--active span {
   background-color: #ADD2E6;
 }
 
-.nav__mobile .nav__mobile__icon--active span:nth-child(1) {
+.nav__mobile > .nav__mobile__icon--active span:nth-child(1) {
   margin-top: -0.2em;
   margin-left: -1.2rem;
   -webkit-transform: rotate(45deg);
@@ -752,12 +752,12 @@ code {
   transform: rotate(45deg);
 }
 
-.nav__mobile .nav__mobile__icon--active span:nth-child(2) {
+.nav__mobile > .nav__mobile__icon--active span:nth-child(2) {
   width: 0;
   opacity: 0;
 }
 
-.nav__mobile .nav__mobile__icon--active span:nth-child(3) {
+.nav__mobile > .nav__mobile__icon--active span:nth-child(3) {
   margin-top: -0.2em;
   margin-left: -1.2rem;
   -webkit-transform: rotate(-45deg);

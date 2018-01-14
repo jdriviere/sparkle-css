@@ -1,7 +1,28 @@
 @import "variables";
 
 // =======================================
-// GENERAL MIXINS
+// RESETS, CLEARFIXES
+// =======================================
+@mixin reset {
+    margin: 0;
+    padding: 0;
+} // End of Reset
+
+@mixin clearfix {
+    display: inline-block;
+
+    &:after {
+        visibility: hidden;
+    	display: block;
+    	font-size: 0;
+    	content: "";
+    	clear: both;
+    	height: 0;
+    }
+} // End of Clear
+
+// =======================================
+// BORDER RADIUS
 // =======================================
 @mixin border-radius($radius: $border-radius) {
     border-radius: $radius;
@@ -11,6 +32,9 @@
     border-radius: $top $right $bottom $left;
 } // End of Border-Radius-Custom
 
+// =======================================
+// BOX SHADOW
+// =======================================
 @mixin box-shadow($x, $y, $blur, $color: $color-pure-black, $alpha: 0.7) {
     -webkit-box-shadow: $x $y $blur rgba($color, $alpha);
         -moz-box-shadow: $x $y $blur rgba($color, $alpha);
@@ -18,13 +42,19 @@
                 box-shadow: $x $y $blur rgba($color, $alpha);
 } // End of Box-Shadow
 
-@mixin box-sizing {
-    -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-            -ms-box-sizing: border-box;
-                box-sizing: border-box;
+// =======================================
+// BOX-SIZING
+// =======================================
+@mixin box-sizing($type:border-box) {
+    -webkit-box-sizing: $type;
+        -moz-box-sizing: $type;
+            -ms-box-sizing: $type;
+                box-sizing: $type;
 } // End of Box-Sizing
 
+// =======================================
+// FONT-SMOOTHING
+// =======================================
 @mixin font-smoothing {
     -webkit-font-smoothing: antialiased;
         -moz-font-smoothing: antialiased;
@@ -32,7 +62,9 @@
                 font-smoothing: antialiased;
 } // End of Font-Smoothing
 
-// TRANSFORMS
+// =======================================
+// TRANSITIONS
+// =======================================
 @mixin transition($type, $time, $trans) {
     -webkit-transition: $type $time $trans;
         -moz-transition: $type $time $trans;
@@ -40,6 +72,9 @@
                 transition: $type $time $trans;
 } // End of Transition
 
+// =======================================
+// TRANSFORM
+// =======================================
 @mixin scale-uniform($value) {
     -webkit-transform: scale($value);
         -moz-transform: scale($value);
@@ -103,6 +138,9 @@
                 transform: translateY($value);
 } // End of Translate-Vertical
 
+// =======================================
+// DISABLE SELECTION
+// =======================================
 @mixin disable-select {
     -webkit-user-select: none;
 	    -moz-user-select: none;
@@ -111,6 +149,9 @@
     cursor: not-allowed;
 } // End of Disable-Select
 
+// =======================================
+// REMOVE APPEARANCE
+// =======================================
 @mixin remove-appearance {
     -webkit-appearance: none;
         -moz-appearance: none;
@@ -118,6 +159,9 @@
                 appearance: none;
 } // End of Remove-Appearance
 
+// =======================================
+// BACKFACE VISIBILITY
+// =======================================
 @mixin back-visible($visibility) {
     -webkit-backface-visibility: $visibility;
         -moz-backface-visibility: $visibility;
@@ -125,23 +169,9 @@
                 backface-visibility: $visibility;
 } // End of Back-Visible
 
-
-// ELEMENTS MIXINS
-// @mixin inputs {
-//     input[type='text'],
-//     input[type='email'],
-//     input[type='number'],
-//     input[type='password'],
-//     input[type='search'],
-//     input[type='tel'],
-//     input[type='text'],
-//     input[type='url'],
-//     textarea,
-//     select {
-//         @content;
-//     }
-// } // End of Inputs
-
+// =======================================
+// HAMBURGER ICON
+// =======================================
 @mixin hamburger($size: 3.0rem, $color: #DFDFDF) {
     position: relative;
     display: block;
@@ -166,7 +196,7 @@
         &:nth-child(3) { margin-top: 0.5em; }
     }
     
-    // STATES
+    // States
     &--active {
         span {
             background-color: map-get($theme-maps, primary);
@@ -187,7 +217,7 @@
 } // End of Hamburger
 
 // =======================================
-// FLEXBOX MIXINS
+// DISPLAY FLEX, INLINE-FLEX
 // =======================================
 @mixin displayFlex {
     display: -webkit-box;
