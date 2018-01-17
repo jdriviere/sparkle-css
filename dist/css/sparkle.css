@@ -1018,27 +1018,27 @@ code {
   margin-top: 1.5rem;
 }
 
-.alert--default {
+.alert.alert--default {
   background-color: #E2E2E2;
   color: #111516 !important;
 }
 
-.alert--info {
+.alert.alert--info {
   background-color: #1982C4;
   color: #F4F4F8 !important;
 }
 
-.alert--success {
+.alert.alert--success {
   background-color: #8AC926;
   color: #F4F4F8 !important;
 }
 
-.alert--warning {
+.alert.alert--warning {
   background-color: #FFCA3A;
   color: #111516 !important;
 }
 
-.alert--danger {
+.alert.alert--danger {
   background-color: #FF595E;
   color: #F4F4F8 !important;
 }

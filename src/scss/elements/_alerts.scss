@@ -12,9 +12,11 @@ $alert-color-maps: (
     warning:                ($yellow_base, $black_base),
     danger:                 ($red_base, $white_base)
 ) !default;
-$alert-font-size:			$font-size !default; // Default font size is 15px
-$alert-margin:              1.5rem !default; // Default margin is 15px
-$alert-padding:             1.5rem !default; // Default padding is 15px
+$alert-name:                'alert' !default;
+$alert-title-font-size:     1.8rem !default;
+$alert-font-size:			$font-size !default;
+$alert-margin:              1.5rem !default;
+$alert-padding:             1.5rem !default;
 
 // MIXINS
 @mixin create-alert {
@@ -30,21 +32,20 @@ $alert-padding:             1.5rem !default; // Default padding is 15px
 } // End of Create-Alert
 
 // ALERTS
-.alert {
+.#{$alert-name} {
     // Create alert block
     @include create-alert;
 
-    // Loop through each alert color-map and fetch info
     @each $type, $color in $alert-color-maps {
         $bgcolor: nth($color, 1);
         $fontcolor: nth($color, 2);
         
-        // STATES
-        &--#{$type} { background-color: $bgcolor; color: $fontcolor !important; }
+        // States
+        &.#{$alert-name}--#{$type} { background-color: $bgcolor; color: $fontcolor !important; }
     } // End of EACH-LOOP
 
-    // COMPONENTS
-    & > &__title { font: { size: 1.8rem !important; weight: $font-weight-heavy; } }
+    // Components
+    & > &__title { font: { size: $alert-title-font-size !important; weight: $font-weight-heavy; } }
     & > &__text { margin: $alert-margin 0; font-weight: $font-weight-normal; }
     & > &__list { margin-left: ($alert-margin * 2); font-weight: $font-weight-light; }
 }
