@@ -1673,7 +1673,7 @@ code {
   }
 }
 
-.media > .media__profile > .media > .media__profile--left, .media > .media__profile > .media > .media__profile--right, .media > .media__profile > .media > .media__profile--center, .media > .media__profile > .media > .media__profile--bottom {
+.media > .media__profile > .media__profile.media__profile--left, .media > .media.media__profile > .media__profile.media__profile--right, .media > .media.media__profile > .media__profile.media__profile--center, .media > .media.media__profile > .media__profile.media__profile--bottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: -ms-flex;
@@ -1686,12 +1686,12 @@ code {
   margin-bottom: 1rem;
 }
 
-.media > .media__profile > .media > .media__profile--left img, .media > .media__profile > .media > .media__profile--right img, .media > .media__profile > .media > .media__profile--center img, .media > .media__profile > .media > .media__profile--bottom img {
+.media > .media__profile > .media__profile.media__profile--left > img, .media > .media.media__profile > .media__profile.media__profile--right > img, .media > .media.media__profile > .media__profile.media__profile--center > img, .media > .media.media__profile > .media__profile.media__profile--bottom > img {
   width: 100%;
 }
 
 @media only screen and (min-width: 480px) {
-  .media > .media__profile--left, .media > .media__profile--right, .media > .media__profile--center, .media > .media__profile--bottom {
+  .media > .media__profile--left, .media > .media__profile.media__profile--right, .media > .media__profile.media__profile--center, .media > .media__profile.media__profile--bottom {
     order: -1;
     width: 6.4rem;
     height: 6.4rem;
@@ -1733,57 +1733,57 @@ code {
   text-align: center;
 }
 
-.media > .media__content > .media > .media__content__header {
+.media > .media__content__header {
   margin-bottom: 1rem;
 }
 
-.media > .media__content > .media > .media__content__header > .media > .media__content > .media > .media__content__header__title {
+.media > .media__content__header > .media__title {
   margin-bottom: 0.5rem;
   color: #404040;
   font-size: 3rem;
   font-weight: 700;
 }
 
-.media > .media__content > .media > .media__content__header > .media > .media__content > .media > .media__content__header__subtitle {
+.media > .media__content__header > .media__subtitle {
   margin-bottom: 0.5rem;
   color: rgba(64, 64, 64, 0.3);
   font-size: 2rem;
   font-weight: 400;
 }
 
-.media > .media__content > .media > .media__content__header > .media > .media__content > .media > .media__content__header__timestamp {
+.media > .media__content__header > .media__timestamp {
   color: rgba(64, 64, 64, 0.5);
   font-size: 1.2rem;
   font-weight: 300;
 }
 
-.media > .media__content > .media > .media__content__text {
+.media > .media__content__body {
   line-height: 1.5;
   color: #404040;
   font-size: 1.5rem;
 }
 
-.media > .media__content > .media > .media__content__footer {
+.media > .media__content__footer {
   margin-top: 1rem;
 }
 
-.media > .media__content > .media > .media__content__footer .media-name__share {
+.media > .media__content__footer > .media-name__share {
   vertical-align: top;
   color: #404040;
   font-size: 1.2rem;
   font-weight: 700;
 }
 
-.media > .media__content > .media > .media__content__footer i {
+.media > .media__content__footer > i {
   color: #ADD2E6;
   font-size: 2.0rem;
 }
 
-.media > .media__content > .media > .media__content__footer i:not(:first-child) {
+.media > .media__content__footer > i:not(:first-child) {
   margin-left: 1rem;
 }
 
-.media > .media__content > .media > .media__content__footer i:hover {
+.media > .media__content__footer > i:hover {
   color: #404040;
 }
 
@@ -1791,18 +1791,18 @@ code {
   .media > .media__content {
     text-align: left;
   }
-  .media > .media__content__header__title {
+  .media > .media__content__header > .media__title {
     font-size: 2rem;
   }
-  .media > .media__content__header__subtitle {
+  .media > .media__content__header > .media__subtitle {
     font-size: 1.5rem;
   }
-  .media > .media__content__text {
+  .media > .media__content__body {
     font-size: 1.5rem;
   }
 }
 
-.media .button--close {
+.media > .media__button--close {
   position: absolute;
   top: 0;
   right: 1.0rem;
@@ -1811,7 +1811,7 @@ code {
   cursor: pointer;
 }
 
-.media .button--close:hover {
+.media > .media__button--close:hover {
   color: #2d2d2d;
 }
 
