@@ -133,12 +133,12 @@ a {
   text-align: justify;
 }
 
-.text--title, .card__header__title {
+.text--title, .card > .card__header__title {
   font-size: 4.0rem;
   font-weight: 400;
 }
 
-.text--subtitle, .card__header__subtitle {
+.text--subtitle, .card > .card__header__subtitle {
   font-size: 2.5rem;
   font-weight: 400;
 }
@@ -1424,7 +1424,7 @@ code {
 }
 
 /* ===================================================*/
-/* THUMBNAILS
+/* CARDS
 /* ===================================================*/
 .card {
   width: 100%;
@@ -1433,22 +1433,23 @@ code {
   overflow: hidden;
 }
 
-.card__header {
+.card > .card__header {
   padding: 1rem;
   border-bottom: 1px solid #E2E2E2;
 }
 
-.card img, .card__image {
+.card > img,
+.card > .card__image {
   width: 100%;
 }
 
-.card__caption {
+.card > .card__caption {
   padding: 1rem;
   font-size: 1.5rem;
   color: #7F7F7F;
 }
 
-.card__footer {
+.card > .card__footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: -ms-flex;
@@ -1459,12 +1460,18 @@ code {
   border-top: 1px solid #E2E2E2;
 }
 
-.card__footer__item {
+.card > .card__footer__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: -ms-flex;
   display: flex;
-  flex: 1 0 0;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -1475,16 +1482,16 @@ code {
   padding: 1rem;
 }
 
-.card__footer__item a {
+.card > .card__footer__item > a {
   text-decoration: none;
   color: #111516;
 }
 
-.card__footer__item a:hover {
+.card > .card__footer__item > a:hover {
   color: #ADD2E6;
 }
 
-.card__footer__item:not(:first-child) {
+.card > .card__footer__item:not(:first-child) {
   border-left: 1px solid #E2E2E2;
 }
 
