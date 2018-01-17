@@ -4,6 +4,9 @@
 @import "../config/_variables";
 @import "../config/_mixins";
 
+// VARIABLES
+$modal-name: 'modal' !default;
+
 // MIXINS
 @mixin coverAll {
     visibility: hidden;
@@ -18,10 +21,10 @@
 } // End of CoverAll
 
 // MODALS
-.modal {
+.#{$modal-name} {
     @include coverAll;
 
-    // COMPONENTS
+    // Components
     &__body {
         position: relative;
         width: 96%;
@@ -34,16 +37,18 @@
         @include translate-vertical(-50px);
         @include transition(transform, 0.3s, ease-in);
 
+        // Media Queries
         @media only screen and (min-width: $bp-large) { max-width: 500px; }
     }
-    &__header {}
-    &__img { display: block; max-width: 100%; margin: 0 auto; }
-    &__content {
+    & > &__header {}
+    & > img,
+    & > &__img { display: block; max-width: 100%; margin: 0 auto; }
+    & > &__content {
         line-height: 1.5;
         font: { size: $font-size; weight: $font-weight-light; };
         color: $color-grey-50;
     }
-    &__close {
+    & > &__close {
         position: absolute;
         display: block;
         top: 0.25rem;
@@ -61,15 +66,15 @@
             @include transition(all, 0.3s, ease-in);
         }
     }
-    &__footer {}
+    & > &__footer {}
 
-    // STATES
-    &.modal--active {
+    // States
+    &.#{$modal-name}--active {
         visibility: visible;
         opacity: 1;
         @include transition(all, 0.3s, ease-in-out) ;
 
-        & .modal__body {
+        & .#{$modal-name}__body {
             @include translate-vertical(0);
             @include transition(transform, 0.3s, ease-in);
         }

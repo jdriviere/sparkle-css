@@ -5,6 +5,7 @@
 @import "../config/_mixins";
 
 // VARIABLES
+$media-name: 'media' !default;
 $media-margin: 1.0rem;
 $media-padding: 1.5rem;
 $media-border-radius: 0.5rem;
@@ -18,7 +19,7 @@ $media-font-timestamp: 1.2rem;
 $media-font-text: $font-size;
 
 // MEDIA
-.media {
+.#{$media-name} {
     position: relative;
     @include displayFlex;
     @include flexSize;
@@ -31,28 +32,32 @@ $media-font-text: $font-size;
     border: 1px solid $grey_base;
     @include border-radius($media-border-radius);
     
+    // Media Queries
     @media only screen and (min-width: $bp-small) {
         @include flexDirectionRow;
         @include alignItemsTop;
     }
     
-    // COMPONENTS
-    &__profile {
-        // STATES
-        &--left {
+    // Components
+    // --- MEDIA PROFILE ---
+    & > &__profile {
+        // States
+        & > &--left {
             @include displayFlex;
             @include flexSizePlus(0, 0, auto);
             width: $media-profile-large; height: $media-profile-large;
             margin-bottom: $media-margin;
 
-            // COMPONENTS
+            // Components
             img { width: 100%; }
         }
-        &--right, &--center, &--bottom { @extend .media__profile--left; }
+        &--right,
+        &--center,
+        &--bottom { @extend .#{$media-name}__profile--left; }
         
-        // MEDIA QUERIES
+        // Media Queries
         @media only screen and (min-width: $bp-small) {
-            // STATES
+            // States
             &--left {
                 order: -1;
                 width: $media-profile-small; height: $media-profile-small;
@@ -67,7 +72,9 @@ $media-font-text: $font-size;
             &--bottom { @include alignSelfEnd; }
         }
     }
-    &__content {
+
+    // --- MEDIA CONTENT ---
+    & > &__content {
         @include displayFlex;
         @include flexDirectionColumn;
         @include flexSize;
@@ -75,59 +82,60 @@ $media-font-text: $font-size;
         width: 100%;
         text-align: center;
         
-        // COMPONENTS
-        &__header {
+        // Components
+        & > &__header {
             margin-bottom: $media-margin;
 
-            // COMPONENTS
-            &__title {
+            // Components
+            & > &__title {
                 margin-bottom: ($media-margin / 2);
                 color: $font-color;
                 font: { size: $media-font-title; weight: $font-weight-heavy; };
             }
-            &__subtitle {
+            & > &__subtitle {
                 margin-bottom: ($media-margin / 2);
                 color: rgba($font-color, 0.3);
                 font: { size: $media-font-subtitle; weight: $font-weight-normal; };
             }
-            &__timestamp {
+            & > &__timestamp {
                 color: rgba($font-color, 0.5);
                 font: { size: $media-font-timestamp; weight: $font-weight-light; };
             }
         }
         
-        &__text {
+        & > &__text {
             line-height: $line-height;
             color: $font-color;
             font-size: $media-font-text;
         }
         
-        &__footer {
+        & > &__footer {
             margin-top: $media-margin;
 
-            // COMPONENTS
-            .media__share {
+            // Components
+            .#{media-name}__share {
                 vertical-align: top;
                 color: $font-color;
                 font: { size: 1.2rem; weight: $font-weight-heavy; };
             }
+
             i {
                 color: map-get($theme-maps, primary);
                 font-size: 2.0rem;
 
-                // STATES
+                // States
                 &:not(:first-child) { margin-left: $media-margin; }
                 &:hover { color: $font-color; }
             }
         }
         
-        // MEDIA QUERIES
+        // Media Queries
         @media only screen and (min-width: 480px) {
             text-align: left;
             
-            // COMPONENTS
+            // Components
             &__header {
-                // COMPONENTS
+                // Components
                 &__title { font-size: $media-font-title-mobile; }
                 &__subtitle { font-size: $media-font-subtitle-mobile; }
             }
@@ -143,10 +151,10 @@ $media-font-text: $font-size;
         color: $font-color;
         cursor: pointer;
 
-        // STATES
+        // States
         &:hover { color: darken($font-color, $darken); }
     }
     
-    // STATES
+    // States
     &:not(:last-child) { margin-bottom: $media-margin; }
 }

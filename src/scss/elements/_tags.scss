@@ -15,6 +15,7 @@ $tag-color-maps: (
     light:                  ($white_base, $black_base),
     dark:                   ($black_base, $white_base)
 ) !default;
+$tag-name:                  'tag' !default;
 $tag-margin:                1.5rem !default;
 $tag-padding:               0.5rem 1.0rem !default;
 
@@ -25,22 +26,21 @@ $tag-padding:               0.5rem 1.0rem !default;
     @include justifyContentCenter;
     @include alignItemsCenter;
     padding: $tag-padding;
-    background-color: map-get($theme-maps, default);
+    background: map-get($theme-maps, default);
     color: map-get($theme-maps, dark);
     font-size: 12px;
     @include border-radius;
 } // End of Create-Tag
 
 // TAGS
-.tag {
+.#{$tag-name} {
     @include create-tag;
 
-    // Loop through each alert color-map and fetch info
     @each $type, $color in $tag-color-maps {
         $bgcolor: nth($color, 1);
         $fontcolor: nth($color, 2);
 
-        // STATES
-        &--#{$type} { background-color: $bgcolor; color: $fontcolor !important; }
+        // States
+        &.#{$tag-name}--#{$type} { background: $bgcolor; color: $fontcolor !important; }
     } // End of LOOP
 }

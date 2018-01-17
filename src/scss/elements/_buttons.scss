@@ -17,25 +17,27 @@ $button-color-maps: (
     light:					($white_base, $black_base),
 	dark:					($black_base, $white_base),
 ) !default;
-$button-margin:                1.0rem !default; // Default bottom margin is 10px
-$button-line-height:           $line-height !default; // Default line-height is 1.5 times
-$button-font-size:             $font-size !default; // Default font-size is HTML default font-size
-$button-letter-space:          0.2rem !default; // Default letter-spacing is 2px
-$button-padding:               0.5rem 1.5rem !default; // Default top/bottom padding is 5px and left/right is 15px
-$button-border-radius:         0.3em !default; // Default border-radius is 3px, but varies based on parent font-size
+$button-name:                  'button' !default;
+$button-margin:                1.0rem !default;
+$button-line-height:           $line-height !default;
+$button-font-size:             $font-size !default;
+$button-letter-space:          0.2rem !default;
+$button-padding:               0.5rem 1.5rem !default;
+$button-border-radius:         0.3em !default;
 
 // =================================
 // BUTTON MIXINS
 // =================================
 @mixin create-button {
-    // display: inline-flex;
     @include displayInlineFlex;
-    @include flexSizePlus(0, 0, auto);
+    @include flexGrow(0);
+    @include flexShrink(0);
+    @include flexBasis(auto);
     @include justifyContentCenter;
     @include alignItemsCenter;
     @include remove-appearance;
     outline: none;
-    background: none;
+    background: $color-none;
     margin-bottom: $button-margin;
     padding: $button-padding;
     line-height: $button-line-height;
@@ -47,9 +49,9 @@ $button-border-radius:         0.3em !default; // Default border-radius is 3px, 
     border-radius: $button-border-radius;
     cursor: pointer;
 
-    // STATES
+    // States
     &:hover { border-color: rgba($black_base, 0.7); }
-    &:disabled, &.button--disabled {
+    &:disabled, &.#{$button-name}--disabled {
     	@include disable-select;
     	opacity: 0.3;
     }
@@ -58,71 +60,70 @@ $button-border-radius:         0.3em !default; // Default border-radius is 3px, 
 // =================================
 // BUTTONS
 // =================================
-.button {
-    // Create the button
+.#{$button-name} {
     @include create-button;
     
-    // Stylize all buttons according to proper color-map
     @each $type, $color in $button-color-maps {
         $bgcolor: nth($color, 1);
         $fontcolor: nth($color, 2);
 
-        // STYLES
-        &--#{$type} {
-            background-color: $bgcolor;
+        // States
+        &.#{$button-name}--#{$type} {
+            background: $bgcolor;
             color: $fontcolor !important;
             border: 1px solid $color-none;
 
             &:hover,
             &:focus,
             &:active {
-                background-color: darken($bgcolor, $darken);
+                background: darken($bgcolor, $darken);
                 border-color: $color-none;
             }
         }
 		
-		&--#{$type}--outline {
-			background-color: $color-none;
+		&.#{$button-name}--#{$type}--outline {
+			background: $color-none;
 			color: $bgcolor !important;
 			border: 1px solid $bgcolor;
 			
 			&:hover,
             &:focus,
             &:active {
-                background-color: $bgcolor;
+                background: $bgcolor;
                 color: $fontcolor !important;
                 border-color: $color-none;
             }
         }
         
-        &--#{$type}--ghost {            
+        &.#{$button-name}--#{$type}--ghost {            
             @if ($type == "light") {
-                background-color: map-get($theme-maps, light);
+                background: map-get($theme-maps, light);
                 color: $white_d1 !important;
                 border: 1px solid $grey_l1;
             } @else {
-                background-color: map-get($theme-maps, light);
+                background: map-get($theme-maps, light);
                 color: $bgcolor !important;
                 border: 1px solid $grey_l1;
             } // End of IF-ELSE
-			
+            
+            // Pseudo
 			&:hover,
             &:focus,
             &:active {
-                background-color: $bgcolor;
+                background: $bgcolor;
                 color: $fontcolor !important;
                 border-color: $color-none;
             }
 		}
     } // End of EACH-LOOP
 
-    // SIZES
-    &--xsmall { font-size: ($font-size * 0.66666); }
-    &--small { font-size: ($font-size * 0.8 ); }
-    &--medium { font-size: $font-size; }
-    &--large { font-size: ($font-size * 1.33333); }
-    &--xlarge { font-size: ($font-size * 1.6); }
-    &--block {
+    // States
+    &.#{$button-name}--xsmall { font-size: ($font-size * 0.66666); }
+    &.#{$button-name}--small { font-size: ($font-size * 0.8 ); }
+    &.#{$button-name}--medium { font-size: $font-size; }
+    &.#{$button-name}--large { font-size: ($font-size * 1.33333); }
+    &.#{$button-name}--xlarge { font-size: ($font-size * 1.6); }
+    &.#{$button-name}--block {
         display: block;
         width: 100%;
         padding: 1.0rem 0;
@@ -130,7 +131,6 @@ $button-border-radius:         0.3em !default; // Default border-radius is 3px, 
         letter-spacing: $button-letter-space;
     }
 
-    // STYLES
-    &--h-round { @include border-radius(($button-border-radius * 2)); }
-    &--f-round { @include border-radius(3.5rem); }
+    &.#{$button-name}--h-round { @include border-radius(($button-border-radius * 2)); }
+    &.#{$button-name}--f-round { @include border-radius(3.5rem); }
 }

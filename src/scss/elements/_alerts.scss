@@ -33,7 +33,6 @@ $alert-padding:             1.5rem !default;
 
 // ALERTS
 .#{$alert-name} {
-    // Create alert block
     @include create-alert;
 
     @each $type, $color in $alert-color-maps {

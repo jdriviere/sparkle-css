@@ -5,6 +5,7 @@
 @import "../config/_mixins";
 
 // VARIABLES
+$menu-name:                 'menu' !default;
 $menu-background:           $white_base !default;
 $menu-background-hover:     map-get($theme-maps, primary) !default;
 $menu-font-hover:           map-get($theme-maps, light) !default;
@@ -23,26 +24,26 @@ $menu-font-color-item:      $font-color !default;
 } // End of Create-Menu
 
 // MENU
-.menu {
+.#{$menu-name} {
     @include create-menu;
 
-    // COMPONENTS
-    &__tag {
+    // Components
+    & > &__tag {
         display: block;
         font: { size: $menu-font-size-tag; weight: $menu-font-weight-tag; };
         color: $menu-font-color-tag;
 
         &:not(:first-of-type) { margin-top: 1.0rem; }
     }
-    &__list {
+    & > &__list {
         list-style: none;
 
-        // COMPONENTS
-        &__item {
+        // Components
+        & > &__item {
             font: { size: $menu-font-size-item; weight: $menu-font-weight-item; };
 
-            // COMPONENTS
-            a {
+            // Components
+            & > a {
                 display: block;
                 padding: 0.5rem 1.0rem;
                 color: $menu-font-color-item;
@@ -50,12 +51,12 @@ $menu-font-color-item:      $font-color !default;
                 &:hover { background-color: $white_base; }
             }
 
-            & .menu__list {
+            & > & .#{$menu-name}__list {
                 margin: 0.5rem 1.0rem;
                 border-left: 2px solid $menu-border-color;
             }
 
-            // STATES
+            // States
             // &--active {}
         }
     }

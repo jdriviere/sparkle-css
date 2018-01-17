@@ -42,6 +42,13 @@
                 box-shadow: $x $y $blur rgba($color, $alpha);
 } // End of Box-Shadow
 
+@mixin box-shadow-none {
+    -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+            -ms-box-shadow: none;
+                box-shadow: none;
+} // End of Box-Shadow-None
+
 // =======================================
 // BOX-SIZING
 // =======================================

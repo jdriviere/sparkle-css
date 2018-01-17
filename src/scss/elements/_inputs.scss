@@ -5,6 +5,7 @@
 @import "../config/_mixins";
 
 // VARIABLES
+$input-name:                'input' !default;
 $input-width:               100% !default;
 $input-height:              4.0rem !default; // Default height is 40px
 $input-padding:             1.0rem !default;
@@ -15,18 +16,18 @@ $input-border-color:        map-get($theme-maps, default);
 // MIXINS
 @mixin input-control {
     position: relative;
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
+    @include displayInlineFlex;
+    @include justifyContentAtStart;
+    @include alignItemsCenter;
     height: 4.0rem;
     line-height: $line-height;
     padding: $input-padding;
     @include remove-appearance;
     border: 1px solid $color-none;
     outline: none;
-    box-shadow: none;
+    @include box-shadow-none;
     
-    // STATES
+    // States
     &:focus, &:active {
         border-color: map-get($theme-maps, primary);
         box-shadow: 0 0 1.2rem rgba($lblue_base, 0.5);
@@ -56,13 +57,14 @@ $input-border-color:        map-get($theme-maps, default);
 } // End of Create-Input
 
 // INPUTS
-.input {
+.#{$input-name} {
     @include create-input;
     position: relative;
     width: $input-width; height: $input-height;
     display: block;
 
-	// COMPONENTS
+    // Components
+    // --- LABELS ---
 	&__label {
         display: flex;
         justify-content: flex-start;
@@ -70,33 +72,38 @@ $input-border-color:        map-get($theme-maps, default);
         font: { size: 1.2rem; weight: $font-weight-heavy; }
         color: $input-font-color;
 	}
-	
+    
+    // --- SELECT ---
 	&__select {
-        @extend .input;
-        background-image: url('https://png.icons8.com/expand-arrow/win8/12');
-        background-repeat: no-repeat;
-        background-position: 98%;
+        @extend .#{$input-name};
+        background: {
+            image: url('https://png.icons8.com/expand-arrow/win8/12');
+            repeat: no-repeat;
+            position: 98%;
+        }
         
-        // COMPONENTS
+        // Components
         &::-ms-expand { display: none; }
 	}
-	
+    
+    // --- TEXT AREA ---
 	&__textarea {
-        @extend .input;
+        @extend .#{$input-name};
         height: 12.0rem;
         font: { family: inherit; size: $input-font-size; };
         resize: vertical;
 	}
-	
+    
+    // --- CHECKBOXES ---
 	&__checkbox {
         display: inline-flex;
         align-items: center;
         transform: scale(1.25);
         
-        // STATES
+        // Pseudo
         &:not(:first-of-type) { margin-left: 1.0rem; }
         
-        // COMPONENTS
+        // Components
         &__group { margin: 1.0rem 0; }
         &__label { display: inline; margin-left: 1.5rem; font-size: 1.5rem; }
     }
