@@ -1043,17 +1043,17 @@ code {
   color: #F4F4F8 !important;
 }
 
-.alert__title {
+.alert > .alert__title {
   font-size: 1.8rem !important;
   font-weight: 700;
 }
 
-.alert__text {
+.alert > .alert__text {
   margin: 1.5rem 0;
   font-weight: 400;
 }
 
-.alert__list {
+.alert > .alert__list {
   margin-left: 3rem;
   font-weight: 300;
 }

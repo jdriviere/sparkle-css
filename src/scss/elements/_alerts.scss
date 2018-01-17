@@ -44,7 +44,7 @@ $alert-padding:             1.5rem !default; // Default padding is 15px
     } // End of EACH-LOOP
 
     // COMPONENTS
-    &__title { font: { size: 1.8rem !important; weight: $font-weight-heavy; } }
-    &__text { margin: $alert-margin 0; font-weight: $font-weight-normal; }
-    &__list { margin-left: ($alert-margin * 2); font-weight: $font-weight-light; }
+    & > &__title { font: { size: 1.8rem !important; weight: $font-weight-heavy; } }
+    & > &__text { margin: $alert-margin 0; font-weight: $font-weight-normal; }
+    & > &__list { margin-left: ($alert-margin * 2); font-weight: $font-weight-light; }
 }
