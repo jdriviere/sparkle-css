@@ -39,21 +39,21 @@ $media-font-text: $font-size;
     }
     
     // Components
-    // --- MEDIA PROFILE ---
+    // --- MEDIA PROFILE ---//
     & > &__profile {
         // States
-        & > &--left {
+        & > .#{$media-name}__profile.#{$media-name}__profile--left {
             @include displayFlex;
             @include flexSizePlus(0, 0, auto);
             width: $media-profile-large; height: $media-profile-large;
             margin-bottom: $media-margin;
 
             // Components
-            img { width: 100%; }
+            & > img { width: 100%; }
         }
-        &--right,
-        &--center,
-        &--bottom { @extend .#{$media-name}__profile--left; }
+        &.#{$media-name}__profile--right,
+        &.#{$media-name}__profile--center,
+        &.#{$media-name}__profile--bottom { @extend .#{$media-name}__profile--left; }
         
         // Media Queries
         @media only screen and (min-width: $bp-small) {
@@ -73,7 +73,7 @@ $media-font-text: $font-size;
         }
     }
 
-    // --- MEDIA CONTENT ---
+    // --- MEDIA CONTENT --- //
     & > &__content {
         @include displayFlex;
         @include flexDirectionColumn;
@@ -83,43 +83,40 @@ $media-font-text: $font-size;
         text-align: center;
         
         // Components
-        & > &__header {
+        &__header {
             margin-bottom: $media-margin;
 
             // Components
-            & > &__title {
+            & > .#{$media-name}__title {
                 margin-bottom: ($media-margin / 2);
                 color: $font-color;
                 font: { size: $media-font-title; weight: $font-weight-heavy; };
             }
-            & > &__subtitle {
+            & > .#{$media-name}__subtitle {
                 margin-bottom: ($media-margin / 2);
                 color: rgba($font-color, 0.3);
                 font: { size: $media-font-subtitle; weight: $font-weight-normal; };
             }
-            & > &__timestamp {
+            & > .#{$media-name}__timestamp {
                 color: rgba($font-color, 0.5);
                 font: { size: $media-font-timestamp; weight: $font-weight-light; };
             }
         }
-        
-        & > &__text {
+        &__body {
             line-height: $line-height;
             color: $font-color;
             font-size: $media-font-text;
         }
-        
-        & > &__footer {
+        &__footer {
             margin-top: $media-margin;
 
             // Components
-            .#{media-name}__share {
+            & > .#{media-name}__share {
                 vertical-align: top;
                 color: $font-color;
                 font: { size: 1.2rem; weight: $font-weight-heavy; };
             }
-
-            i {
+            & > i {
                 color: map-get($theme-maps, primary);
                 font-size: 2.0rem;
 
@@ -136,15 +133,16 @@ $media-font-text: $font-size;
             // Components
             &__header {
                 // Components
-                &__title { font-size: $media-font-title-mobile; }
-                &__subtitle { font-size: $media-font-subtitle-mobile; }
+                & > .#{$media-name}__title { font-size: $media-font-title-mobile; }
+                & > .#{$media-name}__subtitle { font-size: $media-font-subtitle-mobile; }
             }
             
-            &__text { font-size: $font-size; }
+            &__body { font-size: $font-size; }
         }
     }
     
-    .button--close {
+    // --- CLOSE BUTTON ---//
+    & > .#{$media-name}__button--close {
         position: absolute;
         top: 0; right: 1.0rem;
         font-size: 2.5rem;
