@@ -1842,22 +1842,22 @@ code {
   list-style: none;
 }
 
-.menu > .menu__list > .menu > .menu__list__item {
+.menu > .menu__list > .menu__list__item {
   font-size: 1.5rem;
   font-weight: 300;
 }
 
-.menu > .menu__list > .menu > .menu__list__item > a {
+.menu > .menu__list > .menu__list__item > a {
   display: block;
   padding: 0.5rem 1.0rem;
   color: #404040;
 }
 
-.menu > .menu__list > .menu > .menu__list__item > a:hover {
+.menu > .menu__list > .menu__list__item > a:hover {
   background-color: #F4F4F8;
 }
 
-.menu > .menu__list > .menu > .menu__list__item > .menu > .menu__list > .menu > .menu__list__item .menu__list {
+.menu > .menu__list > .menu__list__item > .menu__list {
   margin: 0.5rem 1.0rem;
   border-left: 2px solid #E2E2E2;
 }
