@@ -133,12 +133,12 @@ a {
   text-align: justify;
 }
 
-.text--title, .card > .card__header__title {
+.text--title {
   font-size: 4.0rem;
   font-weight: 400;
 }
 
-.text--subtitle, .card > .card__header__subtitle {
+.text--subtitle {
   font-size: 2.5rem;
   font-weight: 400;
 }
@@ -1438,19 +1438,29 @@ code {
 }
 
 .card > .card__header {
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   border-bottom: 1px solid #E2E2E2;
 }
 
-.card > img,
-.card > .card__image {
-  width: 100%;
+.card > .card__header > .card__title {
+  font-size: 2.4rem;
+  font-weight: 700;
 }
 
-.card > .card__caption {
+.card > .card__header > .card__subtitle {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.card > .card__body {
   padding: 1rem;
   font-size: 1.5rem;
   color: #7F7F7F;
+}
+
+.card > .card__body > img,
+.card > .card__body > .card__image {
+  width: 100%;
 }
 
 .card > .card__footer {
@@ -1464,7 +1474,7 @@ code {
   border-top: 1px solid #E2E2E2;
 }
 
-.card > .card__footer__item {
+.card > .card__footer > .card__footer__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: -ms-flex;
@@ -1483,27 +1493,27 @@ code {
   -ms-flex-align: center;
   align-items: center;
   margin: 0;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
-.card > .card__footer__item > a {
+.card > .card__footer > .card__footer__item > a {
   text-decoration: none;
   color: #111516;
 }
 
-.card > .card__footer__item > a:hover {
+.card > .card__footer > .card__footer__item > a:hover {
   color: #ADD2E6;
 }
 
-.card > .card__footer__item:not(:first-child) {
+.card > .card__footer > .card__footer__item:not(:first-child) {
   border-left: 1px solid #E2E2E2;
 }
 
 .card.card--shadow-box {
-  -webkit-box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
-  -ms-box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.25), 0 0 3em rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0 1em rgba(0, 0, 0, 0.25), 0 0 3em rgba(0, 0, 0, 0.15);
+  -ms-box-shadow: 0 0 1em rgba(0, 0, 0, 0.25), 0 0 3em rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.25), 0 0 3em rgba(0, 0, 0, 0.15);
 }
 
 /* ===================================================*/
