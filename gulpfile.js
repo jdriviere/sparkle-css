@@ -47,8 +47,9 @@ gulp.task('sassify', function() {
         .pipe(browserSync.reload({ stream: true }));
 });
 
-gulp.task('watch:sass', ['sassify'], function() {
-    gulp.watch('src/scss/sparkle.scss', browserSync.reload);
+gulp.task('watch:sass', function() {
+    gulp.watch('src/scss/sparkle.scss', ['sassify'], browserSync.reload);
+    console.log('Watching HTML files.');
 });
 
 // RENDER JS FILES
@@ -63,8 +64,9 @@ gulp.task('uglify', function(cb) {
     cb);
 });
 
-gulp.task('watch:js', ['uglify'], function() {
-    gulp.watch('src/js/*.js', browserSync.reload);
+gulp.task('watch:js', function() {
+    gulp.watch('src/js/*.js', ['uglify'], browserSync.reload);
+    console.log('Watching HTML files.');
 });
 
 // RENDER HTML FILES
@@ -76,9 +78,9 @@ gulp.task('pug', function buildHTML() {
         .pipe(gulp.dest('docs/'));
 });
 
-gulp.task('watch:html', ['pug'], function() {
-    gulp.watch('dev/**/*.pug', browserSync.reload);
-    gulp.watch('docs/*.html', browserSync.reload);
+gulp.task('watch:html', function() {
+    gulp.watch('dev/**/*.pug', ['pug'], browserSync.reload);
+    console.log('Watching HTML files.');
 });
 
 // RENDER IMAGE FILES
@@ -93,12 +95,10 @@ gulp.task('minimg', function() {
 });
 
 // CREATE SERVER
-gulp.task('serve', ['pug', 'sassify', 'uglify'], function() {
+gulp.task('serve', ['watch:html', 'watch:sass', 'watch:js'], function() {
     browserSync.init({
         server: "./"
     });
-
-    gulp.watch('**/*.html').on('change', browserSync.reload);
 });
 
 // DEFAULT RUN
