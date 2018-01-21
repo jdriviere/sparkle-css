@@ -1130,7 +1130,7 @@ code {
 
 .button.button--primary--link:hover, .button.button--primary--link:focus, .button.button--primary--link:active {
   background: rgba(173, 210, 230, 0.1);
-  color: #90c2dd !important;
+  color: #86bdda !important;
 }
 
 .button.button--primary--outline {
@@ -1176,7 +1176,7 @@ code {
 
 .button.button--secondary--link:hover, .button.button--secondary--link:focus, .button.button--secondary--link:active {
   background: rgba(155, 194, 230, 0.1);
-  color: #7cafde !important;
+  color: #72a9dc !important;
 }
 
 .button.button--secondary--outline {
@@ -1222,7 +1222,7 @@ code {
 
 .button.button--info--link:hover, .button.button--info--link:focus, .button.button--info--link:active {
   background: rgba(25, 130, 196, 0.1);
-  color: #156ca2 !important;
+  color: #136497 !important;
 }
 
 .button.button--info--outline {
@@ -1268,7 +1268,7 @@ code {
 
 .button.button--success--link:hover, .button.button--success--link:focus, .button.button--success--link:active {
   background: rgba(138, 201, 38, 0.1);
-  color: #74a920 !important;
+  color: #6d9e1e !important;
 }
 
 .button.button--success--outline {
@@ -1314,7 +1314,7 @@ code {
 
 .button.button--warning--link:hover, .button.button--warning--link:focus, .button.button--warning--link:active {
   background: rgba(255, 202, 58, 0.1);
-  color: #ffc014 !important;
+  color: #ffbc07 !important;
 }
 
 .button.button--warning--outline {
@@ -1360,7 +1360,7 @@ code {
 
 .button.button--danger--link:hover, .button.button--danger--link:focus, .button.button--danger--link:active {
   background: rgba(255, 89, 94, 0.1);
-  color: #ff3339 !important;
+  color: #ff262d !important;
 }
 
 .button.button--danger--outline {
