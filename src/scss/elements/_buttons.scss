@@ -68,6 +68,7 @@ $button-border-radius:         0.3em !default;
         $fontcolor: nth($color, 2);
 
         // States
+        // --- DEFAULTS --- //
         &.#{$button-name}--#{$type} {
             background: $bgcolor;
             color: $fontcolor !important;
@@ -80,7 +81,36 @@ $button-border-radius:         0.3em !default;
                 border-color: $color-none;
             }
         }
-		
+
+        // --- LINKS --- //
+        &.#{$button-name}--#{$type}--link {
+            @if ($type == "light") {
+                background: $color-none;
+                color: $bgcolor !important;
+                border-color: $color-none;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    background: rgba($grey_base, 0.1);
+                    color: darken($bgcolor, 10%) !important;
+                }
+            }
+            @else {
+                background: $color-none;
+                color: $bgcolor !important;
+                border-color: $color-none;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    background: rgba($bgcolor, 0.1);
+                    color: darken($bgcolor, $darken) !important;
+                }
+            }
+        }
+        
+        // --- OUTLINED --- //
 		&.#{$button-name}--#{$type}--outline {
 			background: $color-none;
 			color: $bgcolor !important;
@@ -95,6 +125,7 @@ $button-border-radius:         0.3em !default;
             }
         }
         
+        // --- GHOSTED --- //
         &.#{$button-name}--#{$type}--ghost {            
             @if ($type == "light") {
                 background: map-get($theme-maps, light);
