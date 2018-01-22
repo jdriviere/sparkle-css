@@ -1,4 +1,4 @@
-[![Logo](dist/img/Logo_InColor_side.png)](https://jdriviere.github.io/sparkle-css)
+[![Logo](dist/img/Logo_InCol_v2.png)](https://jdriviere.github.io/sparkle-css)
 A lightweight, open-source, mobile-first CSS framework for easy website designs.
 
 [![license](https://img.shields.io/badge/license-MIT-yellow.svg)](https://github.com/jdriviere/sparkle-css/blob/master/LICENSE)
