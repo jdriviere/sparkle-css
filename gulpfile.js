@@ -75,7 +75,8 @@ gulp.task('pug', function buildHTML() {
         .pipe(
             pug({ pretty: true })
         )
-        .pipe(gulp.dest('docs/'));
+        .pipe(gulp.dest('docs/'))
+        .pipe(browserSync.reload({ stream: true })); // <-- Remove if it doesn't work
 });
 
 gulp.task('watch:html', function() {
@@ -97,8 +98,12 @@ gulp.task('minimg', function() {
 // CREATE SERVER
 gulp.task('serve', ['watch:html', 'watch:sass', 'watch:js'], function() {
     browserSync.init({
-        server: "./"
+        server: "./docs"
     });
+
+    gulp.watch(['src/scss/sparkle.scss'], ['sassify']);
+    gulp.watch(['dev/**/*.pug'], ['pug']);
+    gulp.watch("docs/*.html").on('change', browserSync.reload);
 });
 
 // DEFAULT RUN
