@@ -49,7 +49,7 @@ gulp.task('sassify', function() {
 
 gulp.task('watch:sass', function() {
     gulp.watch('src/scss/sparkle.scss', ['sassify'], browserSync.reload);
-    console.log('Watching HTML files.');
+    console.log('Watching CSS files.');
 });
 
 // RENDER JS FILES
@@ -66,7 +66,7 @@ gulp.task('uglify', function(cb) {
 
 gulp.task('watch:js', function() {
     gulp.watch('src/js/*.js', ['uglify'], browserSync.reload);
-    console.log('Watching HTML files.');
+    console.log('Watching JS files.');
 });
 
 // RENDER HTML FILES
