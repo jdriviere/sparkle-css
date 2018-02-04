@@ -11,7 +11,7 @@
 $wrapper-name: "wrapper" !default;
 $wrapper-spacing: 2.5% !default;
 
-// Grid Variable
+// Grid Variables
 $grid-name: "grid" !default;
 $grid-margin: 1.5rem !default;
 $grid-gutter: 1.5rem !default;
@@ -76,7 +76,7 @@ $offset-name: "column__offset" !default;
 			right: ($grid-gutter / -2);
 		};
 
-        & > .#{$column-name} {
+        > .#{$column-name} {
             padding: {
                 left: ($grid-gutter / 2);
 				right:( $grid-gutter / 2);

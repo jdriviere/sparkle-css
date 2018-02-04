@@ -664,7 +664,13 @@ code {
 }
 
 .nav__brand {
-  flex: 0 0 auto;
+  -webkit-box-flex: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
   padding: 1rem;
   color: #9BC2E6;
   font-size: 1.5rem;
@@ -785,7 +791,13 @@ code {
     display: -ms-flexbox;
     display: -ms-flex;
     display: flex;
-    flex: 0 0 auto;
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -799,13 +811,22 @@ code {
     display: -ms-flexbox;
     display: -ms-flex;
     display: flex;
-    flex: 0 0 auto;
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
   }
   .nav__menu__item {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
     flex-grow: 0;
+    -ms-flex-negative: 0;
     flex-shrink: 0;
     -webkit-box-pack: center;
     -ms-flex-pack: center;

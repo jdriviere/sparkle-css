@@ -41,6 +41,9 @@ $tag-padding:               0.5rem 1.0rem !default;
         $fontcolor: nth($color, 2);
 
         // States
-        &.#{$tag-name}--#{$type} { background: $bgcolor; color: $fontcolor !important; }
+        &.#{$tag-name}--#{$type} {
+            background: $bgcolor;
+            color: $fontcolor !important;
+        }
     } // End of LOOP
 }
