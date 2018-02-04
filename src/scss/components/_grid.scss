@@ -89,12 +89,12 @@ $offset-name: "column__offset" !default;
 		@include flexDirectionRow;
 		
 		// Components
-        & > [class*="column--"] { @include flexGrow; }
+        & [class*="column--"] { @include flexGrow; }
 	}
 
     // Components
     // --- COLUMNS ---
-	& > .#{$column-name} {
+	& .#{$column-name} {
 		@include flexSize;
 
         // Media Queries
@@ -119,24 +119,24 @@ $offset-name: "column__offset" !default;
 	}
     
     // --- OFFSETS ---
-    & > .#{$column-name}[class*="#{$offset-name}"] { margin-left: 0; }
+    & .#{$column-name}[class*="#{$offset-name}"] { margin-left: 0; }
 
     // Media Queries
     @media screen and (min-width: 640px) {
         @for $i from 1 through $column-max {
-            & > .#{$column-name}.#{$offset-name}--#{$i}-of-#{$column-max} {
+            & .#{$column-name}.#{$offset-name}--#{$i}-of-#{$column-max} {
 				margin-left: ((100% / $column-max) * $i);
 			}
 		} // End of LOOP
 
         // Special Cases
-        & > .#{$offset-name}--1-of-4 { @extend .#{$offset-name}--3-of-12; }
-        & > .#{$column-name}--1-of-3 { @extend .#{$offset-name}--4-of-12; }
-		& > .#{$offset-name}--1-of-2,
-		& > .#{$offset-name}--half { @extend .#{$offset-name}--6-of-12; }
-        & > .#{$column-name}--2-of-3 { @extend .#{$offset-name}--8-of-12; }
-        & > .#{$offset-name}--3-of-4 { @extend .#{$offset-name}--9-of-12; }
-		& > .#{$offset-name}--1-of-1,
-		& > .#{$offset-name}--full { @extend .#{$offset-name}--12-of-12; }
+        & .#{$offset-name}--1-of-4 { @extend .#{$offset-name}--3-of-12; }
+        & .#{$column-name}--1-of-3 { @extend .#{$offset-name}--4-of-12; }
+		& .#{$offset-name}--1-of-2,
+		& .#{$offset-name}--half { @extend .#{$offset-name}--6-of-12; }
+        & .#{$column-name}--2-of-3 { @extend .#{$offset-name}--8-of-12; }
+        & .#{$offset-name}--3-of-4 { @extend .#{$offset-name}--9-of-12; }
+		& .#{$offset-name}--1-of-1,
+		& .#{$offset-name}--full { @extend .#{$offset-name}--12-of-12; }
 	}
 }
