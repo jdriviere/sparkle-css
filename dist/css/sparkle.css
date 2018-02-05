@@ -310,7 +310,7 @@ code {
     flex-basis: 16.66667%;
     width: 16.66667%;
   }
-  .grid > .column.column--3-of-12, .grid > .column.column--1-of-4, .grid > .column.column--quarter {
+  .grid > .column.column--3-of-12, .grid > .column.column--1-of-4, .grid > .column.column--fourth {
     -webkit-box-flex: 0;
     -ms-flex-positive: 0;
     flex-grow: 0;
@@ -403,10 +403,10 @@ code {
   .grid > .column.column__offset--2-of-12 {
     margin-left: 16.66667%;
   }
-  .grid > .column.column__offset--3-of-12, .grid > .column.column__offset--1-of-4 {
+  .grid > .column.column__offset--3-of-12, .grid > .column.column__offset--1-of-4, .grid > .column.column--fourth {
     margin-left: 25%;
   }
-  .grid > .column.column__offset--4-of-12, .grid > .column.column--1-of-3 {
+  .grid > .column.column__offset--4-of-12, .grid > .column.column--1-of-3, .grid > .column.column--third {
     margin-left: 33.33333%;
   }
   .grid > .column.column__offset--5-of-12 {

@@ -111,7 +111,7 @@ $offset-name: "column__offset" !default;
 
             // Special Cases
 			&.#{$column-name}--1-of-4,
-			&.#{$column-name}--quarter { @extend .#{$column-name}--3-of-12; }
+			&.#{$column-name}--fourth { @extend .#{$column-name}--3-of-12; }
 			&.#{$column-name}--1-of-3,
 			&.#{$column-name}--third { @extend .#{$column-name}--4-of-12; }
 			&.#{$column-name}--1-of-2,
@@ -135,8 +135,10 @@ $offset-name: "column__offset" !default;
 		} // End of LOOP
 
         // Special Cases
-        > .#{$offset-name}--1-of-4 { @extend .#{$offset-name}--3-of-12; }
-        > .#{$column-name}--1-of-3 { @extend .#{$offset-name}--4-of-12; }
+		> .#{$offset-name}--1-of-4,
+		> .#{$column-name}--fourth { @extend .#{$offset-name}--3-of-12; }
+		> .#{$column-name}--1-of-3,
+		> .#{$column-name}--third { @extend .#{$offset-name}--4-of-12; }
 		> .#{$offset-name}--1-of-2,
 		> .#{$offset-name}--half { @extend .#{$offset-name}--6-of-12; }
         > .#{$column-name}--2-of-3 { @extend .#{$offset-name}--8-of-12; }
