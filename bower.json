@@ -30,6 +30,7 @@
     ".git/",
     "src",
     "dist/img",
+    "dist/css/main.css",
     "*.html",
     "*.txt",
     "package-lock.json",
