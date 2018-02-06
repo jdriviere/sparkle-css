@@ -23,17 +23,18 @@
   "homepage": "https://jdriviere.github.io/sparkle-css",
   "ignore": [
     "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests",
     ".git/",
-    "src",
+    ".sass-cache/",
+    ".vscode/",
+    "dev/",
     "dist/img",
     "dist/css/main.css",
+    "node_modules",
+    "bower_components",
+    "src",
+    "unused/",
     "*.html",
-    "*.txt",
-    "package-lock.json",
-    "npm-debug.log"
+    "*.json",
+    "*.log"
   ]
 }
