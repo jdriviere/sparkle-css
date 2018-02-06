@@ -75,7 +75,7 @@ gulp.task('pug', function buildHTML() {
         .pipe(
             pug({ pretty: true })
         )
-        .pipe(gulp.dest('docs/'))
+        .pipe(gulp.dest('./'))
         .pipe(browserSync.reload({ stream: true })); // <-- Remove if it doesn't work
 });
 
