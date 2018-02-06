@@ -4,27 +4,30 @@
 @import "../config/_variables";
 @import "../config/_mixins";
 
+// VARIABLES
+$navigation-name: 'nav' !default;
+
 // MIXINS
-@mixin navCollapse {
+@mixin flexFlowColumnWrap {
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 		-ms-flex-flow: column wrap;
 			flex-flow: column wrap;
-} // End of NavCollapse
+} // End of FlexFlowColumnWrap
 
-@mixin navStretch {
+@mixin flexFlowRowNoWrap {
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
 		-ms-flex-flow: row nowrap;
 			flex-flow: row nowrap;
-} // End of NavStretch
+} // End of FlexFlowRowNoWrap
 
-@mixin navMenuItemAsRow {
+@mixin FlexDirectionRow {
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
 		-ms-flex-direction: row;
 			flex-direction: row;
-} // End of NavMenuItemAsRow
+} // End of FlexDirectionRow
 
 @mixin navMenuNoFlex {
 	-webkit-box-flex: 0;
@@ -38,11 +41,13 @@
 			flex: 1 0 auto;
 } // NavMenuItemFlexStyle
 
+// ====================================
 // NAVIGATION
-.nav {
+// ====================================
+.#{$navigation-name} {
 	position: relative;
     @include displayFlex;
-    @include navCollapse;
+    @include flexFlowColumnWrap;
     width: 100%;
     height: auto;
     padding: 0;
@@ -50,16 +55,19 @@
 	border: { bottom: 1px solid $grey_base; };
     z-index: $index-higher;
     
-    // COMPONENTS
+    // Components
     &__brand {
-		// float: left;
-		flex: 0 0 auto;
+		@include flexGrow(0);
+		@include flexShrink(0);
+		@include flexBasis(auto);
+		// flex: 0 0 auto;
         padding: 1rem;
         color: map-get($theme-maps, secondary);
         font: { size: 1.5rem; weight: $font-weight-heavy; };
         letter-spacing: 0.1rem;
 		cursor: pointer;
 		
+		// Components
 		& img,
 		&__img { max-height: 3.2rem; }
     }
@@ -78,7 +86,7 @@
 				letter-spacing: 0.1rem;
 			}
 
-			// STATES
+			// States
             &:hover {
 				background-color: map-get($theme-maps, primary);
 
@@ -89,23 +97,28 @@
     
     // Hamburger Icon
     &__mobile {
-        position: absolute; top: 1.0rem; right: 1.0rem;
+		position: absolute;
+		top: 1.0rem;
+		right: 1.0rem;
         
-        & > .nav__mobile__icon { @include hamburger; }
+        & > .#{$navigation-name}__mobile__icon { @include hamburger; }
     }
     
-    // STATES
-    &.nav--fixed { position: fixed; }
+    // States
+    &.#{$navigation-name}--fixed { position: fixed; }
     
-    // MEDIA QUERIES
+    // Media Queries
     @media screen and (min-width: $bp-large) {
-		@include navStretch;
+		@include flexFlowRowNoWrap;
 		@include alignItemsStretch;
         
-        // COMPONENTS
+        // Components
         &__brand {
 			@include displayFlex;
-			flex: 0 0 auto;
+			@include flexGrow(0);
+			@include flexShrink(0);
+			@include flexBasis(auto);
+			// flex: 0 0 auto;
 			@include justifyContentCenter;
 			@include alignItemsCenter;
             border: { right: 1px solid $grey_base; };
@@ -113,29 +126,34 @@
         
         &__menu {
 			@include displayFlex;
-			flex: 0 0 auto;
+			@include flexGrow(0);
+			@include flexShrink(0);
+			@include flexBasis(auto);
+			// flex: 0 0 auto;
 
 			// Components
             &__item {
 				@include displayInlineFlex;
-				flex: { grow: 0; shrink: 0; };
+				@include flexGrow(0);
+				@include flexShrink(0);
+				// flex: { grow: 0; shrink: 0; };
 				@include justifyContentCenter;
 				@include alignItemsCenter;
 				height: 100%;
 				
-				// COMPONENTS
+				// Components
 				a { cursor: pointer; }
 
-				// STATES
+				// Pseudo
 				&:hover,
-				&.nav__menu__item--active {
+				&.#{$navigation-name}__menu__item--active {
 					background-color: $color-none;
 
 					a { color: map-get($theme-maps, primary); }
 				}
 				
-				// STATES
-				&.nav__menu__item--special {
+				// States
+				&.#{$navigation-name}__menu__item--special {
 					background-color: map-get($theme-maps, primary);
 
 					a { color: map-get($theme-maps, light); }
@@ -148,10 +166,10 @@
                 }
             }
             
-            // STATES
-            &.nav__menu--left { margin-right: auto; }
-            &.nav__menu--center { margin: { left: auto; right: auto; }; };
-            &.nav__menu--right { margin-left: auto; }
+            // States
+            &.#{$navigation-name}__menu--left { margin-right: auto; }
+            &.#{$navigation-name}__menu--center { margin: { left: auto; right: auto; }; };
+            &.#{$navigation-name}__menu--right { margin-left: auto; }
         }
         
         &__mobile { display: none; }

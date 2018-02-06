@@ -28,19 +28,25 @@ $menu-font-color-item:      $font-color !default;
     @include create-menu;
 
     // Components
-    & > &__tag {
+    &__tag {
         display: block;
-        font: { size: $menu-font-size-tag; weight: $menu-font-weight-tag; };
+        font: {
+            size: $menu-font-size-tag;
+            weight: $menu-font-weight-tag;
+        };
         color: $menu-font-color-tag;
 
         &:not(:first-of-type) { margin-top: 1.0rem; }
     }
-    & > &__list {
+    .#{$menu-name}__list {
         list-style: none;
 
         // Components
-        & > &__item {
-            font: { size: $menu-font-size-item; weight: $menu-font-weight-item; };
+        .#{$menu-name}__list__item {
+            font: {
+                size: $menu-font-size-item;
+                weight: $menu-font-weight-item;
+            };
 
             // Components
             & > a {
@@ -48,16 +54,13 @@ $menu-font-color-item:      $font-color !default;
                 padding: 0.5rem 1.0rem;
                 color: $menu-font-color-item;
 
-                &:hover { background-color: $white_base; }
+                &:hover { background: $white_base; }
             }
 
-            & > & .#{$menu-name}__list {
+            & > .#{$menu-name}__list {
                 margin: 0.5rem 1.0rem;
                 border-left: 2px solid $menu-border-color;
             }
-
-            // States
-            // &--active {}
         }
     }
 }
