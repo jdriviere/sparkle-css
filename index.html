@@ -1,149 +1,53 @@
 <!DOCTYPE html>
-
 <html lang="en">
-<head>
-    <!-- TITLE -->
+  <head>
     <title>Sparkle | Home</title>
-
-	<!-- LOADING META CODES -->
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="author" content="J. Djimitry Riviere">
-	<meta name="description" content="Sparkle.CSS: a lightweight, open-source, mobile-first CSS framework for easy website designs.">
-	<meta name="keywords" content="HTML, HTML5, CSS, CSS3, CSS Framework, JavaScript, JS, sparkle, Sparkle, sparkle-css">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="theme-color" content="#ADD2E6">
-
-	<!-- LOADING LINKS -->
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="icon" type="image/png" sizes="16x16" href="dist/img/favicon.ico">
-	<link rel="stylesheet" type="text/css" href="dist/css/sparkle.min.css">
-
-	<!-- INTERNAL STYLING -->
-	<style>
-        body {
-            background-image: url('dist/img/sparkles_bg2_new.jpg');
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: cover;
-            /* background-color: #F4F4F8; */
-            color: #444;
-        }
-        .banner {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: stretch;
-            width: 100%;
-            height: 100vh;
-            padding: 1.0rem;
-        }
-        .banner__top { align-items:flex-start; order: 1; }
-        .banner__center { align-items: center; order: 2; }
-        .banner__bottom { align-items: flex-end; order: 3; }
-        .banner__title { color: #9BC2E6; }
-        .banner__subtitle {
-            margin-bottom: 5.0em;
-            font-size: 2.0rem;
-            font-weight: 300;
-        }
-
-        .intro { padding-top: 12.0rem; padding-bottom: 12.0rem; }
-
-        .button-group { margin: 1.0em 0; text-align: left; }
-        .button:not(:last-child) { margin: 0 1.5rem 1.5rem; }
-        .button:first-child { margin-left: 0; }
-        
-        footer { padding: 0.5rem 0; }
-        footer i { color: #C03; }
-        footer a { text-decoration: none; color: #9BC2E6; }
-
-        @media only screen and (min-width: 960px) {
-            .banner { padding: 0; }
-            .button-group > .button { margin: 0 0.5em 0 0; }
-            footer { padding-left: 0; padding-right: 0; }
-        }
-    </style>
-</head>
-
-<body>
-    <!-- HEADER -->
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta name="author" content="J. Djimitry Riviere"/>
+    <meta name="description" content="Sparkle.CSS: a lightweight, open-source, mobile-first CSS framework for easy website designs."/>
+    <meta name="keywords" content="HTML, HTML5, CSS, CSS3, CSS Framework, JavaScript, JS, sparkle, Sparkle, sparkle-css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="theme-color" content="#ADD2E6"/>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="dist/img/icon.png"/>
+    <link rel="stylesheet" type="text/css" href="dist/css/sparkle.min.css"/>
+    <link rel="stylesheet" type="text/css" href="dist/css/main.css"/>
+  </head>
+  <body>
     <header>
-        <nav class="nav nav--fixed">
-            <!-- NAV LOGO/BRAND -->
-            <div class="nav__brand">
-                <a href="index.html">
-                    <img src="dist/img/Logo_InColor_side.png" alt="Sparkle_Logo" class="nav__brand__image">
-                </a>
-            </div>
-
-            <!-- NAV MENU -->
-            <ul class="nav__menu">
-                <li class="nav__menu__item nav__menu__item--active"><a href="index.html">Home</a></li>
-                <li class="nav__menu__item"><a href="start.html">Getting Started</a></li>
-                <li class="nav__menu__item"><a href="docs.html">Documentation</a></li>
-            </ul>
-            <ul class="nav__menu nav__menu--right">
-                <li class="nav__menu__item"><a href="https://github.com/jdriviere/sparkle-css/archive/v1.9.0.zip">Download</a></li>
-                <li class="nav__menu__item nav__menu__item--special">
-                    <a href="https://github.com/jdriviere/sparkle-css">
-                        <i class="fa fa-github fa-2x"></i>
-                    </a>
-                </li>
-            </ul>
-
-            <!-- MOBILE NAV ICON -->
-            <div class="nav__mobile">
-                <div class="nav__mobile__icon">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </nav>
+      <nav class="nav">
+        <div class="nav__brand"><a href="index.html"><img class="nav__brand__image" src="dist/img/Logo_v2.png" alt="Sparkle_Logo"/></a></div>
+        <ul class="nav__menu">
+          <li class="nav__menu__item nav__menu__item--active"><a href="#">Home</a></li>
+          <li class="nav__menu__item"><a href="#">Get Started</a></li>
+          <li class="nav__menu__item"><a href="#">Documentation</a></li>
+        </ul>
+        <ul class="nav__menu nav__menu--right">
+          <li class="nav__menu__item"><a href="https://github.com/jdriviere/sparkle-css/archive/v1.9.1.zip">Download</a></li>
+          <li class="nav__menu__item nav__menu__item--special"><a href="https://github.com/jdriviere/sparkle-css" target="_blank"><i class="fa fa-github fa-2x"></i></a></li>
+        </ul>
+        <div class="nav__mobile">
+          <div class="nav__mobile__icon"><span></span><span></span><span></span></div>
+        </div>
+      </nav>
     </header>
-    
-    <!-- BANNER -->
-	<main class="banner wrapper">
-        <!-- TITLES -->
-        <div class="banner__top intro">
-            <h1 class="banner__title">sparkle.css</h1>
-            <h3 class="banner__subtitle">
-                A lightweight, open-source, mobile-first CSS framework for easy website designs.
-            </h3>
-
-            <!-- BUTTON GROUP -->
-            <div class="button-group">
-                <a href="https://github.com/jdriviere/sparkle-css/archive/v1.9.0.zip" class="button button--dark--outline button--large">
-                    Download
-                </a>
-                <a href="https://jdriviere.github.io/sparkle-css/start.html" class="button button--secondary--outline button--large">
-                    Get Started
-                </a>
-            </div>
-    
-            <!-- VERSION -->
-            <p class="text--small">*Currently on version: <span class="text--thick">1.9.1</span></p>
-        </div>
-
-        <!-- FOOTER -->
-        <div class="banner__bottom">
-            <footer>
-                <p>
-                    Designed with <span><i class="fa fa-heart"></i></span>
-                    by <a href="https://jdriviere.github.io">J. D. Riviere</a> using
-                    <a href="https://github.com/jdriviere/sparkle-css">Sparkle</a> &copy; 2017
-                </p>
-            </footer>
-        </div>
-    </main>
-
-    
-
-    <!-- LOADING SCRIPTS - Note: At the bottom of <body> makes scripts load faster -->
+    <main class="wrapper banner">
+      <div class="banner__top">
+        <h1 class="banner__title">sparkle.css</h1>
+        <h3 class="banner__subtitle">A lightweight, open-source, mobile-first CSS framework for easy website designs.</h3>
+        <div class="button-group"><a class="button button--dark--outline button--large" href="https://github.com/jdriviere/sparkle-css/archive/v1.9.2.zip">Download</a><a class="button button--secondary--outline button--large" href="../docs/start.html">
+            Get Started
+            </a></div>
+        <p class="text--small">*Currently on version:<span class="text--thick">   1.9.2</span></p>
+      </div>
+      <div class="banner__bottom">
+        <footer><i class="fa fa-code"></i><span>&nbsp; with &nbsp;</span><span><i class="fa fa-heart"></i></span><span>   by J. D. Riviere using</span><span><a href="https://jdriviere.github.io/sparkle-css" target="_blank">&nbsp; sparkle.css</a></span></footer>
+      </div>
+    </main><!-- LOADING SCRIPTS - Note: At the bottom of <body> makes scripts load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://use.fontawesome.com/a833db4ecd.js"></script>
-    <script src="dist/js/sparkle.min.js"></script> 
-</body>
+    <script src="dist/js/sparkle.min.js"></script>
+  </body>
 </html>

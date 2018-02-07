@@ -1,0 +1,48 @@
+body {
+    background-image: url('../../dist/img/sparkles_bg2_new.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: #444;
+}
+.banner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    height: calc(100vh - (3.2rem + (1.5rem * 2)));
+}
+.banner__top {
+    flex: 0 0 auto;
+    order: 0;
+}
+.banner__center {
+    align-items: center;
+    order: 1;
+}
+.banner__bottom {
+    align-items: flex-end;
+    order: 2;
+    padding: 1.5rem 0;
+}
+.banner__title { color: #9BC2E6; }
+.banner__subtitle {
+    font-size: 2.0rem;
+    font-weight: 300;
+}
+
+.button-group { margin: 1.0em 0; text-align: left; }
+.button:not(:last-child) { margin: 0 1.5rem 1.5rem; }
+.button:first-child { margin-left: 0; }
+
+footer { padding: 0.5rem 0; }
+footer i.fa.fa-heart { color: #C03; }
+footer a { text-decoration: none; color: #9BC2E6; }
+
+@media only screen and (min-width: 960px) {
+    .banner { padding: 0; }
+    .button-group > .button { margin: 0 0.5em 0 0; }
+    footer { padding-left: 0; padding-right: 0; }
+}

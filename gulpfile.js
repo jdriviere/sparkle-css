@@ -14,28 +14,29 @@ var imageminPNG = require('imagemin-optipng');
 var imageminJPG = require('imagemin-jpegtran');
 var imageminSVG = require('imagemin-svgo');
 var sass = require('gulp-sass');
+var pug = require('gulp-pug');
 var browserSync = require('browser-sync').create();
 
 /* ==================================== */
 /* TASKS
 /* ==================================== */
-gulp.task('build', function() {
+gulp.task('css:backup', function() {
     return gulp.src('src/css/sparkle.css')
         .pipe(concatCSS('sparkle.css'))
         .pipe(gulp.dest('src/css/backup/'));
 });
 
-gulp.task('minify', function() {
+gulp.task('css:minify-backup', function() {
     return gulp.src('src/css/sparkle.css')
         .pipe(cleanCSS())
         .pipe(rename('sparkle.min.css'))
         .pipe(gulp.dest('src/css/backup/'));
 });
 
-// Use only if/when using SASS
+// RENDER CSS FILES
 gulp.task('sassify', function() {
     return gulp.src('src/scss/sparkle.scss')
-        .pipe(sass({outputStyle: 'expanded'})
+        .pipe(sass({ outputStyle: 'expanded' })
             .on('error', sass.logError)
         )
         .pipe(rename('sparkle.css'))
@@ -46,6 +47,12 @@ gulp.task('sassify', function() {
         .pipe(browserSync.reload({ stream: true }));
 });
 
+gulp.task('watch:sass', function() {
+    gulp.watch('src/scss/sparkle.scss', ['sassify'], browserSync.reload);
+    console.log('Watching CSS files.');
+});
+
+// RENDER JS FILES
 gulp.task('uglify', function(cb) {
     pump([
         gulp.src('src/js/sparkle.js'),
@@ -57,6 +64,27 @@ gulp.task('uglify', function(cb) {
     cb);
 });
 
+gulp.task('watch:js', function() {
+    gulp.watch('src/js/*.js', ['uglify'], browserSync.reload);
+    console.log('Watching JS files.');
+});
+
+// RENDER HTML FILES
+gulp.task('pug', function buildHTML() {
+    return gulp.src('dev/*.pug')
+        .pipe(
+            pug({ pretty: true })
+        )
+        .pipe(gulp.dest('./'))
+        .pipe(browserSync.reload({ stream: true })); // <-- Remove if it doesn't work
+});
+
+gulp.task('watch:html', function() {
+    gulp.watch('dev/**/*.pug', ['pug'], browserSync.reload);
+    console.log('Watching HTML files.');
+});
+
+// RENDER IMAGE FILES
 gulp.task('minimg', function() {
     return gulp.src(['src/img/*.jpg', 'src/img/*.png', 'src/img/*.svg'])
         .pipe(imagemin(
@@ -67,14 +95,16 @@ gulp.task('minimg', function() {
         .pipe(gulp.dest('dist/img/'));
 });
 
-gulp.task('serve', ['sassify'], function() {
+// CREATE SERVER
+gulp.task('serve', ['watch:html', 'watch:sass', 'watch:js'], function() {
     browserSync.init({
-        server: "./"
+        server: "./docs"
     });
 
-    gulp.watch('src/scss/**.scss');
-    gulp.watch('*.html').on('change', browserSync.reload);
+    gulp.watch(['src/scss/sparkle.scss'], ['sassify']);
+    gulp.watch(['dev/**/*.pug'], ['pug']);
+    gulp.watch("docs/*.html").on('change', browserSync.reload);
 });
 
-// gulp.task('default', ['build', 'minify', 'sassify', 'uglify', 'minimg']);
-gulp.task('default', ['sassify', 'uglify', 'minimg']);
+// DEFAULT RUN
+gulp.task('default', ['pug', 'sassify', 'uglify', 'minimg']);

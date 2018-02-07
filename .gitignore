@@ -1,6 +1,7 @@
 .sass-cache/
 .vscode/
 dev/
+docs/
 node_modules/
 src/css/
 src/img/

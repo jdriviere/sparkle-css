@@ -11,7 +11,7 @@
 $wrapper-name: "wrapper" !default;
 $wrapper-spacing: 2.5% !default;
 
-// Grid Variable
+// Grid Variables
 $grid-name: "grid" !default;
 $grid-margin: 1.5rem !default;
 $grid-gutter: 1.5rem !default;
@@ -54,8 +54,8 @@ $offset-name: "column__offset" !default;
 .#{$grid-name} {
 	@include displayFlex;
 	@include flexSize;
+	@include flexDirectionColumn;
 	@include flexWrap;
-    @include flexDirectionColumn;
     margin-bottom: $grid-margin;
 
 	// Pseudo
@@ -76,7 +76,7 @@ $offset-name: "column__offset" !default;
 			right: ($grid-gutter / -2);
 		};
 
-        & > .#{$column-name} {
+        > .#{$column-name} {
             padding: {
                 left: ($grid-gutter / 2);
 				right:( $grid-gutter / 2);
@@ -89,26 +89,30 @@ $offset-name: "column__offset" !default;
 		@include flexDirectionRow;
 		
 		// Components
-        & > [class*="column--"] { @include flexGrow; }
+        > [class*="column--"] { @include flexGrow; }
 	}
 
     // Components
     // --- COLUMNS ---
-	& > .#{$column-name} {
-		@include flexSize;
+	> .#{$column-name} {
+		@include flexGrow;
+		@include flexShrink(0);
 
         // Media Queries
         @media screen and (min-width: 640px) {
             @for $i from 1 through $column-max {
                 &.#{$column-name}--#{$i}-of-#{$column-max} {
+					@include flexGrow(0);
 					@include flexBasis (((100% * $i) / $column-max));
 					width: ((100% * $i) / $column-max);
 				}
 			} // End of LOOP
 
             // Special Cases
-			&.#{$column-name}--1-of-4 { @extend .#{$column-name}--3-of-12; }
-			&.#{$column-name}--1-of-3 { @extend .#{$column-name}--4-of-12; }
+			&.#{$column-name}--1-of-4,
+			&.#{$column-name}--fourth { @extend .#{$column-name}--3-of-12; }
+			&.#{$column-name}--1-of-3,
+			&.#{$column-name}--third { @extend .#{$column-name}--4-of-12; }
 			&.#{$column-name}--1-of-2,
 			&.#{$column-name}--half { @extend .#{$column-name}--6-of-12; }
             &.#{$column-name}--2-of-3 { @extend .#{$column-name}--8-of-12; }
@@ -119,24 +123,26 @@ $offset-name: "column__offset" !default;
 	}
     
     // --- OFFSETS ---
-    & > .#{$column-name}[class*="#{$offset-name}"] { margin-left: 0; }
+    > .#{$column-name}[class*="#{$offset-name}"] { margin-left: 0; }
 
     // Media Queries
     @media screen and (min-width: 640px) {
         @for $i from 1 through $column-max {
-            & > .#{$column-name}.#{$offset-name}--#{$i}-of-#{$column-max} {
+            > .#{$column-name}.#{$offset-name}--#{$i}-of-#{$column-max} {
 				margin-left: ((100% / $column-max) * $i);
 			}
 		} // End of LOOP
 
         // Special Cases
-        & > .#{$offset-name}--1-of-4 { @extend .#{$offset-name}--3-of-12; }
-        & > .#{$column-name}--1-of-3 { @extend .#{$offset-name}--4-of-12; }
-		& > .#{$offset-name}--1-of-2,
-		& > .#{$offset-name}--half { @extend .#{$offset-name}--6-of-12; }
-        & > .#{$column-name}--2-of-3 { @extend .#{$offset-name}--8-of-12; }
-        & > .#{$offset-name}--3-of-4 { @extend .#{$offset-name}--9-of-12; }
-		& > .#{$offset-name}--1-of-1,
-		& > .#{$offset-name}--full { @extend .#{$offset-name}--12-of-12; }
+		> .#{$offset-name}--1-of-4,
+		> .#{$column-name}--fourth { @extend .#{$offset-name}--3-of-12; }
+		> .#{$column-name}--1-of-3,
+		> .#{$column-name}--third { @extend .#{$offset-name}--4-of-12; }
+		> .#{$offset-name}--1-of-2,
+		> .#{$offset-name}--half { @extend .#{$offset-name}--6-of-12; }
+        > .#{$column-name}--2-of-3 { @extend .#{$offset-name}--8-of-12; }
+        > .#{$offset-name}--3-of-4 { @extend .#{$offset-name}--9-of-12; }
+		> .#{$offset-name}--1-of-1,
+		> .#{$offset-name}--full { @extend .#{$offset-name}--12-of-12; }
 	}
 }
