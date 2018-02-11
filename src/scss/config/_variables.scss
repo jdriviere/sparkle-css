@@ -79,7 +79,7 @@ $blue_d3:                   #0C3C5A !default;
 $blue_d4:                   #072436 !default;
 $blue_d5:                   #030C12 !default;
 
-// LIGHT-BLUES (THEME COLOR 1)
+// LIGHT-BLUES (COLOR THEME 1)
 $lblue_l5:                  #F7FBFC !default;
 $lblue_l4:                  #E8F4F8 !default;
 $lblue_l3:                  #D9EDF3 !default;
@@ -93,17 +93,17 @@ $lblue_d4:                  #303B3F !default;
 $lblue_d5:                  #101415 !default;
 
 // BLUE TOPAZ (COLOR THEME 2)
-$btopaz_l5:                 #F5F9FC !default;
-$btopaz_l4:                 #E3EEF8 !default;
-$btopaz_l3:                 #D1E3F3 !default;
-$btopaz_l2:                 #BFD8EF !default;
-$btopaz_l1:                 #ADCDEA !default;
-$btopaz_base:               #9BC2E6 !default; // Main
-$btopaz_d1:                 #7F9FBD !default;
-$btopaz_d2:                 #637C93 !default;
-$btopaz_d3:                 #475969 !default;
-$btopaz_d4:                 #2B353F !default;
-$btopaz_d5:                 #0F1215 !default;
+// $btopaz_l5:                 #F5F9FC !default;
+// $btopaz_l4:                 #E3EEF8 !default;
+// $btopaz_l3:                 #D1E3F3 !default;
+// $btopaz_l2:                 #BFD8EF !default;
+// $btopaz_l1:                 #ADCDEA !default;
+// $btopaz_base:               #9BC2E6 !default; // Main
+// $btopaz_d1:                 #7F9FBD !default;
+// $btopaz_d2:                 #637C93 !default;
+// $btopaz_d3:                 #475969 !default;
+// $btopaz_d4:                 #2B353F !default;
+// $btopaz_d5:                 #0F1215 !default;
 
 // WHITES
 $white_l5:                  #FEFEFE !default;
@@ -154,7 +154,6 @@ $color-none:                transparent !default;
 $theme-maps: (
     default:                $grey_base,
     primary:				$lblue_base,
-    secondary:				$btopaz_base,
     info:                   $blue_base,
     success:				$green_base,
     warning:				$yellow_base,
@@ -212,7 +211,7 @@ $bp-fullhd:					1200px; // Desktop - 1200px
 // =================================
 $font-family:       		"Lato", "Helvetica Neue", Helvetica, "Open Sans", Arial, sans-serif !default;
 $font-special:              "FontAwesome" !default;
-$font-size:					1.5rem !default; // Changes base rem size to 15px
+$font-size:					1.6rem !default;
 $font-color:                $color-grey-25 !default;
 $font-color-link:           map-get($theme-maps, primary) !default;
 $font-weight-light:			300 !default;

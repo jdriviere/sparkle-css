@@ -40,12 +40,13 @@ $media-font-text: $font-size;
     
     // Components
     // --- MEDIA PROFILE ---//
-    & > &__profile {
+    &__profile {
         // States
-        & > .#{$media-name}__profile.#{$media-name}__profile--left {
+        &.#{$media-name}__profile--left {
             @include displayFlex;
             @include flexSizePlus(0, 0, auto);
-            width: $media-profile-large; height: $media-profile-large;
+            width: $media-profile-large;
+            height: $media-profile-large;
             margin-bottom: $media-margin;
 
             // Components
@@ -74,7 +75,7 @@ $media-font-text: $font-size;
     }
 
     // --- MEDIA CONTENT --- //
-    & > &__content {
+    &__content {
         @include displayFlex;
         @include flexDirectionColumn;
         @include flexSize;
@@ -90,16 +91,25 @@ $media-font-text: $font-size;
             & > .#{$media-name}__title {
                 margin-bottom: ($media-margin / 2);
                 color: $font-color;
-                font: { size: $media-font-title; weight: $font-weight-heavy; };
+                font: {
+                    size: $media-font-title;
+                    weight: $font-weight-heavy;
+                };
             }
             & > .#{$media-name}__subtitle {
                 margin-bottom: ($media-margin / 2);
                 color: rgba($font-color, 0.3);
-                font: { size: $media-font-subtitle; weight: $font-weight-normal; };
+                font: {
+                    size: $media-font-subtitle;
+                    weight: $font-weight-normal;
+                };
             }
             & > .#{$media-name}__timestamp {
                 color: rgba($font-color, 0.5);
-                font: { size: $media-font-timestamp; weight: $font-weight-light; };
+                font: {
+                    size: $media-font-timestamp;
+                    weight: $font-weight-light;
+                };
             }
         }
         &__body {
@@ -114,7 +124,10 @@ $media-font-text: $font-size;
             & > .#{media-name}__share {
                 vertical-align: top;
                 color: $font-color;
-                font: { size: 1.2rem; weight: $font-weight-heavy; };
+                font: {
+                    size: 1.2rem;
+                    weight: $font-weight-heavy;
+                };
             }
             & > i {
                 color: map-get($theme-maps, primary);
@@ -142,7 +155,7 @@ $media-font-text: $font-size;
     }
     
     // --- CLOSE BUTTON ---//
-    & > .#{$media-name}__button--close {
+    > .#{$media-name}__button--close {
         position: absolute;
         top: 0; right: 1.0rem;
         font-size: 2.5rem;

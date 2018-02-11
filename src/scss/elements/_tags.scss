@@ -7,7 +7,6 @@
 // VARIABLES
 $tag-color-maps: (
     primary:                ($lblue_base, $white_base),
-    secondary:              ($btopaz_base, $white_base),
     info:                   ($blue_base, $white_base),
     success:                ($green_base, $white_base),
     warning:                ($yellow_base, $black_base),
@@ -18,6 +17,7 @@ $tag-color-maps: (
 $tag-name:                  'tag' !default;
 $tag-margin:                1.5rem !default;
 $tag-padding:               0.5rem 1.0rem !default;
+$tag-font-size:             1.2rem !default;
 
 // MIXINS
 @mixin create-tag {
@@ -28,22 +28,22 @@ $tag-padding:               0.5rem 1.0rem !default;
     padding: $tag-padding;
     background: map-get($theme-maps, default);
     color: map-get($theme-maps, dark);
-    font-size: 12px;
+    font-size: $tag-font-size;
     @include border-radius;
-} // End of Create-Tag
 
-// TAGS
-.#{$tag-name} {
-    @include create-tag;
-
+    // States
     @each $type, $color in $tag-color-maps {
         $bgcolor: nth($color, 1);
         $fontcolor: nth($color, 2);
 
-        // States
         &.#{$tag-name}--#{$type} {
             background: $bgcolor;
             color: $fontcolor !important;
         }
     } // End of LOOP
+} // End of Create-Tag
+
+// TAGS
+.#{$tag-name} {
+    @include create-tag;
 }

@@ -32,10 +32,10 @@ body {
 }
 
 ::-moz-selection {
-    background: map-get($theme-maps, secondary);
+    background: map-get($theme-maps, primary);
     color: map-get($theme-maps, light);
 }
 ::selection {
-    background: map-get($theme-maps, secondary);
+    background: map-get($theme-maps, primary);
     color: map-get($theme-maps, light);
 }

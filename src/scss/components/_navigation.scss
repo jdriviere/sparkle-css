@@ -60,10 +60,12 @@ $navigation-name: 'nav' !default;
 		@include flexGrow(0);
 		@include flexShrink(0);
 		@include flexBasis(auto);
-		// flex: 0 0 auto;
         padding: 1rem;
-        color: map-get($theme-maps, secondary);
-        font: { size: 1.5rem; weight: $font-weight-heavy; };
+        color: map-get($theme-maps, primary);
+        font: {
+			size: 1.5rem;
+			weight: $font-weight-heavy;
+		};
         letter-spacing: 0.1rem;
 		cursor: pointer;
 		
