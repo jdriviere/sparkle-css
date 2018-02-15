@@ -932,36 +932,36 @@ code {
   border-color: transparent;
 }
 
-.button.button--primary--link {
+.button.button--primary.button--link {
   background: transparent;
   color: #ADD2E6 !important;
   border-color: transparent;
 }
 
-.button.button--primary--link:hover, .button.button--primary--link:focus, .button.button--primary--link:active {
+.button.button--primary.button--link:hover, .button.button--primary.button--link:focus, .button.button--primary.button--link:active {
   background: rgba(173, 210, 230, 0.1);
   color: #86bdda !important;
 }
 
-.button.button--primary--outline {
+.button.button--primary.button--outline {
   background: transparent;
   color: #ADD2E6 !important;
   border: 1px solid #ADD2E6;
 }
 
-.button.button--primary--outline:hover, .button.button--primary--outline:focus, .button.button--primary--outline:active {
+.button.button--primary.button--outline:hover, .button.button--primary.button--outline:focus, .button.button--primary.button--outline:active {
   background: #ADD2E6;
   color: #F4F4F8 !important;
   border-color: transparent;
 }
 
-.button.button--primary--ghost {
+.button.button--primary.button--ghost {
   background: #F4F4F8;
   color: #ADD2E6 !important;
   border: 1px solid #E7E7E7;
 }
 
-.button.button--primary--ghost:hover, .button.button--primary--ghost:focus, .button.button--primary--ghost:active {
+.button.button--primary.button--ghost:hover, .button.button--primary.button--ghost:focus, .button.button--primary.button--ghost:active {
   background: #ADD2E6;
   color: #F4F4F8 !important;
   border-color: transparent;
@@ -978,36 +978,36 @@ code {
   border-color: transparent;
 }
 
-.button.button--info--link {
+.button.button--info.button--link {
   background: transparent;
   color: #1982C4 !important;
   border-color: transparent;
 }
 
-.button.button--info--link:hover, .button.button--info--link:focus, .button.button--info--link:active {
+.button.button--info.button--link:hover, .button.button--info.button--link:focus, .button.button--info.button--link:active {
   background: rgba(25, 130, 196, 0.1);
   color: #136497 !important;
 }
 
-.button.button--info--outline {
+.button.button--info.button--outline {
   background: transparent;
   color: #1982C4 !important;
   border: 1px solid #1982C4;
 }
 
-.button.button--info--outline:hover, .button.button--info--outline:focus, .button.button--info--outline:active {
+.button.button--info.button--outline:hover, .button.button--info.button--outline:focus, .button.button--info.button--outline:active {
   background: #1982C4;
   color: #F4F4F8 !important;
   border-color: transparent;
 }
 
-.button.button--info--ghost {
+.button.button--info.button--ghost {
   background: #F4F4F8;
   color: #1982C4 !important;
   border: 1px solid #E7E7E7;
 }
 
-.button.button--info--ghost:hover, .button.button--info--ghost:focus, .button.button--info--ghost:active {
+.button.button--info.button--ghost:hover, .button.button--info.button--ghost:focus, .button.button--info.button--ghost:active {
   background: #1982C4;
   color: #F4F4F8 !important;
   border-color: transparent;
@@ -1024,36 +1024,36 @@ code {
   border-color: transparent;
 }
 
-.button.button--success--link {
+.button.button--success.button--link {
   background: transparent;
   color: #8AC926 !important;
   border-color: transparent;
 }
 
-.button.button--success--link:hover, .button.button--success--link:focus, .button.button--success--link:active {
+.button.button--success.button--link:hover, .button.button--success.button--link:focus, .button.button--success.button--link:active {
   background: rgba(138, 201, 38, 0.1);
   color: #6d9e1e !important;
 }
 
-.button.button--success--outline {
+.button.button--success.button--outline {
   background: transparent;
   color: #8AC926 !important;
   border: 1px solid #8AC926;
 }
 
-.button.button--success--outline:hover, .button.button--success--outline:focus, .button.button--success--outline:active {
+.button.button--success.button--outline:hover, .button.button--success.button--outline:focus, .button.button--success.button--outline:active {
   background: #8AC926;
   color: #F4F4F8 !important;
   border-color: transparent;
 }
 
-.button.button--success--ghost {
+.button.button--success.button--ghost {
   background: #F4F4F8;
   color: #8AC926 !important;
   border: 1px solid #E7E7E7;
 }
 
-.button.button--success--ghost:hover, .button.button--success--ghost:focus, .button.button--success--ghost:active {
+.button.button--success.button--ghost:hover, .button.button--success.button--ghost:focus, .button.button--success.button--ghost:active {
   background: #8AC926;
   color: #F4F4F8 !important;
   border-color: transparent;
@@ -1070,36 +1070,36 @@ code {
   border-color: transparent;
 }
 
-.button.button--warning--link {
+.button.button--warning.button--link {
   background: transparent;
   color: #FFCA3A !important;
   border-color: transparent;
 }
 
-.button.button--warning--link:hover, .button.button--warning--link:focus, .button.button--warning--link:active {
+.button.button--warning.button--link:hover, .button.button--warning.button--link:focus, .button.button--warning.button--link:active {
   background: rgba(255, 202, 58, 0.1);
   color: #ffbc07 !important;
 }
 
-.button.button--warning--outline {
+.button.button--warning.button--outline {
   background: transparent;
   color: #FFCA3A !important;
   border: 1px solid #FFCA3A;
 }
 
-.button.button--warning--outline:hover, .button.button--warning--outline:focus, .button.button--warning--outline:active {
+.button.button--warning.button--outline:hover, .button.button--warning.button--outline:focus, .button.button--warning.button--outline:active {
   background: #FFCA3A;
   color: #111516 !important;
   border-color: transparent;
 }
 
-.button.button--warning--ghost {
+.button.button--warning.button--ghost {
   background: #F4F4F8;
   color: #FFCA3A !important;
   border: 1px solid #E7E7E7;
 }
 
-.button.button--warning--ghost:hover, .button.button--warning--ghost:focus, .button.button--warning--ghost:active {
+.button.button--warning.button--ghost:hover, .button.button--warning.button--ghost:focus, .button.button--warning.button--ghost:active {
   background: #FFCA3A;
   color: #111516 !important;
   border-color: transparent;
@@ -1116,36 +1116,36 @@ code {
   border-color: transparent;
 }
 
-.button.button--danger--link {
+.button.button--danger.button--link {
   background: transparent;
   color: #FF595E !important;
   border-color: transparent;
 }
 
-.button.button--danger--link:hover, .button.button--danger--link:focus, .button.button--danger--link:active {
+.button.button--danger.button--link:hover, .button.button--danger.button--link:focus, .button.button--danger.button--link:active {
   background: rgba(255, 89, 94, 0.1);
   color: #ff262d !important;
 }
 
-.button.button--danger--outline {
+.button.button--danger.button--outline {
   background: transparent;
   color: #FF595E !important;
   border: 1px solid #FF595E;
 }
 
-.button.button--danger--outline:hover, .button.button--danger--outline:focus, .button.button--danger--outline:active {
+.button.button--danger.button--outline:hover, .button.button--danger.button--outline:focus, .button.button--danger.button--outline:active {
   background: #FF595E;
   color: #F4F4F8 !important;
   border-color: transparent;
 }
 
-.button.button--danger--ghost {
+.button.button--danger.button--ghost {
   background: #F4F4F8;
   color: #FF595E !important;
   border: 1px solid #E7E7E7;
 }
 
-.button.button--danger--ghost:hover, .button.button--danger--ghost:focus, .button.button--danger--ghost:active {
+.button.button--danger.button--ghost:hover, .button.button--danger.button--ghost:focus, .button.button--danger.button--ghost:active {
   background: #FF595E;
   color: #F4F4F8 !important;
   border-color: transparent;
@@ -1162,36 +1162,36 @@ code {
   border-color: transparent;
 }
 
-.button.button--light--link {
+.button.button--light.button--link {
   background: transparent;
   color: #F4F4F8 !important;
   border-color: transparent;
 }
 
-.button.button--light--link:hover, .button.button--light--link:focus, .button.button--light--link:active {
+.button.button--light.button--link:hover, .button.button--light.button--link:focus, .button.button--light.button--link:active {
   background: rgba(226, 226, 226, 0.1);
   color: #d5d5e4 !important;
 }
 
-.button.button--light--outline {
+.button.button--light.button--outline {
   background: transparent;
   color: #F4F4F8 !important;
   border: 1px solid #F4F4F8;
 }
 
-.button.button--light--outline:hover, .button.button--light--outline:focus, .button.button--light--outline:active {
+.button.button--light.button--outline:hover, .button.button--light.button--outline:focus, .button.button--light.button--outline:active {
   background: #F4F4F8;
   color: #111516 !important;
   border-color: transparent;
 }
 
-.button.button--light--ghost {
+.button.button--light.button--ghost {
   background: #F4F4F8;
   color: #C8C8CB !important;
   border: 1px solid #E7E7E7;
 }
 
-.button.button--light--ghost:hover, .button.button--light--ghost:focus, .button.button--light--ghost:active {
+.button.button--light.button--ghost:hover, .button.button--light.button--ghost:focus, .button.button--light.button--ghost:active {
   background: #F4F4F8;
   color: #111516 !important;
   border-color: transparent;
@@ -1208,36 +1208,36 @@ code {
   border-color: transparent;
 }
 
-.button.button--dark--link {
+.button.button--dark.button--link {
   background: transparent;
   color: #111516 !important;
   border-color: transparent;
 }
 
-.button.button--dark--link:hover, .button.button--dark--link:focus, .button.button--dark--link:active {
+.button.button--dark.button--link:hover, .button.button--dark.button--link:focus, .button.button--dark.button--link:active {
   background: rgba(17, 21, 22, 0.1);
   color: black !important;
 }
 
-.button.button--dark--outline {
+.button.button--dark.button--outline {
   background: transparent;
   color: #111516 !important;
   border: 1px solid #111516;
 }
 
-.button.button--dark--outline:hover, .button.button--dark--outline:focus, .button.button--dark--outline:active {
+.button.button--dark.button--outline:hover, .button.button--dark.button--outline:focus, .button.button--dark.button--outline:active {
   background: #111516;
   color: #F4F4F8 !important;
   border-color: transparent;
 }
 
-.button.button--dark--ghost {
+.button.button--dark.button--ghost {
   background: #F4F4F8;
   color: #111516 !important;
   border: 1px solid #E7E7E7;
 }
 
-.button.button--dark--ghost:hover, .button.button--dark--ghost:focus, .button.button--dark--ghost:active {
+.button.button--dark.button--ghost:hover, .button.button--dark.button--ghost:focus, .button.button--dark.button--ghost:active {
   background: #111516;
   color: #F4F4F8 !important;
   border-color: transparent;

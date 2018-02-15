@@ -73,78 +73,79 @@ $button-border-radius:         0.3em !default;
             color: $fontcolor !important;
             border: 1px solid $color-none;
 
+            // Pseudo
             &:hover,
             &:focus,
             &:active {
                 background: darken($bgcolor, $darken);
                 border-color: $color-none;
             }
-        }
 
-        // --- LINKS --- //
-        &.#{$button-name}--#{$type}--link {
-            @if ($type == "light") {
+            // States
+            // --- LINKS --- //
+            &.#{$button-name}--link {
+                @if ($type == "light") {
+                    background: $color-none;
+                    color: $bgcolor !important;
+                    border-color: $color-none;
+    
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        background: rgba($grey_base, 0.1);
+                        color: darken($bgcolor, 10%) !important;
+                    }
+                } @else {
+                    background: $color-none;
+                    color: $bgcolor !important;
+                    border-color: $color-none;
+    
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        background: rgba($bgcolor, 0.1);
+                        color: darken($bgcolor, 10%) !important;
+                    }
+                }
+            }
+
+            // --- OUTLINED --- //
+            &.#{$button-name}--outline {
                 background: $color-none;
                 color: $bgcolor !important;
-                border-color: $color-none;
-
+                border: 1px solid $bgcolor;
+                
                 &:hover,
                 &:focus,
                 &:active {
-                    background: rgba($grey_base, 0.1);
-                    color: darken($bgcolor, 10%) !important;
+                    background: $bgcolor;
+                    color: $fontcolor !important;
+                    border-color: $color-none;
                 }
             }
-            @else {
-                background: $color-none;
-                color: $bgcolor !important;
-                border-color: $color-none;
 
+            // --- GHOSTED --- //
+            &.#{$button-name}--ghost {            
+                @if ($type == "light") {
+                    background: map-get($theme-maps, light);
+                    color: $white_d1 !important;
+                    border: 1px solid $grey_l1;
+                } @else {
+                    background: map-get($theme-maps, light);
+                    color: $bgcolor !important;
+                    border: 1px solid $grey_l1;
+                } // End of IF-ELSE
+                
+                // Pseudo
                 &:hover,
                 &:focus,
                 &:active {
-                    background: rgba($bgcolor, 0.1);
-                    color: darken($bgcolor, 10%) !important;
+                    background: $bgcolor;
+                    color: $fontcolor !important;
+                    border-color: $color-none;
                 }
             }
         }
-        
-        // --- OUTLINED --- //
-		&.#{$button-name}--#{$type}--outline {
-			background: $color-none;
-			color: $bgcolor !important;
-			border: 1px solid $bgcolor;
-			
-			&:hover,
-            &:focus,
-            &:active {
-                background: $bgcolor;
-                color: $fontcolor !important;
-                border-color: $color-none;
-            }
-        }
-        
-        // --- GHOSTED --- //
-        &.#{$button-name}--#{$type}--ghost {            
-            @if ($type == "light") {
-                background: map-get($theme-maps, light);
-                color: $white_d1 !important;
-                border: 1px solid $grey_l1;
-            } @else {
-                background: map-get($theme-maps, light);
-                color: $bgcolor !important;
-                border: 1px solid $grey_l1;
-            } // End of IF-ELSE
-            
-            // Pseudo
-			&:hover,
-            &:focus,
-            &:active {
-                background: $bgcolor;
-                color: $fontcolor !important;
-                border-color: $color-none;
-            }
-		}
     } // End of EACH-LOOP
 
     // States
