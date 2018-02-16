@@ -15,20 +15,19 @@ $alert-color-maps: (
 $alert-name:                'alert' !default;
 $alert-title-font-size:     1.8rem !default;
 $alert-font-size:			$font-size !default;
-$alert-margin:              1.5rem !default;
-$alert-padding:             1.5rem !default;
+$alert-margin:              1.0rem !default;
+$alert-padding:             1.0rem !default;
+$alert-border-radius:       0.5rem !default;
 
 // MIXINS
 @mixin create-alert {
     display: block;
     width: 100%;
     margin: 0;
-    padding: $alert-padding;
+    margin: ($alert-margin / 2) 0;
+    padding: ($alert-padding / 2) $alert-padding;
     font-size: $alert-font-size;
-    @include box-shadow(5, 5, 7);
-    @include border-radius-cust(0, 5, 5, 0);
-
-    &:not(:first-child) { margin-top: $alert-margin; }
+    @include border-radius-cust(0, $alert-border-radius, $alert-border-radius, 0);
 } // End of Create-Alert
 
 // ALERTS
@@ -40,11 +39,28 @@ $alert-padding:             1.5rem !default;
         $fontcolor: nth($color, 2);
         
         // States
-        &.#{$alert-name}--#{$type} { background-color: $bgcolor; color: $fontcolor !important; }
+        &.#{$alert-name}--#{$type} {
+            background-color: $bgcolor;
+            color: $fontcolor;
+            border: 1px solid darken($bgcolor, 15%);
+            border-left-width: 0.5rem;
+        }
     } // End of EACH-LOOP
 
     // Components
-    & > &__title { font: { size: $alert-title-font-size !important; weight: $font-weight-heavy; } }
-    & > &__text { margin: $alert-margin 0; font-weight: $font-weight-normal; }
-    & > &__list { margin-left: ($alert-margin * 2); font-weight: $font-weight-light; }
+    & > &__title {
+        margin-bottom: $alert-margin;
+        font: {
+            size: $alert-title-font-size !important;
+            weight: $font-weight-heavy;
+        }
+    }
+    & > &__text {
+        margin: $alert-margin 0;
+        font-weight: $font-weight-normal;
+    }
+    & > &__list {
+        margin-left: ($alert-margin * 2);
+        font-weight: $font-weight-light;
+    }
 }

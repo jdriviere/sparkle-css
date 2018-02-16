@@ -149,6 +149,7 @@ $button-border-radius:         0.3em !default;
     } // End of EACH-LOOP
 
     // States
+    // --- SIZES --- //
     &.#{$button-name}--xsmall { font-size: ($font-size * 0.66666); }
     &.#{$button-name}--small { font-size: ($font-size * 0.8 ); }
     &.#{$button-name}--medium { font-size: $font-size; }
@@ -162,6 +163,7 @@ $button-border-radius:         0.3em !default;
         letter-spacing: $button-letter-space;
     }
 
+    // --- ROUNDNESS --- //
     &.#{$button-name}--h-round { @include border-radius(($button-border-radius * 2)); }
     &.#{$button-name}--f-round { @include border-radius(3.5rem); }
 }

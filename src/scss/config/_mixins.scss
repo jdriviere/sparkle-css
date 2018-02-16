@@ -35,7 +35,7 @@
 // =======================================
 // BOX SHADOW
 // =======================================
-@mixin box-shadow($x, $y, $blur, $color: $color-pure-black, $alpha: 0.7) {
+@mixin box-shadow($x, $y, $blur, $color: $color-pure-black, $alpha: 0.3) {
     -webkit-box-shadow: $x $y $blur rgba($color, $alpha);
         -moz-box-shadow: $x $y $blur rgba($color, $alpha);
             -ms-box-shadow: $x $y $blur rgba($color, $alpha);
