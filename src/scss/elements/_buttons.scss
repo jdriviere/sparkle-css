@@ -82,6 +82,21 @@ $button-border-radius:         0.3em !default;
             }
 
             // States
+            // --- REVERSED --- //
+            &.#{$button-name}--reverse {
+                background: $color-none;
+                color: $fontcolor !important;
+                border: 1px solid $fontcolor;
+
+                // Pseudo
+                &:hover,
+                &:focus,
+                &:active {
+                    background: $fontcolor;
+                    color: $bgcolor !important;
+                }
+            }
+
             // --- LINKS --- //
             &.#{$button-name}--link {
                 @if ($type == "light") {
