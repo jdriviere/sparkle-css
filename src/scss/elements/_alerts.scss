@@ -21,6 +21,7 @@ $alert-border-radius:       0.5rem !default;
 
 // MIXINS
 @mixin create-alert {
+    position: relative;
     display: block;
     width: 100%;
     margin: 0;
