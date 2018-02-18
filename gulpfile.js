@@ -20,19 +20,6 @@ var browserSync = require('browser-sync').create();
 /* ==================================== */
 /* TASKS
 /* ==================================== */
-gulp.task('css:backup', function() {
-    return gulp.src('src/css/sparkle.css')
-        .pipe(concatCSS('sparkle.css'))
-        .pipe(gulp.dest('src/css/backup/'));
-});
-
-gulp.task('css:minify-backup', function() {
-    return gulp.src('src/css/sparkle.css')
-        .pipe(cleanCSS())
-        .pipe(rename('sparkle.min.css'))
-        .pipe(gulp.dest('src/css/backup/'));
-});
-
 // RENDER CSS FILES
 gulp.task('sassify', function() {
     return gulp.src('src/scss/sparkle.scss')
@@ -48,7 +35,7 @@ gulp.task('sassify', function() {
 });
 
 gulp.task('watch:sass', function() {
-    gulp.watch('src/scss/sparkle.scss', ['sassify'], browserSync.reload);
+    gulp.watch('src/scss/**/*.scss', ['sassify'], browserSync.reload);
     console.log('Watching CSS files.');
 });
 
@@ -98,7 +85,7 @@ gulp.task('minimg', function() {
 // CREATE SERVER
 gulp.task('serve', ['watch:html', 'watch:sass', 'watch:js'], function() {
     browserSync.init({
-        server: "./docs"
+        server: "./"
     });
 
     gulp.watch(['src/scss/sparkle.scss'], ['sassify']);
