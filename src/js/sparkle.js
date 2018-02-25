@@ -14,7 +14,7 @@ $(document).ready(function() {
 
     toggleHamburger();
     toggleMenu();
-    navResizeFix();
+    // navResizeFix();
     // navDrop();
     modalAction();
     closeMedia();
