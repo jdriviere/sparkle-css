@@ -21,6 +21,7 @@ body {
 .banner__center {
     align-items: center;
     order: 1;
+    padding: 8.0rem 0;
 }
 .banner__bottom {
     align-items: flex-end;
