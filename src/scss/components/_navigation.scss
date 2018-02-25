@@ -3,177 +3,179 @@
 /* ===================================================*/
 @import "../config/_variables";
 @import "../config/_mixins";
-
+    
+// ====================================
 // VARIABLES
-$navigation-name: 'nav' !default;
-
-// MIXINS
-@mixin flexFlowColumnWrap {
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-		-ms-flex-flow: column wrap;
-			flex-flow: column wrap;
-} // End of FlexFlowColumnWrap
-
-@mixin flexFlowRowNoWrap {
-	-webkit-box-orient: horizontal;
-	-webkit-box-direction: normal;
-		-ms-flex-flow: row nowrap;
-			flex-flow: row nowrap;
-} // End of FlexFlowRowNoWrap
-
-@mixin FlexDirectionRow {
-	-webkit-box-orient: horizontal;
-	-webkit-box-direction: normal;
-		-ms-flex-direction: row;
-			flex-direction: row;
-} // End of FlexDirectionRow
-
-@mixin navMenuNoFlex {
-	-webkit-box-flex: 0;
-		-ms-flex: none;
-			flex: none;
-} // End of NavMenoNoFlex
-
-@mixin navMenuItemFlexStyle {
-	-webkit-box-flex: 1;
-		-ms-flex: 1 0 auto;
-			flex: 1 0 auto;
-} // NavMenuItemFlexStyle
+// ====================================
+$navig-name          :   'nav' !default;
+$navig-colorbg       :   $white_l3 !default;
+$navig-colorborder   :   darken($navig-colorbg, $darken) !default;
+$navig-spacing       :   1.5rem !default;
+$navig-padding       :   1.0rem !default;
+$navig-brand         :   1.5rem !default;
+$navig-font          :   1.5rem !default;
+$navig-font-color    :   $font-color !default;
 
 // ====================================
 // NAVIGATION
 // ====================================
-.#{$navigation-name} {
-	position: relative;
+.#{$navig-name} {
     @include displayFlex;
-    @include flexFlowColumnWrap;
+    @include flexSize(1);
+    @include flexDirectionColumn;
     width: 100%;
     height: auto;
+    margin: 0;
     padding: 0;
-	background-color: map-get($theme-maps, light);
-	border: { bottom: 1px solid $grey_base; };
-    z-index: $index-higher;
+    background: $navig-colorbg;
     
-    // Components
+    // Elements
+    // --- MOBILE --- //
+    input[type='checkbox']##{$navig-name}__trigger {
+        display: none;
+        
+        // Pseudo
+        &:checked ~ .#{$navig-name}__menu {
+            @include displayFlex;
+			height: auto;
+		}
+        
+        &:checked ~ .#{$navig-name}__toggle {
+            color: rgba(0, 0, 0, 1.0);
+			border-color: rgba(0, 0, 0, 1.0);
+		}
+	}
+    
+    label[for='#{$navig-name}__trigger'].#{$navig-name}__toggle {
+        position: absolute;
+        top: $navig-spacing / 2;
+        right: $navig-spacing / 2;
+        margin-left: auto;
+        padding: $navig-padding / 2;
+        color: rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        @include border-radius(0.3rem);
+        
+        // Pseudo
+        &:before {
+            content: '\2630  Menu';
+			font-weight: 400;
+		}
+        
+        &:hover {
+            color: rgba(0, 0, 0, 0.7);
+            border-color: rgba(0, 0, 0, 0.7);
+			cursor: pointer;
+		}
+	}
+    
+    // --- BRAND/LOGO --- ///
     &__brand {
-		@include flexGrow(0);
-		@include flexShrink(0);
-		@include flexBasis(auto);
-        padding: 1rem;
-        color: map-get($theme-maps, primary);
+        padding: $navig-padding;
         font: {
-			size: 1.5rem;
-			weight: $font-weight-heavy;
-		};
-        letter-spacing: 0.1rem;
-		cursor: pointer;
-		
-		// Components
-		& img,
-		&__img { max-height: 3.2rem; }
-    }
+            size: $navig-brand !important;
+			weight: 700;
+		}
+        
+        // Elements
+        img,
+        &__img { max-height: 3.2rem; }
+
+        &--extra { opacity: 0.5; }
+	}
     
+    // --- MENU --- //
     &__menu {
         display: none;
+        @include flexDirectionColumn;
+        width: 100%;
         list-style: none;
         
+        // Elements
+        // --- MENU ITEMS --- //
         &__item {
-			a {
-				display: block;
-				padding: 1rem;
-				color: map-get($theme-maps, dark);
-				font: { size: $font-size; weight: $font-weight-normal; };
-				text-decoration: none;
-				letter-spacing: 0.1rem;
+            // Elements
+            > a {
+                display: block;
+                padding: $navig-padding;
+                text-decoration: none;
+                color: $navig-font-color;
+				cursor: pointer;
 			}
-
-			// States
-            &:hover {
-				background-color: map-get($theme-maps, primary);
-
-				a { color: map-get($theme-maps, light); }
+            
+            // Pseudo
+            &:hover { background: darken($navig-colorbg, $darken); }
+            
+            // Modifiers
+            &.#{$navig-name}__menu__item--active {
+                // Elements
+                > a { color: map-get($theme-maps, primary); }
 			}
-        }
-    }
-    
-    // Hamburger Icon
-    &__mobile {
-		position: absolute;
-		top: 1.0rem;
-		right: 1.0rem;
+            
+            &.#{$navig-name}__menu__item--special {
+                background: map-get($theme-maps, primary);
+                
+                // Elements
+                > a { color: #FFF; }
+                
+                // Pseudo
+                &:hover {
+                    background: darken(map-get($theme-maps, primary), $darken);
+                    
+                    // Elements
+                    > a { color: #FFF; }
+				}
+			}
+		}
         
-        & > .#{$navigation-name}__mobile__icon { @include hamburger; }
-    }
+        // Modifiers
+        &.#{$navig-name}__menu--right { margin-left: 0; }
+	}
     
-    // States
-    &.#{$navigation-name}--fixed { position: fixed; }
-    
-    // Media Queries
-    @media screen and (min-width: $bp-large) {
-		@include flexFlowRowNoWrap;
-		@include alignItemsStretch;
+    // Modifiers
+    &.#{$navig-name}--fixed {
+        position: fixed;
+        z-index: 5;
+		box-shadow: 0 0 7px rgba(0, 0, 0, 0.1),
+					0 0 15px rgba(0, 0, 0, 0.05);
+	}
+
+    // Media Query
+    @media screen and (min-width: 768px) {
+        @include flexDirectionRow;
+        @include alignItemsStretch;
         
-        // Components
+        // Elements
+        &__toggle { display: none; }
+        
         &__brand {
-			@include displayFlex;
-			@include flexGrow(0);
-			@include flexShrink(0);
-			@include flexBasis(auto);
-			// flex: 0 0 auto;
-			@include justifyContentCenter;
-			@include alignItemsCenter;
-            border: { right: 1px solid $grey_base; };
-        }
+            @include displayFlex;
+            @include flexGrow(0);
+            @include flexShrink(0);
+            @include flexBasis(auto);
+            @include alignItemsCenter;
+			border-right: 1px solid $navig-colorborder;
+		}
         
         &__menu {
-			@include displayFlex;
-			@include flexGrow(0);
-			@include flexShrink(0);
-			@include flexBasis(auto);
-			// flex: 0 0 auto;
-
-			// Components
-            &__item {
-				@include displayInlineFlex;
-				@include flexGrow(0);
-				@include flexShrink(0);
-				// flex: { grow: 0; shrink: 0; };
-				@include justifyContentCenter;
-				@include alignItemsCenter;
-				height: 100%;
-				
-				// Components
-				a { cursor: pointer; }
-
-				// Pseudo
-				&:hover,
-				&.#{$navigation-name}__menu__item--active {
-					background-color: $color-none;
-
-					a { color: map-get($theme-maps, primary); }
-				}
-				
-				// States
-				&.#{$navigation-name}__menu__item--special {
-					background-color: map-get($theme-maps, primary);
-
-					a { color: map-get($theme-maps, light); }
-
-					&:hover {
-						background-color: darken($lblue_base, $darken);
-
-						a { color: map-get($theme-maps, light); }
-					}
-                }
-            }
+            @include displayFlex;
+            @include flexDirectionRow;
+            @include alignItemsCenter;
+            width: auto;
             
-            // States
-            &.#{$navigation-name}__menu--left { margin-right: auto; }
-            &.#{$navigation-name}__menu--center { margin: { left: auto; right: auto; }; };
-            &.#{$navigation-name}__menu--right { margin-left: auto; }
-        }
-        
-        &__mobile { display: none; }
-    }
+            // Elements
+            &__item {
+                // Pseudo
+                &:hover {
+                    background: $color-none;
+					
+					// Elements
+                    > a { color: map-get($theme-maps, primary); }
+				}
+			}
+            
+            // Modifiers
+            &.#{$navig-name}__menu--right { margin-left: auto; }
+		}
+	}
 }
