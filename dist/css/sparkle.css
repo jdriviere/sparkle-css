@@ -63,7 +63,7 @@ body {
 /* ===================================================*/
 h1, h2, h3, h4, h5, h6 {
   margin: 0 !important;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 h1 {
@@ -99,7 +99,7 @@ a {
   font-size: 1.6rem;
   font-weight: 400;
   color: #ADD2E6;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .text--thin {
@@ -135,16 +135,21 @@ a {
 }
 
 .text--title {
+  display: block;
   font-size: 4.0rem;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .text--subtitle {
+  display: block;
   font-size: 2.5rem;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .text--paragraph {
+  display: block;
+  margin-top: 1.0rem;
+  margin-bottom: 1.0rem;
   font-size: 1.6rem;
   font-weight: 300;
 }
@@ -152,6 +157,13 @@ a {
 .text--subtext {
   font-size: 1.2rem;
   font-weight: 300;
+}
+
+.text--link {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #ADD2E6;
+  text-decoration: underline;
 }
 
 code {
@@ -224,6 +236,7 @@ code {
 
 @media screen and (min-width: 640px) {
   .wrapper {
+    width: 96%;
     max-width: 1200px;
   }
 }
