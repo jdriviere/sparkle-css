@@ -823,13 +823,11 @@ code {
 }
 
 .alert > .alert__title {
-  margin-bottom: 1rem;
   font-size: 1.8rem !important;
   font-weight: 700;
 }
 
 .alert > .alert__text {
-  margin: 1rem 0;
   font-weight: 400;
 }
 

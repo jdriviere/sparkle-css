@@ -50,16 +50,12 @@ $alert-border-radius:       0.5rem !default;
 
     // Components
     & > &__title {
-        margin-bottom: $alert-margin;
         font: {
             size: $alert-title-font-size !important;
             weight: $font-weight-heavy;
         }
     }
-    & > &__text {
-        margin: $alert-margin 0;
-        font-weight: $font-weight-normal;
-    }
+    & > &__text { font-weight: $font-weight-normal; }
     & > &__list {
         margin-left: ($alert-margin * 2);
         font-weight: $font-weight-normal;
