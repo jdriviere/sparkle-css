@@ -1,8 +1,8 @@
 /**
  * @author      J. Djimitry Riviere
  * @name        SPARKLE
- * @version     1.9.2
- * @release     02/05/2018
+ * @version     1.9.3
+ * @release     02/26/2018
  *
  * Welcome and thank you for using Sparkle, a lightweight, open-source CSS framework
  * to help you create simple, responsive website templates. It was developed by J. Djimitry Riviere
@@ -835,7 +835,7 @@ code {
 
 .alert > .alert__list {
   margin-left: 2rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /* ===================================================*/
@@ -850,8 +850,8 @@ code {
   flex-grow: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
+  -ms-flex-preferred-size: none;
+  flex-basis: none;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -903,12 +903,22 @@ code {
 }
 
 .button.button--primary.button--reverse {
+  background: #F4F4F8;
+  color: #ADD2E6 !important;
+  border: 1px solid transparent;
+}
+
+.button.button--primary.button--reverse:hover, .button.button--primary.button--reverse:focus, .button.button--primary.button--reverse:active {
+  background: #ebebf2;
+}
+
+.button.button--primary.button--reverse.button--outline {
   background: transparent;
   color: #F4F4F8 !important;
   border: 1px solid #F4F4F8;
 }
 
-.button.button--primary.button--reverse:hover, .button.button--primary.button--reverse:focus, .button.button--primary.button--reverse:active {
+.button.button--primary.button--reverse.button--outline:hover, .button.button--primary.button--reverse.button--outline:focus, .button.button--primary.button--reverse.button--outline:active {
   background: #F4F4F8;
   color: #ADD2E6 !important;
 }
@@ -960,12 +970,22 @@ code {
 }
 
 .button.button--info.button--reverse {
+  background: #F4F4F8;
+  color: #1982C4 !important;
+  border: 1px solid transparent;
+}
+
+.button.button--info.button--reverse:hover, .button.button--info.button--reverse:focus, .button.button--info.button--reverse:active {
+  background: #ebebf2;
+}
+
+.button.button--info.button--reverse.button--outline {
   background: transparent;
   color: #F4F4F8 !important;
   border: 1px solid #F4F4F8;
 }
 
-.button.button--info.button--reverse:hover, .button.button--info.button--reverse:focus, .button.button--info.button--reverse:active {
+.button.button--info.button--reverse.button--outline:hover, .button.button--info.button--reverse.button--outline:focus, .button.button--info.button--reverse.button--outline:active {
   background: #F4F4F8;
   color: #1982C4 !important;
 }
@@ -1017,12 +1037,22 @@ code {
 }
 
 .button.button--success.button--reverse {
+  background: #F4F4F8;
+  color: #8AC926 !important;
+  border: 1px solid transparent;
+}
+
+.button.button--success.button--reverse:hover, .button.button--success.button--reverse:focus, .button.button--success.button--reverse:active {
+  background: #ebebf2;
+}
+
+.button.button--success.button--reverse.button--outline {
   background: transparent;
   color: #F4F4F8 !important;
   border: 1px solid #F4F4F8;
 }
 
-.button.button--success.button--reverse:hover, .button.button--success.button--reverse:focus, .button.button--success.button--reverse:active {
+.button.button--success.button--reverse.button--outline:hover, .button.button--success.button--reverse.button--outline:focus, .button.button--success.button--reverse.button--outline:active {
   background: #F4F4F8;
   color: #8AC926 !important;
 }
@@ -1074,12 +1104,22 @@ code {
 }
 
 .button.button--warning.button--reverse {
+  background: #111516;
+  color: #FFCA3A !important;
+  border: 1px solid transparent;
+}
+
+.button.button--warning.button--reverse:hover, .button.button--warning.button--reverse:focus, .button.button--warning.button--reverse:active {
+  background: #0a0d0d;
+}
+
+.button.button--warning.button--reverse.button--outline {
   background: transparent;
   color: #111516 !important;
   border: 1px solid #111516;
 }
 
-.button.button--warning.button--reverse:hover, .button.button--warning.button--reverse:focus, .button.button--warning.button--reverse:active {
+.button.button--warning.button--reverse.button--outline:hover, .button.button--warning.button--reverse.button--outline:focus, .button.button--warning.button--reverse.button--outline:active {
   background: #111516;
   color: #FFCA3A !important;
 }
@@ -1131,12 +1171,22 @@ code {
 }
 
 .button.button--danger.button--reverse {
+  background: #F4F4F8;
+  color: #FF595E !important;
+  border: 1px solid transparent;
+}
+
+.button.button--danger.button--reverse:hover, .button.button--danger.button--reverse:focus, .button.button--danger.button--reverse:active {
+  background: #ebebf2;
+}
+
+.button.button--danger.button--reverse.button--outline {
   background: transparent;
   color: #F4F4F8 !important;
   border: 1px solid #F4F4F8;
 }
 
-.button.button--danger.button--reverse:hover, .button.button--danger.button--reverse:focus, .button.button--danger.button--reverse:active {
+.button.button--danger.button--reverse.button--outline:hover, .button.button--danger.button--reverse.button--outline:focus, .button.button--danger.button--reverse.button--outline:active {
   background: #F4F4F8;
   color: #FF595E !important;
 }
@@ -1188,12 +1238,22 @@ code {
 }
 
 .button.button--light.button--reverse {
+  background: #111516;
+  color: #F4F4F8 !important;
+  border: 1px solid transparent;
+}
+
+.button.button--light.button--reverse:hover, .button.button--light.button--reverse:focus, .button.button--light.button--reverse:active {
+  background: #0a0d0d;
+}
+
+.button.button--light.button--reverse.button--outline {
   background: transparent;
   color: #111516 !important;
   border: 1px solid #111516;
 }
 
-.button.button--light.button--reverse:hover, .button.button--light.button--reverse:focus, .button.button--light.button--reverse:active {
+.button.button--light.button--reverse.button--outline:hover, .button.button--light.button--reverse.button--outline:focus, .button.button--light.button--reverse.button--outline:active {
   background: #111516;
   color: #F4F4F8 !important;
 }
@@ -1245,12 +1305,22 @@ code {
 }
 
 .button.button--dark.button--reverse {
+  background: #F4F4F8;
+  color: #111516 !important;
+  border: 1px solid transparent;
+}
+
+.button.button--dark.button--reverse:hover, .button.button--dark.button--reverse:focus, .button.button--dark.button--reverse:active {
+  background: #ebebf2;
+}
+
+.button.button--dark.button--reverse.button--outline {
   background: transparent;
   color: #F4F4F8 !important;
   border: 1px solid #F4F4F8;
 }
 
-.button.button--dark.button--reverse:hover, .button.button--dark.button--reverse:focus, .button.button--dark.button--reverse:active {
+.button.button--dark.button--reverse.button--outline:hover, .button.button--dark.button--reverse.button--outline:focus, .button.button--dark.button--reverse.button--outline:active {
   background: #F4F4F8;
   color: #111516 !important;
 }

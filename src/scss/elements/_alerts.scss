@@ -62,6 +62,6 @@ $alert-border-radius:       0.5rem !default;
     }
     & > &__list {
         margin-left: ($alert-margin * 2);
-        font-weight: $font-weight-light;
+        font-weight: $font-weight-normal;
     }
 }

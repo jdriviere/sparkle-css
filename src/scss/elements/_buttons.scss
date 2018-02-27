@@ -31,7 +31,7 @@ $button-border-radius:         0.3em !default;
     @include displayInlineFlex;
     @include flexGrow(0);
     @include flexShrink(0);
-    @include flexBasis(auto);
+    @include flexBasis(none);
     @include justifyContentCenter;
     @include alignItemsCenter;
     @include remove-appearance;
@@ -84,16 +84,30 @@ $button-border-radius:         0.3em !default;
             // States
             // --- REVERSED --- //
             &.#{$button-name}--reverse {
-                background: $color-none;
-                color: $fontcolor !important;
-                border: 1px solid $fontcolor;
+                background: $fontcolor;
+                color: $bgcolor !important;
+                border: 1px solid $color-none;
 
                 // Pseudo
                 &:hover,
                 &:focus,
                 &:active {
-                    background: $fontcolor;
-                    color: $bgcolor !important;
+                    background: darken($fontcolor, 3%);
+                }
+
+                // States
+                &.#{$button-name}--outline {
+                    background: $color-none;
+                    color: $fontcolor !important;
+                    border: 1px solid $fontcolor;
+
+                    // Pseudo
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        background: $fontcolor;
+                        color: $bgcolor !important;
+                    }
                 }
             }
 
