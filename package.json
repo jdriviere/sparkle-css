@@ -1,6 +1,6 @@
 {
   "name": "sparkle.css",
-  "version": "1.9.2",
+  "version": "1.9.3",
   "description": "A lightweight, open-source, mobile-first CSS framework for easy website designs.",
   "main": "sparkle.min.css",
   "scripts": {
