@@ -413,10 +413,10 @@ code {
   .grid > .column.column__offset--2-of-12 {
     margin-left: 16.66667%;
   }
-  .grid > .column.column__offset--3-of-12, .grid > .column.column__offset--1-of-4, .grid > .column.column--fourth {
+  .grid > .column.column__offset--3-of-12, .grid > .column.column__offset--1-of-4, .grid > .column.column__offset--fourth {
     margin-left: 25%;
   }
-  .grid > .column.column__offset--4-of-12, .grid > .column.column--1-of-3, .grid > .column.column--third {
+  .grid > .column.column__offset--4-of-12, .grid > .column.column__offset--1-of-3, .grid > .column.column__offset--third {
     margin-left: 33.33333%;
   }
   .grid > .column.column__offset--5-of-12 {
@@ -428,7 +428,7 @@ code {
   .grid > .column.column__offset--7-of-12 {
     margin-left: 58.33333%;
   }
-  .grid > .column.column__offset--8-of-12, .grid > .column.column--2-of-3 {
+  .grid > .column.column__offset--8-of-12, .grid > .column.column__offset--2-of-3 {
     margin-left: 66.66667%;
   }
   .grid > .column.column__offset--9-of-12, .grid > .column.column__offset--3-of-4 {
