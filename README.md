@@ -8,8 +8,9 @@ A lightweight, open-source, mobile-first CSS framework for easy website designs.
 
 [![license](https://img.shields.io/badge/license-MIT-yellow.svg)](https://github.com/jdriviere/sparkle-css/blob/master/LICENSE)
 [![website](https://img.shields.io/badge/website-online-green.svg)](https://jdriviere.github.io/sparkle-css/)
-[![GitHub tag](https://img.shields.io/badge/version-1.9.3-blue.svg)](https://github.com/jdriviere/sparkle-css/releases/tag/v1.9.3)
-[![npm](https://img.shields.io/badge/npm-v1.9.3-red.svg)](https://www.npmjs.com/package/sparkle.css)
+[![GitHub tag](https://img.shields.io/badge/version-1.9.4-blue.svg)](https://github.com/jdriviere/sparkle-css/releases/tag/v1.9.4)
+[![npm](https://img.shields.io/badge/npm-v1.9.4-red.svg)](https://www.npmjs.com/package/sparkle.css)
+[![](https://data.jsdelivr.com/v1/package/gh/jdriviere/sparkle-css/badge?style=rounded)](https://www.jsdelivr.com/package/gh/jdriviere/sparkle-css)
 [![Travis](https://img.shields.io/travis/rust-lang/rust.svg)](https://travis-ci.org/jdriviere/sparkle-css)
 
 ## Introduction
