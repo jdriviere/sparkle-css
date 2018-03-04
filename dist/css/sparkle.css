@@ -780,46 +780,106 @@ code {
   position: relative;
   display: block;
   width: 100%;
-  margin: 0;
   margin: 0.5rem 0;
   padding: 0.5rem 1rem;
+  background: #E2E2E2;
+  color: #404040;
   font-size: 1.6rem;
+  font-weight: 400;
   border-radius: 0 0.5rem 0.5rem 0;
-}
-
-.alert.alert--default {
-  background-color: #E2E2E2;
-  color: #111516;
   border: 1px solid #bcbcbc;
   border-left-width: 0.5rem;
 }
 
+.alert.alert--primary {
+  background: #ADD2E6;
+  color: #F4F4F8;
+  border: 1px solid #72b2d4;
+  border-left-width: 0.5rem;
+}
+
+.alert.alert--primary.alert--outline {
+  background: transparent;
+  color: #ADD2E6 !important;
+  border-color: #ADD2E6;
+}
+
 .alert.alert--info {
-  background-color: #1982C4;
+  background: #1982C4;
   color: #F4F4F8;
   border: 1px solid #105580;
   border-left-width: 0.5rem;
 }
 
+.alert.alert--info.alert--outline {
+  background: transparent;
+  color: #1982C4 !important;
+  border-color: #1982C4;
+}
+
 .alert.alert--success {
-  background-color: #8AC926;
+  background: #8AC926;
   color: #F4F4F8;
   border: 1px solid #5e891a;
   border-left-width: 0.5rem;
 }
 
+.alert.alert--success.alert--outline {
+  background: transparent;
+  color: #8AC926 !important;
+  border-color: #8AC926;
+}
+
 .alert.alert--warning {
-  background-color: #FFCA3A;
+  background: #FFCA3A;
   color: #111516;
   border: 1px solid #edad00;
   border-left-width: 0.5rem;
 }
 
+.alert.alert--warning.alert--outline {
+  background: transparent;
+  color: #FFCA3A !important;
+  border-color: #FFCA3A;
+}
+
 .alert.alert--danger {
-  background-color: #FF595E;
+  background: #FF595E;
   color: #F4F4F8;
   border: 1px solid #ff0d14;
   border-left-width: 0.5rem;
+}
+
+.alert.alert--danger.alert--outline {
+  background: transparent;
+  color: #FF595E !important;
+  border-color: #FF595E;
+}
+
+.alert.alert--light {
+  background: #F4F4F8;
+  color: #111516;
+  border: 1px solid #c5c5da;
+  border-left-width: 0.5rem;
+}
+
+.alert.alert--light.alert--outline {
+  background: transparent;
+  color: #F4F4F8 !important;
+  border-color: #F4F4F8;
+}
+
+.alert.alert--dark {
+  background: #111516;
+  color: #F4F4F8;
+  border: 1px solid black;
+  border-left-width: 0.5rem;
+}
+
+.alert.alert--dark.alert--outline {
+  background: transparent;
+  color: #111516 !important;
+  border-color: #111516;
 }
 
 .alert > .alert__title {
@@ -827,13 +887,8 @@ code {
   font-weight: 700;
 }
 
-.alert > .alert__text {
-  font-weight: 400;
-}
-
 .alert > .alert__list {
   margin-left: 2rem;
-  font-weight: 400;
 }
 
 /* ===================================================*/
