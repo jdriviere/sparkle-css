@@ -6,15 +6,18 @@
 
 // VARIABLES
 $alert-color-maps: (
-    default:                ($grey_base, $black_base),
+    primary:                ($lblue_base, $white_base),
     info:                   ($blue_base, $white_base),
     success:                ($green_base, $white_base),
     warning:                ($yellow_base, $black_base),
-    danger:                 ($red_base, $white_base)
+    danger:                 ($red_base, $white_base),
+    light:                  ($white_base, $black_base),
+    dark:                   ($black_base, $white_base)
 ) !default;
 $alert-name:                'alert' !default;
 $alert-title-font-size:     1.8rem !default;
 $alert-font-size:			$font-size !default;
+$alert-font-weight:         $font-weight-normal !default;
 $alert-margin:              1.0rem !default;
 $alert-padding:             1.0rem !default;
 $alert-border-radius:       0.5rem !default;
@@ -24,11 +27,17 @@ $alert-border-radius:       0.5rem !default;
     position: relative;
     display: block;
     width: 100%;
-    margin: 0;
     margin: ($alert-margin / 2) 0;
     padding: ($alert-padding / 2) $alert-padding;
-    font-size: $alert-font-size;
+    background: $grey_base;
+    color: $font-color;
+    font: {
+        size: $alert-font-size;
+        weight: $alert-font-weight;
+    };
     @include border-radius-cust(0, $alert-border-radius, $alert-border-radius, 0);
+    border: 1px solid darken($grey_base, 15%);
+    border-left-width: 0.5rem;
 } // End of Create-Alert
 
 // ALERTS
@@ -39,25 +48,28 @@ $alert-border-radius:       0.5rem !default;
         $bgcolor: nth($color, 1);
         $fontcolor: nth($color, 2);
         
-        // States
+        // Modifiers
         &.#{$alert-name}--#{$type} {
-            background-color: $bgcolor;
+            background: $bgcolor;
             color: $fontcolor;
-            border: 1px solid darken($bgcolor, 15%);
+            border: 1px solid darken($bgcolor, $darken * 2);
             border-left-width: 0.5rem;
+
+            // Modifiers
+            &.#{$alert-name}--outline {
+                background: $color-none;
+                color: $bgcolor !important;
+                border-color: $bgcolor;
+            }
         }
     } // End of EACH-LOOP
 
-    // Components
+    // Elements
     & > &__title {
         font: {
             size: $alert-title-font-size !important;
             weight: $font-weight-heavy;
         }
     }
-    & > &__text { font-weight: $font-weight-normal; }
-    & > &__list {
-        margin-left: ($alert-margin * 2);
-        font-weight: $font-weight-normal;
-    }
+    & > &__list { margin-left: ($alert-margin * 2); }
 }
