@@ -2093,20 +2093,6 @@ code {
   margin-right: 0;
 }
 
-.tags > .tag:first-child:not(:last-child) {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.tags > .tag:not(:first-child):not(:last-child) {
-  border-radius: 0 !important;
-}
-
-.tags > .tag:last-child:not(:first-child) {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
 /* ===================================================*/
 /* UTILITIES
 /* ===================================================*/
