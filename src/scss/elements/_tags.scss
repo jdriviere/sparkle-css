@@ -61,6 +61,10 @@ $tag-group-spacing:         0.125em !default;
             }
         }
     } // End of LOOP
+
+    &.#{$tag-name}--round {
+        @include border-radius(2.0rem);
+    }
 } // End of Create-Tag
 
 // --- TAGS --- //
