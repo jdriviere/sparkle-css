@@ -2131,6 +2131,10 @@ code {
   color: #111516 !important;
 }
 
+.tag.tag--round {
+  border-radius: 2rem;
+}
+
 .tags {
   margin-top: 1.0rem;
 }
