@@ -1,12 +1,12 @@
 {
   "name": "sparkle.css",
-  "version": "1.9.3",
+  "version": "1.9.4",
   "description": "A lightweight, open-source, mobile-first CSS framework for easy website designs.",
   "main": "sparkle.min.css",
   "scripts": {
     "build:css": "gulp sassify",
     "build:js": "gulp uglify",
-    "test": "gulp sassify && gulp minify",
+    "test": "gulp sassify && gulp uglify",
     "serve": "gulp serve"
   },
   "repository": {
