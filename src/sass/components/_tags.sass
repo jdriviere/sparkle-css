@@ -1,0 +1,86 @@
+/* ===================================================
+/* TAGS
+/* ===================================================
+@import ../config/_all
+
+// ====================================
+// VARIABLES
+// ====================================
+$tag-color-map: (primary: ($lblue_base, $white_base), info: ($blue_base, $white_base), success: ($green_base, $white_base), warning: ($yellow_base, $black_base), danger: ($red_base, $white_base), light: ($white_base, $black_base), dark: ($black_base, $white_base)) !default
+$tag-name: 'tag' !default
+$tag-margin: 1.5rem !default
+$tag-padding: 0.5rem 1rem !default
+$tag-font-size: 1.2rem !default
+$tag-font-weight: $font-weight-normal
+
+$tag-group-name: 'tags' !default
+$tag-group-spacing: 0.125em !default
+
+// ====================================
+// MIXINS
+// ====================================
+=create-tag
+    +displayInlineFlex
+    +flexGrow(0)
+    +flexBasis(auto)
+    +justifyContentCenter
+    +alignItemsCenter
+    padding: $tag-padding
+    background: map-get($theme-map, default)
+    color: map-get($theme-map, dark)
+    font:
+        size: $tag-font-size
+        weight: $tag-font-weight
+    +border-radius
+
+    // Modifiers
+    @each $type, $color in $tag-color-map
+        $bgcolor: nth($color, 1)
+        $fontcolor: nth($color, 2)
+        
+        &.make-#{$type}
+            background: $bgcolor
+            color: $fontcolor !important
+
+            // Modifiers
+            &.make-outline
+                background: $color-none
+                color: $bgcolor !important
+                border: 1px solid $bgcolor
+            
+            &.make-reverse
+                background: $fontcolor
+                color: $bgcolor !important
+    
+    &.make-round
+        +border-radius(2.0rem)
+
+// ====================================
+// TAGS
+// ====================================
+.#{$tag-name}
+    +create-tag
+
+// --- GROUP --- //
+.#{$tag-group-name}
+    +displayFlex
+    +flexDirectionRow
+    +justifyContentAtStart
+    +flexWrap
+
+    // Pseudo
+    &:first-child
+        margin-top: 0
+
+    // Elements
+    > .#{$tag-name}
+        margin:
+            bottom: $tag-group-spacing * 2
+            left: $tag-group-spacing
+            right: $tag-group-spacing
+
+        // Pseudo
+        &:first-child
+            margin-left: 0
+        &:last-child
+            margin-right: 0

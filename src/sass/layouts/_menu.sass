@@ -1,0 +1,81 @@
+/* ===================================================
+/* MENU
+/* ===================================================
+@import ../config/_all
+
+// ====================================
+// VARIABLES
+// ====================================
+$menu-name: 'menu' !default
+$menu-padding: 1.0rem !default
+$menu-font-title: $font-size !default
+$menu-font-menu: $font-size !default
+$menu-color-border: map-get($theme-map, default) !default
+
+$submenu-name: 'submenu' !default
+
+// ====================================
+// MIXINS
+// ====================================
+=create-menu
+    +displayFlex
+    +flexSize(1)
+    +flexDirectionColumn
+
+    // Elements
+    &__label
+        +displayFlex
+        padding-left: 0
+        font:
+            size: $menu-font-title
+            weight: $font-weight-heavy
+        text-transform: uppercase
+    &__item
+        list-style: none
+
+        // Elements
+        > a
+            display: block
+            padding: $menu-padding
+            color: $font-color
+            +border-radius
+
+            // Pseudo
+            &:hover
+                background: map-get($theme-map, light)
+        
+        > .#{$submenu-name}
+            +displayFlex
+            +flexSize
+            +flexDirectionColumn
+            margin: ($menu-padding / 2) 0
+
+            // Elements
+            .#{$submenu-name}__item
+                margin-left: $menu-padding
+                list-style: none
+                border-left: 1px solid $menu-color-border
+            
+                // Elements
+                > a
+                    display: block
+                    padding: $menu-padding
+                    color: $font-color
+                    +border-radius
+
+                    // Pseudo
+                    &:hover
+                        background: map-get($theme-map, light)
+        
+        // Modifiers
+        &.make-active
+            // Elements
+            > a
+                background: map-get($theme-map, primary)
+                color: map-get($theme-map, light)
+
+// ====================================
+// MENU
+// ====================================
+.#{$menu-name}
+    +create-menu

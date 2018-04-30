@@ -1,0 +1,66 @@
+/* ===================================================
+/* ALERTS
+/* ===================================================
+@import ../config/_all
+
+// ====================================
+// VARIABLES
+// ====================================
+$alert-color-map: (primary: ($lblue_base, $white_base), info: ($blue_base, $white_base), success: ($green_base, $white_base), warning: ($yellow_base, $black_base), danger: ($red_base, $white_base), light: ($white_base, $black_base), dark: ($black_base, $white_base)) !default
+$alert-name: 'alert' !default
+$alert-font-size: $font-size !default
+$alert-title-font-size: 1.8rem !default
+$alert-font-weight: $font-weight-normal !default
+$alert-margin: 1.0rem !default
+$alert-padding: 1.0rem !default
+$alert-border-radius: 0.5rem !default
+
+// ====================================
+// MIXINS
+// ====================================
+=create-alert
+    position: relative
+    display: block
+    width: 100%
+    margin: ($alert-margin / 2) 0
+    padding: ($alert-padding / 2) $alert-padding
+    background: $grey_base
+    color: $font-color
+    font:
+        size: $alert-font-size
+        weight: $alert-font-weight
+    +border-radius-cust(0, $alert-border-radius, $alert-border-radius, 0)
+    border: 1px solid darken($grey_base, $darken * 2)
+    border-left-width: 0.5rem
+
+    // Elements
+    & > #{$alert-name}__title
+        font:
+            size: $alert-title-font-size !important
+            weight: $font-weight-heavy
+    
+    & > #{$alert-name}__list
+        margin-left: ($alert-margin * 2)
+    
+    // Modifiers
+    @each $type, $color in $alert-color-map
+        $bgcolor: nth($color, 1)
+        $fontcolor: nth($color, 2)
+
+        &.make-#{$type}
+            background: $bgcolor
+            color: $fontcolor
+            border: 1px solid darken($bgcolor, $darken * 2)
+            border-left-width: 0.5rem
+
+            // Modifiers
+            &.make-outline
+                background: $color-none
+                color: $bgcolor !important
+                border-color: $bgcolor
+
+// ====================================
+// ALERTS
+// ====================================
+.#{$alert-name}
+    +create-alert

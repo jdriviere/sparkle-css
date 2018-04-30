@@ -1,0 +1,158 @@
+/* ===================================================
+/* TABLES
+/* ===================================================
+@import ../config/_all
+    
+// ====================================
+// VARIABLES
+// ====================================
+$table-name: 'table' !default
+$table-padding: 1.0rem !default
+$table-font-caption: 1.4rem !default
+$table-letter-spacing: 0.1rem !default
+
+// ====================================
+// MIXINS
+// ====================================
+=create-table
+    width: 100%
+    margin: 0 auto
+    border-collapse: collapse
+    
+    // Elements
+    //--- CAPTION ---
+    caption
+        font:
+            size: $table-font-caption
+            weight: $font-weight-black
+        text-transform: uppercase
+        letter-spacing: $table-letter-spacing
+    //--- TABLE HEADER ---
+    thead
+        display: none
+    //--- TABLE BODY ---
+    tbody, tr, td
+        display: block
+    //--- TABLE ROW ---
+    tr
+        margin:
+            top: 0
+            bottom: 1.0rem
+        padding: 0.5rem 0
+        border: 1px solid map-get($theme-map, default)
+        // border-bottom: 3px solid map-get($theme-maps, default);
+		
+        // Pseudo
+        &:last-child
+            margin-bottom: 0
+    //--- TABLE DATA ---
+    td
+        position: relative
+        padding: 1.0rem
+        font-size: $font-size
+        text-align: right
+        white-space: normal
+        border-bottom: 1px dotted map-get($theme-map, default)
+        
+        // Pseudo
+        &:first-child
+            margin-top: -0.5rem
+        &:last-child
+            margin-bottom: -0.5rem
+            border: 0
+        &:before
+            position: absolute
+            left: 0.5rem
+            content: attr(data-table-label)
+            font:
+                size: $font-size
+                weight: $font-weight-heavy
+            letter-spacing: $table-letter-spacing
+            white-space: nowrap
+    
+    // Media Queries
+    @media only screen and (min-width: $bp-medium)
+        display: table
+        
+        // Elements
+        //--- TABLE HEADER ---
+        thead
+            display: table-header-group
+            font:
+                size: $font-size
+                weight: $font-weight-heavy
+            text-align: left
+            letter-spacing: $table-letter-spacing
+            border-bottom: 2px solid $color-grey-50
+        //--- TABLE BODY ---
+        tbody
+            display: table-row-group
+        //--- TABLE ROW ---
+        tr
+            display: table-row
+            border: none
+        //--- TABLE H ---
+        th
+            padding: 1.5rem 1.0rem
+        //--- TABLE DATA ---
+        td
+            display: table-cell
+            padding: 1.5rem 1.0rem
+            text-align: left
+            border: none
+
+            // Pseudo
+            &:before
+                display: none
+    
+    // Modifiers
+    &.make-light
+        // Elements
+        //--- TABLE H ---
+        thead
+            background: $white_l4
+            color: $font-color
+            border-bottom: 2px solid $white_base
+        //--- TABLE BODY ---
+        tbody tr:nth-child(odd)
+            background: $white_l1
+            color: $grey_d3
+        tbody tr:nth-child(even)
+            background: $white_l2
+            color: $grey_d3
+    &.make-dark
+        // Elements
+        //--- TABLE H ---
+        thead
+            background: $black_base
+            color: $white_base
+            border-bottom: 2px solid $black_d3
+        //--- TABLE BODY ---
+        tbody tr:nth-child(odd)
+            background: $black_d2
+            color: $white_base
+        tbody tr:nth-child(even)
+            background: $black_d1
+            color: $white_base
+    &.make-default
+        // Elements
+        tr:not(:last-child)
+            border-bottom: 1px solid darken($grey_base, $darken)
+    &.make-bordered
+        // Elements
+        th, td
+            border: 1px solid darken($grey_base, $darken)
+    &.make-striped
+        // Elements
+        tbody tr:nth-child(odd)
+            background: $grey_base
+    &.make-hoverable
+        tbody tr:hover > td
+            background: map-get($theme-map, light)
+            // color: map-get($theme-maps, light)
+
+// ====================================
+// NAVIGATION
+// ====================================
+.#{$table-name}
+    +create-table

@@ -1,0 +1,98 @@
+/* ===================================================
+/* INPUTS
+/* ===================================================
+@import ../config/_all
+
+// ====================================
+// VARIABLES
+// ====================================
+$card-name: 'card' !default
+$card-padding: 1.0rem !default
+$card-border-color: $grey_base !default
+$card-font-size: $font-size !default
+$card-font-color: $color-grey-50 !default
+
+// ====================================
+// MIXINS
+// ====================================
+=create-card
+    width: 100%
+    border: 1px solid $card-border-color
+    +border-radius
+    overflow: hidden
+
+    // Elements
+    // --- HEADER ---
+    & > &__header
+        padding: ($card-padding / 2) $card-padding
+        border-bottom: 1px solid $card-border-color
+
+        // Elements
+        & > .#{$card-name}__title
+            font:
+                size: 2.4rem
+                weight: $font-weight-heavy
+        & > .#{$card-name}__subtitle
+            font:
+                size: 1.8rem
+                weight: $font-weight-normal
+
+    // --- BODY ---
+    & > &__body
+        padding: $card-padding
+        font-size: $card-font-size
+        color: $card-font-color
+
+        // Elements
+        & > img,
+        & > .#{$card-name}__image
+            width: 100%
+
+    // --- FOOTER ---
+    & > &__footer
+        +displayFlex
+        +flexSize
+        border-top: 1px solid $card-border-color
+
+        // Elements
+        & > .#{$card-name}__footer__item
+            @include displayFlex
+            @include flexGrow
+            @include flexShrink(0)
+            @include flexBasis(0)
+            @include justifyContentCenter
+            @include alignItemsCenter
+            margin: 0
+            padding: $card-padding / 2
+
+            // Pseudo
+            &:not(:first-child)
+                border-left: 1px solid $card-border-color
+
+            // Elements
+            & > a
+                text-decoration: none
+                color: map-get( $theme-map, dark)
+
+                &:hover
+                    color: map-get($theme-map, primary)
+    
+    // Modifiers
+    &.make-shadow
+        -webkit-box-shadow: 0 0 1.0em rgba($color-pure-black, 0.25), 0 0 3.0em rgba($color-pure-black, 0.15)
+        -moz-box-shadow: 0 0 1.0em rgba($color-pure-black, 0.25), 0 0 3.0em rgba($color-pure-black, 0.15)
+        -ms-box-shadow: 0 0 1.0em rgba($color-pure-black, 0.25), 0 0 3.0em rgba($color-pure-black, 0.15)
+        box-shadow: 0 0 1.0em rgba($color-pure-black, 0.25), 0 0 3.0em rgba($color-pure-black, 0.15)
+
+    &.make-hover
+        &:hover
+            -webkit-box-shadow: 0 0 1.0em rgba($color-pure-black, 0.25), 0 0 3.0em rgba($color-pure-black, 0.15)
+            -moz-box-shadow: 0 0 1.0em rgba($color-pure-black, 0.25), 0 0 3.0em rgba($color-pure-black, 0.15)
+            -ms-box-shadow: 0 0 1.0em rgba($color-pure-black, 0.25), 0 0 3.0em rgba($color-pure-black, 0.15)
+            box-shadow: 0 0 1.0em rgba($color-pure-black, 0.25), 0 0 3.0em rgba($color-pure-black, 0.15)
+
+// ====================================
+// CARDS
+// ====================================
+.#{$card-name}
+    +create-card

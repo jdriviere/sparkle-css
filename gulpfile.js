@@ -22,7 +22,7 @@ var browserSync = require('browser-sync').create();
 /* ==================================== */
 // RENDER CSS FILES
 gulp.task('sassify', function() {
-    return gulp.src('src/scss/sparkle.scss')
+    return gulp.src('src/sass/sparkle.sass')
         .pipe(sass({ outputStyle: 'expanded' })
             .on('error', sass.logError)
         )
@@ -35,7 +35,7 @@ gulp.task('sassify', function() {
 });
 
 gulp.task('watch:sass', function() {
-    gulp.watch('src/scss/**/*.scss', ['sassify'], browserSync.reload);
+    gulp.watch('src/scss/**/*.sass', ['sassify'], browserSync.reload);
     console.log('Watching CSS files.');
 });
 

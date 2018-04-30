@@ -1,0 +1,96 @@
+/* ===================================================
+/* MEDIA
+/* ===================================================
+@import ../config/_all
+
+// ====================================
+// VARIABLES
+// ====================================
+$media-name: 'media' !default
+$media-margin: 1.5rem !default
+$media-padding: 1.0rem 1.5rem !default
+$media-border-radius: 0.5rem !default
+$media-border-color: map-get($theme-map, default) !default
+$media-profile: 6.4rem !default
+$media-font-title: 2.4rem !default
+$media-font-subtitle: 2.0rem !default
+$media-font-timestamp: $font-size !default
+$media-font-text: $font-size !default
+
+// ====================================
+// MIXINS
+// ====================================
+=create-media
+    position: relative
+    +displayFlex
+    +alignItemsTop
+    margin-bottom: $media-margin
+    padding: $media-padding
+    background: map-get($theme-map, light)
+    border: 1px solid $media-border-color
+    border-radius: $media-border-radius
+
+    // Elements
+    // --- MEDIA PROFILE ---
+    &__profile
+        +displayFlex
+        +flexGrow(0)
+        +flexShrink(0)
+        +flexBasis(auto)
+        order: -1
+        width: $media-profile
+        height: $media-profile
+        margin:
+            left: 0
+            right: $media-margin
+
+        // Elements
+        img
+            width: 100%
+    
+    // --- MEDIA BODY ---
+    &__body
+        +displayFlex
+        +flexSize
+        +flexDirectionColumn
+
+        // Elements
+        // --- MEDIA TITLE ---
+        > .#{$media-name}__title
+            margin: 0
+            font:
+                size: $media-font-title !important
+                weight: $font-weight-heavy !important
+
+        // --- MEDIA SUBTITLE ---
+        > .#{$media-name}__subtitle
+            margin: 0
+            font:
+                size: $media-font-subtitle !important
+                weight: $font-weight-normal !important
+
+        // --- MEDIA TIMESTAMP ---
+        > .#{$media-name}__timestamp
+            margin: 0
+            color: rgba(0, 0, 0, 0.5)
+            font:
+                size: $media-font-timestamp
+                weight: $font-weight-normal
+    
+    // Modifiers
+    &.make-reverse
+        > .#{$media-name}__profile
+            order: 1
+            margin:
+                left: 1.5rem
+                right: 0
+    &.make-center
+        +alignItemsCenter
+
+
+
+// ====================================
+// MEDIA
+// ====================================
+.#{$media-name}
+    +create-media

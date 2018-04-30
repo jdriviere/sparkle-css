@@ -1,0 +1,97 @@
+/* ===================================================
+/* PLACEMENTS
+/* ===================================================
+@import ../config/_all
+
+// ====================================
+// VARIABLES
+// ====================================
+$float-name: 'make-float' !default
+
+$justify-align-name: 'make-justify' !default
+
+$v-alignment-name: 'make-v-align' !default
+
+// ====================================
+// MIXINS
+// ====================================
+=make-manual-center
+    position: absolute
+    top: 50%
+    left: 50%
+    +translate-diagonal(-50%, -50%)
+
+// ====================================
+// PLACEMENTS (HORIZONTAL)
+// ====================================
+// --- FLOATS ---
+.#{$float-name}
+    &.make-left
+        float: left
+    &.make-center
+        margin: 0 auto
+        text-align: center
+    &.make-right
+        float: right
+    &.make-none
+        float: none !important
+
+// --- JUSTIFY ---
+.#{$justify-align-name}
+    &.make-left
+        +displayFlex
+        +justifyContentAtStart
+    &.make-center
+        +displayFlex
+        +justifyContentCenter 
+    &.make-right
+        +displayFlex
+        +justifyContentAtEnd
+    &.make-equal
+        +displayFlex
+        +justifyContentSpaceBetween
+    &.make-around
+        +displayFlex
+        +justifyContentSpaceAround
+
+// ====================================
+// PLACEMENTS (VERTICAL)
+// ====================================
+// --- ALIGN ITEMS ---
+.#{$v-alignment-name}
+    &.make-top
+        +displayFlex
+        +alignItemsTop 
+    &.make-center
+        +displayFlex
+        +alignItemsCenter 
+    &.make-bottom
+        +displayFlex
+        +alignItemsBottom 
+    &.make-baseline
+        +displayFlex
+        +alignItemsBaseline 
+    &.make-stretch
+        +displayFlex
+        +alignItemsStretch
+    // --- ALIGN SELF ---
+    &.make-self-start
+        +displayFlex
+        +alignSelfStart 
+    &.make-self-center
+        +displayFlex
+        +alignSelfCenter 
+    &.make-self-end
+        +displayFlex
+        +alignSelfEnd
+
+// ====================================
+// PLACEMENTS (CENTER)
+// ====================================
+.make-full-center
+    +displayFlex
+    +justifyContentCenter
+    +alignItemsCenter
+.make-full-center
+    &.make-manual
+        +make-manual-center

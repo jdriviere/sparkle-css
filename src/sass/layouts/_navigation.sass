@@ -1,0 +1,167 @@
+/* ===================================================
+/* NAVIGATION
+/* ===================================================
+@import ../config/_all
+    
+// ====================================
+// VARIABLES
+// ====================================
+$navig-name          :   'nav' !default
+$navig-colorbg       :   $white_l3 !default
+$navig-colorborder   :   darken($navig-colorbg, $darken) !default
+$navig-spacing       :   1.5rem !default
+$navig-padding       :   1.0rem !default
+$navig-brand         :   1.5rem !default
+$navig-font          :   1.5rem !default
+$navig-font-color    :   $font-color !default
+
+// ====================================
+// NAVIGATION
+// ====================================
+.#{$navig-name}
+    +displayFlex
+    +flexSize(1)
+    +flexDirectionColumn
+    width: 100%
+    height: auto
+    margin: 0
+    padding: 0
+    background: $navig-colorbg  
+    
+    // Elements
+    // --- MOBILE --- //
+    input[type='checkbox']##{$navig-name}__trigger
+        display: none
+        
+        // Pseudo
+        &:checked ~ .#{$navig-name}__menu
+            +displayFlex
+            height: auto
+        
+        &:checked ~ .#{$navig-name}__toggle
+            color: rgba(0, 0, 0, 1.0)
+            border-color: rgba(0, 0, 0, 1.0)
+    
+    label[for='#{$navig-name}__trigger'].#{$navig-name}__toggle
+        position: absolute
+        top: $navig-spacing / 2
+        right: $navig-spacing / 2
+        margin-left: auto
+        padding: $navig-padding / 2
+        color: rgba(0, 0, 0, 0.3)
+        border: 1px solid rgba(0, 0, 0, 0.3)
+        +border-radius(0.3rem)   
+        
+        // Pseudo
+        &:before
+            content: '\2630  Menu'
+            font-weight: 400
+        
+        &:hover
+            color: rgba(0, 0, 0, 0.7)
+            border-color: rgba(0, 0, 0, 0.7)
+            cursor: pointer
+    
+    // --- BRAND/LOGO --- ///
+    &__brand
+        padding: $navig-padding
+        font:
+            size: $navig-brand !important
+            weight: 700
+        
+        // Elements
+        img,
+        &__img
+            max-height: 3.2rem
+
+        &--extra
+            opacity: 0.5
+    
+    // --- MENU --- //
+    &__menu
+        display: none
+        +flexDirectionColumn
+        width: 100%
+        list-style: none
+        
+        // Elements
+        // --- MENU ITEMS --- //
+        &__item
+            // Elements
+            > a:not(.button)
+                display: block
+                padding: $navig-padding
+                text-decoration: none
+                color: $navig-font-color
+                cursor: pointer
+            
+            // Pseudo
+            &:hover
+                background: darken($navig-colorbg, 5%)
+            
+            // Modifiers
+            &.make-active
+                // Elements
+                > a
+                    color: map-get($theme-map, primary)
+            
+            &.make-special
+                background: map-get($theme-map, primary)
+                
+                // Elements
+                > a
+                    color: #FFF
+                
+                // Pseudo
+                &:hover
+                    background: darken(map-get($theme-map, primary), $darken)
+                    
+                    // Elements
+                    > a
+                        color: #FFF
+        
+        // Modifiers
+        &.make-right
+            margin-left: 0
+    
+    // Modifiers
+    &.make-fixed
+        position: fixed
+        z-index: 5
+        box-shadow: 0 0 7px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 0, 0, 0.05)
+
+    // Media Query
+    @media screen and (min-width: 768px)
+        +flexDirectionRow
+        +alignItemsStretch
+        
+        // Elements
+        &__toggle
+            display: none
+        
+        &__brand
+            +displayFlex
+            +flexGrow(0)
+            +flexShrink(0)
+            +flexBasis(auto)
+            +alignItemsCenter
+            border-right: 1px solid $navig-colorborder 
+        
+        &__menu
+            +displayFlex
+            +flexDirectionRow
+            +alignItemsCenter
+            width: auto
+            
+            // Elements
+            &__item
+                // Pseudo
+                &:hover
+                    background: $color-none
+                    // Elements
+                    > a
+                        color: map-get($theme-map, primary)
+            
+            // Modifiers
+            &.make-right
+                margin-left: auto

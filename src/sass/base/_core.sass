@@ -1,0 +1,45 @@
+/* ===================================================
+/* BASE (CORE)
+/* ===================================================
+@import ../config/_all
+
+// =======================================
+// GLOBALS, HTML, BODY
+// =======================================
+*
+    +reset
+    +box-sizing
+
+    // Pseudo
+    &:before, &:after
+        @extend *
+
+html
+    font:
+        // Sets root 62.5% to 10px (100% = 16px)
+        size: 62.5%
+        // This line is to ensure HTML rem is at 10px
+        size: calc(1em * 0.625)
+    text-rendering: optimizeLegibility
+    +font-smoothing
+
+body
+    height: 100%
+    line-height: 1.5
+    background: $background-color
+    color: $font-color
+    font:
+        family: $font-family
+        size: $font-size
+        weight: $font-weight-light
+
+// =======================================
+// SELECTION
+// =======================================
+::-moz-selection
+    background: map-get($theme-map, primary)
+    color: map-get($theme-map, light)
+
+::selection
+    background: map-get($theme-map, primary)
+    color: map-get($theme-map, light)
