@@ -19,7 +19,7 @@ $v-alignment-name: 'make-v-align' !default
     position: absolute
     top: 50%
     left: 50%
-    +translate-diagonal(-50%, -50%)
+    transform: translate(-50%, -50%)
 
 // ====================================
 // PLACEMENTS (HORIZONTAL)
@@ -39,20 +39,20 @@ $v-alignment-name: 'make-v-align' !default
 // --- JUSTIFY ---
 .#{$justify-align-name}
     &.make-left
-        +displayFlex
-        +justifyContentAtStart
+        display: flex
+        justify-content: flex-start
     &.make-center
-        +displayFlex
-        +justifyContentCenter 
+        display: flex
+        justify-content: center
     &.make-right
-        +displayFlex
-        +justifyContentAtEnd
+        display: flex
+        justify-content: flex-end
     &.make-equal
-        +displayFlex
-        +justifyContentSpaceBetween
+        display: flex
+        justify-content: space-between
     &.make-around
-        +displayFlex
-        +justifyContentSpaceAround
+        display: flex
+        justify-content: space-around
 
 // ====================================
 // PLACEMENTS (VERTICAL)
@@ -60,38 +60,39 @@ $v-alignment-name: 'make-v-align' !default
 // --- ALIGN ITEMS ---
 .#{$v-alignment-name}
     &.make-top
-        +displayFlex
-        +alignItemsTop 
+        display: flex
+        align-items: flex-start
     &.make-center
-        +displayFlex
-        +alignItemsCenter 
+        display: flex
+        align-items: center
     &.make-bottom
-        +displayFlex
-        +alignItemsBottom 
+        display: flex
+        align-items: flex-end
     &.make-baseline
-        +displayFlex
-        +alignItemsBaseline 
+        display: flex
+        align-items: baseline
     &.make-stretch
-        +displayFlex
-        +alignItemsStretch
+        display: flex
+        align-items: stretch
+    
     // --- ALIGN SELF ---
     &.make-self-start
-        +displayFlex
-        +alignSelfStart 
+        display: flex
+        align-self: flex-start
     &.make-self-center
-        +displayFlex
-        +alignSelfCenter 
+        display: flex
+        align-self: center
     &.make-self-end
-        +displayFlex
-        +alignSelfEnd
+        display: flex
+        align-self: flex-end
 
 // ====================================
 // PLACEMENTS (CENTER)
 // ====================================
 .make-full-center
-    +displayFlex
-    +justifyContentCenter
-    +alignItemsCenter
+    display: flex
+    justify-content: center
+    align-items: center
 .make-full-center
     &.make-manual
         +make-manual-center

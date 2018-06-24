@@ -47,10 +47,10 @@ $offset-name: "offset" !default
 // ====================================
 // --- ROW --- //
 .#{$grid-name}
-    +displayFlex
-    +flexSize
-    +flexDirectionColumn
-    +flexWrap(wrap)
+    display: flex
+    flex: 1
+    flex-direction: column
+    flex-wrap: wrap
     margin:
         bottom: $grid-margin
 
@@ -77,23 +77,23 @@ $offset-name: "offset" !default
 
     // Media Queries
     @media screen and (min-width: $bp-large)
-        +flexDirectionRow
+        flex-direction: row
         
         > [class*="make-"]
-            +flexGrow
+            flex-grow: 1
 
     // Components
     // --- COLUMNS ---
     > .#{$column-name}
-        +flexGrow
-        +flexShrink(0)
+        flex-grow: 1
+        flex-shrink: 0
 
         // Media Queries
         @media screen and (min-width: $bp-large)
             @for $i from 1 through $column-max
                 &.make-#{$i}
-                    +flexGrow(0)
-                    +flexBasis(((100% * $i) / $column-max))
+                    flex-grow: 0
+                    flex-basis: ((100% * $i) / $column-max)
                     width: ((100% * $i) / $column-max)
 
             // Special Cases

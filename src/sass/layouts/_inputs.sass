@@ -21,15 +21,15 @@ $input-label-font-size: 1.2rem !default
 // ====================================
 =input-control
     position: relative
-    +displayInlineFlex
-    +justifyContentAtStart
-    +alignItemsCenter
+    display: inline-flex
+    justify-content: flex-start
+    align-items: center
     height: $input-height
     padding: $input-padding
-    +remove-appearance
+    appearance: none
     border: 1px solid $color-none
     outline: none
-    +box-shadow-none
+    box-shadow: none
     
     // Pseudo
     &:focus,
@@ -37,7 +37,8 @@ $input-label-font-size: 1.2rem !default
         border-color: map-get($theme-map, primary)
         box-shadow: 0 0 1.2rem rgba($lblue_base, 0.5)
     &:disabled
-        +disable-select
+        user-select: none
+        cursor: not-allowed
         opacity: 0.5
 
 =create-input
@@ -45,7 +46,7 @@ $input-label-font-size: 1.2rem !default
     width: $input-width
     height: $input-height
     color: $input-font-color
-    +border-radius
+    border-radius: $border-radius
     border-color: $input-border-color
 
     // Pseudo

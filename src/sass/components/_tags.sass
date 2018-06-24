@@ -20,18 +20,18 @@ $tag-group-spacing: 0.125em !default
 // MIXINS
 // ====================================
 =create-tag
-    +displayInlineFlex
-    +flexGrow(0)
-    +flexBasis(auto)
-    +justifyContentCenter
-    +alignItemsCenter
+    display: inline-flex
+    flex-grow: 0
+    flex-basis: auto
+    justify-content: center
+    align-items: center
     padding: $tag-padding
     background: map-get($theme-map, default)
     color: map-get($theme-map, dark)
     font:
         size: $tag-font-size
         weight: $tag-font-weight
-    +border-radius
+    border-radius: $border-radius
 
     // Modifiers
     @each $type, $color in $tag-color-map
@@ -53,7 +53,7 @@ $tag-group-spacing: 0.125em !default
                 color: $bgcolor !important
     
     &.make-bullet
-        +border-radius(2.0rem)
+        border-radius: 2.0rem
 
 // ====================================
 // TAGS
@@ -63,10 +63,10 @@ $tag-group-spacing: 0.125em !default
 
 // --- GROUP --- //
 .#{$tag-group-name}
-    +displayFlex
-    +flexDirectionRow
-    +justifyContentAtStart
-    +flexWrap
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    flex-wrap: wrap
 
     // Pseudo
     &:first-child

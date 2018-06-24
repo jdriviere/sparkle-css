@@ -23,13 +23,13 @@ $button-group-spacing: .25em !default
 // MIXINS
 // =================================
 =create-button
-    +displayInlineFlex
-    +flexGrow(0)
-    +flexShrink(0)
-    +flexBasis(auto)
-    +justifyContentCenter
-    +alignItemsCenter
-    +remove-appearance
+    display: inline-flex
+    flex-grow: 0
+    flex-shrink: 0
+    flex-basis: auto
+    justify-content: center
+    align-items: center
+    appearance: none
     outline: none
     background: $color-none
     padding: $button-padding
@@ -50,7 +50,8 @@ $button-group-spacing: .25em !default
     &:hover
         border-color: rgba($black_base, 0.7)
     &:disabled, &.make-disabled
-        +disable-select
+        user-select: none
+        cursor: not-allowed
         opacity: 0.3
     
     // Modifiers
@@ -177,9 +178,9 @@ $button-group-spacing: .25em !default
 
     // --- ROUNDNESS --- //
     &.make-radial
-        +border-radius($button-border-radius * 2)
+        border-radius: $button-border-radius * 2
     &.make-round
-        +border-radius(3.5rem)
+        border-radius: 3.5rem
 
 // =================================
 // BUTTONS
@@ -188,10 +189,10 @@ $button-group-spacing: .25em !default
     +create-button
 
 .#{$button-group-name}
-    +displayFlex
-    +flexDirectionRow
-    +alignItemsCenter
-    +flexWrap
+    display: flex
+    flex-direction: row
+    align-items: center
+    flex-wrap: wrap
     margin:
         top: $button-margin
         bottom: $button-margin    

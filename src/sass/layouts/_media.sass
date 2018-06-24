@@ -22,8 +22,8 @@ $media-font-text: $font-size !default
 // ====================================
 =create-media
     position: relative
-    +displayFlex
-    +alignItemsTop
+    display: flex
+    align-items: flex-start
     margin-bottom: $media-margin
     padding: $media-padding
     background: map-get($theme-map, light)
@@ -33,10 +33,10 @@ $media-font-text: $font-size !default
     // Elements
     // --- MEDIA PROFILE ---
     &__profile
-        +displayFlex
-        +flexGrow(0)
-        +flexShrink(0)
-        +flexBasis(auto)
+        display: flex
+        flex-grow: 0
+        flex-shrink: 0
+        flex-basis: auto
         order: -1
         width: $media-profile
         height: $media-profile
@@ -50,9 +50,9 @@ $media-font-text: $font-size !default
     
     // --- MEDIA BODY ---
     &__body
-        +displayFlex
-        +flexSize
-        +flexDirectionColumn
+        display: flex
+        flex: 1
+        flex-direction: column
 
         // Elements
         // --- MEDIA TITLE ---
@@ -85,7 +85,7 @@ $media-font-text: $font-size !default
                 left: 1.5rem
                 right: 0
     &.make-center
-        +alignItemsCenter
+        align-items: center
 
 
 

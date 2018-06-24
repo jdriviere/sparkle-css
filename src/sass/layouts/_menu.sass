@@ -18,13 +18,13 @@ $submenu-name: 'submenu' !default
 // MIXINS
 // ====================================
 =create-menu
-    +displayFlex
-    +flexSize(1)
-    +flexDirectionColumn
+    display: flex
+    flex: 1
+    flex-direction: column
 
     // Elements
     &__label
-        +displayFlex
+        display: flex
         padding-left: 0
         font:
             size: $menu-font-title
@@ -38,16 +38,16 @@ $submenu-name: 'submenu' !default
             display: block
             padding: $menu-padding
             color: $font-color
-            +border-radius
+            border-radius: $border-radius
 
             // Pseudo
             &:hover
                 background: map-get($theme-map, light)
         
         > .#{$submenu-name}
-            +displayFlex
-            +flexSize
-            +flexDirectionColumn
+            display: flex
+            flex: 1
+            flex-direction: column
             margin: ($menu-padding / 2) 0
 
             // Elements
@@ -61,7 +61,7 @@ $submenu-name: 'submenu' !default
                     display: block
                     padding: $menu-padding
                     color: $font-color
-                    +border-radius
+                    border-radius: $border-radius
 
                     // Pseudo
                     &:hover

@@ -19,9 +19,9 @@ $navig-font-color    :   $font-color !default
 // NAVIGATION
 // ====================================
 .#{$navig-name}
-    +displayFlex
-    +flexSize(1)
-    +flexDirectionColumn
+    display: flex
+    flex: 1
+    flex-direction: column
     width: 100%
     height: auto
     margin: 0
@@ -35,7 +35,7 @@ $navig-font-color    :   $font-color !default
         
         // Pseudo
         &:checked ~ .#{$navig-name}__menu
-            +displayFlex
+            display: flex
             height: auto
         
         &:checked ~ .#{$navig-name}__toggle
@@ -50,7 +50,7 @@ $navig-font-color    :   $font-color !default
         padding: $navig-padding / 2
         color: rgba(0, 0, 0, 0.3)
         border: 1px solid rgba(0, 0, 0, 0.3)
-        +border-radius(0.3rem)   
+        border-radius: $border-radius
         
         // Pseudo
         &:before
@@ -80,7 +80,7 @@ $navig-font-color    :   $font-color !default
     // --- MENU --- //
     &__menu
         display: none
-        +flexDirectionColumn
+        flex-direction: column
         width: 100%
         list-style: none
         
@@ -132,25 +132,25 @@ $navig-font-color    :   $font-color !default
 
     // Media Query
     @media screen and (min-width: 768px)
-        +flexDirectionRow
-        +alignItemsStretch
+        flex-direction: column
+        align-items: stretch
         
         // Elements
         &__toggle
             display: none
         
         &__brand
-            +displayFlex
-            +flexGrow(0)
-            +flexShrink(0)
-            +flexBasis(auto)
-            +alignItemsCenter
+            display: flex
+            flex-grow: 0
+            flex-shrink: 0
+            flex-basis: auto
+            align-items: center
             border-right: 1px solid $navig-colorborder 
         
         &__menu
-            +displayFlex
-            +flexDirectionRow
-            +alignItemsCenter
+            display: flex
+            flex-direction: row
+            align-items: center
             width: auto
             
             // Elements
