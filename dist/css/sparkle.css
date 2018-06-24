@@ -1029,9 +1029,9 @@ code {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: 0;
-      -ms-flex-align: 0;
-          align-items: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0;
   padding: 0.5rem;
 }
