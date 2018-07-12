@@ -647,7 +647,7 @@ code {
           box-shadow: 0 0 1.2rem rgba(173, 210, 230, 0.5);
 }
 
-.input:disabled, .input__select:disabled, .input__textarea:disabled {
+.input:disabled, .input__select:disabled, .input__textarea:disabled, .input.make-disabled, .make-disabled.input__select, .make-disabled.input__textarea {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
