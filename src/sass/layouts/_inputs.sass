@@ -7,14 +7,16 @@
 // VARIABLES
 // ====================================
 // input Variables
-$input-name: "input"
+$input-color-map: (primary: $lblue_base, info: $blue_base, success: $green_base, warning: $yellow_base, danger: $red_base) !default
+$input-name: "input" !default
 $input-width: 100% !default
 $input-height: 4.0rem !default
+$input-margin: 1.5rem !default
 $input-padding: 1.0rem !default
 $input-font-size: $font-size !default
-$input-font-color: $font-color
-$input-border-color: map-get($theme-map, default)
-$input-label-font-size: 1.2rem !default
+$input-font-color: $font-color !default
+$input-border-color: map-get($theme-map, default) !default
+$input-label-font-size: 1.4rem !default
 
 // ====================================
 // MIXINS
@@ -45,6 +47,7 @@ $input-label-font-size: 1.2rem !default
     +input-control
     width: $input-width
     height: $input-height
+    margin-bottom: $input-margin
     color: $input-font-color
     border-radius: $border-radius
     border-color: $input-border-color
@@ -67,15 +70,14 @@ $input-label-font-size: 1.2rem !default
     &:focus,
     &:active
         border-color: map-get($theme-map, primary)
-    &:not(:last-child)
-        margin-bottom: 1.5rem
     
     // Elements
     // --- LABELS ---
     &__label
-        display: flex
+        display: inline
         justify-content: flex-start
         margin-bottom: 0.5rem
+        margin-right: $input-margin / 2
         font:
             size: $input-label-font-size
             weight: $font-weight-heavy
@@ -119,6 +121,16 @@ $input-label-font-size: 1.2rem !default
             display: inline
             margin-left: 1.5rem
             font-size: 1.5rem
+
+    // Modifiers
+    @each $type, $color in $input-color-map
+        &.make-#{$type}
+            border-color: $color
+            
+            // Pseudo
+            &:focus,
+            &:active
+                box-shadow: 0 0 1.2rem rgba($color, 0.5)
 
 // ====================================
 // INPUTS
