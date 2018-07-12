@@ -635,6 +635,7 @@ code {
           box-shadow: none;
   width: 100%;
   height: 4rem;
+  margin-bottom: 1.5rem;
   color: #404040;
   border-radius: 0.3rem;
   border-color: #E2E2E2;
@@ -693,19 +694,14 @@ code {
   border-color: #ADD2E6;
 }
 
-.input:not(:last-child), .input__select:not(:last-child), .input__textarea:not(:last-child) {
-  margin-bottom: 1.5rem;
-}
-
 .input__label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: inline;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
   margin-bottom: 0.5rem;
-  font-size: 1.2rem;
+  margin-right: 0.75rem;
+  font-size: 1.4rem;
   font-weight: 700;
   color: #404040;
 }
@@ -746,6 +742,51 @@ code {
   display: inline;
   margin-left: 1.5rem;
   font-size: 1.5rem;
+}
+
+.input.make-primary, .make-primary.input__select, .make-primary.input__textarea {
+  border-color: #ADD2E6;
+}
+
+.input.make-primary:focus, .make-primary.input__select:focus, .make-primary.input__textarea:focus, .input.make-primary:active, .make-primary.input__select:active, .make-primary.input__textarea:active {
+  -webkit-box-shadow: 0 0 1.2rem rgba(173, 210, 230, 0.5);
+          box-shadow: 0 0 1.2rem rgba(173, 210, 230, 0.5);
+}
+
+.input.make-info, .make-info.input__select, .make-info.input__textarea {
+  border-color: #1982C4;
+}
+
+.input.make-info:focus, .make-info.input__select:focus, .make-info.input__textarea:focus, .input.make-info:active, .make-info.input__select:active, .make-info.input__textarea:active {
+  -webkit-box-shadow: 0 0 1.2rem rgba(25, 130, 196, 0.5);
+          box-shadow: 0 0 1.2rem rgba(25, 130, 196, 0.5);
+}
+
+.input.make-success, .make-success.input__select, .make-success.input__textarea {
+  border-color: #8AC926;
+}
+
+.input.make-success:focus, .make-success.input__select:focus, .make-success.input__textarea:focus, .input.make-success:active, .make-success.input__select:active, .make-success.input__textarea:active {
+  -webkit-box-shadow: 0 0 1.2rem rgba(138, 201, 38, 0.5);
+          box-shadow: 0 0 1.2rem rgba(138, 201, 38, 0.5);
+}
+
+.input.make-warning, .make-warning.input__select, .make-warning.input__textarea {
+  border-color: #FFCA3A;
+}
+
+.input.make-warning:focus, .make-warning.input__select:focus, .make-warning.input__textarea:focus, .input.make-warning:active, .make-warning.input__select:active, .make-warning.input__textarea:active {
+  -webkit-box-shadow: 0 0 1.2rem rgba(255, 202, 58, 0.5);
+          box-shadow: 0 0 1.2rem rgba(255, 202, 58, 0.5);
+}
+
+.input.make-danger, .make-danger.input__select, .make-danger.input__textarea {
+  border-color: #FF595E;
+}
+
+.input.make-danger:focus, .make-danger.input__select:focus, .make-danger.input__textarea:focus, .input.make-danger:active, .make-danger.input__select:active, .make-danger.input__textarea:active {
+  -webkit-box-shadow: 0 0 1.2rem rgba(255, 89, 94, 0.5);
+          box-shadow: 0 0 1.2rem rgba(255, 89, 94, 0.5);
 }
 
 /* =================================================== */
