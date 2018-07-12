@@ -20,10 +20,10 @@
   },
   "homepage": "https://jdriviere.github.io/sparkle-css",
   "devDependencies": {
-    "autoprefixer": "^8.6.3",
+    "autoprefixer": "^8.6.5",
     "browser-sync": "^2.24.5",
     "cssnano": "^3.10.0",
-    "gulp": "^4.0.0",
+    "gulp": "^3.9.1",
     "gulp-clean-css": "^3.9.4",
     "gulp-concat-css": "^3.1.0",
     "gulp-imagemin": "^4.1.0",
