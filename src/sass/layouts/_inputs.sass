@@ -50,8 +50,9 @@ $input-label-font-size: 1.4rem !default
     height: $input-height
     margin-bottom: $input-margin
     color: $input-font-color
-    border-radius: $border-radius
-    border-color: $input-border-color
+    border:
+        radius: $border-radius
+        color: $input-border-color
 
     // Pseudo
     &::-webkit-input-placeholder
@@ -72,58 +73,6 @@ $input-label-font-size: 1.4rem !default
     &:active
         border-color: map-get($theme-map, primary)
     
-    // Elements
-    // --- LABELS ---
-    &__label
-        display: inline
-        justify-content: flex-start
-        margin:
-            bottom: 0.5rem
-            right: $input-margin / 2
-        font:
-            size: $input-label-font-size
-            weight: $font-weight-heavy
-        color: $input-font-color
-
-    // --- SELECT ---
-    &__select
-        @extend .#{$input-name}
-        background:
-            image: url('https://png.icons8.com/expand-arrow/win8/12')
-            repeat: no-repeat
-            position: 98%
-
-        // Pseudo
-        &::-ms-expand
-            display: none
-
-    // --- TEXT AREA ---
-    &__textarea
-        @extend .#{$input-name}
-        height: 12.0rem
-        font:
-            family: inherit
-            size: $input-font-size
-        resize: vertical
-    
-    // --- CHECKBOXES ---
-    &__checkbox
-        display: inline-flex
-        align-items: center
-        transform: scale(1.25)
-
-        // Pseudo
-            &:not(:first-of-type)
-            margin-left: 1.0rem
-
-        // Components
-        &__group
-            margin: 1.0rem 0
-        &__label
-            display: inline
-            margin-left: 1.5rem
-            font-size: 1.5rem
-
     // Modifiers
     @each $type, $color in $input-color-map
         &.make-#{$type}
@@ -132,10 +81,62 @@ $input-label-font-size: 1.4rem !default
             // Pseudo
             &:focus,
             &:active
-                box-shadow: 0 0 1.2rem rgba($color, 0.5)
-
+                box-shadow: 0 0 1.2rem rgba($color, 0.5) !important
+    
 // ====================================
 // INPUTS
 // ====================================
+// --- TEXTS ---
 .#{$input-name}
     +create-input
+
+// --- LABELS ---
+.#{$input-name}__label
+    display: inline
+    justify-content: flex-start
+    margin:
+        bottom: 0.5rem
+        right: $input-margin / 2
+    font:
+        size: $input-label-font-size
+        weight: $font-weight-heavy
+    color: $input-font-color
+
+// --- SELECT ---
+.#{$input-name}__select
+    @extend .#{$input-name}
+    background:
+        image: url('https://png.icons8.com/expand-arrow/win8/12')
+        repeat: no-repeat
+        position: 98%
+
+    // Pseudo
+    &::-ms-expand
+        display: none
+
+// --- TEXT AREA ---
+.#{$input-name}__textarea
+    @extend .#{$input-name}
+    height: 12.0rem
+    font:
+        family: inherit
+        size: $input-font-size
+    resize: vertical
+    
+// --- CHECKBOXES ---
+.#{$input-name}__checkbox
+    display: inline-flex
+    align-items: center
+    transform: scale(1.25)
+
+    // Pseudo
+    &:not(:first-of-type)
+        margin-left: 1.0rem
+
+    // Components
+    &__group
+        margin: 1.0rem 0
+    &__label
+        display: inline
+        margin-left: 1.5rem
+        font-size: 1.5rem
