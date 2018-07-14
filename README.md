@@ -18,7 +18,7 @@ Welcome and thank you for using Sparkle, a lightweight, responsive, open-source 
 
 ## Getting Started
 There are 3 ways to get started with the Sparkle framework:
-1. Clone your own copy via Git;
+1. Clone for fork your own copy via Git;
 ```
 https://github.com/jdriviere/sparkle-css.git
 ```
@@ -29,13 +29,8 @@ https://github.com/jdriviere/sparkle-css.git
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jdriviere/sparkle-css@VERSION/dist/css/sparkle.min.css">
 </head>
-<body>
-    <!-- Your body scripts here -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/jdriviere/sparkle-css@VERSION/dist/js/sparkle.min.js"></script>
-</body>
 ```
-(You will need all links to ensure Sparkle works efficiently, as it uses both FontAwesome and jQuery. Also, make sure you replace @VERSION with the latest version to ensure the best and most stable features.)
+(You must ensure the FontAwesome link is included on top of the Sparkle framework link, as Sparkle uses FontAwesome's icons. Also, make sure you replace @VERSION with the latest version to ensure the best and most stable features.)
 
 3. Download using Bower:
 ```
@@ -43,7 +38,7 @@ bower install sparkle-css
 ```
 
 ## Documentation
-The documentation can be found [here!](https://jdriviere.github.io/sparkle-css/docs.html).
+The documentation can be found [here!](https://sparkle-css.github.io/sparkle-docs/).
 
 ## Contributing
 Coming soon...
@@ -51,7 +46,7 @@ Coming soon...
 ## Copyright and license
 MIT License
 
-Copyright (c) 2017 J. Djimitry Rivière
+Copyright (c) 2017-2018 J. Djimitry Rivière
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software
 and associated documentation files (the "Software"), to deal in the Software without restriction,
