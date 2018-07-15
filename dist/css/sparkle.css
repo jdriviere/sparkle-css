@@ -1025,7 +1025,7 @@ code {
 }
 
 .card > .card__header {
-  padding: 0.5rem 1rem;
+  padding: 2rem 1rem;
   border-bottom: 1px solid #E2E2E2;
 }
 
@@ -1078,7 +1078,7 @@ code {
       -ms-flex-align: center;
           align-items: center;
   margin: 0;
-  padding: 0.5rem;
+  padding: 2rem 1rem;
 }
 
 .card > .card__footer > .card__footer__item:not(:first-child) {
@@ -1095,15 +1095,13 @@ code {
 }
 
 .card.make-shadow {
-  -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.25), 0 0 3em rgba(0, 0, 0, 0.15);
-  -ms-box-shadow: 0 0 1em rgba(0, 0, 0, 0.25), 0 0 3em rgba(0, 0, 0, 0.15);
-  box-shadow: 0 0 1em rgba(0, 0, 0, 0.25), 0 0 3em rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.15), 0 0 3em rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0 1em rgba(0, 0, 0, 0.15), 0 0 3em rgba(0, 0, 0, 0.05);
 }
 
 .card.make-hover:hover {
-  -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.25), 0 0 3em rgba(0, 0, 0, 0.15);
-  -ms-box-shadow: 0 0 1em rgba(0, 0, 0, 0.25), 0 0 3em rgba(0, 0, 0, 0.15);
-  box-shadow: 0 0 1em rgba(0, 0, 0, 0.25), 0 0 3em rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.15), 0 0 3em rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0 1em rgba(0, 0, 0, 0.15), 0 0 3em rgba(0, 0, 0, 0.05);
 }
 
 /* =================================================== */
