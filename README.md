@@ -26,12 +26,9 @@ https://github.com/jdriviere/sparkle-css.git
 ```html
 <head>
     <!-- Your links, sources, title, and meta tags here -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jdriviere/sparkle-css@VERSION/dist/css/sparkle.min.css">
 </head>
 ```
-(You must ensure the FontAwesome link is included on top of the Sparkle framework link, as Sparkle uses FontAwesome's icons. Also, make sure you replace @VERSION with the latest version to ensure the best and most stable features.)
-
 3. Download using Bower:
 ```
 bower install sparkle-css
