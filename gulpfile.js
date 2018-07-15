@@ -48,7 +48,7 @@ gulp.task('sassify', function () {
 });
 
 gulp.task('watch:sass', function () {
-    gulp.watch('src/scss/**/*.sass', ['sassify'], browserSync.reload);
+    gulp.watch('src/sass/**/*.sass', ['sassify'], browserSync.reload);
     console.log('Watching CSS files.');
 });
 
@@ -113,9 +113,9 @@ gulp.task('serve', ['watch:html', 'watch:sass', 'watch:js'], function () {
         server: "./"
     });
 
-    gulp.watch(['src/scss/sparkle.scss'], ['sassify']);
+    gulp.watch(['src/sass/sparkle.sass'], ['sassify']);
     gulp.watch(['dev/**/*.pug'], ['pug']);
-    gulp.watch("docs/*.html").on('change', browserSync.reload);
+    gulp.watch("./index.html").on('change', browserSync.reload);
 });
 
 // DEFAULT RUN
