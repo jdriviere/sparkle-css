@@ -593,7 +593,7 @@ code {
   .grid > .column.offset-7 {
     margin-left: 58.33333%;
   }
-  .grid > .column.offset-8, .grid > .offset--thirds {
+  .grid > .column.offset-8, .grid > .offset-thirds {
     margin-left: 66.66667%;
   }
   .grid > .column.offset-9, .grid > .offset-fourths {
