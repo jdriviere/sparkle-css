@@ -121,15 +121,15 @@ $offset-name: "offset" !default
                 margin-left: ((100% / $column-max) * $i)
 
         // Special Cases
-        > .#{$offset-name}-fourth
+        > .#{$column-name}.#{$offset-name}-fourth
             @extend .#{$column-name}.#{$offset-name}-3
-        > .#{$offset-name}-third
+        > .#{$column-name}.#{$offset-name}-third
             @extend .#{$column-name}.#{$offset-name}-4
-        > .#{$offset-name}-half
+        > .#{$column-name}.#{$offset-name}-half
             @extend .#{$column-name}.#{$offset-name}-6
-        > .#{$offset-name}-thirds
+        > .#{$column-name}.#{$offset-name}-thirds
             @extend .#{$column-name}.#{$offset-name}-8
-        > .#{$offset-name}-fourths
+        > .#{$column-name}.#{$offset-name}-fourths
             @extend .#{$column-name}.#{$offset-name}-9
-        > .#{$offset-name}-full
+        > .#{$column-name}.#{$offset-name}-full
             @extend .#{$column-name}.#{$offset-name}-12

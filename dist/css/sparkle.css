@@ -578,25 +578,25 @@ code {
   .grid > .column.offset-2 {
     margin-left: 16.66667%;
   }
-  .grid > .column.offset-3, .grid > .offset-fourth {
+  .grid > .column.offset-3, .grid > .column.offset-fourth {
     margin-left: 25%;
   }
-  .grid > .column.offset-4, .grid > .offset-third {
+  .grid > .column.offset-4, .grid > .column.offset-third {
     margin-left: 33.33333%;
   }
   .grid > .column.offset-5 {
     margin-left: 41.66667%;
   }
-  .grid > .column.offset-6, .grid > .offset-half {
+  .grid > .column.offset-6, .grid > .column.offset-half {
     margin-left: 50%;
   }
   .grid > .column.offset-7 {
     margin-left: 58.33333%;
   }
-  .grid > .column.offset-8, .grid > .offset-thirds {
+  .grid > .column.offset-8, .grid > .column.offset-thirds {
     margin-left: 66.66667%;
   }
-  .grid > .column.offset-9, .grid > .offset-fourths {
+  .grid > .column.offset-9, .grid > .column.offset-fourths {
     margin-left: 75%;
   }
   .grid > .column.offset-10 {
@@ -605,7 +605,7 @@ code {
   .grid > .column.offset-11 {
     margin-left: 91.66667%;
   }
-  .grid > .column.offset-12, .grid > .offset-full {
+  .grid > .column.offset-12, .grid > .column.offset-full {
     margin-left: 100%;
   }
 }
