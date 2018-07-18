@@ -43,3 +43,19 @@ body
 ::selection
     background: map-get($theme-map, primary)
     color: map-get($theme-map, light)
+
+// =======================================
+// LISTS
+// =======================================
+$list-spacing-v: 1.5rem
+$list-spacing-h: 1.5rem
+
+ol,
+ul
+    margin:
+        top: 
+        left: $list-spacing-h
+
+    // Elements
+    & > li
+        padding-left: $list-spacing-h

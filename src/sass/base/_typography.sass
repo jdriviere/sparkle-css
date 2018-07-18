@@ -18,6 +18,10 @@ $text-color-map: (primary: $lblue_base, info: $blue_base, success: $green_base, 
 $text-alignments: (left: left, right: right, centered: center, justified: justify) !default
 $text-weights: (thin: $font-weight-light, normal: $font-weight-normal, bold: $font-weight-heavy, thick: $font-weight-black) !default
 
+// Code
+$text-font-code: monospace
+$text-font-size-code: 1.4rem !default
+
 // ====================================
 // HEADERS
 // ====================================
@@ -101,5 +105,5 @@ a
 // ====================================
 code
     font:
-        family: monospace
-        size: 1.2rem
+        family: $text-font-code
+        size: $text-font-size-code
