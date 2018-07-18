@@ -462,14 +462,13 @@ code {
 
 .grid > .column {
   -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+      -ms-flex: 1;
+          flex: 1;
+  width: 0;
 }
 
 @media screen and (min-width: 768px) {
-  .grid > .column.make-1 {
+  .grid > .column.make-1, .grid > .column.make-twelfth {
     -webkit-box-flex: 0;
         -ms-flex-positive: 0;
             flex-grow: 0;
@@ -477,7 +476,7 @@ code {
         flex-basis: 8.33333%;
     width: 8.33333%;
   }
-  .grid > .column.make-2 {
+  .grid > .column.make-2, .grid > .column.make-sixth {
     -webkit-box-flex: 0;
         -ms-flex-positive: 0;
             flex-grow: 0;
@@ -541,7 +540,7 @@ code {
         flex-basis: 75%;
     width: 75%;
   }
-  .grid > .column.make-10 {
+  .grid > .column.make-10, .grid > .column.make-sixths {
     -webkit-box-flex: 0;
         -ms-flex-positive: 0;
             flex-grow: 0;
@@ -549,7 +548,7 @@ code {
         flex-basis: 83.33333%;
     width: 83.33333%;
   }
-  .grid > .column.make-11 {
+  .grid > .column.make-11, .grid > .column.make-twelfths {
     -webkit-box-flex: 0;
         -ms-flex-positive: 0;
             flex-grow: 0;
@@ -572,10 +571,10 @@ code {
 }
 
 @media screen and (min-width: 768px) {
-  .grid > .column.offset-1 {
+  .grid > .column.offset-1, .grid > .column.offset-twelfth {
     margin-left: 8.33333%;
   }
-  .grid > .column.offset-2 {
+  .grid > .column.offset-2, .grid > .column.offset-sixth {
     margin-left: 16.66667%;
   }
   .grid > .column.offset-3, .grid > .column.offset-fourth {
@@ -599,10 +598,10 @@ code {
   .grid > .column.offset-9, .grid > .column.offset-fourths {
     margin-left: 75%;
   }
-  .grid > .column.offset-10 {
+  .grid > .column.offset-10, .grid > .column.offset-sixths {
     margin-left: 83.33333%;
   }
-  .grid > .column.offset-11 {
+  .grid > .column.offset-11, .grid > .column.offset-twelfths {
     margin-left: 91.66667%;
   }
   .grid > .column.offset-12, .grid > .column.offset-full {

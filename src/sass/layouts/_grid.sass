@@ -23,9 +23,9 @@ $column-max: 12 !default
 $offset-name: "offset" !default
 
 // ====================================
-// CONTAINER
+// MIXINS
 // ====================================
-.#{$wrapper-name}
+=create-wrapper
     position: relative
     width: 96%
     margin: 0 auto
@@ -46,11 +46,12 @@ $offset-name: "offset" !default
 // GRID
 // ====================================
 // --- ROW --- //
-.#{$grid-name}
+=create-grid
     display: flex
     flex: 1
-    flex-direction: column
-    flex-wrap: wrap
+    flex:
+        direction: column
+        wrap: wrap
     margin:
         bottom: $grid-margin
 
@@ -64,7 +65,7 @@ $offset-name: "offset" !default
         @extend .#{$grid-name}:before
         clear: both
     
-    // States
+    // Modifiers
     &.make-gutters
         margin:
             left: $grid-gutter / -2
@@ -82,21 +83,28 @@ $offset-name: "offset" !default
         > [class*="make-"]
             flex-grow: 1
 
-    // Components
+    // Elements
     // --- COLUMNS ---
     > .#{$column-name}
-        flex-grow: 1
-        flex-shrink: 0
+        // flex-grow: 1
+        // flex-shrink: 0
+        flex: 1
+        width: 0
 
         // Media Queries
         @media screen and (min-width: $bp-large)
             @for $i from 1 through $column-max
                 &.make-#{$i}
-                    flex-grow: 0
-                    flex-basis: ((100% * $i) / $column-max)
+                    flex:
+                        grow: 0
+                        basis: ((100% * $i) / $column-max)
                     width: ((100% * $i) / $column-max)
 
-            // Special Cases
+            // Fractional
+            &.make-twelfth
+                @extend .#{$column-name}.make-1
+            &.make-sixth
+                @extend .#{$column-name}.make-2
             &.make-fourth
                 @extend .#{$column-name}.make-3
             &.make-third
@@ -107,6 +115,10 @@ $offset-name: "offset" !default
                 @extend .#{$column-name}.make-8
             &.make-fourths
                 @extend .#{$column-name}.make-9
+            &.make-sixths
+                @extend .#{$column-name}.make-10
+            &.make-twelfths
+                @extend .#{$column-name}.make-11
             &.make-full
                 @extend .#{$column-name}.make-12
     
@@ -121,6 +133,10 @@ $offset-name: "offset" !default
                 margin-left: ((100% / $column-max) * $i)
 
         // Special Cases
+        > .#{$column-name}.#{$offset-name}-twelfth
+            @extend .#{$column-name}.#{$offset-name}-1
+        > .#{$column-name}.#{$offset-name}-sixth
+            @extend .#{$column-name}.#{$offset-name}-2
         > .#{$column-name}.#{$offset-name}-fourth
             @extend .#{$column-name}.#{$offset-name}-3
         > .#{$column-name}.#{$offset-name}-third
@@ -131,5 +147,21 @@ $offset-name: "offset" !default
             @extend .#{$column-name}.#{$offset-name}-8
         > .#{$column-name}.#{$offset-name}-fourths
             @extend .#{$column-name}.#{$offset-name}-9
+        > .#{$column-name}.#{$offset-name}-sixths
+            @extend .#{$column-name}.#{$offset-name}-10
+        > .#{$column-name}.#{$offset-name}-twelfths
+            @extend .#{$column-name}.#{$offset-name}-11
         > .#{$column-name}.#{$offset-name}-full
             @extend .#{$column-name}.#{$offset-name}-12
+
+// ====================================
+// CONTAINER
+// ====================================
+.#{$wrapper-name}
+    +create-wrapper
+
+// ====================================
+// GRID
+// ====================================
+.#{$grid-name}
+    +create-grid
