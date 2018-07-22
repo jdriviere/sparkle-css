@@ -182,28 +182,45 @@ $button-group-spacing: .25em !default
     &.make-round
         border-radius: 3.5rem
 
+=create-button-group
+    display: flex
+    flex:
+        direction: row
+        wrap: wrap
+    justify-content: flex-start
+    align-items: center  
+
+    // Elements
+    & > .#{$button-name}:not(.make-block)
+        margin:
+            bottom: $button-margin
+            right: $button-margin
+        
+        // Pseudo
+        &:last-child
+            margin-right: 0
+    
+    // Modifiers
+    // NOTE: '.make-solid' is a temporary name
+    &.make-solid
+        & > .#{$button-name}
+            // Pseudo
+            &:not(:first-child)
+                border:
+                    top-left-radius: 0
+                    bottom-left-radius: 0
+            &:not(:last-child)
+                margin-right: -1px
+                border:
+                    top-right-radius: 0
+                    bottom-right-radius: 0
+
 // =================================
 // BUTTONS
 // =================================
 .#{$button-name}
     +create-button
 
+// --- GROUP --- //
 .#{$button-group-name}
-    display: flex
-    flex-direction: row
-    align-items: center
-    flex-wrap: wrap
-    margin:
-        top: $button-margin
-        bottom: $button-margin    
-
-    // Elements
-    & > .#{$button-name}:not(.make-block)
-        margin:
-            top: $button-margin / 2
-            bottom: $button-margin / 2
-            left: $button-group-spacing
-        
-        // Pseudo
-        &:first-child
-            margin-left: 0
+    +create-button-group

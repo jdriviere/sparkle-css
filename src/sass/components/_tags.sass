@@ -47,13 +47,44 @@ $tag-group-spacing: 0.125em !default
                 background: $color-none
                 color: $bgcolor !important
                 border: 1px solid $bgcolor
-            
             &.make-reverse
                 background: $fontcolor
-                color: $bgcolor !important
-    
+                color: $bgcolor !important  
     &.make-bullet
         border-radius: 2.0rem
+
+=create-tag-group
+    display: flex
+    flex:
+        direction: row
+        wrap: wrap
+    justify-content: flex-start
+    align-items: center  
+
+    // Elements
+    & > .#{$tag-name}:not(.make-block)
+        margin:
+            bottom: $button-margin
+            right: $button-margin
+        
+        // Pseudo
+        &:last-child
+            margin-right: 0
+    
+    // Modifiers
+    // NOTE: '.make-solid' is a temporary name
+    &.make-solid
+        & > .#{$tag-name}
+            // Pseudo
+            &:not(:first-child)
+                border:
+                    top-left-radius: 0
+                    bottom-left-radius: 0
+            &:not(:last-child)
+                margin-right: -1px
+                border:
+                    top-right-radius: 0
+                    bottom-right-radius: 0
 
 // ====================================
 // TAGS
@@ -63,24 +94,4 @@ $tag-group-spacing: 0.125em !default
 
 // --- GROUP --- //
 .#{$tag-group-name}
-    display: flex
-    flex-direction: row
-    justify-content: flex-start
-    flex-wrap: wrap
-
-    // Pseudo
-    &:first-child
-        margin-top: 0
-
-    // Elements
-    > .#{$tag-name}
-        margin:
-            bottom: $tag-group-spacing * 2
-            left: $tag-group-spacing
-            right: $tag-group-spacing
-
-        // Pseudo
-        &:first-child
-            margin-left: 0
-        &:last-child
-            margin-right: 0
+    +create-tag-group

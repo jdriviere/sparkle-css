@@ -1931,23 +1931,34 @@ code {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-top: 0.25em;
-  margin-bottom: 0.25em;
 }
 
 .buttons > .button:not(.make-block) {
-  margin-top: 0.125em;
-  margin-bottom: 0.125em;
-  margin-left: 0.25em;
+  margin-bottom: 0.25em;
+  margin-right: 0.25em;
 }
 
-.buttons > .button:not(.make-block):first-child {
-  margin-left: 0;
+.buttons > .button:not(.make-block):last-child {
+  margin-right: 0;
+}
+
+.buttons.make-solid > .button:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.buttons.make-solid > .button:not(:last-child) {
+  margin-right: -1px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 /* =================================================== */
@@ -2100,29 +2111,34 @@ code {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.tags:first-child {
-  margin-top: 0;
-}
-
-.tags > .tag {
+.tags > .tag:not(.make-block) {
   margin-bottom: 0.25em;
-  margin-left: 0.125em;
-  margin-right: 0.125em;
+  margin-right: 0.25em;
 }
 
-.tags > .tag:first-child {
-  margin-left: 0;
-}
-
-.tags > .tag:last-child {
+.tags > .tag:not(.make-block):last-child {
   margin-right: 0;
+}
+
+.tags.make-solid > .tag:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.tags.make-solid > .tag:not(:last-child) {
+  margin-right: -1px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 /* =================================================== */
