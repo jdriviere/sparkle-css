@@ -36,12 +36,10 @@ $navig-font-color    :   $font-color !default
         // Pseudo
         &:checked ~ .#{$navig-name}__menu
             display: flex
-            height: auto
-        
+            height: auto 
         &:checked ~ .#{$navig-name}__toggle
             color: rgba(0, 0, 0, 1.0)
             border-color: rgba(0, 0, 0, 1.0)
-    
     label[for='#{$navig-name}__trigger'].#{$navig-name}__toggle
         position: absolute
         top: $navig-spacing / 2
@@ -56,7 +54,6 @@ $navig-font-color    :   $font-color !default
         &:before
             content: '\2630  Menu'
             font-weight: 400
-        
         &:hover
             color: rgba(0, 0, 0, 0.7)
             border-color: rgba(0, 0, 0, 0.7)
@@ -73,7 +70,6 @@ $navig-font-color    :   $font-color !default
         img,
         &__img
             max-height: 3.2rem
-
         &--extra
             opacity: 0.5
     
@@ -94,7 +90,7 @@ $navig-font-color    :   $font-color !default
                 text-decoration: none
                 color: $navig-font-color
                 cursor: pointer
-            
+
             // Pseudo
             &:hover
                 background: darken($navig-colorbg, 5%)
@@ -104,7 +100,6 @@ $navig-font-color    :   $font-color !default
                 // Elements
                 > a
                     color: map-get($theme-map, primary)
-            
             &.make-special
                 background: map-get($theme-map, primary)
                 
@@ -127,7 +122,7 @@ $navig-font-color    :   $font-color !default
     // Modifiers
     &.make-fixed
         position: fixed
-        z-index: 5
+        z-index: $index-higher // z-index: 10
         box-shadow: 0 0 7px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 0, 0, 0.05)
 
     // Media Query
@@ -141,9 +136,10 @@ $navig-font-color    :   $font-color !default
         
         &__brand
             display: flex
-            flex-grow: 0
-            flex-shrink: 0
-            flex-basis: auto
+            flex:
+                grow: 0
+                shrink: 0
+                basis: auto
             align-items: center
             border-right: 1px solid $navig-colorborder 
         

@@ -47,14 +47,16 @@ body
 // =======================================
 // LISTS
 // =======================================
-$list-spacing-v: 1.5rem
+$list-spacing-v: 1.0rem
 $list-spacing-h: 1.5rem
 
 ol,
 ul
-    margin:
-        top: 
-        left: $list-spacing-h
+    margin-left: $list-spacing-h
+
+    // Pseudo
+    &:not(:last-child)
+        margin-bottom: $list-spacing-v
 
     // Elements
     & > li

@@ -86,10 +86,10 @@ $offset-name: "offset" !default
     // Elements
     // --- COLUMNS ---
     > .#{$column-name}
-        // flex-grow: 1
-        // flex-shrink: 0
-        flex: 1
-        width: 0
+        flex:
+            grow: 1
+            shrink: 0
+            basis: 0
 
         // Media Queries
         @media screen and (min-width: $bp-large)
