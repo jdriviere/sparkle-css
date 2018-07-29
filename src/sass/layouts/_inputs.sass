@@ -43,6 +43,11 @@ $input-label-font-size: 1.4rem !default
         cursor: not-allowed
         opacity: 0.5
 
+        // Pseudo
+        &:hover
+            border-color: $color-none
+            box-shadow: 0 0 1.2rem rgba($color-none, 0)
+
 =create-input
     +input-control
     width: $input-width
@@ -121,21 +126,3 @@ $input-label-font-size: 1.4rem !default
         family: inherit
         size: $input-font-size
     resize: vertical
-    
-// --- CHECKBOXES ---
-.#{$input-name}__checkbox
-    display: inline-flex
-    align-items: center
-    transform: scale(1.25)
-
-    // Pseudo
-    &:not(:first-of-type)
-        margin-left: 1.0rem
-
-    // Elements
-    &__group
-        margin: 1.0rem 0
-    &__label
-        display: inline
-        margin-left: 1.5rem
-        font-size: 1.5rem

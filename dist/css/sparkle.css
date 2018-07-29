@@ -677,6 +677,12 @@ code {
   opacity: 0.5;
 }
 
+.input:disabled:hover, .input__select:disabled:hover, .input__textarea:disabled:hover {
+  border-color: transparent;
+  -webkit-box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0);
+          box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0);
+}
+
 .input::-webkit-input-placeholder, .input__select::-webkit-input-placeholder, .input__textarea::-webkit-input-placeholder {
   color: #C0C0C0;
 }
@@ -787,31 +793,6 @@ code {
   font-family: inherit;
   font-size: 1.6rem;
   resize: vertical;
-}
-
-.input__checkbox {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transform: scale(1.25);
-          transform: scale(1.25);
-}
-
-.input__checkbox:not(:first-of-type) {
-  margin-left: 1.0rem;
-}
-
-.input__checkbox__group {
-  margin: 1.0rem 0;
-}
-
-.input__checkbox__label {
-  display: inline;
-  margin-left: 1.5rem;
-  font-size: 1.5rem;
 }
 
 /* =================================================== */
