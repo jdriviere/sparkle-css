@@ -19,8 +19,9 @@ $text-alignments: (left: left, right: right, centered: center, justified: justif
 $text-weights: (thin: $font-weight-light, normal: $font-weight-normal, bold: $font-weight-heavy, thick: $font-weight-black) !default
 
 // Code
-$text-font-code: monospace
-$text-font-size-code: 1.4rem !default
+$text-font-code: monospace !default
+$text-font-code-size: 1.5rem !default
+$text-font-code-padding: 0.5rem !default
 
 // ====================================
 // HEADERS
@@ -30,22 +31,22 @@ h1, h2, h3, h4, h5, h6
     font-weight: $font-weight-heavy
 
 h1
-    font-size: 4.8rem
-
-h2
     font-size: 4.2rem
 
-h3
+h2
     font-size: 3.6rem
 
-h4
+h3
     font-size: 2.8rem
 
-h5
+h4
     font-size: 2.4rem
 
+h5
+    font-size: 2.0rem
+
 h6
-    font-size: 1.8rem
+    font-size: 1.4rem
 
 // ====================================
 // PARAGRAPHS, LINKS
@@ -104,6 +105,10 @@ a
 // CODE
 // ====================================
 code
+    padding: $text-font-code-padding
+    vertical-align: center
     font:
         family: $text-font-code
-        size: $text-font-size-code
+        size: $text-font-code-size
+    background: $grey_base
+    border-radius: 0.3rem
