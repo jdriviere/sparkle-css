@@ -63,43 +63,45 @@ a
     color: map-get($theme-map, primary)
     text-decoration: none
 
+    // Pseudo
+    &:hover
+        text-decoration: underline
+
 // ====================================
 // TEXT FORMATS
 // ====================================
-.#{$text-name}
-    // Modifiers
-    //--- SIZE ---
-    @for $i from 1 through $text-size-max
-        &.make-#{$i}
-            font-size: ($text-font-max - ($text-font-increment * $i))
-    //--- WEIGHT ---
-    @each $type, $weight in $text-weights
-        &.make-#{$type}
-            font-weight: $weight
-    //--- ALIGNMENTS ---
-    @each $type, $alignment in $text-alignments
-        &.make-#{$type}
-            text-align: $alignment 
-    //--- COLORS ---
-    @each $type, $color in $text-color-map
-        &.make-#{$type}
-            color: $color
+//--- SIZE ---
+@for $i from 1 through $text-size-max
+    .make-#{$text-name}-#{$i}
+        font-size: ($text-font-max - ($text-font-increment * $i))
+//--- WEIGHT ---
+@each $type, $weight in $text-weights
+    .make-#{$text-name}-#{$type}
+        font-weight: $weight
+//--- ALIGNMENTS ---
+@each $type, $alignment in $text-alignments
+    .make-#{$text-name}-#{$type}
+        text-align: $alignment 
+//--- COLORS ---
+@each $type, $color in $text-color-map
+    .make-#{$text-name}-#{$type}
+        color: $color
     
-    //--- SPECIAL ---
-    &.make-title
-        font:
-            size: $text-font-title-size
-            weight: $text-font-title-weight
-    &.make-subtitle
-        font:
-            size: $text-font-subtitle-size
-            weight: $text-font-subtitle-weight
-    &.make-italic
-        font-style: italic
+//--- SPECIAL ---
+.make-#{$text-name}-title
+    font:
+        size: $text-font-title-size
+        weight: $text-font-title-weight
+.make-#{$text-name}-subtitle
+    font:
+        size: $text-font-subtitle-size
+        weight: $text-font-subtitle-weight
+.make-#{$text-name}-italic
+    font-style: italic
     
-    //--- TEXT LINES ---
-    &.make-linethrough
-        text-decoration-line: line-through
+//--- TEXT LINES ---
+.make-#{$text-name}-linethrough
+    text-decoration-line: line-through
 
 // ====================================
 // CODE

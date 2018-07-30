@@ -111,105 +111,109 @@ a {
   text-decoration: none;
 }
 
-.text.make-1 {
+a:hover {
+  text-decoration: underline;
+}
+
+.make-text-1 {
   font-size: 4.2rem;
 }
 
-.text.make-2 {
+.make-text-2 {
   font-size: 3.6rem;
 }
 
-.text.make-3 {
+.make-text-3 {
   font-size: 3rem;
 }
 
-.text.make-4 {
+.make-text-4 {
   font-size: 2.4rem;
 }
 
-.text.make-5 {
+.make-text-5 {
   font-size: 1.8rem;
 }
 
-.text.make-6 {
+.make-text-6 {
   font-size: 1.2rem;
 }
 
-.text.make-thin {
+.make-text-thin {
   font-weight: 300;
 }
 
-.text.make-normal {
+.make-text-normal {
   font-weight: 400;
 }
 
-.text.make-bold {
+.make-text-bold {
   font-weight: 700;
 }
 
-.text.make-thick {
+.make-text-thick {
   font-weight: 800;
 }
 
-.text.make-left {
+.make-text-left {
   text-align: left;
 }
 
-.text.make-right {
+.make-text-right {
   text-align: right;
 }
 
-.text.make-centered {
+.make-text-centered {
   text-align: center;
 }
 
-.text.make-justified {
+.make-text-justified {
   text-align: justify;
 }
 
-.text.make-primary {
+.make-text-primary {
   color: #ADD2E6;
 }
 
-.text.make-info {
+.make-text-info {
   color: #1982C4;
 }
 
-.text.make-success {
+.make-text-success {
   color: #6ABB4F;
 }
 
-.text.make-warning {
+.make-text-warning {
   color: #FEC524;
 }
 
-.text.make-danger {
+.make-text-danger {
   color: #FF3344;
 }
 
-.text.make-light {
+.make-text-light {
   color: #F4F4F8;
 }
 
-.text.make-dark {
+.make-text-dark {
   color: #111516;
 }
 
-.text.make-title {
+.make-text-title {
   font-size: 4rem;
   font-weight: 400;
 }
 
-.text.make-subtitle {
+.make-text-subtitle {
   font-size: 2.5rem;
   font-weight: 400;
 }
 
-.text.make-italic {
+.make-text-italic {
   font-style: italic;
 }
 
-.text.make-linethrough {
+.make-text-linethrough {
   -webkit-text-decoration-line: line-through;
           text-decoration-line: line-through;
 }
