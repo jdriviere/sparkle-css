@@ -6,7 +6,7 @@
 // ====================================
 // VARIABLES
 // ====================================
-$tag-color-map: (primary: ($lblue_base, $white_base), info: ($blue_base, $white_base), success: ($green_base, $white_base), warning: ($yellow_base, $black_base), danger: ($red_base, $white_base), light: ($white_base, $black_base), dark: ($black_base, $white_base)) !default
+$tag-color-map: (primary: $lblue_base, info: $blue_base, success: $green_base, warning: $yellow_base, danger: $red_base, light: $white_base, dark: $black_base) !default
 $tag-name: 'tag' !default
 $tag-margin: 1.5rem !default
 $tag-padding: 0.5rem 1rem !default
@@ -21,8 +21,9 @@ $tag-group-spacing: 0.125em !default
 // ====================================
 =create-tag
     display: inline-flex
-    flex-grow: 0
-    flex-basis: auto
+    flex:
+        grow: 0
+        basis: auto
     justify-content: center
     align-items: center
     padding: $tag-padding
@@ -34,22 +35,25 @@ $tag-group-spacing: 0.125em !default
     border-radius: $border-radius
 
     // Modifiers
-    @each $type, $color in $tag-color-map
-        $bgcolor: nth($color, 1)
-        $fontcolor: nth($color, 2)
-        
+    @each $type, $color in $tag-color-map        
         &.make-#{$type}
-            background: $bgcolor
-            color: $fontcolor !important
+            @if ($type == 'primary' or $type == 'warning' or $type == 'light')
+                color: $black_base !important
+            @else
+                color: $white_base !important
+            background: $color
 
             // Modifiers
             &.make-outline
                 background: $color-none
-                color: $bgcolor !important
-                border: 1px solid $bgcolor
+                color: $color !important
+                border: 1px solid $color
             &.make-reverse
-                background: $fontcolor
-                color: $bgcolor !important  
+                @if ($type == 'primary' or $type == 'warning' or $type == 'light')
+                    background: $black_base !important
+                @else
+                    background: $white_base !important
+                color: $color !important  
     &.make-bullet
         border-radius: 2.0rem
 

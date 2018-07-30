@@ -6,12 +6,11 @@
 // =================================
 // VARIABLES
 // =================================
-$button-color-map: (primary: ($lblue_base, $white_base), info: ($blue_base, $white_base), success: ($green_base, $white_base), warning: ($yellow_base, $black_base), danger: ($red_base, $white_base), light: ($white_base, $black_base), dark: ($black_base, $white_base)) !default
+$button-color-map: (primary: $lblue_base, info: $blue_base, success: $green_base, warning: $yellow_base, danger: $red_base, light: $white_base, dark: $black_base) !default
 $button-name: "button" !default
 $button-margin: 0.25em !default
 $button-line-height: $line-height !default
 $button-font-size: $font-size !default
-$button-letter-space: 0.1rem !default
 $button-padding: 0.5rem 1.5rem !default
 $button-border-radius: 0.3em !default
 
@@ -57,53 +56,67 @@ $button-group-spacing: .25em !default
     
     // Modifiers
     @each $type, $color in $button-color-map
-        $bgcolor: nth($color, 1)
-        $fontcolor: nth($color, 2)
-
         // --- FILLED --- //
         &.make-#{$type}
-            background: $bgcolor
-            color: $fontcolor !important
+            @if ($type == 'primary' or $type == 'warning' or $type == 'light')
+                color: $black_base !important
+            @else
+                color: $white_base
+            background: $color
             border: 1px solid $color-none
 
             // Pseudo
             &:hover,
             &:focus,
             &:active
-                background: darken($bgcolor, $darken)
+                background: darken($color, $darken)
                 border-color: $color-none
 
             // Modifiers
             // --- REVERSED --- //
             &.make-reverse
-                background: $fontcolor
-                color: $bgcolor !important
+                @if ($type == 'primary' or $type == 'warning' or $type == 'light')
+                    background: $black_base !important
+                @else
+                    background: $white_base
+                color: $color !important
                 border: 1px solid $color-none
 
                 // Pseudo
                 &:hover,
                 &:focus,
                 &:active
-                    background: darken($fontcolor, 3%)
+                    @if ($type == 'primary' or $type == 'warning' or $type == 'light')
+                        background: darken($black_base, $darken)
+                    @else
+                        background: darken($white_base, 3%)
 
                 // Modifiers
                 &.make-outline
-                    background: $color-none
-                    color: $fontcolor !important
-                    border: 1px solid $fontcolor
+                    @if ($type == 'primary' or $type == 'warning' or $type == 'light')
+                        background: $color-none !important
+                        color: $black_base !important
+                        border: 1px solid $black_base
+                    @else
+                        background: $color-none !important
+                        color: $white_base !important
+                        border: 1px solid $white_base
 
                     // Pseudo
                     &:hover,
                     &:focus,
                     &:active
-                        background: $fontcolor
-                        color: $bgcolor !important
+                        @if ($type == 'primary' or $type == 'warning' or $type == 'light')
+                            background: $black_base !important
+                        @else
+                            background: $white_base !important
+                        color: $color !important                    
 
             // --- LINKED --- //
             &.make-link
                 @if ($type == "light")
                     background: $color-none
-                    color: $bgcolor !important
+                    color: $color !important
                     border-color: $color-none
 
                     // Pseudo
@@ -111,51 +124,59 @@ $button-group-spacing: .25em !default
                     &:focus,
                     &:active
                         background: rgba($grey_base, 0.1)
-                        color: darken($bgcolor, 10%) !important
+                        color: darken($color, 10%) !important
+                        text-decoration: underline
                 @else
                     background: $color-none
-                    color: $bgcolor !important
+                    color: $color !important
                     border-color: $color-none
 
-                // Pseudo
-                &:hover,
-                &:focus,
-                &:active
-                    background: rgba($bgcolor, 0.1)
-                    color: darken($bgcolor, 10%) !important
+                    // Pseudo
+                    &:hover,
+                    &:focus,
+                    &:active
+                        background: rgba($color, 0.1)
+                        color: darken($color, 10%) !important
+                        text-decoration: underline
 
             // --- OUTLINED --- //
             &.make-outline
                 background: $color-none
-                color: $bgcolor !important
-                border: 1px solid $bgcolor
+                color: $color !important
+                border: 1px solid $color
 
                 // Pseudo
                 &:hover,
                 &:focus,
                 &:active
-                    background: $bgcolor
-                    color: $fontcolor !important
+                    @if ($type == 'primary' or $type == 'warning' or $type == 'light')
+                        color: $black_base !important
+                    @else
+                        color: $white_base !important
+                    background: $color
                     border-color: $color-none
             
             
             // --- GHOSTED --- //
             &.make-ghost
-                @if $type == "light"
+                @if ($type == 'light')
                     background: map-get($theme-map, light)
-                    color: $white_d1 !important
+                    color: $white_d2 !important
                     border: 1px solid $grey_l1
                 @else
                     background: map-get($theme-map, light)
-                    color: $bgcolor !important
+                    color: $color !important
                     border: 1px solid $grey_l1
 
                 // Pseudo
                 &:hover,
                 &:focus,
                 &:active
-                    background: $bgcolor
-                    color: $fontcolor !important
+                    @if ($type == 'primary' or $type == 'warning' or $type == 'light')
+                        color: $black_base !important
+                    @else
+                        color: $white_base !important
+                    background: $color
                     border-color: $color-none
 
     // Modifiers
@@ -173,9 +194,9 @@ $button-group-spacing: .25em !default
     &.make-block
         display: block
         width: 100%
-        padding: 0.75rem 0
+        margin: 1.0rem 0
+        padding: 0.5rem 0
         font-size: 2.0rem
-        letter-spacing: $button-letter-space
 
     // --- ROUNDNESS --- //
     &.make-radial
