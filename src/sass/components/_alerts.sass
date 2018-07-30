@@ -28,8 +28,10 @@ $alert-border-radius: 0.5rem !default
     width: 100%
     margin: ($alert-margin / 2) 0
     padding: ($alert-padding / 2) $alert-padding
-    background: lighten($grey_base, $lighten)
-    color: darken($grey_base, $darken * 3)
+    // background: lighten($grey_base, $lighten)
+    background: $grey_base
+    // color: darken($grey_base, $darken * 3)
+    color: $font-color
     font:
         size: $alert-font-size
         weight: $alert-font-weight
@@ -40,14 +42,12 @@ $alert-border-radius: 0.5rem !default
     // Modifiers
     @each $type, $color in $alert-color-map
         &.make-#{$type}
-            @if ($type == 'warning')
-                background: lighten($color, $lighten * 4) !important
-            @else if ($type == 'dark')
-                background: $grey_base !important
+            @if ($type == 'primary' or $type == 'warning' or $type == 'light')
+                background: $color
+                color: rgba($black_base, 0.75)
             @else
-                background: lighten($color, $lighten * 2)
-            
-            color: darken($color, $darken * 3)
+                background: $color
+                color: $white_base
             border-color: darken($color, $darken * 3)
 
 // ====================================
