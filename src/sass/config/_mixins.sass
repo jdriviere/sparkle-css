@@ -4,6 +4,7 @@
 =reset
   margin: 0
   padding: 0
+  box-sizing: border-box
 
 =clearfix
   display: inline-block
@@ -16,148 +17,6 @@
     content: ""
     clear: both
     height: 0
-
-// =======================================
-// BORDER RADIUS
-// =======================================
-=border-radius($radius: $border-radius)
-  border-radius: $radius
-
-=border-radius-cust($top: 0, $right: 0, $bottom: 0, $left: 0)
-  border-radius: $top $right $bottom $left
-
-// =======================================
-// BOX SHADOW
-// =======================================
-=box-shadow($x, $y, $blur, $color: $color-pure-black, $alpha: 0.7)
-  -webkit-box-shadow: $x $y $blur rgba($color, $alpha)
-  -moz-box-shadow: $x $y $blur rgba($color, $alpha)
-  -ms-box-shadow: $x $y $blur rgba($color, $alpha)
-  box-shadow: $x $y $blur rgba($color, $alpha)
-
-=box-shadow-none
-  -webkit-box-shadow: none
-  -moz-box-shadow: none
-  -ms-box-shadow: none
-  box-shadow: none
-
-// =======================================
-// BOX-SIZING
-// =======================================
-=box-sizing($type: border-box)
-  -webkit-box-sizing: $type
-  -moz-box-sizing: $type
-  -ms-box-sizing: $type
-  box-sizing: $type
-
-// =======================================
-// FONT-SMOOTHING
-// =======================================
-=font-smoothing
-  -webkit-font-smoothing: antialiased
-  -moz-font-smoothing: antialiased
-  -ms-font-smoothing: antialiased
-  font-smoothing: antialiased
-
-// =======================================
-// TRANSITIONS
-// =======================================
-=transition($type, $time, $trans)
-  -webkit-transition: $type $time $trans
-  -moz-transition: $type $time $trans
-  -ms-tranition: $type $time $trans
-  transition: $type $time $trans
-
-// =======================================
-// TRANSFORM
-// =======================================
-=scale-uniform($value)
-  -webkit-transform: scale($value)
-  -moz-transform: scale($value)
-  -ms-transform: scale($value)
-  transform: scale($value)
-
-=scale-horizontal($value)
-  -webkit-transform: scaleX($value)
-  -moz-transform: scaleX($value)
-  -ms-transform: scaleX($value)
-  transform: scaleX($value)
-
-=scale-vertical($value)
-  -webkit-transform: scaleY($value)
-  -moz-transform: scaleY($value)
-  -ms-transform: scaleY($value)
-  transform: scaleY($value)
-
-=rotate-uniform($value)
-  -webkit-transform: rotate($value)
-  -moz-transform: rotate($value)
-  -ms-transform: rotate($value)
-  transform: rotate($value)
-
-=rotate-horizontal($value)
-  -webkit-transform: rotateX($value)
-  -moz-transform: rotateX($value)
-  -ms-transform: rotateX($value)
-  transform: rotateX($value)
-
-=rotate-vertical($value)
-  -webkit-transform: rotateY($value)
-  -moz-transform: rotateY($value)
-  -ms-transform: rotateY($value)
-  transform: rotateY($value)
-
-=translate-uniform($value)
-  -webkit-transform: translate($value)
-  -moz-transform: translate($value)
-  -ms-transform: translate($value)
-  transform: translate($value)
-
-=translate-horizontal($value)
-  -webkit-transform: translateX($value)
-  -moz-transform: translateX($value)
-  -ms-transform: translateX($value)
-  transform: translateX($value)
-
-=translate-vertical($value)
-  -webkit-transform: translateY($value)
-  -moz-transform: translateY($value)
-  -ms-transform: translateY($value)
-  transform: translateY($value)
-
-=translate-diagonal($value1, $value2)
-  -webkit-transform: translate($value1, $value2)
-  -moz-transform: translate($value1, $value2)
-  -ms-transform: translate($value1, $value2)
-  transform: translate($value1, $value2)
-
-// =======================================
-// DISABLE SELECTION
-// =======================================
-=disable-select
-  -webkit-user-select: none
-  -moz-user-select: none
-  -ms-user-select: none
-  user-select: none
-  cursor: not-allowed
-
-// =======================================
-// REMOVE APPEARANCE
-// =======================================
-=remove-appearance
-  -webkit-appearance: none
-  -moz-appearance: none
-  -ms-appearance: none
-  appearance: none
-
-// =======================================
-// BACKFACE VISIBILITY
-// =======================================
-=back-visible($visibility)
-  -webkit-backface-visibility: $visibility
-  -moz-backface-visibility: $visibility
-  -ms-backface-visibility: $visibility
-  backface-visibility: $visibility
 
 // =======================================
 // HAMBURGER ICON
@@ -200,7 +59,7 @@
         margin:
           top: -0.2em
           left: -1.2rem
-        +rotate-uniform(45deg)
+        transform: rotate(45deg)
       &:nth-child(2)
         width: 0
         opacity: 0
@@ -208,10 +67,10 @@
         margin:
           top: -0.2em
           left: -1.2rem
-        +rotate-uniform(-45deg)
+        transform: rotate(45deg)
 
 // =======================================
-// ARROWS
+// ARROW ICON
 // =======================================
 =arrow($direction, $size: 5px, $color: map-get($theme-maps, dark))
   width: 0
@@ -241,145 +100,6 @@
     @warn ("Error: Your direction can only be \'left\', \'right\', \'up\', or \'down\''")
 
 // End of Arrow
-
-// =======================================
-// DISPLAY FLEX, INLINE-FLEX
-// =======================================
-=displayFlex
-  display: -webkit-box
-  display: -ms-flexbox
-  display: -ms-flex
-  display: flex
-
-=displayInlineFlex
-  display: -webkit-inline-box
-  display: -ms-inline-flexbox
-  display: inline-flex
-
-// ===========================================
-// FLEX, FLEX-GROW, FLEX-SHRINK, FLEX-BASIS
-// ===========================================
-=flexSize($size: 1)
-  -webkit-box-flex: $size
-  -ms-flex: $size
-  flex: $size
-
-=flexSizePlus($growth, $shrink, $basis)
-  -webkit-box-flex: $growth $shrink $basis
-  -ms-flex: $growth $shrink $basis
-  flex: $growth $shrink $basis
-
-=flexSizeNone
-  -webkit-box-flex: 0
-  -ms-flex: none
-  flex: none
-
-=flexGrow($size: 1)
-  -webkit-box-flex: $size
-  -ms-flex-positive: $size
-  flex-grow: $size
-
-=flexShrink($size: 1)
-  -ms-flex-negative: $size
-  flex-shrink: $size
-
-=flexBasis($size: auto)
-  -ms-flex-preferred-size: $size
-  flex-basis: $size
-
-// ===========================================
-// FLEX-WRAP
-// ===========================================
-=flexWrap($value: wrap)
-  -ms-flex-wrap: $value
-  flex-wrap: $value
-
-// ===========================================
-// FLEX-DIRECTION
-// ===========================================
-=flexDirectionColumn
-  -webkit-box-orient: vertical
-  -webkit-box-direction: normal
-  -ms-flex-direction: column
-  flex-direction: column
-
-=flexDirectionRow
-  -webkit-box-orient: horizontal
-  -webkit-box-direction: normal
-  -ms-flex-direction: row
-  flex-direction: row
-
-// ===========================================
-// JUSTIFY-CONTENT
-// ===========================================
-=justifyContentCenter
-  -webkit-box-pack: center
-  -ms-flex-pack: center
-  justify-content: center
-
-=justifyContentSpaceBetween
-  -webkit-box-pack: justify
-  -ms-flex-pack: justify
-  justify-content: space-between
-
-=justifyContentSpaceAround
-  -webkit-box-pack: distribute
-  -ms-flex-pack: distribute
-  justify-content: space-around
-
-=justifyContentAtStart
-  -webkit-box-pack: start
-  -ms-flex-pack: start
-  justify-content: flex-start
-
-=justifyContentAtEnd
-  -webkit-box-pack: end
-  -ms-flex-pack: end
-  justify-content: flex-end
-
-// ===========================================
-// ALIGN-ITEMS
-// ===========================================
-=alignItemsTop
-  -webkit-box-align: start
-  -ms-flex-align: start
-  align-items: flex-start
-
-=alignItemsCenter
-  -webkit-box-align: center
-  -ms-flex-align: center
-  align-items: center
-
-=alignItemsBottom
-  -webkit-box-align: end
-  -ms-flex-align: end
-  align-items: flex-end
-
-=alignItemsBaseline
-  -webkit-box-align: baseline
-  -ms-flex-align: baseline
-  align-items: baseline
-
-=alignItemsStretch
-  -webkit-box-align: stretch
-  -ms-flex-align: stretch
-  align-items: stretch
-
-// ===========================================
-// ALIGN-SELF
-// ===========================================
-=alignSelfStart
-  -ms-flex-item-align: start
-  align-self: flex-start
-
-=alignSelfCenter
-  -ms-flex-item-align: center
-  -ms-grid-row-align: center
-  align-self: center
-
-=alignSelfEnd
-  -ms-flex-item-align: end
-  align-self: flex-end
 
 // ===========================================
 // BREAKPOINT VIEWS
