@@ -6,7 +6,6 @@
 // ====================================
 // VARIABLES
 // ====================================
-$text-name: "text" !default
 $text-font-max: 4.8rem !default
 $text-font-increment: 0.6 !default
 $text-size-max: 6 !default
@@ -72,35 +71,35 @@ a
 // ====================================
 //--- SIZE ---
 @for $i from 1 through $text-size-max
-    .make-#{$text-name}-#{$i}
+    .make-text-size#{$i}
         font-size: ($text-font-max - ($text-font-increment * $i))
 //--- WEIGHT ---
 @each $type, $weight in $text-weights
-    .make-#{$text-name}-#{$type}
+    .make-text-#{$type}
         font-weight: $weight
 //--- ALIGNMENTS ---
 @each $type, $alignment in $text-alignments
-    .make-#{$text-name}-#{$type}
+    .make-text-#{$type}
         text-align: $alignment 
 //--- COLORS ---
 @each $type, $color in $text-color-map
-    .make-#{$text-name}-#{$type}
+    .make-text-#{$type}
         color: $color
     
 //--- SPECIAL ---
-.make-#{$text-name}-title
+.make-text-title
     font:
         size: $text-font-title-size
         weight: $text-font-title-weight
-.make-#{$text-name}-subtitle
+.make-text-subtitle
     font:
         size: $text-font-subtitle-size
         weight: $text-font-subtitle-weight
-.make-#{$text-name}-italic
+.make-text-italic
     font-style: italic
     
 //--- TEXT LINES ---
-.make-#{$text-name}-linethrough
+.make-text-linethrough
     text-decoration-line: line-through
 
 // ====================================
