@@ -161,12 +161,12 @@ $button-group-spacing: .25em !default
             &.make-ghost
                 @if ($type == 'light')
                     background: map-get($theme-map, light)
-                    color: $white_d2 !important
-                    border: 1px solid $grey_l1
+                    color: darken($white_base, $darken) !important
+                    border: 1px solid darken($grey_base, $darken / 2)
                 @else
                     background: map-get($theme-map, light)
                     color: $color !important
-                    border: 1px solid $grey_l1
+                    border: 1px solid darken($grey_base, $darken / 2)
 
                 // Pseudo
                 &:hover,

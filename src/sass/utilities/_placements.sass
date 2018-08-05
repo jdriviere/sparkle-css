@@ -6,10 +6,6 @@
 // ====================================
 // VARIABLES
 // ====================================
-$float-name: 'make-float' !default
-
-$justify-align-name: 'make-justify' !default
-
 $v-alignment-name: 'make-v-align' !default
 
 // ====================================
@@ -25,66 +21,63 @@ $v-alignment-name: 'make-v-align' !default
 // PLACEMENTS (HORIZONTAL)
 // ====================================
 // --- FLOATS ---
-.#{$float-name}
-    &.make-left
-        float: left
-    &.make-center
-        margin: 0 auto
-        text-align: center
-    &.make-right
-        float: right
-    &.make-none
-        float: none !important
+.make-float-left
+    float: left
+.make-float-center
+    margin: 0 auto
+    text-align: center
+.make-float-right
+    float: right
+.make-float-none
+    float: none !important
 
 // --- JUSTIFY ---
-.#{$justify-align-name}
-    &.make-left
-        display: flex
-        justify-content: flex-start
-    &.make-center
-        display: flex
-        justify-content: center
-    &.make-right
-        display: flex
-        justify-content: flex-end
-    &.make-equal
-        display: flex
-        justify-content: space-between
-    &.make-around
-        display: flex
-        justify-content: space-around
+.make-justify-left
+    display: flex
+    justify-content: flex-start
+.make-justify-center
+    display: flex
+    justify-content: center
+.make-justify-right
+    display: flex
+    justify-content: flex-end
+.make-justify-equal
+    display: flex
+    justify-content: space-between
+.make-justify-around
+    display: flex
+    justify-content: space-around
 
 // ====================================
 // PLACEMENTS (VERTICAL)
 // ====================================
 // --- ALIGN ITEMS ---
-.#{$v-alignment-name}
-    &.make-top
-        display: flex
-        align-items: flex-start
-    &.make-center
-        display: flex
-        align-items: center
-    &.make-bottom
-        display: flex
-        align-items: flex-end
-    &.make-baseline
-        display: flex
-        align-items: baseline
-    &.make-stretch
-        display: flex
-        align-items: stretch
-    
-    // --- ALIGN SELF ---
-    &.make-self-start
-        display: flex
-        align-self: flex-start
-    &.make-self-center
-        display: flex
-        align-self: center
-    &.make-self-end
-        display: flex
-        align-self: flex-end
+.make-align-v-top
+    display: flex
+    align-items: flex-start
+.make-align-v-center
+    display: flex
+    align-items: center
+.make-align-v-bottom
+    display: flex
+    align-items: flex-end
+.make-align-v-baseline
+    display: flex
+    align-items: baseline
+.make-align-v-stretch
+    display: flex
+    align-items: stretch
+
+// --- ALIGN SELF ---
+.make-align-v-self-start
+    display: flex
+    align-self: flex-start
+.make-align-v-self-center
+    display: flex
+    align-self: center
+.make-align-v-self-end
+    display: flex
+    align-self: flex-end
 
 // ====================================
 // PLACEMENTS (CENTER)
@@ -93,6 +86,5 @@ $v-alignment-name: 'make-v-align' !default
     display: flex
     justify-content: center
     align-items: center
-.make-full-center
-    &.make-manual
-        +make-manual-center
+.make-full-center-manual
+    +make-manual-center
