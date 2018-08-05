@@ -409,7 +409,7 @@ code {
   height: auto;
   margin: 0;
   padding: 0;
-  background: #FAFAFB;
+  background: whitesmoke;
 }
 
 .nav input[type='checkbox']#nav__trigger {
@@ -483,7 +483,7 @@ code {
 }
 
 .nav__menu__item:hover {
-  background: #ececf0;
+  background: #e8e8e8;
 }
 
 .nav__menu__item.make-active > a {
@@ -545,7 +545,7 @@ code {
         -ms-flex-align: center;
             align-items: center;
     padding: 0 1rem;
-    border-right: 1px solid #e5e5ea;
+    border-right: 1px solid #e2e2e2;
   }
   .nav__menu {
     display: -webkit-box;
