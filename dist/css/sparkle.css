@@ -230,7 +230,7 @@ code {
 /* =================================================== */
 /* INPUTS */
 /* =================================================== */
-.input, .input__select, .input__textarea {
+.input, .select, .textarea {
   position: relative;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -241,8 +241,8 @@ code {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 4rem;
-  padding: 1rem;
+  height: 4.0rem;
+  padding: 1.0rem;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -250,21 +250,21 @@ code {
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
-  width: 100%;
-  height: 4rem;
+  width: auto;
+  height: 4.0rem;
   margin-bottom: 1.5rem;
   color: #404040;
   border-radius: 0.3rem;
   border-color: #E2E2E2;
 }
 
-.input:focus, .input__select:focus, .input__textarea:focus, .input:active, .input__select:active, .input__textarea:active {
+.input:focus, .select:focus, .textarea:focus, .input:active, .select:active, .textarea:active {
   border-color: #ADD2E6;
   -webkit-box-shadow: 0 0 1.2rem rgba(173, 210, 230, 0.5);
           box-shadow: 0 0 1.2rem rgba(173, 210, 230, 0.5);
 }
 
-.input:disabled, .input__select:disabled, .input__textarea:disabled {
+.input:disabled, .select:disabled, .textarea:disabled {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -273,118 +273,132 @@ code {
   opacity: 0.5;
 }
 
-.input:disabled:hover, .input__select:disabled:hover, .input__textarea:disabled:hover {
+.input:disabled:hover, .select:disabled:hover, .textarea:disabled:hover {
   border-color: transparent;
   -webkit-box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0);
           box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0);
 }
 
-.input::-webkit-input-placeholder, .input__select::-webkit-input-placeholder, .input__textarea::-webkit-input-placeholder {
+.input::-webkit-input-placeholder, .select::-webkit-input-placeholder, .textarea::-webkit-input-placeholder {
   color: #C0C0C0;
 }
 
-.input::-moz-placeholder, .input__select::-moz-placeholder, .input__textarea::-moz-placeholder {
-  color: #C0C0C0;
-  opacity: 1;
-}
-
-.input:-moz-placeholder, .input__select:-moz-placeholder, .input__textarea:-moz-placeholder {
+.input::-moz-placeholder, .select::-moz-placeholder, .textarea::-moz-placeholder {
   color: #C0C0C0;
   opacity: 1;
 }
 
-.input:-ms-textarea-placeholder, .input__select:-ms-textarea-placeholder, .input__textarea:-ms-textarea-placeholder {
+.input:-moz-placeholder, .select:-moz-placeholder, .textarea:-moz-placeholder {
+  color: #C0C0C0;
+  opacity: 1;
+}
+
+.input:-ms-textarea-placeholder, .select:-ms-textarea-placeholder, .textarea:-ms-textarea-placeholder {
   color: #C0C0C0;
 }
 
-.input::-webkit-input-placeholder, .input__select::-webkit-input-placeholder, .input__textarea::-webkit-input-placeholder {
+.input::-webkit-input-placeholder, .select::-webkit-input-placeholder, .textarea::-webkit-input-placeholder {
   color: #C0C0C0;
 }
 
-.input:-ms-input-placeholder, .input__select:-ms-input-placeholder, .input__textarea:-ms-input-placeholder {
+.input:-ms-input-placeholder, .select:-ms-input-placeholder, .textarea:-ms-input-placeholder {
   color: #C0C0C0;
 }
 
-.input::-ms-input-placeholder, .input__select::-ms-input-placeholder, .input__textarea::-ms-input-placeholder {
+.input::-ms-input-placeholder, .select::-ms-input-placeholder, .textarea::-ms-input-placeholder {
   color: #C0C0C0;
 }
 
-.input::placeholder, .input__select::placeholder, .input__textarea::placeholder {
+.input::placeholder, .select::placeholder, .textarea::placeholder {
   color: #C0C0C0;
 }
 
-.input:hover, .input__select:hover, .input__textarea:hover, .input:focus, .input__select:focus, .input__textarea:focus, .input:active, .input__select:active, .input__textarea:active {
+.input:hover, .select:hover, .textarea:hover, .input:focus, .select:focus, .textarea:focus, .input:active, .select:active, .textarea:active {
   border-color: #ADD2E6;
 }
 
-.input.make-primary, .make-primary.input__select, .make-primary.input__textarea {
+.input.make-fluid, .make-fluid.select, .make-fluid.textarea {
+  width: 100%;
+}
+
+.input.make-primary, .make-primary.select, .make-primary.textarea {
   border-color: #ADD2E6;
 }
 
-.input.make-primary:focus, .make-primary.input__select:focus, .make-primary.input__textarea:focus, .input.make-primary:active, .make-primary.input__select:active, .make-primary.input__textarea:active {
+.input.make-primary:focus, .make-primary.select:focus, .make-primary.textarea:focus, .input.make-primary:active, .make-primary.select:active, .make-primary.textarea:active {
   -webkit-box-shadow: 0 0 1.2rem rgba(173, 210, 230, 0.5) !important;
           box-shadow: 0 0 1.2rem rgba(173, 210, 230, 0.5) !important;
 }
 
-.input.make-info, .make-info.input__select, .make-info.input__textarea {
+.input.make-info, .make-info.select, .make-info.textarea {
   border-color: #1982C4;
 }
 
-.input.make-info:focus, .make-info.input__select:focus, .make-info.input__textarea:focus, .input.make-info:active, .make-info.input__select:active, .make-info.input__textarea:active {
+.input.make-info:focus, .make-info.select:focus, .make-info.textarea:focus, .input.make-info:active, .make-info.select:active, .make-info.textarea:active {
   -webkit-box-shadow: 0 0 1.2rem rgba(25, 130, 196, 0.5) !important;
           box-shadow: 0 0 1.2rem rgba(25, 130, 196, 0.5) !important;
 }
 
-.input.make-success, .make-success.input__select, .make-success.input__textarea {
+.input.make-success, .make-success.select, .make-success.textarea {
   border-color: #6ABB4F;
 }
 
-.input.make-success:focus, .make-success.input__select:focus, .make-success.input__textarea:focus, .input.make-success:active, .make-success.input__select:active, .make-success.input__textarea:active {
+.input.make-success:focus, .make-success.select:focus, .make-success.textarea:focus, .input.make-success:active, .make-success.select:active, .make-success.textarea:active {
   -webkit-box-shadow: 0 0 1.2rem rgba(106, 187, 79, 0.5) !important;
           box-shadow: 0 0 1.2rem rgba(106, 187, 79, 0.5) !important;
 }
 
-.input.make-warning, .make-warning.input__select, .make-warning.input__textarea {
+.input.make-warning, .make-warning.select, .make-warning.textarea {
   border-color: #FEC524;
 }
 
-.input.make-warning:focus, .make-warning.input__select:focus, .make-warning.input__textarea:focus, .input.make-warning:active, .make-warning.input__select:active, .make-warning.input__textarea:active {
+.input.make-warning:focus, .make-warning.select:focus, .make-warning.textarea:focus, .input.make-warning:active, .make-warning.select:active, .make-warning.textarea:active {
   -webkit-box-shadow: 0 0 1.2rem rgba(254, 197, 36, 0.5) !important;
           box-shadow: 0 0 1.2rem rgba(254, 197, 36, 0.5) !important;
 }
 
-.input.make-danger, .make-danger.input__select, .make-danger.input__textarea {
+.input.make-danger, .make-danger.select, .make-danger.textarea {
   border-color: #FF3344;
 }
 
-.input.make-danger:focus, .make-danger.input__select:focus, .make-danger.input__textarea:focus, .input.make-danger:active, .make-danger.input__select:active, .make-danger.input__textarea:active {
+.input.make-danger:focus, .make-danger.select:focus, .make-danger.textarea:focus, .input.make-danger:active, .make-danger.select:active, .make-danger.textarea:active {
   -webkit-box-shadow: 0 0 1.2rem rgba(255, 51, 68, 0.5) !important;
           box-shadow: 0 0 1.2rem rgba(255, 51, 68, 0.5) !important;
 }
 
 .input__label {
-  display: inline;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
   margin-bottom: 0.5rem;
   margin-right: 0.75rem;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 700;
   color: #404040;
 }
 
-.input__select {
+.select {
+  min-width: 240px;
   background-image: url("https://png.icons8.com/expand-arrow/win8/12");
   background-repeat: no-repeat;
-  background-position: 98%;
+  background-position: calc(100% - 1.0rem);
 }
 
-.input__select::-ms-expand {
+.select::-ms-expand {
   display: none;
 }
 
-.input__textarea {
+.textarea {
   height: 12.0rem;
   font-family: inherit;
   font-size: 1.6rem;

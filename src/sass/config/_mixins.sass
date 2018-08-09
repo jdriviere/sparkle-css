@@ -19,6 +19,36 @@
     height: 0
 
 // =======================================
+// INPUT CONTROL
+// =======================================
+=input-control
+    position: relative
+    display: inline-flex
+    justify-content: flex-start
+    align-items: center
+    height: 4.0rem
+    padding: 1.0rem
+    appearance: none
+    border: 1px solid $color-none
+    outline: none
+    box-shadow: none
+    
+    // Pseudo
+    &:focus,
+    &:active
+        border-color: map-get($theme-map, primary)
+        box-shadow: 0 0 1.2rem rgba($lblue_base, 0.5)
+    &:disabled
+        user-select: none
+        cursor: not-allowed
+        opacity: 0.5
+
+        // Pseudo
+        &:hover
+            border-color: $color-none
+            box-shadow: 0 0 1.2rem rgba($color-none, 0)
+
+// =======================================
 // HAMBURGER ICON
 // =======================================
 =hamburger($size: 3rem, $color: #DFDFDF)
