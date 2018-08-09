@@ -227,6 +227,48 @@ code {
   border-radius: 0.3rem;
 }
 
+.inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: wrap;
+      -ms-flex: wrap;
+          flex: wrap;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.inputs:first-child {
+  margin-top: 0;
+}
+
+.inputs:last-child {
+  margin-bottom: 0;
+}
+
+.inputs .input, .inputs .select, .inputs .textarea {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+}
+
+.inputs .input__label {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+
+.inputs .input__label:not(:first-child) {
+  margin-left: 1.5rem;
+}
+
 /* =================================================== */
 /* INPUTS */
 /* =================================================== */
@@ -235,6 +277,13 @@ code {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
