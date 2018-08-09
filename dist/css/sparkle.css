@@ -259,13 +259,13 @@ code {
       flex-basis: auto;
 }
 
-.inputs .input__label {
+.inputs .label {
   -webkit-box-flex: 0;
       -ms-flex-positive: 0;
           flex-grow: 0;
 }
 
-.inputs .input__label:not(:first-child) {
+.inputs .label:not(:first-child) {
   margin-left: 1.5rem;
 }
 
@@ -300,7 +300,7 @@ code {
   -webkit-box-shadow: none;
           box-shadow: none;
   width: auto;
-  height: 4.0rem;
+  height: 4rem;
   margin-bottom: 1.5rem;
   color: #404040;
   border-radius: 0.3rem;
@@ -415,7 +415,7 @@ code {
           box-shadow: 0 0 1.2rem rgba(255, 51, 68, 0.5) !important;
 }
 
-.input__label {
+.label {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;

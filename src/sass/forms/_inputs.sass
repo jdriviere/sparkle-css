@@ -8,6 +8,7 @@
 // ====================================
 $input-color-map: (primary: $lblue_base, info: $blue_base, success: $green_base, warning: $yellow_base, danger: $red_base) !default
 $input-margin: 1.5rem !default
+$input-size: 4.0rem !default
 $input-border-color: map-get($theme-map, default) !default
 
 // ====================================
@@ -16,7 +17,7 @@ $input-border-color: map-get($theme-map, default) !default
 =create-input
     +input-control
     width: auto
-    height: 4.0rem
+    height: $input-size
     margin-bottom: $input-margin
     color: $font-color
     border:
@@ -58,7 +59,7 @@ $input-border-color: map-get($theme-map, default) !default
     +create-input
 
 // --- LABELS ---
-.input__label
+.label
     display: inline-flex
     justify-content: flex-start
     flex:

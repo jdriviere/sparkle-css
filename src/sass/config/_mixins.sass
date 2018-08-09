@@ -8,7 +8,6 @@
 
 =clearfix
   display: inline-block
-
   // Pseudo
   &:after
     visibility: hidden
@@ -36,7 +35,6 @@
     border: 1px solid $color-none
     outline: none
     box-shadow: none
-    
     // Pseudo
     &:focus,
     &:active
@@ -46,7 +44,6 @@
         user-select: none
         cursor: not-allowed
         opacity: 0.5
-
         // Pseudo
         &:hover
             border-color: $color-none
@@ -62,7 +59,6 @@
   height: $size
   background-color: transparent
   cursor: pointer
-
   // Elements
   span
     position: absolute
@@ -74,7 +70,6 @@
     transform: translate(-50%, -50%)
     background-color: $color
     transition: all 0.3s ease-in-out
-
     // Pseudo
     &:nth-child(1)
       margin-top: -0.5em
@@ -82,12 +77,10 @@
       margin-top: 0
     &:nth-child(3)
       margin-top: 0.5em
-
   // Modifiers
   &.make-active
     span
       background-color: map-get($theme-maps, primary)
-
       // Pseudo
       &:nth-child(1)
         margin:
