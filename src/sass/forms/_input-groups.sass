@@ -10,25 +10,6 @@ $form-group-margin: 1.0rem !default
 // FORM GROUPS
 // ====================================
 .inputs
-    display: flex
-    flex: wrap
-    align-items: baseline
     margin:
         top: $form-group-margin
         bottom: $form-group-margin
-    // Pseudo
-    &:first-child
-        margin-top: 0
-    &:last-child
-        margin-bottom: 0
-    // Elements
-    .input
-        flex:
-            grow: 1
-            shrink: 1
-            basis: auto
-    .label
-        flex-grow: 0
-        // Pseudo
-        &:not(:first-child)
-            margin-left: 1.5rem

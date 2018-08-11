@@ -16,7 +16,7 @@ $input-border-color: map-get($theme-map, default) !default
 // ====================================
 =create-input
     +input-control
-    width: auto
+    width: 100%
     height: $input-size
     margin-bottom: $input-margin
     color: $font-color
@@ -68,7 +68,6 @@ $input-border-color: map-get($theme-map, default) !default
         basis: auto
     margin:
         bottom: 0.5rem
-        right: $input-margin / 2
     font:
         size: $font-size
         weight: $font-weight-heavy
@@ -77,7 +76,6 @@ $input-border-color: map-get($theme-map, default) !default
 // --- SELECT ---
 .select
     @extend .input
-    min-width: 240px
     background:
         image: url('https://png.icons8.com/expand-arrow/win8/12')
         repeat: no-repeat
