@@ -1,0 +1,53 @@
+/* ===================================================
+/* LOADERS
+/* ===================================================
+@import ../config/_all
+
+// ====================================
+// VARIABLES
+// ====================================
+$loader-color-map: (primary: $lblue_base, info: $blue_base, success: $green_base, warning: $yellow_base, danger: $red_base, light: $white_base, dark: $black_base) !default
+$loader-size: 2.4rem !default
+$loader-default-color: #BCBCBC !default
+$loader-border-size: $loader-size / 4 !default
+$loader-border-opacity: 0.3 !default
+$loader-animation: spin 1s ease-in-out infinite !default
+
+// ====================================
+// VARIABLES
+// ====================================
+=create-loader($size: $loader-size, $thickness: $loader-border-size)
+    position: inline-flex
+    width: $size
+    height: $size
+    border: $thickness solid rgba($loader-default-color, $loader-border-opacity)
+    border:
+        left-color: $loader-default-color
+        radius: 50%
+    animation: $loader-animation
+    // Modifiers
+    @each $type, $color in $loader-color-map
+        &.make-#{$type}
+            border:
+                color: rgba($color, $loader-border-opacity)
+                left-color: $color
+
+
+// ====================================
+// ANIMATIONS
+// ====================================
+@keyframes spin
+    to
+        transform: rotate(360deg)
+
+
+// ====================================
+// LOADER
+// ====================================
+.loader
+    +create-loader
+    // Modifiers
+    &.make-large
+        +create-loader(3.2rem, 0.8rem)
+    &.make-xlarge
+        +create-loader(4.0rem, 1.0rem)

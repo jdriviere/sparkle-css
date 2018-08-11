@@ -1,0 +1,71 @@
+/* ===================================================
+/* FORM (CHECKBOXES)
+/* ===================================================
+@import ../config/_all
+
+// ====================================
+// VARIABLES
+// ====================================
+$checkbox-size: 1.7rem !default
+$checkbox-border-color: #BCBCBC !default
+$checkbox-disabled-opacity: 0.5 !default
+
+// ====================================
+// MIXINS
+// ====================================
+=create-checkbox($size: $checkbox-size)
+    display: flex
+    align-items: center
+    cursor: pointer
+    // Elements
+    &__toggle
+        display: none
+        opacity: 0
+        // Pseudo
+        &:checked + .checkbox__icon
+            border-color: $lblue_base
+            transform: scale(1.1)
+            transition: all 0.2s ease-in
+            // Pseudo
+            &:after
+                background: $lblue_base
+                transition: all 0.2s ease-in
+        &:disabled + .checkbox__icon
+            cursor: not-allowed
+            user-select: none
+            opacity: $checkbox-disabled-opacity
+        &:disabled ~ span
+            cursor: not-allowed
+            user-select: none
+            opacity: $checkbox-disabled-opacity
+    &__icon
+        position: relative
+        display: inline-flex
+        align-items: center
+        width: $size
+        height: $size
+        margin-right: 1.5rem
+        padding: 0.5rem
+        border: 2px solid $checkbox-border-color
+        // Pseudo
+        &:after
+            content: ''
+            position: absolute
+            top: calc(50% - #{$size} / 4)
+            left: calc(50% - #{$size} / 4)
+            width: $size / 2
+            height: $size / 2
+
+    // Modifiers
+    &.make-inline
+        display: inline-flex
+        // Elements
+        & > span
+            margin-right: 1.5rem
+
+// ====================================
+// CHECKBOX
+// ====================================
+.checkbox
+    +create-checkbox
+        

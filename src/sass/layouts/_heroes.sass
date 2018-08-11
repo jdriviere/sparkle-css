@@ -1,0 +1,91 @@
+/* ===================================================
+/* HEROES
+/* ===================================================
+@import ../config/_all
+
+// ====================================
+// VARIABLES
+// ====================================
+$hero-color-map: (primary: ($lblue_base, $white_base), info: ($blue_base, $white_base), success: ($green_base, $white_base), warning: ($yellow_base, $color-grey-25), danger: ($red_base, $white_base), light: ($white_base, $color-grey-25), dark: ($black_base, $white_base)) !default
+$hero-padding: 1.5rem !default
+$hero-padding-body: ($hero-padding * 2) $hero-padding !default
+$hero-padding-small: $hero-padding 0 !default
+$hero-padding-medium: ($hero-padding * 5) 0 !default
+$hero-padding-large: ($hero-padding * 10) 0 !default
+
+// ====================================
+// MIXINS
+// ====================================
+=create-hero
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: stretch
+  // Elements
+  &__header,
+  &__footer 
+    flex: 0
+  &__body 
+    flex:
+      grow: 1
+      shrink: 0
+    padding: $hero-padding-body
+  // Modifiers (Sizes)
+  &.make-small
+    padding: $hero-padding-small
+  &.make-medium
+    padding: $hero-padding-medium
+  &.make-large
+    padding: $hero-padding-large
+  &.make-half-height,
+  &.make-full-height
+    // Elements
+    .hero__body
+      display: flex
+      align-items: center
+      // Elements
+      > .wrapper
+        flex:
+          grow: 1
+          shrink: 1
+  &.make-half-height
+    height: 50vh
+  &.make-full-height
+    height: 100vh       
+  // Modifiers (Colors)
+  // Uncomment the following lines when it is implemented in Sparkle
+  @each $type, $color in $hero-color-map
+    $bgcolor: nth($color, 1)
+    $fontcolor: nth($color, 2)
+
+    &.make-#{$type}
+      background: $bgcolor
+      color: $fontcolor
+  
+  // &.make-primary
+  //   background: #5F27CD
+  //   color: #FFF 
+  // &.make-info
+  //   background: #54A0FF
+  //   color: #FFF 
+  // &.make-success
+  //   background: #1DD1A1
+  //   color: #FFF 
+  // &.make-warning
+  //   background: #FF9F43
+  //   color: $color-grey-25 
+  // &.make-danger
+  //   background: #EE5253
+  //   color: #FFF 
+  // &.make-light
+  //   background: #C8D6E5
+  //   color: $color-grey-25 
+  // &.make-dark
+  //   background: #222F3E
+  //   color: #FFF 
+
+// ====================================
+// HERO
+// ====================================
+.hero
+  +create-hero  

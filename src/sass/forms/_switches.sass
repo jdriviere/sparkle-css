@@ -1,0 +1,68 @@
+/* ===================================================
+/* FORM (SWITCHES)
+/* ===================================================
+@import ../config/_all
+
+// ====================================
+// VARIABLES
+// ====================================
+$switch-color-map: (primary: $lblue_base, info: $blue_base, success: $green_base, warning: $yellow_base, danger: $red_base, light: $white_base, dark: $black_base) !default
+$switch-width: 4.0rem !default
+$switch-height: $switch-width / 2 !default
+
+// ====================================
+// MIXINS
+// ====================================
+=create-switch
+    position: relative
+    display: inline-block
+    width: $switch-width
+    height: $switch-height
+    vertical-align: center
+    border-radius: 1.0rem
+    // Elements
+    > .switch__toggle
+        position: absolute
+        display: none
+        opacity: 0
+        // Pseudo
+        &:checked ~ .switch__handle
+            transform: translateX(100%)
+        &:disabled
+            // Elements
+            ~ .switch__handle
+                opacity: 0.7
+                user-select: none
+                cursor: not-allowed
+            ~ .switch__label
+                opacity: 0.3
+    > .switch__handle
+        position: absolute
+        top: 0 // 0rem if not work
+        left: 0 // 0rem if not work
+        width: $switch-width / 2
+        height: $switch-width / 2
+        background: $white_base
+        border: 1px solid darken($white_base, 15)
+        border-radius: 50%
+        transition: transform 0.2s
+    > .switch__label
+        position: relative
+        display: block
+        background: $grey_base
+        height: inherit
+        border: 1px solid darken($grey_base, 15)
+        border-radius: inherit
+    // Modifiers
+    @each $type, $color in $switch-color-map
+        &.make-#{$type}
+            // Pseudo
+            .switch__toggle:checked ~ .switch__label
+                background: $color
+                border-color: darken($color, 15)
+
+// ====================================
+// SWITCH
+// ====================================
+.switch
+    +create-switch
