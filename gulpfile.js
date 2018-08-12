@@ -43,14 +43,33 @@ gulp.task('sassify', () => {
     .pipe(postcss(shrink_opt))
     .pipe(rename('sparkle.min.css'))
     .pipe(gulp.dest('dist/css/'))
-    .pipe(browserSync.reload({
-      stream: true
-    }));
+    // .pipe(browserSync.reload({
+    //   stream: true
+    // }));
 });
 
 gulp.task('watch:sass', () => {
   gulp.watch('src/sass/**/*.sass', ['sassify'], browserSync.reload);
   console.log('Watching CSS files.');
+});
+
+// RENDER HTML FILES
+gulp.task('pug', function buildHTML() {
+  return gulp.src('dev/*.pug')
+    .pipe(
+      pug({
+        pretty: true
+      })
+    )
+    .pipe(gulp.dest('./'))
+    // .pipe(browserSync.reload({
+    //   stream: true
+    // }));
+});
+
+gulp.task('watch:html', () => {
+  gulp.watch('dev/**/*.pug', ['pug'], browserSync.reload);
+  console.log('Watching HTML files.');
 });
 
 // RENDER JS FILES
@@ -70,54 +89,35 @@ gulp.task('watch:sass', () => {
 //   console.log('Watching JS files.');
 // });
 
-// RENDER HTML FILES
-gulp.task('pug', function buildHTML() {
-  return gulp.src('dev/*.pug')
-    .pipe(
-      pug({
-        pretty: true
-      })
-    )
-    .pipe(gulp.dest('./'))
-    .pipe(browserSync.reload({
-      stream: true
-    })); // <-- Remove if it doesn't work
-});
-
-gulp.task('watch:html', () => {
-  gulp.watch('dev/**/*.pug', ['pug'], browserSync.reload);
-  console.log('Watching HTML files.');
-});
-
 // RENDER IMAGE FILES
-gulp.task('minimg', () => {
-  return gulp.src(['src/img/*.jpg', 'src/img/*.png', 'src/img/*.svg'])
-    .pipe(imagemin(
-      imagemin.jpegtran({
-        progressive: true
-      }),
-      imagemin.optipng({
-        optimizationLevel: 5
-      }),
-      imagemin.svgo({
-        plugins: [{
-          removeViewBox: true
-        }]
-      })
-    ))
-    .pipe(gulp.dest('dist/img/'));
-});
+// gulp.task('minimg', () => {
+//   return gulp.src(['src/img/*.jpg', 'src/img/*.png', 'src/img/*.svg'])
+//     .pipe(imagemin(
+//       imagemin.jpegtran({
+//         progressive: true
+//       }),
+//       imagemin.optipng({
+//         optimizationLevel: 5
+//       }),
+//       imagemin.svgo({
+//         plugins: [{
+//           removeViewBox: true
+//         }]
+//       })
+//     ))
+//     .pipe(gulp.dest('dist/img/'));
+// });
 
 // CREATE SERVER
-gulp.task('serve', ['watch:html', 'watch:sass', 'watch:js'], () => {
-  browserSync.init({
-    server: "./"
-  });
+// gulp.task('serve', ['watch:html', 'watch:sass', 'watch:js'], () => {
+//   browserSync.init({
+//     server: "./"
+//   });
 
-  gulp.watch(['src/sass/sparkle.sass'], ['sassify']);
-  gulp.watch(['dev/**/*.pug'], ['pug']);
-  gulp.watch("./index.html").on('change', browserSync.reload);
-});
+//   gulp.watch(['src/sass/sparkle.sass'], ['sassify']);
+//   gulp.watch(['dev/**/*.pug'], ['pug']);
+//   gulp.watch("./index.html").on('change', browserSync.reload);
+// });
 
 // DEFAULT RUN
-gulp.task('default', ['pug', 'sassify', 'uglify', 'minimg']);
+gulp.task('default', ['pug', 'sassify']);
