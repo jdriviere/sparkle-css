@@ -6,8 +6,6 @@
 const gulp = require('gulp');
 const rename = require('gulp-rename');
 const pump = require('pump');
-const uglify = require('gulp-uglify');
-const imagemin = require('gulp-imagemin');
 const sass = require('gulp-sass');
 const pug = require('gulp-pug');
 const postcss = require('gulp-postcss');
@@ -16,11 +14,10 @@ const cssnano = require('cssnano');
 const browserSync = require('browser-sync').create();
 
 // Deprecated at the moment
+// const uglify = require('gulp-uglify'); // Only deactivated for now
 // const concatCSS = require('gulp-concat-css');
 // const cleanCSS = require('gulp-clean-css');
-// const imageminPNG = require('imagemin-optipng');
-// const imageminJPG = require('imagemin-jpegtran');
-// const imageminSVG = require('imagemin-svgo');
+// const imagemin = require('gulp-imagemin');
 
 /* ==================================== */
 /* TASKS
@@ -57,21 +54,21 @@ gulp.task('watch:sass', () => {
 });
 
 // RENDER JS FILES
-gulp.task('uglify', function (cb) {
-  pump([
-      gulp.src('src/js/sparkle.js'),
-      gulp.dest('dist/js/'),
-      uglify(),
-      rename('sparkle.min.js'),
-      gulp.dest('dist/js/')
-    ],
-    cb);
-});
+// gulp.task('uglify', function (cb) {
+//   pump([
+//       gulp.src('src/js/sparkle.js'),
+//       gulp.dest('dist/js/'),
+//       uglify(),
+//       rename('sparkle.min.js'),
+//       gulp.dest('dist/js/')
+//     ],
+//     cb);
+// });
 
-gulp.task('watch:js', () => {
-  gulp.watch('src/js/*.js', ['uglify'], browserSync.reload);
-  console.log('Watching JS files.');
-});
+// gulp.task('watch:js', () => {
+//   gulp.watch('src/js/*.js', ['uglify'], browserSync.reload);
+//   console.log('Watching JS files.');
+// });
 
 // RENDER HTML FILES
 gulp.task('pug', function buildHTML() {
