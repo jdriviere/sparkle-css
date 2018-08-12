@@ -55,13 +55,12 @@ p
         size: $font-size
         weight: $font-weight-light
 
-a
+a:not(.button)
     font:
         size: $font-size
         weight: $font-weight-normal
     color: map-get($theme-map, primary)
     text-decoration: none
-
     // Pseudo
     &:hover
         text-decoration: underline
@@ -112,4 +111,4 @@ code
         family: $text-font-code
         size: $text-font-code-size
     background: $grey_base
-    border-radius: 0.3rem
+    border-radius: $border-radius
