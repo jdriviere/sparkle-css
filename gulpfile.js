@@ -4,21 +4,23 @@
 /* PACKAGES
 /* ==================================== */
 const gulp = require('gulp');
-const concatCSS = require('gulp-concat-css');
-const cleanCSS = require('gulp-clean-css');
 const rename = require('gulp-rename');
 const pump = require('pump');
 const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
-const imageminPNG = require('imagemin-optipng');
-const imageminJPG = require('imagemin-jpegtran');
-const imageminSVG = require('imagemin-svgo');
 const sass = require('gulp-sass');
 const pug = require('gulp-pug');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const browserSync = require('browser-sync').create();
+
+// Deprecated at the moment
+// const concatCSS = require('gulp-concat-css');
+// const cleanCSS = require('gulp-clean-css');
+// const imageminPNG = require('imagemin-optipng');
+// const imageminJPG = require('imagemin-jpegtran');
+// const imageminSVG = require('imagemin-svgo');
 
 /* ==================================== */
 /* TASKS
