@@ -11,13 +11,13 @@ const pug = require('gulp-pug');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
-const browserSync = require('browser-sync').create();
 
 // Deprecated at the moment
 // const uglify = require('gulp-uglify'); // Only deactivated for now
 // const concatCSS = require('gulp-concat-css');
 // const cleanCSS = require('gulp-clean-css');
 // const imagemin = require('gulp-imagemin');
+// const browserSync = require('browser-sync').create();
 
 /* ==================================== */
 /* TASKS
