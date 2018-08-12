@@ -21,17 +21,5 @@
     "url": "https://github.com/jdriviere/sparkle-css/issues"
   },
   "homepage": "https://jdriviere.github.io/sparkle-css",
-  "devDependencies": {
-    "autoprefixer": "^9.1.0",
-    "browser-sync": "^2.24.6",
-    "cssnano": "^4.0.5",
-    "gulp": "^4.0.0",
-    "gulp-imagemin": "^4.1.0",
-    "gulp-postcss": "^8.0.0",
-    "gulp-pug": "^4.0.1",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.1",
-    "gulp-uglify": "^3.0.1",
-    "pump": "^3.0.0"
-  }
+  "devDependencies": {}
 }
