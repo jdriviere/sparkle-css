@@ -1,12 +1,22 @@
+/* HERO BG */
 .make-bg-image {
     width: 100%;
     height: 100%;
     background-image: url('../../dist/img/sparkles_bg2_new.jpg');
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center top;
     background-size: cover;
-    border: 10px solid rgba(173, 210, 230, 0.5);
 }
 
-i.fa.fa-heart { color: #C03; }
-.hero__footer a { font-weight: 700 !important; color: #9BC2E6; }
+/* PROJECT (PRE-FOOTER) */
+.project {
+    padding: 4.0rem 0;
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.2);
+}
+
+/* FOOTER */
+footer {
+    margin-top: 5.0rem;
+}
+footer i.fa.fa-heart { color: #C03; }
+footer a { font-weight: 700 !important; color: #9BC2E6; }
