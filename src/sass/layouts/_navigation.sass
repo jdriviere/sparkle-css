@@ -6,7 +6,6 @@
 // ====================================
 // VARIABLES
 // ====================================
-$navig-name          :   'nav' !default
 $navig-colorbg       :   lighten($grey_base, $lighten)
 // $navig-colorbg       :   #FAFAFB !default
 $navig-colorborder   :   darken($navig-colorbg, $darken) !default
@@ -20,6 +19,7 @@ $navig-font-color    :   $font-color !default
 // NAVIGATION
 // ====================================
 =create-nav
+    position: relative
     display: flex
     flex: 1
     flex-direction: column
@@ -31,17 +31,19 @@ $navig-font-color    :   $font-color !default
     
     // Elements
     // --- MOBILE --- //
-    input[type='checkbox']##{$navig-name}__trigger
+    input[type='checkbox']
+        // Must be checkbox and have an id equivalent to nav__toggle's for
         display: none
-        
+        height: 60px
         // Pseudo
-        &:checked ~ .#{$navig-name}__menu
+        &:checked ~ .nav__menu
             display: flex
             height: auto 
-        &:checked ~ .#{$navig-name}__toggle
+        &:checked ~ .nav__toggle
             color: rgba(0, 0, 0, 1.0)
             border-color: rgba(0, 0, 0, 1.0)
-    label[for='#{$navig-name}__trigger'].#{$navig-name}__toggle
+    .nav__toggle
+        // Must make sure label is set up: <label for="[insert_name]" class="nav__toggle"></label>
         position: absolute
         top: $navig-spacing / 2
         right: $navig-spacing / 2
@@ -50,7 +52,6 @@ $navig-font-color    :   $font-color !default
         color: rgba(0, 0, 0, 0.3)
         border: 1px solid rgba(0, 0, 0, 0.3)
         border-radius: $border-radius
-        
         // Pseudo
         &:before
             content: '\2630  Menu'
@@ -59,30 +60,25 @@ $navig-font-color    :   $font-color !default
             color: rgba(0, 0, 0, 0.7)
             border-color: rgba(0, 0, 0, 0.7)
             cursor: pointer
-    
-    // --- BRAND/LOGO --- ///
     &__brand
         padding: $navig-padding
+        color: $font-color !important
         font:
             size: $navig-brand !important
             weight: 700
-        
+        text-decoration: none
         // Elements
         img,
         &__img
-            max-height: 3.2rem
-        &--extra
+            max-height: 3.0rem
+        &.make-extra
             opacity: 0.5
-    
-    // --- MENU --- //
     &__menu
         display: none
         flex-direction: column
         width: 100%
         list-style: none
-        
         // Elements
-        // --- MENU ITEMS --- //
         &__item
             // Elements
             > a:not(.button)
@@ -91,11 +87,9 @@ $navig-font-color    :   $font-color !default
                 text-decoration: none
                 color: $navig-font-color
                 cursor: pointer
-
             // Pseudo
             &:hover
                 background: darken($navig-colorbg, 5%)
-            
             // Modifiers
             &.make-active
                 // Elements
@@ -103,23 +97,18 @@ $navig-font-color    :   $font-color !default
                     color: map-get($theme-map, primary)
             &.make-special
                 background: map-get($theme-map, primary)
-                
                 // Elements
                 > a
                     color: #FFF
-                
                 // Pseudo
                 &:hover
                     background: darken(map-get($theme-map, primary), $darken)
-                    
                     // Elements
                     > a
                         color: #FFF
-        
         // Modifiers
         &.make-right
             margin-left: 0
-    
     // Modifiers
     &.make-fixed
         position: fixed
@@ -130,11 +119,9 @@ $navig-font-color    :   $font-color !default
     @media screen and (min-width: 768px)
         flex-direction: row
         align-items: stretch
-        
         // Elements
         &__toggle
             display: none
-        
         &__brand
             display: flex
             flex:
@@ -144,14 +131,11 @@ $navig-font-color    :   $font-color !default
             align-items: center
             padding: 0 $navig-padding
             border-right: 1px solid $navig-colorborder 
-        
         &__menu
             display: flex
             flex-direction: row
             align-items: center
             width: auto
-            
-            
             // Elements
             &__item
                 // Pseudo
@@ -160,10 +144,9 @@ $navig-font-color    :   $font-color !default
                     // Elements
                     > a
                         color: map-get($theme-map, primary)
-            
             // Modifiers
             &.make-right
                 margin-left: auto
 
-.#{$navig-name}
+.nav
     +create-nav

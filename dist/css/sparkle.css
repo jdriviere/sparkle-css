@@ -684,6 +684,7 @@ code {
 /* NAVIGATION */
 /* =================================================== */
 .nav {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -701,23 +702,24 @@ code {
   background: whitesmoke;
 }
 
-.nav input[type='checkbox']#nav__trigger {
+.nav input[type='checkbox'] {
   display: none;
+  height: 60px;
 }
 
-.nav input[type='checkbox']#nav__trigger:checked ~ .nav__menu {
+.nav input[type='checkbox']:checked ~ .nav__menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: auto;
 }
 
-.nav input[type='checkbox']#nav__trigger:checked ~ .nav__toggle {
+.nav input[type='checkbox']:checked ~ .nav__toggle {
   color: black;
   border-color: black;
 }
 
-.nav label[for='nav__trigger'].nav__toggle {
+.nav .nav__toggle {
   position: absolute;
   top: 0.75rem;
   right: 0.75rem;
@@ -728,12 +730,12 @@ code {
   border-radius: 0.3rem;
 }
 
-.nav label[for='nav__trigger'].nav__toggle:before {
+.nav .nav__toggle:before {
   content: '\2630  Menu';
   font-weight: 400;
 }
 
-.nav label[for='nav__trigger'].nav__toggle:hover {
+.nav .nav__toggle:hover {
   color: rgba(0, 0, 0, 0.7);
   border-color: rgba(0, 0, 0, 0.7);
   cursor: pointer;
@@ -741,15 +743,17 @@ code {
 
 .nav__brand {
   padding: 1rem;
+  color: #404040 !important;
   font-size: 1.5rem !important;
   font-weight: 700;
+  text-decoration: none;
 }
 
 .nav__brand img, .nav__brand__img {
-  max-height: 3.2rem;
+  max-height: 3.0rem;
 }
 
-.nav__brand--extra {
+.nav__brand.make-extra {
   opacity: 0.5;
 }
 
