@@ -1385,7 +1385,7 @@ code {
       -ms-flex-align: start;
           align-items: flex-start;
   margin-bottom: 1.5rem;
-  padding: 1rem 1.5rem;
+  padding: 1.5rem;
   background: #F4F4F8;
   border: 1px solid #E2E2E2;
   border-radius: 0.5rem;
@@ -1428,37 +1428,15 @@ code {
           flex-direction: column;
 }
 
-.media__body > .media__title {
+.media__body .media__title {
   margin: 0;
-  font-size: 2.4rem !important;
+  font-size: 1.8rem !important;
   font-weight: 700 !important;
 }
 
-.media__body > .media__subtitle {
+.media__body .media__subtitle {
   margin: 0;
-  font-size: 2rem !important;
   font-weight: 400 !important;
-}
-
-.media__body > .media__timestamp {
-  margin: 0;
-  color: rgba(0, 0, 0, 0.5);
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
-.media.make-reverse > .media__profile {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-  margin-left: 1.5rem;
-  margin-right: 0;
-}
-
-.media.make-center {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 /* =================================================== */
