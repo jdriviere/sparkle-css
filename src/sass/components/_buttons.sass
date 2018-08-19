@@ -41,6 +41,7 @@ $button-group-spacing: .25em !default
     border: 1px solid $color-none
     border-radius: $border-radius
     cursor: pointer
+    white-space: nowrap
     // Pseudo
     &:hover
         background: darken($grey_base, $darken)
@@ -51,7 +52,6 @@ $button-group-spacing: .25em !default
         opacity: 0.3
     // Modifiers
     @each $type, $color in $button-color-map
-        // --- FILLED --- //
         &.make-#{$type}
             @if ($type == 'primary' or $type == 'warning' or $type == 'light')
                 color: $black_base !important
@@ -66,7 +66,6 @@ $button-group-spacing: .25em !default
                 background: darken($color, $darken)
                 border-color: $color-none
             // Modifiers
-            // --- REVERSED --- //
             &.make-reverse
                 @if ($type == 'primary' or $type == 'warning' or $type == 'light')
                     background: $black_base !important
@@ -100,8 +99,7 @@ $button-group-spacing: .25em !default
                             background: $black_base !important
                         @else
                             background: $white_base !important
-                        color: $color !important                    
-            // --- LINKED --- //
+                        color: $color !important
             &.make-link
                 @if ($type == "light")
                     background: $color-none
@@ -125,7 +123,6 @@ $button-group-spacing: .25em !default
                         background: rgba($color, 0.1)
                         color: darken($color, 10%) !important
                         text-decoration: underline
-            // --- OUTLINED --- //
             &.make-outline
                 background: $color-none
                 color: $color !important
@@ -141,7 +138,6 @@ $button-group-spacing: .25em !default
                     background: $color
                     border-color: $color-none
     // Modifiers
-    // --- SIZES --- //
     &.make-xsmall
         font-size: $font-size * 0.66666
     &.make-small
@@ -158,7 +154,6 @@ $button-group-spacing: .25em !default
         margin: 1.0rem 0
         padding: 0.5rem 0
         font-size: 2.0rem
-    // --- ROUNDNESS --- //
     &.make-radial
         border-radius: $border-radius * 2
     &.make-round
