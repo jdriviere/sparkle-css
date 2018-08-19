@@ -7,15 +7,11 @@
 // VARIABLES
 // =================================
 $button-color-map: (primary: $lblue_base, info: $blue_base, success: $green_base, warning: $yellow_base, danger: $red_base, light: $white_base, dark: $black_base) !default
-$button-name: "button" !default
 $button-margin: 0.25em !default
 $button-line-height: $line-height !default
-$button-font-size: $font-size !default
 $button-padding: 0.5rem 1.5rem !default
-$button-border-radius: 0.3em !default
 
 // --- GROUP --- //
-$button-group-name: "buttons" !default
 $button-group-spacing: .25em !default
 
 // =================================
@@ -31,7 +27,7 @@ $button-group-spacing: .25em !default
     align-items: center
     appearance: none
     outline: none
-    background: $color-none
+    background: $grey_base
     padding: $button-padding
     line-height: $button-line-height
     vertical-align: center
@@ -39,21 +35,20 @@ $button-group-spacing: .25em !default
         align: center
         decoration: none
     font:
-        size: $button-font-size
+        size: $font-size
         weight: $font-weight-normal
     color: $black_base
-    border: 1px solid rgba($black_base, 0.3)
-    border-radius: $button-border-radius
+    border: 1px solid $color-none
+    border-radius: $border-radius
     cursor: pointer
-
     // Pseudo
     &:hover
-        border-color: rgba($black_base, 0.7)
-    &:disabled, &.make-disabled
+        background: darken($grey_base, $darken)
+    &:disabled,
+    &.make-disabled
         user-select: none
         cursor: not-allowed
         opacity: 0.3
-    
     // Modifiers
     @each $type, $color in $button-color-map
         // --- FILLED --- //
@@ -64,14 +59,12 @@ $button-group-spacing: .25em !default
                 color: $white_base
             background: $color
             border: 1px solid $color-none
-
             // Pseudo
             &:hover,
             &:focus,
             &:active
                 background: darken($color, $darken)
                 border-color: $color-none
-
             // Modifiers
             // --- REVERSED --- //
             &.make-reverse
@@ -81,7 +74,6 @@ $button-group-spacing: .25em !default
                     background: $white_base
                 color: $color !important
                 border: 1px solid $color-none
-
                 // Pseudo
                 &:hover,
                 &:focus,
@@ -89,8 +81,7 @@ $button-group-spacing: .25em !default
                     @if ($type == 'primary' or $type == 'warning' or $type == 'light')
                         background: darken($black_base, $darken)
                     @else
-                        background: darken($white_base, 3%)
-
+                        background: darken($white_base, $darken)
                 // Modifiers
                 &.make-outline
                     @if ($type == 'primary' or $type == 'warning' or $type == 'light')
@@ -101,7 +92,6 @@ $button-group-spacing: .25em !default
                         background: $color-none !important
                         color: $white_base !important
                         border: 1px solid $white_base
-
                     // Pseudo
                     &:hover,
                     &:focus,
@@ -111,14 +101,12 @@ $button-group-spacing: .25em !default
                         @else
                             background: $white_base !important
                         color: $color !important                    
-
             // --- LINKED --- //
             &.make-link
                 @if ($type == "light")
                     background: $color-none
                     color: $color !important
                     border-color: $color-none
-
                     // Pseudo
                     &:hover,
                     &:focus,
@@ -130,7 +118,6 @@ $button-group-spacing: .25em !default
                     background: $color-none
                     color: $color !important
                     border-color: $color-none
-
                     // Pseudo
                     &:hover,
                     &:focus,
@@ -138,13 +125,11 @@ $button-group-spacing: .25em !default
                         background: rgba($color, 0.1)
                         color: darken($color, 10%) !important
                         text-decoration: underline
-
             // --- OUTLINED --- //
             &.make-outline
                 background: $color-none
                 color: $color !important
                 border: 1px solid $color
-
                 // Pseudo
                 &:hover,
                 &:focus,
@@ -155,30 +140,6 @@ $button-group-spacing: .25em !default
                         color: $white_base !important
                     background: $color
                     border-color: $color-none
-            
-            
-            // --- GHOSTED --- //
-            &.make-ghost
-                @if ($type == 'light')
-                    background: map-get($theme-map, light)
-                    color: darken($white_base, $darken) !important
-                    border: 1px solid darken($grey_base, $darken / 2)
-                @else
-                    background: map-get($theme-map, light)
-                    color: $color !important
-                    border: 1px solid darken($grey_base, $darken / 2)
-
-                // Pseudo
-                &:hover,
-                &:focus,
-                &:active
-                    @if ($type == 'primary' or $type == 'warning' or $type == 'light')
-                        color: $black_base !important
-                    @else
-                        color: $white_base !important
-                    background: $color
-                    border-color: $color-none
-
     // Modifiers
     // --- SIZES --- //
     &.make-xsmall
@@ -197,10 +158,9 @@ $button-group-spacing: .25em !default
         margin: 1.0rem 0
         padding: 0.5rem 0
         font-size: 2.0rem
-
     // --- ROUNDNESS --- //
     &.make-radial
-        border-radius: $button-border-radius * 2
+        border-radius: $border-radius * 2
     &.make-round
         border-radius: 3.5rem
 
@@ -211,21 +171,18 @@ $button-group-spacing: .25em !default
         wrap: wrap
     justify-content: flex-start
     align-items: center  
-
     // Elements
-    & > .#{$button-name}:not(.make-block)
+    & > .button:not(.make-block)
         margin:
             bottom: $button-margin
             right: $button-margin
-        
         // Pseudo
         &:last-child
             margin-right: 0
-    
     // Modifiers
     // NOTE: '.make-solid' is a temporary name
     &.make-solid
-        & > .#{$button-name}
+        & > .button
             // Pseudo
             &:not(:first-child)
                 border:
@@ -240,9 +197,9 @@ $button-group-spacing: .25em !default
 // =================================
 // BUTTONS
 // =================================
-.#{$button-name}
+.button
     +create-button
 
 // --- GROUP --- //
-.#{$button-group-name}
+.buttons
     +create-button-group
