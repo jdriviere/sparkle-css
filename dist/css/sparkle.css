@@ -894,19 +894,19 @@ code {
   list-style: none;
 }
 
-.menu__item > a {
+.menu__item__link {
   display: block;
   padding: 1rem;
-  color: #404040;
+  color: #404040 !important;
   border-radius: 0.3rem;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
-.menu__item > a:hover {
-  background: #F4F4F8;
+.menu__item__link:hover {
+  background: #E2E2E2;
 }
 
-.menu__item > .submenu {
+.menu__item .submenu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -920,26 +920,26 @@ code {
   margin: 0.5rem 0;
 }
 
-.menu__item > .submenu .submenu__item {
+.menu__item .submenu__item {
   margin-left: 1rem;
   list-style: none;
   border-left: 1px solid #E2E2E2;
 }
 
-.menu__item > .submenu .submenu__item > a {
+.menu__item .submenu__item__link {
   display: block;
   padding: 1rem;
   color: #404040;
   border-radius: 0.3rem;
+  text-decoration: none !important;
 }
 
-.menu__item > .submenu .submenu__item > a:hover {
-  background: #F4F4F8;
+.menu__item .submenu__item__link:hover {
+  background: #E2E2E2;
 }
 
-.menu__item.make-active > a {
-  background: #ADD2E6;
-  color: #F4F4F8;
+.menu__item.make-active__link {
+  background: #E2E2E2;
 }
 
 /* =================================================== */
@@ -1374,72 +1374,6 @@ code {
 }
 
 /* =================================================== */
-/* MEDIA */
-/* =================================================== */
-.media {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  margin-bottom: 1.5rem;
-  padding: 1.5rem;
-  background: #F4F4F8;
-  border: 1px solid #E2E2E2;
-  border-radius: 0.5rem;
-}
-
-.media__profile {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  -ms-flex-preferred-size: auto;
-      flex-basis: auto;
-  -webkit-box-ordinal-group: 0;
-      -ms-flex-order: -1;
-          order: -1;
-  width: 6.4rem;
-  height: 6.4rem;
-  margin-left: 0;
-  margin-right: 1.5rem;
-}
-
-.media__profile img {
-  width: 100%;
-}
-
-.media__body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.media__body .media__title {
-  margin: 0;
-  font-size: 1.8rem !important;
-  font-weight: 700 !important;
-}
-
-.media__body .media__subtitle {
-  margin: 0;
-  font-weight: 400 !important;
-}
-
-/* =================================================== */
 /* HEROES */
 /* =================================================== */
 .hero {
@@ -1730,7 +1664,7 @@ code {
 }
 
 .button.make-primary.make-reverse:hover, .button.make-primary.make-reverse:focus, .button.make-primary.make-reverse:active {
-  background: #101213;
+  background: #101213 !important;
 }
 
 .button.make-primary.make-reverse.make-outline {
@@ -1898,7 +1832,7 @@ code {
 }
 
 .button.make-warning.make-reverse:hover, .button.make-warning.make-reverse:focus, .button.make-warning.make-reverse:active {
-  background: #101213;
+  background: #101213 !important;
 }
 
 .button.make-warning.make-reverse.make-outline {
@@ -2010,7 +1944,7 @@ code {
 }
 
 .button.make-light.make-reverse:hover, .button.make-light.make-reverse:focus, .button.make-light.make-reverse:active {
-  background: #101213;
+  background: #101213 !important;
 }
 
 .button.make-light.make-reverse.make-outline {

@@ -78,7 +78,7 @@ $button-group-spacing: .25em !default
                 &:focus,
                 &:active
                     @if ($type == 'primary' or $type == 'warning' or $type == 'light')
-                        background: darken($black_base, $darken)
+                        background: darken($black_base, $darken) !important
                     @else
                         background: darken($white_base, $darken)
                 // Modifiers

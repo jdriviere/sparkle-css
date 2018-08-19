@@ -6,13 +6,10 @@
 // ====================================
 // VARIABLES
 // ====================================
-$menu-name: 'menu' !default
 $menu-padding: 1.0rem !default
 $menu-font-title: $font-size !default
 $menu-font-menu: $font-size !default
 $menu-color-border: map-get($theme-map, default) !default
-
-$submenu-name: 'submenu' !default
 
 // ====================================
 // MIXINS
@@ -32,51 +29,44 @@ $submenu-name: 'submenu' !default
         text-transform: uppercase
     &__item
         list-style: none
-
         // Elements
-        > a
+        &__link
             display: block
             padding: $menu-padding
-            color: $font-color
+            color: $font-color !important
             border-radius: $border-radius
-            text-decoration: none
-
+            text-decoration: none !important
             // Pseudo
             &:hover
-                background: map-get($theme-map, light)
-        
-        > .#{$submenu-name}
+                background: map-get($theme-map, default)
+        .submenu
             display: flex
             flex: 1
             flex-direction: column
             margin: ($menu-padding / 2) 0
-
             // Elements
-            .#{$submenu-name}__item
+            &__item
                 margin-left: $menu-padding
                 list-style: none
                 border-left: 1px solid $menu-color-border
-            
                 // Elements
-                > a
+                &__link
                     display: block
                     padding: $menu-padding
                     color: $font-color
                     border-radius: $border-radius
-
+                    text-decoration: none !important
                     // Pseudo
                     &:hover
-                        background: map-get($theme-map, light)
-        
+                        background: map-get($theme-map, default)
         // Modifiers
         &.make-active
             // Elements
-            > a
-                background: map-get($theme-map, primary)
-                color: map-get($theme-map, light)
+            &__link
+                background: map-get($theme-map, default)
 
 // ====================================
 // MENU
 // ====================================
-.#{$menu-name}
+.menu
     +create-menu
