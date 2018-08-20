@@ -5,10 +5,11 @@
   "main": "sparkle.min.css",
   "scripts": {
     "start": "npm install",
-    "build:html": "node node_modules/gulp/bin/gulp pug",
-    "build:css": "node node_modules/gulp/bin/gulp sassify",
-    "build": "npm run build:html && npm run build:css",
-    "test": "node node_modules/gulp/bin/gulp sassify"
+    "build:html": "pug ./dev/index.pug --pretty --out ./",
+    "watch:html": "pug --watch ./dev/index.pug --pretty --out ./",
+    "build:css": "sass ./src/sass/sparkle.sass ./dist/css/sparkle.css --style=expanded",
+    "watch:css": "sass --watch ./src/sass/sparkle.sass:./dist/css/sparkle.css --style=expanded",
+    "build": "node node_modules/gulp/bin/gulp"
   },
   "repository": {
     "type": "git",
