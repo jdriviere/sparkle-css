@@ -770,7 +770,7 @@ code {
 .nav__menu__item > a:not(.button) {
   display: block;
   padding: 1rem;
-  text-decoration: none;
+  text-decoration: none !important;
   color: #404040;
   cursor: pointer;
 }
