@@ -21,7 +21,7 @@
   },
   "homepage": "https://jdriviere.github.io/sparkle-css",
   "devDependencies": {
-    "autoprefixer": "^9.1.0",
+    "autoprefixer": "^9.1.2",
     "cssnano": "^4.0.5",
     "gulp": "^3.9.1",
     "gulp-cli": "^2.0.1",
