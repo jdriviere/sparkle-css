@@ -6,64 +6,41 @@
 // ====================================
 // VARIABLES
 // ====================================
-$menu-padding: 1.0rem !default
-$menu-font-title: $font-size !default
-$menu-font-menu: $font-size !default
-$menu-color-border: map-get($theme-map, default) !default
+$menu-margin: 1.0rem !default
+$menu-padding: $menu-margin !default
 
 // ====================================
 // MIXINS
 // ====================================
 =create-menu
     display: flex
-    flex: 1
+    width: 100%
     flex-direction: column
-
+    margin-bottom: $menu-margin
     // Elements
-    &__label
+    &__group
         display: flex
-        padding-left: 0
         font:
-            size: $menu-font-title
+            size: $font-size
             weight: $font-weight-heavy
-        text-transform: uppercase
     &__item
-        list-style: none
-        // Elements
-        &__link
-            display: block
-            padding: $menu-padding
-            color: $font-color !important
-            border-radius: $border-radius
-            text-decoration: none !important
-            // Pseudo
-            &:hover
-                background: map-get($theme-map, default)
-        .submenu
-            display: flex
-            flex: 1
-            flex-direction: column
-            margin: ($menu-padding / 2) 0
-            // Elements
-            &__item
-                margin-left: $menu-padding
-                list-style: none
-                border-left: 1px solid $menu-color-border
-                // Elements
-                &__link
-                    display: block
-                    padding: $menu-padding
-                    color: $font-color
-                    border-radius: $border-radius
-                    text-decoration: none !important
-                    // Pseudo
-                    &:hover
-                        background: map-get($theme-map, default)
-        // Modifiers
+        // .menu__item is also used for the elements
+        // used in the .submenu list
+        display: block
+        width: 100%
+        padding: $menu-padding
+        color: $font-color !important
+        text-decoration: none
+        cursor: pointer
+        // Pseudo
+        &:hover,
         &.make-active
-            // Elements
-            &__link
-                background: map-get($theme-map, default)
+            background: lighten($grey_base, $lighten / 2)
+            border-radius: 0.3rem
+    .submenu
+        display: block
+        margin-left: $menu-margin
+        border-left: 2px solid $grey_base
 
 // ====================================
 // MENU
