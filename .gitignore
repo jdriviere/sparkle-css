@@ -1,3 +1,4 @@
+# FOLDERS
 .sass-cache/
 .vscode/
 dev/
@@ -7,6 +8,9 @@ src/css/
 src/img/
 src/tests/
 unused/
+
+# FILES
+**/*.map
 npm-debug.log
 examples.html
 test.html
