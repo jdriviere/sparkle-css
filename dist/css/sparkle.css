@@ -917,7 +917,7 @@ code {
 }
 
 .wrapper:before, .wrapper:after {
-  content: " ";
+  content: "";
   display: table;
 }
 
@@ -977,7 +977,7 @@ code {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .grid > [class*="make-"] {
+  .grid > [class*="column make-"] {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
@@ -1093,7 +1093,7 @@ code {
   }
 }
 
-.grid > .column[class*="offset"] {
+.grid > .column[class*="offset-"] {
   margin-left: 0;
 }
 
