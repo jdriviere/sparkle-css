@@ -17,8 +17,7 @@ $input-border-color: map-get($theme-map, default) !default
 =create-input
     +input-control
     width: 100%
-    height: $input-size
-    margin-bottom: $input-margin
+    line-height: $line-height
     color: $font-color
     border:
         radius: $border-radius
@@ -40,9 +39,6 @@ $input-border-color: map-get($theme-map, default) !default
     &:focus,
     &:active
         border-color: map-get($theme-map, primary)
-    // Modifiers
-    &.make-fluid
-        width: 100%
     @each $type, $color in $input-color-map
         &.make-#{$type}
             border-color: $color
@@ -66,13 +62,11 @@ $input-border-color: map-get($theme-map, default) !default
         grow: 1
         shrink: 0
         basis: auto
-    margin:
-        bottom: 0.5rem
+    margin-bottom: 0.5rem
     font:
         size: $font-size
         weight: $font-weight-heavy
     color: $font-color
-
 // --- SELECT ---
 .select
     @extend .input
@@ -83,7 +77,6 @@ $input-border-color: map-get($theme-map, default) !default
     // Pseudo
     &::-ms-expand
         display: none
-
 // --- TEXT AREA ---
 .textarea
     @extend .input

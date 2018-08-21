@@ -8,7 +8,6 @@
 // =================================
 $button-color-map: (primary: $lblue_base, info: $blue_base, success: $green_base, warning: $yellow_base, danger: $red_base, light: $white_base, dark: $black_base) !default
 $button-margin: 0.25em !default
-$button-line-height: $line-height !default
 $button-padding: 0.5rem 1.5rem !default
 
 // --- GROUP --- //
@@ -29,7 +28,7 @@ $button-group-spacing: .25em !default
     outline: none
     background: $grey_base
     padding: $button-padding
-    line-height: $button-line-height
+    line-height: $line-height
     vertical-align: center
     text:
         align: center
@@ -151,9 +150,8 @@ $button-group-spacing: .25em !default
     &.make-block
         display: block
         width: 100%
-        margin: 1.0rem 0
         padding: 0.5rem 0
-        font-size: 2.0rem
+        font-size: 1.8rem
     &.make-radial
         border-radius: $border-radius * 2
     &.make-round
