@@ -1,0 +1,46 @@
+// ===================================================
+// FORM GROUPS
+// ===================================================
+// ====================================
+// MIXINS
+// ====================================
+=create-form-group
+    position: relative
+    display: flex
+    flex: 1
+    width: 100%
+    // Elements
+    .input,
+    .select
+        display: flex
+        flex: 1
+        line-height: $line-height
+        // Pseudo
+        &:first-child:not(:last-child)
+            border:
+                top-right-radius: 0
+                bottom-right-radius: 0
+        &:not(:first-child):not(:last-child)
+            border-radius: 0
+        &:last-child:not(:first-child)
+            border:
+                top-left-radius: 0
+                bottom-left-radius: 0
+    .button
+        display: flex
+        flex: 0
+        z-index: $index-high
+        // Pseudo
+        &:first-child:not(:last-child)
+            margin-right: -1px
+            border:
+                top-right-radius: 0
+                bottom-right-radius: 0
+        &:last-child:not(:first-child)
+            margin-left: -1px
+            border:
+                top-left-radius: 0
+                bottom-left-radius: 0
+
+.form-group
+    +create-form-group
