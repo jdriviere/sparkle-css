@@ -6,7 +6,6 @@
 // ====================================
 // VARIABLES
 // ====================================
-$table-name: 'table' !default
 $table-padding: 1.0rem !default
 $table-font-caption: 1.4rem !default
 $table-letter-spacing: 0.1rem !default
@@ -18,33 +17,26 @@ $table-letter-spacing: 0.1rem !default
     width: 100%
     margin: 0 auto
     border-collapse: collapse
-    
     // Elements
-    //--- CAPTION ---
     caption
         font:
             size: $table-font-caption
             weight: $font-weight-black
         text-transform: uppercase
         letter-spacing: $table-letter-spacing
-    //--- TABLE HEADER ---
     thead
         display: none
-    //--- TABLE BODY ---
     tbody, tr, td
         display: block
-    //--- TABLE ROW ---
     tr
         margin:
             top: 0
             bottom: 1.0rem
         padding: 0.5rem 0
         border: 1px solid map-get($theme-map, default)
-		
         // Pseudo
         &:last-child
             margin-bottom: 0
-    //--- TABLE DATA ---
     td
         position: relative
         padding: 1.0rem
@@ -52,7 +44,6 @@ $table-letter-spacing: 0.1rem !default
         text-align: right
         white-space: normal
         border-bottom: 1px dotted map-get($theme-map, default)
-        
         // Pseudo
         &:first-child
             margin-top: -0.5rem
@@ -68,13 +59,10 @@ $table-letter-spacing: 0.1rem !default
                 weight: $font-weight-heavy
             letter-spacing: $table-letter-spacing
             white-space: nowrap
-    
     // Media Queries
     @media only screen and (min-width: $bp-medium)
         display: table
-        
         // Elements
-        //--- TABLE HEADER ---
         thead
             display: table-header-group
             font:
@@ -83,27 +71,21 @@ $table-letter-spacing: 0.1rem !default
             text-align: left
             letter-spacing: $table-letter-spacing
             border-bottom: 2px solid $color-grey-50
-        //--- TABLE BODY ---
         tbody
             display: table-row-group
-        //--- TABLE ROW ---
         tr
             display: table-row
             border: none
-        //--- TABLE H ---
         th
             padding: 1.5rem 1.0rem
-        //--- TABLE DATA ---
         td
             display: table-cell
             padding: 1.5rem 1.0rem
             text-align: left
             border: none
-
             // Pseudo
             &:before
                 display: none
-    
     // Modifiers
     &.make-default
         // Elements
@@ -116,13 +98,18 @@ $table-letter-spacing: 0.1rem !default
     &.make-striped
         // Elements
         tbody tr:nth-child(odd)
-            background: $grey_base
+            background: lighten(map-get($theme-map, default), $lighten / 2)
+        // Modifiers
+        &.make-hoverable
+            tbody tr:nth-child(odd):hover > td
+                background: map-get($theme-map, default)
     &.make-hoverable
+        // Elements
         tbody tr:hover > td
-            background: map-get($theme-map, light)
+            background: lighten(map-get($theme-map, default), $lighten / 2)
 
 // ====================================
 // NAVIGATION
 // ====================================
-.#{$table-name}
+.table
     +create-table

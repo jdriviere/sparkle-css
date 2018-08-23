@@ -1247,11 +1247,15 @@ code {
 }
 
 .table.make-striped tbody tr:nth-child(odd) {
+  background: #ececec;
+}
+
+.table.make-striped.make-hoverable tbody tr:nth-child(odd):hover > td {
   background: #E2E2E2;
 }
 
 .table.make-hoverable tbody tr:hover > td {
-  background: #F4F4F8;
+  background: #ececec;
 }
 
 /* =================================================== */
