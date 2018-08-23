@@ -34,7 +34,7 @@ html {
 
 body {
   height: 100%;
-  line-height: 1.5;
+  line-height: 1.6;
   background: #FFFFFF;
   color: #404040;
   font-family: "Lato", "Helvetica Neue", Helvetica, "Open Sans", Arial, sans-serif;
@@ -104,15 +104,15 @@ p {
   font-weight: 300;
 }
 
-a:not(.button):not(.menu__item) {
+a {
+  color: #404040;
   font-size: 1.6rem;
   font-weight: 400;
-  color: #ADD2E6;
   text-decoration: none;
 }
 
-a:not(.button):not(.menu__item):hover {
-  text-decoration: underline;
+a:hover {
+  color: #ADD2E6;
 }
 
 .make-text-size1 {

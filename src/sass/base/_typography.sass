@@ -55,15 +55,15 @@ p
         size: $font-size
         weight: $font-weight-light
 
-a:not(.button):not(.menu__item)
+a
+    color: $font-color
     font:
         size: $font-size
         weight: $font-weight-normal
-    color: map-get($theme-map, primary)
     text-decoration: none
     // Pseudo
     &:hover
-        text-decoration: underline
+        color: map-get($theme-map, primary)
 
 // ====================================
 // TEXT FORMATS
