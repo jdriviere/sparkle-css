@@ -99,11 +99,6 @@ h6 {
   font-size: 1.4rem;
 }
 
-p {
-  font-size: 1.6rem;
-  font-weight: 300;
-}
-
 a {
   color: #404040;
   font-size: 1.6rem;
@@ -284,14 +279,24 @@ code {
           box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0);
 }
 
-.input::-webkit-input-placeholder, .select::-webkit-input-placeholder, .textarea::-webkit-input-placeholder, .input::-moz-placeholder, .select::-moz-placeholder, .textarea::-moz-placeholder, .input:-moz-placeholder, .select:-moz-placeholder, .textarea:-moz-placeholder, .input:-ms-textarea-placeholder, .select:-ms-textarea-placeholder, .textarea:-ms-textarea-placeholder, .input::-webkit-input-placeholder, .select::-webkit-input-placeholder, .textarea::-webkit-input-placeholder {
+.input::-webkit-input-placeholder, .select::-webkit-input-placeholder, .textarea::-webkit-input-placeholder {
   color: #C0C0C0;
-  opacity: 1;
+  opacity: 0.5;
 }
 
-.input::-webkit-input-placeholder, .select::-webkit-input-placeholder, .textarea::-webkit-input-placeholder, .input::-moz-placeholder, .select::-moz-placeholder, .textarea::-moz-placeholder, .input:-moz-placeholder, .select:-moz-placeholder, .textarea:-moz-placeholder, .input:-ms-textarea-placeholder, .select:-ms-textarea-placeholder, .textarea:-ms-textarea-placeholder, .input::placeholder, .select::placeholder, .textarea::placeholder {
+.input:-ms-input-placeholder, .select:-ms-input-placeholder, .textarea:-ms-input-placeholder {
   color: #C0C0C0;
-  opacity: 1;
+  opacity: 0.5;
+}
+
+.input::-ms-input-placeholder, .select::-ms-input-placeholder, .textarea::-ms-input-placeholder {
+  color: #C0C0C0;
+  opacity: 0.5;
+}
+
+.input::placeholder, .select::placeholder, .textarea::placeholder {
+  color: #C0C0C0;
+  opacity: 0.5;
 }
 
 .input:hover, .select:hover, .textarea:hover, .input:focus, .select:focus, .textarea:focus, .input:active, .select:active, .textarea:active {
@@ -442,7 +447,7 @@ code {
   height: 1.7rem;
   margin-right: 1.5rem;
   padding: 0.5rem;
-  border: 2px solid #BCBCBC;
+  border: 2px solid #E2E2E2;
 }
 
 .checkbox__icon:after {
@@ -526,7 +531,7 @@ code {
   height: 1.7rem;
   margin-right: 1.5rem;
   padding: 0.5rem;
-  border: 2px solid #BCBCBC;
+  border: 2px solid #E2E2E2;
   border-radius: 50%;
 }
 
@@ -573,8 +578,13 @@ code {
           transform: translateX(100%);
 }
 
+.switch > .switch__toggle:checked ~ .switch__label {
+  background: #ADD2E6;
+  border-color: #72b2d4;
+}
+
 .switch > .switch__toggle:disabled ~ .switch__handle {
-  opacity: 0.7;
+  opacity: 0.5;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -583,7 +593,7 @@ code {
 }
 
 .switch > .switch__toggle:disabled ~ .switch__label {
-  opacity: 0.3;
+  opacity: 0.5;
 }
 
 .switch > .switch__handle {
@@ -608,41 +618,6 @@ code {
   height: inherit;
   border: 1px solid #bcbcbc;
   border-radius: inherit;
-}
-
-.switch.make-primary .switch__toggle:checked ~ .switch__label {
-  background: #ADD2E6;
-  border-color: #72b2d4;
-}
-
-.switch.make-info .switch__toggle:checked ~ .switch__label {
-  background: #1982C4;
-  border-color: #105580;
-}
-
-.switch.make-success .switch__toggle:checked ~ .switch__label {
-  background: #6ABB4F;
-  border-color: #4a8935;
-}
-
-.switch.make-warning .switch__toggle:checked ~ .switch__label {
-  background: #FEC524;
-  border-color: #d59d01;
-}
-
-.switch.make-danger .switch__toggle:checked ~ .switch__label {
-  background: #FF3344;
-  border-color: #e60013;
-}
-
-.switch.make-light .switch__toggle:checked ~ .switch__label {
-  background: #F4F4F8;
-  border-color: #c5c5da;
-}
-
-.switch.make-dark .switch__toggle:checked ~ .switch__label {
-  background: #222528;
-  border-color: black;
 }
 
 .inputs {
@@ -1617,7 +1592,6 @@ code {
 /* BLOCKQUOTES */
 /* =================================================== */
 .blockquote {
-  position: relative;
   display: block;
   width: 100%;
   margin: 1rem auto;
@@ -1625,7 +1599,7 @@ code {
   padding-bottom: 0.5rem;
   padding-left: 2rem;
   padding-right: 0.5rem;
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 300;
   border-left: 0.5rem solid #E2E2E2;
 }
@@ -1636,24 +1610,8 @@ code {
   color: rgba(64, 64, 64, 0.5);
 }
 
-.blockquote.make-primary {
-  border-color: #ADD2E6;
-}
-
-.blockquote.make-info {
-  border-color: #1982C4;
-}
-
-.blockquote.make-success {
-  border-color: #6ABB4F;
-}
-
-.blockquote.make-warning {
-  border-color: #FEC524;
-}
-
-.blockquote.make-danger {
-  border-color: #FF3344;
+.blockquote__footer::before {
+  content: '\2014 \00A0';
 }
 
 /* =================================================== */
