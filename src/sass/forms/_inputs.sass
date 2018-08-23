@@ -23,13 +23,9 @@ $input-border-color: map-get($theme-map, default) !default
         radius: $border-radius
         color: $input-border-color
     // Pseudo
-    &::-webkit-input-placeholder,
-    &::-moz-placeholder,
-    &:-moz-placeholder,
-    &:-ms-textarea-placeholder,
     &::placeholder
         color: $color-grey-75
-        opacity: 1
+        opacity: $opacity-muted
     &:hover,
     &:focus,
     &:active
@@ -40,7 +36,7 @@ $input-border-color: map-get($theme-map, default) !default
             // Pseudo
             &:focus,
             &:active
-                box-shadow: 0 0 1.2rem rgba($color, 0.5) !important
+                box-shadow: 0 0 1.2rem rgba($color, $opacity-muted) !important
     
 // ====================================
 // INPUTS

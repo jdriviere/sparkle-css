@@ -26,24 +26,28 @@ $switch-height: $switch-width / 2 !default
         display: none
         opacity: 0
         // Pseudo
-        &:checked ~ .switch__handle
-            transform: translateX(100%)
+        &:checked
+            ~ .switch__handle
+                transform: translateX(100%)
+            ~ .switch__label
+                background: map-get($theme-map, primary)
+                border-color: darken(map-get($theme-map, primary), $darken * 2)
         &:disabled
             // Elements
             ~ .switch__handle
-                opacity: 0.7
+                opacity: $opacity-muted
                 user-select: none
                 cursor: not-allowed
             ~ .switch__label
-                opacity: 0.3
+                opacity: $opacity-muted
     > .switch__handle
         position: absolute
-        top: 0 // 0rem if not work
-        left: 0 // 0rem if not work
+        top: 0
+        left: 0
         width: $switch-width / 2
         height: $switch-width / 2
         background: $white_base
-        border: 1px solid darken($white_base, 15)
+        border: 1px solid darken($white_base, $darken * 2)
         border-radius: 50%
         transition: transform 0.2s
     > .switch__label
@@ -51,15 +55,8 @@ $switch-height: $switch-width / 2 !default
         display: block
         background: $grey_base
         height: inherit
-        border: 1px solid darken($grey_base, 15)
+        border: 1px solid darken($grey_base, $darken * 2)
         border-radius: inherit
-    // Modifiers
-    @each $type, $color in $switch-color-map
-        &.make-#{$type}
-            // Pseudo
-            .switch__toggle:checked ~ .switch__label
-                background: $color
-                border-color: darken($color, 15)
 
 // ====================================
 // SWITCH

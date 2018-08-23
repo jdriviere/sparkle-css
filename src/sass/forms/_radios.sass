@@ -7,8 +7,7 @@
 // VARIABLES
 // ====================================
 $radio-size: 1.7rem !default
-$radio-border-color: #BCBCBC !default
-$radio-disabled-opacity: 0.5 !default
+$radio-border-color: $grey_base !default
 
 // ====================================
 // MIXINS
@@ -23,21 +22,21 @@ $radio-disabled-opacity: 0.5 !default
         opacity: 0
         // Pseudo
         &:checked + .radio__icon
-            border-color: $lblue_base
+            border-color: map-get($theme-map, primary)
             transform: scale(1.1)
             transition: all 0.2s ease-in
             // Pseudo
             &:after
-                background: $lblue_base
+                background: map-get($theme-map, primary)
                 transition: all 0.2s ease-in
         &:disabled + .radio__icon
             cursor: not-allowed
             user-select: none
-            opacity: $radio-disabled-opacity
+            opacity: $opacity-muted
         &:disabled ~ span
             cursor: not-allowed
             user-select: none
-            opacity: $radio-disabled-opacity
+            opacity: $opacity-muted
     &__icon
         position: relative
         display: inline-flex
