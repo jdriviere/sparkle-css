@@ -8,7 +8,6 @@
 // =======================================
 *
     +reset
-
     // Pseudo
     &:before,
     &:after
@@ -36,10 +35,6 @@ body
 // =======================================
 // SELECTION
 // =======================================
-::-moz-selection
-    background: map-get($theme-map, primary)
-    color: map-get($theme-map, light)
-
 ::selection
     background: map-get($theme-map, primary)
     color: map-get($theme-map, light)
@@ -53,11 +48,9 @@ $list-spacing-h: 1.5rem
 ol,
 ul:not(.nav__menu):not(.menu)
     margin-left: $list-spacing-h
-
     // Pseudo
     &:not(:last-child)
         margin-bottom: $list-spacing-v
-
     // Elements
     & > li
         padding-left: $list-spacing-h

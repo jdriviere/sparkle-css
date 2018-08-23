@@ -284,38 +284,14 @@ code {
           box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0);
 }
 
-.input::-webkit-input-placeholder, .select::-webkit-input-placeholder, .textarea::-webkit-input-placeholder {
-  color: #C0C0C0;
-}
-
-.input::-moz-placeholder, .select::-moz-placeholder, .textarea::-moz-placeholder {
+.input::-webkit-input-placeholder, .select::-webkit-input-placeholder, .textarea::-webkit-input-placeholder, .input::-moz-placeholder, .select::-moz-placeholder, .textarea::-moz-placeholder, .input:-moz-placeholder, .select:-moz-placeholder, .textarea:-moz-placeholder, .input:-ms-textarea-placeholder, .select:-ms-textarea-placeholder, .textarea:-ms-textarea-placeholder, .input::-webkit-input-placeholder, .select::-webkit-input-placeholder, .textarea::-webkit-input-placeholder {
   color: #C0C0C0;
   opacity: 1;
 }
 
-.input:-moz-placeholder, .select:-moz-placeholder, .textarea:-moz-placeholder {
+.input::-webkit-input-placeholder, .select::-webkit-input-placeholder, .textarea::-webkit-input-placeholder, .input::-moz-placeholder, .select::-moz-placeholder, .textarea::-moz-placeholder, .input:-moz-placeholder, .select:-moz-placeholder, .textarea:-moz-placeholder, .input:-ms-textarea-placeholder, .select:-ms-textarea-placeholder, .textarea:-ms-textarea-placeholder, .input::placeholder, .select::placeholder, .textarea::placeholder {
   color: #C0C0C0;
   opacity: 1;
-}
-
-.input:-ms-textarea-placeholder, .select:-ms-textarea-placeholder, .textarea:-ms-textarea-placeholder {
-  color: #C0C0C0;
-}
-
-.input::-webkit-input-placeholder, .select::-webkit-input-placeholder, .textarea::-webkit-input-placeholder {
-  color: #C0C0C0;
-}
-
-.input:-ms-input-placeholder, .select:-ms-input-placeholder, .textarea:-ms-input-placeholder {
-  color: #C0C0C0;
-}
-
-.input::-ms-input-placeholder, .select::-ms-input-placeholder, .textarea::-ms-input-placeholder {
-  color: #C0C0C0;
-}
-
-.input::placeholder, .select::placeholder, .textarea::placeholder {
-  color: #C0C0C0;
 }
 
 .input:hover, .select:hover, .textarea:hover, .input:focus, .select:focus, .textarea:focus, .input:active, .select:active, .textarea:active {
