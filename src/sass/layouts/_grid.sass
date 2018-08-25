@@ -6,10 +6,6 @@
 // ====================================
 // VARIABLES
 // ====================================
-// Wrapper Variables
-$wrapper-spacing: 2.5% !default
-
-// Grid Variables
 $grid-margin: 1.5rem !default
 $grid-gutter: 1.5rem !default
 
@@ -19,25 +15,6 @@ $column-max: 12 !default
 // ====================================
 // MIXINS
 // ====================================
-=create-wrapper
-    position: relative
-    width: 96%
-    margin: 0 auto
-    // Pseudo
-    &:before,
-    &:after
-        content: ""
-        display: table
-    &:after
-        clear: both
-    // Media Queries
-    @media screen and (min-width: 640px)
-        max-width: 1200px
-
-// ====================================
-// GRID
-// ====================================
-// --- ROW --- //
 =create-grid
     display: flex
     flex: 1
@@ -50,7 +27,7 @@ $column-max: 12 !default
         margin-bottom: 0
     &:before,
     &:after
-        content: " "
+        content: ''
         display: table
     &:after
         clear: both
@@ -68,11 +45,9 @@ $column-max: 12 !default
     @media screen and (min-width: $bp-large)
         flex-direction: row
         // Elements
-        // > [class*="make-"]
         > [class*="column make-"]
             flex-grow: 1
     // Elements
-    // --- COLUMNS ---
     > .column
         flex:
             grow: 1
@@ -107,7 +82,6 @@ $column-max: 12 !default
                 @extend .make-11
             &.make-full
                 @extend .make-12
-    // --- OFFSETS --- //
     > .column[class*="offset-"]
         margin-left: 0
     // Media Queries
@@ -136,12 +110,6 @@ $column-max: 12 !default
             @extend .offset-11
         > .column.offset-full
             @extend .offset-12
-
-// ====================================
-// CONTAINER
-// ====================================
-.wrapper
-    +create-wrapper
 
 // ====================================
 // GRID
