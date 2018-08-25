@@ -1551,44 +1551,44 @@ code {
 }
 
 .alert.make-primary {
-  background: #ADD2E6;
   color: rgba(34, 37, 40, 0.75);
+  background: #ADD2E6;
   border-color: #55a2cb;
 }
 
 .alert.make-info {
-  background: #1982C4;
   color: #F4F4F8;
+  background: #1982C4;
   border-color: #0c3f5e;
 }
 
 .alert.make-success {
-  background: #6ABB4F;
   color: #F4F4F8;
+  background: #6ABB4F;
   border-color: #3b6d2a;
 }
 
 .alert.make-warning {
-  background: #FEC524;
   color: rgba(34, 37, 40, 0.75);
+  background: #FEC524;
   border-color: #ae8101;
 }
 
 .alert.make-danger {
-  background: #FF3344;
   color: #F4F4F8;
+  background: #FF3344;
   border-color: #bf0010;
 }
 
 .alert.make-light {
-  background: #F4F4F8;
   color: rgba(34, 37, 40, 0.75);
+  background: #F4F4F8;
   border-color: #aeaecb;
 }
 
 .alert.make-dark {
-  background: #222528;
   color: #F4F4F8;
+  background: #222528;
   border-color: black;
 }
 
@@ -2638,25 +2638,25 @@ code {
   height: 0;
 }
 
-.make-block {
+.make-display-block {
   display: block;
 }
 
-.make-inline-block {
+.make-display-inline-block {
   display: inline-block;
 }
 
-.make-inline {
+.make-display-inline {
   display: inline;
 }
 
-.make-flex {
+.make-display-flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.make-inline-flex {
+.make-display-inline-flex {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -2716,10 +2716,10 @@ code {
 }
 
 @media screen and (min-width: 1200px) {
-  .make-hidden-fullhd {
+  .make-hidden-widescreen {
     display: none !important;
   }
-  .make-invisible-fullhd {
+  .make-invisible-widescreen {
     visibility: hidden !important;
   }
 }
@@ -2732,29 +2732,29 @@ code {
   padding: 1rem;
 }
 
-.make-padding-v10 {
+.make-padding-10-vertical {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
-.make-padding-t10 {
+.make-padding-10-top {
   padding-top: 1rem;
 }
 
-.make-padding-b10 {
+.make-padding-10-bottom {
   padding-bottom: 1rem;
 }
 
-.make-padding-h10 {
+.make-padding-10-horizontal {
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
-.make-padding-l10 {
+.make-padding-10-left {
   padding-left: 1rem;
 }
 
-.make-padding-r10 {
+.make-padding-10-right {
   padding-right: 1rem;
 }
 
@@ -2762,29 +2762,29 @@ code {
   padding: 2rem;
 }
 
-.make-padding-v20 {
+.make-padding-20-vertical {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
 
-.make-padding-t20 {
+.make-padding-20-top {
   padding-top: 2rem;
 }
 
-.make-padding-b20 {
+.make-padding-20-bottom {
   padding-bottom: 2rem;
 }
 
-.make-padding-h20 {
+.make-padding-20-horizontal {
   padding-left: 2rem;
   padding-right: 2rem;
 }
 
-.make-padding-l20 {
+.make-padding-20-left {
   padding-left: 2rem;
 }
 
-.make-padding-r20 {
+.make-padding-20-right {
   padding-right: 2rem;
 }
 
@@ -2792,29 +2792,29 @@ code {
   padding: 3rem;
 }
 
-.make-padding-v30 {
+.make-padding-30-vertical {
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
 
-.make-padding-t30 {
+.make-padding-30-top {
   padding-top: 3rem;
 }
 
-.make-padding-b30 {
+.make-padding-30-bottom {
   padding-bottom: 3rem;
 }
 
-.make-padding-h30 {
+.make-padding-30-horizontal {
   padding-left: 3rem;
   padding-right: 3rem;
 }
 
-.make-padding-l30 {
+.make-padding-30-left {
   padding-left: 3rem;
 }
 
-.make-padding-r30 {
+.make-padding-30-right {
   padding-right: 3rem;
 }
 
@@ -2822,29 +2822,29 @@ code {
   padding: 4rem;
 }
 
-.make-padding-v40 {
+.make-padding-40-vertical {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
 
-.make-padding-t40 {
+.make-padding-40-top {
   padding-top: 4rem;
 }
 
-.make-padding-b40 {
+.make-padding-40-bottom {
   padding-bottom: 4rem;
 }
 
-.make-padding-h40 {
+.make-padding-40-horizontal {
   padding-left: 4rem;
   padding-right: 4rem;
 }
 
-.make-padding-l40 {
+.make-padding-40-left {
   padding-left: 4rem;
 }
 
-.make-padding-r40 {
+.make-padding-40-right {
   padding-right: 4rem;
 }
 
@@ -2852,29 +2852,29 @@ code {
   padding: 5rem;
 }
 
-.make-padding-v50 {
+.make-padding-50-vertical {
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
 
-.make-padding-t50 {
+.make-padding-50-top {
   padding-top: 5rem;
 }
 
-.make-padding-b50 {
+.make-padding-50-bottom {
   padding-bottom: 5rem;
 }
 
-.make-padding-h50 {
+.make-padding-50-horizontal {
   padding-left: 5rem;
   padding-right: 5rem;
 }
 
-.make-padding-l50 {
+.make-padding-50-left {
   padding-left: 5rem;
 }
 
-.make-padding-r50 {
+.make-padding-50-right {
   padding-right: 5rem;
 }
 
@@ -2882,29 +2882,29 @@ code {
   padding: 6rem;
 }
 
-.make-padding-v60 {
+.make-padding-60-vertical {
   padding-top: 6rem;
   padding-bottom: 6rem;
 }
 
-.make-padding-t60 {
+.make-padding-60-top {
   padding-top: 6rem;
 }
 
-.make-padding-b60 {
+.make-padding-60-bottom {
   padding-bottom: 6rem;
 }
 
-.make-padding-h60 {
+.make-padding-60-horizontal {
   padding-left: 6rem;
   padding-right: 6rem;
 }
 
-.make-padding-l60 {
+.make-padding-60-left {
   padding-left: 6rem;
 }
 
-.make-padding-r60 {
+.make-padding-60-right {
   padding-right: 6rem;
 }
 
@@ -2912,29 +2912,29 @@ code {
   padding: 7rem;
 }
 
-.make-padding-v70 {
+.make-padding-70-vertical {
   padding-top: 7rem;
   padding-bottom: 7rem;
 }
 
-.make-padding-t70 {
+.make-padding-70-top {
   padding-top: 7rem;
 }
 
-.make-padding-b70 {
+.make-padding-70-bottom {
   padding-bottom: 7rem;
 }
 
-.make-padding-h70 {
+.make-padding-70-horizontal {
   padding-left: 7rem;
   padding-right: 7rem;
 }
 
-.make-padding-l70 {
+.make-padding-70-left {
   padding-left: 7rem;
 }
 
-.make-padding-r70 {
+.make-padding-70-right {
   padding-right: 7rem;
 }
 
@@ -2942,29 +2942,29 @@ code {
   padding: 8rem;
 }
 
-.make-padding-v80 {
+.make-padding-80-vertical {
   padding-top: 8rem;
   padding-bottom: 8rem;
 }
 
-.make-padding-t80 {
+.make-padding-80-top {
   padding-top: 8rem;
 }
 
-.make-padding-b80 {
+.make-padding-80-bottom {
   padding-bottom: 8rem;
 }
 
-.make-padding-h80 {
+.make-padding-80-horizontal {
   padding-left: 8rem;
   padding-right: 8rem;
 }
 
-.make-padding-l80 {
+.make-padding-80-left {
   padding-left: 8rem;
 }
 
-.make-padding-r80 {
+.make-padding-80-right {
   padding-right: 8rem;
 }
 
@@ -2972,29 +2972,29 @@ code {
   padding: 9rem;
 }
 
-.make-padding-v90 {
+.make-padding-90-vertical {
   padding-top: 9rem;
   padding-bottom: 9rem;
 }
 
-.make-padding-t90 {
+.make-padding-90-top {
   padding-top: 9rem;
 }
 
-.make-padding-b90 {
+.make-padding-90-bottom {
   padding-bottom: 9rem;
 }
 
-.make-padding-h90 {
+.make-padding-90-horizontal {
   padding-left: 9rem;
   padding-right: 9rem;
 }
 
-.make-padding-l90 {
+.make-padding-90-left {
   padding-left: 9rem;
 }
 
-.make-padding-r90 {
+.make-padding-90-right {
   padding-right: 9rem;
 }
 
@@ -3002,29 +3002,29 @@ code {
   padding: 10rem;
 }
 
-.make-padding-v100 {
+.make-padding-100-vertical {
   padding-top: 10rem;
   padding-bottom: 10rem;
 }
 
-.make-padding-t100 {
+.make-padding-100-top {
   padding-top: 10rem;
 }
 
-.make-padding-b100 {
+.make-padding-100-bottom {
   padding-bottom: 10rem;
 }
 
-.make-padding-h100 {
+.make-padding-100-horizontal {
   padding-left: 10rem;
   padding-right: 10rem;
 }
 
-.make-padding-l100 {
+.make-padding-100-left {
   padding-left: 10rem;
 }
 
-.make-padding-r100 {
+.make-padding-100-right {
   padding-right: 10rem;
 }
 
@@ -3036,29 +3036,29 @@ code {
   margin: 1rem;
 }
 
-.make-margin-v10 {
+.make-margin-10-vertical {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
-.make-margin-t10 {
+.make-margin-10-top {
   margin-top: 1rem;
 }
 
-.make-margin-b10 {
+.make-margin-10-bottom {
   margin-bottom: 1rem;
 }
 
-.make-margin-h10 {
+.make-margin-10-horizontal {
   margin-left: 1rem;
   margin-right: 1rem;
 }
 
-.make-margin-l10 {
+.make-margin-10-left {
   margin-left: 1rem;
 }
 
-.make-margin-r10 {
+.make-margin-10-right {
   margin-right: 1rem;
 }
 
@@ -3066,29 +3066,29 @@ code {
   margin: 2rem;
 }
 
-.make-margin-v20 {
+.make-margin-20-vertical {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
-.make-margin-t20 {
+.make-margin-20-top {
   margin-top: 2rem;
 }
 
-.make-margin-b20 {
+.make-margin-20-bottom {
   margin-bottom: 2rem;
 }
 
-.make-margin-h20 {
+.make-margin-20-horizontal {
   margin-left: 2rem;
   margin-right: 2rem;
 }
 
-.make-margin-l20 {
+.make-margin-20-left {
   margin-left: 2rem;
 }
 
-.make-margin-r20 {
+.make-margin-20-right {
   margin-right: 2rem;
 }
 
@@ -3096,29 +3096,29 @@ code {
   margin: 3rem;
 }
 
-.make-margin-v30 {
+.make-margin-30-vertical {
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
 
-.make-margin-t30 {
+.make-margin-30-top {
   margin-top: 3rem;
 }
 
-.make-margin-b30 {
+.make-margin-30-bottom {
   margin-bottom: 3rem;
 }
 
-.make-margin-h30 {
+.make-margin-30-horizontal {
   margin-left: 3rem;
   margin-right: 3rem;
 }
 
-.make-margin-l30 {
+.make-margin-30-left {
   margin-left: 3rem;
 }
 
-.make-margin-r30 {
+.make-margin-30-right {
   margin-right: 3rem;
 }
 
@@ -3126,29 +3126,29 @@ code {
   margin: 4rem;
 }
 
-.make-margin-v40 {
+.make-margin-40-vertical {
   margin-top: 4rem;
   margin-bottom: 4rem;
 }
 
-.make-margin-t40 {
+.make-margin-40-top {
   margin-top: 4rem;
 }
 
-.make-margin-b40 {
+.make-margin-40-bottom {
   margin-bottom: 4rem;
 }
 
-.make-margin-h40 {
+.make-margin-40-horizontal {
   margin-left: 4rem;
   margin-right: 4rem;
 }
 
-.make-margin-l40 {
+.make-margin-40-left {
   margin-left: 4rem;
 }
 
-.make-margin-r40 {
+.make-margin-40-right {
   margin-right: 4rem;
 }
 
@@ -3156,29 +3156,29 @@ code {
   margin: 5rem;
 }
 
-.make-margin-v50 {
+.make-margin-50-vertical {
   margin-top: 5rem;
   margin-bottom: 5rem;
 }
 
-.make-margin-t50 {
+.make-margin-50-top {
   margin-top: 5rem;
 }
 
-.make-margin-b50 {
+.make-margin-50-bottom {
   margin-bottom: 5rem;
 }
 
-.make-margin-h50 {
+.make-margin-50-horizontal {
   margin-left: 5rem;
   margin-right: 5rem;
 }
 
-.make-margin-l50 {
+.make-margin-50-left {
   margin-left: 5rem;
 }
 
-.make-margin-r50 {
+.make-margin-50-right {
   margin-right: 5rem;
 }
 
@@ -3186,29 +3186,29 @@ code {
   margin: 6rem;
 }
 
-.make-margin-v60 {
+.make-margin-60-vertical {
   margin-top: 6rem;
   margin-bottom: 6rem;
 }
 
-.make-margin-t60 {
+.make-margin-60-top {
   margin-top: 6rem;
 }
 
-.make-margin-b60 {
+.make-margin-60-bottom {
   margin-bottom: 6rem;
 }
 
-.make-margin-h60 {
+.make-margin-60-horizontal {
   margin-left: 6rem;
   margin-right: 6rem;
 }
 
-.make-margin-l60 {
+.make-margin-60-left {
   margin-left: 6rem;
 }
 
-.make-margin-r60 {
+.make-margin-60-right {
   margin-right: 6rem;
 }
 
@@ -3216,29 +3216,29 @@ code {
   margin: 7rem;
 }
 
-.make-margin-v70 {
+.make-margin-70-vertical {
   margin-top: 7rem;
   margin-bottom: 7rem;
 }
 
-.make-margin-t70 {
+.make-margin-70-top {
   margin-top: 7rem;
 }
 
-.make-margin-b70 {
+.make-margin-70-bottom {
   margin-bottom: 7rem;
 }
 
-.make-margin-h70 {
+.make-margin-70-horizontal {
   margin-left: 7rem;
   margin-right: 7rem;
 }
 
-.make-margin-l70 {
+.make-margin-70-left {
   margin-left: 7rem;
 }
 
-.make-margin-r70 {
+.make-margin-70-right {
   margin-right: 7rem;
 }
 
@@ -3246,29 +3246,29 @@ code {
   margin: 8rem;
 }
 
-.make-margin-v80 {
+.make-margin-80-vertical {
   margin-top: 8rem;
   margin-bottom: 8rem;
 }
 
-.make-margin-t80 {
+.make-margin-80-top {
   margin-top: 8rem;
 }
 
-.make-margin-b80 {
+.make-margin-80-bottom {
   margin-bottom: 8rem;
 }
 
-.make-margin-h80 {
+.make-margin-80-horizontal {
   margin-left: 8rem;
   margin-right: 8rem;
 }
 
-.make-margin-l80 {
+.make-margin-80-left {
   margin-left: 8rem;
 }
 
-.make-margin-r80 {
+.make-margin-80-right {
   margin-right: 8rem;
 }
 
@@ -3276,29 +3276,29 @@ code {
   margin: 9rem;
 }
 
-.make-margin-v90 {
+.make-margin-90-vertical {
   margin-top: 9rem;
   margin-bottom: 9rem;
 }
 
-.make-margin-t90 {
+.make-margin-90-top {
   margin-top: 9rem;
 }
 
-.make-margin-b90 {
+.make-margin-90-bottom {
   margin-bottom: 9rem;
 }
 
-.make-margin-h90 {
+.make-margin-90-horizontal {
   margin-left: 9rem;
   margin-right: 9rem;
 }
 
-.make-margin-l90 {
+.make-margin-90-left {
   margin-left: 9rem;
 }
 
-.make-margin-r90 {
+.make-margin-90-right {
   margin-right: 9rem;
 }
 
@@ -3306,29 +3306,29 @@ code {
   margin: 10rem;
 }
 
-.make-margin-v100 {
+.make-margin-100-vertical {
   margin-top: 10rem;
   margin-bottom: 10rem;
 }
 
-.make-margin-t100 {
+.make-margin-100-top {
   margin-top: 10rem;
 }
 
-.make-margin-b100 {
+.make-margin-100-bottom {
   margin-bottom: 10rem;
 }
 
-.make-margin-h100 {
+.make-margin-100-horizontal {
   margin-left: 10rem;
   margin-right: 10rem;
 }
 
-.make-margin-l100 {
+.make-margin-100-left {
   margin-left: 10rem;
 }
 
-.make-margin-r100 {
+.make-margin-100-right {
   margin-right: 10rem;
 }
 

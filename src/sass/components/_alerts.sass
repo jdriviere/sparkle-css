@@ -7,7 +7,6 @@
 // VARIABLES
 // ====================================
 $alert-color-map: (primary: $lblue_base, info: $blue_base, success: $green_base, warning: $yellow_base, danger: $red_base, light: $white_base, dark: $black_base) !default
-$alert-name: 'alert' !default
 $alert-font-size: $font-size !default
 $alert-font-weight: $font-weight-normal !default
 $alert-margin: 1.0rem !default
@@ -28,30 +27,26 @@ $alert-border-radius: 0.5rem !default
     width: 100%
     margin: ($alert-margin / 2) 0
     padding: ($alert-padding / 2) $alert-padding
-    // background: lighten($grey_base, $lighten)
     background: $grey_base
-    // color: darken($grey_base, $darken * 3)
     color: $font-color
     font:
         size: $alert-font-size
         weight: $alert-font-weight
     border-radius: $alert-border-radius
     border: 1px solid darken($grey_base, $darken * 3)
-    // border-left-width: 0.5rem
-    
     // Modifiers
     @each $type, $color in $alert-color-map
         &.make-#{$type}
             @if ($type == 'primary' or $type == 'warning' or $type == 'light')
-                background: $color
                 color: rgba($black_base, 0.75)
-            @else
                 background: $color
+            @else
                 color: $white_base
+                background: $color
             border-color: darken($color, $darken * 3)
 
 // ====================================
 // ALERTS
 // ====================================
-.#{$alert-name}
+.alert
     +create-alert

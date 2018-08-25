@@ -29,7 +29,7 @@ $space-size: 1.0rem !default
 // DISPLAYS
 // ====================================
 @each $name, $type in $display-map
-    .make-#{$name}
+    .make-display-#{$name}
         +create-display($type)
 
 // ====================================
@@ -65,10 +65,10 @@ $space-size: 1.0rem !default
         display: none !important
     .make-invisible-desktop-only
         visibility: hidden !important
-+fullhd
-    .make-hidden-fullhd
++widescreen
+    .make-hidden-widescreen
         display: none !important
-    .make-invisible-fullhd
+    .make-invisible-widescreen
         visibility: hidden !important    
 
 // ====================================
@@ -84,23 +84,23 @@ $space-size: 1.0rem !default
         padding: $i * $space-size
     
     //--- VERTICAL ---
-    .make-padding-v#{$i * $space-count-max}
+    .make-padding-#{$i * $space-count-max}-vertical
         padding:
             top: $i * $space-size
             bottom: $i * $space-size
-    .make-padding-t#{$i * $space-count-max}
+    .make-padding-#{$i * $space-count-max}-top
         padding-top: $i * $space-size
-    .make-padding-b#{$i * $space-count-max}
+    .make-padding-#{$i * $space-count-max}-bottom
         padding-bottom: $i * $space-size
 
     //--- HORIZONTAL ---
-    .make-padding-h#{$i * $space-count-max}
+    .make-padding-#{$i * $space-count-max}-horizontal
         padding:
             left: $i * $space-size
             right: $i * $space-size
-    .make-padding-l#{$i * $space-count-max}
+    .make-padding-#{$i * $space-count-max}-left
         padding-left: $i * $space-size
-    .make-padding-r#{$i * $space-count-max}
+    .make-padding-#{$i * $space-count-max}-right
         padding-right: $i * $space-size
 
 // MARGINS
@@ -113,21 +113,21 @@ $space-size: 1.0rem !default
         margin: ($i * $space-size)
         
     //--- VERTICAL ---
-    .make-margin-v#{$i * $space-count-max}
+    .make-margin-#{$i * $space-count-max}-vertical
         margin:
             top: $i * $space-size
             bottom: $i * $space-size
-    .make-margin-t#{$i * $space-count-max}
+    .make-margin-#{$i * $space-count-max}-top
         margin-top: $i * $space-size
-    .make-margin-b#{$i * $space-count-max}
+    .make-margin-#{$i * $space-count-max}-bottom
         margin-bottom: $i * $space-size
 
     //--- HORIZONTAL ---
-    .make-margin-h#{$i * $space-count-max}
+    .make-margin-#{$i * $space-count-max}-horizontal
         margin:
             left: $i * $space-size
             right: $i * $space-size
-    .make-margin-l#{$i * $space-count-max}
+    .make-margin-#{$i * $space-count-max}-left
         margin-left: $i * $space-size
-    .make-margin-r#{$i * $space-count-max}
+    .make-margin-#{$i * $space-count-max}-right
         margin-right: $i * $space-size
