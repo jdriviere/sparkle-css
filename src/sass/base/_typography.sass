@@ -51,14 +51,15 @@ h6
 // PARAGRAPHS, LINKS
 // ====================================
 a
-    color: $font-color
+    color: map-get($theme-map, primary)
     font:
         size: $font-size
         weight: $font-weight-normal
     text-decoration: none
+    cursor: pointer
     // Pseudo
     &:hover
-        color: map-get($theme-map, primary)
+        color: $font-color
 
 // ====================================
 // TEXT FORMATS

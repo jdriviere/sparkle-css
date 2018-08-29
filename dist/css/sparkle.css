@@ -100,14 +100,15 @@ h6 {
 }
 
 a {
-  color: #404040;
+  color: #ADD2E6;
   font-size: 1.6rem;
   font-weight: 400;
   text-decoration: none;
+  cursor: pointer;
 }
 
 a:hover {
-  color: #ADD2E6;
+  color: #404040;
 }
 
 .make-text-size1 {
@@ -1645,6 +1646,10 @@ code {
      -moz-appearance: none;
           appearance: none;
   outline: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   background: #E2E2E2;
   padding: 0.5rem 1.5rem;
   line-height: 1.6;
@@ -1653,7 +1658,7 @@ code {
   text-decoration: none;
   font-size: 1.6rem;
   font-weight: 400;
-  color: #222528;
+  color: #404040;
   border: 1px solid transparent;
   border-radius: 0.3rem;
   cursor: pointer;
