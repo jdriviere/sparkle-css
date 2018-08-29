@@ -3,7 +3,7 @@
   "description": "Simple CSS framework coded in CSS and jQuery",
   "main": [
     "dist/css/sparkle.css",
-    "dist/js/sparkle.js"
+    "dist/css/sparkle.min.css"
   ],
   "authors": [
     "J. Djimitry Riviere <tilithar@gmail.com>"
