@@ -782,7 +782,7 @@ code {
 /* =================================================== */
 .wrapper {
   position: relative;
-  width: 96%;
+  width: calc(100% - (1.5rem * 2));
   margin: 0 auto;
 }
 
@@ -817,30 +817,19 @@ code {
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-bottom: 1.5rem;
 }
 
 .grid:last-child {
   margin-bottom: 0;
 }
 
-.grid:before, .grid:after {
+.grid::before, .grid::after {
   content: '';
   display: table;
 }
 
-.grid:after {
+.grid::after {
   clear: both;
-}
-
-.grid.make-gutters {
-  margin-left: -0.75rem;
-  margin-right: -0.75rem;
-}
-
-.grid.make-gutters > .column {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -850,25 +839,19 @@ code {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .grid > [class*="column make-"] {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-  }
 }
 
-.grid > .column {
+.grid .column {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
   -ms-flex-preferred-size: 0;
       flex-basis: 0;
+  margin-bottom: 1.5rem;
 }
 
 @media screen and (min-width: 768px) {
-  .grid > .column.make-1, .grid > .column.make-twelfth {
+  .grid .column.make-1, .grid .column.make-twelfth {
     -webkit-box-flex: 0;
         -ms-flex-positive: 0;
             flex-grow: 0;
@@ -876,7 +859,7 @@ code {
         flex-basis: 8.33333%;
     width: 8.33333%;
   }
-  .grid > .column.make-2, .grid > .column.make-sixth {
+  .grid .column.make-2, .grid .column.make-sixth {
     -webkit-box-flex: 0;
         -ms-flex-positive: 0;
             flex-grow: 0;
@@ -884,7 +867,7 @@ code {
         flex-basis: 16.66667%;
     width: 16.66667%;
   }
-  .grid > .column.make-3, .grid > .column.make-fourth {
+  .grid .column.make-3, .grid .column.make-fourth {
     -webkit-box-flex: 0;
         -ms-flex-positive: 0;
             flex-grow: 0;
@@ -892,7 +875,7 @@ code {
         flex-basis: 25%;
     width: 25%;
   }
-  .grid > .column.make-4, .grid > .column.make-third {
+  .grid .column.make-4, .grid .column.make-third {
     -webkit-box-flex: 0;
         -ms-flex-positive: 0;
             flex-grow: 0;
@@ -900,7 +883,7 @@ code {
         flex-basis: 33.33333%;
     width: 33.33333%;
   }
-  .grid > .column.make-5 {
+  .grid .column.make-5 {
     -webkit-box-flex: 0;
         -ms-flex-positive: 0;
             flex-grow: 0;
@@ -908,7 +891,7 @@ code {
         flex-basis: 41.66667%;
     width: 41.66667%;
   }
-  .grid > .column.make-6, .grid > .column.make-half {
+  .grid .column.make-6, .grid .column.make-half {
     -webkit-box-flex: 0;
         -ms-flex-positive: 0;
             flex-grow: 0;
@@ -916,7 +899,7 @@ code {
         flex-basis: 50%;
     width: 50%;
   }
-  .grid > .column.make-7 {
+  .grid .column.make-7 {
     -webkit-box-flex: 0;
         -ms-flex-positive: 0;
             flex-grow: 0;
@@ -924,7 +907,7 @@ code {
         flex-basis: 58.33333%;
     width: 58.33333%;
   }
-  .grid > .column.make-8, .grid > .column.make-thirds {
+  .grid .column.make-8, .grid .column.make-thirds {
     -webkit-box-flex: 0;
         -ms-flex-positive: 0;
             flex-grow: 0;
@@ -932,7 +915,7 @@ code {
         flex-basis: 66.66667%;
     width: 66.66667%;
   }
-  .grid > .column.make-9, .grid > .column.make-fourths {
+  .grid .column.make-9, .grid .column.make-fourths {
     -webkit-box-flex: 0;
         -ms-flex-positive: 0;
             flex-grow: 0;
@@ -940,7 +923,7 @@ code {
         flex-basis: 75%;
     width: 75%;
   }
-  .grid > .column.make-10, .grid > .column.make-sixths {
+  .grid .column.make-10, .grid .column.make-sixths {
     -webkit-box-flex: 0;
         -ms-flex-positive: 0;
             flex-grow: 0;
@@ -948,7 +931,7 @@ code {
         flex-basis: 83.33333%;
     width: 83.33333%;
   }
-  .grid > .column.make-11, .grid > .column.make-twelfths {
+  .grid .column.make-11, .grid .column.make-twelfths {
     -webkit-box-flex: 0;
         -ms-flex-positive: 0;
             flex-grow: 0;
@@ -956,7 +939,7 @@ code {
         flex-basis: 91.66667%;
     width: 91.66667%;
   }
-  .grid > .column.make-12, .grid > .column.make-full {
+  .grid .column.make-12, .grid .column.make-full {
     -webkit-box-flex: 0;
         -ms-flex-positive: 0;
             flex-grow: 0;
@@ -966,47 +949,57 @@ code {
   }
 }
 
-.grid > .column[class*="offset-"] {
+.grid .column[class*="offset-"] {
   margin-left: 0;
 }
 
 @media screen and (min-width: 768px) {
-  .grid > .column.offset-1, .grid > .column.offset-twelfth {
+  .grid .column.offset-1, .grid .column.offset-twelfth {
     margin-left: 8.33333%;
   }
-  .grid > .column.offset-2, .grid > .column.offset-sixth {
+  .grid .column.offset-2, .grid .column.offset-sixth {
     margin-left: 16.66667%;
   }
-  .grid > .column.offset-3, .grid > .column.offset-fourth {
+  .grid .column.offset-3, .grid .column.offset-fourth {
     margin-left: 25%;
   }
-  .grid > .column.offset-4, .grid > .column.offset-third {
+  .grid .column.offset-4, .grid .column.offset-third {
     margin-left: 33.33333%;
   }
-  .grid > .column.offset-5 {
+  .grid .column.offset-5 {
     margin-left: 41.66667%;
   }
-  .grid > .column.offset-6, .grid > .column.offset-half {
+  .grid .column.offset-6, .grid .column.offset-half {
     margin-left: 50%;
   }
-  .grid > .column.offset-7 {
+  .grid .column.offset-7 {
     margin-left: 58.33333%;
   }
-  .grid > .column.offset-8, .grid > .column.offset-thirds {
+  .grid .column.offset-8, .grid .column.offset-thirds {
     margin-left: 66.66667%;
   }
-  .grid > .column.offset-9, .grid > .column.offset-fourths {
+  .grid .column.offset-9, .grid .column.offset-fourths {
     margin-left: 75%;
   }
-  .grid > .column.offset-10, .grid > .column.offset-sixths {
+  .grid .column.offset-10, .grid .column.offset-sixths {
     margin-left: 83.33333%;
   }
-  .grid > .column.offset-11, .grid > .column.offset-twelfths {
+  .grid .column.offset-11, .grid .column.offset-twelfths {
     margin-left: 91.66667%;
   }
-  .grid > .column.offset-12, .grid > .column.offset-full {
+  .grid .column.offset-12, .grid .column.offset-full {
     margin-left: 100%;
   }
+}
+
+.grid.make-gutters {
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+}
+
+.grid.make-gutters .column {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 /* =================================================== */

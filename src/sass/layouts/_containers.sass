@@ -7,14 +7,15 @@
 // VARIABLES
 // ====================================
 // Wrapper Variables
-$wrapper-spacing: 2.5% !default
+$wrapper-margin: 1.5rem !default
 
 // ====================================
 // MIXINS
 // ====================================
 =create-wrapper
     position: relative
-    width: 96%
+    // width: 96%
+    width: calc(100% - (#{$wrapper-margin} * 2))
     margin: 0 auto
     // Pseudo
     &:before,

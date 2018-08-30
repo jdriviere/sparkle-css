@@ -8,8 +8,6 @@
 // ====================================
 $grid-margin: 1.5rem !default
 $grid-gutter: 1.5rem !default
-
-// Column Variables
 $column-max: 12 !default
 
 // ====================================
@@ -21,38 +19,27 @@ $column-max: 12 !default
     flex:
         direction: column
         wrap: wrap
-    margin-bottom: $grid-margin
     // Pseudo
     &:last-child
         margin-bottom: 0
-    &:before,
-    &:after
+    &::before,
+    &::after
         content: ''
         display: table
-    &:after
+    &::after
         clear: both
-    // Modifiers
-    &.make-gutters
-        margin:
-            left: $grid-gutter / -2
-            right: $grid-gutter / -2
-        // Elements
-        > .column
-            padding:
-                left: $grid-gutter / 2
-                right: $grid-gutter / 2
     // Media Queries
     @media screen and (min-width: $bp-large)
         flex-direction: row
         // Elements
-        > [class*="column make-"]
-            flex-grow: 1
+        // [class*="column make-"]
+        //     flex-grow: 1
     // Elements
-    > .column
+    .column
         flex:
             grow: 1
-            shrink: 0
             basis: 0
+        margin-bottom: $grid-margin
         // Media Queries
         @media screen and (min-width: $bp-large)
             @for $i from 1 through $column-max
@@ -82,35 +69,44 @@ $column-max: 12 !default
                 @extend .make-11
             &.make-full
                 @extend .make-12
-    > .column[class*="offset-"]
+    .column[class*="offset-"]
         margin-left: 0
     // Media Queries
     @media screen and (min-width: $bp-large)
         @for $i from 1 through $column-max
-            > .column.offset-#{$i}
+            .column.offset-#{$i}
                 margin-left: ((100% / $column-max) * $i)
         // Fractionals
-        > .column.offset-twelfth
+        .column.offset-twelfth
             @extend .offset-1
-        > .column.offset-sixth
+        .column.offset-sixth
             @extend .offset-2
-        > .column.offset-fourth
+        .column.offset-fourth
             @extend .offset-3
-        > .column.offset-third
+        .column.offset-third
             @extend .offset-4
-        > .column.offset-half
+        .column.offset-half
             @extend .offset-6
-        > .column.offset-thirds
+        .column.offset-thirds
             @extend .offset-8
-        > .column.offset-fourths
+        .column.offset-fourths
             @extend .offset-9
-        > .column.offset-sixths
+        .column.offset-sixths
             @extend .offset-10
-        > .column.offset-twelfths
+        .column.offset-twelfths
             @extend .offset-11
-        > .column.offset-full
+        .column.offset-full
             @extend .offset-12
-
+    // Modifiers
+    &.make-gutters
+        margin:
+            left: $grid-gutter / -2
+            right: $grid-gutter / -2
+        // Elements
+        .column
+            padding:
+                left: $grid-gutter / 2
+                right: $grid-gutter / 2
 // ====================================
 // GRID
 // ====================================
