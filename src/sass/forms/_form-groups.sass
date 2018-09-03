@@ -7,13 +7,20 @@
 =create-form-group
     position: relative
     display: flex
-    flex: 1
+    // flex: 1
+    flex:
+        direction: row
+        wrap: nowrap
     width: 100%
     // Elements
     .input,
     .select
         display: flex
-        flex: 1
+        // flex: 1
+        flex:
+            grow: 1
+            shrink: 0
+            basis: 0
         line-height: $line-height
         // Pseudo
         &:first-child:not(:last-child)
@@ -42,5 +49,8 @@
                 top-left-radius: 0
                 bottom-left-radius: 0
 
+// ====================================
+// FORM-GROUP
+// ====================================
 .form-group
     +create-form-group
