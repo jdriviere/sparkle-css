@@ -80,6 +80,9 @@ a
 @each $type, $color in $text-color-map
     .make-text-#{$type}
         color: $color
+        // Modifiers
+        &.make-text-muted
+            color: rgba($color, 0.5)
     
 //--- SPECIAL ---
 .make-text-title
@@ -92,10 +95,8 @@ a
         weight: $text-font-subtitle-weight
 .make-text-italic
     font-style: italic
-    
-//--- TEXT LINES ---
-.make-text-linethrough
-    text-decoration-line: line-through
+.make-text-muted
+    color: rgba($font-color, 0.5)
 
 // ====================================
 // CODE

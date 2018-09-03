@@ -52,19 +52,27 @@ body {
   color: #F4F4F8;
 }
 
+dl,
 ol,
-ul:not(.nav__menu):not(.menu) {
-  margin-left: 2rem;
+ul {
+  list-style-position: inside;
 }
 
+dl:not(:last-child),
 ol:not(:last-child),
-ul:not(.nav__menu):not(.menu):not(:last-child) {
+ul:not(:last-child) {
   margin-bottom: 1rem;
 }
 
-ol > li,
-ul:not(.nav__menu):not(.menu) > li {
-  padding-left: 2rem;
+dl dl, dl ol, dl ul,
+ol dl,
+ol ol,
+ol ul,
+ul dl,
+ul ol,
+ul ul {
+  margin-bottom: 0;
+  margin-left: 2rem;
 }
 
 /* =================================================== */
@@ -171,28 +179,56 @@ a:hover {
   color: #ADD2E6;
 }
 
+.make-text-primary.make-text-muted {
+  color: rgba(173, 210, 230, 0.5);
+}
+
 .make-text-info {
   color: #1982C4;
+}
+
+.make-text-info.make-text-muted {
+  color: rgba(25, 130, 196, 0.5);
 }
 
 .make-text-success {
   color: #6ABB4F;
 }
 
+.make-text-success.make-text-muted {
+  color: rgba(106, 187, 79, 0.5);
+}
+
 .make-text-warning {
   color: #FEC524;
+}
+
+.make-text-warning.make-text-muted {
+  color: rgba(254, 197, 36, 0.5);
 }
 
 .make-text-danger {
   color: #FF3344;
 }
 
+.make-text-danger.make-text-muted {
+  color: rgba(255, 51, 68, 0.5);
+}
+
 .make-text-light {
   color: #F4F4F8;
 }
 
+.make-text-light.make-text-muted {
+  color: rgba(244, 244, 248, 0.5);
+}
+
 .make-text-dark {
   color: #222528;
+}
+
+.make-text-dark.make-text-muted {
+  color: rgba(34, 37, 40, 0.5);
 }
 
 .make-text-title {
@@ -209,9 +245,8 @@ a:hover {
   font-style: italic;
 }
 
-.make-text-linethrough {
-  -webkit-text-decoration-line: line-through;
-          text-decoration-line: line-through;
+.make-text-muted {
+  color: rgba(64, 64, 64, 0.5);
 }
 
 code {
