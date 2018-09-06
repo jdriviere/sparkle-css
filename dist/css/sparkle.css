@@ -37,7 +37,7 @@ body {
   line-height: 1.6;
   background: #FFFFFF;
   color: #404040;
-  font-family: "Lato", "Helvetica Neue", Helvetica, "Open Sans", Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Lato", Roboto, Oxygen-Sans, Ubuntu, "Helvetica Neue", sans-serif;
   font-size: 1.6rem;
   font-weight: 300;
 }
