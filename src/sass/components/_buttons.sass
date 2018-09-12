@@ -7,11 +7,7 @@
 // VARIABLES
 // =================================
 $button-color-map: (primary: $lblue_base, info: $blue_base, success: $green_base, warning: $yellow_base, danger: $red_base, light: $white_base, dark: $black_base) !default
-$button-margin: 0.25em !default
 $button-padding: 0.5rem 1.5rem !default
-
-// --- GROUP --- //
-$button-group-spacing: .25em !default
 
 // =================================
 // MIXINS
@@ -43,12 +39,16 @@ $button-group-spacing: .25em !default
     cursor: pointer
     white-space: nowrap
     // Pseudo
-    &:hover
+    &:not(:disabled):hover,
+    &:not(:disabled):focus
+        text-decoration: none // Ensures <a> won't have any underlines
         background: darken($grey_base, $darken)
     &:disabled,
-    &.make-disabled
-        user-select: none
+    &.make-disabled,
+    &[disabled]
         cursor: not-allowed
+        user-select: none
+        pointer-events: none
         opacity: 0.3
     // Modifiers
     @each $type, $color in $button-color-map
@@ -60,9 +60,9 @@ $button-group-spacing: .25em !default
             background: $color
             border: 1px solid $color-none
             // Pseudo
-            &:hover,
-            &:focus,
-            &:active
+            &:not(:disabled):hover,
+            &:not(:disabled):focus,
+            &:not(:disabled):active
                 background: darken($color, $darken)
                 border-color: $color-none
             // Modifiers
@@ -74,9 +74,9 @@ $button-group-spacing: .25em !default
                 color: $color !important
                 border: 1px solid $color-none
                 // Pseudo
-                &:hover,
-                &:focus,
-                &:active
+                &:not(:disabled):hover,
+                &:not(:disabled):focus,
+                &:not(:disabled):active
                     @if ($type == 'primary' or $type == 'warning' or $type == 'light')
                         background: darken($black_base, $darken) !important
                     @else
@@ -92,9 +92,9 @@ $button-group-spacing: .25em !default
                         color: $white_base !important
                         border: 1px solid $white_base
                     // Pseudo
-                    &:hover,
-                    &:focus,
-                    &:active
+                    &:not(:disabled):hover,
+                    &:not(:disabled):focus,
+                    &:not(:disabled):active
                         @if ($type == 'primary' or $type == 'warning' or $type == 'light')
                             background: $black_base !important
                         @else
@@ -106,9 +106,9 @@ $button-group-spacing: .25em !default
                     color: $color !important
                     border-color: $color-none
                     // Pseudo
-                    &:hover,
-                    &:focus,
-                    &:active
+                    &:not(:disabled):hover,
+                    &:not(:disabled):focus,
+                    &:not(:disabled):active
                         background: rgba($grey_base, 0.1)
                         color: darken($color, 10%) !important
                         text-decoration: underline
@@ -117,9 +117,9 @@ $button-group-spacing: .25em !default
                     color: $color !important
                     border-color: $color-none
                     // Pseudo
-                    &:hover,
-                    &:focus,
-                    &:active
+                    &:not(:disabled):hover,
+                    &:not(:disabled):focus,
+                    &:not(:disabled):active
                         background: rgba($color, 0.1)
                         color: darken($color, 10%) !important
                         text-decoration: underline
@@ -128,9 +128,9 @@ $button-group-spacing: .25em !default
                 color: $color !important
                 border: 1px solid $color
                 // Pseudo
-                &:hover,
-                &:focus,
-                &:active
+                &:not(:disabled):hover,
+                &:not(:disabled):focus,
+                &:not(:disabled):active
                     @if ($type == 'primary' or $type == 'warning' or $type == 'light')
                         color: $black_base !important
                     @else
@@ -158,42 +158,10 @@ $button-group-spacing: .25em !default
     &.make-round
         border-radius: 3.5rem
 
-=create-button-group
-    display: flex
-    flex:
-        direction: row
-        wrap: wrap
-    justify-content: flex-start
-    align-items: center  
-    // Elements
-    & > .button:not(.make-block)
-        margin:
-            bottom: $button-margin
-            right: $button-margin
-        // Pseudo
-        &:last-child
-            margin-right: 0
-    // Modifiers
-    // NOTE: '.make-solid' is a temporary name
-    &.make-solid
-        & > .button
-            // Pseudo
-            &:not(:first-child)
-                border:
-                    top-left-radius: 0
-                    bottom-left-radius: 0
-            &:not(:last-child)
-                margin-right: -1px
-                border:
-                    top-right-radius: 0
-                    bottom-right-radius: 0
+
 
 // =================================
 // BUTTONS
 // =================================
 .button
     +create-button
-
-// --- GROUP --- //
-.buttons
-    +create-button-group
