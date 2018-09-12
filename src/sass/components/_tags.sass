@@ -7,14 +7,9 @@
 // VARIABLES
 // ====================================
 $tag-color-map: (primary: $lblue_base, info: $blue_base, success: $green_base, warning: $yellow_base, danger: $red_base, light: $white_base, dark: $black_base) !default
-$tag-name: 'tag' !default
-$tag-margin: 1.5rem !default
 $tag-padding: 0.5rem 1rem !default
 $tag-font-size: 1.2rem !default
 $tag-font-weight: $font-weight-normal
-
-$tag-group-name: 'tags' !default
-$tag-group-spacing: 0.125em !default
 
 // ====================================
 // MIXINS
@@ -23,6 +18,7 @@ $tag-group-spacing: 0.125em !default
     display: inline-flex
     flex:
         grow: 0
+        shrink: 0
         basis: auto
     justify-content: center
     align-items: center
@@ -57,45 +53,9 @@ $tag-group-spacing: 0.125em !default
     &.make-bullet
         border-radius: 2.0rem
 
-=create-tag-group
-    display: flex
-    flex:
-        direction: row
-        wrap: wrap
-    justify-content: flex-start
-    align-items: center  
-
-    // Elements
-    & > .#{$tag-name}:not(.make-block)
-        margin:
-            bottom: $button-margin
-            right: $button-margin
-        
-        // Pseudo
-        &:last-child
-            margin-right: 0
-    
-    // Modifiers
-    // NOTE: '.make-solid' is a temporary name
-    &.make-solid
-        & > .#{$tag-name}
-            // Pseudo
-            &:not(:first-child)
-                border:
-                    top-left-radius: 0
-                    bottom-left-radius: 0
-            &:not(:last-child)
-                margin-right: -1px
-                border:
-                    top-right-radius: 0
-                    bottom-right-radius: 0
 
 // ====================================
 // TAGS
 // ====================================
-.#{$tag-name}
+.tag
     +create-tag
-
-// --- GROUP --- //
-.#{$tag-group-name}
-    +create-tag-group
