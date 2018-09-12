@@ -1320,7 +1320,7 @@ code {
 }
 
 .nav__brand img, .nav__brand__img {
-  max-height: 3.0rem;
+  height: 4.0rem;
 }
 
 .nav__brand.make-extra {
