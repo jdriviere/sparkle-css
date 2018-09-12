@@ -1,0 +1,48 @@
+/* ===================================================
+/* BUTTON-GROUPS
+/* ===================================================
+@import ../config/_all
+
+// =================================
+// VARIABLES
+// =================================
+$button-margin: 0.25em !default
+
+// =================================
+// MIXINS
+// =================================
+=create-button-group
+    display: flex
+    flex:
+        direction: row
+        wrap: wrap
+    justify-content: flex-start
+    align-items: center  
+    // Elements
+    & > .button:not(.make-block)
+        margin:
+            bottom: $button-margin
+            right: $button-margin
+        // Pseudo
+        &:last-child
+            margin-right: 0
+    // Modifiers
+    // NOTE: '.make-solid' is a temporary name
+    &.make-solid
+        & > .button:not(.make-block)
+            // Pseudo
+            &:not(:first-child)
+                border:
+                    top-left-radius: 0
+                    bottom-left-radius: 0
+            &:not(:last-child)
+                margin-right: -1px
+                border:
+                    top-right-radius: 0
+                    bottom-right-radius: 0
+
+// =================================
+// BUTTON-GROUPS
+// =================================
+.buttons
+    +create-button-group
