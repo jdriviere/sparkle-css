@@ -6,14 +6,17 @@
 // ====================================
 // VARIABLES
 // ====================================
-$navig-colorbg       :   lighten($grey_base, $lighten)
+$navig-min-height       :   6.0rem !default
+$navig-colorbg         :   lighten($grey_base, $lighten)
 // $navig-colorbg       :   #FAFAFB !default
-$navig-colorborder   :   darken($navig-colorbg, $darken) !default
-$navig-spacing       :   1.5rem !default
-$navig-padding       :   1.0rem !default
-$navig-brand         :   1.5rem !default
-$navig-font          :   1.5rem !default
-$navig-font-color    :   $font-color !default
+$navig-color-border    :   darken($navig-colorbg, $darken) !default
+$navig-spacing         :   1.5rem !default
+$navig-padding         :   1.0rem !default
+$navig-brand           :   1.5rem !default
+$navig-font            :   1.5rem !default
+$navig-font-color      :   $font-color !default
+$navig-font-opacity    :   0.5 !default
+$navig-font-opacity-hovered    :   1.0 !default
 
 // ====================================
 // NAVIGATION
@@ -24,14 +27,17 @@ $navig-font-color    :   $font-color !default
     flex: 1
     flex-direction: column
     width: 100%
+    min-height: $navig-min-height
     height: auto
     margin: 0
     padding: 0
-    background: $navig-colorbg  
+    background: $navig-colorbg
+    border-bottom: 1px solid $navig-color-border
+    box-shadow: 0 1px 3px rgba($black_base, 0.1), 0 1px 6px rgba($black_base, 0.05)
     
     // Elements
     // --- MOBILE --- //
-    input[type='checkbox']
+    > input[type='checkbox']
         // Must be checkbox and have an id equivalent to nav__toggle's for
         display: none
         height: 60px
@@ -85,16 +91,20 @@ $navig-font-color    :   $font-color !default
                 display: block
                 padding: $navig-padding
                 text-decoration: none !important
-                color: $navig-font-color
+                color: rgba($navig-font-color, $navig-font-opacity)
                 cursor: pointer
             // Pseudo
             &:hover
-                background: darken($navig-colorbg, 5%)
+                background: darken($navig-colorbg, $navig-font-opacity-hovered)
+                // Elements
+                & > a
+                    color: rgba($navig-font-color, $navig-font-opacity-hovered)
             // Modifiers
             &.make-active
                 // Elements
                 > a
-                    color: map-get($theme-map, primary)
+                    color: rgba($navig-font-color, $navig-font-opacity-hovered)
+                    font-weight: $font-weight-heavy
             &.make-special
                 background: map-get($theme-map, primary)
                 // Elements
@@ -130,12 +140,13 @@ $navig-font-color    :   $font-color !default
                 basis: auto
             align-items: center
             padding: 0 $navig-padding
-            border-right: 1px solid $navig-colorborder 
+            border-right: 1px solid $navig-color-border
         &__menu
             display: flex
             flex-direction: row
             align-items: center
             width: auto
+            margin-bottom: 0 !important
             // Elements
             &__item
                 // Pseudo
@@ -143,7 +154,7 @@ $navig-font-color    :   $font-color !default
                     background: $color-none
                     // Elements
                     > a
-                        color: map-get($theme-map, primary)
+                        color: rgba($navig-font-color, $navig-font-opacity-hovered)
             // Modifiers
             &.make-right
                 margin-left: auto

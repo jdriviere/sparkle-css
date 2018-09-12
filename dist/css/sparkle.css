@@ -1262,25 +1262,29 @@ code {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
+  min-height: 6rem;
   height: auto;
   margin: 0;
   padding: 0;
   background: whitesmoke;
+  border-bottom: 1px solid #e2e2e2;
+  -webkit-box-shadow: 0 1px 3px rgba(34, 37, 40, 0.1), 0 1px 6px rgba(34, 37, 40, 0.05);
+          box-shadow: 0 1px 3px rgba(34, 37, 40, 0.1), 0 1px 6px rgba(34, 37, 40, 0.05);
 }
 
-.nav input[type='checkbox'] {
+.nav > input[type='checkbox'] {
   display: none;
   height: 60px;
 }
 
-.nav input[type='checkbox']:checked ~ .nav__menu {
+.nav > input[type='checkbox']:checked ~ .nav__menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: auto;
 }
 
-.nav input[type='checkbox']:checked ~ .nav__toggle {
+.nav > input[type='checkbox']:checked ~ .nav__toggle {
   color: black;
   border-color: black;
 }
@@ -1337,16 +1341,21 @@ code {
   display: block;
   padding: 1rem;
   text-decoration: none !important;
-  color: #404040;
+  color: rgba(64, 64, 64, 0.5);
   cursor: pointer;
 }
 
 .nav__menu__item:hover {
-  background: #e8e8e8;
+  background: #f3f3f3;
+}
+
+.nav__menu__item:hover > a {
+  color: #404040;
 }
 
 .nav__menu__item.make-active > a {
-  color: #ADD2E6;
+  color: #404040;
+  font-weight: 700;
 }
 
 .nav__menu__item.make-special {
@@ -1418,12 +1427,13 @@ code {
         -ms-flex-align: center;
             align-items: center;
     width: auto;
+    margin-bottom: 0 !important;
   }
   .nav__menu__item:hover {
     background: transparent;
   }
   .nav__menu__item:hover > a {
-    color: #ADD2E6;
+    color: #404040;
   }
   .nav__menu.make-right {
     margin-left: auto;
