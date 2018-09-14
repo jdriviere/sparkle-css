@@ -2685,7 +2685,7 @@ code {
   display: inline-block;
 }
 
-.make-clear:after {
+.make-clear::after {
   visibility: hidden;
   display: block;
   font-size: 0;
@@ -2730,7 +2730,16 @@ code {
   .make-phone-hidden {
     display: none !important;
   }
-  .make-invisible-phone {
+  .make-phone-invisible {
+    visibility: hidden !important;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 639px) {
+  .make-hidden-mobile-only {
+    display: none !important;
+  }
+  .make-invisible-mobile-only {
     visibility: hidden !important;
   }
 }
@@ -2754,10 +2763,10 @@ code {
 }
 
 @media screen and (min-width: 960px) {
-  .make-hidden-desktop {
+  .make-desktop-hidden {
     display: none !important;
   }
-  .make-invisible-desktop {
+  .make-desktop-invisible {
     visibility: hidden !important;
   }
 }
@@ -2772,10 +2781,10 @@ code {
 }
 
 @media screen and (min-width: 1200px) {
-  .make-hidden-widescreen {
+  .make-widescreen-hidden {
     display: none !important;
   }
-  .make-invisible-widescreen {
+  .make-widescreen-invisible {
     visibility: hidden !important;
   }
 }
