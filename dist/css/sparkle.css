@@ -236,6 +236,10 @@ a:hover {
   font-weight: 400;
 }
 
+.make-text-title + .make-text-subtitle {
+  margin-top: -1.0rem !important;
+}
+
 .make-text-subtitle {
   font-size: 2.5rem;
   font-weight: 400;
@@ -243,6 +247,18 @@ a:hover {
 
 .make-text-italic {
   font-style: italic;
+}
+
+.make-text-uppercase {
+  text-transform: uppercase;
+}
+
+.make-text-lowercase {
+  text-transform: lowercase;
+}
+
+.make-text-capitalized {
+  text-transform: capitalize;
 }
 
 .make-text-muted {

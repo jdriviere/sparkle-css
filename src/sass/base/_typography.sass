@@ -84,17 +84,29 @@ a
         &.make-text-muted
             color: rgba($color, 0.5)
     
-//--- SPECIAL ---
+//--- SPECIAL (FONT) ---
 .make-text-title
     font:
         size: $text-font-title-size
         weight: $text-font-title-weight
+    // Elements
+    // @NOTE: When both are combined together, remove extra margin
+    & + .make-text-subtitle
+        margin-top: -1.0rem !important
 .make-text-subtitle
     font:
         size: $text-font-subtitle-size
         weight: $text-font-subtitle-weight
 .make-text-italic
     font-style: italic
+//--- SPECIAL (TEXT) ---
+.make-text-uppercase
+    text-transform: uppercase
+.make-text-lowercase
+    text-transform: lowercase
+.make-text-capitalized
+    text-transform: capitalize
+//--- SPECIAL (OPACITY) ---
 .make-text-muted
     color: rgba($font-color, 0.5)
 
