@@ -3,6 +3,7 @@
 .vscode/
 dev/
 docs/
+gulp/
 node_modules/
 src/css/
 src/img/
