@@ -279,14 +279,17 @@ code {
 .checkbox__toggle:checked + .checkbox__icon {
   border-color: #ADD2E6;
   -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
           transform: scale(1.1);
   -webkit-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
 
 .checkbox__toggle:checked + .checkbox__icon:after {
   background: #ADD2E6;
   -webkit-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
 
@@ -599,14 +602,17 @@ code {
 .radio__toggle:checked + .radio__icon {
   border-color: #ADD2E6;
   -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
           transform: scale(1.1);
   -webkit-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
 
 .radio__toggle:checked + .radio__icon:after {
   background: #ADD2E6;
   -webkit-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
 
@@ -684,6 +690,7 @@ code {
 
 .switch > .switch__toggle:checked ~ .switch__handle {
   -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
           transform: translateX(100%);
 }
 
@@ -716,6 +723,7 @@ code {
   border-radius: 50%;
   -webkit-transition: -webkit-transform 0.2s;
   transition: -webkit-transform 0.2s;
+  -o-transition: transform 0.2s;
   transition: transform 0.2s;
   transition: transform 0.2s, -webkit-transform 0.2s;
 }
@@ -2675,6 +2683,7 @@ code {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
 
