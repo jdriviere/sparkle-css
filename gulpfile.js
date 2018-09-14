@@ -16,12 +16,12 @@ const cssnano = require('cssnano');
 /* ==================================== */
 // RENDER CSS FILES
 gulp.task('sassify', function() {
-  var browser_pref = [
+  const browser_pref = [
     autoprefixer({
       browsers: ['last 3 versions', "IE 9"]
     })
   ];
-  var shrink_opt = [cssnano()];
+  const shrink_opt = [cssnano()];
 
   return gulp.src('src/sass/sparkle.sass')
     .pipe(sass({
