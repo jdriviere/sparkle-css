@@ -30,6 +30,7 @@
     "gulp-pug": "^4.0.1",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.1",
+    "postcss-header": "^1.0.0",
     "pump": "^3.0.0"
   }
 }
