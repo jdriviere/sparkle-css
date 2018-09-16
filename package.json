@@ -9,7 +9,7 @@
     "watch:html": "pug --watch ./dev/index.pug --pretty --out ./",
     "build:css": "sass ./src/sass/sparkle.sass ./dist/css/sparkle.css --style=expanded",
     "watch:css": "sass --watch ./src/sass/sparkle.sass:./dist/css/sparkle.css --style=expanded",
-    "build": "node node_modules/gulp/bin/gulp"
+    "build": "rm -rf ./dist/css/sparkle.* && node node_modules/gulp/bin/gulp"
   },
   "repository": {
     "type": "git",

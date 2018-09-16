@@ -38,7 +38,7 @@ gulp.task('sassify', function() {
       header: banner
     }),
     autoprefixer({
-      browsers: ['last 3 versions', "IE 9"]
+      browsers: ['last 3 versions', "IE >= 8"]
     })
   ];
   const shrink_opt = [cssnano()];
@@ -53,7 +53,9 @@ gulp.task('sassify', function() {
     .pipe(rename('sparkle.css'))
     .pipe(gulp.dest('dist/css/'))
     .pipe(postcss(shrink_opt))
-    .pipe(rename('sparkle.min.css'))
+    .pipe(rename({
+      suffix: '.min'
+    }))
     .pipe(gulp.dest('dist/css/'));
 
     // .pipe(browserSync.reload({
