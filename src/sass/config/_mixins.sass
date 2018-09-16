@@ -146,12 +146,20 @@
   @media screen and (min-width: $bp-medium) and (max-width: $bp-xlarge - 1)
     @content
 
+=tablet-down
+  @media screen and (max-width: $bp-xlarge - 1)
+    @content
+
 =desktop
   @media screen and (min-width: $bp-xlarge)
     @content
 
 =desktop-only
   @media screen and (min-width: $bp-xlarge) and (max-width: $bp-widescreen - 1)
+    @content
+
+=desktop-down
+  @media screen and (max-width: $bp-widescreen - 1)
     @content
 
 =widescreen

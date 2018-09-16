@@ -2705,45 +2705,8 @@ code {
 }
 
 /* =================================================== */
-/* UTILITIES */
+/* VISIBILITIES */
 /* =================================================== */
-.make-clear {
-  display: inline-block;
-}
-
-.make-clear::after {
-  visibility: hidden;
-  display: block;
-  font-size: 0;
-  content: "";
-  clear: both;
-  height: 0;
-}
-
-.make-display-block {
-  display: block;
-}
-
-.make-display-inline-block {
-  display: inline-block;
-}
-
-.make-display-inline {
-  display: inline;
-}
-
-.make-display-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.make-display-inline-flex {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
 .make-hidden {
   display: none !important;
 }
@@ -2788,6 +2751,15 @@ code {
   }
 }
 
+@media screen and (max-width: 959px) {
+  .make-hidden-tablet-down {
+    display: none !important;
+  }
+  .make-invisible-tablet-down {
+    visibility: hidden !important;
+  }
+}
+
 @media screen and (min-width: 960px) {
   .make-desktop-hidden {
     display: none !important;
@@ -2806,6 +2778,15 @@ code {
   }
 }
 
+@media screen and (max-width: 1199px) {
+  .make-hidden-desktop-down {
+    display: none !important;
+  }
+  .make-invisible-desktop-down {
+    visibility: hidden !important;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .make-widescreen-hidden {
     display: none !important;
@@ -2813,6 +2794,46 @@ code {
   .make-widescreen-invisible {
     visibility: hidden !important;
   }
+}
+
+/* =================================================== */
+/* UTILITIES */
+/* =================================================== */
+.make-clear {
+  display: inline-block;
+}
+
+.make-clear::after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: "";
+  clear: both;
+  height: 0;
+}
+
+.make-display-block {
+  display: block;
+}
+
+.make-display-inline-block {
+  display: inline-block;
+}
+
+.make-display-inline {
+  display: inline;
+}
+
+.make-display-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.make-display-inline-flex {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .make-no-padding {
