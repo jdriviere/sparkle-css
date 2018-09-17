@@ -5,13 +5,10 @@ dev/
 dist/css/main.css
 dist/img/
 node_modules/
-src/css/
-src/img/
-src/tests/
 unused/
 .gitignore
 .travis.yml
 bower.json
 *.html
 *.txt
-npm-debug.log
+*.log
