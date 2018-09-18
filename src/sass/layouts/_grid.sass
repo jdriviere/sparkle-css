@@ -32,9 +32,10 @@ $column-max: 12 !default
         @media screen and (min-width: $bp-large)
             @for $i from 1 through $column-max
                 &.make-#{$i}
-                    flex:
-                        grow: 0
-                        basis: ((100% * $i) / $column-max)
+                    flex: none
+                    // flex:
+                    //     grow: 0
+                    //     basis: ((100% * $i) / $column-max)
                     width: ((100% * $i) / $column-max)
             // Fractional
             &.make-twelfth
