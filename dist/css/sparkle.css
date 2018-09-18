@@ -12,7 +12,7 @@
     * Thank you for using Sparkle! Happy Designing!
     */
 /* External Imports */
-@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,800");
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
 @import 'https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css';
 @import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
 /* ========== SPARKLE.CSS STARTS HERE ========== */
@@ -157,7 +157,7 @@ a:hover {
 }
 
 .make-text-thick {
-  font-weight: 800;
+  font-weight: 900;
 }
 
 .make-text-left {
@@ -234,11 +234,12 @@ a:hover {
 
 .make-text-title {
   font-size: 4rem;
-  font-weight: 400;
+  font-weight: 900;
 }
 
 .make-text-title + .make-text-subtitle {
-  margin-top: -1.0rem !important;
+  margin-top: -1.5rem !important;
+  margin-bottom: 1.0rem;
 }
 
 .make-text-subtitle {
@@ -759,38 +760,43 @@ code {
 /* =================================================== */
 .card {
   width: 100%;
+  background: white;
   border: 1px solid #E2E2E2;
   border-radius: 0.3rem;
   overflow: hidden;
 }
 
-.card > .card__header {
+.card__header {
   padding: 2rem 1rem;
   border-bottom: 1px solid #E2E2E2;
 }
 
-.card > .card__header > .card__title {
+.card__header > .card__title {
   font-size: 2.4rem;
   font-weight: 700;
 }
 
-.card > .card__header > .card__subtitle {
+.card__header > .card__subtitle {
   font-size: 1.8rem;
   font-weight: 400;
 }
 
-.card > .card__body {
+.card__header > .card__title + .card__subtitle {
+  margin-top: -1.0rem !important;
+}
+
+.card__body {
   padding: 1rem;
   font-size: 1.6rem;
   color: #7F7F7F;
 }
 
-.card > .card__body > img,
-.card > .card__body > .card__image {
+.card__body > img,
+.card__body > .card__image {
   width: 100%;
 }
 
-.card > .card__footer {
+.card__footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -800,7 +806,7 @@ code {
   border-top: 1px solid #E2E2E2;
 }
 
-.card > .card__footer > .card__footer__item {
+.card__footer > .card__footer__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -821,27 +827,40 @@ code {
   padding: 2rem 1rem;
 }
 
-.card > .card__footer > .card__footer__item:not(:first-child) {
+.card__footer > .card__footer__item:not(:first-child) {
   border-left: 1px solid #E2E2E2;
 }
 
-.card > .card__footer > .card__footer__item > a {
+.card__footer > .card__footer__item > a {
   text-decoration: none;
-  color: #222528;
-}
-
-.card > .card__footer > .card__footer__item > a:hover {
   color: #ADD2E6;
 }
 
-.card.make-shadow {
+.card__footer > .card__footer__item > a:hover {
+  color: #222528;
+}
+
+.card.make-shadows {
   -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.15), 0 0 3em rgba(0, 0, 0, 0.05);
           box-shadow: 0 0 1em rgba(0, 0, 0, 0.15), 0 0 3em rgba(0, 0, 0, 0.05);
 }
 
-.card.make-hover:hover {
+.card.make-hoverable {
+  -webkit-transition: -webkit-box-shadow 0.2s ease-in;
+  transition: -webkit-box-shadow 0.2s ease-in;
+  -o-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in, -webkit-box-shadow 0.2s ease-in;
+}
+
+.card.make-hoverable:hover {
   -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.15), 0 0 3em rgba(0, 0, 0, 0.05);
           box-shadow: 0 0 1em rgba(0, 0, 0, 0.15), 0 0 3em rgba(0, 0, 0, 0.05);
+  -webkit-transition: -webkit-box-shadow 0.2s ease-in;
+  transition: -webkit-box-shadow 0.2s ease-in;
+  -o-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in, -webkit-box-shadow 0.2s ease-in;
 }
 
 /* =================================================== */
@@ -1482,7 +1501,7 @@ code {
 
 .table caption {
   font-size: 1.4rem;
-  font-weight: 800;
+  font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
 }

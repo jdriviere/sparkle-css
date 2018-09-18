@@ -10,9 +10,9 @@ $text-font-max: 4.8rem !default
 $text-font-increment: 0.6 !default
 $text-size-max: 6 !default
 $text-font-title-size: 4.0rem !default
-$text-font-title-weight: $font-weight-normal !default
+$text-font-title-weight: $font-weight-black !default
 $text-font-subtitle-size: 2.5rem !default
-$text-font-subtitle-weight: $text-font-title-weight !default
+$text-font-subtitle-weight: $font-weight-normal !default
 $text-color-map: (primary: $lblue_base, info: $blue_base, success: $green_base, warning: $yellow_base, danger: $red_base, light: $white_base, dark: $black_base) !default
 $text-alignments: (left: left, right: right, centered: center, justified: justify) !default
 $text-weights: (thin: $font-weight-light, normal: $font-weight-normal, bold: $font-weight-heavy, thick: $font-weight-black) !default
@@ -92,7 +92,9 @@ a
     // Elements
     // @NOTE: When both are combined together, remove extra margin
     & + .make-text-subtitle
-        margin-top: -1.0rem !important
+        margin:
+            top: -1.5rem !important
+            bottom: 1.0rem
 .make-text-subtitle
     font:
         size: $text-font-subtitle-size
