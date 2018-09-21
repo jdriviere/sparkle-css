@@ -2,7 +2,6 @@
 .sass-cache/
 .vscode/
 dev/
-dist/css/main.css
 dist/img/
 node_modules/
 unused/

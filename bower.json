@@ -1,6 +1,6 @@
 {
   "name": "sparkle.css",
-  "description": "Simple CSS framework coded in CSS and jQuery",
+  "description": "A lightweight, open-source, mobile-first CSS framework for easy website designs.",
   "main": [
     "dist/css/sparkle.css",
     "dist/css/sparkle.min.css"
