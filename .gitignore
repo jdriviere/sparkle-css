@@ -2,16 +2,12 @@
 .sass-cache/
 .vscode/
 dev/
-docs/
+dist/img/
 gulp/
 node_modules/
-src/css/
-src/img/
-src/tests/
 unused/
 
 # FILES
 **/*.map
-npm-debug.log
-examples.html
-test.html
+*.log
+*.html
