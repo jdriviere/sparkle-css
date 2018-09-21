@@ -1,13 +1,13 @@
 <p align="center">
-    <a href="http://jdriviere.github.io/sparkle-css" target="_blank">
-    	<img width="300" src="dist/img/Logo_InCol_v2.png">
+    <a href="https://sparklecss.herokuapp.com" target="_blank">
+    	<img style="width:120px;" src="dist/img/Sparkle_Logo.svg">
     </a>
 </p>
 
 A lightweight, open-source, mobile-first CSS framework for easy website designs.
 
 [![license](https://img.shields.io/badge/license-MIT-yellow.svg)](https://github.com/jdriviere/sparkle-css/blob/master/LICENSE)
-[![website](https://img.shields.io/badge/website-online-green.svg)](https://jdriviere.github.io/sparkle-css/)
+[![website](https://img.shields.io/badge/website-online-green.svg)](httpss://sparklecss.herokuapp.com)
 [![GitHub tag](https://img.shields.io/badge/version-1.9.14-blue.svg)](https://github.com/jdriviere/sparkle-css/releases/tag/v1.9.14)
 [![npm](https://img.shields.io/badge/npm-v1.9.14-red.svg)](https://www.npmjs.com/package/sparkle.css)
 [![jsDelivr](https://data.jsdelivr.com/v1/package/gh/jdriviere/sparkle-css/badge?style=rounded)](https://www.jsdelivr.com/package/gh/jdriviere/sparkle-css)
@@ -23,20 +23,19 @@ There are 3 ways to get started with the Sparkle framework:
 ```
 https://github.com/jdriviere/sparkle-css.git
 ```
+
 2. Link the latest release directly into your HTML file by inserting the following lines to your HTML file: 
 ```html
-<head>
-    <!-- Your links, sources, title, and meta tags here -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jdriviere/sparkle-css@VERSION/dist/css/sparkle.min.css">
-</head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jdriviere/sparkle-css@VERSION/dist/css/sparkle.min.css">
 ```
+
 3. Download using Bower:
 ```
 bower install sparkle-css
 ```
 
 ## Documentation
-The documentation can be found [here!](https://sparkle-css.github.io/sparkle-docs/).
+The documentation can be found [here!](https://github.com/sparkle-css/sparkle-docs/tree/master/docs).
 
 ## Contributing
 Coming soon...

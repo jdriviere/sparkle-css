@@ -64,19 +64,19 @@ gulp.task('sassify', function() {
 });
 
 // RENDER HTML FILES
-gulp.task('pug', function buildHTML() {
-  return gulp.src('dev/*.pug')
-    .pipe(
-      pug({
-        pretty: true
-      })
-    )
-    .pipe(gulp.dest('./'));
+// gulp.task('pug', function buildHTML() {
+//   return gulp.src('dev/*.pug')
+//     .pipe(
+//       pug({
+//         pretty: true
+//       })
+//     )
+//     .pipe(gulp.dest('./'));
 
-    // .pipe(browserSync.reload({
-    //   stream: true
-    // }));
-});
+//     // .pipe(browserSync.reload({
+//     //   stream: true
+//     // }));
+// });
 
 // DEFAULT RUN
-gulp.task('default', ['pug', 'sassify']);
+gulp.task('default', ['sassify']);

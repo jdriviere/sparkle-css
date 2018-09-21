@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/jdriviere/sparkle-css/issues"
   },
-  "homepage": "https://jdriviere.github.io/sparkle-css",
+  "homepage": "https://sparklecss.herokuapp.com",
   "devDependencies": {
     "autoprefixer": "^9.1.5",
     "cssnano": "^4.1.0",
