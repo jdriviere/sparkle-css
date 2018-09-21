@@ -1,6 +1,6 @@
 <p align="center">
     <a href="https://sparklecss.herokuapp.com" target="_blank">
-    	<img width="120px" src="dist/img/Sparkle_Logo.svg">
+    	<img width="120" src="dist/img/Sparkle_Logo.svg">
     </a>
 </p>
 
