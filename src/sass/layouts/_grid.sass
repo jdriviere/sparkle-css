@@ -15,12 +15,11 @@ $column-max: 12 !default
 // ====================================
 =create-grid
     display: flex
-    flex: 1
     flex:
         direction: column
         wrap: wrap
     // Media Queries
-    @media screen and (min-width: $bp-large)
+    +grid-break
         flex-direction: row
     // Elements
     .column
@@ -29,13 +28,10 @@ $column-max: 12 !default
             basis: 0
         margin-bottom: $grid-margin
         // Media Queries
-        @media screen and (min-width: $bp-large)
+        +grid-break
             @for $i from 1 through $column-max
                 &.make-#{$i}
                     flex: none
-                    // flex:
-                    //     grow: 0
-                    //     basis: ((100% * $i) / $column-max)
                     width: ((100% * $i) / $column-max)
             // Fractional
             &.make-twelfth
@@ -61,7 +57,7 @@ $column-max: 12 !default
     .column[class*="offset-"]
         margin-left: 0
     // Media Queries
-    @media screen and (min-width: $bp-large)
+    +grid-break
         @for $i from 1 through $column-max
             .column.offset-#{$i}
                 margin-left: ((100% / $column-max) * $i)
