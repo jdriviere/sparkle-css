@@ -1,12 +1,9 @@
-'use strict';
-
 /* ==================================== */
 /* PACKAGES
 /* ==================================== */
 const gulp = require('gulp');
 const rename = require('gulp-rename');
 const sass = require('gulp-sass');
-const pug = require('gulp-pug');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const header = require('postcss-header');
@@ -57,26 +54,7 @@ gulp.task('sassify', function() {
       suffix: '.min'
     }))
     .pipe(gulp.dest('dist/css/'));
-
-    // .pipe(browserSync.reload({
-    //   stream: true
-    // }));
 });
-
-// RENDER HTML FILES
-// gulp.task('pug', function buildHTML() {
-//   return gulp.src('dev/*.pug')
-//     .pipe(
-//       pug({
-//         pretty: true
-//       })
-//     )
-//     .pipe(gulp.dest('./'));
-
-//     // .pipe(browserSync.reload({
-//     //   stream: true
-//     // }));
-// });
 
 // DEFAULT RUN
 gulp.task('default', ['sassify']);
