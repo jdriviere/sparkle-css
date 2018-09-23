@@ -1,15 +1,15 @@
 {
-  "name": "sparkle.css",
+  "name": "sparklecss",
   "version": "1.9.14",
   "description": "A lightweight, open-source, mobile-first CSS framework for easy website designs.",
   "main": "sparkle.css",
   "scripts": {
     "start": "npm install",
-    "build:html": "pug ./dev/index.pug --pretty --out ./",
-    "watch:html": "pug --watch ./dev/index.pug --pretty --out ./",
-    "build:css": "sass ./src/sass/sparkle.sass ./dist/css/sparkle.css --style=expanded",
-    "watch:css": "sass --watch ./src/sass/sparkle.sass:./dist/css/sparkle.css --style=expanded",
-    "build": "rm -rf ./dist/css/sparkle.* && node node_modules/gulp/bin/gulp"
+    "clean": "rm -rf ./dist/css/sparkle.*",
+    "watch": "sass --watch ./src/sass/sparkle.sass:./dist/css/sparkle.css --style=expanded",
+    "build": "npm run clean && npm run build:prod",
+    "build:dev": "sass ./src/sass/sparkle.sass ./dist/css/sparkle.css --style=expanded",
+    "build:prod": "node node_modules/gulp/bin/gulp"
   },
   "repository": {
     "type": "git",
