@@ -1,8 +1,8 @@
 {
-  "name": "sparklecss",
+  "name": "sparkle",
   "version": "1.10.0",
   "description": "A lightweight, open-source, mobile-first CSS framework for easy website designs.",
-  "main": "sparkle.css",
+  "main": "dist/css/sparkle.css",
   "scripts": {
     "start": "npm install",
     "clean": "rm -rf ./dist/css/sparkle.*",
