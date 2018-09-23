@@ -1,10 +1,14 @@
+# FOLDERS
 .git/
 .sass-cache/
 .vscode/
 dev/
 dist/img/
+gulp/
 node_modules/
 unused/
+
+# FILES
 .gitignore
 .travis.yml
 bower.json
