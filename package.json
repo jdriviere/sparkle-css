@@ -1,5 +1,5 @@
 {
-  "name": "sparklecss",
+  "name": "sparkle.css",
   "version": "1.10.0",
   "description": "A lightweight, open-source, mobile-first CSS framework for easy website designs.",
   "main": "dist/css/sparkle.css",
