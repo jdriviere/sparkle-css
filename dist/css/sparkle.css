@@ -3263,7 +3263,7 @@ code {
   visibility: hidden !important;
 }
 
-@media screen and (min-width: 0px) {
+@media screen and (max-width: 639px) {
   .make-phone-hidden {
     display: none !important;
   }
