@@ -131,11 +131,15 @@
 // BREAKPOINT VIEWS
 // ===========================================
 =mobile
-  @media screen and (max-width: $bp-medium - 1)
+  @media screen and (min-width: $bp-none)
     @content
 
 =mobile-only
   @media screen and (min-width: $bp-none) and (max-width: $bp-medium - 1)
+    @content
+
+=mobile-down
+  @media screen and (max-width: $bp-medium - 1)
     @content
 
 =tablet
