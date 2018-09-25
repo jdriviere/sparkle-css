@@ -49,14 +49,13 @@ $grid-gap: 1.5rem !default
         padding:
             left: $grid-gap / 2
             right: $grid-gap / 2
-        // Modifiers
-        +create-columns
-        // Media Queries
+        // Modifiers | Media Queries
         @media screen and (min-width: $bp-none) // Mobile (portrait)
             +create-columns("xsmall")
         @media screen and (min-width: $bp-small) // Mobile (landscape)
             +create-columns("small")
         @media screen and (min-width: $bp-medium) // Tablet
+            +create-columns
             +create-columns("medium")
         @media screen and (min-width: $bp-large) // Desktop
             +create-columns("large")

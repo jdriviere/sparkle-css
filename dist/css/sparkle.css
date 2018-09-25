@@ -924,138 +924,6 @@ code {
   padding-right: 0.75rem;
 }
 
-.columns .column.make-1, .columns .column.make-twelfth {
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
-  width: 8.33333%;
-}
-
-.columns .column.make-offset-1, .columns .column.make-offset-twelfth {
-  margin-left: 8.33333%;
-}
-
-.columns .column.make-2, .columns .column.make-sixth {
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
-  width: 16.66667%;
-}
-
-.columns .column.make-offset-2, .columns .column.make-offset-sixth {
-  margin-left: 16.66667%;
-}
-
-.columns .column.make-3, .columns .column.make-fourth {
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
-  width: 25%;
-}
-
-.columns .column.make-offset-3, .columns .column.make-offset-fourth {
-  margin-left: 25%;
-}
-
-.columns .column.make-4, .columns .column.make-third {
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
-  width: 33.33333%;
-}
-
-.columns .column.make-offset-4, .columns .column.make-offset-third {
-  margin-left: 33.33333%;
-}
-
-.columns .column.make-5 {
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
-  width: 41.66667%;
-}
-
-.columns .column.make-offset-5 {
-  margin-left: 41.66667%;
-}
-
-.columns .column.make-6, .columns .column.make-half {
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
-  width: 50%;
-}
-
-.columns .column.make-offset-6, .columns .column.make-offset-half {
-  margin-left: 50%;
-}
-
-.columns .column.make-7 {
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
-  width: 58.33333%;
-}
-
-.columns .column.make-offset-7 {
-  margin-left: 58.33333%;
-}
-
-.columns .column.make-8, .columns .column.make-thirds {
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
-  width: 66.66667%;
-}
-
-.columns .column.make-offset-8, .columns .column.make-offset-thirds {
-  margin-left: 66.66667%;
-}
-
-.columns .column.make-9, .columns .column.make-fourths {
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
-  width: 75%;
-}
-
-.columns .column.make-offset-9, .columns .column.make-offset-fourths {
-  margin-left: 75%;
-}
-
-.columns .column.make-10, .columns .column.make-sixths {
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
-  width: 83.33333%;
-}
-
-.columns .column.make-offset-10, .columns .column.make-offset-sixths {
-  margin-left: 83.33333%;
-}
-
-.columns .column.make-11, .columns .column.make-twelfths {
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
-  width: 91.66667%;
-}
-
-.columns .column.make-offset-11, .columns .column.make-offset-twelfths {
-  margin-left: 91.66667%;
-}
-
-.columns .column.make-12, .columns .column.make-full {
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
-  width: 100%;
-}
-
-.columns .column.make-offset-12, .columns .column.make-offset-full {
-  margin-left: 100%;
-}
-
 @media screen and (min-width: 0px) {
   .columns .column.make-1-xsmall, .columns .column.make-twelfth-xsmall {
     -webkit-box-flex: 0;
@@ -1279,6 +1147,114 @@ code {
 }
 
 @media screen and (min-width: 640px) {
+  .columns .column.make-1, .columns .column.make-twelfth {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    width: 8.33333%;
+  }
+  .columns .column.make-offset-1, .columns .column.make-offset-twelfth {
+    margin-left: 8.33333%;
+  }
+  .columns .column.make-2, .columns .column.make-sixth {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    width: 16.66667%;
+  }
+  .columns .column.make-offset-2, .columns .column.make-offset-sixth {
+    margin-left: 16.66667%;
+  }
+  .columns .column.make-3, .columns .column.make-fourth {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    width: 25%;
+  }
+  .columns .column.make-offset-3, .columns .column.make-offset-fourth {
+    margin-left: 25%;
+  }
+  .columns .column.make-4, .columns .column.make-third {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    width: 33.33333%;
+  }
+  .columns .column.make-offset-4, .columns .column.make-offset-third {
+    margin-left: 33.33333%;
+  }
+  .columns .column.make-5 {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    width: 41.66667%;
+  }
+  .columns .column.make-offset-5 {
+    margin-left: 41.66667%;
+  }
+  .columns .column.make-6, .columns .column.make-half {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    width: 50%;
+  }
+  .columns .column.make-offset-6, .columns .column.make-offset-half {
+    margin-left: 50%;
+  }
+  .columns .column.make-7 {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    width: 58.33333%;
+  }
+  .columns .column.make-offset-7 {
+    margin-left: 58.33333%;
+  }
+  .columns .column.make-8, .columns .column.make-thirds {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    width: 66.66667%;
+  }
+  .columns .column.make-offset-8, .columns .column.make-offset-thirds {
+    margin-left: 66.66667%;
+  }
+  .columns .column.make-9, .columns .column.make-fourths {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    width: 75%;
+  }
+  .columns .column.make-offset-9, .columns .column.make-offset-fourths {
+    margin-left: 75%;
+  }
+  .columns .column.make-10, .columns .column.make-sixths {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    width: 83.33333%;
+  }
+  .columns .column.make-offset-10, .columns .column.make-offset-sixths {
+    margin-left: 83.33333%;
+  }
+  .columns .column.make-11, .columns .column.make-twelfths {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    width: 91.66667%;
+  }
+  .columns .column.make-offset-11, .columns .column.make-offset-twelfths {
+    margin-left: 91.66667%;
+  }
+  .columns .column.make-12, .columns .column.make-full {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    width: 100%;
+  }
+  .columns .column.make-offset-12, .columns .column.make-offset-full {
+    margin-left: 100%;
+  }
   .columns .column.make-1-medium, .columns .column.make-twelfth-medium {
     -webkit-box-flex: 0;
         -ms-flex: none;
