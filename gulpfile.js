@@ -20,7 +20,7 @@ gulp.task('sassify', function() {
   /*!
     * @name         ${pkg.name}
     * @author       ${pkg.author}
-    * @version      ${pkg.version} - released on 09/22/2018
+    * @version      ${pkg.version} - released on 09/25/2018
     * @website      ${pkg.homepage}
     * Welcome and thank you for using Sparkle, a lightweight, open-source CSS framework
     * to help you create simple, responsive website templates. It was developed by J. Djimitry Riviere
