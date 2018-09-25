@@ -44,12 +44,12 @@ body {
 
 ::-moz-selection {
   background: #ADD2E6;
-  color: #F4F4F8;
+  color: #222528;
 }
 
 ::selection {
   background: #ADD2E6;
-  color: #F4F4F8;
+  color: #222528;
 }
 
 dl,
@@ -78,37 +78,73 @@ ul ul {
 /* =================================================== */
 /* TYPOGRAPHY */
 /* =================================================== */
-h1, h2, h3, h4, h5, h6 {
+h1, .make-text-size1, h2, .make-text-size2, h3, .make-text-size3, h4, .make-text-size4, h5, .make-text-size5, h6, .make-text-size6 {
   margin: 0 !important;
   font-weight: 700;
 }
 
-h1 {
-  font-size: 4.2rem;
-}
-
-h2 {
+h1, .make-text-size1 {
   font-size: 3.6rem;
 }
 
-h3 {
-  font-size: 2.8rem;
+@media screen and (min-width: 640px) {
+  h1, .make-text-size1 {
+    font-size: 4.2rem;
+  }
 }
 
-h4 {
+h2, .make-text-size2 {
+  font-size: 3.0rem;
+}
+
+@media screen and (min-width: 640px) {
+  h2, .make-text-size2 {
+    font-size: 3.6rem;
+  }
+}
+
+h3, .make-text-size3 {
   font-size: 2.4rem;
 }
 
-h5 {
+@media screen and (min-width: 640px) {
+  h3, .make-text-size3 {
+    font-size: 2.8rem;
+  }
+}
+
+h4, .make-text-size4 {
   font-size: 2.0rem;
 }
 
-h6 {
-  font-size: 1.4rem;
+@media screen and (min-width: 640px) {
+  h4, .make-text-size4 {
+    font-size: 2.4rem;
+  }
+}
+
+h5, .make-text-size5 {
+  font-size: 1.8rem;
+}
+
+@media screen and (min-width: 640px) {
+  h5, .make-text-size5 {
+    font-size: 2.0rem;
+  }
+}
+
+h6, .make-text-size6 {
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 640px) {
+  h6, .make-text-size6 {
+    font-size: 1.4rem;
+  }
 }
 
 a {
-  color: #ADD2E6;
+  color: #1982C4;
   font-size: 1.6rem;
   font-weight: 400;
   text-decoration: none;
@@ -120,27 +156,27 @@ a:hover {
 }
 
 .make-text-size1 {
-  font-size: 4.2rem;
+  font-weight: 300;
 }
 
 .make-text-size2 {
-  font-size: 3.6rem;
+  font-weight: 300;
 }
 
 .make-text-size3 {
-  font-size: 3rem;
+  font-weight: 300;
 }
 
 .make-text-size4 {
-  font-size: 2.4rem;
+  font-weight: 300;
 }
 
 .make-text-size5 {
-  font-size: 1.8rem;
+  font-weight: 300;
 }
 
 .make-text-size6 {
-  font-size: 1.2rem;
+  font-weight: 300;
 }
 
 .make-text-thin {
@@ -157,6 +193,10 @@ a:hover {
 
 .make-text-thick {
   font-weight: 900;
+}
+
+.make-text-italic {
+  font-style: italic;
 }
 
 .make-text-left {
@@ -231,6 +271,10 @@ a:hover {
   color: rgba(34, 37, 40, 0.5);
 }
 
+.make-text-muted {
+  color: rgba(64, 64, 64, 0.5);
+}
+
 .make-text-title {
   font-size: 4rem;
   font-weight: 900;
@@ -246,10 +290,6 @@ a:hover {
   font-weight: 400;
 }
 
-.make-text-italic {
-  font-style: italic;
-}
-
 .make-text-uppercase {
   text-transform: uppercase;
 }
@@ -260,10 +300,6 @@ a:hover {
 
 .make-text-capitalized {
   text-transform: capitalize;
-}
-
-.make-text-muted {
-  color: rgba(64, 64, 64, 0.5);
 }
 
 code {

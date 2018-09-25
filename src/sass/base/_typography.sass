@@ -6,9 +6,6 @@
 // ====================================
 // VARIABLES
 // ====================================
-$text-font-max: 4.8rem !default
-$text-font-increment: 0.6 !default
-$text-size-max: 6 !default
 $text-font-title-size: 4.0rem !default
 $text-font-title-weight: $font-weight-black !default
 $text-font-subtitle-size: 2.5rem !default
@@ -30,28 +27,46 @@ h1, h2, h3, h4, h5, h6
     font-weight: $font-weight-heavy
 
 h1
-    font-size: 4.2rem
+    font-size: 3.6rem
+    // Media Queries
+    +tablet
+        font-size: 4.2rem
 
 h2
-    font-size: 3.6rem
+    font-size: 3.0rem
+    // Media Queries
+    +tablet
+        font-size: 3.6rem
 
 h3
-    font-size: 2.8rem
+    font-size: 2.4rem
+    // Media Queries
+    +tablet
+        font-size: 2.8rem
 
 h4
-    font-size: 2.4rem
+    font-size: 2.0rem
+    // Media Queries
+    +tablet
+        font-size: 2.4rem
 
 h5
-    font-size: 2.0rem
+    font-size: 1.8rem
+    // Media Queries
+    +tablet
+        font-size: 2.0rem
 
 h6
-    font-size: 1.4rem
+    font-size: 1.2rem
+    // Media Queries
+    +tablet
+        font-size: 1.4rem
 
 // ====================================
-// PARAGRAPHS, LINKS
+// LINKS
 // ====================================
 a
-    color: map-get($theme-map, primary)
+    color: map-get($theme-map, info)
     font:
         size: $font-size
         weight: $font-weight-normal
@@ -64,18 +79,42 @@ a
 // ====================================
 // TEXT FORMATS
 // ====================================
-//--- SIZE ---
-@for $i from 1 through $text-size-max
-    .make-text-size#{$i}
-        font-size: ($text-font-max - ($text-font-increment * $i))
+//--- SIZES ---
+// @NOTE: The `.make-text-sizeX` pertains to increasing
+//        the regular font, and should not be used for
+//        headers. For headers, see the <hX> tags.
+.make-text-size1
+    @extend h1
+    font-weight: $font-weight-light
+.make-text-size2
+    @extend h2
+    font-weight: $font-weight-light
+.make-text-size3
+    @extend h3
+    font-weight: $font-weight-light
+.make-text-size4
+    @extend h4
+    font-weight: $font-weight-light
+.make-text-size5
+    @extend h5
+    font-weight: $font-weight-light
+.make-text-size6
+    @extend h6
+    font-weight: $font-weight-light
+
 //--- WEIGHT ---
 @each $type, $weight in $text-weights
     .make-text-#{$type}
         font-weight: $weight
+
+.make-text-italic
+    font-style: italic
+
 //--- ALIGNMENTS ---
 @each $type, $alignment in $text-alignments
     .make-text-#{$type}
-        text-align: $alignment 
+        text-align: $alignment
+
 //--- COLORS ---
 @each $type, $color in $text-color-map
     .make-text-#{$type}
@@ -83,6 +122,9 @@ a
         // Modifiers
         &.make-text-muted
             color: rgba($color, 0.5)
+
+.make-text-muted
+    color: rgba($font-color, 0.5)
     
 //--- SPECIAL (FONT) ---
 .make-text-title
@@ -95,12 +137,12 @@ a
         margin:
             top: -1.5rem !important
             bottom: 1.0rem
+
 .make-text-subtitle
     font:
         size: $text-font-subtitle-size
         weight: $text-font-subtitle-weight
-.make-text-italic
-    font-style: italic
+
 //--- SPECIAL (TEXT) ---
 .make-text-uppercase
     text-transform: uppercase
@@ -108,9 +150,6 @@ a
     text-transform: lowercase
 .make-text-capitalized
     text-transform: capitalize
-//--- SPECIAL (OPACITY) ---
-.make-text-muted
-    color: rgba($font-color, 0.5)
 
 // ====================================
 // CODE
