@@ -1,97 +1,79 @@
 /* ===================================================
 /* INPUTS
 /* ===================================================
-@import ../config/_all
-
-// ====================================
-// VARIABLES
-// ====================================
-$card-padding: 1.0rem !default
-$card-font-size: $font-size !default
-$card-font-color: $color-grey-50 !default
-$card-border: 1px solid $grey_base !default
 
 // ====================================
 // MIXINS
 // ====================================
 =create-card
-    width: 100%
-    background: lighten($white_base, $lighten / 2)
-    border: $card-border
-    border-radius: $border-radius
-    overflow: hidden
-
+  width: 100%
+  background: lighten($white_base, $lighten / 2)
+  border: $card-border
+  border-radius: $border-radius
+  overflow: hidden
+  // Elements
+  // --- HEADER ---
+  &__header
+    padding: ($card-padding * 2) $card-padding
+    border-bottom: $card-border
     // Elements
-    // --- HEADER ---
-    &__header
-        padding: ($card-padding * 2) $card-padding
-        border-bottom: $card-border
-
+    .card__title
+      font:
+        size: 2.4rem
+        weight: $font-weight-bold
+    .card__subtitle
+      font:
+        size: 1.8rem
+        weight: $font-weight-normal
+    .card__title + .card__subtitle
+      margin-top: -1.0rem !important
+  // --- BODY ---
+  &__body
+    padding: $card-padding
+    font-size: $card-font-size
+    color: $card-font-color
+    // Elements
+    & > img,
+    .card__image
+      width: 100%
+  // --- FOOTER ---
+  &__footer
+    display: flex
+    flex: 1
+    border-top: $card-border
+    // Elements
+    .card__footer__item
+      display: flex
+      flex:
+        grow: 1
+        shrink: 0
+        basis: 0
+      justify-content: center
+      align-items: center
+      margin: 0
+      padding: ($card-padding * 2) $card-padding
+      // Pseudo
+      &:not(:first-child)
+        border-left: $card-border
         // Elements
-        & > .card__title
-            font:
-                size: 2.4rem
-                weight: $font-weight-heavy
-        & > .card__subtitle
-            font:
-                size: 1.8rem
-                weight: $font-weight-normal
-        & > .card__title + .card__subtitle
-            margin-top: -1.0rem !important
-
-    // --- BODY ---
-    &__body
-        padding: $card-padding
-        font-size: $card-font-size
-        color: $card-font-color
-
-        // Elements
-        & > img,
-        & > .card__image
-            width: 100%
-
-    // --- FOOTER ---
-    &__footer
-        display: flex
-        flex: 1
-        border-top: $card-border
-
-        // Elements
-        & > .card__footer__item
-            display: flex
-            flex-grow: 1
-            flex-shrink: 0
-            flex-basis: 0
-            justify-content: center
-            align-items: center
-            margin: 0
-            padding: ($card-padding * 2) $card-padding
-
-            // Pseudo
-            &:not(:first-child)
-                border-left: $card-border
-
-            // Elements
-            & > a
-                text-decoration: none
-                color: map-get( $theme-map, primary)
-
-                &:hover
-                    color: map-get($theme-map, dark)
-    
-    // Modifiers
-    &.make-shadows
-        box-shadow: 0 0 1.0em rgba($color-pure-black, 0.15), 0 0 3.0em rgba($color-pure-black, 0.05)
-
-    &.make-hoverable
-        transition: box-shadow 0.2s ease-in
-        // Pseudo
-        &:hover
-            box-shadow: 0 0 1.0em rgba($color-pure-black, 0.15), 0 0 3.0em rgba($color-pure-black, 0.05)
-            transition: box-shadow 0.2s ease-in
+        & > a
+          text-decoration: none
+          color: map-get( $theme-map, info)
+          // Pseudo
+          &:hover
+            color: $font-color
+  // Modifiers
+  &.make-shadows
+    box-shadow: 0 0 1.0em rgba($color-pure-black, 0.15), 0 0 3.0em rgba($color-pure-black, 0.05)
+  &.make-hoverable
+    transition: box-shadow 0.2s ease-in
+    // Pseudo
+    &:hover
+      box-shadow: 0 0 1.0em rgba($color-pure-black, 0.15), 0 0 3.0em rgba($color-pure-black, 0.05)
+      transition: box-shadow 0.2s ease-in
 
 // ====================================
 // CARDS
 // ====================================
 .card
-    +create-card
+  +create-card

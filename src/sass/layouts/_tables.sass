@@ -1,115 +1,107 @@
 /* ===================================================
 /* TABLES
 /* ===================================================
-@import ../config/_all
-    
-// ====================================
-// VARIABLES
-// ====================================
-$table-padding: 1.0rem !default
-$table-font-caption: 1.4rem !default
-$table-letter-spacing: 0.1rem !default
 
 // ====================================
 // MIXINS
 // ====================================
 =create-table
-    width: 100%
-    margin: 0 auto
-    border-collapse: collapse
+  width: 100%
+  margin: 0 auto
+  border-collapse: collapse
+  // Elements
+  caption
+    font:
+      size: $table-font-caption
+      weight: $font-weight-thick
+    text-transform: uppercase
+    letter-spacing: $table-letter-spacing
+  thead
+    display: none
+  tbody, tr, td
+    display: block
+  tr
+    margin:
+      top: 0
+      bottom: 1.0rem
+    padding: 0.5rem 0
+    border: 1px solid map-get($theme-map, default)
+    // Pseudo
+    &:last-child
+      margin-bottom: 0
+  td
+    position: relative
+    padding: 1.0rem
+    font-size: $font-size
+    text-align: right
+    white-space: normal
+    border-bottom: 1px dotted map-get($theme-map, default)
+    // Pseudo
+    &:first-child
+      margin-top: -0.5rem
+    &:last-child
+      margin-bottom: -0.5rem
+      border: 0
+    &:before
+      position: absolute
+      left: 0.5rem
+      content: attr(data-table-label)
+      font:
+        size: $font-size
+        weight: $font-weight-bold
+      letter-spacing: $table-letter-spacing
+      white-space: nowrap
+  // Media Queries
+  @media only screen and (min-width: $bp-medium)
+    display: table
     // Elements
-    caption
-        font:
-            size: $table-font-caption
-            weight: $font-weight-black
-        text-transform: uppercase
-        letter-spacing: $table-letter-spacing
     thead
-        display: none
-    tbody, tr, td
-        display: block
+      display: table-header-group
+      font:
+        size: $font-size
+        weight: $font-weight-bold
+      text-align: left
+      letter-spacing: $table-letter-spacing
+      border-bottom: 2px solid $color-grey-50
+    tbody
+      display: table-row-group
     tr
-        margin:
-            top: 0
-            bottom: 1.0rem
-        padding: 0.5rem 0
-        border: 1px solid map-get($theme-map, default)
-        // Pseudo
-        &:last-child
-            margin-bottom: 0
+      display: table-row
+      border: none
+    th
+      padding: 1.5rem 1.0rem
     td
-        position: relative
-        padding: 1.0rem
-        font-size: $font-size
-        text-align: right
-        white-space: normal
-        border-bottom: 1px dotted map-get($theme-map, default)
-        // Pseudo
-        &:first-child
-            margin-top: -0.5rem
-        &:last-child
-            margin-bottom: -0.5rem
-            border: 0
-        &:before
-            position: absolute
-            left: 0.5rem
-            content: attr(data-table-label)
-            font:
-                size: $font-size
-                weight: $font-weight-heavy
-            letter-spacing: $table-letter-spacing
-            white-space: nowrap
-    // Media Queries
-    @media only screen and (min-width: $bp-medium)
-        display: table
-        // Elements
-        thead
-            display: table-header-group
-            font:
-                size: $font-size
-                weight: $font-weight-heavy
-            text-align: left
-            letter-spacing: $table-letter-spacing
-            border-bottom: 2px solid $color-grey-50
-        tbody
-            display: table-row-group
-        tr
-            display: table-row
-            border: none
-        th
-            padding: 1.5rem 1.0rem
-        td
-            display: table-cell
-            padding: 1.5rem 1.0rem
-            text-align: left
-            border: none
-            // Pseudo
-            &:before
-                display: none
+      display: table-cell
+      padding: 1.5rem 1.0rem
+      text-align: left
+      border: none
+      // Pseudo
+      &:before
+        display: none
+  // Modifiers
+  &.make-default
+    // Elements
+    tr:not(:last-child)
+      border-bottom: 1px solid darken($grey_base, $darken)
+  &.make-bordered
+    // Elements
+    th, td
+      border: 1px solid darken($grey_base, $darken)
+  &.make-striped
+    // Elements
+    tbody tr:nth-child(odd)
+      background: lighten(map-get($theme-map, default), $lighten / 2)
     // Modifiers
-    &.make-default
-        // Elements
-        tr:not(:last-child)
-            border-bottom: 1px solid darken($grey_base, $darken)
-    &.make-bordered
-        // Elements
-        th, td
-            border: 1px solid darken($grey_base, $darken)
-    &.make-striped
-        // Elements
-        tbody tr:nth-child(odd)
-            background: lighten(map-get($theme-map, default), $lighten / 2)
-        // Modifiers
-        &.make-hoverable
-            tbody tr:nth-child(odd):hover > td
-                background: map-get($theme-map, default)
     &.make-hoverable
-        // Elements
-        tbody tr:hover > td
-            background: lighten(map-get($theme-map, default), $lighten / 2)
+      tbody tr:nth-child(odd):hover > td
+        background: map-get($theme-map, default)
+  &.make-hoverable
+    // Elements
+    tbody tr:hover > td
+      background: lighten(map-get($theme-map, default), $lighten / 2)
 
 // ====================================
 // NAVIGATION
 // ====================================
 .table
-    +create-table
+  +create-table

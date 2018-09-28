@@ -25,11 +25,107 @@ $font-size: 1.6rem !default
 $font-color: $color-grey-25 !default
 $font-weight-light: 300 !default
 $font-weight-normal: 400 !default
-$font-weight-heavy: 700 !default
-$font-weight-black: 900 !default
+$font-weight-bold: 700 !default
+$font-weight-thick: 900 !default
 
 // =================================
-// INDEX VARIABLES
+// TYPOGRAPHY
+// =================================
+$text-font-title-size: 4.0rem !default
+$text-font-title-weight: $font-weight-thick !default
+
+$text-font-subtitle-size: 2.5rem !default
+$text-font-subtitle-weight: $font-weight-normal !default
+
+$text-font-code: monospace !default
+$text-font-code-size: 1.5rem !default
+$text-font-code-padding: 0.5rem !default
+
+$text-font-opacity-muted: $opacity-muted
+
+$text-color-map: (primary: $lblue_base, info: $blue_base, success: $green_base, warning: $yellow_base, danger: $red_base, light: $white_base, dark: $black_base) !default
+$text-alignment-map: (align-left: left, align-right: right, align-center: center, justified: justify) !default
+$text-weight-map: (thin: $font-weight-light, normal: $font-weight-normal, bold: $font-weight-bold, thick: $font-weight-thick) !default
+
+// ====================================
+// CARDS
+// ====================================
+$card-padding: 1.0rem !default
+$card-font-size: $font-size !default
+$card-font-color: $color-grey-50 !default
+$card-border: 1px solid $grey_base !default
+
+// ====================================
+// CHECKBOXES
+// ====================================
+$checkbox-size: 1.7rem !default
+$checkbox-border-color: $grey_base !default
+
+// ====================================
+// INPUTS
+// ====================================
+$input-color-map: (primary: $lblue_base, info: $blue_base, success: $green_base, warning: $yellow_base, danger: $red_base) !default
+$input-margin: 1.5rem !default
+$input-size: 4.0rem !default
+$input-border-color: map-get($theme-map, default) !default
+
+// ====================================
+// INPUT GROUPS
+// ====================================
+$input-group-margin: 1.5rem !default
+
+// ====================================
+// MEDIA
+// ====================================
+$media-margin: 1.5rem !default
+$media-padding: 1.5rem !default
+$media-border-radius: 0.5rem !default
+$media-border-color: map-get($theme-map, default) !default
+$media-profile: 6.4rem !default
+$media-font-title: 1.8rem !default
+
+// ====================================
+// MENU
+// ====================================
+$menu-margin: 1.0rem !default
+$menu-padding: $menu-margin !default
+
+// ====================================
+// NAVIGATION
+// ====================================
+$navig-min-height: 6.0rem !default
+$navig-colorbg: lighten($grey_base, $lighten)
+// $navig-colorbg: #FAFAFB !default
+$navig-color-border: darken($navig-colorbg, $darken) !default
+$navig-spacing: 1.5rem !default
+$navig-padding: 1.0rem !default
+$navig-brand: 1.5rem !default
+$navig-font: 1.5rem !default
+$navig-font-color: $font-color !default
+$navig-font-opacity: 0.5 !default
+$navig-font-opacity-hovered: 1.0 !default
+
+// ====================================
+// RADIOS
+// ====================================
+$radio-size: 1.7rem !default
+$radio-border-color: $grey_base !default
+
+// ====================================
+// SWITCHES
+// ====================================
+$switch-width: 4.0rem !default
+$switch-height: $switch-width / 2 !default
+
+// ====================================
+// TABLES
+// ====================================
+$table-padding: 1.0rem !default
+$table-font-caption: 1.4rem !default
+$table-letter-spacing: 0.1rem !default
+
+// =================================
+// Z-INDEX
 // =================================
 $index-lowest: -9999 !default
 $index-lower: -10 !default
@@ -40,13 +136,3 @@ $index-above: 1 !default
 $index-high: 5 !default
 $index-higher: 10 !default
 $index-highest: 9999 !default
-
-// ================================
-// MAPS
-// ================================
-// --- Theme Colors --- //
-$theme-map: (default: $grey_base, primary: $lblue_base, info: $blue_base, success: $green_base, warning: $yellow_base, danger: $red_base, light: $white_base, dark: $black_base) !default
-// --- Breakpoints --- //
-$bp-map: (none: $bp-none, xsmall: $bp-xsmall, small: $bp-small, medium: $bp-medium, large: $bp-large, xlarge: $bp-xlarge, widescreen: $bp-widescreen) !default
-// --- Indexes --- //
-$index-map: (lowest: $index-lowest, lower: $index-lower, low: $index-low, below: $index-below, normal: $index-neutral, above: $index-above, high: $index-high, higher: $index-higher, highest: $index-highest) !default

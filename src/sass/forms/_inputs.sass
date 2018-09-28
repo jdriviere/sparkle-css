@@ -1,78 +1,73 @@
 /* ===================================================
 /* FORM (INPUTS)
 /* ===================================================
-@import ../config/_all
-
-// ====================================
-// VARIABLES
-// ====================================
-$input-color-map: (primary: $lblue_base, info: $blue_base, success: $green_base, warning: $yellow_base, danger: $red_base) !default
-$input-margin: 1.5rem !default
-$input-size: 4.0rem !default
-$input-border-color: map-get($theme-map, default) !default
 
 // ====================================
 // MIXINS
 // ====================================
 =create-input
-    +input-control
-    width: 100%
-    line-height: $line-height
-    color: $font-color
-    border:
-        radius: $border-radius
-        color: $input-border-color
-    // Pseudo
-    &::placeholder
-        color: $color-grey-75
-        opacity: $opacity-muted
-    &:hover,
-    &:focus,
-    &:active
-        border-color: map-get($theme-map, primary)
-    @each $type, $color in $input-color-map
-        &.make-#{$type}
-            border-color: $color
-            // Pseudo
-            &:focus,
-            &:active
-                box-shadow: 0 0 1.2rem rgba($color, $opacity-muted) !important
+  +input-control
+  width: 100%
+  line-height: $line-height
+  font-size: $font-size
+  color: $font-color
+  border:
+    radius: $border-radius
+    color: $input-border-color
+  // Pseudo
+  &::placeholder
+    color: $color-grey-75
+    opacity: $opacity-muted
+  &:hover,
+  &:focus,
+  &:active
+    border-color: map-get($theme-map, primary)
+  // Modifiers
+  @each $type, $color in $input-color-map
+    &.make-#{$type}
+      border-color: $color
+      // Pseudo
+      &:focus,
+      &:active
+        box-shadow: 0 0 1.2rem rgba($color, $opacity-muted) !important
     
 // ====================================
 // INPUTS
 // ====================================
 // --- TEXTS ---
 .input
-    +create-input
+  +create-input
 
 // --- LABELS ---
 .label
-    display: inline-flex
-    justify-content: flex-start
-    flex:
-        grow: 1
-        shrink: 0
-        basis: auto
-    margin-bottom: 0.5rem
-    font:
-        size: $font-size
-        weight: $font-weight-heavy
-    color: $font-color
+  display: inline-flex
+  justify-content: flex-start
+  flex:
+    grow: 1
+    shrink: 0
+    basis: auto
+  margin-bottom: 0.5rem
+  font:
+    size: $font-size
+    weight: $font-weight-bold
+  color: $font-color
+
 // --- SELECT ---
 .select
-    @extend .input
-    background:
-        image: url('https://png.icons8.com/expand-arrow/win8/12')
-        repeat: no-repeat
-        position: calc(100% - 1.0rem)
-    // Pseudo
-    &::-ms-expand
-        display: none
+  @extend .input
+  background:
+    image: url('https://png.icons8.com/expand-arrow/win8/12')
+    repeat: no-repeat
+    position: calc(100% - 1.0rem)
+  // Pseudo
+  &::-ms-expand
+    display: none
+
 // --- TEXT AREA ---
 .textarea
-    @extend .input
-    height: 12.0rem
-    font:
-        family: inherit
-        size: $font-size
-    resize: vertical
+  @extend .input
+  height: 12.0rem
+  font:
+    family: inherit
+    size: $font-size
+  resize: vertical

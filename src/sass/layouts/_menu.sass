@@ -1,49 +1,42 @@
 /* ===================================================
 /* MENU
 /* ===================================================
-@import ../config/_all
-
-// ====================================
-// VARIABLES
-// ====================================
-$menu-margin: 1.0rem !default
-$menu-padding: $menu-margin !default
 
 // ====================================
 // MIXINS
 // ====================================
 =create-menu
+  display: flex
+  width: 100%
+  flex-direction: column
+  margin-bottom: $menu-margin
+  // Elements
+  &__group
     display: flex
+    font:
+      size: $font-size
+      weight: $font-weight-bold
+  &__item
+    // @NOTE: '.menu__item' is also used for the elements
+    //        used in the '.submenu' list
+    display: block
     width: 100%
-    flex-direction: column
-    margin-bottom: $menu-margin
-    // Elements
-    &__group
-        display: flex
-        font:
-            size: $font-size
-            weight: $font-weight-heavy
-    &__item
-        // .menu__item is also used for the elements
-        // used in the .submenu list
-        display: block
-        width: 100%
-        padding: $menu-padding
-        color: $font-color !important
-        text-decoration: none
-        cursor: pointer
-        // Pseudo
-        &:hover,
-        &.make-active
-            background: lighten($grey_base, $lighten / 2)
-            border-radius: 0.3rem
-    .submenu
-        display: block
-        margin-left: $menu-margin
-        border-left: 2px solid $grey_base
+    padding: $menu-padding
+    color: $font-color !important
+    text-decoration: none
+    cursor: pointer
+    // Pseudo
+    &:hover,
+    &.make-active
+      background: lighten($grey_base, $lighten / 2)
+      border-radius: 0.3rem
+  .submenu
+    display: block
+    margin-left: $menu-margin
+    border-left: 2px solid $grey_base
 
 // ====================================
 // MENU
 // ====================================
 .menu
-    +create-menu
+  +create-menu

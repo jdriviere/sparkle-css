@@ -3,27 +3,11 @@
 /* ===================================================
 
 // ====================================
-// VARIABLES
-// ====================================
-$text-font-title-size: 4.0rem !default
-$text-font-title-weight: $font-weight-black !default
-$text-font-subtitle-size: 2.5rem !default
-$text-font-subtitle-weight: $font-weight-normal !default
-$text-color-map: (primary: $lblue_base, info: $blue_base, success: $green_base, warning: $yellow_base, danger: $red_base, light: $white_base, dark: $black_base) !default
-$text-alignments: (left: left, right: right, centered: center, justified: justify) !default
-$text-weights: (thin: $font-weight-light, normal: $font-weight-normal, bold: $font-weight-heavy, thick: $font-weight-black) !default
-
-// Code
-$text-font-code: monospace !default
-$text-font-code-size: 1.5rem !default
-$text-font-code-padding: 0.5rem !default
-
-// ====================================
-// HEADERS
+// HEADINGS
 // ====================================
 h1, h2, h3, h4, h5, h6
     margin: 0 !important
-    font-weight: $font-weight-heavy
+    font-weight: $font-weight-bold
 
 h1
     font-size: 3.6rem
@@ -65,15 +49,15 @@ h6
 // LINKS
 // ====================================
 a
-    color: map-get($theme-map, info)
-    font:
-        size: $font-size
-        weight: $font-weight-normal
-    text-decoration: none
-    cursor: pointer
-    // Pseudo
-    &:hover
-        color: $font-color
+  color: map-get($theme-map, info)
+  font:
+    size: $font-size
+    weight: $font-weight-normal
+  text-decoration: none
+  cursor: pointer
+  // Pseudo
+  &:hover
+    color: $font-color
 
 // ====================================
 // TEXT FORMATS
@@ -82,82 +66,86 @@ a
 // @NOTE: The `.make-text-sizeX` pertains to increasing
 //        the regular font, and should not be used for
 //        headers. For headers, see the <hX> tags.
-.make-text-size1
-    @extend h1
-    font-weight: $font-weight-light
-.make-text-size2
-    @extend h2
-    font-weight: $font-weight-light
-.make-text-size3
-    @extend h3
-    font-weight: $font-weight-light
-.make-text-size4
-    @extend h4
-    font-weight: $font-weight-light
-.make-text-size5
-    @extend h5
-    font-weight: $font-weight-light
-.make-text-size6
-    @extend h6
-    font-weight: $font-weight-light
+@for $i from 1 through 6
+  .make-text-size#{$i}
+    @extend h#{$i}
+    font-weight: $font-weight-light !important
+// .make-text-size1
+//   @extend h1
+//   font-weight: $font-weight-light !important
+// .make-text-size2
+//   @extend h2
+//   font-weight: $font-weight-light !important
+// .make-text-size3
+//   @extend h3
+//   font-weight: $font-weight-light !important
+// .make-text-size4
+//   @extend h4
+//   font-weight: $font-weight-light !important
+// .make-text-size5
+//   @extend h5
+//   font-weight: $font-weight-light !important
+// .make-text-size6
+//   @extend h6
+//   font-weight: $font-weight-light !important
 
-//--- WEIGHT ---
-@each $type, $weight in $text-weights
-    .make-text-#{$type}
-        font-weight: $weight
+//--- FONT (WEIGHT) ---
+@each $type, $weight in $text-weight-map
+  .make-text-#{$type}
+    font-weight: $weight !important
 
+//--- FONT (STYLES) ---
 .make-text-italic
-    font-style: italic
+  font-style: italic !important
 
-//--- ALIGNMENTS ---
-@each $type, $alignment in $text-alignments
-    .make-text-#{$type}
-        text-align: $alignment
-
-//--- COLORS ---
+//--- FONT (COLORS) ---
 @each $type, $color in $text-color-map
-    .make-text-#{$type}
-        color: $color
-        // Modifiers
-        &.make-text-muted
-            color: rgba($color, 0.5)
-
+  .make-text-#{$type}
+    color: $color !important
+    // Modifiers
+    &.make-text-muted
+      color: rgba($color, $text-font-opacity-muted)
 .make-text-muted
-    color: rgba($font-color, 0.5)
+  color: rgba($font-color, $text-font-opacity-muted)
     
-//--- SPECIAL (FONT) ---
+//--- FONT (TITLES, SUBTITLES) ---
 .make-text-title
-    font:
-        size: $text-font-title-size
-        weight: $text-font-title-weight
-    // Elements
-    // @NOTE: When both are combined together, remove extra margin
-    & + .make-text-subtitle
-        margin:
-            top: -1.5rem !important
-            bottom: 1.0rem
+  font:
+    size: $text-font-title-size
+    weight: $text-font-title-weight
+  // Elements
+  // @NOTE: When both are combined together, remove extra margin
+  & + .make-text-subtitle
+    margin:
+      top: -1.5rem !important
+      bottom: 1.0rem !important
 
 .make-text-subtitle
-    font:
-        size: $text-font-subtitle-size
-        weight: $text-font-subtitle-weight
+  font:
+    size: $text-font-subtitle-size
+    weight: $text-font-subtitle-weight
 
-//--- SPECIAL (TEXT) ---
-.make-text-uppercase
-    text-transform: uppercase
-.make-text-lowercase
-    text-transform: lowercase
+//--- TEXT (ALIGNMENTS) ---
+@each $type, $alignment in $text-alignment-map
+  .make-text-#{$type}
+    text-align: $alignment
+
+//--- TEXT (TRANSFORMATIONS) ---
+.make-text-uppercased
+  text-transform: uppercase !important
+.make-text-lowercased
+  text-transform: lowercase !important
 .make-text-capitalized
-    text-transform: capitalize
+  text-transform: capitalize !important
 
 // ====================================
 // CODE
 // ====================================
 code
-    padding: $text-font-code-padding
-    vertical-align: center
-    font:
-        family: $text-font-code
-        size: $text-font-code-size
-    background: $grey_base
-    border-radius: $border-radius
+  padding: $text-font-code-padding
+  vertical-align: center
+  font:
+    family: $text-font-code
+    size: $text-font-code-size
+  background: $grey_base
+  border-radius: $border-radius

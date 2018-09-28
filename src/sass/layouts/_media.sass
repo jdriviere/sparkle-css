@@ -1,61 +1,53 @@
 /* ===================================================
 /* MEDIA
 /* ===================================================
-@import ../config/_all
-
-// ====================================
-// VARIABLES
-// ====================================
-$media-margin: 1.5rem !default
-$media-padding: 1.5rem !default
-$media-border-radius: 0.5rem !default
-$media-border-color: map-get($theme-map, default) !default
-$media-profile: 6.4rem !default
-$media-font-title: 1.8rem !default
 
 // ====================================
 // MIXINS
 // ====================================
 =create-media
-    position: relative
+  position: relative
+  display: flex
+  align-items: flex-start
+  margin-bottom: $media-margin
+  padding: $media-padding
+  background: map-get($theme-map, light)
+  border: 1px solid $media-border-color
+  border-radius: $media-border-radius
+  // Elements
+  //--- PROFILE ---
+  &__profile
     display: flex
-    align-items: flex-start
-    margin-bottom: $media-margin
-    padding: $media-padding
-    background: map-get($theme-map, light)
-    border: 1px solid $media-border-color
-    border-radius: $media-border-radius
+    flex:
+      grow: 0
+      shrink: 0
+      basis: auto
+    order: -1
+    width: $media-profile
+    height: $media-profile
+    margin:
+      left: 0
+      right: $media-margin
     // Elements
-    &__profile
-        display: flex
-        flex-grow: 0
-        flex-shrink: 0
-        flex-basis: auto
-        order: -1
-        width: $media-profile
-        height: $media-profile
-        margin:
-            left: 0
-            right: $media-margin
-        // Elements
-        img
-            width: 100%
-    &__body
-        display: flex
-        flex: 1
-        flex-direction: column
-        // Elements
-        .media__title
-            margin: 0
-            font:
-                size: $media-font-title !important
-                weight: $font-weight-heavy !important
-        .media__subtitle
-            margin: 0
-            font-weight: $font-weight-normal !important
+    img
+      width: 100%
+  //--- BODY ---
+  &__body
+    display: flex
+    flex: 1
+    flex-direction: column
+    // Elements
+    .media__title
+      margin: 0
+      font:
+        size: $media-font-title !important
+        weight: $font-weight-bold !important
+    .media__subtitle
+      margin: 0
+      font-weight: $font-weight-normal !important
 
 // ====================================
 // MEDIA
 // ====================================
 .media
-    +create-media
+  +create-media
