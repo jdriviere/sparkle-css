@@ -1,0 +1,31 @@
+@import ../config/_all
+  
+// =======================================
+// ARROW ICONS
+// =======================================
+=arrow($direction, $size: 5px, $color: map-get($theme-maps, dark))
+  width: 0
+  height: 0
+
+  @if $direction == 'up'
+    border:
+      left: $size solid $color-none
+      right: $size solid $color-none
+      bottom: $size solid $color
+  @else if $direction == 'down'
+    border:
+      left: $size solid $color-none
+      right: $size solid $color-none
+      top: $size solid $color
+  @else if $direction == 'left'
+    border:
+      top: $size solid $color-none
+      bottom: $size solid $color-none
+      right: $size solid $color
+  @else if $direction == 'right'
+    border:
+      top: $size solid $color-none
+      bottom: $size solid $color-none
+      left: $size solid $color
+  @else
+    @warn ("Error: Your direction can only be \'left\', \'right\', \'up\', or \'down\''")

@@ -18,7 +18,7 @@
 /* =================================================== */
 /* BASE (CORE) */
 /* =================================================== */
-*, *:before, *:after {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -64,7 +64,9 @@ ul:not(:last-child) {
   margin-bottom: 1rem;
 }
 
-dl dl, dl ol, dl ul,
+dl dl,
+dl ol,
+dl ul,
 ol dl,
 ol ol,
 ol ul,

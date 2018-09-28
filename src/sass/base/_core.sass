@@ -7,35 +7,37 @@
 // GLOBALS, HTML, BODY
 // =======================================
 *
-    +reset
-    // Pseudo
-    &:before,
-    &:after
-        @extend *
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  // Pseudo
+  &::before,
+  &::after
+    @extend *
 
 html
-    font:
-        size: 62.5% // Sets root 62.5% to 10px (100% = 16px)
-        size: calc(1em * 0.625) // This line is to ensure HTML rem is at 10px
-    text-rendering: optimizeLegibility
-    font-smoothing: antialiased
+  font:
+    size: 62.5% // Sets root 62.5% to 10px (100% = 16px)
+    size: calc(1em * 0.625) // This line is to ensure HTML rem is at 10px
+  text-rendering: optimizeLegibility
+  font-smoothing: antialiased
 
 body
-    height: 100%
-    line-height: $line-height
-    background: $background-color
-    color: $font-color
-    font:
-        family: $font-family
-        size: $font-size
-        weight: $font-weight-light
+  height: 100%
+  line-height: $line-height
+  background: $background-color
+  color: $font-color
+  font:
+    family: $font-family
+    size: $font-size
+    weight: $font-weight-light
 
 // =======================================
 // SELECTION
 // =======================================
 ::selection
-    background: map-get($theme-map, primary)
-    color: map-get($theme-map, dark)
+  background: map-get($theme-map, primary)
+  color: map-get($theme-map, dark)
 
 // =======================================
 // LISTS
@@ -46,11 +48,14 @@ $list-spacing-h: 2.0rem
 dl,
 ol,
 ul
-    list-style-position: inside
-    // Pseudo
-    &:not(:last-child)
-        margin-bottom: $list-spacing-v
-    // Elements
-    dl, ol, ul
-        margin-bottom: 0
-        margin-left: $list-spacing-h
+  list-style-position: inside
+  // Pseudo
+  &:not(:last-child)
+    margin-bottom: $list-spacing-v
+  // Elements
+  dl,
+  ol,
+  ul
+    margin:
+      bottom: 0
+      left: $list-spacing-h

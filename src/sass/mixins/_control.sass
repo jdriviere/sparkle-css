@@ -1,0 +1,32 @@
+@import ../config/_all
+
+// =======================================
+// INPUT CONTROL
+// =======================================
+=input-control
+  position: relative
+  display: inline-flex
+  flex:
+    grow: 1
+    shrink: 0
+    basis: auto
+  justify-content: flex-start
+  align-items: center
+  padding: 0.5rem 1.5rem
+  appearance: none
+  outline: none
+  border: 1px solid $color-none
+  box-shadow: none
+  // Pseudo
+  &:focus,
+  &:active
+    border-color: map-get($theme-map, primary)
+    box-shadow: 0 0 1.2rem rgba($lblue_base, 0.5)
+  &:disabled
+    user-select: none
+    cursor: not-allowed
+    opacity: 0.5
+    // Pseudo
+    &:hover
+      border-color: $color-none
+      box-shadow: 0 0 1.2rem rgba($color-none, 0)
