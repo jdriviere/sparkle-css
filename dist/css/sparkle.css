@@ -276,15 +276,15 @@ a:hover {
   font-weight: 400;
 }
 
-.make-text-align-left {
+.make-text-left {
   text-align: left;
 }
 
-.make-text-align-right {
+.make-text-right {
   text-align: right;
 }
 
-.make-text-align-center {
+.make-text-centered {
   text-align: center;
 }
 
