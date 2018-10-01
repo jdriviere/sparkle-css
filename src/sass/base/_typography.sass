@@ -6,50 +6,50 @@
 // HEADINGS
 // ====================================
 h1, h2, h3, h4, h5, h6
-    margin: 0 !important
-    font-weight: $font-weight-bold
+  margin: 0 !important
+  font-weight: $font-weight-bold
 
 h1
-    font-size: 3.6rem
-    // Media Queries
-    +tablet
-        font-size: 4.2rem
+  font-size: 3.6rem
+  // Media Queries
+  +tablet
+    font-size: 4.2rem
 
 h2
-    font-size: 3.0rem
-    // Media Queries
-    +tablet
-        font-size: 3.6rem
+  font-size: 3.0rem
+  // Media Queries
+  +tablet
+    font-size: 3.6rem
 
 h3
-    font-size: 2.4rem
-    // Media Queries
-    +tablet
-        font-size: 2.8rem
+  font-size: 2.4rem
+  // Media Queries
+  +tablet
+    font-size: 2.8rem
 
 h4
-    font-size: 2.0rem
-    // Media Queries
-    +tablet
-        font-size: 2.4rem
+  font-size: 2.0rem
+  // Media Queries
+  +tablet
+    font-size: 2.4rem
 
 h5
-    font-size: 1.8rem
-    // Media Queries
-    +tablet
-        font-size: 2.0rem
+  font-size: 1.8rem
+  // Media Queries
+  +tablet
+    font-size: 2.0rem
 
 h6
-    font-size: 1.2rem
-    // Media Queries
-    +tablet
-        font-size: 1.4rem
+  font-size: 1.2rem
+  // Media Queries
+  +tablet
+    font-size: 1.4rem
 
 // ====================================
 // LINKS
 // ====================================
 a
-  color: map-get($theme-map, info)
+  color: map-get($color-map, info)
   font:
     size: $font-size
     weight: $font-weight-normal
@@ -62,7 +62,7 @@ a
 // ====================================
 // TEXT FORMATS
 // ====================================
-//--- SIZES ---
+//--- FONT (SIZES) ---
 // @NOTE: The `.make-text-sizeX` pertains to increasing
 //        the regular font, and should not be used for
 //        headers. For headers, see the <hX> tags.
@@ -70,24 +70,6 @@ a
   .make-text-size#{$i}
     @extend h#{$i}
     font-weight: $font-weight-light !important
-// .make-text-size1
-//   @extend h1
-//   font-weight: $font-weight-light !important
-// .make-text-size2
-//   @extend h2
-//   font-weight: $font-weight-light !important
-// .make-text-size3
-//   @extend h3
-//   font-weight: $font-weight-light !important
-// .make-text-size4
-//   @extend h4
-//   font-weight: $font-weight-light !important
-// .make-text-size5
-//   @extend h5
-//   font-weight: $font-weight-light !important
-// .make-text-size6
-//   @extend h6
-//   font-weight: $font-weight-light !important
 
 //--- FONT (WEIGHT) ---
 @each $type, $weight in $text-weight-map
@@ -119,7 +101,6 @@ a
     margin:
       top: -1.5rem !important
       bottom: 1.0rem !important
-
 .make-text-subtitle
   font:
     size: $text-font-subtitle-size

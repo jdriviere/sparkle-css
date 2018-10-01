@@ -1,7 +1,6 @@
 /* ===================================================
 /* BASE (CORE)
 /* ===================================================
-@import ../config/_all
 
 // =======================================
 // GLOBALS, HTML, BODY
@@ -36,26 +35,23 @@ body
 // SELECTION
 // =======================================
 ::selection
-  background: map-get($theme-map, primary)
-  color: map-get($theme-map, dark)
+  background: map-get($color-map, primary)
+  color: map-get($color-map, dark)
 
 // =======================================
 // LISTS
 // =======================================
-$list-spacing-v: 1.0rem
-$list-spacing-h: 2.0rem
-
 dl,
 ol,
 ul
   list-style-position: inside
   // Pseudo
   &:not(:last-child)
-    margin-bottom: $list-spacing-v
+    margin-bottom: $list-spacing-vertical
   // Elements
   dl,
   ol,
   ul
     margin:
       bottom: 0
-      left: $list-spacing-h
+      left: $list-spacing-horizontal

@@ -7,7 +7,20 @@ $line-height: 1.6 !default
 $opacity-muted: 0.5 !default
 
 // =================================
-// SCREEN SIZE VARIABLES
+// COLOR - THEMES
+// =================================
+$color-map: (default: $grey_base, primary: $lblue_base, info: $blue_base, success: $green_base, warning: $yellow_base, danger: $red_base, light: $white_base, dark: $black_base) !default
+$color-default: $grey_base !default
+$color-primary: $lblue_base !default
+$color-info: $blue_base !default
+$color-success: $green_base !default
+$color-warning: $yellow_base !default
+$color-danger: $red_base !default
+$color-light: $white_base !default
+$color-dark: $black_base !default
+
+// =================================
+// BREAKPOINTS
 // =================================
 $bp-none: 0px !default
 $bp-xsmall: 320px !default
@@ -18,7 +31,7 @@ $bp-xlarge: 960px !default
 $bp-widescreen: 1200px !default
 
 // =================================
-// FONTS VARIABLES
+// FONTS
 // =================================
 $font-family: -apple-system, BlinkMacSystemFont, "Lato", Roboto, Oxygen-Sans, Ubuntu, "Helvetica Neue", sans-serif !default
 $font-size: 1.6rem !default
@@ -41,7 +54,7 @@ $text-font-code: monospace !default
 $text-font-code-size: 1.5rem !default
 $text-font-code-padding: 0.5rem !default
 
-$text-font-opacity-muted: $opacity-muted
+$text-font-opacity-muted: $opacity-muted !default
 
 $text-color-map: (primary: $lblue_base, info: $blue_base, success: $green_base, warning: $yellow_base, danger: $red_base, light: $white_base, dark: $black_base) !default
 $text-alignment-map: (left: left, right: right, centered: center, justified: justify) !default
@@ -62,12 +75,32 @@ $checkbox-size: 1.7rem !default
 $checkbox-border-color: $grey_base !default
 
 // ====================================
+// DISPLAYS
+// ====================================
+$display-map: (block: block, inline-block: inline-block, inline: inline, flex: flex, inline-flex: inline-flex) !default
+
+// ====================================
+// GRIDS
+// ====================================
+$grid-gap: 1.5rem !default
+
+// ====================================
+// HEROES
+// ====================================
+$hero-color-map: (primary: ($lblue_base, $black_base), info: ($blue_base, $white_base), success: ($green_base, $white_base), warning: ($yellow_base, $color-grey-25), danger: ($red_base, $white_base), light: ($white_base, $color-grey-25), dark: ($black_base, $white_base)) !default
+$hero-padding: 1.5rem !default
+$hero-padding-body: ($hero-padding * 2) $hero-padding !default
+$hero-padding-small: $hero-padding 0 !default
+$hero-padding-medium: ($hero-padding * 5) 0 !default
+$hero-padding-large: ($hero-padding * 10) 0 !default
+
+// ====================================
 // INPUTS
 // ====================================
 $input-color-map: (primary: $lblue_base, info: $blue_base, success: $green_base, warning: $yellow_base, danger: $red_base) !default
 $input-margin: 1.5rem !default
 $input-size: 4.0rem !default
-$input-border-color: map-get($theme-map, default) !default
+$input-border-color: map-get($color-map, default) !default
 
 // ====================================
 // INPUT GROUPS
@@ -75,12 +108,18 @@ $input-border-color: map-get($theme-map, default) !default
 $input-group-margin: 1.5rem !default
 
 // ====================================
+// LISTS
+// ====================================
+$list-spacing-vertical: 1.0rem !default
+$list-spacing-horizontal: 2.0rem !default
+
+// ====================================
 // MEDIA
 // ====================================
 $media-margin: 1.5rem !default
 $media-padding: 1.5rem !default
 $media-border-radius: 0.5rem !default
-$media-border-color: map-get($theme-map, default) !default
+$media-border-color: map-get($color-map, default) !default
 $media-profile: 6.4rem !default
 $media-font-title: 1.8rem !default
 
@@ -94,9 +133,8 @@ $menu-padding: $menu-margin !default
 // NAVIGATION
 // ====================================
 $navig-min-height: 6.0rem !default
-$navig-colorbg: lighten($grey_base, $lighten)
-// $navig-colorbg: #FAFAFB !default
-$navig-color-border: darken($navig-colorbg, $darken) !default
+$navig-color-background: lighten($grey_base, $lighten) !default
+$navig-color-border: darken($navig-color-background, $darken) !default
 $navig-spacing: 1.5rem !default
 $navig-padding: 1.0rem !default
 $navig-brand: 1.5rem !default
@@ -110,6 +148,13 @@ $navig-font-opacity-hovered: 1.0 !default
 // ====================================
 $radio-size: 1.7rem !default
 $radio-border-color: $grey_base !default
+
+// ====================================
+// SPACING (MARGIN/PADDING)
+// ====================================
+$spacing-count-min: 1 !default
+$spacing-count-max: 10 !default
+$spacing-size: 1.0rem !default
 
 // ====================================
 // SWITCHES

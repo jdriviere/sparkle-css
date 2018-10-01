@@ -1,7 +1,7 @@
 // =======================================
 // HAMBURGER ICONS
 // =======================================
-=hamburger($size: 3rem, $color: map-get($theme-maps, default))
+=hamburger($size: 3rem, $color: map-get($color-map, default))
   position: relative
   display: block
   width: $size
@@ -29,7 +29,7 @@
   // Modifiers
   &.make-active
     span
-      background-color: map-get($theme-maps, primary)
+      background-color: map-get($color-map, primary)
       // Pseudo
       &:nth-child(1)
         margin:

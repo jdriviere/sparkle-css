@@ -341,7 +341,7 @@ code {
   transition: all 0.2s ease-in;
 }
 
-.checkbox__toggle:checked + .checkbox__icon:after {
+.checkbox__toggle:checked + .checkbox__icon::after {
   background: #ADD2E6;
   -webkit-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
@@ -381,7 +381,7 @@ code {
   border: 2px solid #E2E2E2;
 }
 
-.checkbox__icon:after {
+.checkbox__icon::after {
   content: '';
   position: absolute;
   top: calc(50% - 1.7rem / 4);
@@ -671,7 +671,7 @@ code {
   transition: all 0.2s ease-in;
 }
 
-.radio__toggle:checked + .radio__icon:after {
+.radio__toggle:checked + .radio__icon::after {
   background: #ADD2E6;
   -webkit-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
@@ -712,7 +712,7 @@ code {
   border-radius: 50%;
 }
 
-.radio__icon:after {
+.radio__icon::after {
   content: '';
   position: absolute;
   top: calc(50% - 1.7rem / 4);
@@ -761,7 +761,7 @@ code {
   border-color: #72b2d4;
 }
 
-.switch > .switch__toggle:disabled ~ .switch__handle {
+.switch > .switch__toggle:checked:disabled ~ .switch__handle {
   opacity: 0.5;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -770,7 +770,7 @@ code {
   cursor: not-allowed;
 }
 
-.switch > .switch__toggle:disabled ~ .switch__label {
+.switch > .switch__toggle:checked:disabled ~ .switch__label {
   opacity: 0.5;
 }
 
@@ -3136,6 +3136,33 @@ code {
 }
 
 /* =================================================== */
+/* DISPLAYS */
+/* =================================================== */
+.make-display-block {
+  display: block;
+}
+
+.make-display-inline-block {
+  display: inline-block;
+}
+
+.make-display-inline {
+  display: inline;
+}
+
+.make-display-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.make-display-inline-flex {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+/* =================================================== */
 /* PLACEMENTS */
 /* =================================================== */
 .make-float-left {
@@ -3336,345 +3363,17 @@ code {
 /* =================================================== */
 /* UTILITIES */
 /* =================================================== */
-.make-clear {
+.make-clearfix {
   display: inline-block;
 }
 
-.make-clear::after {
+.make-clearfix::after {
   visibility: hidden;
   display: block;
   font-size: 0;
   content: "";
   clear: both;
   height: 0;
-}
-
-.make-display-block {
-  display: block;
-}
-
-.make-display-inline-block {
-  display: inline-block;
-}
-
-.make-display-inline {
-  display: inline;
-}
-
-.make-display-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.make-display-inline-flex {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
-.make-no-paddings {
-  padding: 0 !important;
-}
-
-.make-padding-10 {
-  padding: 1rem;
-}
-
-.make-padding-10-vertical {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.make-padding-10-top {
-  padding-top: 1rem;
-}
-
-.make-padding-10-bottom {
-  padding-bottom: 1rem;
-}
-
-.make-padding-10-horizontal {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.make-padding-10-left {
-  padding-left: 1rem;
-}
-
-.make-padding-10-right {
-  padding-right: 1rem;
-}
-
-.make-padding-20 {
-  padding: 2rem;
-}
-
-.make-padding-20-vertical {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
-.make-padding-20-top {
-  padding-top: 2rem;
-}
-
-.make-padding-20-bottom {
-  padding-bottom: 2rem;
-}
-
-.make-padding-20-horizontal {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-.make-padding-20-left {
-  padding-left: 2rem;
-}
-
-.make-padding-20-right {
-  padding-right: 2rem;
-}
-
-.make-padding-30 {
-  padding: 3rem;
-}
-
-.make-padding-30-vertical {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-.make-padding-30-top {
-  padding-top: 3rem;
-}
-
-.make-padding-30-bottom {
-  padding-bottom: 3rem;
-}
-
-.make-padding-30-horizontal {
-  padding-left: 3rem;
-  padding-right: 3rem;
-}
-
-.make-padding-30-left {
-  padding-left: 3rem;
-}
-
-.make-padding-30-right {
-  padding-right: 3rem;
-}
-
-.make-padding-40 {
-  padding: 4rem;
-}
-
-.make-padding-40-vertical {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-
-.make-padding-40-top {
-  padding-top: 4rem;
-}
-
-.make-padding-40-bottom {
-  padding-bottom: 4rem;
-}
-
-.make-padding-40-horizontal {
-  padding-left: 4rem;
-  padding-right: 4rem;
-}
-
-.make-padding-40-left {
-  padding-left: 4rem;
-}
-
-.make-padding-40-right {
-  padding-right: 4rem;
-}
-
-.make-padding-50 {
-  padding: 5rem;
-}
-
-.make-padding-50-vertical {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-
-.make-padding-50-top {
-  padding-top: 5rem;
-}
-
-.make-padding-50-bottom {
-  padding-bottom: 5rem;
-}
-
-.make-padding-50-horizontal {
-  padding-left: 5rem;
-  padding-right: 5rem;
-}
-
-.make-padding-50-left {
-  padding-left: 5rem;
-}
-
-.make-padding-50-right {
-  padding-right: 5rem;
-}
-
-.make-padding-60 {
-  padding: 6rem;
-}
-
-.make-padding-60-vertical {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-}
-
-.make-padding-60-top {
-  padding-top: 6rem;
-}
-
-.make-padding-60-bottom {
-  padding-bottom: 6rem;
-}
-
-.make-padding-60-horizontal {
-  padding-left: 6rem;
-  padding-right: 6rem;
-}
-
-.make-padding-60-left {
-  padding-left: 6rem;
-}
-
-.make-padding-60-right {
-  padding-right: 6rem;
-}
-
-.make-padding-70 {
-  padding: 7rem;
-}
-
-.make-padding-70-vertical {
-  padding-top: 7rem;
-  padding-bottom: 7rem;
-}
-
-.make-padding-70-top {
-  padding-top: 7rem;
-}
-
-.make-padding-70-bottom {
-  padding-bottom: 7rem;
-}
-
-.make-padding-70-horizontal {
-  padding-left: 7rem;
-  padding-right: 7rem;
-}
-
-.make-padding-70-left {
-  padding-left: 7rem;
-}
-
-.make-padding-70-right {
-  padding-right: 7rem;
-}
-
-.make-padding-80 {
-  padding: 8rem;
-}
-
-.make-padding-80-vertical {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-}
-
-.make-padding-80-top {
-  padding-top: 8rem;
-}
-
-.make-padding-80-bottom {
-  padding-bottom: 8rem;
-}
-
-.make-padding-80-horizontal {
-  padding-left: 8rem;
-  padding-right: 8rem;
-}
-
-.make-padding-80-left {
-  padding-left: 8rem;
-}
-
-.make-padding-80-right {
-  padding-right: 8rem;
-}
-
-.make-padding-90 {
-  padding: 9rem;
-}
-
-.make-padding-90-vertical {
-  padding-top: 9rem;
-  padding-bottom: 9rem;
-}
-
-.make-padding-90-top {
-  padding-top: 9rem;
-}
-
-.make-padding-90-bottom {
-  padding-bottom: 9rem;
-}
-
-.make-padding-90-horizontal {
-  padding-left: 9rem;
-  padding-right: 9rem;
-}
-
-.make-padding-90-left {
-  padding-left: 9rem;
-}
-
-.make-padding-90-right {
-  padding-right: 9rem;
-}
-
-.make-padding-100 {
-  padding: 10rem;
-}
-
-.make-padding-100-vertical {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
-}
-
-.make-padding-100-top {
-  padding-top: 10rem;
-}
-
-.make-padding-100-bottom {
-  padding-bottom: 10rem;
-}
-
-.make-padding-100-horizontal {
-  padding-left: 10rem;
-  padding-right: 10rem;
-}
-
-.make-padding-100-left {
-  padding-left: 10rem;
-}
-
-.make-padding-100-right {
-  padding-right: 10rem;
 }
 
 .make-no-margins {
@@ -3979,6 +3678,310 @@ code {
 
 .make-margin-100-right {
   margin-right: 10rem;
+}
+
+.make-no-paddings {
+  padding: 0 !important;
+}
+
+.make-padding-10 {
+  padding: 1rem;
+}
+
+.make-padding-10-vertical {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.make-padding-10-top {
+  padding-top: 1rem;
+}
+
+.make-padding-10-bottom {
+  padding-bottom: 1rem;
+}
+
+.make-padding-10-horizontal {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.make-padding-10-left {
+  padding-left: 1rem;
+}
+
+.make-padding-10-right {
+  padding-right: 1rem;
+}
+
+.make-padding-20 {
+  padding: 2rem;
+}
+
+.make-padding-20-vertical {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.make-padding-20-top {
+  padding-top: 2rem;
+}
+
+.make-padding-20-bottom {
+  padding-bottom: 2rem;
+}
+
+.make-padding-20-horizontal {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.make-padding-20-left {
+  padding-left: 2rem;
+}
+
+.make-padding-20-right {
+  padding-right: 2rem;
+}
+
+.make-padding-30 {
+  padding: 3rem;
+}
+
+.make-padding-30-vertical {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.make-padding-30-top {
+  padding-top: 3rem;
+}
+
+.make-padding-30-bottom {
+  padding-bottom: 3rem;
+}
+
+.make-padding-30-horizontal {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.make-padding-30-left {
+  padding-left: 3rem;
+}
+
+.make-padding-30-right {
+  padding-right: 3rem;
+}
+
+.make-padding-40 {
+  padding: 4rem;
+}
+
+.make-padding-40-vertical {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.make-padding-40-top {
+  padding-top: 4rem;
+}
+
+.make-padding-40-bottom {
+  padding-bottom: 4rem;
+}
+
+.make-padding-40-horizontal {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.make-padding-40-left {
+  padding-left: 4rem;
+}
+
+.make-padding-40-right {
+  padding-right: 4rem;
+}
+
+.make-padding-50 {
+  padding: 5rem;
+}
+
+.make-padding-50-vertical {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.make-padding-50-top {
+  padding-top: 5rem;
+}
+
+.make-padding-50-bottom {
+  padding-bottom: 5rem;
+}
+
+.make-padding-50-horizontal {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.make-padding-50-left {
+  padding-left: 5rem;
+}
+
+.make-padding-50-right {
+  padding-right: 5rem;
+}
+
+.make-padding-60 {
+  padding: 6rem;
+}
+
+.make-padding-60-vertical {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.make-padding-60-top {
+  padding-top: 6rem;
+}
+
+.make-padding-60-bottom {
+  padding-bottom: 6rem;
+}
+
+.make-padding-60-horizontal {
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
+.make-padding-60-left {
+  padding-left: 6rem;
+}
+
+.make-padding-60-right {
+  padding-right: 6rem;
+}
+
+.make-padding-70 {
+  padding: 7rem;
+}
+
+.make-padding-70-vertical {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.make-padding-70-top {
+  padding-top: 7rem;
+}
+
+.make-padding-70-bottom {
+  padding-bottom: 7rem;
+}
+
+.make-padding-70-horizontal {
+  padding-left: 7rem;
+  padding-right: 7rem;
+}
+
+.make-padding-70-left {
+  padding-left: 7rem;
+}
+
+.make-padding-70-right {
+  padding-right: 7rem;
+}
+
+.make-padding-80 {
+  padding: 8rem;
+}
+
+.make-padding-80-vertical {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.make-padding-80-top {
+  padding-top: 8rem;
+}
+
+.make-padding-80-bottom {
+  padding-bottom: 8rem;
+}
+
+.make-padding-80-horizontal {
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+
+.make-padding-80-left {
+  padding-left: 8rem;
+}
+
+.make-padding-80-right {
+  padding-right: 8rem;
+}
+
+.make-padding-90 {
+  padding: 9rem;
+}
+
+.make-padding-90-vertical {
+  padding-top: 9rem;
+  padding-bottom: 9rem;
+}
+
+.make-padding-90-top {
+  padding-top: 9rem;
+}
+
+.make-padding-90-bottom {
+  padding-bottom: 9rem;
+}
+
+.make-padding-90-horizontal {
+  padding-left: 9rem;
+  padding-right: 9rem;
+}
+
+.make-padding-90-left {
+  padding-left: 9rem;
+}
+
+.make-padding-90-right {
+  padding-right: 9rem;
+}
+
+.make-padding-100 {
+  padding: 10rem;
+}
+
+.make-padding-100-vertical {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+.make-padding-100-top {
+  padding-top: 10rem;
+}
+
+.make-padding-100-bottom {
+  padding-bottom: 10rem;
+}
+
+.make-padding-100-horizontal {
+  padding-left: 10rem;
+  padding-right: 10rem;
+}
+
+.make-padding-100-left {
+  padding-left: 10rem;
+}
+
+.make-padding-100-right {
+  padding-right: 10rem;
 }
 
 /* ========== SPARKLE.CSS ENDS HERE ========== */

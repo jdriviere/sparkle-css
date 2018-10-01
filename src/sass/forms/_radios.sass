@@ -6,59 +6,59 @@
 // MIXINS
 // ====================================
 =create-radio($size: $radio-size)
-    display: flex
+  display: flex
+  align-items: center
+  cursor: pointer
+  // Elements
+  &__toggle
+    display: none
+    opacity: 0
+    // Pseudo
+    &:checked + .radio__icon
+      border-color: map-get($color-map, primary)
+      transform: scale(1.1)
+      transition: all 0.2s ease-in
+      // Pseudo
+      &::after
+        background: map-get($color-map, primary)
+        transition: all 0.2s ease-in
+    &:disabled + .radio__icon
+      cursor: not-allowed
+      user-select: none
+      opacity: $opacity-muted
+    &:disabled ~ span
+      cursor: not-allowed
+      user-select: none
+      opacity: $opacity-muted
+  &__icon
+    position: relative
+    display: inline-flex
     align-items: center
-    cursor: pointer
+    width: $size
+    height: $size
+    margin-right: 1.5rem
+    padding: 0.5rem
+    border: 2px solid $radio-border-color
+    border-radius: 50%
+    // Pseudo
+    &::after
+      content: ''
+      position: absolute
+      top: calc(50% - #{$size} / 4)
+      left: calc(50% - #{$size} / 4)
+      width: $size / 2
+      height: $size / 2
+      border-radius: 50%
+  // Modifiers
+  &.make-inline
+    display: inline-flex
     // Elements
-    &__toggle
-        display: none
-        opacity: 0
-        // Pseudo
-        &:checked + .radio__icon
-            border-color: map-get($theme-map, primary)
-            transform: scale(1.1)
-            transition: all 0.2s ease-in
-            // Pseudo
-            &:after
-                background: map-get($theme-map, primary)
-                transition: all 0.2s ease-in
-        &:disabled + .radio__icon
-            cursor: not-allowed
-            user-select: none
-            opacity: $opacity-muted
-        &:disabled ~ span
-            cursor: not-allowed
-            user-select: none
-            opacity: $opacity-muted
-    &__icon
-        position: relative
-        display: inline-flex
-        align-items: center
-        width: $size
-        height: $size
-        margin-right: 1.5rem
-        padding: 0.5rem
-        border: 2px solid $radio-border-color
-        border-radius: 50%
-        // Pseudo
-        &:after
-            content: ''
-            position: absolute
-            top: calc(50% - #{$size} / 4)
-            left: calc(50% - #{$size} / 4)
-            width: $size / 2
-            height: $size / 2
-            border-radius: 50%
-    // Modifiers
-    &.make-inline
-        display: inline-flex
-        // Elements
-        & > span
-            margin-right: 1.5rem
+    & > span
+      margin-right: 1.5rem
 
 // ====================================
 // RADIO
 // ====================================
 .radio
-    +create-radio
+  +create-radio
         

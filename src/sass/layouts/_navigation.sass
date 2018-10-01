@@ -15,7 +15,7 @@
   height: auto
   margin: 0
   padding: 0
-  background: $navig-colorbg
+  background: $navig-color-background
   border-bottom: 1px solid $navig-color-border
   box-shadow: 0 1px 3px rgba($black_base, 0.1), 0 1px 6px rgba($black_base, 0.05)  
   // Elements
@@ -82,7 +82,7 @@
         cursor: pointer
       // Pseudo
       &:hover
-        background: darken($navig-colorbg, $navig-font-opacity-hovered)
+        background: darken($navig-color-background, $navig-font-opacity-hovered)
         // Elements
         & > a
           color: rgba($navig-font-color, $navig-font-opacity-hovered)
@@ -93,19 +93,19 @@
           color: rgba($navig-font-color, $navig-font-opacity-hovered)
           font-weight: $font-weight-bold
       &.make-special
-        background: map-get($theme-map, primary)
+        background: map-get($color-map, primary)
         // Elements
         > a
           color: #FFF
         // Pseudo
         &:hover
-          background: darken(map-get($theme-map, primary), $darken)
+          background: darken(map-get($color-map, primary), $darken)
           // Elements
           > a
             color: #FFF
       // Modifiers
         &.make-right
-            margin-left: 0
+          margin-left: 0
     // Modifiers
     &.make-fixed
       position: fixed
@@ -113,7 +113,7 @@
       box-shadow: 0 0 7px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 0, 0, 0.05)
   
   // Media Query
-  @media screen and (min-width: 768px)
+  @media screen and (min-width: $bp-large)
     flex-direction: row
     align-items: stretch
     // Elements
