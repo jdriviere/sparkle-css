@@ -147,7 +147,7 @@ h6, .make-text-size6 {
 
 a {
   color: #1982C4;
-  font-size: 1.6rem;
+  font-size: inherit;
   font-weight: 400;
   text-decoration: none;
   cursor: pointer;
