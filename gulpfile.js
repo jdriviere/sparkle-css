@@ -35,7 +35,7 @@ gulp.task('sassify', function() {
       header: banner
     }),
     autoprefixer({
-      browsers: ['last 3 versions', "IE >= 8"]
+      browsers: ['last 3 versions', "IE >= 10"]
     })
   ];
   const shrink_opt = [cssnano()];
