@@ -761,7 +761,7 @@ code {
   border-color: #72b2d4;
 }
 
-.switch > .switch__toggle:checked:disabled ~ .switch__handle {
+.switch > .switch__toggle:disabled ~ .switch__handle {
   opacity: 0.5;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -770,7 +770,7 @@ code {
   cursor: not-allowed;
 }
 
-.switch > .switch__toggle:checked:disabled ~ .switch__label {
+.switch > .switch__toggle:disabled ~ .switch__label {
   opacity: 0.5;
 }
 
@@ -908,7 +908,7 @@ code {
 }
 
 /* =================================================== */
-/* GRID */
+/* WRAPPER (Container) */
 /* =================================================== */
 .wrapper {
   position: relative;
@@ -916,12 +916,12 @@ code {
   margin: 0 auto;
 }
 
-.wrapper:before, .wrapper:after {
+.wrapper::before, .wrapper::after {
   content: "";
   display: table;
 }
 
-.wrapper:after {
+.wrapper::after {
   clear: both;
 }
 

@@ -25,7 +25,7 @@
       top: 0
       bottom: 1.0rem
     padding: 0.5rem 0
-    border: 1px solid map-get($color-map, default)
+    border: 1px solid $color-default
     // Pseudo
     &:last-child
       margin-bottom: 0
@@ -35,7 +35,7 @@
     font-size: $font-size
     text-align: right
     white-space: normal
-    border-bottom: 1px dotted map-get($color-map, default)
+    border-bottom: 1px dotted $color-default
     // Pseudo
     &:first-child
       margin-top: -0.5rem
@@ -82,23 +82,23 @@
   &.make-default
     // Elements
     tr:not(:last-child)
-      border-bottom: 1px solid darken($grey_base, $darken)
+      border-bottom: 1px solid darken($color-default, $darken)
   &.make-bordered
     // Elements
     th, td
-      border: 1px solid darken($grey_base, $darken)
+      border: 1px solid darken($color-default, $darken)
   &.make-striped
     // Elements
     tbody tr:nth-child(odd)
-      background: lighten(map-get($color-map, default), $lighten / 2)
+      background: lighten($color-default, $lighten / 2)
     // Modifiers
     &.make-hoverable
       tbody tr:nth-child(odd):hover > td
-        background: map-get($color-map, default)
+        background: $color-default
   &.make-hoverable
     // Elements
     tbody tr:hover > td
-      background: lighten(map-get($color-map, default), $lighten / 2)
+      background: lighten($color-default, $lighten / 2)
 
 // ====================================
 // NAVIGATION

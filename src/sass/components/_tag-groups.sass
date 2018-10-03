@@ -1,48 +1,42 @@
 /* ===================================================
 /* TAG-GROUPS
 /* ===================================================
-@import ../config/_all
-
-// =================================
-// VARIABLES
-// =================================
-$tag-margin: 0.25em !default
 
 // =================================
 // MIXINS
 // =================================  
 =create-tag-group
-    display: flex
-    flex:
-        direction: row
-        wrap: wrap
-    justify-content: flex-start
-    align-items: center  
-    // Elements
+  display: flex
+  flex:
+    direction: row
+    wrap: wrap
+  justify-content: flex-start
+  align-items: center  
+  // Elements
+  & > .tag
+    margin:
+      bottom: $tag-group-margin
+      right: $tag-group-margin
+    // Pseudo
+    &:last-child
+      margin-right: 0
+  // Modifiers
+  // NOTE: '.make-solid' is a temporary name
+  &.make-solid
     & > .tag
-        margin:
-            bottom: $tag-margin
-            right: $tag-margin
-        // Pseudo
-        &:last-child
-            margin-right: 0
-    // Modifiers
-    // NOTE: '.make-solid' is a temporary name
-    &.make-solid
-        & > .tag
-            // Pseudo
-            &:not(:first-child)
-                border:
-                    top-left-radius: 0
-                    bottom-left-radius: 0
-            &:not(:last-child)
-                margin-right: -1px
-                border:
-                    top-right-radius: 0
-                    bottom-right-radius: 0
+      // Pseudo
+      &:not(:first-child)
+        border:
+          top-left-radius: 0
+          bottom-left-radius: 0
+      &:not(:last-child)
+        margin-right: -1px
+        border:
+          top-right-radius: 0
+          bottom-right-radius: 0
 
 // ====================================
 // TAG-GROUPS
 // ====================================
 .tags
-    +create-tag-group
+  +create-tag-group

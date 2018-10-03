@@ -7,7 +7,7 @@
 // ====================================
 =create-card
   width: 100%
-  background: lighten($white_base, $lighten / 2)
+  background: lighten($color-light, $lighten / 2)
   border: $card-border
   border-radius: $border-radius
   overflow: hidden
@@ -58,7 +58,7 @@
         // Elements
         & > a
           text-decoration: none
-          color: map-get( $color-map, info)
+          color: $color-info
           // Pseudo
           &:hover
             color: $font-color

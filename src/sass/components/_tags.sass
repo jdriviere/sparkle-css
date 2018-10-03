@@ -1,61 +1,49 @@
 /* ===================================================
 /* TAGS
 /* ===================================================
-@import ../config/_all
-
-// ====================================
-// VARIABLES
-// ====================================
-$tag-color-map: (primary: $lblue_base, info: $blue_base, success: $green_base, warning: $yellow_base, danger: $red_base, light: $white_base, dark: $black_base) !default
-$tag-padding: 0.5rem 1rem !default
-$tag-font-size: 1.2rem !default
-$tag-font-weight: $font-weight-normal
 
 // ====================================
 // MIXINS
 // ====================================
 =create-tag
-    display: inline-flex
-    flex:
-        grow: 0
-        shrink: 0
-        basis: auto
-    justify-content: center
-    align-items: center
-    padding: $tag-padding
-    background: map-get($color-map, default)
-    color: map-get($color-map, dark)
-    font:
-        size: $tag-font-size
-        weight: $tag-font-weight
-    border-radius: $border-radius
-
-    // Modifiers
-    @each $type, $color in $tag-color-map        
-        &.make-#{$type}
-            @if ($type == 'primary' or $type == 'warning' or $type == 'light')
-                color: $black_base !important
-            @else
-                color: $white_base !important
-            background: $color
-
-            // Modifiers
-            &.make-outline
-                background: $color-none
-                color: $color !important
-                border: 1px solid $color
-            &.make-reverse
-                @if ($type == 'primary' or $type == 'warning' or $type == 'light')
-                    background: $black_base !important
-                @else
-                    background: $white_base !important
-                color: $color !important  
-    &.make-bullet
-        border-radius: 2.0rem
-
+  display: inline-flex
+  flex:
+    grow: 0
+    shrink: 0
+    basis: auto
+  justify-content: center
+  align-items: center
+  padding: $tag-padding
+  background: map-get($color-map, default)
+  color: map-get($color-map, dark)
+  font:
+    size: $tag-font-size
+    weight: $tag-font-weight
+  border-radius: $border-radius
+  // Modifiers
+  @each $type, $color in $tag-color-map        
+    &.make-#{$type}
+      @if ($type == 'primary' or $type == 'warning' or $type == 'light')
+        color: $color-dark !important
+      @else
+        color: $color-light !important
+      background: $color
+      // Modifiers
+      &.make-outline
+        background: $color-none
+        color: $color !important
+        border: 1px solid $color
+      &.make-reverse
+        @if ($type == 'primary' or $type == 'warning' or $type == 'light')
+          background: $color-dark !important
+        @else
+          background: $color-light !important
+        color: $color !important  
+  &.make-bullet
+    border-radius: 2.0rem
 
 // ====================================
 // TAGS
 // ====================================
 .tag
-    +create-tag
+  +create-tag

@@ -1,35 +1,27 @@
 /* ===================================================
-/* GRID
+/* WRAPPER (Container)
 /* ===================================================
-@import ../config/_all
-
-// ====================================
-// VARIABLES
-// ====================================
-// Wrapper Variables
-$wrapper-margin: 1.5rem !default
 
 // ====================================
 // MIXINS
 // ====================================
 =create-wrapper
-    position: relative
-    // width: 96%
-    width: calc(100% - (#{$wrapper-margin} * 2))
-    margin: 0 auto
-    // Pseudo
-    &:before,
-    &:after
-        content: ""
-        display: table
-    &:after
-        clear: both
-    // Media Queries
-    +tablet
-        max-width: 1200px
+  position: relative
+  width: calc(100% - (#{$wrapper-margin} * 2))
+  margin: 0 auto
+  // Pseudo
+  &::before,
+  &::after
+    content: ""
+    display: table
+  &::after
+    clear: both
+  // Media Queries
+  +tablet
+    max-width: 1200px
 
 // ====================================
-// CONTAINER
+// WRAPPER
 // ====================================
 .wrapper
-    +create-wrapper
+  +create-wrapper
