@@ -1795,6 +1795,7 @@ code {
 
 .media__profile img {
   width: 100%;
+  border-radius: 0.3rem;
 }
 
 .media__body {
