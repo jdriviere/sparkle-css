@@ -3289,10 +3289,10 @@ code {
 }
 
 @media screen and (min-width: 0px) and (max-width: 639px) {
-  .make-hidden-mobile-only {
+  .make-hidden-phone-only {
     display: none !important;
   }
-  .make-invisible-mobile-only {
+  .make-invisible-phone-only {
     visibility: hidden !important;
   }
 }
