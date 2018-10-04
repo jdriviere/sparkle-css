@@ -1869,11 +1869,11 @@ code {
 }
 
 .hero.make-half-height {
-  height: 50vh;
+  min-height: 50vh;
 }
 
 .hero.make-full-height {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .hero.make-primary {
