@@ -6,12 +6,8 @@ dev/
 dist/img/
 gulp/
 node_modules/
-unused/
 
 # FILES
 .gitignore
-.travis.yml
 bower.json
-*.html
-*.txt
 *.log

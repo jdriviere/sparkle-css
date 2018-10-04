@@ -4,8 +4,6 @@
 dev/
 gulp/
 node_modules/
-src/css/
-unused/
 
 # FILES
 **/*.html

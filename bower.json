@@ -14,9 +14,9 @@
     "css3",
     "css framework",
     "framework",
-    "html",
-    "html5",
+    "flexbox",
     "sparkle",
+    "sparklecss",
     "sparkle.css",
     "sparkle-css"
   ],
@@ -31,10 +31,6 @@
     "dist/img",
     "gulp/",
     "node_modules/",
-    "src/",
-    "unused/",
-    "*.html",
-    "*.json",
     "*.log"
   ]
 }
