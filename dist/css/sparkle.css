@@ -362,7 +362,7 @@ a:hover {
 }
 
 .make-text-primary.make-text-muted {
-  color: rgba(173, 210, 230, 0.5);
+  color: rgba(173, 210, 230, 0.5) !important;
 }
 
 .make-text-info {
@@ -370,7 +370,7 @@ a:hover {
 }
 
 .make-text-info.make-text-muted {
-  color: rgba(25, 130, 196, 0.5);
+  color: rgba(25, 130, 196, 0.5) !important;
 }
 
 .make-text-success {
@@ -378,7 +378,7 @@ a:hover {
 }
 
 .make-text-success.make-text-muted {
-  color: rgba(106, 187, 79, 0.5);
+  color: rgba(106, 187, 79, 0.5) !important;
 }
 
 .make-text-warning {
@@ -386,7 +386,7 @@ a:hover {
 }
 
 .make-text-warning.make-text-muted {
-  color: rgba(254, 197, 36, 0.5);
+  color: rgba(254, 197, 36, 0.5) !important;
 }
 
 .make-text-danger {
@@ -394,7 +394,7 @@ a:hover {
 }
 
 .make-text-danger.make-text-muted {
-  color: rgba(255, 51, 68, 0.5);
+  color: rgba(255, 51, 68, 0.5) !important;
 }
 
 .make-text-light {
@@ -402,7 +402,7 @@ a:hover {
 }
 
 .make-text-light.make-text-muted {
-  color: rgba(244, 244, 248, 0.5);
+  color: rgba(244, 244, 248, 0.5) !important;
 }
 
 .make-text-dark {
@@ -410,11 +410,11 @@ a:hover {
 }
 
 .make-text-dark.make-text-muted {
-  color: rgba(34, 37, 40, 0.5);
+  color: rgba(34, 37, 40, 0.5) !important;
 }
 
 .make-text-muted {
-  color: rgba(64, 64, 64, 0.5);
+  color: rgba(64, 64, 64, 0.5) !important;
 }
 
 .make-text-title {
