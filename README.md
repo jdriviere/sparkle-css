@@ -8,8 +8,8 @@ A lightweight, open-source, mobile-first CSS framework for easy website designs.
 
 [![license](https://img.shields.io/badge/license-MIT-yellow.svg)](https://github.com/jdriviere/sparkle-css/blob/master/LICENSE)
 [![website](https://img.shields.io/badge/website-online-green.svg)](httpss://sparklecss.herokuapp.com)
-[![GitHub tag](https://img.shields.io/badge/version-2.0.1-blue.svg)](https://github.com/jdriviere/sparkle-css/releases/tag/v2.0.1)
-[![npm](https://img.shields.io/badge/npm-v2.0.1-red.svg)](https://www.npmjs.com/package/sparkle.css)
+[![GitHub tag](https://img.shields.io/badge/version-2.1.0-blue.svg)](https://github.com/jdriviere/sparkle-css/releases/tag/v2.1.0)
+[![npm](https://img.shields.io/badge/npm-v2.1.0-red.svg)](https://www.npmjs.com/package/sparkle.css)
 [![jsDelivr](https://data.jsdelivr.com/v1/package/gh/jdriviere/sparkle-css/badge?style=rounded)](https://www.jsdelivr.com/package/gh/jdriviere/sparkle-css)
 [![David-DM](https://david-dm.org/jdriviere/sparkle-css.svg)](https://david-dm.org/jdriviere/sparkle-css)
 [![Travis](https://img.shields.io/travis/rust-lang/rust.svg)](https://travis-ci.org/jdriviere/sparkle-css)
