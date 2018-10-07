@@ -5,24 +5,6 @@
 // ====================================
 // MIXINS
 // ====================================
-//--- COLUMNS ---//
-=create-columns($name: "")
-  @if $name == ""
-    @for $i from 1 through 12
-      &.make-#{$i}
-        flex: none
-        width: (($i * 100%) / 12)
-      &.make-offset-#{$i}
-        margin-left: (($i * 100%) / 12)
-  @else
-    @for $i from 1 through 12
-      &.make-#{$i}-#{$name}
-        flex: none
-        width: (($i * 100%) / 12)
-      &.make-offset-#{$i}-#{$name}
-        margin-left: (($i * 100%) / 12)
-
-//--- GRID ---//
 =create-grid
   margin:
     left: $grid-gap / -2
@@ -49,8 +31,10 @@
     @media screen and (min-width: $bp-small) // Mobile (landscape)
       +create-columns("small")
     @media screen and (min-width: $bp-medium) // Tablet
+      // Grid of 12
       +create-columns
       +create-columns("medium")
+      // +create-columns-fifths("medium")
     @media screen and (min-width: $bp-large) // Desktop
       +create-columns("large")
     @media screen and (min-width: $bp-widescreen) // Widescreen

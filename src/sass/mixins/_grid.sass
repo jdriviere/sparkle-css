@@ -1,0 +1,18 @@
+// =======================================
+// GRID
+// =======================================
+=create-columns($name: "")
+  @if $name == ""
+    @for $i from 1 through 12
+      &.make-#{$i}
+        flex: none
+        width: (($i * 100%) / 12)
+      &.make-offset-#{$i}
+        margin-left: (($i * 100%) / 12)
+  @else
+    @for $i from 1 through 12
+      &.make-#{$i}-#{$name}
+        flex: none
+        width: (($i * 100%) / 12)
+      &.make-offset-#{$i}-#{$name}
+        margin-left: (($i * 100%) / 12)
