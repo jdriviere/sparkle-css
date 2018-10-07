@@ -900,24 +900,24 @@ code {
   border-radius: 1.0rem;
 }
 
-.switch > .switch__toggle {
+.switch__toggle {
   position: absolute;
   display: none;
   opacity: 0;
 }
 
-.switch > .switch__toggle:checked ~ .switch__handle {
+.switch__toggle:checked ~ .switch__handle {
   -webkit-transform: translateX(100%);
       -ms-transform: translateX(100%);
           transform: translateX(100%);
 }
 
-.switch > .switch__toggle:checked ~ .switch__label {
+.switch__toggle:checked ~ .switch__label {
   background: #ADD2E6;
   border-color: #72b2d4;
 }
 
-.switch > .switch__toggle:disabled ~ .switch__handle {
+.switch__toggle:disabled ~ .switch__handle {
   opacity: 0.5;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -926,11 +926,11 @@ code {
   cursor: not-allowed;
 }
 
-.switch > .switch__toggle:disabled ~ .switch__label {
+.switch__toggle:disabled ~ .switch__label {
   opacity: 0.5;
 }
 
-.switch > .switch__handle {
+.switch__handle {
   position: absolute;
   top: 0;
   left: 0;
@@ -946,7 +946,7 @@ code {
   transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
-.switch > .switch__label {
+.switch__label {
   position: relative;
   display: block;
   background: #E2E2E2;
