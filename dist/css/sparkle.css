@@ -2885,10 +2885,6 @@ code {
   font-size: 1.28rem;
 }
 
-.button.make-medium {
-  font-size: 1.6rem;
-}
-
 .button.make-large {
   font-size: 2.13333rem;
 }
@@ -2951,6 +2947,18 @@ code {
   margin-right: -1px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+}
+
+.buttons.make-centered {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.buttons.make-right {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 /* =================================================== */

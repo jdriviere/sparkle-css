@@ -21,7 +21,7 @@
     &:last-child
       margin-right: 0
   // Modifiers
-  // NOTE: '.make-solid' is a temporary name
+  // @NOTE: '.make-solid' is a temporary name
   &.make-solid
     & > .button:not(.make-block)
       // Pseudo
@@ -34,6 +34,10 @@
         border:
           top-right-radius: 0
           bottom-right-radius: 0
+  &.make-centered
+    justify-content: center
+  &.make-right
+    justify-content: flex-end
 
 // =================================
 // BUTTON-GROUPS

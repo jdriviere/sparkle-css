@@ -6,153 +6,151 @@
 // MIXINS
 // =================================
 =create-button
-    display: inline-flex
-    flex:
-        grow: 0
-        shrink: 0
-        basis: auto
-    justify-content: center
-    align-items: center
-    appearance: none
-    outline: none
+  display: inline-flex
+  flex:
+    grow: 0
+    shrink: 0
+    basis: auto
+  justify-content: center
+  align-items: center
+  appearance: none
+  outline: none
+  user-select: none
+  background: $color-default
+  padding: $button-padding
+  line-height: $line-height
+  vertical-align: center
+  text:
+    align: center
+    decoration: none
+  font:
+    size: $font-size
+    weight: $font-weight-normal
+  color: $font-color
+  border: 1px solid $color-none
+  border-radius: $border-radius
+  cursor: pointer
+  white-space: nowrap
+  // Pseudo
+  &:not(:disabled):hover,
+  &:not(:disabled):focus
+    text-decoration: none // Ensures <a> won't have any underlines
+    background: darken($color-default, $darken)
+  &:disabled,
+  &.make-disabled,
+  &[disabled]
+    cursor: not-allowed
     user-select: none
-    background: $color-default
-    padding: $button-padding
-    line-height: $line-height
-    vertical-align: center
-    text:
-        align: center
-        decoration: none
-    font:
-        size: $font-size
-        weight: $font-weight-normal
-    color: $font-color
-    border: 1px solid $color-none
-    border-radius: $border-radius
-    cursor: pointer
-    white-space: nowrap
-    // Pseudo
-    &:not(:disabled):hover,
-    &:not(:disabled):focus
-        text-decoration: none // Ensures <a> won't have any underlines
-        background: darken($color-default, $darken)
-    &:disabled,
-    &.make-disabled,
-    &[disabled]
-        cursor: not-allowed
-        user-select: none
-        pointer-events: none
-        opacity: 0.3
-    // Modifiers
-    @each $type, $color in $button-color-map
-        &.make-#{$type}
+    pointer-events: none
+    opacity: 0.3
+  // Modifiers
+  @each $type, $color in $button-color-map
+    &.make-#{$type}
+      @if ($type == 'primary' or $type == 'warning' or $type == 'light')
+        color: $color-dark !important
+      @else
+        color: $color-light
+      background: $color
+      border: 1px solid $color-none
+      // Pseudo
+      &:not(:disabled):hover,
+      &:not(:disabled):focus,
+      &:not(:disabled):active
+        background: darken($color, $darken)
+        border-color: $color-none
+      // Modifiers
+      &.make-reverse
+        @if ($type == 'primary' or $type == 'warning' or $type == 'light')
+          background: $color-dark !important
+        @else
+          background: $color-light
+        color: $color !important
+        border: 1px solid $color-none
+        // Pseudo
+        &:not(:disabled):hover,
+        &:not(:disabled):focus,
+        &:not(:disabled):active
+          @if ($type == 'primary' or $type == 'warning' or $type == 'light')
+            background: darken($color-dark, $darken) !important
+          @else
+            background: darken($color-light, $darken)
+        // Modifiers
+        &.make-outline
+          @if ($type == 'primary' or $type == 'warning' or $type == 'light')
+            background: $color-none !important
+            color: $color-dark !important
+            border: 1px solid $color-dark
+          @else
+            background: $color-none !important
+            color: $color-light !important
+            border: 1px solid $color-light
+          // Pseudo
+          &:not(:disabled):hover,
+          &:not(:disabled):focus,
+          &:not(:disabled):active
             @if ($type == 'primary' or $type == 'warning' or $type == 'light')
-                color: $color-dark !important
+              background: $color-dark !important
             @else
-                color: $color-light
-            background: $color
-            border: 1px solid $color-none
-            // Pseudo
-            &:not(:disabled):hover,
-            &:not(:disabled):focus,
-            &:not(:disabled):active
-                background: darken($color, $darken)
-                border-color: $color-none
-            // Modifiers
-            &.make-reverse
-                @if ($type == 'primary' or $type == 'warning' or $type == 'light')
-                    background: $color-dark !important
-                @else
-                    background: $color-light
-                color: $color !important
-                border: 1px solid $color-none
-                // Pseudo
-                &:not(:disabled):hover,
-                &:not(:disabled):focus,
-                &:not(:disabled):active
-                    @if ($type == 'primary' or $type == 'warning' or $type == 'light')
-                        background: darken($color-dark, $darken) !important
-                    @else
-                        background: darken($color-light, $darken)
-                // Modifiers
-                &.make-outline
-                    @if ($type == 'primary' or $type == 'warning' or $type == 'light')
-                        background: $color-none !important
-                        color: $color-dark !important
-                        border: 1px solid $color-dark
-                    @else
-                        background: $color-none !important
-                        color: $color-light !important
-                        border: 1px solid $color-light
-                    // Pseudo
-                    &:not(:disabled):hover,
-                    &:not(:disabled):focus,
-                    &:not(:disabled):active
-                        @if ($type == 'primary' or $type == 'warning' or $type == 'light')
-                            background: $color-dark !important
-                        @else
-                            background: $color-light !important
-                        color: $color !important
-            &.make-link
-                @if ($type == "light")
-                    background: $color-none
-                    color: $color !important
-                    border-color: $color-none
-                    // Pseudo
-                    &:not(:disabled):hover,
-                    &:not(:disabled):focus,
-                    &:not(:disabled):active
-                        background: rgba($color-default, 0.1)
-                        color: darken($color, 10%) !important
-                        text-decoration: underline
-                @else
-                    background: $color-none
-                    color: $color !important
-                    border-color: $color-none
-                    // Pseudo
-                    &:not(:disabled):hover,
-                    &:not(:disabled):focus,
-                    &:not(:disabled):active
-                        background: rgba($color, 0.1)
-                        color: darken($color, 10%) !important
-                        text-decoration: underline
-            &.make-outline
-                background: $color-none
-                color: $color !important
-                border: 1px solid $color
-                // Pseudo
-                &:not(:disabled):hover,
-                &:not(:disabled):focus,
-                &:not(:disabled):active
-                    @if ($type == 'primary' or $type == 'warning' or $type == 'light')
-                        color: $color-dark !important
-                    @else
-                        color: $color-light !important
-                    background: $color
-                    border-color: $color-none
-    // Modifiers
-    &.make-xsmall
-        font-size: $font-size * 0.66666
-    &.make-small
-        font-size: $font-size * 0.8
-    &.make-medium
-        font-size: $font-size
-    &.make-large
-        font-size: $font-size * 1.33333
-    &.make-xlarge
-        font-size: $font-size * 1.6
-    &.make-block
-        display: block
-        width: 100%
-        padding: 0.5rem 0
-        font-size: 1.8rem
-    &.make-radial
-        border-radius: $border-radius * 2
-    &.make-round
-        border-radius: 3.5rem
+              background: $color-light !important
+            color: $color !important
+      &.make-link
+        @if ($type == "light")
+          background: $color-none
+          color: $color !important
+          border-color: $color-none
+          // Pseudo
+          &:not(:disabled):hover,
+          &:not(:disabled):focus,
+          &:not(:disabled):active
+            background: rgba($color-default, 0.1)
+            color: darken($color, 10%) !important
+            text-decoration: underline
+        @else
+          background: $color-none
+          color: $color !important
+          border-color: $color-none
+          // Pseudo
+          &:not(:disabled):hover,
+          &:not(:disabled):focus,
+          &:not(:disabled):active
+            background: rgba($color, 0.1)
+            color: darken($color, 10%) !important
+            text-decoration: underline
+      &.make-outline
+        background: $color-none
+        color: $color !important
+        border: 1px solid $color
+        // Pseudo
+        &:not(:disabled):hover,
+        &:not(:disabled):focus,
+        &:not(:disabled):active
+          @if ($type == 'primary' or $type == 'warning' or $type == 'light')
+            color: $color-dark !important
+          @else
+            color: $color-light !important
+          background: $color
+          border-color: $color-none
+  // Modifiers
+  &.make-xsmall
+    font-size: $font-size * 0.66666
+  &.make-small
+    font-size: $font-size * 0.8
+  &.make-large
+    font-size: $font-size * 1.33333
+  &.make-xlarge
+    font-size: $font-size * 1.6
+  &.make-block
+    display: block
+    width: 100%
+    padding: 0.5rem 0
+    font-size: 1.8rem
+  &.make-radial
+    border-radius: $border-radius * 2
+  &.make-round
+    border-radius: 3.5rem
 
 // =================================
 // BUTTONS
 // =================================
 .button
-    +create-button
+  +create-button

@@ -6,30 +6,29 @@
 // MIXINS
 // ====================================
 =create-blockquote
-    display: block
-    width: 100%
-    margin: ($blockquote-margin / 2) auto
-    padding:
-        top: $blockquote-padding-vertical
-        bottom: $blockquote-padding-vertical
-        left: $blockquote-padding-horizontal
-        right: $blockquote-padding-vertical
-    font:
-        size: $blockquote-font-size
-        weight: $font-weight-light
-    border-left: 0.5rem solid $color-default
-    // Elements
-    &__footer
-        margin-top: 1.5rem
-        font-size: $blockquote-font-footer
-        color: rgba($font-color, 0.5)
-        // Pseudo
-        &::before
-            content: '\2014 \00A0'
-
+  display: block
+  width: 100%
+  margin: ($blockquote-margin / 2) auto
+  padding:
+    top: $blockquote-padding-vertical
+    bottom: $blockquote-padding-vertical
+    left: $blockquote-padding-horizontal
+    right: $blockquote-padding-vertical
+  font:
+    size: $blockquote-font-size
+    weight: $font-weight-light
+  border-left: 0.5rem solid $color-default
+  // Elements
+  &__footer
+    margin-top: 1.5rem
+    font-size: $blockquote-font-footer
+    color: rgba($font-color, 0.5)
+    // Pseudo
+    &::before
+      content: '\2014 \00A0'
 
 // ====================================
 // BLOCKQUOTES
 // ====================================
 .blockquote
-    +create-blockquote
+  +create-blockquote
