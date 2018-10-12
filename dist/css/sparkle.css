@@ -2186,7 +2186,6 @@ code {
         -ms-flex-align: center;
             align-items: center;
     padding: 0 1rem;
-    border-right: 1px solid #e2e2e2;
   }
   .nav__menu {
     display: -webkit-box;
