@@ -12,14 +12,16 @@
   // Elements
   caption
     font:
-      size: $table-font-caption
+      size: $table-font-size-caption
       weight: $font-weight-thick
     text-transform: uppercase
     letter-spacing: $table-letter-spacing
-  thead
+  thead, tfoot
     display: none
   tbody, tr, td
     display: block
+  tbody
+    background: $table-background-color
   tr
     margin:
       top: 0
@@ -42,7 +44,7 @@
     &:last-child
       margin-bottom: -0.5rem
       border: 0
-    &:before
+    &::before
       position: absolute
       left: 0.5rem
       content: attr(data-table-label)
@@ -52,8 +54,13 @@
       letter-spacing: $table-letter-spacing
       white-space: nowrap
   // Media Queries
-  @media only screen and (min-width: $bp-medium)
+  +tablet
     display: table
+    background: $table-background-color
+    border: 1px solid darken($table-background-color, $darken)
+    // Pseudo
+    &:not(:last-child)
+      margin-bottom: 1.5rem
     // Elements
     thead
       display: table-header-group
@@ -69,15 +76,23 @@
       display: table-row
       border: none
     th
-      padding: 1.5rem 1.0rem
+      padding: $table-padding
     td
       display: table-cell
-      padding: 1.5rem 1.0rem
+      padding: $table-padding
       text-align: left
       border: none
       // Pseudo
-      &:before
+      &::before
         display: none
+    tfoot
+      display: table-footer-group
+      font:
+        size: $font-size
+        weight: $font-weight-bold
+      text-align: left
+      letter-spacing: $table-letter-spacing
+      border-top: 2px solid $color-grey-50
   // Modifiers
   &.make-default
     // Elements
@@ -95,10 +110,12 @@
     &.make-hoverable
       tbody tr:nth-child(odd):hover > td
         background: $color-default
+        cursor: pointer
   &.make-hoverable
     // Elements
     tbody tr:hover > td
       background: lighten($color-default, $lighten / 2)
+      cursor: pointer
 
 // ====================================
 // TABLE

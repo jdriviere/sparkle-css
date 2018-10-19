@@ -16,11 +16,14 @@
     display: flex
   // Elements
   .column
-    display: block // @NOTE: 'display: block' forces it to spread 100% of its length
+    // @NOTE:
+    // -1- : Forces column to spread 100% of its length if flex-basis is not set to 100%
+    // -2- : Prevents flex-basis to add to or impose width on children elements
+    display: block // -1-
     flex:
       grow: 1
       shrink: 1
-      basis: 0
+      basis: 0 // -2-
     margin-bottom: $grid-gap
     padding:
       left: $grid-gap / 2

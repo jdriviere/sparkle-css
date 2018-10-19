@@ -2228,12 +2228,16 @@ code {
   letter-spacing: 0.1rem;
 }
 
-.table thead {
+.table thead, .table tfoot {
   display: none;
 }
 
 .table tbody, .table tr, .table td {
   display: block;
+}
+
+.table tbody {
+  background: #FFFFFF;
 }
 
 .table tr {
@@ -2265,7 +2269,7 @@ code {
   border: 0;
 }
 
-.table td:before {
+.table td::before {
   position: absolute;
   left: 0.5rem;
   content: attr(data-table-label);
@@ -2275,9 +2279,14 @@ code {
   white-space: nowrap;
 }
 
-@media only screen and (min-width: 640px) {
+@media screen and (min-width: 640px) {
   .table {
     display: table;
+    background: #FFFFFF;
+    border: 1px solid #ececec;
+  }
+  .table:not(:last-child) {
+    margin-bottom: 1.5rem;
   }
   .table thead {
     display: table-header-group;
@@ -2295,16 +2304,24 @@ code {
     border: none;
   }
   .table th {
-    padding: 1.5rem 1.0rem;
+    padding: 0.5rem 1.5rem;
   }
   .table td {
     display: table-cell;
-    padding: 1.5rem 1.0rem;
+    padding: 0.5rem 1.5rem;
     text-align: left;
     border: none;
   }
-  .table td:before {
+  .table td::before {
     display: none;
+  }
+  .table tfoot {
+    display: table-footer-group;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: left;
+    letter-spacing: 0.1rem;
+    border-top: 2px solid #7F7F7F;
   }
 }
 
@@ -2322,10 +2339,12 @@ code {
 
 .table.make-striped.make-hoverable tbody tr:nth-child(odd):hover > td {
   background: #E2E2E2;
+  cursor: pointer;
 }
 
 .table.make-hoverable tbody tr:hover > td {
   background: #ececec;
+  cursor: pointer;
 }
 
 /* =================================================== */
