@@ -6,7 +6,15 @@ $border-radius: 0.3rem !default
 $darken: 7.5% !default
 $lighten: 7.5% !default
 $line-height: 1.6 !default
+$margin-vertical: 0.5rem !default
+$margin-horizontal: 1.5rem !default
+$opacity-default: 1.0 !default
 $opacity-muted: 0.5 !default
+$padding-vertical: 0.5rem !default
+$padding-horizontal: 1.5rem !default
+$spacing: 1.5rem !default
+$transition-time: 0.2s !default
+$transition-type: ease-in !default
 
 // =================================
 // COLOR - THEMES
@@ -93,6 +101,14 @@ $blockquote-padding-vertical: 0.5rem !default
 $blockquote-padding-horizontal: 2.0rem !default
 
 // =================================
+// BOXES
+// =================================
+$box-background: lighten($color-light, ($lighten / 4)) !default
+$box-shadow-hovered: 0 1px 3px 0 rgba(0, 0, 0, 0.15) !default
+$box-shadow-hovered-expanded: 0 2px 6px 0 rgba(0, 0, 0, 0.075) !default
+$box-transition: all 0.2s ease-in !default
+
+// =================================
 // BUTTONS
 // =================================
 $button-padding: 0.5rem 1.5rem !default
@@ -109,8 +125,11 @@ $button-group-margin: 0.25em !default
 // ====================================
 $card-padding: 1.0rem !default
 $card-font-size: $font-size !default
+$card-font-size-title: 2.4rem !default
+$card-font-size-subtitle: 1.8rem !default
 $card-font-color: $color-grey-50 !default
 $card-border: 1px solid $color-default !default
+$card-shadow: 0 0 1.0em rgba($color-pure-black, 0.15), 0 0 3.0em rgba($color-pure-black, 0.05) !default
 
 // ====================================
 // CHECKBOXES

@@ -19,11 +19,11 @@
     // Elements
     .card__title
       font:
-        size: 2.4rem
+        size: $card-font-size-title
         weight: $font-weight-bold
     .card__subtitle
       font:
-        size: 1.8rem
+        size: $card-font-size-subtitle
         weight: $font-weight-normal
     .card__title + .card__subtitle
       margin-top: -1.0rem !important
@@ -64,13 +64,13 @@
             color: $font-color
   // Modifiers
   &.make-shadows
-    box-shadow: 0 0 1.0em rgba($color-pure-black, 0.15), 0 0 3.0em rgba($color-pure-black, 0.05)
+    box-shadow: $card-shadow
   &.make-hoverable
-    transition: box-shadow 0.2s ease-in
+    transition: box-shadow $transition-time $transition-type
     // Pseudo
     &:hover
-      box-shadow: 0 0 1.0em rgba($color-pure-black, 0.15), 0 0 3.0em rgba($color-pure-black, 0.05)
-      transition: box-shadow 0.2s ease-in
+      box-shadow: $card-shadow
+      transition: box-shadow $transition-time $transition-type
 
 // ====================================
 // CARDS
