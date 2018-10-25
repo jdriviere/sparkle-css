@@ -1,0 +1,36 @@
+/* ===================================================
+/* BOXES
+/* ===================================================
+
+// =================================
+// MIXINS
+// =================================
+=create-box
+  position: relative
+  display: flex
+  flex: 1
+  flex-direction: column
+  width: 100%
+  padding: $padding-horizontal
+  background: $box-background
+  border: 1px solid $color-default
+  border-radius: $border-radius
+  transition: all $transition-time $transition-type
+  // Pseudo
+  &:not(:last-child)
+    margin-bottom: $spacing
+
+// =================================
+// BOXES
+// =================================
+.box
+  +create-box
+
+// --- LINKS AS BOXES ---
+a.box:hover,
+a.box:active,
+a.box:focus
+  background: $color-pure-white
+  cursor: pointer
+  box-shadow: $box-shadow-hovered, $box-shadow-hovered-expanded
+  transition: all $transition-time $transition-type
