@@ -6,116 +6,110 @@
 // MIXINS
 // ====================================
 =create-table
-  width: 100%
-  margin: 0 auto
-  border-collapse: collapse
+  display: flex
+  flex-wrap: wrap
+  width: $table-width
+  padding: $table-padding
+  background: $table-color-background
+  border: 1px solid darken($table-color-background, ($darken / 2))
+  border:
+    collapse: collapse
+    spacing: 0
+    radius: $table-border-radius
+  // Pseudo
+  &:not(:last-child)
+    margin-bottom: $table-margin
   // Elements
-  caption
+  caption,
+  &__caption
+    display: flex
+    flex:
+      grow: 0
+      shrink: 0
+      basis: $table-width
+    max-width: $table-width
+    padding: $table-caption-padding
+    color: $table-caption-font-color
     font:
-      size: $table-font-size-caption
-      weight: $font-weight-thick
-    text-transform: uppercase
-    letter-spacing: $table-letter-spacing
-  thead, tfoot
-    display: none
-  tbody, tr, td
-    display: block
-  tbody
-    background: $table-background-color
-  tr
-    margin:
-      top: 0
-      bottom: 1.0rem
-    padding: 0.5rem 0
-    border: 1px solid $color-default
-    // Pseudo
-    &:last-child
-      margin-bottom: 0
-  td
-    position: relative
-    padding: 1.0rem
-    font-size: $font-size
-    text-align: right
-    white-space: normal
-    border-bottom: 1px dotted $color-default
-    // Pseudo
-    &:first-child
-      margin-top: -0.5rem
-    &:last-child
-      margin-bottom: -0.5rem
-      border: 0
-    &::before
-      position: absolute
-      left: 0.5rem
-      content: attr(data-table-label)
-      font:
-        size: $font-size
-        weight: $font-weight-bold
-      letter-spacing: $table-letter-spacing
-      white-space: nowrap
-  // Media Queries
-  +tablet
-    display: table
-    background: $table-background-color
-    border: 1px solid darken($table-background-color, $darken)
-    // Pseudo
-    &:not(:last-child)
-      margin-bottom: 1.5rem
-    // Elements
-    thead
-      display: table-header-group
-      font:
-        size: $font-size
-        weight: $font-weight-bold
-      text-align: left
-      letter-spacing: $table-letter-spacing
-      border-bottom: 2px solid $color-grey-50
-    tbody
-      display: table-row-group
-    tr
-      display: table-row
-      border: none
-    th
-      padding: $table-padding
-    td
-      display: table-cell
-      padding: $table-padding
-      text-align: left
-      border: none
-      // Pseudo
-      &::before
-        display: none
-    tfoot
-      display: table-footer-group
-      font:
-        size: $font-size
-        weight: $font-weight-bold
-      text-align: left
-      letter-spacing: $table-letter-spacing
-      border-top: 2px solid $color-grey-50
+      size: $table-caption-font-size
+      weight: $table-caption-font-weight
+  thead,
+  tbody,
+  tfoot,
+  tr,
+  &__header,
+  &__body,
+  &__footer,
+  &__row
+    display: flex
+    flex:
+      grow: 0
+      shrink: 0
+      basis: $table-width
+      wrap: wrap
+    align-items: stretch
+    max-width: $table-width
+  thead,
+  &__header
+    border-bottom: 2px solid rgba($table-color-border, $opacity-muted)
+  tfoot,
+  &__footer
+    border-top: 2px solid rgba($table-color-border, $opacity-muted)
+  th,
+  td,
+  &__header .table__cell,
+  &__footer .table__cell,
+  &__cell
+    display: flex
+    flex: 1
+    align-items: center
+    margin: $table-padding
+    text-align: left
+    overflow: auto
+  th,
+  thead td,
+  tfoot td,
+  &__header .table__cell,
+  &__footer .table__cell
+    font:
+      size: $table-header-font-size
+      weight: $table-header-font-weight
+  tr,
+  &__row
+    // Modifiers
+    &.make-selected
+      color: $table-row-font-color-selected
+      background: $table-row-background-color-selected
+  td,
+  &__cell
+    font:
+      size: $table-cell-font-size
+      weight: $table-cell-font-weight
+    // Modifiers
+    &.make-centered
+      justify-content: center
+    &.make-right
+      justify-content: flex-end
   // Modifiers
   &.make-default
-    // Elements
-    tr:not(:last-child)
-      border-bottom: 1px solid darken($color-default, $darken)
-  &.make-bordered
-    // Elements
-    th, td
-      border: 1px solid darken($color-default, $darken)
+    tbody tr:not(:last-child),
+    .table__body .table__row:not(:last-child)
+      border-bottom: 1px solid $table-color-stripe
   &.make-striped
-    // Elements
-    tbody tr:nth-child(odd)
-      background: lighten($color-default, $lighten / 2)
-    // Modifiers
-    &.make-hoverable
-      tbody tr:nth-child(odd):hover > td
-        background: $color-default
-        cursor: pointer
+    tbody tr:nth-child(odd),
+    .table__body .table__row:nth-child(odd)
+      background: lighten($table-color-stripe, $lighten)
+    tbody tr.make-selected:nth-child(odd),
+    .table__body .table__row.make-selected:nth-child(odd)
+      background: darken($table-row-background-color-selected, $darken)
   &.make-hoverable
-    // Elements
-    tbody tr:hover > td
-      background: lighten($color-default, $lighten / 2)
+    tbody tr:hover,
+    .table__body .table__row:hover
+      background: lighten($table-color-stripe, ($lighten / 2))
       cursor: pointer
+    tbody tr.make-selected:hover,
+    .table__body .table__row.make-selected:hover
+      background: darken($table-row-background-color-selected, $darken)
 
 // ====================================
 // TABLE
