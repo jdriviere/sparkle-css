@@ -2497,6 +2497,38 @@ a.box:focus {
 }
 
 /* =================================================== */
+/* BOX-GROUPS */
+/* =================================================== */
+.boxes {
+  position: relative;
+  border: 1px solid #dddde9;
+  border-radius: 0.3rem;
+}
+
+.boxes:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.boxes .box {
+  margin: 0;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.boxes .box:first-child:not(:last-child) {
+  border-bottom: 1px solid #c5c5da;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.boxes .box:last-child:not(:first-child) {
+  border-top: 1px solid #c5c5da;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* =================================================== */
 /* BUTTONS */
 /* =================================================== */
 .button {

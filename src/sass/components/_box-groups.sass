@@ -1,0 +1,36 @@
+/* ===================================================
+/* BOX-GROUPS
+/* ===================================================
+
+// =================================
+// MIXINS
+// =================================
+=create-box-group
+  position: relative
+  border: 1px solid darken($color-light, $darken)
+  border-radius: $border-radius
+  //Pseudo
+  &:not(:last-child)
+    margin-bottom: $spacing
+  // Elements
+  .box
+    margin: 0
+    border: none
+    box-shadow: none
+    // Pseudo
+    &:first-child:not(:last-child)
+      border:
+        bottom: 1px solid darken($color-light, ($darken * 2))
+        bottom-left-radius: 0
+        bottom-right-radius: 0
+    &:last-child:not(:first-child)
+      border:
+        top: 1px solid darken($color-light, ($darken * 2))
+        top-left-radius: 0
+        top-right-radius: 0
+
+// =================================
+// BOX-GROUPS
+// =================================
+.boxes
+  +create-box-group
