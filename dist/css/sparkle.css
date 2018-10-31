@@ -557,77 +557,6 @@ code {
 }
 
 /* =================================================== */
-/* FORM GROUPS */
-/* =================================================== */
-.form-group {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  width: 100%;
-}
-
-.form-group .input, .form-group .select, .form-group .textarea,
-.form-group .select {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  -ms-flex-preferred-size: 0;
-      flex-basis: 0;
-  line-height: 1.6;
-}
-
-.form-group .input:first-child:not(:last-child), .form-group .select:first-child:not(:last-child), .form-group .textarea:first-child:not(:last-child),
-.form-group .select:first-child:not(:last-child) {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.form-group .input:not(:first-child):not(:last-child), .form-group .select:not(:first-child):not(:last-child), .form-group .textarea:not(:first-child):not(:last-child),
-.form-group .select:not(:first-child):not(:last-child) {
-  border-radius: 0;
-}
-
-.form-group .input:last-child:not(:first-child), .form-group .select:last-child:not(:first-child), .form-group .textarea:last-child:not(:first-child),
-.form-group .select:last-child:not(:first-child) {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-.form-group .button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-      -ms-flex: 0;
-          flex: 0;
-  z-index: 5;
-}
-
-.form-group .button:first-child:not(:last-child) {
-  margin-right: -1px;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.form-group .button:last-child:not(:first-child) {
-  margin-left: -1px;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-/* =================================================== */
 /* FORM (INPUTS) */
 /* =================================================== */
 .input, .select, .textarea {
@@ -789,6 +718,97 @@ code {
   font-family: inherit;
   font-size: 1.6rem;
   resize: vertical;
+}
+
+/* =================================================== */
+/* INPUT-ADDONS */
+/* =================================================== */
+.input__addon,
+.input__addons {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: 100%;
+}
+
+.input__addon .input, .input__addon .select, .input__addon .textarea,
+.input__addon .select,
+.input__addons .input,
+.input__addons .select,
+.input__addons .textarea,
+.input__addons .select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+  line-height: 1.6;
+}
+
+.input__addon .input:first-child:not(:last-child), .input__addon .select:first-child:not(:last-child), .input__addon .textarea:first-child:not(:last-child),
+.input__addon .select:first-child:not(:last-child),
+.input__addons .input:first-child:not(:last-child),
+.input__addons .select:first-child:not(:last-child),
+.input__addons .textarea:first-child:not(:last-child),
+.input__addons .select:first-child:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.input__addon .input:not(:first-child):not(:last-child), .input__addon .select:not(:first-child):not(:last-child), .input__addon .textarea:not(:first-child):not(:last-child),
+.input__addon .select:not(:first-child):not(:last-child),
+.input__addons .input:not(:first-child):not(:last-child),
+.input__addons .select:not(:first-child):not(:last-child),
+.input__addons .textarea:not(:first-child):not(:last-child),
+.input__addons .select:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+
+.input__addon .input:last-child:not(:first-child), .input__addon .select:last-child:not(:first-child), .input__addon .textarea:last-child:not(:first-child),
+.input__addon .select:last-child:not(:first-child),
+.input__addons .input:last-child:not(:first-child),
+.input__addons .select:last-child:not(:first-child),
+.input__addons .textarea:last-child:not(:first-child),
+.input__addons .select:last-child:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.input__addon .button,
+.input__addons .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
+  z-index: 5;
+}
+
+.input__addon .button:first-child:not(:last-child),
+.input__addons .button:first-child:not(:last-child) {
+  margin-right: -1px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.input__addon .button:last-child:not(:first-child),
+.input__addons .button:last-child:not(:first-child) {
+  margin-left: -1px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 /* =================================================== */
