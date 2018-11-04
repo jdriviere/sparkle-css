@@ -1,0 +1,40 @@
+/* ===================================================
+/* BREADCRUMBS
+/* ===================================================
+
+// ====================================
+// MIXINS
+// ====================================
+=create-breadcrumb
+  display: flex
+  flex: 1
+  align-items: center
+  width: 100%
+  list-style: none
+  // Elements
+  &__item
+    margin: 0
+    display: inline-flex
+    flex:
+      grow: 0
+      shrink: 0
+      basis: auto
+    // Pseudo
+    &:not(:last-child)::after
+      content: '|'
+      padding: 0 1.0rem
+      color: $font-color
+    // Modifiers
+    &.make-active
+      font-weight: bold
+  // Modifiers
+  &.make-centered
+    justify-content: center
+  &.make-right
+    justify-content: flex-end
+
+// ====================================
+// BREADCRUMBS
+// ====================================
+.breadcrumb
+  +create-breadcrumb
