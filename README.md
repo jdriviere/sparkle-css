@@ -19,9 +19,10 @@ Welcome and thank you for using Sparkle, a lightweight, responsive, open-source 
 
 ## Getting Started
 There are 3 ways to get started with the Sparkle framework:
+
 1. Clone for fork your own copy via Git;
-```
-https://github.com/jdriviere/sparkle-css.git
+```bash
+git clone https://github.com/jdriviere/sparkle-css.git
 ```
 
 2. Link the latest release directly into your HTML file by inserting the following lines to your HTML file: 
@@ -30,7 +31,7 @@ https://github.com/jdriviere/sparkle-css.git
 ```
 
 3. Download using Bower:
-```
+```bash
 bower install sparkle-css
 ```
 
