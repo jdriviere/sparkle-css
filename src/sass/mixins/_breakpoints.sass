@@ -6,11 +6,11 @@
     @content
 
 =mobile-only
-  @media screen and (min-width: $bp-none) and (max-width: $bp-medium - 1)
+  @media screen and (min-width: $bp-none) and (max-width: ($bp-medium - 1px))
     @content
 
 =mobile-down
-  @media screen and (max-width: $bp-medium - 1)
+  @media screen and (max-width: ($bp-medium - 1px))
     @content
 
 =tablet
@@ -18,11 +18,11 @@
     @content
 
 =tablet-only
-  @media screen and (min-width: $bp-medium) and (max-width: $bp-xlarge - 1)
+  @media screen and (min-width: $bp-medium) and (max-width: ($bp-xlarge - 1px))
     @content
 
 =tablet-down
-  @media screen and (max-width: $bp-xlarge - 1)
+  @media screen and (max-width: ($bp-xlarge - 1px))
     @content
 
 =desktop
@@ -30,11 +30,11 @@
     @content
 
 =desktop-only
-  @media screen and (min-width: $bp-xlarge) and (max-width: $bp-widescreen - 1)
+  @media screen and (min-width: $bp-xlarge) and (max-width: ($bp-widescreen - 1px))
     @content
 
 =desktop-down
-  @media screen and (max-width: $bp-widescreen - 1)
+  @media screen and (max-width: ($bp-widescreen - 1px))
     @content
 
 =widescreen
