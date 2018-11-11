@@ -3,16 +3,16 @@
 // =======================================
 =create-columns($name: "")
   @if $name == ""
-    @for $i from 1 through 12
+    @for $i from 1 through $grid-columns
       &.make-#{$i}
         flex: none
-        width: (($i * 100%) / 12)
+        width: percentage($i / $grid-columns)
       &.make-offset-#{$i}
-        margin-left: (($i * 100%) / 12)
+        margin-left: percentage($i / $grid-columns)
   @else
-    @for $i from 1 through 12
+    @for $i from 1 through $grid-columns
       &.make-#{$i}-#{$name}
         flex: none
-        width: (($i * 100%) / 12)
+        width: percentage($i / $grid-columns)
       &.make-offset-#{$i}-#{$name}
-        margin-left: (($i * 100%) / 12)
+        margin-left: percentage($i / $grid-columns)
