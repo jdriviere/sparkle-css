@@ -20,7 +20,7 @@ gulp.task('sassify', function() {
   /*!
     * @name         ${pkg.name}
     * @author       ${pkg.author}
-    * @version      ${pkg.version} - released on 10/04/2018
+    * @version      ${pkg.version} - released on 11/14/2018
     * @website      ${pkg.homepage}
     * @license      ${pkg.license}
     * Welcome and thank you for using Sparkle, a lightweight, open-source CSS framework
