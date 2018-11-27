@@ -1,0 +1,11 @@
+// =======================================
+// SHADOWS
+// =======================================
+=create-shadow($elevation, $blur: $elevation * 3)
+  box-shadow: 0 $elevation $blur ($elevation * -1) rgba(0, 0, 0, $shadow-opacity)
+
+=shadow-anim($object, $timing, $ease)
+  transition: $object $timing $ease
+
+=reset-shadow
+  box-shadow: 0 0 0 0 transparent

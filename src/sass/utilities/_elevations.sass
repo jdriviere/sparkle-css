@@ -1,0 +1,46 @@
+/* ===================================================
+/* ELEVATIONS
+/* ===================================================
+
+// ====================================
+// MIXINS
+// ====================================
+=create-elevation
+  +create-shadow(2px)
+  +shadow-anim(all, $transition-time, $transition-type)
+  z-index: 10
+  // Pseudo
+  &:hover
+    +reset-shadow
+    +shadow-anim(all, $transition-time, $transition-type)
+  // Modifiers
+  &-high
+    +create-shadow(5px)
+    +shadow-anim(all, $transition-time, $transition-type)
+    z-index: 15
+    // Pseudo
+    &:hover
+      +reset-shadow
+      +shadow-anim(all, $transition-time, $transition-type)
+  &-higher
+    +create-shadow(10px)
+    +shadow-anim(all, $transition-time, $transition-type)
+    z-index: 20
+    // Pseudo
+    &:hover
+      +reset-shadow
+      +shadow-anim(all, $transition-time, $transition-type)
+  &-highest
+    +create-shadow(15px)
+    +shadow-anim(all, $transition-time, $transition-type)
+    z-index: 25
+    // Pseudo
+    &:hover
+      +reset-shadow
+      +shadow-anim(all, $transition-time, $transition-type)
+    
+// ====================================
+// ELEVATIONS
+// ====================================
+.make-raised
+  +create-elevation
