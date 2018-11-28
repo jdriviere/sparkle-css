@@ -1114,26 +1114,8 @@ code {
 }
 
 .card.make-shadows {
-  -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.15), 0 0 3em rgba(0, 0, 0, 0.05);
-          box-shadow: 0 0 1em rgba(0, 0, 0, 0.15), 0 0 3em rgba(0, 0, 0, 0.05);
-}
-
-.card.make-hoverable {
-  -webkit-transition: -webkit-box-shadow 0.2s ease-in;
-  transition: -webkit-box-shadow 0.2s ease-in;
-  -o-transition: box-shadow 0.2s ease-in;
-  transition: box-shadow 0.2s ease-in;
-  transition: box-shadow 0.2s ease-in, -webkit-box-shadow 0.2s ease-in;
-}
-
-.card.make-hoverable:hover {
-  -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.15), 0 0 3em rgba(0, 0, 0, 0.05);
-          box-shadow: 0 0 1em rgba(0, 0, 0, 0.15), 0 0 3em rgba(0, 0, 0, 0.05);
-  -webkit-transition: -webkit-box-shadow 0.2s ease-in;
-  transition: -webkit-box-shadow 0.2s ease-in;
-  -o-transition: box-shadow 0.2s ease-in;
-  transition: box-shadow 0.2s ease-in;
-  transition: box-shadow 0.2s ease-in, -webkit-box-shadow 0.2s ease-in;
+  -webkit-box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.75);
+          box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.75);
 }
 
 /* =================================================== */

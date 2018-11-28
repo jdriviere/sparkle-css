@@ -64,13 +64,7 @@
             color: $font-color
   // Modifiers
   &.make-shadows
-    box-shadow: $card-shadow
-  &.make-hoverable
-    transition: box-shadow $transition-time $transition-type
-    // Pseudo
-    &:hover
-      box-shadow: $card-shadow
-      transition: box-shadow $transition-time $transition-type
+    +create-shadow(1.0rem)
 
 // ====================================
 // CARDS
