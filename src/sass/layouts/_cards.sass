@@ -6,65 +6,35 @@
 // MIXINS
 // ====================================
 =create-card
-  width: 100%
-  background: lighten($color-light, $lighten / 2)
-  border: $card-border
-  border-radius: $border-radius
+  position: relative
+  display: flex
+  flex: 1
+  flex:
+    direction: column
+    wrap: nowrap
+  background: $card-background-color
+  border: $card-border-width $card-border-type $card-border-color
+  border-radius: $card-border-radius
   overflow: hidden
   // Elements
-  // --- HEADER ---
-  &__header
-    padding: ($card-padding * 2) $card-padding
-    border-bottom: $card-border
-    // Elements
-    .card__title
-      font:
-        size: $card-font-size-title
-        weight: $font-weight-bold
-    .card__subtitle
-      font:
-        size: $card-font-size-subtitle
-        weight: $font-weight-normal
-    .card__title + .card__subtitle
-      margin-top: -1.0rem !important
-  // --- BODY ---
-  &__body
-    padding: $card-padding
-    font-size: $card-font-size
-    color: $card-font-color
-    // Elements
-    & > img,
-    .card__image
-      width: 100%
-  // --- FOOTER ---
+  &__header,
+  &__body,
   &__footer
-    display: flex
-    flex: 1
-    border-top: $card-border
+    padding: $card-spacing-y $card-spacing-x
+  &__image
+    margin: 0
+    padding: 0
+    line-height: 0 // Removes extra spacing under image
     // Elements
-    .card__footer__item
-      display: flex
-      flex:
-        grow: 1
-        shrink: 0
-        basis: 0
-      justify-content: center
-      align-items: center
-      margin: 0
-      padding: ($card-padding * 2) $card-padding
-      // Pseudo
-      &:not(:first-child)
-        border-left: $card-border
-        // Elements
-        & > a
-          text-decoration: none
-          color: $color-info
-          // Pseudo
-          &:hover
-            color: $font-color
-  // Modifiers
-  &.make-shadows
-    +create-shadow(1.0rem)
+    img
+      width: 100%
+      height: auto
+  &__separator
+    display: block
+    width: 90%
+    height: 0.1rem
+    margin: ($card-spacing-y / 2) auto
+    background: $card-border-color
 
 // ====================================
 // CARDS

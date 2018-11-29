@@ -1032,90 +1032,46 @@ code {
 /* INPUTS */
 /* =================================================== */
 .card {
-  width: 100%;
-  background: white;
-  border: 1px solid #E2E2E2;
-  border-radius: 0.3rem;
-  overflow: hidden;
-}
-
-.card__header {
-  padding: 2rem 1rem;
-  border-bottom: 1px solid #E2E2E2;
-}
-
-.card__header .card__title {
-  font-size: 2.4rem;
-  font-weight: 700;
-}
-
-.card__header .card__subtitle {
-  font-size: 1.8rem;
-  font-weight: 400;
-}
-
-.card__header .card__title + .card__subtitle {
-  margin-top: -1.0rem !important;
-}
-
-.card__body {
-  padding: 1rem;
-  font-size: 1.6rem;
-  color: #7F7F7F;
-}
-
-.card__body > img,
-.card__body .card__image {
-  width: 100%;
-}
-
-.card__footer {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  border-top: 1px solid #E2E2E2;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  background: #fcfcfd;
+  border: 1px solid #E2E2E2;
+  border-radius: 0.3rem;
+  overflow: hidden;
 }
 
-.card__footer .card__footer__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  -ms-flex-preferred-size: 0;
-      flex-basis: 0;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.card__header, .card__body, .card__footer {
+  padding: 0.5rem 1.5rem;
+}
+
+.card__image {
   margin: 0;
-  padding: 2rem 1rem;
+  padding: 0;
+  line-height: 0;
 }
 
-.card__footer .card__footer__item:not(:first-child) {
-  border-left: 1px solid #E2E2E2;
+.card__image img {
+  width: 100%;
+  height: auto;
 }
 
-.card__footer .card__footer__item:not(:first-child) > a {
-  text-decoration: none;
-  color: #1982C4;
-}
-
-.card__footer .card__footer__item:not(:first-child) > a:hover {
-  color: #404040;
-}
-
-.card.make-shadows {
-  -webkit-box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.75);
-          box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.75);
+.card__separator {
+  display: block;
+  width: 90%;
+  height: 0.1rem;
+  margin: 0.25rem auto;
+  background: #E2E2E2;
 }
 
 /* =================================================== */
