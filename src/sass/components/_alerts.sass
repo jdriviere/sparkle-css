@@ -22,7 +22,7 @@
     size: $alert-font-size
     weight: $alert-font-weight
   border-radius: $alert-border-radius
-  border: 1px solid darken($color-default, $darken * 3)
+  border: 1px solid darken($color-default, ($darken * 3))
   // Modifiers
   @each $type, $color in $alert-color-map
     &.make-#{$type}
@@ -31,7 +31,7 @@
       @else
         color: $color-light
       background: $color
-      border-color: darken($color, $darken * 3)
+      border-color: darken($color, ($darken * 3))
 
 // ====================================
 // ALERTS
