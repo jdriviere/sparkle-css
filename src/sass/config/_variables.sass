@@ -18,7 +18,7 @@ $transition-time: 0.2s !default
 $transition-type: ease-in !default
 
 // =================================
-// COLOR - THEMES
+// COLOR - THEMES (HEX)
 // =================================
 $color-default: #E2E2E2 !default
 $color-primary: #ADD2E6 !default
@@ -29,15 +29,68 @@ $color-danger: #FF3344 !default
 $color-light: #F4F4F8 !default
 $color-dark: #222528 !default
 
-$color-none: transparent !default
-
+// =================================
+// COLOR - GREY TONES (HEX)
+// =================================
 $color-grey-25: #404040 !default
 $color-grey-50: #7F7F7F !default
 $color-grey-75: #C0C0C0 !default
 $color-grey-100: #FCFCFC !default
-$color-pure-white: #FFFFFF !default
 $color-pure-black: #000000 !default
+$color-pure-white: #FFFFFF !default
 
+// =================================
+// COLOR - THEMES (RGB)
+// =================================
+// $color-default: rgb(226, 226, 226) !default
+// $color-primary: rgb(173, 210, 230) !default
+// $color-info: rgb(25, 130, 196) !default
+// $color-success: rgb(106, 187, 79) !default
+// $color-warning: rgb(254, 197, 36) !default
+// $color-danger: rgb(255, 51, 68) !default
+// $color-light: rgb(244, 244, 248) !default
+// $color-dark: rgb(34, 37, 40) !default
+
+// =================================
+// COLOR - GREY TONES (RGB)
+// =================================
+// $color-grey-25: rgb(64, 64, 64) !default
+// $color-grey-50: rgb(127, 127, 127) !default
+// $color-grey-75: rgb(192, 192, 192) !default
+// $color-grey-100: rgb(252, 252, 252) !default
+// $color-pure-black: rgb(0, 0, 0) !default
+// $color-pure-white: rgb(255, 255, 255) !default
+
+// =================================
+// COLOR - THEMES (HSL)
+// =================================
+// $color-default: hsl(0, 0%, 89%) !default
+// $color-primary: hsl(201, 53%, 79%) !default
+// $color-info: hsl(203, 77%, 43%) !default
+// $color-success: hsl(105, 44%, 52%) !default
+// $color-warning: hsl(44, 99%, 57%) !default
+// $color-danger: hsl(355, 100%, 60%) !default
+// $color-light: hsl(240, 22%, 96%) !default
+// $color-dark: hsl(210, 8%, 15%) !default
+
+// =================================
+// COLOR - GREY TONES (HSL)
+// =================================
+// $color-grey-25: hsl(0, 0%, 25%) !default
+// $color-grey-50: hsl(0, 0%, 50%) !default
+// $color-grey-75: hsl(0, 0%, 75%) !default
+// $color-grey-100: hsl(0, 0%, 99%) !default
+// $color-pure-black: hsl(0, 0%, 0%) !default
+// $color-pure-white: hsl(0, 0%, 100%) !default
+
+// =================================
+// COLOR - TRANSPARENT
+// =================================
+$color-none: transparent !default
+
+// =================================
+// COLOR - THEME MAP
+// =================================
 $color-map: (default: $color-default, primary: $color-primary, info: $color-info, success: $color-success, warning: $color-warning, danger: $color-danger, light: $color-light, dark: $color-dark) !default
 
 // =================================
@@ -126,7 +179,7 @@ $button-group-margin: 0.25em !default
 // ====================================
 $card-spacing-x: $padding-horizontal !default
 $card-spacing-y: $padding-vertical !default
-$card-background-color: lighten($color-light, $lighten / 3) !default
+$card-background-color: lighten($color-light, ($lighten / 3)) !default
 $card-border-color: $color-default !default
 $card-border-type: solid !default
 $card-border-width: 1px !default
