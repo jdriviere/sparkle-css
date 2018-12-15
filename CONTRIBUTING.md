@@ -1,16 +1,16 @@
 # Contributing to the Sparkle framework
 
-### Message to the Contributor
+## Message to the Contributor
 First and foremost, the __Sparkle.css__ framework development team would like to thank you for having interest in our project, and for the time you took, or are taking, to contribute to this project. The team is already working hard to provide a renovative and simple design platform for websites and apps; and your contribution helps, and will help, us achieve that possibility.
 
 Before you can commit to our project, we would like to emphasize the importance of reading the guidelines for contributing to this project, so that it clears out a few questions or concerns you may have. Again, thank you for your time and efforts and interest. :smile:
 
-### Code of Conduct
+## Code of Conduct
 Our team wants to emphasize and encourage teamwork, good communication, and respect. We understand that not everyone is on the same level of experience and understanding. But everyone had a starting point, somewhere in the past. Therefore, we want to help you the best way we can, and we also want you to help others who might need help, if we cannot reach them in time.
 
 Disrespect is __not__ tolerated, and it will result in your receiving a strong warning and potentially being banned from the team. Please, be mindful of others, as you would like others to be mindful of you.
 
-### Questions and Concerns
+## Questions and Concerns
 Our team strives to provide as much help as we can, and in a timely manner, to make sure your experience using and designing with __Sparkle.css__ is a positive one. Questions can be published in our [__Issues__](https://github.com/jdriviere/sparkle-css/issues) page with the following format:
 
 ```md
@@ -21,7 +21,7 @@ __Question(s):__
 _This is where you as your question(s), or address your concerns._
 ```
 
-### Issues, Bugs, and Solutions
+## Issues, Bugs, and Solutions
 Our development team always seeks ways to improve the framework. But nothing is perfect. Extra brains like yours can catch things that may have escaped us. Therefore, we encourage you to send us the bugs that you may have found, or share your issues and solutions with us, as well as the community.
 
 ```md
@@ -52,7 +52,7 @@ _This is where you describe how you have solved, if have done so, the problem yo
 
 If you see any errors on our [__official website__](https://sparklecss.herokuapp.com), this template can also be used to address them.
 
-### New Features
+## New Features
 Do you have any new features or fixes you'd like to bring to our attention? We are open to them! Simply submit your request as an [__Issue__](https://github.com/jdriviere/sparkle-css/issues) or as a new [__Pull Request__](https://github.com/jdriviere/sparkle-css/pulls) in the main repository. Keep in mind that *__all__* your submissions must follow the required format proposed for the Sparkle framework. In another note, all ideas are welcomed--but not all of them can be implemented, unfortunately*.
 
 ```md
