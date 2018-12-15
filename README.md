@@ -38,6 +38,9 @@ bower install sparkle-css
 ## Documentation
 The documentation can be found [here](https://github.com/sparkle-css/sparkle-docs/tree/master/docs)!
 
+## Related Projects
+_Coming soon..._
+
 ## Contributing
 The contribution guidelines can be found [here](https://github.com/jdriviere/sparkle-css/blob/dev/CONTRIBUTING.md)!
 
