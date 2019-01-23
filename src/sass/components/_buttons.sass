@@ -27,7 +27,7 @@
     size: $font-size
     weight: $font-weight-normal
   color: $font-color
-  border: 1px solid $color-none
+  border: 1px solid $color-default
   border-radius: $border-radius
   cursor: pointer
   white-space: nowrap
@@ -36,6 +36,7 @@
   &:not(:disabled):focus
     text-decoration: none // Ensures <a> won't have any underlines
     background: darken($color-default, $darken)
+    border-color: darken($color-default, $darken)
   &:disabled,
   &.make-disabled,
   &[disabled]
@@ -46,77 +47,62 @@
   // Modifiers
   @each $type, $color in $button-color-map
     &.make-#{$type}
-      @if ($type == 'primary' or $type == 'warning' or $type == 'light')
-        color: $color-dark !important
-      @else
-        color: $color-light
+      color: setTextColor($color) !important
       background: $color
-      border: 1px solid $color-none
+      border: 1px solid $color
       // Pseudo
       &:not(:disabled):hover,
       &:not(:disabled):focus,
       &:not(:disabled):active
         background: darken($color, $darken)
-        border-color: $color-none
+        border-color: darken($color, $darken)
       // Modifiers
-      &.make-reverse
-        @if ($type == 'primary' or $type == 'warning' or $type == 'light')
-          background: $color-dark !important
-        @else
-          background: $color-light
+      &.make-reversed
         color: $color !important
-        border: 1px solid $color-none
+        background: setTextColor($color)
+        border: 1px solid setTextColor($color)
         // Pseudo
         &:not(:disabled):hover,
         &:not(:disabled):focus,
         &:not(:disabled):active
-          @if ($type == 'primary' or $type == 'warning' or $type == 'light')
-            background: darken($color-dark, $darken) !important
-          @else
-            background: darken($color-light, $darken)
+          background: darken(setTextColor($color), $darken / 2)
+          border-color: setTextColor($color)
         // Modifiers
-        &.make-outline
-          @if ($type == 'primary' or $type == 'warning' or $type == 'light')
-            background: $color-none !important
-            color: $color-dark !important
-            border: 1px solid $color-dark
-          @else
-            background: $color-none !important
-            color: $color-light !important
-            border: 1px solid $color-light
+        &.make-outlined
+          color: setTextColor($color) !important
+          background: $color-none !important
+          border: 1px solid setTextColor($color)
           // Pseudo
           &:not(:disabled):hover,
           &:not(:disabled):focus,
           &:not(:disabled):active
-            @if ($type == 'primary' or $type == 'warning' or $type == 'light')
-              background: $color-dark !important
-            @else
-              background: $color-light !important
-            color: $color !important
+            color: setTextColor($color) !important
+            background: $color
+            border-color: $color
       &.make-link
         @if ($type == "light")
-          background: $color-none
           color: $color !important
-          border-color: $color-none
+          background: $color-none
+          border: none
           // Pseudo
           &:not(:disabled):hover,
           &:not(:disabled):focus,
           &:not(:disabled):active
-            background: rgba($color-default, 0.1)
             color: darken($color, 10%) !important
+            background: rgba($color-default, 0.1)
             text-decoration: underline
         @else
           background: $color-none
           color: $color !important
-          border-color: $color-none
+          border: none
           // Pseudo
           &:not(:disabled):hover,
           &:not(:disabled):focus,
           &:not(:disabled):active
-            background: rgba($color, 0.1)
             color: darken($color, 10%) !important
+            background: rgba($color, 0.1)
             text-decoration: underline
-      &.make-outline
+      &.make-outlined
         background: $color-none
         color: $color !important
         border: 1px solid $color
@@ -124,20 +110,17 @@
         &:not(:disabled):hover,
         &:not(:disabled):focus,
         &:not(:disabled):active
-          @if ($type == 'primary' or $type == 'warning' or $type == 'light')
-            color: $color-dark !important
-          @else
-            color: $color-light !important
-          background: $color
-          border-color: $color-none
+          color: setTextColor($color) !important
+          background: $color !important
+          border-color: $color
   // Modifiers
-  &.make-xsmall
+  &.make-smaller
     font-size: $font-size * 0.66666
   &.make-small
     font-size: $font-size * 0.8
   &.make-large
     font-size: $font-size * 1.33333
-  &.make-xlarge
+  &.make-larger
     font-size: $font-size * 1.6
   &.make-block
     display: block

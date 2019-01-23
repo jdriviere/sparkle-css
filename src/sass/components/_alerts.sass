@@ -7,31 +7,34 @@
 // ====================================
 =create-alert
   position: relative
-  display: flex
-  flex:
-    direction: column
-    grow: 1
-    shrink: 0
-    basis: auto
+  display: block
   width: 100%
-  margin: ($alert-margin / 2) 0
   padding: ($alert-padding / 2) $alert-padding
   background: $color-default
-  color: $font-color
+  color: setTextColor($color-default)
   font:
     size: $alert-font-size
     weight: $alert-font-weight
   border-radius: $alert-border-radius
-  border: 1px solid darken($color-default, ($darken * 3))
+  border: 1px solid darken($color-default, ($darken * 2))
+  // Pseudo
+  &:not(:last-child)
+    margin-bottom: $spacing
+  // Elements
+  > a:not(.button)
+    color: setTextColor($color-default)
+    font-weight: $font-weight-bold
+    text-decoration: underline
   // Modifiers
   @each $type, $color in $alert-color-map
     &.make-#{$type}
-      @if ($type == 'primary' or $type == 'warning' or $type == 'light')
-        color: rgba($color-dark, 0.75)
-      @else
-        color: $color-light
+      color: setTextColor($color)
       background: $color
-      border-color: darken($color, ($darken * 3))
+      border-color: darken($color, ($darken * 2))
+      // Elements
+      > a:not(.button)
+        color: setTextColor($color)
+        text-decoration: underline
 
 // ====================================
 // ALERTS

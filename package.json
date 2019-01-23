@@ -1,15 +1,15 @@
 {
   "name": "sparkle.css",
-  "version": "2.2.0",
+  "version": "2.3.0-beta.1",
   "description": "A lightweight, open-source, mobile-first CSS framework for easy website designs.",
   "main": "dist/css/sparkle.css",
   "scripts": {
     "start": "npm install",
-    "clean": "rm -rf ./dist/css/sparkle.*",
-    "watch": "sass --watch src/sass/sparkle.sass dist/css/sparkle.css --style=expanded",
-    "build": "npm run clean && npm run build:prod",
-    "build:dev": "sass src/sass/sparkle.sass dist/css/sparkle.css --style=expanded",
-    "build:prod": "node node_modules/gulp/bin/gulp"
+    "help": "node node_modules/gulp/bin/gulp --tasks",
+    "watch": "node node_modules/gulp/bin/gulp watch",
+    "build:sass": "node node_modules/gulp/bin/gulp sassify",
+    "build:mini": "node node_modules/gulp/bin/gulp minify",
+    "build": "node node_modules/gulp/bin/gulp"
   },
   "repository": {
     "type": "git",
@@ -22,13 +22,15 @@
   },
   "homepage": "https://sparklecss.herokuapp.com",
   "devDependencies": {
-    "autoprefixer": "^9.3.1",
-    "cssnano": "^4.1.7",
-    "gulp": "^3.9.1",
+    "autoprefixer": "^9.4.6",
+    "cssnano": "^4.1.8",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
     "gulp-cli": "^2.0.1",
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.4",
     "postcss-header": "^1.0.0"
   }
 }

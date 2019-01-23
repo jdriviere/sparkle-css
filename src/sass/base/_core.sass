@@ -19,7 +19,8 @@ html
     size: 62.5% // Sets root 62.5% to 10px (100% = 16px)
     size: calc(1em * 0.625) // This line is to ensure HTML rem is at 10px
   text-rendering: optimizeLegibility
-  font-smoothing: antialiased
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
 
 body
   height: 100%
@@ -29,14 +30,14 @@ body
   font:
     family: $font-family
     size: $font-size
-    weight: $font-weight-light
+    weight: $font-weight-normal
 
 // =======================================
 // SELECTION
 // =======================================
 ::selection
   background: $color-primary
-  color: $color-dark
+  color: setTextColor($color-primary)
 
 // =======================================
 // LISTS

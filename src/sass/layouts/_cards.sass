@@ -1,5 +1,5 @@
 /* ===================================================
-/* INPUTS
+/* CARDS
 /* ===================================================
 
 // ====================================
@@ -16,6 +16,9 @@
   border: $card-border-width $card-border-type $card-border-color
   border-radius: $card-border-radius
   overflow: hidden
+  // Pseudo
+  &:not(:last-child)
+    margin-bottom: $spacing
   // Elements
   &__header,
   &__body,

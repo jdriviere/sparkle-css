@@ -1,0 +1,15 @@
+// ===================================================
+// FUNCTIONS
+// ===================================================
+@charset 'utf-8'
+
+// =================================
+// SET FONT COLOR
+// =================================
+@function setTextColor($color)
+  @if (lightness($color) > 55)
+    // Lighter background, return dark color
+    @return $color-dark
+  @else
+    // Darker background, return light color
+    @return $color-light

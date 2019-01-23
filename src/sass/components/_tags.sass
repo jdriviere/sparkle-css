@@ -14,8 +14,8 @@
   justify-content: center
   align-items: center
   padding: $tag-padding
-  background: map-get($color-map, default)
-  color: map-get($color-map, dark)
+  background: $color-default
+  color: setTextColor($color-default)
   font:
     size: $tag-font-size
     weight: $tag-font-weight
@@ -23,21 +23,15 @@
   // Modifiers
   @each $type, $color in $tag-color-map        
     &.make-#{$type}
-      @if ($type == 'primary' or $type == 'warning' or $type == 'light')
-        color: $color-dark !important
-      @else
-        color: $color-light !important
+      color: setTextColor($color)
       background: $color
       // Modifiers
-      &.make-outline
+      &.make-outlined
         background: $color-none
         color: $color !important
         border: 1px solid $color
-      &.make-reverse
-        @if ($type == 'primary' or $type == 'warning' or $type == 'light')
-          background: $color-dark !important
-        @else
-          background: $color-light !important
+      &.make-reversed
+        background: setTextColor($color)
         color: $color !important  
   &.make-bullet
     border-radius: 2.0rem

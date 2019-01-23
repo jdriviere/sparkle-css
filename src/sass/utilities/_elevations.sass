@@ -5,42 +5,92 @@
 // ====================================
 // MIXINS
 // ====================================
-=create-elevation
-  +create-shadow(2px)
+//--- RAISED ---//
+=create-elevation($isPushable: false)
+  +create-shadow($shadow-elevation-default)
   +shadow-anim(all, $transition-time, $transition-type)
-  z-index: 10
+  z-index: $index-higher
   // Pseudo
-  &:hover
-    +reset-shadow
-    +shadow-anim(all, $transition-time, $transition-type)
+  @if ($isPushable)
+    &:hover
+      +reset-shadow
+      +shadow-anim(all, $transition-time, $transition-type)
   // Modifiers
   &-high
-    +create-shadow(5px)
+    +create-shadow($shadow-elevation-high)
     +shadow-anim(all, $transition-time, $transition-type)
-    z-index: 15
+    z-index: $index-higher * 1.5
     // Pseudo
-    &:hover
-      +reset-shadow
-      +shadow-anim(all, $transition-time, $transition-type)
+    @if ($isPushable)
+      &:hover
+        +reset-shadow
+        +shadow-anim(all, $transition-time, $transition-type)
   &-higher
-    +create-shadow(10px)
+    +create-shadow($shadow-elevation-higher)
     +shadow-anim(all, $transition-time, $transition-type)
-    z-index: 20
+    z-index: $index-higher * 2
     // Pseudo
-    &:hover
-      +reset-shadow
-      +shadow-anim(all, $transition-time, $transition-type)
+    @if ($isPushable)
+      &:hover
+        +reset-shadow
+        +shadow-anim(all, $transition-time, $transition-type)
   &-highest
-    +create-shadow(15px)
+    +create-shadow($shadow-elevation-highest)
     +shadow-anim(all, $transition-time, $transition-type)
-    z-index: 25
+    z-index: $index-higher * 2.5
+    // Pseudo
+    @if ($isPushable)
+      &:hover
+        +reset-shadow
+        +shadow-anim(all, $transition-time, $transition-type)
+
+//--- RAISABLE ---//
+=create-raisable
+  +reset-shadow
+  +shadow-anim(all, $transition-time, $transition-type)
+  z-index: $index-higher
+  // Pseudo
+  &:hover
+    +create-shadow($shadow-elevation-default)
+    +shadow-anim(all, $transition-time, $transition-type)
+    z-index: 0
+  // Modifiers
+  &-high
+    +reset-shadow
+    +shadow-anim(all, $transition-time, $transition-type)
+    z-index: $index-higher * 1.5
     // Pseudo
     &:hover
-      +reset-shadow
+      +create-shadow($shadow-elevation-high)
       +shadow-anim(all, $transition-time, $transition-type)
+      z-index: 0
+  &-higher
+    +reset-shadow
+    +shadow-anim(all, $transition-time, $transition-type)
+    z-index: $index-higher * 2
+    // Pseudo
+    &:hover
+      +create-shadow($shadow-elevation-higher)
+      +shadow-anim(all, $transition-time, $transition-type)
+      z-index: 0
+  &-highest
+    +reset-shadow
+    +shadow-anim(all, $transition-time, $transition-type)
+    z-index: $index-higher * 2.5
+    // Pseudo
+    &:hover
+      +create-shadow($shadow-elevation-highest)
+      +shadow-anim(all, $transition-time, $transition-type)
+      z-index: 0
     
 // ====================================
 // ELEVATIONS
 // ====================================
 .make-raised
   +create-elevation
+
+.make-hoverable
+  +create-elevation(true)
+
+.make-raisable
+  +create-raisable

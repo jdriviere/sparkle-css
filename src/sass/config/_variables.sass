@@ -20,13 +20,13 @@ $transition-type: ease-in !default
 // =================================
 // COLOR - THEMES (HEX)
 // =================================
-$color-default: #E2E2E2 !default
-$color-primary: #ADD2E6 !default
+$color-default: #E4E4E8 !default
+$color-primary: #BBDDFF !default
 $color-info: #1982C4 !default
-$color-success: #6ABB4F !default
-$color-warning: #FEC524 !default
-$color-danger: #FF3344 !default
-$color-light: #F4F4F8 !default
+$color-success: #66BB44 !default
+$color-warning: #FFCC25 !default
+$color-danger: #EE2233 !default
+$color-light: #FCFCFC !default
 $color-dark: #222528 !default
 
 // =================================
@@ -140,11 +140,15 @@ $text-weight-map: (thin: $font-weight-light, normal: $font-weight-normal, bold: 
 // ====================================
 $alert-font-size: $font-size !default
 $alert-font-weight: $font-weight-normal !default
-$alert-margin: 1.0rem !default
 $alert-padding: 1.0rem !default
-$alert-border-radius: 0.5rem !default
+$alert-border-radius: $border-radius !default
 
 $alert-color-map: (primary: $color-primary, info: $color-info, success: $color-success, warning: $color-warning, danger: $color-danger, light: $color-light, dark: $color-dark) !default
+
+// ====================================
+// BACKGROUNDS
+// ====================================
+$background-color-map: (primary: $color-primary, info: $color-info, success: $color-success, warning: $color-warning, danger: $color-danger, light: $color-light, dark: $color-dark) !default
 
 // ====================================
 // BLOCKQUOTES
@@ -158,7 +162,7 @@ $blockquote-padding-horizontal: 2.0rem !default
 // =================================
 // BOXES
 // =================================
-$box-background: lighten($color-light, ($lighten / 4)) !default
+$box-background-color: lighten($color-light, ($lighten / 4)) !default
 $box-shadow-hovered: 0 1px 3px 0 rgba(0, 0, 0, 0.15) !default
 $box-shadow-hovered-expanded: 0 2px 6px 0 rgba(0, 0, 0, 0.075) !default
 $box-transition: all 0.2s ease-in !default
@@ -180,7 +184,7 @@ $button-group-margin: 0.25em !default
 // ====================================
 $card-spacing-x: $padding-horizontal !default
 $card-spacing-y: $padding-vertical !default
-$card-background-color: lighten($color-light, ($lighten / 3)) !default
+$card-background-color: lighten($color-light, ($lighten / 4)) !default
 $card-border-color: $color-default !default
 $card-border-type: solid !default
 $card-border-width: 1px !default
@@ -238,7 +242,8 @@ $list-spacing-horizontal: 2.0rem !default
 // LOADERS
 // ====================================
 $loader-size: 2.4rem !default
-$loader-default-color: #BCBCBC !default
+$loader-default-color: $color-grey-75 !default
+// $loader-default-color: #BCBCBC !default
 $loader-border-size: $loader-size / 4 !default
 $loader-border-opacity: 0.3 !default
 $loader-animation: spin 1s ease-in-out infinite !default
@@ -263,6 +268,17 @@ $menu-margin: 1.0rem !default
 $menu-padding: $menu-margin !default
 
 // ====================================
+// PROGRESS BAR
+// ====================================
+$progress-bar-width: 100% !default
+$progress-bar-height: 2.0rem !default
+$progress-padding: 0 !default
+$progress-bar-color: $color-default !default
+$progress-value-color: darken($color-default, $darken * 2) !default
+
+$progress-color-map: (primary: $color-primary, info: $color-info, success: $color-success, warning: $color-warning, danger: $color-danger, light: $color-light, dark: $color-dark) !default
+
+// ====================================
 // NAVIGATION
 // ====================================
 $navig-min-height: 6.0rem !default
@@ -281,6 +297,14 @@ $navig-font-opacity-hovered: 1.0 !default
 // ====================================
 $radio-size: 1.7rem !default
 $radio-border-color: $color-default !default
+
+// ====================================
+// SHADOWS
+// ====================================
+$shadow-elevation-default: 0.25rem !default
+$shadow-elevation-high: $shadow-elevation-default * 2 !default
+$shadow-elevation-higher: $shadow-elevation-default * 4 !default
+$shadow-elevation-highest: $shadow-elevation-default * 6 !default
 
 // ====================================
 // SPACING (MARGIN/PADDING)

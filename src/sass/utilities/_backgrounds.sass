@@ -1,0 +1,23 @@
+/* ===================================================
+/* BACKGROUNDS
+/* ===================================================
+
+// ====================================
+// MIXINS
+// ====================================
+=create-background($color, $hasBorder: false, $hasGradient: false)
+  color: setTextColor($color)
+  background: $color
+  // Elements
+  a:not(.button)
+    color: setTextColor($color)
+    // Pseudo
+    &:hover
+      text-decoration: underline
+
+// ====================================
+// DISPLAYS
+// ====================================
+@each $name, $type in $background-color-map
+  .make-background-#{$name}
+    +create-background($type)  
