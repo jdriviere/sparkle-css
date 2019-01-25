@@ -1,7 +1,8 @@
 /**
- * @name            Gulpfile for Gulp v4
+ * @name            Sparkle.css Gulpfile (Gulp v4)
  * @author          J. D. Riviere
- * @desc            This is the gulpfile.js that uses the Gulp v4 constalities = .
+ * @desc            A series of commands that can be used in a terminal or command line, if
+ *                  Gulp (version 4.0.x) is installed.
  */
 
 /* ==================================== */
@@ -110,10 +111,10 @@ const build = gulp.series(clean, gulp.parallel(sassify, minify));
 /* ==================================== */
 /* DESCRIPTIONS
 /* ==================================== */
-build.description = 'Builds the expanded CSS file in production mode.';
+build.description = 'Builds the expanded and minified CSS files in production mode.';
 clean.description = 'Deletes all files within the \'dist\' folder. A private command.';
-minify.description = 'Builds the minified CSS file in production mode.';
-sassify.description = 'Builds the CSS file in development mode.';
+minify.description = 'Builds the minified CSS file.';
+sassify.description = 'Builds the expanded CSS file.';
 watch.description = 'Watches all the CSS files (mainly the \'sparkle.sass\' file) for changes.';
 
 /* ==================================== */
