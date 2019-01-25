@@ -216,7 +216,7 @@ $hero-padding-small: $hero-padding 0 !default
 $hero-padding-medium: ($hero-padding * 5) 0 !default
 $hero-padding-large: ($hero-padding * 10) 0 !default
 
-$hero-color-map: (primary: ($color-primary, $color-dark), info: ($color-info, $color-light), success: ($color-success, $color-light), warning: ($color-warning, $color-grey-25), danger: ($color-danger, $color-light), light: ($color-light, $color-grey-25), dark: ($color-dark, $color-light)) !default
+$hero-color-map: (primary: $color-primary, info: $color-info, success: $color-success, warning: $color-warning, danger: $color-danger, light: $color-light, dark: $color-dark) !default
 
 // ====================================
 // INPUTS
@@ -266,6 +266,10 @@ $media-profile-border-radius: $border-radius !default
 // ====================================
 $menu-margin: 1.0rem !default
 $menu-padding: $menu-margin !default
+$menu-border-radius: $border-radius !default
+
+$submenu-margin: $menu-margin !default
+$submenu-border: 0.3rem solid $color-default !default
 
 // ====================================
 // PROGRESS BAR

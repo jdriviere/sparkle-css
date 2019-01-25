@@ -43,12 +43,9 @@
     min-height: 100vh       
   // Modifiers
   @each $type, $color in $hero-color-map
-    $bgcolor: nth($color, 1)
-    $fontcolor: nth($color, 2)
-
     &.make-#{$type}
-      background: $bgcolor
-      color: $fontcolor
+      background: $color
+      color: setTextColor($color)
 
 // ====================================
 // HERO

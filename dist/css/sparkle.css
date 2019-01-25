@@ -1009,7 +1009,7 @@ code {
 }
 
 .breadcrumb__item.make-active {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .breadcrumb.make-centered {
@@ -1904,7 +1904,7 @@ code {
 
 .hero.make-warning {
   background: #FFCC25;
-  color: #404040;
+  color: #222528;
 }
 
 .hero.make-danger {
@@ -1914,7 +1914,7 @@ code {
 
 .hero.make-light {
   background: #FCFCFC;
-  color: #404040;
+  color: #222528;
 }
 
 .hero.make-dark {
@@ -2024,7 +2024,7 @@ code {
 .menu .submenu {
   display: block;
   margin-left: 1rem;
-  border-left: 2px solid #E4E4E8;
+  border-left: 0.3rem solid #E4E4E8;
 }
 
 /* =================================================== */
