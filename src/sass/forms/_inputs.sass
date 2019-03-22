@@ -21,7 +21,7 @@
   &:hover,
   &:focus,
   &:active
-    border-color: map-get($color-map, primary)
+    border-color: $color-primary
   // Modifiers
   //=== STYLES ===//
   @each $type, $color in $input-color-map
@@ -30,7 +30,7 @@
       // Pseudo
       &:focus,
       &:active
-        box-shadow: 0 0 1.2rem rgba($color, $opacity-muted) !important
+        box-shadow: $input-focus-box-shadow-size rgba($color, $opacity-muted) !important
     //=== ROUNDNESS ===//
     &.make-rounded
       border-radius: 5.0rem

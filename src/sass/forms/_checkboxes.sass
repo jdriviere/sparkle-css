@@ -15,12 +15,12 @@
     opacity: 0
     // Pseudo
     &:checked + .checkbox-icon
-      border-color: map-get($color-map, primary)
+      border-color: $color-primary
       transform: scale(1.1)
       transition: all 0.2s ease-in
       // Pseudo
       &::after
-        background: map-get($color-map, primary)
+        background: $color-primary
         transition: all 0.2s ease-in
     &:disabled + .checkbox-icon
       cursor: not-allowed
@@ -36,8 +36,8 @@
     align-items: center
     width: $size
     height: $size
-    margin-right: 1.5rem
-    padding: 0.5rem
+    margin-right: $spacing
+    padding: $spacing / 3
     border: 2px solid $checkbox-border-color
     // Pseudo
     &::after
@@ -52,7 +52,7 @@
     display: inline-flex
     // Elements
     & > span
-      margin-right: 1.5rem
+      margin-right: $spacing
 
 // ====================================
 // CHECKBOX

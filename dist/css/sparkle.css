@@ -641,8 +641,8 @@ code {
 
 .input:disabled:hover, .select:disabled:hover, .textarea:disabled:hover {
   border-color: transparent;
-  -webkit-box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0);
-          box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0);
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .input::-webkit-input-placeholder, .select::-webkit-input-placeholder, .textarea::-webkit-input-placeholder {
@@ -933,8 +933,8 @@ code {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
+      -ms-flex: 0;
+          flex: 0;
   z-index: 5;
 }
 
@@ -1154,7 +1154,7 @@ code {
 }
 
 .breadcrumb-item.make-active {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .breadcrumb.make-centered {
@@ -2680,9 +2680,9 @@ a.box:focus {
 
 .boxes .box {
   margin: 0;
-  border: 0;
-  -webkit-box-shadow: 0;
-          box-shadow: 0;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .boxes .box:first-child:not(:last-child) {
@@ -3223,7 +3223,7 @@ a.box:focus {
 }
 
 .buttons > .button:not(.make-block):last-child {
-  margin-right: none;
+  margin-right: 0;
 }
 
 .buttons.make-solid > .button:not(.make-block):not(:first-child) {
@@ -3702,7 +3702,7 @@ a.box:focus {
 }
 
 .tags > .tag:last-child {
-  margin-right: none;
+  margin-right: 0;
 }
 
 .tags.make-solid > .tag:not(:first-child) {

@@ -17,7 +17,7 @@
   &:focus,
   &:active
     border-color: $color-primary
-    box-shadow: 0 0 1.2rem rgba($color-primary, 0.5)
+    box-shadow: $input-focus-box-shadow-size rgba($color-primary, 0.5)
   &:disabled
     user-select: none
     cursor: not-allowed
@@ -25,4 +25,4 @@
     // Pseudo
     &:hover
       border-color: $color-none
-      box-shadow: 0 0 1.2rem rgba($color-none, 0)
+      box-shadow: none
