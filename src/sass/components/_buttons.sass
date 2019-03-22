@@ -6,6 +6,7 @@
 // MIXINS
 // =================================
 =create-button
+  +reset-appearance
   display: inline-flex
   flex:
     grow: 0
@@ -13,20 +14,17 @@
     basis: auto
   justify-content: center
   align-items: center
-  appearance: none
-  outline: none
-  user-select: none
-  background: $color-default
-  padding: $button-padding
   line-height: $line-height
   vertical-align: center
-  text:
-    align: center
-    decoration: none
+  padding: $button-padding
   font:
     size: $font-size
     weight: $font-weight-normal
   color: $font-color
+  text:
+    align: center
+    decoration: none
+  background: $color-default
   border: 1px solid $color-default
   border-radius: $border-radius
   cursor: pointer
@@ -41,9 +39,9 @@
   &.make-disabled,
   &[disabled]
     cursor: not-allowed
-    user-select: none
-    pointer-events: none
     opacity: 0.3
+    pointer-events: none
+    user-select: none
   // Modifiers
   @each $type, $color in $button-color-map
     &.make-#{$type}
@@ -80,7 +78,7 @@
             background: $color
             border-color: $color
       &.make-link
-        @if ($type == "light")
+        @if ($type == 'light')
           color: $color !important
           background: $color-none
           border: none
@@ -89,22 +87,22 @@
           &:not(:disabled):focus,
           &:not(:disabled):active
             color: darken($color, 10%) !important
+            text-decoration: underline
             background: rgba($color-default, 0.1)
-            text-decoration: underline
         @else
-          background: $color-none
           color: $color !important
+          background: $color-none
           border: none
           // Pseudo
           &:not(:disabled):hover,
           &:not(:disabled):focus,
           &:not(:disabled):active
             color: darken($color, 10%) !important
-            background: rgba($color, 0.1)
             text-decoration: underline
+            background: rgba($color, 0.1)
       &.make-outlined
-        background: $color-none
         color: $color !important
+        background: $color-none
         border: 1px solid $color
         // Pseudo
         &:not(:disabled):hover,

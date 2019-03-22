@@ -20,19 +20,19 @@
   &:not(:last-child)
     margin-bottom: $spacing
   // Elements
-  &__header,
-  &__body,
-  &__footer
+  &-header,
+  &-body,
+  &-footer
     padding: $card-spacing-y $card-spacing-x
-  &__image
+  &-image
+    line-height: 0 // Removes extra spacing under image
     margin: 0
     padding: 0
-    line-height: 0 // Removes extra spacing under image
     // Elements
     img
       width: 100%
       height: auto
-  &__separator
+  &-separator
     display: block
     width: 90%
     height: 0.1rem

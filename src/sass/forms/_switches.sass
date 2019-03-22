@@ -11,29 +11,29 @@
   width: $switch-width
   height: $switch-height
   vertical-align: center
-  border-radius: 1.0rem
+  border-radius: $switch-border-radius
   // Elements
-  &__toggle
+  &-toggle
     position: absolute
     display: none
     opacity: 0
     // Pseudo
     &:checked
       // Elements
-      ~ .switch__handle
+      ~ .switch-handle
         transform: translateX(100%)
-      ~ .switch__label
+      ~ .switch-label
         background: $color-primary
         border-color: darken($color-primary, $darken * 2)
     &:disabled
       // Elements
-      ~ .switch__handle
+      ~ .switch-handle
         opacity: $opacity-muted
         user-select: none
         cursor: not-allowed
-      ~ .switch__label
+      ~ .switch-label
         opacity: $opacity-muted
-  &__handle
+  &-handle
     position: absolute
     top: 0
     left: 0
@@ -42,12 +42,12 @@
     background: $color-light
     border: 1px solid darken($color-light, $darken * 2)
     border-radius: 50%
-    transition: transform 0.2s
-  &__label
+    transition: transform $transition-time
+  &-label
     position: relative
     display: block
-    background: $color-default
     height: inherit
+    background: $color-default
     border: 1px solid darken($color-default, $darken * 2)
     border-radius: inherit
 

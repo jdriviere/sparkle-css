@@ -1,0 +1,154 @@
+############################
+## Sparkle.css Lint Rules ##
+############################
+# Linter Options
+options:
+  # Don't merge default rules
+  merge-default-rules: false
+  # Max warnings generated
+  max-warnings: 50
+# File Options
+files:
+  include: 'src/sass/**/*.s+(a|c)ss'
+  ignore: 'src/sass/vendors/*.s+(a|c)ss'
+# Rule Configurations
+rules:
+  attribute-quotes:
+    - 1
+    -
+      include: true
+  border-zero:
+    - 1
+    -
+      convention: 'none'
+  class-name-format:
+    - 2
+    -
+      allow-leading-underscore: false
+      convention: 'hyphenatedlowercase'
+  declarations-before-nesting: 1
+  empty-line-between-blocks:
+    - 0
+    -
+      include: false
+      allow-single-line-rulesets: false
+  extends-before-declarations: 1
+  extends-before-mixins: 1
+  final-newline:
+    - 1
+    -
+      include: false
+  hex-length:
+    - 1
+    -
+      style: long
+  hex-notation:
+    - 2
+    -
+      style: uppercase
+  leading-zero:
+    - 1
+    -
+      include: true
+  mixin-name-format:
+    - 2
+    - 
+      allow-leading-underscore: false
+      convention: 'hyphenatedlowercase'
+  no-color-keywords: 2
+  no-debug: 2
+  no-empty-rulesets: 1
+  no-ids: 2
+  no-invalid-hex: 2
+  no-misspelled-properties: 2
+  no-qualifying-elements:
+    - 2
+    -
+      allow-element-with-attribute: true
+      allow-element-with-class: true
+  no-trailing-whitespace: 0
+  no-trailing-zero: 0
+  no-vendor-prefixes: 0
+  no-warn: 0
+  one-declaration-per-line: 2
+  property-sort-order:
+    - 1
+    -
+      order:
+        - content
+        - visibility
+        - position
+        - top
+        - bottom
+        - left
+        - right
+        - display
+        - flex
+        - flex-grow
+        - flex-shrink
+        - flex-basis
+        - flex-flow
+        - flex-direction
+        - flex-wrap
+        - justify-content
+        - align-items
+        - order
+        - min-width
+        - width
+        - max-width
+        - min-height
+        - height
+        - max-height
+        - line-height
+        - vertical-align
+        - margin
+        - margin-top
+        - margin-bottom
+        - margin-left
+        - margin-right
+        - padding
+        - padding-top
+        - padding-bottom
+        - padding-left
+        - padding-right
+        - font
+        - font-family
+        - font-size
+        - font-weight
+        - color
+        - text
+        - text-align
+        - text-decoration
+        - background
+        - background-color
+        - background-image
+        - background-position
+        - background-repeat
+        - border
+        - border-top
+        - border-bottom
+        - border-left
+        - border-right
+        - border-color
+        - border-style
+        - border-width
+        - border-radius
+        - box-shadow
+        - transform
+        - z-index
+        - transition
+  pseudo-element: 2
+  quotes:
+    - 1
+    -
+      style: single
+  single-line-per-selector: 2
+  variable-name-format:
+    - 2
+    -
+      allow-leading-underscore: false
+      convention: 'hyphenatedlowercase'
+  zero-unit:
+    - 2
+    -
+      include: false

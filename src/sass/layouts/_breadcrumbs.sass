@@ -12,13 +12,13 @@
   width: 100%
   list-style: none
   // Elements
-  &__item
-    margin: 0
+  &-item
     display: inline-flex
     flex:
       grow: 0
       shrink: 0
       basis: auto
+    margin: 0
     // Pseudo
     &:not(:last-child)::after
       content: '|'
@@ -26,7 +26,7 @@
       color: $font-color
     // Modifiers
     &.make-active
-      font-weight: $font-weight-bold
+      font-weight: bold
   // Modifiers
   &.make-centered
     justify-content: center

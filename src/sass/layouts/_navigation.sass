@@ -21,19 +21,19 @@
   // Elements
   // --- TOGGLER --- //
   > input[type='checkbox']
-    // @NOTE: Must be checkbox and have an id equivalent to nav__toggle's "for" attribute
+    // @NOTE: Must be checkbox and have an id equivalent to nav-toggle's "for" attribute
     display: none
     height: 60px
     // Pseudo
-    &:checked ~ .nav__menu
+    &:checked ~ .nav-menu
       display: flex
       height: auto 
-    &:checked ~ .nav__toggle
+    &:checked ~ .nav-toggle
       color: rgba(0, 0, 0, 1.0)
       border-color: rgba(0, 0, 0, 1.0)
-  .nav__toggle
-    // @NOTE: Must make sure label is set up: <label for="[insert_name]" class="nav__toggle"></label>
-    //        The label with class 'nav__toggle' must also be placed AFTER the checkbox.
+  .nav-toggle
+    // @NOTE: Must make sure label is set up: <label for="[insert_name]" class="nav-toggle"></label>
+    //        The label with class 'nav-toggle' must also be placed AFTER the checkbox.
     position: absolute
     top: $navig-spacing / 2
     right: $navig-spacing / 2
@@ -52,34 +52,34 @@
       cursor: pointer
   
   //--- BRAND ---
-  &__brand
+  &-brand
     display: flex
     align-items: center
     padding: $navig-padding
-    color: $font-color !important
     font:
       size: $navig-brand !important
       weight: 700
+    color: $font-color !important
     text-decoration: none
     // Elements
     img,
-    &__img
+    &-img
       height: 4.0rem
   
   //--- MENU ---
-  &__menu
+  &-menu
     display: none
     flex-direction: column
     width: 100%
     list-style: none
     // Elements
-    &__item
+    &-item
       // Elements
       > a:not(.button)
         display: block
         padding: $navig-padding
-        text-decoration: none !important
         color: rgba($navig-font-color, $navig-font-opacity)
+        text-decoration: none !important
         cursor: pointer
       // Pseudo
       &:hover
@@ -91,27 +91,27 @@
       &.make-active
         // Elements
         > a
-          color: rgba($navig-font-color, $navig-font-opacity-hovered)
           font-weight: $font-weight-bold
+          color: rgba($navig-font-color, $navig-font-opacity-hovered)
       &.make-special
         background: map-get($color-map, primary)
         // Elements
         > a
-          color: #FFF
+          color: #FFFFFF
         // Pseudo
         &:hover
           background: darken(map-get($color-map, primary), $darken)
           // Elements
           > a
-            color: #FFF
+            color: #FFFFFF
       // Modifiers
         &.make-right
           margin-left: 0
     // Modifiers
     &.make-fixed
       position: fixed
-      z-index: $index-higher // z-index: 10
       box-shadow: 0 0 7px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 0, 0, 0.05)
+      z-index: $index-higher // z-index: 10
   
   // Media Query
   @media screen and (min-width: $bp-large)
@@ -119,10 +119,10 @@
     align-items: stretch
     // Elements
     //--- TOGGLER ---
-    &__toggle
-          display: none
+    &-toggle
+      display: none
     //--- BRAND ---
-    &__brand
+    &-brand
       display: flex
       flex:
         grow: 0
@@ -131,14 +131,14 @@
       align-items: center
       padding: 0 $navig-padding
     //--- MENU ---
-    &__menu
+    &-menu
       display: flex
       flex-direction: row
       align-items: center
       width: auto
       margin-bottom: 0 !important
       // Elements
-      &__item
+      &-item
         // Pseudo
         &:hover
           background: $color-none

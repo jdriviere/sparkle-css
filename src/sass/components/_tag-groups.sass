@@ -19,9 +19,10 @@
       right: $tag-group-margin
     // Pseudo
     &:last-child
-      margin-right: 0
+      margin-right: none
   // Modifiers
   // @NOTE: '.make-solid' is a temporary name
+  // sass-lint:disable border-zero
   &.make-solid
     & > .tag
       // Pseudo
@@ -34,6 +35,7 @@
         border:
           top-right-radius: 0
           bottom-right-radius: 0
+  // sass-lint:enable border-zero
 
 // ====================================
 // TAG-GROUPS

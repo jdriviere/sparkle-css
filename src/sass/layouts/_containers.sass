@@ -12,13 +12,18 @@
   // Pseudo
   &::before,
   &::after
-    content: ""
+    content: ''
     display: table
   &::after
     clear: both
   // Media Queries
   +tablet
     max-width: 1200px
+  // Modifiers (TEST)
+  &.make-small
+    max-width: 960px
+  &.make-large
+    max-width: 1440px
 
 // ====================================
 // WRAPPER

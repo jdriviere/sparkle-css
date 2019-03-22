@@ -2,6 +2,7 @@
 // INPUT CONTROL
 // =======================================
 =input-control
+  +reset-appearance
   position: relative
   display: inline-flex
   flex:
@@ -10,16 +11,13 @@
     basis: auto
   justify-content: flex-start
   align-items: center
-  padding: $padding-vertical $padding-horizontal
-  appearance: none
-  outline: none
+  padding: 0.5rem 1.5rem
   border: 1px solid $color-none
-  box-shadow: none
   // Pseudo
   &:focus,
   &:active
     border-color: $color-primary
-    box-shadow: $input-focus-box-shadow-size $input-focus-box-shadow-color
+    box-shadow: 0 0 1.2rem rgba($color-primary, 0.5)
   &:disabled
     user-select: none
     cursor: not-allowed

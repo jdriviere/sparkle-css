@@ -1,8 +1,8 @@
 // =======================================
 // GRID
 // =======================================
-=create-columns($name: "")
-  @if $name == ""
+=create-columns($name: '')
+  @if $name == ''
     @for $i from 1 through $grid-columns
       &.make-#{$i}
         flex: none

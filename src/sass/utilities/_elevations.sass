@@ -6,12 +6,12 @@
 // MIXINS
 // ====================================
 //--- RAISED ---//
-=create-elevation($isPushable: false)
+=create-elevation($is-pushable: false)
   +create-shadow($shadow-elevation-default)
   +shadow-anim(all, $transition-time, $transition-type)
   z-index: $index-higher
   // Pseudo
-  @if ($isPushable)
+  @if ($is-pushable)
     &:hover
       +reset-shadow
       +shadow-anim(all, $transition-time, $transition-type)
@@ -21,7 +21,7 @@
     +shadow-anim(all, $transition-time, $transition-type)
     z-index: $index-higher * 1.5
     // Pseudo
-    @if ($isPushable)
+    @if ($is-pushable)
       &:hover
         +reset-shadow
         +shadow-anim(all, $transition-time, $transition-type)
@@ -30,7 +30,7 @@
     +shadow-anim(all, $transition-time, $transition-type)
     z-index: $index-higher * 2
     // Pseudo
-    @if ($isPushable)
+    @if ($is-pushable)
       &:hover
         +reset-shadow
         +shadow-anim(all, $transition-time, $transition-type)
@@ -39,7 +39,7 @@
     +shadow-anim(all, $transition-time, $transition-type)
     z-index: $index-higher * 2.5
     // Pseudo
-    @if ($isPushable)
+    @if ($is-pushable)
       &:hover
         +reset-shadow
         +shadow-anim(all, $transition-time, $transition-type)

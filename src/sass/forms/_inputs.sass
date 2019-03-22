@@ -12,8 +12,8 @@
   font-size: $font-size
   color: $font-color
   border:
-    radius: $border-radius
     color: $input-border-color
+    radius: $border-radius
   // Pseudo
   &::placeholder
     color: $color-grey-75
@@ -23,13 +23,28 @@
   &:active
     border-color: map-get($color-map, primary)
   // Modifiers
+  //=== STYLES ===//
   @each $type, $color in $input-color-map
     &.make-#{$type}
       border-color: $color
       // Pseudo
       &:focus,
       &:active
-        box-shadow: $input-focus-box-shadow-size rgba($color, $opacity-muted) !important
+        box-shadow: 0 0 1.2rem rgba($color, $opacity-muted) !important
+    //=== ROUNDNESS ===//
+    &.make-rounded
+      border-radius: 5.0rem
+    //=== SIZES ===//
+    &.make-smaller
+      font-size: 1.0rem
+    &.make-small
+      font-size: 1.2rem
+    &.make-large
+      padding: 0.6rem 1.8rem
+      font-size: 1.8rem
+    &.make-larger
+      padding: 0.8rem 2.4rem
+      font-size: 2.0rem
     
 // ====================================
 // INPUTS
@@ -41,11 +56,11 @@
 // --- LABELS ---
 .label
   display: inline-flex
-  justify-content: flex-start
   flex:
     grow: 1
     shrink: 0
     basis: auto
+  justify-content: flex-start
   margin-bottom: 0.5rem
   font:
     size: $font-size
@@ -53,15 +68,17 @@
   color: $font-color
 
 // --- SELECT ---
+// sass-lint:disable property-sort-order
 .select
   @extend .input
   background:
     image: url('https://png.icons8.com/expand-arrow/win8/12')
-    repeat: no-repeat
     position: calc(100% - 1.0rem)
+    repeat: no-repeat
   // Pseudo
   &::-ms-expand
     display: none
+// sass-lint:enable property-sort-order
 
 // --- TEXT AREA ---
 .textarea

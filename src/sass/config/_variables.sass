@@ -107,7 +107,7 @@ $bp-widescreen: 1200px !default
 // =================================
 // FONTS
 // =================================
-$font-family: -apple-system, BlinkMacSystemFont, "Lato", Roboto, Oxygen-Sans, Ubuntu, "Helvetica Neue", sans-serif !default
+$font-family: -apple-system, BlinkMacSystemFont, 'Lato', Roboto, Oxygen-Sans, Ubuntu, 'Helvetica Neue', sans-serif !default
 $font-size: 1.6rem !default
 $font-color: $color-grey-25 !default
 $font-color-link: $color-info !default
@@ -216,7 +216,7 @@ $hero-padding-small: $hero-padding 0 !default
 $hero-padding-medium: ($hero-padding * 5) 0 !default
 $hero-padding-large: ($hero-padding * 10) 0 !default
 
-$hero-color-map: (primary: $color-primary, info: $color-info, success: $color-success, warning: $color-warning, danger: $color-danger, light: $color-light, dark: $color-dark) !default
+$hero-color-map: (primary: $color-primary, info: $color-info, success: $color-success, warning: $color-warning, danger: $color-danger) !default
 
 // ====================================
 // INPUTS
@@ -224,8 +224,6 @@ $hero-color-map: (primary: $color-primary, info: $color-info, success: $color-su
 $input-margin: 1.5rem !default
 $input-size: 4.0rem !default
 $input-border-color: $color-default !default
-$input-focus-box-shadow-size: 0 0 0 0.3rem !default
-$input-focus-box-shadow-color: rgba($color-primary, $opacity-muted) !default
 
 $input-color-map: (primary: $color-primary, info: $color-info, success: $color-success, warning: $color-warning, danger: $color-danger) !default
 
@@ -245,6 +243,7 @@ $list-spacing-horizontal: 2.0rem !default
 // ====================================
 $loader-size: 2.4rem !default
 $loader-default-color: $color-grey-75 !default
+// $loader-default-color: #BCBCBC !default
 $loader-border-size: $loader-size / 4 !default
 $loader-border-opacity: 0.3 !default
 $loader-animation: spin 1s ease-in-out infinite !default
@@ -267,10 +266,6 @@ $media-profile-border-radius: $border-radius !default
 // ====================================
 $menu-margin: 1.0rem !default
 $menu-padding: $menu-margin !default
-$menu-border-radius: $border-radius !default
-
-$submenu-margin: $menu-margin !default
-$submenu-border: 0.3rem solid $color-default !default
 
 // ====================================
 // PROGRESS BAR
@@ -324,6 +319,7 @@ $spacing-size: 0.5rem !default
 // ====================================
 $switch-width: 4.0rem !default
 $switch-height: $switch-width / 2 !default
+$switch-border-radius: $border-radius * 4 !default
 
 // ====================================
 // TABLES

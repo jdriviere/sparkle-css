@@ -14,6 +14,7 @@
   width: 100%
   // Elements
   //--- INPUTS ---
+  // sass-lint:disable border-zero
   .input,
   .select
     display: flex
@@ -36,7 +37,7 @@
   //--- BUTTONS ---
   .button
     display: flex
-    flex: 0
+    flex: none
     z-index: $index-high
     // Pseudo
     &:first-child:not(:last-child)
@@ -49,10 +50,11 @@
       border:
         top-left-radius: 0
         bottom-left-radius: 0
+  // sass-lint:enable border-zero
 
 // ====================================
 // INPUT-ADDONS
 // ====================================
-.input__addon,
-.input__addons
+.input-addon,
+.input-addons
   +create-input-addons

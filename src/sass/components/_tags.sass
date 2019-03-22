@@ -14,11 +14,11 @@
   justify-content: center
   align-items: center
   padding: $tag-padding
-  background: $color-default
-  color: setTextColor($color-default)
   font:
     size: $tag-font-size
     weight: $tag-font-weight
+  color: setTextColor($color-default)
+  background: $color-default
   border-radius: $border-radius
   // Modifiers
   @each $type, $color in $tag-color-map        
@@ -27,12 +27,12 @@
       background: $color
       // Modifiers
       &.make-outlined
-        background: $color-none
         color: $color !important
+        background: $color-none
         border: 1px solid $color
       &.make-reversed
+        color: $color !important
         background: setTextColor($color)
-        color: $color !important  
   &.make-bullet
     border-radius: 2.0rem
 

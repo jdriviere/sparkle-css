@@ -1,8 +1,7 @@
 /**
- * @name            Sparkle.css Gulpfile (Gulp v4)
+ * @name            Gulpfile for Gulp v4
  * @author          J. D. Riviere
- * @desc            A series of commands that can be used in a terminal or command line, if
- *                  Gulp (version 4.0.x) is installed.
+ * @desc            This is the gulpfile.js that uses Gulp v4.
  */
 
 /* ==================================== */
@@ -13,6 +12,7 @@ const rename = require('gulp-rename');
 const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const sourcemaps = require('gulp-sourcemaps');
+const sassLint = require('gulp-sass-lint');
 const autoprefixer = require('autoprefixer');
 const header = require('postcss-header');
 const cssnano = require('cssnano');
@@ -34,7 +34,7 @@ const banner = `
 /*!
   * @name         ${pkg.name}
   * @author       ${pkg.author}
-  * @version      ${pkg.version} - released on XX/XX/2019
+  * @version      ${pkg.version} - released on 03/22/2019
   * @website      ${pkg.homepage}
   * @license      ${pkg.license}
   * Welcome and thank you for using Sparkle, a lightweight, open-source CSS framework
@@ -97,6 +97,15 @@ const minify = () => {
     .pipe(gulp.dest(paths.styles.dest));
 }; // End of Minify
 
+//--- Linting ---//
+const lintify = () => {
+  console.log("Linting the CSS files...\n")
+  return gulp.src('src/sass/**/*.s+(a|c)ss')
+    .pipe(sassLint())
+    .pipe(sassLint.format())
+    .pipe(sassLint.failOnError());
+}; // End of Linting
+
 //--- Watch ---//
 const watch = () => {
   console.log('Watching SASS files for changes...\n');
@@ -106,15 +115,16 @@ const watch = () => {
 /* ==================================== */
 /* SERIES AND PARALLELS
 /* ==================================== */
-const build = gulp.series(clean, gulp.parallel(sassify, minify));
+const build = gulp.series(lintify, clean, gulp.parallel(sassify, minify));
 
 /* ==================================== */
 /* DESCRIPTIONS
 /* ==================================== */
-build.description = 'Builds the expanded and minified CSS files in production mode.';
+build.description = 'Builds the expanded CSS file in production mode.';
 clean.description = 'Deletes all files within the \'dist\' folder. A private command.';
-minify.description = 'Builds the minified CSS file.';
-sassify.description = 'Builds the expanded CSS file.';
+lintify.description = 'Formats the CSS attributes and styling according to the \'.sass-lint.yml\' file.';
+minify.description = 'Builds the minified CSS file in production mode.';
+sassify.description = 'Builds the CSS file in development mode.';
 watch.description = 'Watches all the CSS files (mainly the \'sparkle.sass\' file) for changes.';
 
 /* ==================================== */
@@ -122,6 +132,7 @@ watch.description = 'Watches all the CSS files (mainly the \'sparkle.sass\' file
 /* ==================================== */
 exports.sassify = sassify;
 exports.minify = minify;
+exports.lintify = lintify;
 exports.watch = watch;
 
 /* ==================================== */

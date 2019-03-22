@@ -10,20 +10,20 @@
   display: block
   width: 100%
   padding: ($alert-padding / 2) $alert-padding
-  background: $color-default
-  color: setTextColor($color-default)
   font:
     size: $alert-font-size
     weight: $alert-font-weight
-  border-radius: $alert-border-radius
+  color: setTextColor($color-default)
+  background: $color-default
   border: 1px solid darken($color-default, ($darken * 2))
+  border-radius: $alert-border-radius
   // Pseudo
   &:not(:last-child)
     margin-bottom: $spacing
   // Elements
   > a:not(.button)
-    color: setTextColor($color-default)
     font-weight: $font-weight-bold
+    color: setTextColor($color-default)
     text-decoration: underline
   // Modifiers
   @each $type, $color in $alert-color-map

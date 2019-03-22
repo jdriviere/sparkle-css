@@ -11,10 +11,10 @@
   justify-content: space-between
   align-items: stretch
   // Elements
-  &__header,
-  &__footer 
+  &-header,
+  &-footer 
     flex: 0
-  &__body 
+  &-body 
     flex:
       grow: 1
       shrink: 0
@@ -29,7 +29,7 @@
   &.make-half-height,
   &.make-full-height
     // Elements
-    .hero__body
+    .hero-body
       display: flex
       align-items: center
       // Elements
@@ -44,11 +44,11 @@
   // Modifiers
   @each $type, $color in $hero-color-map
     &.make-#{$type}
-      background: $color
       color: setTextColor($color)
+      background: $color
 
 // ====================================
 // HERO
 // ====================================
 .hero
-  +create-hero  
+  +create-hero

@@ -14,14 +14,14 @@
   border: 1px solid darken($table-color-background, ($darken / 2))
   border:
     collapse: collapse
-    spacing: 0
+    spacing: none
     radius: $table-border-radius
   // Pseudo
   &:not(:last-child)
     margin-bottom: $spacing
   // Elements
   caption,
-  &__caption
+  &-caption
     display: flex
     flex:
       grow: 0
@@ -29,18 +29,18 @@
       basis: $table-width
     max-width: $table-width
     padding: $table-caption-padding
-    color: $table-caption-font-color
     font:
       size: $table-caption-font-size
       weight: $table-caption-font-weight
+    color: $table-caption-font-color
   thead,
   tbody,
   tfoot,
   tr,
-  &__header,
-  &__body,
-  &__footer,
-  &__row
+  &-header,
+  &-body,
+  &-footer,
+  &-row
     display: flex
     flex:
       grow: 0
@@ -50,16 +50,16 @@
     align-items: stretch
     max-width: $table-width
   thead,
-  &__header
+  &-header
     border-bottom: 2px solid rgba($table-color-border, $opacity-muted)
   tfoot,
-  &__footer
+  &-footer
     border-top: 2px solid rgba($table-color-border, $opacity-muted)
   th,
   td,
-  &__header .table__cell,
-  &__footer .table__cell,
-  &__cell
+  &-header .table-cell,
+  &-footer .table-cell,
+  &-cell
     display: flex
     flex: 1
     align-items: center
@@ -69,19 +69,19 @@
   th,
   thead td,
   tfoot td,
-  &__header .table__cell,
-  &__footer .table__cell
+  &-header .table-cell,
+  &-footer .table-cell
     font:
       size: $table-header-font-size
       weight: $table-header-font-weight
   tr,
-  &__row
+  &-row
     // Modifiers
     &.make-selected
       color: $table-row-font-color-selected
       background: $table-row-background-color-selected
   td,
-  &__cell
+  &-cell
     font:
       size: $table-cell-font-size
       weight: $table-cell-font-weight
@@ -93,22 +93,22 @@
   // Modifiers
   &.make-default
     tbody tr:not(:last-child),
-    .table__body .table__row:not(:last-child)
+    .table-body .table-row:not(:last-child)
       border-bottom: 1px solid $table-color-stripe
   &.make-striped
     tbody tr:nth-child(odd),
-    .table__body .table__row:nth-child(odd)
+    .table-body .table-row:nth-child(odd)
       background: lighten($table-color-stripe, $lighten)
     tbody tr.make-selected:nth-child(odd),
-    .table__body .table__row.make-selected:nth-child(odd)
+    .table-body .table-row.make-selected:nth-child(odd)
       background: darken($table-row-background-color-selected, $darken)
   &.make-hoverable
     tbody tr:hover,
-    .table__body .table__row:hover
+    .table-body .table-row:hover
       background: lighten($table-color-stripe, ($lighten / 2))
       cursor: pointer
     tbody tr.make-selected:hover,
-    .table__body .table__row.make-selected:hover
+    .table-body .table-row.make-selected:hover
       background: darken($table-row-background-color-selected, $darken)
 
 // ====================================

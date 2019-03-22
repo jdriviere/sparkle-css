@@ -7,6 +7,7 @@
     "start": "npm install",
     "help": "node node_modules/gulp/bin/gulp --tasks",
     "watch": "node node_modules/gulp/bin/gulp watch",
+    "build:lint": "node node_modules/gulp/bin/gulp lintify",
     "build:sass": "node node_modules/gulp/bin/gulp sassify",
     "build:mini": "node node_modules/gulp/bin/gulp minify",
     "build": "node node_modules/gulp/bin/gulp"
@@ -30,7 +31,9 @@
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
+    "gulp-sass-lint": "^1.4.0",
     "gulp-sourcemaps": "^2.6.4",
-    "postcss-header": "^1.0.0"
+    "postcss-header": "^1.0.0",
+    "sass-lint": "^1.12.1"
   }
 }

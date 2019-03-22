@@ -30,18 +30,18 @@
       right: $grid-gap / 2
     // Modifiers | Media Queries
     @media screen and (min-width: $bp-none) // Mobile (portrait)
-      +create-columns("xsmall")
+      +create-columns('xsmall')
     @media screen and (min-width: $bp-small) // Mobile (landscape)
-      +create-columns("small")
+      +create-columns('small')
     @media screen and (min-width: $bp-medium) // Tablet
       // Grid of 12
       +create-columns
-      +create-columns("medium")
-      // +create-columns-fifths("medium")
+      +create-columns('medium')
+      // +create-columns-fifths('medium')
     @media screen and (min-width: $bp-large) // Desktop
-      +create-columns("large")
+      +create-columns('large')
     @media screen and (min-width: $bp-widescreen) // Widescreen
-      +create-columns("xlarge")
+      +create-columns('xlarge')
     
     //-- FRACTIONAL (Regular)
     &.make-twelfth

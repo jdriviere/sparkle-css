@@ -11,10 +11,11 @@
   border: 1px solid darken($color-light, $darken)
   border-radius: $border-radius
   // Elements
+  // sass-lint:disable border-zero
   .box
     margin: 0
-    border: none
-    box-shadow: none
+    border: 0
+    box-shadow: 0
     // Pseudo
     &:first-child:not(:last-child)
       border:
@@ -26,6 +27,7 @@
         top: 1px solid darken($color-light, ($darken * 2))
         top-left-radius: 0
         top-right-radius: 0
+  // sass-lint:enable border-zero
 
 // =================================
 // BOX-GROUPS

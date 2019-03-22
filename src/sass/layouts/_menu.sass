@@ -7,17 +7,17 @@
 // ====================================
 =create-menu
   display: flex
-  width: 100%
   flex-direction: column
+  width: 100%
   margin-bottom: $menu-margin
   // Elements
-  &__group
+  &-group
     display: flex
     font:
       size: $font-size
       weight: $font-weight-bold
-  &__item
-    // @NOTE: '.menu__item' is also used for the elements
+  &-item
+    // @NOTE: '.menu-item' is also used for the elements
     //        used in the '.submenu' list
     display: block
     width: 100%
@@ -29,11 +29,11 @@
     &:hover,
     &.make-active
       background: lighten($color-default, $lighten / 2)
-      border-radius: $menu-border-radius
+      border-radius: 0.3rem
   .submenu
     display: block
-    margin-left: $submenu-margin
-    border-left: $submenu-border
+    margin-left: $menu-margin
+    border-left: 2px solid $color-default
 
 // ====================================
 // MENU
