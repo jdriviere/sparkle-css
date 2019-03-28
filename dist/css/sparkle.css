@@ -2680,7 +2680,7 @@ a.box:focus {
 
 .boxes .box {
   margin: 0;
-  border: 0;
+  border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
