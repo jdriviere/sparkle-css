@@ -2680,7 +2680,7 @@ a.box:focus {
 
 .boxes .box {
   margin: 0;
-  border: none;
+  border: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -2691,8 +2691,11 @@ a.box:focus {
   border-bottom-right-radius: 0;
 }
 
+.boxes .box:not(:first-child):not(:last-child) {
+  border-bottom: 1px solid #d6d6d6;
+}
+
 .boxes .box:last-child:not(:first-child) {
-  border-top: 1px solid #d6d6d6;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }

@@ -14,7 +14,7 @@
   // sass-lint:disable border-zero
   .box
     margin: 0
-    border: none
+    border: 0
     box-shadow: none
     // Pseudo
     &:first-child:not(:last-child)
@@ -22,9 +22,10 @@
         bottom: 1px solid darken($color-light, ($darken * 2))
         bottom-left-radius: 0
         bottom-right-radius: 0
+    &:not(:first-child):not(:last-child)
+      border-bottom: 1px solid darken($color-light, ($darken * 2))
     &:last-child:not(:first-child)
       border:
-        top: 1px solid darken($color-light, ($darken * 2))
         top-left-radius: 0
         top-right-radius: 0
   // sass-lint:enable border-zero
