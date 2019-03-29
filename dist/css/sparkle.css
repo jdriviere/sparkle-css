@@ -2661,10 +2661,7 @@ code {
   margin-bottom: 1.5rem;
 }
 
-a.box:hover,
-a.box:active,
-a.box:focus {
-  background: #FFFFFF;
+a.box:hover, a.box:active, a.box:focus {
   cursor: pointer;
 }
 
@@ -3732,6 +3729,7 @@ a.box:focus {
 }
 
 .make-background-primary a:not(.button):hover {
+  color: #222528 !important;
   text-decoration: underline;
 }
 
@@ -3745,6 +3743,7 @@ a.box:focus {
 }
 
 .make-background-info a:not(.button):hover {
+  color: #FCFCFC !important;
   text-decoration: underline;
 }
 
@@ -3758,6 +3757,7 @@ a.box:focus {
 }
 
 .make-background-success a:not(.button):hover {
+  color: #FCFCFC !important;
   text-decoration: underline;
 }
 
@@ -3771,6 +3771,7 @@ a.box:focus {
 }
 
 .make-background-warning a:not(.button):hover {
+  color: #222528 !important;
   text-decoration: underline;
 }
 
@@ -3784,6 +3785,7 @@ a.box:focus {
 }
 
 .make-background-danger a:not(.button):hover {
+  color: #FCFCFC !important;
   text-decoration: underline;
 }
 
@@ -3797,6 +3799,7 @@ a.box:focus {
 }
 
 .make-background-light a:not(.button):hover {
+  color: #222528 !important;
   text-decoration: underline;
 }
 
@@ -3810,6 +3813,7 @@ a.box:focus {
 }
 
 .make-background-dark a:not(.button):hover {
+  color: #FCFCFC !important;
   text-decoration: underline;
 }
 
