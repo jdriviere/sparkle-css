@@ -626,8 +626,8 @@ code {
 
 .input:focus, .select:focus, .textarea:focus, .input:active, .select:active, .textarea:active {
   border-color: #BBDDFF;
-  -webkit-box-shadow: 0 0 1.2rem rgba(187, 221, 255, 0.5);
-          box-shadow: 0 0 1.2rem rgba(187, 221, 255, 0.5);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(187, 221, 255, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(187, 221, 255, 0.5);
 }
 
 .input:disabled, .select:disabled, .textarea:disabled {
@@ -674,8 +674,8 @@ code {
 }
 
 .input.make-primary:focus, .make-primary.select:focus, .make-primary.textarea:focus, .input.make-primary:active, .make-primary.select:active, .make-primary.textarea:active {
-  -webkit-box-shadow: 0 0 1.2rem rgba(187, 221, 255, 0.5) !important;
-          box-shadow: 0 0 1.2rem rgba(187, 221, 255, 0.5) !important;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(187, 221, 255, 0.5) !important;
+          box-shadow: 0 0 0 0.2rem rgba(187, 221, 255, 0.5) !important;
 }
 
 .input.make-rounded, .make-rounded.select, .make-rounded.textarea {
@@ -705,8 +705,8 @@ code {
 }
 
 .input.make-info:focus, .make-info.select:focus, .make-info.textarea:focus, .input.make-info:active, .make-info.select:active, .make-info.textarea:active {
-  -webkit-box-shadow: 0 0 1.2rem rgba(25, 130, 196, 0.5) !important;
-          box-shadow: 0 0 1.2rem rgba(25, 130, 196, 0.5) !important;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(25, 130, 196, 0.5) !important;
+          box-shadow: 0 0 0 0.2rem rgba(25, 130, 196, 0.5) !important;
 }
 
 .input.make-rounded, .make-rounded.select, .make-rounded.textarea {
@@ -736,8 +736,8 @@ code {
 }
 
 .input.make-success:focus, .make-success.select:focus, .make-success.textarea:focus, .input.make-success:active, .make-success.select:active, .make-success.textarea:active {
-  -webkit-box-shadow: 0 0 1.2rem rgba(102, 187, 68, 0.5) !important;
-          box-shadow: 0 0 1.2rem rgba(102, 187, 68, 0.5) !important;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(102, 187, 68, 0.5) !important;
+          box-shadow: 0 0 0 0.2rem rgba(102, 187, 68, 0.5) !important;
 }
 
 .input.make-rounded, .make-rounded.select, .make-rounded.textarea {
@@ -767,8 +767,8 @@ code {
 }
 
 .input.make-warning:focus, .make-warning.select:focus, .make-warning.textarea:focus, .input.make-warning:active, .make-warning.select:active, .make-warning.textarea:active {
-  -webkit-box-shadow: 0 0 1.2rem rgba(255, 204, 37, 0.5) !important;
-          box-shadow: 0 0 1.2rem rgba(255, 204, 37, 0.5) !important;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(255, 204, 37, 0.5) !important;
+          box-shadow: 0 0 0 0.2rem rgba(255, 204, 37, 0.5) !important;
 }
 
 .input.make-rounded, .make-rounded.select, .make-rounded.textarea {
@@ -798,8 +798,8 @@ code {
 }
 
 .input.make-danger:focus, .make-danger.select:focus, .make-danger.textarea:focus, .input.make-danger:active, .make-danger.select:active, .make-danger.textarea:active {
-  -webkit-box-shadow: 0 0 1.2rem rgba(238, 34, 51, 0.5) !important;
-          box-shadow: 0 0 1.2rem rgba(238, 34, 51, 0.5) !important;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(238, 34, 51, 0.5) !important;
+          box-shadow: 0 0 0 0.2rem rgba(238, 34, 51, 0.5) !important;
 }
 
 .input.make-rounded, .make-rounded.select, .make-rounded.textarea {

@@ -11,13 +11,13 @@
     basis: auto
   justify-content: flex-start
   align-items: center
-  padding: 0.5rem 1.5rem
+  padding: $padding-vertical $padding-horizontal
   border: 1px solid $color-none
   // Pseudo
   &:focus,
   &:active
     border-color: $color-primary
-    box-shadow: $input-focus-box-shadow-size rgba($color-primary, 0.5)
+    box-shadow: $input-focus-box-shadow rgba($color-primary, $opacity-muted)
   &:disabled
     user-select: none
     cursor: not-allowed
