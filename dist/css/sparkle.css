@@ -199,6 +199,11 @@ body {
   background: #FFFFFF;
 }
 
+::-moz-selection {
+  color: #222528;
+  background: #BBDDFF;
+}
+
 ::selection {
   color: #222528;
   background: #BBDDFF;
@@ -646,6 +651,11 @@ code {
 }
 
 .input::-webkit-input-placeholder, .select::-webkit-input-placeholder, .textarea::-webkit-input-placeholder {
+  color: #C0C0C0;
+  opacity: 0.5;
+}
+
+.input::-moz-placeholder, .select::-moz-placeholder, .textarea::-moz-placeholder {
   color: #C0C0C0;
   opacity: 0.5;
 }
@@ -3883,7 +3893,7 @@ a.box:hover, a.box:active, a.box:focus {
   z-index: 25;
 }
 
-.make-hoverable {
+.make-lowerable {
   -webkit-box-shadow: 0 0.25rem 0.75rem -0.25rem rgba(0, 0, 0, 0.75);
           box-shadow: 0 0.25rem 0.75rem -0.25rem rgba(0, 0, 0, 0.75);
   -webkit-transition: all 0.2s ease-in;
@@ -3892,7 +3902,7 @@ a.box:hover, a.box:active, a.box:focus {
   z-index: 10;
 }
 
-.make-hoverable:hover {
+.make-lowerable:hover {
   -webkit-box-shadow: 0 0 0 0 transparent;
           box-shadow: 0 0 0 0 transparent;
   -webkit-transition: all 0.2s ease-in;
@@ -3900,7 +3910,7 @@ a.box:hover, a.box:active, a.box:focus {
   transition: all 0.2s ease-in;
 }
 
-.make-hoverable-high {
+.make-lowerable-high {
   -webkit-box-shadow: 0 0.5rem 1.5rem -0.5rem rgba(0, 0, 0, 0.75);
           box-shadow: 0 0.5rem 1.5rem -0.5rem rgba(0, 0, 0, 0.75);
   -webkit-transition: all 0.2s ease-in;
@@ -3909,7 +3919,7 @@ a.box:hover, a.box:active, a.box:focus {
   z-index: 15;
 }
 
-.make-hoverable-high:hover {
+.make-lowerable-high:hover {
   -webkit-box-shadow: 0 0 0 0 transparent;
           box-shadow: 0 0 0 0 transparent;
   -webkit-transition: all 0.2s ease-in;
@@ -3917,7 +3927,7 @@ a.box:hover, a.box:active, a.box:focus {
   transition: all 0.2s ease-in;
 }
 
-.make-hoverable-higher {
+.make-lowerable-higher {
   -webkit-box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.75);
           box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.75);
   -webkit-transition: all 0.2s ease-in;
@@ -3926,7 +3936,7 @@ a.box:hover, a.box:active, a.box:focus {
   z-index: 20;
 }
 
-.make-hoverable-higher:hover {
+.make-lowerable-higher:hover {
   -webkit-box-shadow: 0 0 0 0 transparent;
           box-shadow: 0 0 0 0 transparent;
   -webkit-transition: all 0.2s ease-in;
@@ -3934,7 +3944,7 @@ a.box:hover, a.box:active, a.box:focus {
   transition: all 0.2s ease-in;
 }
 
-.make-hoverable-highest {
+.make-lowerable-highest {
   -webkit-box-shadow: 0 1.5rem 4.5rem -1.5rem rgba(0, 0, 0, 0.75);
           box-shadow: 0 1.5rem 4.5rem -1.5rem rgba(0, 0, 0, 0.75);
   -webkit-transition: all 0.2s ease-in;
@@ -3943,7 +3953,7 @@ a.box:hover, a.box:active, a.box:focus {
   z-index: 25;
 }
 
-.make-hoverable-highest:hover {
+.make-lowerable-highest:hover {
   -webkit-box-shadow: 0 0 0 0 transparent;
           box-shadow: 0 0 0 0 transparent;
   -webkit-transition: all 0.2s ease-in;
