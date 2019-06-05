@@ -1,5 +1,5 @@
 /* ===================================================
-/* GRID
+/* FLEXBOX GRID
 /* ===================================================
 
 // ====================================
@@ -30,18 +30,16 @@
       right: $grid-gap / 2
     // Modifiers | Media Queries
     @media screen and (min-width: $bp-none) // Mobile (portrait)
-      +create-columns('xsmall')
+      +create-columns('smaller')
     @media screen and (min-width: $bp-small) // Mobile (landscape)
       +create-columns('small')
     @media screen and (min-width: $bp-medium) // Tablet
-      // Grid of 12
       +create-columns
       +create-columns('medium')
-      // +create-columns-fifths('medium')
     @media screen and (min-width: $bp-large) // Desktop
       +create-columns('large')
     @media screen and (min-width: $bp-widescreen) // Widescreen
-      +create-columns('xlarge')
+      +create-columns('larger')
     
     //-- FRACTIONAL (Regular)
     &.make-twelfth
@@ -85,47 +83,47 @@
     &.make-offset-full
       @extend .make-offset-12
     
-    // FRACTIONAL (Mobile-xsmall)
-    &.make-twelfth-xsmall
-      @extend .make-1-xsmall
-    &.make-sixth-xsmall
-      @extend .make-2-xsmall
-    &.make-fourth-xsmall
-      @extend .make-3-xsmall
-    &.make-third-xsmall
-      @extend .make-4-xsmall
-    &.make-half-xsmall
-      @extend .make-6-xsmall
-    &.make-thirds-xsmall
-      @extend .make-8-xsmall
-    &.make-fourths-xsmall
-      @extend .make-9-xsmall
-    &.make-sixths-xsmall
-      @extend .make-10-xsmall
-    &.make-twelfths-xsmall
-      @extend .make-11-xsmall
-    &.make-full-xsmall
-      @extend .make-12-xsmall 
-    &.make-offset-twelfth-xsmall
-      @extend .make-offset-1-xsmall
-    &.make-offset-sixth-xsmall
-      @extend .make-offset-2-xsmall
-    &.make-offset-fourth-xsmall
-      @extend .make-offset-3-xsmall
-    &.make-offset-third-xsmall
-      @extend .make-offset-4-xsmall
-    &.make-offset-half-xsmall
-      @extend .make-offset-6-xsmall
-    &.make-offset-thirds-xsmall
-      @extend .make-offset-8-xsmall
-    &.make-offset-fourths-xsmall
-      @extend .make-offset-9-xsmall
-    &.make-offset-sixths-xsmall
-      @extend .make-offset-10-xsmall
-    &.make-offset-twelfths-xsmall
-      @extend .make-offset-11-xsmall
-    &.make-offset-full-xsmall
-      @extend .make-offset-12-xsmall
+    // FRACTIONAL (Mobile-smaller)
+    &.make-twelfth-smaller
+      @extend .make-1-smaller
+    &.make-sixth-smaller
+      @extend .make-2-smaller
+    &.make-fourth-smaller
+      @extend .make-3-smaller
+    &.make-third-smaller
+      @extend .make-4-smaller
+    &.make-half-smaller
+      @extend .make-6-smaller
+    &.make-thirds-smaller
+      @extend .make-8-smaller
+    &.make-fourths-smaller
+      @extend .make-9-smaller
+    &.make-sixths-smaller
+      @extend .make-10-smaller
+    &.make-twelfths-smaller
+      @extend .make-11-smaller
+    &.make-full-smaller
+      @extend .make-12-smaller 
+    &.make-offset-twelfth-smaller
+      @extend .make-offset-1-smaller
+    &.make-offset-sixth-smaller
+      @extend .make-offset-2-smaller
+    &.make-offset-fourth-smaller
+      @extend .make-offset-3-smaller
+    &.make-offset-third-smaller
+      @extend .make-offset-4-smaller
+    &.make-offset-half-smaller
+      @extend .make-offset-6-smaller
+    &.make-offset-thirds-smaller
+      @extend .make-offset-8-smaller
+    &.make-offset-fourths-smaller
+      @extend .make-offset-9-smaller
+    &.make-offset-sixths-smaller
+      @extend .make-offset-10-smaller
+    &.make-offset-twelfths-smaller
+      @extend .make-offset-11-smaller
+    &.make-offset-full-smaller
+      @extend .make-offset-12-smaller
     
     // FRACTIONAL (Mobile-small)
     &.make-twelfth-small
@@ -253,49 +251,49 @@
     &.make-offset-full-large
       @extend .make-offset-12-large
 
-    // FRACTIONAL (Widescreen-xlarge)
-    &.make-twelfth-xlarge
-      @extend .make-1-xlarge
-    &.make-sixth-xlarge
-      @extend .make-2-xlarge
-    &.make-fourth-xlarge
-      @extend .make-3-xlarge
-    &.make-third-xlarge
-      @extend .make-4-xlarge
-    &.make-half-xlarge
-      @extend .make-6-xlarge
-    &.make-thirds-xlarge
-      @extend .make-8-xlarge
-    &.make-fourths-xlarge
-      @extend .make-9-xlarge
-    &.make-sixths-xlarge
-      @extend .make-10-xlarge
-    &.make-twelfths-xlarge
-      @extend .make-11-xlarge
-    &.make-full-xlarge
-      @extend .make-12-xlarge
-    &.make-offset-twelfth-xlarge
-      @extend .make-offset-1-xlarge
-    &.make-offset-sixth-xlarge
-      @extend .make-offset-2-xlarge
-    &.make-offset-fourth-xlarge
-      @extend .make-offset-3-xlarge
-    &.make-offset-third-xlarge
-      @extend .make-offset-4-xlarge
-    &.make-offset-half-xlarge
-      @extend .make-offset-6-xlarge
-    &.make-offset-thirds-xlarge
-      @extend .make-offset-8-xlarge
-    &.make-offset-fourths-xlarge
-      @extend .make-offset-9-xlarge
-    &.make-offset-sixths-xlarge
-      @extend .make-offset-10-xlarge
-    &.make-offset-twelfths-xlarge
-      @extend .make-offset-11-xlarge
-    &.make-offset-full-xlarge
-      @extend .make-offset-12-xlarge
+    // FRACTIONAL (Widescreen-larger)
+    &.make-twelfth-larger
+      @extend .make-1-larger
+    &.make-sixth-larger
+      @extend .make-2-larger
+    &.make-fourth-larger
+      @extend .make-3-larger
+    &.make-third-larger
+      @extend .make-4-larger
+    &.make-half-larger
+      @extend .make-6-larger
+    &.make-thirds-larger
+      @extend .make-8-larger
+    &.make-fourths-larger
+      @extend .make-9-larger
+    &.make-sixths-larger
+      @extend .make-10-larger
+    &.make-twelfths-larger
+      @extend .make-11-larger
+    &.make-full-larger
+      @extend .make-12-larger
+    &.make-offset-twelfth-larger
+      @extend .make-offset-1-larger
+    &.make-offset-sixth-larger
+      @extend .make-offset-2-larger
+    &.make-offset-fourth-larger
+      @extend .make-offset-3-larger
+    &.make-offset-third-larger
+      @extend .make-offset-4-larger
+    &.make-offset-half-larger
+      @extend .make-offset-6-larger
+    &.make-offset-thirds-larger
+      @extend .make-offset-8-larger
+    &.make-offset-fourths-larger
+      @extend .make-offset-9-larger
+    &.make-offset-sixths-larger
+      @extend .make-offset-10-larger
+    &.make-offset-twelfths-larger
+      @extend .make-offset-11-larger
+    &.make-offset-full-larger
+      @extend .make-offset-12-larger
   // Modifiers
-  &.make-no-gaps
+  &.make-gapless
     margin:
       bottom: 0
       left: 0

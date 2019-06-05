@@ -1,6 +1,7 @@
 // =======================================
 // GRID
 // =======================================
+//--- FLEXBOX GRID ---//
 =create-columns($name: '')
   @if $name == ''
     @for $i from 1 through $grid-columns
@@ -16,3 +17,21 @@
         width: percentage($i / $grid-columns)
       &.make-offset-#{$i}-#{$name}
         margin-left: percentage($i / $grid-columns)
+
+//--- CSS-GRID ---///
+=create-css-grid($name: '')
+  @if $name == ''
+    @for $i from 1 through $grid-columns
+      &.make-span-#{$i}
+        grid-column: span $i
+  @else
+    @for $i from 1 through $grid-columns
+      &.make-span-#{$i}-#{$name}
+        grid-column: span $i
+
+//--- CSS-GRID GAP ---//
+=create-grid-gap($grid-gap-max: $grid-gap-max)
+  @if $grid-gap-max > 0
+    @for $i from 1 through $grid-gap-max
+      &.make-gap-#{$i}
+        grid-gap: $grid-gap * $i

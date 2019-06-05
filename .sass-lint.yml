@@ -93,6 +93,9 @@ rules:
         - justify-content
         - align-items
         - order
+        - grid
+        - grid-column
+        - grid-row
         - min-width
         - width
         - max-width

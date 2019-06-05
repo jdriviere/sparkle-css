@@ -1,0 +1,73 @@
+/* ===================================================
+/* CSS-GRID
+/* ===================================================
+
+// ====================================
+// MIXINS
+// ====================================
+=create-grid
+  // @NOTE: This feature will only work if the CSS-Grid is supported.
+  //        It is therefore suggested to use the Flexbox Grid system
+  //        If you are either unsure or want to be safe, as this feature
+  //        is under intensive testing (beta testing).
+  // @NOTE: Offsets are yet to be implemented into the CSS-Grid feature.
+  @supports (display: grid)
+    display: grid
+    grid:
+      auto-flow: row
+      gap: $grid-gap
+      template-columns: repeat($grid-columns, minmax(0, 1fr))
+    margin:
+      top: $grid-gap
+      bottom: $grid-gap
+    // @NOTE:
+    // -1-: Allows column to span through the entire row by default
+    // -2-: Ensures that the grid item auto-spans according to its child's length
+    // -3-: Ensures that the grid item spans through the entire width of its parent
+    // Elements
+    .grid-item
+      grid-column: span $grid-columns // -1-
+      min-width: 0 // -2-
+      width: 100% // -3-
+      // Modifiers | Media Queries
+      @media screen and (min-width: $bp-none) // Mobile (portrait)
+        +create-css-grid('smaller')
+      @media screen and (min-width: $bp-small) // Mobile (landscape)
+        +create-css-grid('small')
+      @media screen and (min-width: $bp-medium) // Tablet
+        +create-css-grid
+        +create-css-grid('medium')
+      @media screen and (min-width: $bp-large) // Desktop
+        +create-css-grid('large')
+      @media screen and (min-width: $bp-widescreen) // Widescreen
+        +create-css-grid('larger')
+      
+      //--- FRACTIONALS (Regular) ---//
+      &.make-twelfth
+        @extend .make-1
+      &.make-sixth
+        @extend .make-2
+      &.make-fourth
+        @extend .make-3
+      &.make-third
+        @extend .make-4
+      &.make-half
+        @extend .make-6
+      &.make-thirds
+        @extend .make-8
+      &.make-fourths
+        @extend .make-9
+      &.make-sixths
+        @extend .make-10
+      &.make-twelfths
+        @extend .make-11
+      &.make-full
+        @extend .make-12
+    // Modifiers
+    &.make-gapless
+      grid-gap: 0
+    +create-grid-gap($grid-gap-max)      
+
+//--- CSS-GRID ---//
+.grid
+  +create-grid
