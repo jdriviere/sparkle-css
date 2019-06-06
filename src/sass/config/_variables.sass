@@ -1,7 +1,6 @@
 // =================================
 // GLOBAL VARIABLES
 // =================================
-$background-color: #FFFFFF !default
 $border-radius: 0.3rem !default
 $darken: 7.5% !default
 $lighten: 7.5% !default
@@ -43,12 +42,12 @@ $color-pure-white: #FFFFFF !default
 // COLOR - THEMES (RGB)
 // =================================
 // $color-default: rgb(226, 226, 226) !default
-// $color-primary: rgb(173, 210, 230) !default
+// $color-primary: rgb(187, 221, 255) !default
 // $color-info: rgb(25, 130, 196) !default
-// $color-success: rgb(106, 187, 79) !default
-// $color-warning: rgb(254, 197, 36) !default
-// $color-danger: rgb(255, 51, 68) !default
-// $color-light: rgb(244, 244, 248) !default
+// $color-success: rgb(102, 187, 68) !default
+// $color-warning: rgb(255, 204, 37) !default
+// $color-danger: rgb(238, 34, 51) !default
+// $color-light: rgb(252, 252, 252) !default
 // $color-dark: rgb(34, 37, 40) !default
 
 // =================================
@@ -65,12 +64,12 @@ $color-pure-white: #FFFFFF !default
 // COLOR - THEMES (HSL)
 // =================================
 // $color-default: hsl(0, 0%, 89%) !default
-// $color-primary: hsl(201, 53%, 79%) !default
+// $color-primary: hsl(210, 100%, 87%) !default
 // $color-info: hsl(203, 77%, 43%) !default
-// $color-success: hsl(105, 44%, 52%) !default
-// $color-warning: hsl(44, 99%, 57%) !default
-// $color-danger: hsl(355, 100%, 60%) !default
-// $color-light: hsl(240, 22%, 96%) !default
+// $color-success: hsl(103, 47%, 50%) !default
+// $color-warning: hsl(46, 100%, 57%) !default
+// $color-danger: hsl(355, 86%, 53%) !default
+// $color-light: hsl(0, 0%, 99%) !default
 // $color-dark: hsl(210, 8%, 15%) !default
 
 // =================================
@@ -91,7 +90,7 @@ $color-none: transparent !default
 // =================================
 // COLOR - THEME MAP
 // =================================
-$color-map: (default: $color-default, primary: $color-primary, info: $color-info, success: $color-success, warning: $color-warning, danger: $color-danger, light: $color-light, dark: $color-dark) !default
+$color-map: (primary: $color-primary, info: $color-info, success: $color-success, warning: $color-warning, danger: $color-danger, light: $color-light, dark: $color-dark) !default
 
 // =================================
 // BREAKPOINTS
@@ -131,7 +130,7 @@ $text-font-code-padding: 0.5rem !default
 
 $text-font-opacity-muted: $opacity-muted !default
 
-$text-color-map: (primary: $color-primary, info: $color-info, success: $color-success, warning: $color-warning, danger: $color-danger, light: $color-light, dark: $color-dark) !default
+$text-color-map: $color-map
 $text-alignment-map: (left: left, right: right, centered: center, justified: justify) !default
 $text-weight-map: (thin: $font-weight-light, normal: $font-weight-normal, bold: $font-weight-bold, thick: $font-weight-thick) !default
 
@@ -143,12 +142,12 @@ $alert-font-weight: $font-weight-normal !default
 $alert-padding: 1.0rem !default
 $alert-border-radius: $border-radius !default
 
-$alert-color-map: (primary: $color-primary, info: $color-info, success: $color-success, warning: $color-warning, danger: $color-danger, light: $color-light, dark: $color-dark) !default
+$alert-color-map: $color-map
 
 // ====================================
 // BACKGROUNDS
 // ====================================
-$background-color-map: (primary: $color-primary, info: $color-info, success: $color-success, warning: $color-warning, danger: $color-danger, light: $color-light, dark: $color-dark) !default
+$background-color-map: $color-map
 
 // ====================================
 // BLOCKQUOTES
@@ -172,7 +171,7 @@ $box-transition: all 0.2s ease-in !default
 // =================================
 $button-padding: 0.5rem 1.5rem !default
 
-$button-color-map: (primary: $color-primary, info: $color-info, success: $color-success, warning: $color-warning, danger: $color-danger, light: $color-light, dark: $color-dark) !default
+$button-color-map: $color-map
 
 // =================================
 // BUTTON GROUPS
@@ -251,7 +250,7 @@ $loader-border-size: $loader-size / 4 !default
 $loader-border-opacity: 0.3 !default
 $loader-animation: spin 1s ease-in-out infinite !default
 
-$loader-color-map: (primary: $color-primary, info: $color-info, success: $color-success, warning: $color-warning, danger: $color-danger, light: $color-light, dark: $color-dark) !default
+$loader-color-map: $color-map
 
 // ====================================
 // MEDIA
@@ -279,7 +278,7 @@ $progress-padding: 0 !default
 $progress-bar-color: $color-default !default
 $progress-value-color: darken($color-default, $darken * 2) !default
 
-$progress-color-map: (primary: $color-primary, info: $color-info, success: $color-success, warning: $color-warning, danger: $color-danger, light: $color-light, dark: $color-dark) !default
+$progress-color-map: $color-map
 
 // ====================================
 // NAVIGATION
@@ -356,7 +355,7 @@ $tag-padding: 0.5rem 1rem !default
 $tag-font-size: 1.2rem !default
 $tag-font-weight: $font-weight-normal !default
 
-$tag-color-map: (primary: $color-primary, info: $color-info, success: $color-success, warning: $color-warning, danger: $color-danger, light: $color-light, dark: $color-dark) !default
+$tag-color-map: $color-map
 
 // =================================
 // TAG GROUPS
