@@ -1355,40 +1355,40 @@ code {
     }
   }
   @media screen and (min-width: 640px) {
-    .grid .grid-item.make-span-1 {
+    .grid .grid-item.make-span-1, .grid .grid-item.make-span-twelfth {
       grid-column: span 1;
     }
-    .grid .grid-item.make-span-2 {
+    .grid .grid-item.make-span-2, .grid .grid-item.make-span-sixth {
       grid-column: span 2;
     }
-    .grid .grid-item.make-span-3 {
+    .grid .grid-item.make-span-3, .grid .grid-item.make-span-fourth {
       grid-column: span 3;
     }
-    .grid .grid-item.make-span-4 {
+    .grid .grid-item.make-span-4, .grid .grid-item.make-span-third {
       grid-column: span 4;
     }
     .grid .grid-item.make-span-5 {
       grid-column: span 5;
     }
-    .grid .grid-item.make-span-6 {
+    .grid .grid-item.make-span-6, .grid .grid-item.make-span-half {
       grid-column: span 6;
     }
     .grid .grid-item.make-span-7 {
       grid-column: span 7;
     }
-    .grid .grid-item.make-span-8 {
+    .grid .grid-item.make-span-8, .grid .grid-item.make-span-thirds {
       grid-column: span 8;
     }
-    .grid .grid-item.make-span-9 {
+    .grid .grid-item.make-span-9, .grid .grid-item.make-span-fourths {
       grid-column: span 9;
     }
-    .grid .grid-item.make-span-10 {
+    .grid .grid-item.make-span-10, .grid .grid-item.make-span-sixths {
       grid-column: span 10;
     }
-    .grid .grid-item.make-span-11 {
+    .grid .grid-item.make-span-11, .grid .grid-item.make-span-twelfths {
       grid-column: span 11;
     }
-    .grid .grid-item.make-span-12 {
+    .grid .grid-item.make-span-12, .grid .grid-item.make-span-full {
       grid-column: span 12;
     }
     .grid .grid-item.make-span-1-medium {
