@@ -17,11 +17,7 @@
   // sass-lint:disable border-zero
   .input,
   .select
-    display: flex
-    flex:
-      grow: 1
-      shrink: 0
-      basis: 0
+    flex: 1 0 0
     line-height: $line-height
     // Pseudo
     &:first-child:not(:last-child)
@@ -36,7 +32,6 @@
         bottom-left-radius: 0
   //--- BUTTONS ---
   .button
-    display: flex
     flex: 0
     z-index: $index-high
     // Pseudo

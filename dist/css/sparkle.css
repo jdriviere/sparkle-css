@@ -895,16 +895,9 @@ code {
 .input-addons .select,
 .input-addons .textarea,
 .input-addons .select {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  -ms-flex-preferred-size: 0;
-      flex-basis: 0;
+      -ms-flex: 1 0 0px;
+          flex: 1 0 0;
   line-height: 1.6;
 }
 
@@ -939,9 +932,6 @@ code {
 
 .input-addon .button,
 .input-addons .button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-flex: 0;
       -ms-flex: 0;
           flex: 0;
@@ -1505,22 +1495,7 @@ code {
     }
   }
   .grid.make-gapless {
-    grid-gap: 0;
-  }
-  .grid.make-gap-1 {
-    grid-gap: 1.5rem;
-  }
-  .grid.make-gap-2 {
-    grid-gap: 3rem;
-  }
-  .grid.make-gap-3 {
-    grid-gap: 4.5rem;
-  }
-  .grid.make-gap-4 {
-    grid-gap: 6rem;
-  }
-  .grid.make-gap-5 {
-    grid-gap: 7.5rem;
+    grid-column-gap: 0;
   }
 }
 
