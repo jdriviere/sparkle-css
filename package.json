@@ -23,7 +23,7 @@
   },
   "homepage": "https://sparklecss.herokuapp.com",
   "devDependencies": {
-    "autoprefixer": "^9.6.0",
+    "autoprefixer": "^9.6.1",
     "cssnano": "^4.1.10",
     "del": "^3.0.0",
     "gulp": "^4.0.2",
