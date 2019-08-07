@@ -18,8 +18,7 @@
   border: 1px solid darken($color-default, ($darken * 2))
   border-radius: $alert-border-radius
   // Pseudo
-  &:not(:last-child)
-    margin-bottom: $spacing
+  +create-block
   // Elements
   > a:not(.button)
     font-weight: $font-weight-bold

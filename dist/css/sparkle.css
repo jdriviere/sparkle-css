@@ -2873,6 +2873,10 @@ code {
   border-left: 0.5rem solid #E4E4E8;
 }
 
+.blockquote:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
 .blockquote-footer {
   margin-top: 1.5rem;
   font-size: 1.6rem;

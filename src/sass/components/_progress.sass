@@ -14,8 +14,7 @@
   border-radius: $border-radius
   overflow: hidden
   // Pseudo
-  &:not(:last-child)
-    margin-bottom: $spacing
+  +create-block
   &::-webkit-progress-bar
     background-color: $progress-bar-color
   &::-moz-progress-bar

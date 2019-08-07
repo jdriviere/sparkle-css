@@ -51,10 +51,10 @@ const options = [
     header: banner
   }),
   autoprefixer({
-    browsers: [
-      'last 3 versions',
-      "IE >= 10"
-    ]
+    // browsers: [
+    //   'last 3 versions',
+    //   "IE >= 10"
+    // ]
   })
 ];
 
