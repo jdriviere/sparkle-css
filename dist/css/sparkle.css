@@ -1270,78 +1270,78 @@ code {
     width: 100%;
   }
   @media screen and (min-width: 0) {
-    .grid .grid-item.make-span-1-smaller {
+    .grid .grid-item.make-span-1-smaller, .grid .grid-item.make-span-twelfth-smaller {
       grid-column: span 1;
     }
-    .grid .grid-item.make-span-2-smaller {
+    .grid .grid-item.make-span-2-smaller, .grid .grid-item.make-span-sixth-smaller {
       grid-column: span 2;
     }
-    .grid .grid-item.make-span-3-smaller {
+    .grid .grid-item.make-span-3-smaller, .grid .grid-item.make-span-fourth-smaller {
       grid-column: span 3;
     }
-    .grid .grid-item.make-span-4-smaller {
+    .grid .grid-item.make-span-4-smaller, .grid .grid-item.make-span-third-smaller {
       grid-column: span 4;
     }
     .grid .grid-item.make-span-5-smaller {
       grid-column: span 5;
     }
-    .grid .grid-item.make-span-6-smaller {
+    .grid .grid-item.make-span-6-smaller, .grid .grid-item.make-span-half-smaller {
       grid-column: span 6;
     }
     .grid .grid-item.make-span-7-smaller {
       grid-column: span 7;
     }
-    .grid .grid-item.make-span-8-smaller {
+    .grid .grid-item.make-span-8-smaller, .grid .grid-item.make-span-thirds-smaller {
       grid-column: span 8;
     }
-    .grid .grid-item.make-span-9-smaller {
+    .grid .grid-item.make-span-9-smaller, .grid .grid-item.make-span-fourths-smaller {
       grid-column: span 9;
     }
-    .grid .grid-item.make-span-10-smaller {
+    .grid .grid-item.make-span-10-smaller, .grid .grid-item.make-span-sixths-smaller {
       grid-column: span 10;
     }
-    .grid .grid-item.make-span-11-smaller {
+    .grid .grid-item.make-span-11-smaller, .grid .grid-item.make-span-twelfths-smaller {
       grid-column: span 11;
     }
-    .grid .grid-item.make-span-12-smaller {
+    .grid .grid-item.make-span-12-smaller, .grid .grid-item.make-span-full-smaller {
       grid-column: span 12;
     }
   }
   @media screen and (min-width: 480px) {
-    .grid .grid-item.make-span-1-small {
+    .grid .grid-item.make-span-1-small, .grid .grid-item.make-span-twelfth-small {
       grid-column: span 1;
     }
-    .grid .grid-item.make-span-2-small {
+    .grid .grid-item.make-span-2-small, .grid .grid-item.make-span-sixth-small {
       grid-column: span 2;
     }
-    .grid .grid-item.make-span-3-small {
+    .grid .grid-item.make-span-3-small, .grid .grid-item.make-span-fourth-small {
       grid-column: span 3;
     }
-    .grid .grid-item.make-span-4-small {
+    .grid .grid-item.make-span-4-small, .grid .grid-item.make-span-third-small {
       grid-column: span 4;
     }
     .grid .grid-item.make-span-5-small {
       grid-column: span 5;
     }
-    .grid .grid-item.make-span-6-small {
+    .grid .grid-item.make-span-6-small, .grid .grid-item.make-span-half-small {
       grid-column: span 6;
     }
     .grid .grid-item.make-span-7-small {
       grid-column: span 7;
     }
-    .grid .grid-item.make-span-8-small {
+    .grid .grid-item.make-span-8-small, .grid .grid-item.make-span-thirds-small {
       grid-column: span 8;
     }
-    .grid .grid-item.make-span-9-small {
+    .grid .grid-item.make-span-9-small, .grid .grid-item.make-span-fourths-small {
       grid-column: span 9;
     }
-    .grid .grid-item.make-span-10-small {
+    .grid .grid-item.make-span-10-small, .grid .grid-item.make-span-sixths-small {
       grid-column: span 10;
     }
-    .grid .grid-item.make-span-11-small {
+    .grid .grid-item.make-span-11-small, .grid .grid-item.make-span-twelfths-small {
       grid-column: span 11;
     }
-    .grid .grid-item.make-span-12-small {
+    .grid .grid-item.make-span-12-small, .grid .grid-item.make-span-full-small {
       grid-column: span 12;
     }
   }
@@ -1382,116 +1382,116 @@ code {
     .grid .grid-item.make-span-12, .grid .grid-item.make-span-full {
       grid-column: span 12;
     }
-    .grid .grid-item.make-span-1-medium {
+    .grid .grid-item.make-span-1-medium, .grid .grid-item.make-span-twelfth-medium {
       grid-column: span 1;
     }
-    .grid .grid-item.make-span-2-medium {
+    .grid .grid-item.make-span-2-medium, .grid .grid-item.make-span-sixth-medium {
       grid-column: span 2;
     }
-    .grid .grid-item.make-span-3-medium {
+    .grid .grid-item.make-span-3-medium, .grid .grid-item.make-span-fourth-medium {
       grid-column: span 3;
     }
-    .grid .grid-item.make-span-4-medium {
+    .grid .grid-item.make-span-4-medium, .grid .grid-item.make-span-third-medium {
       grid-column: span 4;
     }
     .grid .grid-item.make-span-5-medium {
       grid-column: span 5;
     }
-    .grid .grid-item.make-span-6-medium {
+    .grid .grid-item.make-span-6-medium, .grid .grid-item.make-span-half-medium {
       grid-column: span 6;
     }
     .grid .grid-item.make-span-7-medium {
       grid-column: span 7;
     }
-    .grid .grid-item.make-span-8-medium {
+    .grid .grid-item.make-span-8-medium, .grid .grid-item.make-span-thirds-medium {
       grid-column: span 8;
     }
-    .grid .grid-item.make-span-9-medium {
+    .grid .grid-item.make-span-9-medium, .grid .grid-item.make-span-fourths-medium {
       grid-column: span 9;
     }
-    .grid .grid-item.make-span-10-medium {
+    .grid .grid-item.make-span-10-medium, .grid .grid-item.make-span-sixths-medium {
       grid-column: span 10;
     }
-    .grid .grid-item.make-span-11-medium {
+    .grid .grid-item.make-span-11-medium, .grid .grid-item.make-span-twelfths-medium {
       grid-column: span 11;
     }
-    .grid .grid-item.make-span-12-medium {
+    .grid .grid-item.make-span-12-medium, .grid .grid-item.make-span-full-medium {
       grid-column: span 12;
     }
   }
   @media screen and (min-width: 768px) {
-    .grid .grid-item.make-span-1-large {
+    .grid .grid-item.make-span-1-large, .grid .grid-item.make-span-twelfth-large {
       grid-column: span 1;
     }
-    .grid .grid-item.make-span-2-large {
+    .grid .grid-item.make-span-2-large, .grid .grid-item.make-span-sixth-large {
       grid-column: span 2;
     }
-    .grid .grid-item.make-span-3-large {
+    .grid .grid-item.make-span-3-large, .grid .grid-item.make-span-fourth-large {
       grid-column: span 3;
     }
-    .grid .grid-item.make-span-4-large {
+    .grid .grid-item.make-span-4-large, .grid .grid-item.make-span-third-large {
       grid-column: span 4;
     }
     .grid .grid-item.make-span-5-large {
       grid-column: span 5;
     }
-    .grid .grid-item.make-span-6-large {
+    .grid .grid-item.make-span-6-large, .grid .grid-item.make-span-half-large {
       grid-column: span 6;
     }
     .grid .grid-item.make-span-7-large {
       grid-column: span 7;
     }
-    .grid .grid-item.make-span-8-large {
+    .grid .grid-item.make-span-8-large, .grid .grid-item.make-span-thirds-large {
       grid-column: span 8;
     }
-    .grid .grid-item.make-span-9-large {
+    .grid .grid-item.make-span-9-large, .grid .grid-item.make-span-fourths-large {
       grid-column: span 9;
     }
-    .grid .grid-item.make-span-10-large {
+    .grid .grid-item.make-span-10-large, .grid .grid-item.make-span-sixths-large {
       grid-column: span 10;
     }
-    .grid .grid-item.make-span-11-large {
+    .grid .grid-item.make-span-11-large, .grid .grid-item.make-span-twelfths-large {
       grid-column: span 11;
     }
-    .grid .grid-item.make-span-12-large {
+    .grid .grid-item.make-span-12-large, .grid .grid-item.make-span-full-large {
       grid-column: span 12;
     }
   }
   @media screen and (min-width: 1200px) {
-    .grid .grid-item.make-span-1-larger {
+    .grid .grid-item.make-span-1-larger, .grid .grid-item.make-span-twelfth-larger {
       grid-column: span 1;
     }
-    .grid .grid-item.make-span-2-larger {
+    .grid .grid-item.make-span-2-larger, .grid .grid-item.make-span-sixth-larger {
       grid-column: span 2;
     }
-    .grid .grid-item.make-span-3-larger {
+    .grid .grid-item.make-span-3-larger, .grid .grid-item.make-span-fourth-larger {
       grid-column: span 3;
     }
-    .grid .grid-item.make-span-4-larger {
+    .grid .grid-item.make-span-4-larger, .grid .grid-item.make-span-third-larger {
       grid-column: span 4;
     }
     .grid .grid-item.make-span-5-larger {
       grid-column: span 5;
     }
-    .grid .grid-item.make-span-6-larger {
+    .grid .grid-item.make-span-6-larger, .grid .grid-item.make-span-half-larger {
       grid-column: span 6;
     }
     .grid .grid-item.make-span-7-larger {
       grid-column: span 7;
     }
-    .grid .grid-item.make-span-8-larger {
+    .grid .grid-item.make-span-8-larger, .grid .grid-item.make-span-thirds-larger {
       grid-column: span 8;
     }
-    .grid .grid-item.make-span-9-larger {
+    .grid .grid-item.make-span-9-larger, .grid .grid-item.make-span-fourths-larger {
       grid-column: span 9;
     }
-    .grid .grid-item.make-span-10-larger {
+    .grid .grid-item.make-span-10-larger, .grid .grid-item.make-span-sixths-larger {
       grid-column: span 10;
     }
-    .grid .grid-item.make-span-11-larger {
+    .grid .grid-item.make-span-11-larger, .grid .grid-item.make-span-twelfths-larger {
       grid-column: span 11;
     }
-    .grid .grid-item.make-span-12-larger {
+    .grid .grid-item.make-span-12-larger, .grid .grid-item.make-span-full-larger {
       grid-column: span 12;
     }
   }
