@@ -3447,7 +3447,7 @@ a.box:hover, a.box:active, a.box:focus {
   border-radius: 0.6rem;
 }
 
-.button.make-round {
+.button.make-rounded {
   border-radius: 3.5rem;
 }
 
