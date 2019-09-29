@@ -689,7 +689,7 @@ code {
 }
 
 .input.make-rounded, .make-rounded.select, .make-rounded.textarea {
-  border-radius: 5.0rem;
+  border-radius: 9999px;
 }
 
 .input.make-smaller, .make-smaller.select, .make-smaller.textarea {
@@ -720,7 +720,7 @@ code {
 }
 
 .input.make-rounded, .make-rounded.select, .make-rounded.textarea {
-  border-radius: 5.0rem;
+  border-radius: 9999px;
 }
 
 .input.make-smaller, .make-smaller.select, .make-smaller.textarea {
@@ -751,7 +751,7 @@ code {
 }
 
 .input.make-rounded, .make-rounded.select, .make-rounded.textarea {
-  border-radius: 5.0rem;
+  border-radius: 9999px;
 }
 
 .input.make-smaller, .make-smaller.select, .make-smaller.textarea {
@@ -782,7 +782,7 @@ code {
 }
 
 .input.make-rounded, .make-rounded.select, .make-rounded.textarea {
-  border-radius: 5.0rem;
+  border-radius: 9999px;
 }
 
 .input.make-smaller, .make-smaller.select, .make-smaller.textarea {
@@ -813,7 +813,7 @@ code {
 }
 
 .input.make-rounded, .make-rounded.select, .make-rounded.textarea {
-  border-radius: 5.0rem;
+  border-radius: 9999px;
 }
 
 .input.make-smaller, .make-smaller.select, .make-smaller.textarea {
@@ -3448,7 +3448,7 @@ a.box:hover, a.box:active, a.box:focus {
 }
 
 .button.make-rounded {
-  border-radius: 3.5rem;
+  border-radius: 9999px;
 }
 
 /* =================================================== */
@@ -3927,7 +3927,7 @@ a.box:hover, a.box:active, a.box:focus {
 }
 
 .tag.make-bullet {
-  border-radius: 2.0rem;
+  border-radius: 9999px;
 }
 
 /* =================================================== */
