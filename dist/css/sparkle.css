@@ -12,7 +12,6 @@
   * when creating a website.
   * Thank you for using Sparkle! Happy Designing!
   */
-@charset "UTF-8";
 /* ========== EXTERNAL IMPORTS (START) ========== */
 /* normalize.sass v8.0.0 | MIT License | ORIGINAL: github.com/necolas/normalize.css */
 html {
@@ -1145,16 +1144,19 @@ code {
       flex-shrink: 0;
   -ms-flex-preferred-size: auto;
       flex-basis: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0;
 }
 
 .breadcrumb-item:not(:last-child)::after {
-  content: '►';
+  content: '\203A';
   padding: 0 1.0rem;
   color: #404040;
 }
 
-.breadcrumb-item.make-active {
+.breadcrumb-item.make-active:not(a) {
   font-weight: 700;
 }
 

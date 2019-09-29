@@ -18,15 +18,18 @@
       grow: 0
       shrink: 0
       basis: auto
+    align-items: center
     margin: 0
     // Pseudo
     &:not(:last-child)::after
       // content: '|'
-      content: '►'
+      // content: '►'
+      // content: '→'
+      content: '\203A'
       padding: 0 1.0rem
       color: $font-color
     // Modifiers
-    &.make-active
+    &.make-active:not(a)
       font-weight: $font-weight-bold
   // Modifiers
   &.make-centered
