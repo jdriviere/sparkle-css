@@ -1156,7 +1156,7 @@ code {
   color: #404040;
 }
 
-.breadcrumb-item.make-active:not(a) {
+.breadcrumb-item.make-active {
   font-weight: 700;
 }
 
