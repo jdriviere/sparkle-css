@@ -2613,6 +2613,163 @@ code {
 }
 
 /* =================================================== */
+/* NAVIGATION */
+/* =================================================== */
+.newnav {
+  padding: 0.5rem 1.5rem;
+  color: #222528;
+  background: #f9f9fa;
+}
+
+.newnav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+@media screen and (min-width: 640px) {
+  .newnav-list {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+.newnav-list .newnav-logo {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+}
+
+@media screen and (min-width: 640px) {
+  .newnav-list .newnav-logo {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .newnav-list .newnav-logo {
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+  }
+}
+
+.newnav-list .newnav-logo a.newnav-logo-link {
+  font-size: 2.0rem;
+  font-weight: bold;
+  color: inherit;
+}
+
+.newnav-list .newnav-list-item {
+  display: none;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  width: 100%;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.newnav-list .newnav-list-item:hover {
+  background: #e4e4e8;
+}
+
+@media screen and (min-width: 768px) {
+  .newnav-list .newnav-list-item {
+    display: block;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: auto;
+    padding-left: 1.0rem;
+    padding-right: 1.0rem;
+  }
+  .newnav-list .newnav-list-item.make-right {
+    margin-left: auto;
+  }
+}
+
+.newnav-list .newnav-list-item a.newnav-link {
+  display: block;
+  color: #222528;
+}
+
+.newnav-list .newnav-list-item a.newnav-link:hover {
+  color: #101213;
+}
+
+.newnav-list .newnav-list-item.make-active {
+  display: block;
+}
+
+.newnav-list .newnav-toggle {
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 960px) {
+  .newnav-list .newnav-toggle {
+    display: none;
+  }
+}
+
+.newnav-list .newnav-toggle .newnav-icon {
+  position: relative;
+  display: inline-block;
+  width: 1.8rem;
+  height: 0.2rem;
+  background-color: #222528;
+}
+
+.newnav-list .newnav-toggle .newnav-icon::before, .newnav-list .newnav-toggle .newnav-icon::after {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 1.8rem;
+  height: 0.2rem;
+  background-color: #222528;
+}
+
+.newnav-list .newnav-toggle .newnav-icon::before {
+  top: 0.5rem;
+}
+
+.newnav-list .newnav-toggle .newnav-icon::after {
+  top: -0.5rem;
+}
+
+.newnav.make-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+/* =================================================== */
 /* TABLES */
 /* =================================================== */
 .table {
