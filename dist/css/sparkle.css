@@ -2688,11 +2688,7 @@ code {
   text-align: center;
 }
 
-.newnav-list .newnav-list-item:hover {
-  background: #e4e4e8;
-}
-
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 960px) {
   .newnav-list .newnav-list-item {
     display: block;
     -webkit-box-ordinal-group: 2;
@@ -2721,11 +2717,11 @@ code {
 }
 
 .newnav-list .newnav-toggle {
-  -ms-flex-item-align: baseline;
-      align-self: baseline;
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
   cursor: pointer;
 }
 
@@ -2766,7 +2762,7 @@ code {
   left: 0;
   right: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 50;
 }
 
 /* =================================================== */
@@ -3155,10 +3151,15 @@ a.box:hover, a.box:active, a.box:focus {
   white-space: nowrap;
 }
 
-.button:not(:disabled):hover, .button:not(:disabled):focus {
+.button:not(:disabled):active, .button:not(:disabled):hover, .button:not(:disabled):focus {
   text-decoration: none;
   background: #cfcfd6;
   border-color: #cfcfd6;
+}
+
+.button:not(:disabled):focus, .button:not(:disabled):active {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(187, 221, 255, 0.5) !important;
+          box-shadow: 0 0 0 0.2rem rgba(187, 221, 255, 0.5) !important;
 }
 
 .button:disabled, .button.make-disabled, .button[disabled] {
@@ -3180,6 +3181,11 @@ a.box:hover, a.box:active, a.box:focus {
 .button.make-primary:not(:disabled):hover, .button.make-primary:not(:disabled):focus, .button.make-primary:not(:disabled):active {
   background: #95caff;
   border-color: #95caff;
+}
+
+.button.make-primary:not(:disabled):focus, .button.make-primary:not(:disabled):active {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(187, 221, 255, 0.5) !important;
+          box-shadow: 0 0 0 0.2rem rgba(187, 221, 255, 0.5) !important;
 }
 
 .button.make-primary.make-reversed {
@@ -3240,6 +3246,11 @@ a.box:hover, a.box:active, a.box:focus {
   border-color: #156ca2;
 }
 
+.button.make-info:not(:disabled):focus, .button.make-info:not(:disabled):active {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(25, 130, 196, 0.5) !important;
+          box-shadow: 0 0 0 0.2rem rgba(25, 130, 196, 0.5) !important;
+}
+
 .button.make-info.make-reversed {
   color: #1982C4 !important;
   background: #FCFCFC;
@@ -3296,6 +3307,11 @@ a.box:hover, a.box:active, a.box:focus {
 .button.make-success:not(:disabled):hover, .button.make-success:not(:disabled):focus, .button.make-success:not(:disabled):active {
   background: #579f3a;
   border-color: #579f3a;
+}
+
+.button.make-success:not(:disabled):focus, .button.make-success:not(:disabled):active {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(102, 187, 68, 0.5) !important;
+          box-shadow: 0 0 0 0.2rem rgba(102, 187, 68, 0.5) !important;
 }
 
 .button.make-success.make-reversed {
@@ -3356,6 +3372,11 @@ a.box:hover, a.box:active, a.box:focus {
   border-color: #fec200;
 }
 
+.button.make-warning:not(:disabled):focus, .button.make-warning:not(:disabled):active {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(255, 204, 37, 0.5) !important;
+          box-shadow: 0 0 0 0.2rem rgba(255, 204, 37, 0.5) !important;
+}
+
 .button.make-warning.make-reversed {
   color: #FFCC25 !important;
   background: #222528;
@@ -3412,6 +3433,11 @@ a.box:hover, a.box:active, a.box:focus {
 .button.make-danger:not(:disabled):hover, .button.make-danger:not(:disabled):focus, .button.make-danger:not(:disabled):active {
   background: #d91121;
   border-color: #d91121;
+}
+
+.button.make-danger:not(:disabled):focus, .button.make-danger:not(:disabled):active {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(238, 34, 51, 0.5) !important;
+          box-shadow: 0 0 0 0.2rem rgba(238, 34, 51, 0.5) !important;
 }
 
 .button.make-danger.make-reversed {
@@ -3472,6 +3498,11 @@ a.box:hover, a.box:active, a.box:focus {
   border-color: #e9e9e9;
 }
 
+.button.make-light:not(:disabled):focus, .button.make-light:not(:disabled):active {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(252, 252, 252, 0.5) !important;
+          box-shadow: 0 0 0 0.2rem rgba(252, 252, 252, 0.5) !important;
+}
+
 .button.make-light.make-reversed {
   color: #FCFCFC !important;
   background: #222528;
@@ -3528,6 +3559,11 @@ a.box:hover, a.box:active, a.box:focus {
 .button.make-dark:not(:disabled):hover, .button.make-dark:not(:disabled):focus, .button.make-dark:not(:disabled):active {
   background: #101213;
   border-color: #101213;
+}
+
+.button.make-dark:not(:disabled):focus, .button.make-dark:not(:disabled):active {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(34, 37, 40, 0.5) !important;
+          box-shadow: 0 0 0 0.2rem rgba(34, 37, 40, 0.5) !important;
 }
 
 .button.make-dark.make-reversed {

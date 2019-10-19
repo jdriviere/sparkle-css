@@ -30,11 +30,15 @@
   cursor: pointer
   white-space: nowrap
   // Pseudo
+  &:not(:disabled):active,
   &:not(:disabled):hover,
   &:not(:disabled):focus
     text-decoration: none // Ensures <a> won't have any underlines
     background: darken($color-default, $darken)
     border-color: darken($color-default, $darken)
+  &:not(:disabled):focus,
+  &:not(:disabled):active
+    box-shadow: $input-focus-box-shadow rgba($color-primary, $opacity-muted) !important
   &:disabled,
   &.make-disabled,
   &[disabled]
@@ -54,6 +58,9 @@
       &:not(:disabled):active
         background: darken($color, $darken)
         border-color: darken($color, $darken)
+      &:not(:disabled):focus,
+      &:not(:disabled):active
+        box-shadow: $input-focus-box-shadow rgba($color, $opacity-muted) !important
       // Modifiers
       &.make-reversed
         color: $color !important

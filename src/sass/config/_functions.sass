@@ -13,3 +13,65 @@
   @else
     // Darker background, return light color
     @return $color-light
+
+// =================================
+// HEX TO RGB CONVERTER
+// =================================
+// @function hexToRGB($hex-color)
+//   @return red($hex-color), green($hex-color), blue($hex-color)
+
+// =================================
+// HEX TO HSL CONVERTER
+// =================================
+// @function hexToHSL($hex-color)
+//   // Variables
+//   $red: red($hex-color) / 255
+//   $green: green($hex-color) / 255
+//   $blue: blue($hex-color) / 255
+//   $min: null
+//   $max: null
+//   $hue: 0
+//   $saturation: 0
+//   $luminance: 0
+  
+//   // Compute for $min
+//   @if ($red < $green and $red < $blue)
+//     $min: $red
+//   @elif ($green < $red and $green < $blue)
+//     $min: $green
+//   @elif ($blue < $red and $blue < $green)
+//     $min: $blue
+  
+//   // Or $min: math.min($red, $green, $blue)
+  
+//   // Compute for $max
+//   @if ($red > $green and $red > $blue)
+//     $max: $red
+//   @elif ($green > $red and $green > $blue)
+//     $max: $green
+//   @elif ($blue > $red and $blue > $green)
+//     $max: $blue
+  
+//   // Or $max = math.max($red, $green, $blue)
+
+//   // Compute for $HUE
+//   @if ($max == $red)
+//     $hue: ($green - $blue) / ($max - $min) * 60
+//   @elif ($max == $green)
+//     $hue: 2.0 + ($blue - $red) / ($max - $min) * 60
+//   @elif ($max == $blue)
+//     $hue: 4.0 + ($red - $green) / ($max - $min) * 60
+  
+//   @if ($hue < 0)
+//     $hue: $hue + 360
+
+//   // Compute for $LUMINANCE
+//   $luminance: ($min + $max) / 2
+  
+//   // Compute for $SATURATION
+//   @if ($luminance < 0.5)
+//     $saturation: ($max - $min) / ($max + $min)
+//   @else
+//     $saturation: ($max - $min) / (2.0 - $max - $min)
+
+//   @return $hue, $saturation, $luminance
