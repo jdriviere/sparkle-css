@@ -100,7 +100,7 @@ const minify = () => {
 //--- Linting ---//
 const lintify = () => {
   console.log("Linting the CSS files...\n")
-  return gulp.src('src/sass/**/*.s+(a|c)ss')
+  return gulp.src('src/sass/**/*.s(a|c)ss')
     .pipe(sassLint())
     .pipe(sassLint.format())
     .pipe(sassLint.failOnError());
