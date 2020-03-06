@@ -37,9 +37,9 @@
 //   // Compute for $min
 //   @if ($red < $green and $red < $blue)
 //     $min: $red
-//   @elif ($green < $red and $green < $blue)
+//   @else if ($green < $red and $green < $blue)
 //     $min: $green
-//   @elif ($blue < $red and $blue < $green)
+//   @else if ($blue < $red and $blue < $green)
 //     $min: $blue
   
 //   // Or $min: math.min($red, $green, $blue)
@@ -47,19 +47,19 @@
 //   // Compute for $max
 //   @if ($red > $green and $red > $blue)
 //     $max: $red
-//   @elif ($green > $red and $green > $blue)
+//   @else if ($green > $red and $green > $blue)
 //     $max: $green
-//   @elif ($blue > $red and $blue > $green)
+//   @else if ($blue > $red and $blue > $green)
 //     $max: $blue
   
-//   // Or $max = math.max($red, $green, $blue)
+//   // Or $max: math.max($red, $green, $blue)
 
 //   // Compute for $HUE
 //   @if ($max == $red)
 //     $hue: ($green - $blue) / ($max - $min) * 60
-//   @elif ($max == $green)
+//   @else if ($max == $green)
 //     $hue: 2.0 + ($blue - $red) / ($max - $min) * 60
-//   @elif ($max == $blue)
+//   @else if ($max == $blue)
 //     $hue: 4.0 + ($red - $green) / ($max - $min) * 60
   
 //   @if ($hue < 0)
